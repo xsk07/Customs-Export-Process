@@ -1,0 +1,1048 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:signavio="http://www.signavio.com" xmlns:qbp="http://www.qbp-simulator.com/Schema201212" xmlns:qbpapi="http://www.qbp-simulator.com/ApiSchema201212" id="Definitions_0z1v1td" targetNamespace="http://bpmn.io/schema/bpmn" expressionLanguage="http://www.w3.org/TR/XPath" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="16.4.0" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://www.omg.org/spec/BPMN/2.0/20100501/BPMN20.xsd">
+  <collaboration id="sid-66ce2957-98a6-4972-bf8f-20a6a8b5a7cf">
+    <extensionElements>
+      <signavio:signavioDiagramMetaData metaKey="prozessreifegrad" metaValue=""/>
+      <signavio:signavioDiagramMetaData metaKey="iso9000ff" metaValue=""/>
+      <signavio:signavioDiagramMetaData metaKey="processgoal" metaValue=""/>
+      <signavio:signavioDiagramMetaData metaKey="meta-processowner" metaValue=""/>
+      <signavio:signavioDiagramMetaData metaKey="revisionid" metaValue="7fb7f14ee8ed4f53a6f923ed619bf14e"/>
+    </extensionElements>
+    <participant id="Participant_1hx1u4m" name="Customs" processRef="Process_0h6mjgt">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+    </participant>
+  </collaboration>
+  <process id="Process_0h6mjgt" name="Customs" processType="None" isClosed="false" isExecutable="false">
+    <extensionElements/>
+    <laneSet id="sid-36637070-a373-4d6c-864b-9e91cf991e95">
+      <lane id="Lane_1qcoyj3" name="Office of exit">
+        <extensionElements>
+          <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
+          <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+        </extensionElements>
+        <flowNodeRef>Activity_012tqx2</flowNodeRef>
+        <flowNodeRef>Activity_16i7c4u</flowNodeRef>
+        <flowNodeRef>Activity_05jg1tp</flowNodeRef>
+        <flowNodeRef>Activity_123g5oq</flowNodeRef>
+        <flowNodeRef>Event_1ntkg55</flowNodeRef>
+        <flowNodeRef>Gateway_08ivatz</flowNodeRef>
+        <flowNodeRef>Gateway_04owq15</flowNodeRef>
+        <flowNodeRef>Event_0ymglzh</flowNodeRef>
+        <flowNodeRef>Event_0r3eekz</flowNodeRef>
+        <childLaneSet id="sid-1f95b138-9e09-433b-a352-51cc1c1e8e92">
+          <lane id="Lane_0j12m88" name="Inspector of exit">
+            <extensionElements>
+              <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
+              <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+            </extensionElements>
+            <flowNodeRef>Activity_05jg1tp</flowNodeRef>
+            <flowNodeRef>Event_0r3eekz</flowNodeRef>
+          </lane>
+          <lane id="Lane_0b2odqj" name="Official of exit">
+            <extensionElements>
+              <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
+              <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+            </extensionElements>
+            <flowNodeRef>Activity_012tqx2</flowNodeRef>
+            <flowNodeRef>Activity_16i7c4u</flowNodeRef>
+            <flowNodeRef>Activity_123g5oq</flowNodeRef>
+            <flowNodeRef>Event_1ntkg55</flowNodeRef>
+            <flowNodeRef>Gateway_08ivatz</flowNodeRef>
+            <flowNodeRef>Gateway_04owq15</flowNodeRef>
+            <flowNodeRef>Event_0ymglzh</flowNodeRef>
+          </lane>
+        </childLaneSet>
+      </lane>
+      <lane id="Lane_06g5vq7" name="Office of export">
+        <extensionElements>
+          <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
+          <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+        </extensionElements>
+        <flowNodeRef>Activity_1ycxj9m</flowNodeRef>
+        <flowNodeRef>sid-7539F8C7-7774-49F6-AB50-37EFEAD46C34</flowNodeRef>
+        <flowNodeRef>sid-B7516F7F-F3B9-4E7A-9E0C-36DD39F8B280</flowNodeRef>
+        <flowNodeRef>Gateway_14jf0ma</flowNodeRef>
+        <flowNodeRef>Event_10dyzhb</flowNodeRef>
+        <flowNodeRef>Activity_0wy04s2</flowNodeRef>
+        <flowNodeRef>Event_1vdy4tr</flowNodeRef>
+        <flowNodeRef>Event_1ftqmzy</flowNodeRef>
+        <flowNodeRef>Activity_0hu9c78</flowNodeRef>
+        <flowNodeRef>Gateway_1kzdg8b</flowNodeRef>
+        <flowNodeRef>Activity_0s3cyoa</flowNodeRef>
+        <flowNodeRef>Gateway_0d1piar</flowNodeRef>
+        <flowNodeRef>Gateway_0u0wlqf</flowNodeRef>
+        <flowNodeRef>Activity_0ics7uj</flowNodeRef>
+        <flowNodeRef>Activity_14g4wpu</flowNodeRef>
+        <flowNodeRef>sid-4AE8926C-AA23-4EC0-8AA0-70E9D366FB1F</flowNodeRef>
+        <flowNodeRef>Activity_0emoei7</flowNodeRef>
+        <flowNodeRef>Event_0t6ch9h</flowNodeRef>
+        <flowNodeRef>Activity_0wlq0gq</flowNodeRef>
+        <flowNodeRef>Gateway_1cld0ad</flowNodeRef>
+        <flowNodeRef>Gateway_16yqk3m</flowNodeRef>
+        <flowNodeRef>Event_1n2b760</flowNodeRef>
+        <flowNodeRef>Event_0fura49</flowNodeRef>
+        <childLaneSet id="sid-031ee9f7-4a4b-4761-b92a-ce23a4f948e3">
+          <lane id="Lane_1l9mjnq" name="Inspector of export">
+            <extensionElements>
+              <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
+              <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+            </extensionElements>
+            <flowNodeRef>Activity_1ycxj9m</flowNodeRef>
+            <flowNodeRef>sid-7539F8C7-7774-49F6-AB50-37EFEAD46C34</flowNodeRef>
+            <flowNodeRef>sid-B7516F7F-F3B9-4E7A-9E0C-36DD39F8B280</flowNodeRef>
+            <flowNodeRef>Gateway_16yqk3m</flowNodeRef>
+          </lane>
+          <lane id="Lane_0e2bfgm" name="Official of export">
+            <extensionElements>
+              <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
+              <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+            </extensionElements>
+            <flowNodeRef>Gateway_14jf0ma</flowNodeRef>
+            <flowNodeRef>Event_10dyzhb</flowNodeRef>
+            <flowNodeRef>Activity_0wy04s2</flowNodeRef>
+            <flowNodeRef>Event_1vdy4tr</flowNodeRef>
+            <flowNodeRef>Event_1ftqmzy</flowNodeRef>
+            <flowNodeRef>Activity_0hu9c78</flowNodeRef>
+            <flowNodeRef>Gateway_1kzdg8b</flowNodeRef>
+            <flowNodeRef>Activity_0s3cyoa</flowNodeRef>
+            <flowNodeRef>Gateway_0d1piar</flowNodeRef>
+            <flowNodeRef>Gateway_0u0wlqf</flowNodeRef>
+            <flowNodeRef>Activity_0ics7uj</flowNodeRef>
+            <flowNodeRef>Activity_14g4wpu</flowNodeRef>
+            <flowNodeRef>sid-4AE8926C-AA23-4EC0-8AA0-70E9D366FB1F</flowNodeRef>
+            <flowNodeRef>Activity_0emoei7</flowNodeRef>
+            <flowNodeRef>Event_0t6ch9h</flowNodeRef>
+            <flowNodeRef>Activity_0wlq0gq</flowNodeRef>
+            <flowNodeRef>Gateway_1cld0ad</flowNodeRef>
+            <flowNodeRef>Event_1n2b760</flowNodeRef>
+            <flowNodeRef>Event_0fura49</flowNodeRef>
+          </lane>
+        </childLaneSet>
+      </lane>
+      <lane id="Lane_13g3sgg" name="ACSystem">
+        <extensionElements>
+          <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
+          <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+        </extensionElements>
+        <flowNodeRef>Activity_17fh0q1</flowNodeRef>
+        <flowNodeRef>Event_1yf2tc1</flowNodeRef>
+        <flowNodeRef>Activity_1bq9ez2</flowNodeRef>
+      </lane>
+    </laneSet>
+    <task id="Activity_1ycxj9m" name="Send goods to the customs office of exit">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+        <signavio:signavioMetaData metaKey="erteiltfreigabe" metaValue=""/>
+        <signavio:signavioMetaData metaKey="meta-risks" metaValue=""/>
+        <signavio:signavioMetaData metaKey="wirdkonsultiert" metaValue="[]"/>
+        <signavio:signavioMetaData metaKey="externaldocuments" metaValue="[]"/>
+        <signavio:signavioMetaData metaKey="wirdinformiert" metaValue="[]"/>
+      </extensionElements>
+      <incoming>Flow_0ttcfsf</incoming>
+      <outgoing>Flow_0l6rh9n</outgoing>
+    </task>
+    <task id="sid-7539F8C7-7774-49F6-AB50-37EFEAD46C34" name="Control goods">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+        <signavio:signavioMetaData metaKey="erteiltfreigabe" metaValue=""/>
+        <signavio:signavioMetaData metaKey="meta-risks" metaValue=""/>
+        <signavio:signavioMetaData metaKey="wirdkonsultiert" metaValue=""/>
+        <signavio:signavioMetaData metaKey="externaldocuments" metaValue=""/>
+        <signavio:signavioMetaData metaKey="wirdinformiert" metaValue=""/>
+      </extensionElements>
+      <incoming>sid-B1C805E1-448B-46CF-9927-428CFC693B0D</incoming>
+      <outgoing>sid-E547EF24-9094-4BED-83E3-C1EED5908663</outgoing>
+    </task>
+    <intermediateCatchEvent id="sid-B7516F7F-F3B9-4E7A-9E0C-36DD39F8B280" name="Goods received at export office">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+      <incoming>sid-A888F237-72C1-4382-9169-EEA30101FBE9</incoming>
+      <outgoing>sid-B1C805E1-448B-46CF-9927-428CFC693B0D</outgoing>
+      <messageEventDefinition id="sid-59dfa5a6-a4df-4f15-9072-ace950659678"/>
+    </intermediateCatchEvent>
+    <exclusiveGateway id="Gateway_14jf0ma" name="are all conditions &#xA;for acceptance fulfilled?" gatewayDirection="Diverging" default="Flow_048a375">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+        <signavio:signavioLabel align="center" bottom="true" left="false" ref="text_name" right="false" top="false" x="20.0" y="45.0"/>
+      </extensionElements>
+      <incoming>sid-46E54CC3-FF4A-44B3-904F-A1F0C2D9465C</incoming>
+      <outgoing>Flow_1d7qtyd</outgoing>
+      <outgoing>Flow_048a375</outgoing>
+    </exclusiveGateway>
+    <startEvent id="Event_10dyzhb" name="Customs declaration&#xA;received">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+        <signavio:signavioMetaData metaKey="vorgngerprozesse" metaValue="[]"/>
+      </extensionElements>
+      <outgoing>sid-B53B8592-189C-4E32-A6CE-CC26C36190D4</outgoing>
+      <messageEventDefinition id="sid-838a81b9-dc7e-443b-8aab-72b33728e92c"/>
+    </startEvent>
+    <task id="Activity_0wy04s2" name="Register customs declaration">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+        <signavio:signavioMetaData metaKey="erteiltfreigabe" metaValue=""/>
+        <signavio:signavioMetaData metaKey="meta-risks" metaValue=""/>
+        <signavio:signavioMetaData metaKey="wirdkonsultiert" metaValue="[]"/>
+        <signavio:signavioMetaData metaKey="externaldocuments" metaValue="[]"/>
+        <signavio:signavioMetaData metaKey="wirdinformiert" metaValue="[]"/>
+      </extensionElements>
+      <incoming>Flow_048a375</incoming>
+      <outgoing>Flow_0v0pc4n</outgoing>
+    </task>
+    <endEvent id="Event_1vdy4tr" name="Declaration&#xA;rejected">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+        <signavio:signavioMetaData metaKey="nachfolgerprozesse" metaValue="[]"/>
+        <signavio:signavioLabel bottom="false" left="false" ref="text_name" right="false" top="true" valign="bottom" x="15.0" y="-9.0"/>
+      </extensionElements>
+      <incoming>Flow_1d7qtyd</incoming>
+      <messageEventDefinition id="sid-b7dddba5-f609-411e-8d9e-34b009204eb1"/>
+    </endEvent>
+    <intermediateThrowEvent id="Event_1ftqmzy" name="EAD sent&#xA;to the declarant">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+      <incoming>Flow_048qe3i</incoming>
+      <outgoing>Flow_02umn7r</outgoing>
+      <messageEventDefinition id="sid-b284804d-3b64-4d0d-9131-6cd675117b5e"/>
+    </intermediateThrowEvent>
+    <task id="Activity_0hu9c78" name="Forward EAD to customs office of exit">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+        <signavio:signavioMetaData metaKey="erteiltfreigabe" metaValue=""/>
+        <signavio:signavioMetaData metaKey="meta-risks" metaValue=""/>
+        <signavio:signavioMetaData metaKey="wirdkonsultiert" metaValue="[]"/>
+        <signavio:signavioMetaData metaKey="externaldocuments" metaValue="[]"/>
+        <signavio:signavioMetaData metaKey="wirdinformiert" metaValue="[]"/>
+      </extensionElements>
+      <incoming>Flow_1vs3q73</incoming>
+      <outgoing>Flow_110ga1w</outgoing>
+    </task>
+    <parallelGateway id="Gateway_1kzdg8b" name="" gatewayDirection="Diverging">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+      <incoming>Flow_02umn7r</incoming>
+      <outgoing>Flow_0ttcfsf</outgoing>
+      <outgoing>Flow_1vs3q73</outgoing>
+    </parallelGateway>
+    <task id="Activity_0s3cyoa" name="Produce EAD">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+        <signavio:signavioMetaData metaKey="erteiltfreigabe" metaValue=""/>
+        <signavio:signavioMetaData metaKey="meta-risks" metaValue=""/>
+        <signavio:signavioMetaData metaKey="wirdkonsultiert" metaValue="[]"/>
+        <signavio:signavioMetaData metaKey="externaldocuments" metaValue="[]"/>
+        <signavio:signavioMetaData metaKey="wirdinformiert" metaValue="[]"/>
+      </extensionElements>
+      <incoming>Flow_068xuwi</incoming>
+      <outgoing>Flow_048qe3i</outgoing>
+    </task>
+    <exclusiveGateway id="Gateway_0d1piar" name="Are office of export&#xA;and exit the same?" gatewayDirection="Diverging" default="Flow_068xuwi">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+        <signavio:signavioLabel align="center" bottom="true" left="false" ref="text_name" right="false" top="false" x="20.0" y="45.0"/>
+      </extensionElements>
+      <incoming>Flow_0x09qq0</incoming>
+      <outgoing>Flow_068xuwi</outgoing>
+      <outgoing>Flow_04uxz7l</outgoing>
+    </exclusiveGateway>
+    <exclusiveGateway id="Gateway_0u0wlqf" name="are issues detected?" gatewayDirection="Diverging">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+        <signavio:signavioLabel align="right" bottom="false" left="true" ref="text_name" right="false" top="false" valign="middle" x="-7.0" y="20.0"/>
+      </extensionElements>
+      <incoming>sid-E547EF24-9094-4BED-83E3-C1EED5908663</incoming>
+      <outgoing>Flow_10t8e21</outgoing>
+      <outgoing>Flow_1c1lzwi</outgoing>
+    </exclusiveGateway>
+    <task id="Activity_0ics7uj" name="Invalidate customs declaration">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+        <signavio:signavioMetaData metaKey="erteiltfreigabe" metaValue=""/>
+        <signavio:signavioMetaData metaKey="meta-risks" metaValue=""/>
+        <signavio:signavioMetaData metaKey="wirdkonsultiert" metaValue="[]"/>
+        <signavio:signavioMetaData metaKey="externaldocuments" metaValue="[]"/>
+        <signavio:signavioMetaData metaKey="wirdinformiert" metaValue="[]"/>
+      </extensionElements>
+      <incoming>Flow_1c1lzwi</incoming>
+      <outgoing>Flow_0x8fuqc</outgoing>
+    </task>
+    <task id="Activity_14g4wpu" name="Take appropriate measures">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+        <signavio:signavioMetaData metaKey="erteiltfreigabe" metaValue=""/>
+        <signavio:signavioMetaData metaKey="meta-risks" metaValue=""/>
+        <signavio:signavioMetaData metaKey="wirdkonsultiert" metaValue="[]"/>
+        <signavio:signavioMetaData metaKey="externaldocuments" metaValue="[]"/>
+        <signavio:signavioMetaData metaKey="wirdinformiert" metaValue="[]"/>
+      </extensionElements>
+      <incoming>Flow_0x8fuqc</incoming>
+      <outgoing>Flow_07bol61</outgoing>
+    </task>
+    <task id="sid-4AE8926C-AA23-4EC0-8AA0-70E9D366FB1F" name="Verify customs declaration and attached documents">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+        <signavio:signavioMetaData metaKey="erteiltfreigabe" metaValue=""/>
+        <signavio:signavioMetaData metaKey="meta-risks" metaValue=""/>
+        <signavio:signavioMetaData metaKey="wirdkonsultiert" metaValue=""/>
+        <signavio:signavioMetaData metaKey="externaldocuments" metaValue=""/>
+        <signavio:signavioMetaData metaKey="wirdinformiert" metaValue=""/>
+      </extensionElements>
+      <incoming>sid-B53B8592-189C-4E32-A6CE-CC26C36190D4</incoming>
+      <outgoing>sid-46E54CC3-FF4A-44B3-904F-A1F0C2D9465C</outgoing>
+    </task>
+    <task id="Activity_17fh0q1" name="Issue MRN">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+        <signavio:signavioMetaData metaKey="erteiltfreigabe" metaValue=""/>
+        <signavio:signavioMetaData metaKey="meta-risks" metaValue=""/>
+        <signavio:signavioMetaData metaKey="wirdkonsultiert" metaValue="[]"/>
+        <signavio:signavioMetaData metaKey="externaldocuments" metaValue="[]"/>
+        <signavio:signavioMetaData metaKey="wirdinformiert" metaValue="[]"/>
+      </extensionElements>
+      <incoming>Flow_0v0pc4n</incoming>
+      <outgoing>Flow_0vc6kzn</outgoing>
+    </task>
+    <intermediateThrowEvent id="Event_1yf2tc1" name="Declaration&#xA;accepted">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+      <incoming>Flow_0vc6kzn</incoming>
+      <outgoing>Flow_02uwxuh</outgoing>
+      <messageEventDefinition id="sid-8ba4776e-48ae-46f5-8709-77aa4a76947f"/>
+    </intermediateThrowEvent>
+    <task id="Activity_1bq9ez2" name="Risk analysis">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+        <signavio:signavioMetaData metaKey="erteiltfreigabe" metaValue=""/>
+        <signavio:signavioMetaData metaKey="meta-risks" metaValue=""/>
+        <signavio:signavioMetaData metaKey="wirdkonsultiert" metaValue="[]"/>
+        <signavio:signavioMetaData metaKey="externaldocuments" metaValue="[]"/>
+        <signavio:signavioMetaData metaKey="wirdinformiert" metaValue="[]"/>
+      </extensionElements>
+      <incoming>Flow_02uwxuh</incoming>
+      <outgoing>sid-A888F237-72C1-4382-9169-EEA30101FBE9</outgoing>
+    </task>
+    <sequenceFlow id="Flow_0ttcfsf" name="" isImmediate="true" sourceRef="Gateway_1kzdg8b" targetRef="Activity_1ycxj9m">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-B1C805E1-448B-46CF-9927-428CFC693B0D" name="" sourceRef="sid-B7516F7F-F3B9-4E7A-9E0C-36DD39F8B280" targetRef="sid-7539F8C7-7774-49F6-AB50-37EFEAD46C34">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-E547EF24-9094-4BED-83E3-C1EED5908663" name="" sourceRef="sid-7539F8C7-7774-49F6-AB50-37EFEAD46C34" targetRef="Gateway_0u0wlqf">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-A888F237-72C1-4382-9169-EEA30101FBE9" name="" isImmediate="true" sourceRef="Activity_1bq9ez2" targetRef="sid-B7516F7F-F3B9-4E7A-9E0C-36DD39F8B280">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-46E54CC3-FF4A-44B3-904F-A1F0C2D9465C" name="" sourceRef="sid-4AE8926C-AA23-4EC0-8AA0-70E9D366FB1F" targetRef="Gateway_14jf0ma">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Flow_1d7qtyd" name="not fulfilled" isImmediate="true" sourceRef="Gateway_14jf0ma" targetRef="Event_1vdy4tr">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+        <signavio:signavioLabel align="left" ref="text_name" valign="top" x="742.0" y="846.011368594643"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Flow_048a375" name="fulfilled" isImmediate="true" sourceRef="Gateway_14jf0ma" targetRef="Activity_0wy04s2">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+        <signavio:signavioLabel align="left" ref="text_name" valign="top" x="830.9433060975471" y="913.0"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-B53B8592-189C-4E32-A6CE-CC26C36190D4" name="" isImmediate="true" sourceRef="Event_10dyzhb" targetRef="sid-4AE8926C-AA23-4EC0-8AA0-70E9D366FB1F">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Flow_0v0pc4n" name="" isImmediate="true" sourceRef="Activity_0wy04s2" targetRef="Activity_17fh0q1">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Flow_048qe3i" name="" isImmediate="true" sourceRef="Activity_0s3cyoa" targetRef="Event_1ftqmzy">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Flow_02umn7r" name="" isImmediate="true" sourceRef="Event_1ftqmzy" targetRef="Gateway_1kzdg8b">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Flow_1vs3q73" name="" isImmediate="true" sourceRef="Gateway_1kzdg8b" targetRef="Activity_0hu9c78">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Flow_110ga1w" name="" isImmediate="true" sourceRef="Activity_0hu9c78" targetRef="Gateway_16yqk3m">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Flow_068xuwi" name="not the same" isImmediate="true" sourceRef="Gateway_0d1piar" targetRef="Activity_0s3cyoa">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+        <signavio:signavioLabel align="left" ref="text_name" valign="top" x="2261.0" y="917.0"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Flow_0x09qq0" name="" isImmediate="true" sourceRef="Activity_0emoei7" targetRef="Gateway_0d1piar">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Flow_04uxz7l" name="same" isImmediate="true" sourceRef="Gateway_0d1piar" targetRef="Activity_0wlq0gq">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+        <signavio:signavioLabel align="left" distance="-8.0" from="0" orientation="ul" ref="text_name" to="1" valign="top" x="2180.0" y="789.3963623046875"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Flow_10t8e21" name="no issues detected" isImmediate="true" sourceRef="Gateway_0u0wlqf" targetRef="Activity_0emoei7">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+        <signavio:signavioLabel align="left" ref="text_name" valign="top" x="1692.0" y="906.0"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Flow_1c1lzwi" name="issues detected" isImmediate="true" sourceRef="Gateway_0u0wlqf" targetRef="Activity_0ics7uj">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+        <signavio:signavioLabel align="left" ref="text_name" valign="top" x="1569.0" y="823.0"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Flow_0x8fuqc" name="" isImmediate="true" sourceRef="Activity_0ics7uj" targetRef="Activity_14g4wpu">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Flow_07bol61" name="" isImmediate="true" sourceRef="Activity_14g4wpu" targetRef="Event_0fura49">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Flow_0vc6kzn" name="" isImmediate="true" sourceRef="Activity_17fh0q1" targetRef="Event_1yf2tc1">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Flow_02uwxuh" name="" isImmediate="true" sourceRef="Event_1yf2tc1" targetRef="Activity_1bq9ez2">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Flow_01aanin" sourceRef="Activity_0wlq0gq" targetRef="Event_0t6ch9h"/>
+    <sequenceFlow id="Flow_0zfkxwf" sourceRef="Event_1ntkg55" targetRef="Gateway_1cld0ad"/>
+    <sequenceFlow id="Flow_1jm2uzy" sourceRef="Gateway_1cld0ad" targetRef="Event_1n2b760"/>
+    <sequenceFlow id="Flow_1uf7imi" name="" isImmediate="true" sourceRef="Event_0t6ch9h" targetRef="Gateway_1cld0ad"/>
+    <task id="Activity_0emoei7" name="Release goods for export">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+        <signavio:signavioMetaData metaKey="erteiltfreigabe" metaValue=""/>
+        <signavio:signavioMetaData metaKey="meta-risks" metaValue=""/>
+        <signavio:signavioMetaData metaKey="wirdkonsultiert" metaValue="[]"/>
+        <signavio:signavioMetaData metaKey="externaldocuments" metaValue="[]"/>
+        <signavio:signavioMetaData metaKey="wirdinformiert" metaValue="[]"/>
+      </extensionElements>
+      <incoming>Flow_10t8e21</incoming>
+      <outgoing>Flow_0x09qq0</outgoing>
+    </task>
+    <intermediateCatchEvent id="Event_0t6ch9h" name="Exit confirmation&#xA;received">
+      <incoming>Flow_01aanin</incoming>
+      <outgoing>Flow_1uf7imi</outgoing>
+      <messageEventDefinition id="MessageEventDefinition_1ihqqvp"/>
+    </intermediateCatchEvent>
+    <task id="Activity_0wlq0gq" name="Supervise phisical exit of goods">
+      <incoming>Flow_04uxz7l</incoming>
+      <outgoing>Flow_01aanin</outgoing>
+    </task>
+    <exclusiveGateway id="Gateway_1cld0ad">
+      <incoming>Flow_1uf7imi</incoming>
+      <incoming>Flow_0zfkxwf</incoming>
+      <outgoing>Flow_1jm2uzy</outgoing>
+    </exclusiveGateway>
+    <parallelGateway id="Gateway_16yqk3m">
+      <incoming>Flow_110ga1w</incoming>
+      <incoming>Flow_0l6rh9n</incoming>
+      <outgoing>Flow_0hly01g</outgoing>
+    </parallelGateway>
+    <sequenceFlow id="Flow_0l6rh9n" sourceRef="Activity_1ycxj9m" targetRef="Gateway_16yqk3m"/>
+    <sequenceFlow id="Flow_0hly01g" sourceRef="Gateway_16yqk3m" targetRef="Gateway_08ivatz"/>
+    <task id="Activity_012tqx2" name="Retrive customs declaration">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+        <signavio:signavioMetaData metaKey="erteiltfreigabe" metaValue=""/>
+        <signavio:signavioMetaData metaKey="meta-risks" metaValue=""/>
+        <signavio:signavioMetaData metaKey="wirdkonsultiert" metaValue="[]"/>
+        <signavio:signavioMetaData metaKey="externaldocuments" metaValue="[]"/>
+        <signavio:signavioMetaData metaKey="wirdinformiert" metaValue="[]"/>
+      </extensionElements>
+      <incoming>Flow_1mytd0y</incoming>
+      <outgoing>Flow_0anhxaw</outgoing>
+    </task>
+    <task id="Activity_16i7c4u" name="Retrive risk analysis report">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+        <signavio:signavioMetaData metaKey="erteiltfreigabe" metaValue=""/>
+        <signavio:signavioMetaData metaKey="meta-risks" metaValue=""/>
+        <signavio:signavioMetaData metaKey="wirdkonsultiert" metaValue="[]"/>
+        <signavio:signavioMetaData metaKey="externaldocuments" metaValue="[]"/>
+        <signavio:signavioMetaData metaKey="wirdinformiert" metaValue="[]"/>
+      </extensionElements>
+      <incoming>Flow_0anhxaw</incoming>
+      <outgoing>Flow_10ci60o</outgoing>
+    </task>
+    <task id="Activity_05jg1tp" name="Check compliance of goods">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+        <signavio:signavioMetaData metaKey="erteiltfreigabe" metaValue=""/>
+        <signavio:signavioMetaData metaKey="meta-risks" metaValue=""/>
+        <signavio:signavioMetaData metaKey="wirdkonsultiert" metaValue="[]"/>
+        <signavio:signavioMetaData metaKey="externaldocuments" metaValue="[]"/>
+        <signavio:signavioMetaData metaKey="wirdinformiert" metaValue="[]"/>
+      </extensionElements>
+      <incoming>Flow_10ci60o</incoming>
+      <outgoing>Flow_08g4fr7</outgoing>
+    </task>
+    <task id="Activity_123g5oq" name="Supervise phisical exit of goods">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+        <signavio:signavioMetaData metaKey="erteiltfreigabe" metaValue=""/>
+        <signavio:signavioMetaData metaKey="meta-risks" metaValue=""/>
+        <signavio:signavioMetaData metaKey="wirdkonsultiert" metaValue="[]"/>
+        <signavio:signavioMetaData metaKey="externaldocuments" metaValue="[]"/>
+        <signavio:signavioMetaData metaKey="wirdinformiert" metaValue="[]"/>
+      </extensionElements>
+      <incoming>Flow_08g4fr7</incoming>
+      <outgoing>Flow_1pbjb2m</outgoing>
+    </task>
+    <intermediateCatchEvent id="Event_1ntkg55" name="Exit confirmation&#xA;received">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+      <incoming>Flow_1pbjb2m</incoming>
+      <outgoing>Flow_0zfkxwf</outgoing>
+      <messageEventDefinition id="sid-7a15c7bf-d394-4614-aa9c-db27be6f3cac"/>
+    </intermediateCatchEvent>
+    <parallelGateway id="Gateway_08ivatz">
+      <incoming>Flow_0hly01g</incoming>
+      <outgoing>Flow_1h1sst7</outgoing>
+      <outgoing>Flow_1h02eiw</outgoing>
+    </parallelGateway>
+    <sequenceFlow id="Flow_1h1sst7" sourceRef="Gateway_08ivatz" targetRef="Event_0ymglzh"/>
+    <sequenceFlow id="Flow_1rnqled" name="" isImmediate="true" sourceRef="Event_0ymglzh" targetRef="Gateway_04owq15">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Flow_1itgbyw" name="" isImmediate="true" sourceRef="Event_0r3eekz" targetRef="Gateway_04owq15">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Flow_1mytd0y" name="" isImmediate="true" sourceRef="Gateway_04owq15" targetRef="Activity_012tqx2">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Flow_1h02eiw" sourceRef="Gateway_08ivatz" targetRef="Event_0r3eekz"/>
+    <sequenceFlow id="Flow_0anhxaw" name="" isImmediate="true" sourceRef="Activity_012tqx2" targetRef="Activity_16i7c4u">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Flow_10ci60o" name="" isImmediate="true" sourceRef="Activity_16i7c4u" targetRef="Activity_05jg1tp">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Flow_08g4fr7" name="" isImmediate="true" sourceRef="Activity_05jg1tp" targetRef="Activity_123g5oq">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="Flow_1pbjb2m" name="" isImmediate="true" sourceRef="Activity_123g5oq" targetRef="Event_1ntkg55">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+    </sequenceFlow>
+    <endEvent id="Event_1n2b760" name="Exit of goods&#xA;confirmed">
+      <incoming>Flow_1jm2uzy</incoming>
+    </endEvent>
+    <endEvent id="Event_0fura49" name="Export of goods&#xA;refused">
+      <incoming>Flow_07bol61</incoming>
+    </endEvent>
+    <parallelGateway id="Gateway_04owq15" name="" gatewayDirection="Converging">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+      <incoming>Flow_1rnqled</incoming>
+      <incoming>Flow_1itgbyw</incoming>
+      <outgoing>Flow_1mytd0y</outgoing>
+    </parallelGateway>
+    <intermediateCatchEvent id="Event_0ymglzh" name="EAD received">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+      <incoming>Flow_1h1sst7</incoming>
+      <outgoing>Flow_1rnqled</outgoing>
+      <messageEventDefinition id="sid-01925356-c43c-47e4-94b9-f8f9b562abcc"/>
+    </intermediateCatchEvent>
+    <intermediateCatchEvent id="Event_0r3eekz" name="Goods received at exit office">
+      <extensionElements>
+        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
+        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
+      </extensionElements>
+      <incoming>Flow_1h02eiw</incoming>
+      <outgoing>Flow_1itgbyw</outgoing>
+      <messageEventDefinition id="sid-72e06c54-bdd4-4fdb-939b-444193b1c23d"/>
+    </intermediateCatchEvent>
+  </process>
+  <bpmndi:BPMNDiagram id="sid-f8234f30-7fb5-47e6-8547-52f57ea242c5">
+    <bpmndi:BPMNPlane id="sid-73b9ff96-9c81-4050-8956-43b4f0cd9897" bpmnElement="sid-66ce2957-98a6-4972-bf8f-20a6a8b5a7cf">
+      <bpmndi:BPMNShape id="Participant_1hx1u4m_gui" bpmnElement="Participant_1hx1u4m" isHorizontal="true">
+        <omgdc:Bounds x="160" y="85" width="4180" height="1495"/>
+        <bpmndi:BPMNLabel labelStyle="sid-588d5904-2bcd-44ff-a723-88dcae8ff0c0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_13g3sgg_gui" bpmnElement="Lane_13g3sgg" isHorizontal="true">
+        <omgdc:Bounds x="190" y="85" width="4150" height="295"/>
+        <bpmndi:BPMNLabel labelStyle="sid-588d5904-2bcd-44ff-a723-88dcae8ff0c0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_06g5vq7_gui" bpmnElement="Lane_06g5vq7" isHorizontal="true">
+        <omgdc:Bounds x="190" y="380" width="4150" height="760"/>
+        <bpmndi:BPMNLabel labelStyle="sid-588d5904-2bcd-44ff-a723-88dcae8ff0c0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0e2bfgm_gui" bpmnElement="Lane_0e2bfgm" isHorizontal="true">
+        <omgdc:Bounds x="220" y="380" width="4120" height="500"/>
+        <bpmndi:BPMNLabel labelStyle="sid-588d5904-2bcd-44ff-a723-88dcae8ff0c0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1l9mjnq_gui" bpmnElement="Lane_1l9mjnq" isHorizontal="true">
+        <omgdc:Bounds x="220" y="880" width="4120" height="260"/>
+        <bpmndi:BPMNLabel labelStyle="sid-588d5904-2bcd-44ff-a723-88dcae8ff0c0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1qcoyj3_gui" bpmnElement="Lane_1qcoyj3" isHorizontal="true">
+        <omgdc:Bounds x="190" y="1140" width="4150" height="440"/>
+        <bpmndi:BPMNLabel labelStyle="sid-588d5904-2bcd-44ff-a723-88dcae8ff0c0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0b2odqj_gui" bpmnElement="Lane_0b2odqj" isHorizontal="true">
+        <omgdc:Bounds x="220" y="1140" width="4120" height="200"/>
+        <bpmndi:BPMNLabel labelStyle="sid-588d5904-2bcd-44ff-a723-88dcae8ff0c0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0j12m88_gui" bpmnElement="Lane_0j12m88" isHorizontal="true">
+        <omgdc:Bounds x="220" y="1340" width="4120" height="240"/>
+        <bpmndi:BPMNLabel labelStyle="sid-588d5904-2bcd-44ff-a723-88dcae8ff0c0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1ycxj9m_gui" bpmnElement="Activity_1ycxj9m">
+        <omgdc:Bounds x="2800" y="980" width="100" height="80"/>
+        <bpmndi:BPMNLabel labelStyle="sid-588d5904-2bcd-44ff-a723-88dcae8ff0c0">
+          <omgdc:Bounds x="2809.5" y="1000" width="81" height="36"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-7539F8C7-7774-49F6-AB50-37EFEAD46C34_gui" bpmnElement="sid-7539F8C7-7774-49F6-AB50-37EFEAD46C34">
+        <omgdc:Bounds x="1510" y="980" width="100" height="80"/>
+        <bpmndi:BPMNLabel labelStyle="sid-588d5904-2bcd-44ff-a723-88dcae8ff0c0">
+          <omgdc:Bounds x="1521.0428581237793" y="1012" width="77.9142837524414" height="12"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-B7516F7F-F3B9-4E7A-9E0C-36DD39F8B280_gui" bpmnElement="sid-B7516F7F-F3B9-4E7A-9E0C-36DD39F8B280">
+        <omgdc:Bounds x="1315" y="1005" width="30" height="30"/>
+        <bpmndi:BPMNLabel labelStyle="sid-428a65d0-95ed-4042-9011-53d9c01fefc4">
+          <omgdc:Bounds x="1290" y="1043" width="80" height="27"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_14jf0ma_gui" bpmnElement="Gateway_14jf0ma" isMarkerVisible="true">
+        <omgdc:Bounds x="710" y="695" width="40" height="40"/>
+        <bpmndi:BPMNLabel labelStyle="sid-428a65d0-95ed-4042-9011-53d9c01fefc4">
+          <omgdc:Bounds x="686" y="740" width="88" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_10dyzhb_gui" bpmnElement="Event_10dyzhb">
+        <omgdc:Bounds x="345" y="700" width="30" height="30"/>
+        <bpmndi:BPMNLabel labelStyle="sid-428a65d0-95ed-4042-9011-53d9c01fefc4">
+          <omgdc:Bounds x="332" y="732" width="57" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0wy04s2_gui" bpmnElement="Activity_0wy04s2">
+        <omgdc:Bounds x="940" y="675" width="100" height="80"/>
+        <bpmndi:BPMNLabel labelStyle="sid-588d5904-2bcd-44ff-a723-88dcae8ff0c0">
+          <omgdc:Bounds x="960.6857147216797" y="695" width="58.628570556640625" height="36"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1vdy4tr_gui" bpmnElement="Event_1vdy4tr">
+        <omgdc:Bounds x="715" y="535" width="30" height="30"/>
+        <bpmndi:BPMNLabel labelStyle="sid-428a65d0-95ed-4042-9011-53d9c01fefc4">
+          <omgdc:Bounds x="701" y="504" width="59" height="27"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1ftqmzy_gui" bpmnElement="Event_1ftqmzy">
+        <omgdc:Bounds x="2635" y="700" width="30" height="30"/>
+        <bpmndi:BPMNLabel labelStyle="sid-428a65d0-95ed-4042-9011-53d9c01fefc4">
+          <omgdc:Bounds x="2611" y="732" width="78" height="27"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0hu9c78_gui" bpmnElement="Activity_0hu9c78">
+        <omgdc:Bounds x="3010" y="675" width="100" height="80"/>
+        <bpmndi:BPMNLabel labelStyle="sid-588d5904-2bcd-44ff-a723-88dcae8ff0c0">
+          <omgdc:Bounds x="3016.800003051758" y="695" width="86.39999389648438" height="36"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1kzdg8b_gui" bpmnElement="Gateway_1kzdg8b">
+        <omgdc:Bounds x="2830" y="695" width="40" height="40"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0s3cyoa_gui" bpmnElement="Activity_0s3cyoa">
+        <omgdc:Bounds x="2390" y="675" width="100" height="80"/>
+        <bpmndi:BPMNLabel labelStyle="sid-588d5904-2bcd-44ff-a723-88dcae8ff0c0">
+          <omgdc:Bounds x="2404.900001525879" y="707" width="70.19999694824219" height="12"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0d1piar_gui" bpmnElement="Gateway_0d1piar" isMarkerVisible="true">
+        <omgdc:Bounds x="2160" y="695" width="40" height="40"/>
+        <bpmndi:BPMNLabel labelStyle="sid-428a65d0-95ed-4042-9011-53d9c01fefc4">
+          <omgdc:Bounds x="2151" y="740" width="59" height="53"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0u0wlqf_gui" bpmnElement="Gateway_0u0wlqf" isMarkerVisible="true">
+        <omgdc:Bounds x="1540" y="695" width="40" height="40"/>
+        <bpmndi:BPMNLabel labelStyle="sid-428a65d0-95ed-4042-9011-53d9c01fefc4">
+          <omgdc:Bounds x="1472" y="707" width="55" height="27"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0ics7uj_gui" bpmnElement="Activity_0ics7uj">
+        <omgdc:Bounds x="1510" y="430" width="100" height="80"/>
+        <bpmndi:BPMNLabel labelStyle="sid-588d5904-2bcd-44ff-a723-88dcae8ff0c0">
+          <omgdc:Bounds x="1530.6857147216797" y="450" width="58.628570556640625" height="36"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_14g4wpu_gui" bpmnElement="Activity_14g4wpu">
+        <omgdc:Bounds x="1720" y="430" width="100" height="80"/>
+        <bpmndi:BPMNLabel labelStyle="sid-588d5904-2bcd-44ff-a723-88dcae8ff0c0">
+          <omgdc:Bounds x="1724.099998474121" y="456" width="91.80000305175781" height="24"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="sid-4AE8926C-AA23-4EC0-8AA0-70E9D366FB1F_gui" bpmnElement="sid-4AE8926C-AA23-4EC0-8AA0-70E9D366FB1F">
+        <omgdc:Bounds x="493" y="675" width="100" height="80"/>
+        <bpmndi:BPMNLabel labelStyle="sid-588d5904-2bcd-44ff-a723-88dcae8ff0c0">
+          <omgdc:Bounds x="501.72857666015625" y="689" width="82.5428466796875" height="48"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_17fh0q1_gui" bpmnElement="Activity_17fh0q1">
+        <omgdc:Bounds x="940" y="200" width="100" height="80"/>
+        <bpmndi:BPMNLabel labelStyle="sid-588d5904-2bcd-44ff-a723-88dcae8ff0c0">
+          <omgdc:Bounds x="961.457145690918" y="232" width="57.08570861816406" height="12"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1yf2tc1_gui" bpmnElement="Event_1yf2tc1">
+        <omgdc:Bounds x="1145" y="225" width="30" height="30"/>
+        <bpmndi:BPMNLabel labelStyle="sid-428a65d0-95ed-4042-9011-53d9c01fefc4">
+          <omgdc:Bounds x="1131" y="257" width="59" height="27"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1bq9ez2_gui" bpmnElement="Activity_1bq9ez2">
+        <omgdc:Bounds x="1280" y="200" width="100" height="80"/>
+        <bpmndi:BPMNLabel labelStyle="sid-588d5904-2bcd-44ff-a723-88dcae8ff0c0">
+          <omgdc:Bounds x="1295.67142868042" y="232" width="68.65714263916016" height="12"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0emoei7_gui" bpmnElement="Activity_0emoei7">
+        <omgdc:Bounds x="1850" y="675" width="100" height="80"/>
+        <bpmndi:BPMNLabel labelStyle="sid-588d5904-2bcd-44ff-a723-88dcae8ff0c0">
+          <omgdc:Bounds x="1860.6571426391602" y="701" width="78.68571472167969" height="24"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_0jf3qxz" bpmnElement="Event_0t6ch9h">
+        <omgdc:Bounds x="2635" y="455" width="30" height="30"/>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="2608" y="487" width="84" height="27"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_1oxbcos" bpmnElement="Activity_0wlq0gq">
+        <omgdc:Bounds x="2390" y="430" width="100" height="80"/>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="2401.428569793701" y="450" width="77.14286041259766" height="36"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1cld0ad_di" bpmnElement="Gateway_1cld0ad" isMarkerVisible="true">
+        <omgdc:Bounds x="4095" y="445" width="50" height="50"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1gb29ek_di" bpmnElement="Gateway_16yqk3m">
+        <omgdc:Bounds x="3035" y="995" width="50" height="50"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_012tqx2_gui" bpmnElement="Activity_012tqx2">
+        <omgdc:Bounds x="3420" y="1190" width="100" height="80"/>
+        <bpmndi:BPMNLabel labelStyle="sid-588d5904-2bcd-44ff-a723-88dcae8ff0c0">
+          <omgdc:Bounds x="3426.0285720825195" y="1216" width="87.94285583496094" height="24"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_16i7c4u_gui" bpmnElement="Activity_16i7c4u">
+        <omgdc:Bounds x="3640" y="1190" width="100" height="80"/>
+        <bpmndi:BPMNLabel labelStyle="sid-588d5904-2bcd-44ff-a723-88dcae8ff0c0">
+          <omgdc:Bounds x="3649.885711669922" y="1216" width="80.22857666015625" height="24"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_05jg1tp_gui" bpmnElement="Activity_05jg1tp">
+        <omgdc:Bounds x="3640" y="1430" width="100" height="80"/>
+        <bpmndi:BPMNLabel labelStyle="sid-588d5904-2bcd-44ff-a723-88dcae8ff0c0">
+          <omgdc:Bounds x="3653.3571434020996" y="1450" width="73.28571319580078" height="36"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_123g5oq_gui" bpmnElement="Activity_123g5oq">
+        <omgdc:Bounds x="3890" y="1190" width="100" height="80"/>
+        <bpmndi:BPMNLabel labelStyle="sid-588d5904-2bcd-44ff-a723-88dcae8ff0c0">
+          <omgdc:Bounds x="3901.428569793701" y="1210" width="77.14286041259766" height="36"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1ntkg55_gui" bpmnElement="Event_1ntkg55">
+        <omgdc:Bounds x="4105" y="1215" width="30" height="30"/>
+        <bpmndi:BPMNLabel labelStyle="sid-428a65d0-95ed-4042-9011-53d9c01fefc4">
+          <omgdc:Bounds x="4078" y="1247" width="84" height="27"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_03qusig_di" bpmnElement="Gateway_08ivatz">
+        <omgdc:Bounds x="3035" y="1205" width="50" height="50"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0836138_di" bpmnElement="Event_1n2b760">
+        <omgdc:Bounds x="4245" y="455" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="4227" y="495" width="66" height="27"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0v0swq1_di" bpmnElement="Event_0fura49">
+        <omgdc:Bounds x="1944" y="455" width="36" height="36"/>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="1930" y="496" width="79" height="27"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_04owq15_gui" bpmnElement="Gateway_04owq15">
+        <omgdc:Bounds x="3280" y="1210" width="40" height="40"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0ymglzh_gui" bpmnElement="Event_0ymglzh">
+        <omgdc:Bounds x="3165" y="1215" width="30" height="30"/>
+        <bpmndi:BPMNLabel labelStyle="sid-428a65d0-95ed-4042-9011-53d9c01fefc4">
+          <omgdc:Bounds x="3146" y="1254" width="68" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0r3eekz_gui" bpmnElement="Event_0r3eekz">
+        <omgdc:Bounds x="3165" y="1455" width="30" height="30"/>
+        <bpmndi:BPMNLabel labelStyle="sid-428a65d0-95ed-4042-9011-53d9c01fefc4">
+          <omgdc:Bounds x="3140" y="1487" width="80" height="27"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0ttcfsf_gui" bpmnElement="Flow_0ttcfsf">
+        <omgdi:waypoint x="2850" y="735"/>
+        <omgdi:waypoint x="2850" y="980"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-B1C805E1-448B-46CF-9927-428CFC693B0D_gui" bpmnElement="sid-B1C805E1-448B-46CF-9927-428CFC693B0D">
+        <omgdi:waypoint x="1345" y="1020"/>
+        <omgdi:waypoint x="1510" y="1020"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-E547EF24-9094-4BED-83E3-C1EED5908663_gui" bpmnElement="sid-E547EF24-9094-4BED-83E3-C1EED5908663">
+        <omgdi:waypoint x="1560" y="980"/>
+        <omgdi:waypoint x="1560" y="735"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-A888F237-72C1-4382-9169-EEA30101FBE9_gui" bpmnElement="sid-A888F237-72C1-4382-9169-EEA30101FBE9">
+        <omgdi:waypoint x="1330" y="280"/>
+        <omgdi:waypoint x="1330" y="1005"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-46E54CC3-FF4A-44B3-904F-A1F0C2D9465C_gui" bpmnElement="sid-46E54CC3-FF4A-44B3-904F-A1F0C2D9465C">
+        <omgdi:waypoint x="592.5" y="715"/>
+        <omgdi:waypoint x="710" y="715"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1d7qtyd_gui" bpmnElement="Flow_1d7qtyd">
+        <omgdi:waypoint x="730" y="695"/>
+        <omgdi:waypoint x="730" y="565"/>
+        <bpmndi:BPMNLabel labelStyle="sid-428a65d0-95ed-4042-9011-53d9c01fefc4">
+          <omgdc:Bounds x="744" y="626" width="55" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_048a375_gui" bpmnElement="Flow_048a375">
+        <omgdi:waypoint x="750" y="715"/>
+        <omgdi:waypoint x="940" y="715"/>
+        <bpmndi:BPMNLabel labelStyle="sid-428a65d0-95ed-4042-9011-53d9c01fefc4">
+          <omgdc:Bounds x="831" y="693" width="37" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="sid-B53B8592-189C-4E32-A6CE-CC26C36190D4_gui" bpmnElement="sid-B53B8592-189C-4E32-A6CE-CC26C36190D4">
+        <omgdi:waypoint x="375" y="715"/>
+        <omgdi:waypoint x="492.5" y="715"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0v0pc4n_gui" bpmnElement="Flow_0v0pc4n">
+        <omgdi:waypoint x="990" y="675"/>
+        <omgdi:waypoint x="990" y="280"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_048qe3i_gui" bpmnElement="Flow_048qe3i">
+        <omgdi:waypoint x="2490" y="715"/>
+        <omgdi:waypoint x="2635" y="715"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_02umn7r_gui" bpmnElement="Flow_02umn7r">
+        <omgdi:waypoint x="2665" y="715"/>
+        <omgdi:waypoint x="2830" y="715"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1vs3q73_gui" bpmnElement="Flow_1vs3q73">
+        <omgdi:waypoint x="2870" y="715"/>
+        <omgdi:waypoint x="3010" y="715"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_110ga1w_gui" bpmnElement="Flow_110ga1w">
+        <omgdi:waypoint x="3060" y="755"/>
+        <omgdi:waypoint x="3060" y="995"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_068xuwi_gui" bpmnElement="Flow_068xuwi">
+        <omgdi:waypoint x="2200" y="715"/>
+        <omgdi:waypoint x="2390" y="715"/>
+        <bpmndi:BPMNLabel labelStyle="sid-428a65d0-95ed-4042-9011-53d9c01fefc4">
+          <omgdc:Bounds x="2264" y="697" width="67" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0x09qq0_gui" bpmnElement="Flow_0x09qq0">
+        <omgdi:waypoint x="1950" y="715"/>
+        <omgdi:waypoint x="2160" y="715"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_04uxz7l_gui" bpmnElement="Flow_04uxz7l">
+        <omgdi:waypoint x="2180" y="695"/>
+        <omgdi:waypoint x="2180" y="470"/>
+        <omgdi:waypoint x="2390" y="470"/>
+        <bpmndi:BPMNLabel labelStyle="sid-428a65d0-95ed-4042-9011-53d9c01fefc4">
+          <omgdc:Bounds x="2194" y="574" width="31" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_10t8e21_gui" bpmnElement="Flow_10t8e21">
+        <omgdi:waypoint x="1580" y="715"/>
+        <omgdi:waypoint x="1850" y="715"/>
+        <bpmndi:BPMNLabel labelStyle="sid-428a65d0-95ed-4042-9011-53d9c01fefc4">
+          <omgdc:Bounds x="1718" y="686" width="52" height="27"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1c1lzwi_gui" bpmnElement="Flow_1c1lzwi">
+        <omgdi:waypoint x="1560" y="695"/>
+        <omgdi:waypoint x="1560" y="510"/>
+        <bpmndi:BPMNLabel labelStyle="sid-428a65d0-95ed-4042-9011-53d9c01fefc4">
+          <omgdc:Bounds x="1571" y="603" width="82" height="14"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0x8fuqc_gui" bpmnElement="Flow_0x8fuqc">
+        <omgdi:waypoint x="1610" y="470"/>
+        <omgdi:waypoint x="1720" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_07bol61_gui" bpmnElement="Flow_07bol61">
+        <omgdi:waypoint x="1820" y="470"/>
+        <omgdi:waypoint x="1944" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0vc6kzn_gui" bpmnElement="Flow_0vc6kzn">
+        <omgdi:waypoint x="1040" y="240"/>
+        <omgdi:waypoint x="1145" y="240"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_02uwxuh_gui" bpmnElement="Flow_02uwxuh">
+        <omgdi:waypoint x="1175" y="240"/>
+        <omgdi:waypoint x="1280" y="240"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_01aanin_di" bpmnElement="Flow_01aanin">
+        <omgdi:waypoint x="2490" y="470"/>
+        <omgdi:waypoint x="2635" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0zfkxwf_di" bpmnElement="Flow_0zfkxwf">
+        <omgdi:waypoint x="4120" y="1215"/>
+        <omgdi:waypoint x="4120" y="495"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1jm2uzy_di" bpmnElement="Flow_1jm2uzy">
+        <omgdi:waypoint x="4145" y="470"/>
+        <omgdi:waypoint x="4245" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_1g02kx6" bpmnElement="Flow_1uf7imi">
+        <omgdi:waypoint x="2665" y="470"/>
+        <omgdi:waypoint x="4095" y="470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0l6rh9n_di" bpmnElement="Flow_0l6rh9n">
+        <omgdi:waypoint x="2900" y="1020"/>
+        <omgdi:waypoint x="3035" y="1020"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0hly01g_di" bpmnElement="Flow_0hly01g">
+        <omgdi:waypoint x="3060" y="1045"/>
+        <omgdi:waypoint x="3060" y="1205"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1h1sst7_di" bpmnElement="Flow_1h1sst7">
+        <omgdi:waypoint x="3085" y="1230"/>
+        <omgdi:waypoint x="3165" y="1230"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1rnqled_gui" bpmnElement="Flow_1rnqled">
+        <omgdi:waypoint x="3195" y="1230"/>
+        <omgdi:waypoint x="3280" y="1230"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1itgbyw_gui" bpmnElement="Flow_1itgbyw">
+        <omgdi:waypoint x="3195" y="1470"/>
+        <omgdi:waypoint x="3300" y="1470"/>
+        <omgdi:waypoint x="3300" y="1250"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1mytd0y_gui" bpmnElement="Flow_1mytd0y">
+        <omgdi:waypoint x="3320" y="1230"/>
+        <omgdi:waypoint x="3420" y="1230"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1h02eiw_di" bpmnElement="Flow_1h02eiw">
+        <omgdi:waypoint x="3060" y="1255"/>
+        <omgdi:waypoint x="3060" y="1470"/>
+        <omgdi:waypoint x="3165" y="1470"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0anhxaw_gui" bpmnElement="Flow_0anhxaw">
+        <omgdi:waypoint x="3520" y="1230"/>
+        <omgdi:waypoint x="3640" y="1230"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_10ci60o_gui" bpmnElement="Flow_10ci60o">
+        <omgdi:waypoint x="3690" y="1270"/>
+        <omgdi:waypoint x="3690" y="1430"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_08g4fr7_gui" bpmnElement="Flow_08g4fr7">
+        <omgdi:waypoint x="3740" y="1470"/>
+        <omgdi:waypoint x="3940" y="1470"/>
+        <omgdi:waypoint x="3940" y="1270"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1pbjb2m_gui" bpmnElement="Flow_1pbjb2m">
+        <omgdi:waypoint x="3990" y="1230"/>
+        <omgdi:waypoint x="4105" y="1230"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="sid-428a65d0-95ed-4042-9011-53d9c01fefc4">
+      <omgdc:Font name="Arial" size="11" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+    </bpmndi:BPMNLabelStyle>
+    <bpmndi:BPMNLabelStyle id="sid-588d5904-2bcd-44ff-a723-88dcae8ff0c0">
+      <omgdc:Font name="Arial" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+<qbpapi:Results><qbpapi:Results><qbpapi:process><qbpapi:minCycleTime>27.834</qbpapi:minCycleTime><qbpapi:averageCycleTime>307242.3024870001</qbpapi:averageCycleTime><qbpapi:maxCycleTime>585500.147</qbpapi:maxCycleTime><qbpapi:totalCycleTime>13742919.574</qbpapi:totalCycleTime><qbpapi:minCost>1.15975</qbpapi:minCost><qbpapi:averageCost>225.27880797500003</qbpapi:averageCost><qbpapi:maxCost>741.1199833333334</qbpapi:maxCost><qbpapi:totalCost>225278.80797500003</qbpapi:totalCost><qbpapi:minDuration>27.834</qbpapi:minDuration><qbpapi:averageDuration>10796.552839000002</qbpapi:averageDuration><qbpapi:maxDuration>34009.321000000054</qbpapi:maxDuration><qbpapi:processInstances>1000</qbpapi:processInstances></qbpapi:process><qbpapi:elements><qbpapi:element id="Process_0h6mjgt.Gateway_0d1piar" name="Are office of export&amp;#xa;and exit the same?"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>901</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Activity_05jg1tp" name="Check compliance of goods"><qbpapi:duration><qbpapi:min>7.902</qbpapi:min><qbpapi:max>15615.023</qbpapi:max><qbpapi:average>3282.6267615062784</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0.006977777777777778</qbpapi:min><qbpapi:max>89.25300000000001</qbpapi:max><qbpapi:average>13.671459801642643</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>13733.28299999237</qbpapi:max><qbpapi:average>2052.195379362567</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>237600</qbpapi:max><qbpapi:average>9615.27922315202</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>717</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.sid-7539F8C7-7774-49F6-AB50-37EFEAD46C34" name="Control goods"><qbpapi:duration><qbpapi:min>3.6999999999970896</qbpapi:min><qbpapi:max>22874.02300000001</qbpapi:max><qbpapi:average>3365.319562962965</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0.08222222222222222</qbpapi:min><qbpapi:max>508.31162222222224</qbpapi:max><qbpapi:average>55.33489156966481</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>8212.742999931332</qbpapi:max><qbpapi:average>875.249442344017</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>237600</qbpapi:max><qbpapi:average>58653.060898412725</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>945</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Event_10dyzhb" name="Customs declaration&amp;#xa;received"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>1000</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Event_1yf2tc1" name="Declaration&amp;#xa;accepted"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>945</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Event_1vdy4tr" name="Declaration&amp;#xa;rejected"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>55</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Event_0ymglzh" name="EAD received"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>717</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Event_1ftqmzy" name="EAD sent&amp;#xa;to the declarant"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>717</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Event_0t6ch9h" name="Exit confirmation&amp;#xa;received"><qbpapi:duration><qbpapi:min>301.607</qbpapi:min><qbpapi:max>599.667</qbpapi:max><qbpapi:average>454.6314347826086</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>184</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Event_1ntkg55" name="Exit confirmation&amp;#xa;received"><qbpapi:duration><qbpapi:min>300.413</qbpapi:min><qbpapi:max>599.046</qbpapi:max><qbpapi:average>455.8674560669462</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>717</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Event_1n2b760" name="Exit of goods&amp;#xa;confirmed"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>901</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Event_0fura49" name="Export of goods&amp;#xa;refused"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>44</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Activity_0hu9c78" name="Forward EAD to customs office of exit"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>1515.537</qbpapi:max><qbpapi:average>21.239654114365408</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>1515.5369999408722</qbpapi:max><qbpapi:average>21.239654114721876</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>717</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Gateway_1kzdg8b" name="GATEWAY 10 AND"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>717</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Gateway_1cld0ad" name="GATEWAY 23 XOR"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>901</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Gateway_16yqk3m" name="GATEWAY 24 AND"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>717</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Gateway_08ivatz" name="GATEWAY 30 AND"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>717</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Gateway_04owq15" name="GATEWAY 33 AND"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>717</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Event_0r3eekz" name="Goods received at exit office"><qbpapi:duration><qbpapi:min>86555.011</qbpapi:min><qbpapi:max>258960.127</qbpapi:max><qbpapi:average>176989.958725244</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>717</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.sid-B7516F7F-F3B9-4E7A-9E0C-36DD39F8B280" name="Goods received at export office"><qbpapi:duration><qbpapi:min>21686.213</qbpapi:min><qbpapi:max>86339.126</qbpapi:max><qbpapi:average>52904.23983068783</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>945</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Activity_0ics7uj" name="Invalidate customs declaration"><qbpapi:duration><qbpapi:min>12.056</qbpapi:min><qbpapi:max>480.817</qbpapi:max><qbpapi:average>235.81611363636372</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0.5023333333333333</qbpapi:min><qbpapi:max>18.91045833333333</qbpapi:max><qbpapi:average>9.217384469696968</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>331.1560001373291</qbpapi:max><qbpapi:average>14.59888636524027</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>44</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Activity_17fh0q1" name="Issue MRN"><qbpapi:duration><qbpapi:min>1</qbpapi:min><qbpapi:max>57.623</qbpapi:max><qbpapi:average>1.4343386243386245</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0.0002777777777777778</qbpapi:min><qbpapi:max>0.0002777777777777778</qbpapi:max><qbpapi:average>0.000277777777777772</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>56.623000144958496</qbpapi:max><qbpapi:average>0.43433862464137807</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>945</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Activity_0s3cyoa" name="Produce EAD"><qbpapi:duration><qbpapi:min>0.204</qbpapi:min><qbpapi:max>1548.352</qbpapi:max><qbpapi:average>280.36453974895403</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0.008499999999999999</qbpapi:min><qbpapi:max>27.013541666666665</qbpapi:max><qbpapi:average>10.704191248256626</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>1236.383999824524</qbpapi:max><qbpapi:average>23.46394979139086</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>717</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Activity_0wy04s2" name="Register customs declaration"><qbpapi:duration><qbpapi:min>105.264</qbpapi:min><qbpapi:max>1974.049</qbpapi:max><qbpapi:average>490.54440000000034</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>4.385999999999999</qbpapi:min><qbpapi:max>35.51445833333334</qbpapi:max><qbpapi:average>20.045688095238077</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>1391.8719999790192</qbpapi:max><qbpapi:average>9.447885713627729</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>230400</qbpapi:max><qbpapi:average>2194.285714285714</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>945</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Activity_0emoei7" name="Release goods for export"><qbpapi:duration><qbpapi:min>194.54</qbpapi:min><qbpapi:max>2200.393</qbpapi:max><qbpapi:average>623.1415205327418</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>8.105833333333333</qbpapi:min><qbpapi:max>40.170291666666664</qbpapi:max><qbpapi:average>25.165373335183137</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>1304.851000070572</qbpapi:max><qbpapi:average>19.17256048860878</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>901</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Activity_012tqx2" name="Retrive customs declaration"><qbpapi:duration><qbpapi:min>60</qbpapi:min><qbpapi:max>360</qbpapi:max><qbpapi:average>90.01593584379359</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>2.5</qbpapi:min><qbpapi:max>2.5</qbpapi:max><qbpapi:average>2.5</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>299.9999999046322</qbpapi:max><qbpapi:average>30.01593585721419</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>230373.278</qbpapi:max><qbpapi:average>66899.90463737796</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>717</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Activity_16i7c4u" name="Retrive risk analysis report"><qbpapi:duration><qbpapi:min>60</qbpapi:min><qbpapi:max>360</qbpapi:max><qbpapi:average>116.79417852161787</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>2.5</qbpapi:min><qbpapi:max>2.5</qbpapi:max><qbpapi:average>2.5</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>300</qbpapi:max><qbpapi:average>56.79417852178278</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>57600</qbpapi:max><qbpapi:average>80.3347280334728</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>717</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Activity_1bq9ez2" name="Risk analysis"><qbpapi:duration><qbpapi:min>60</qbpapi:min><qbpapi:max>60</qbpapi:max><qbpapi:average>60</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0.016666666666666666</qbpapi:min><qbpapi:max>0.016666666666666666</qbpapi:max><qbpapi:average>0.01666666666666705</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>945</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Activity_1ycxj9m" name="Send goods to the customs office of exit"><qbpapi:duration><qbpapi:min>34.064</qbpapi:min><qbpapi:max>8359.582</qbpapi:max><qbpapi:average>1449.5835760111565</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0.22653333333333336</qbpapi:min><qbpapi:max>34.57262222222222</qbpapi:max><qbpapi:average>13.810261583759488</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>7521.406999826431</qbpapi:max><qbpapi:average>828.1218047464336</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>237554.809</qbpapi:max><qbpapi:average>1111.377649930265</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>717</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Activity_0wlq0gq" name="Supervise phisical exit of goods"><qbpapi:duration><qbpapi:min>1.52</qbpapi:min><qbpapi:max>1533.215</qbpapi:max><qbpapi:average>630.090576086957</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0.06333333333333334</qbpapi:min><qbpapi:max>63.88395833333333</qbpapi:max><qbpapi:average>26.253774003623196</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>184</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Activity_123g5oq" name="Supervise phisical exit of goods"><qbpapi:duration><qbpapi:min>3.97</qbpapi:min><qbpapi:max>1880.393</qbpapi:max><qbpapi:average>638.42419804742</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0.16541666666666666</qbpapi:min><qbpapi:max>65.73333333333333</qbpapi:max><qbpapi:average>25.384083158995825</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>1180.5479998588562</qbpapi:max><qbpapi:average>29.206202231690476</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>717</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Activity_14g4wpu" name="Take appropriate measures"><qbpapi:duration><qbpapi:min>0.144</qbpapi:min><qbpapi:max>3578.123</qbpapi:max><qbpapi:average>835.0699545454543</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0.005999999999999999</qbpapi:min><qbpapi:max>149.0884583333333</qbpapi:max><qbpapi:average>34.50098106060606</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>168.67200016975403</qbpapi:max><qbpapi:average>7.046409097584811</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>44</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.sid-4AE8926C-AA23-4EC0-8AA0-70E9D366FB1F" name="Verify customs declaration and attached documents"><qbpapi:duration><qbpapi:min>1.552</qbpapi:min><qbpapi:max>11785.092</qbpapi:max><qbpapi:average>1815.4342150000002</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0.06466666666666666</qbpapi:min><qbpapi:max>491.0455</qbpapi:max><qbpapi:average>75.43515683333334</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>810.7230000495911</qbpapi:max><qbpapi:average>4.990450999975204</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>230400</qbpapi:max><qbpapi:average>6274.8</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>1000</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Gateway_14jf0ma" name="are all conditions &amp;#xa;for acceptance fulfilled?"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>1000</qbpapi:count></qbpapi:element><qbpapi:element id="Process_0h6mjgt.Gateway_0u0wlqf" name="are issues detected?"><qbpapi:duration><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:duration><qbpapi:cost><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:cost><qbpapi:waitingTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:waitingTime><qbpapi:idleTime><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:idleTime><qbpapi:costOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:costOverThreshold><qbpapi:durationOverThreshold><qbpapi:min>0</qbpapi:min><qbpapi:max>0</qbpapi:max><qbpapi:average>0</qbpapi:average></qbpapi:durationOverThreshold><qbpapi:count>945</qbpapi:count></qbpapi:element></qbpapi:elements><qbpapi:resources><qbpapi:resource id="Lane_0e2bfgm"><qbpapi:utilization>0.21306093651985075</qbpapi:utilization></qbpapi:resource><qbpapi:resource id="Lane_0j12m88"><qbpapi:utilization>0.18006536551436325</qbpapi:utilization></qbpapi:resource><qbpapi:resource id="Lane_0b2odqj"><qbpapi:utilization>0.012378601691922439</qbpapi:utilization></qbpapi:resource><qbpapi:resource id="Lane_13g3sgg"><qbpapi:utilization>0.0041945235646330655</qbpapi:utilization></qbpapi:resource><qbpapi:resource id="Lane_1l9mjnq"><qbpapi:utilization>0.28561476828857635</qbpapi:utilization></qbpapi:resource></qbpapi:resources></qbpapi:Results><qbpapi:CycleTimesData><qbpapi:min>27.834</qbpapi:min><qbpapi:max>585500.147</qbpapi:max><qbpapi:binWidth>58548</qbpapi:binWidth><qbpapi:values><qbpapi:value>54</qbpapi:value><qbpapi:value>156</qbpapi:value><qbpapi:value>26</qbpapi:value><qbpapi:value>12</qbpapi:value><qbpapi:value>156</qbpapi:value><qbpapi:value>197</qbpapi:value><qbpapi:value>37</qbpapi:value><qbpapi:value>193</qbpapi:value><qbpapi:value>150</qbpapi:value><qbpapi:value>19</qbpapi:value></qbpapi:values></qbpapi:CycleTimesData><qbpapi:CycleTimesInTimetableData><qbpapi:min>27.834</qbpapi:min><qbpapi:max>34009.321000000054</qbpapi:max><qbpapi:binWidth>3399</qbpapi:binWidth><qbpapi:values><qbpapi:value>70</qbpapi:value><qbpapi:value>145</qbpapi:value><qbpapi:value>254</qbpapi:value><qbpapi:value>255</qbpapi:value><qbpapi:value>170</qbpapi:value><qbpapi:value>62</qbpapi:value><qbpapi:value>32</qbpapi:value><qbpapi:value>9</qbpapi:value><qbpapi:value>2</qbpapi:value><qbpapi:value>1</qbpapi:value></qbpapi:values></qbpapi:CycleTimesInTimetableData><qbpapi:WaitingTimesData><qbpapi:min>-2.1744199329987168e-7</qbpapi:min><qbpapi:max>18381.7060002079</qbpapi:max><qbpapi:binWidth>1839</qbpapi:binWidth><qbpapi:values><qbpapi:value>466</qbpapi:value><qbpapi:value>191</qbpapi:value><qbpapi:value>148</qbpapi:value><qbpapi:value>82</qbpapi:value><qbpapi:value>58</qbpapi:value><qbpapi:value>28</qbpapi:value><qbpapi:value>15</qbpapi:value><qbpapi:value>5</qbpapi:value><qbpapi:value>4</qbpapi:value><qbpapi:value>3</qbpapi:value></qbpapi:values></qbpapi:WaitingTimesData><qbpapi:CostsData><qbpapi:min>1.15975</qbpapi:min><qbpapi:max>741.1199833333334</qbpapi:max><qbpapi:binWidth>74</qbpapi:binWidth><qbpapi:values><qbpapi:value>43</qbpapi:value><qbpapi:value>168</qbpapi:value><qbpapi:value>351</qbpapi:value><qbpapi:value>250</qbpapi:value><qbpapi:value>103</qbpapi:value><qbpapi:value>60</qbpapi:value><qbpapi:value>12</qbpapi:value><qbpapi:value>9</qbpapi:value><qbpapi:value>2</qbpapi:value><qbpapi:value>2</qbpapi:value></qbpapi:values></qbpapi:CostsData></qbpapi:Results><qbp:processSimulationInfo id="qbp_3e9c5433-1a35-533d-a836-b9dc47cd11ef" processInstances="1000" startDateTime="2023-02-01T07:00:00.000Z" currency="EUR"><qbp:arrivalRateDistribution type="EXPONENTIAL" mean="NaN" arg1="3300" arg2="NaN"><qbp:timeUnit>minutes</qbp:timeUnit></qbp:arrivalRateDistribution><qbp:timetables><qbp:timetable id="QBP_DEFAULT_TIMETABLE" default="true" name="Default"><qbp:rules><qbp:rule fromTime="09:00:00.000+00:00" toTime="17:00:00.000+00:00" fromWeekDay="MONDAY" toWeekDay="FRIDAY"/></qbp:rules></qbp:timetable><qbp:timetable id="QBP_247_TIMETABLE" default="false" name="24/7"><qbp:rules><qbp:rule fromTime="00:00:00.000+00:00" toTime="23:59:59.999+00:00" fromWeekDay="MONDAY" toWeekDay="SUNDAY"/></qbp:rules></qbp:timetable><qbp:timetable id="qbp_6aeb6a47-dd0d-46a9-9695-6b03be746a50" default="false" name="OfficeExport"><qbp:rules><qbp:rule fromTime="09:00:00" toTime="17:00:00.000+00:00" fromWeekDay="MONDAY" toWeekDay="FRIDAY"/></qbp:rules></qbp:timetable><qbp:timetable id="qbp_6f702c9b-a2f4-f9b7-da80-0012803e2a43" default="false" name="InspectorExport"><qbp:rules><qbp:rule fromTime="09:00:00" toTime="15:00:00.000+00:00" fromWeekDay="MONDAY" toWeekDay="FRIDAY"/></qbp:rules></qbp:timetable><qbp:timetable id="qbp_46312c43-0b73-5468-8ace-cc7ff5735c2e" default="false" name="OfficeExit"><qbp:rules><qbp:rule fromTime="09:00:00.000+00:00" toTime="17:00:00.000+00:00" fromWeekDay="MONDAY" toWeekDay="FRIDAY"/></qbp:rules></qbp:timetable><qbp:timetable id="qbp_e0e38731-cfe7-b27c-0afe-6379c4e78147" default="false" name="InspectorExit"><qbp:rules><qbp:rule fromTime="09:00:00" toTime="15:00:00.000+00:00" fromWeekDay="MONDAY" toWeekDay="FRIDAY"/></qbp:rules></qbp:timetable></qbp:timetables><qbp:resources><qbp:resource id="Lane_0j12m88" name="Inspector of exit" totalAmount="2" costPerHour="40" timetableId="qbp_e0e38731-cfe7-b27c-0afe-6379c4e78147"/><qbp:resource id="Lane_0b2odqj" name="Official of exit" totalAmount="5" costPerHour="150" timetableId="qbp_46312c43-0b73-5468-8ace-cc7ff5735c2e"/><qbp:resource id="Lane_1l9mjnq" name="Inspector of export" totalAmount="4" costPerHour="80" timetableId="qbp_6f702c9b-a2f4-f9b7-da80-0012803e2a43"/><qbp:resource id="Lane_0e2bfgm" name="Official of export" totalAmount="5" costPerHour="150" timetableId="qbp_6aeb6a47-dd0d-46a9-9695-6b03be746a50"/><qbp:resource id="Lane_13g3sgg" name="ACSystem" totalAmount="1" costPerHour="1" timetableId="QBP_247_TIMETABLE"/></qbp:resources><qbp:elements><qbp:element id="qbp_186fc6c9-43b8-0e69-b0d5-9bc921f094d0" elementId="Event_0ymglzh"><qbp:durationDistribution type="FIXED" mean="0" arg1="NaN" arg2="NaN"><qbp:timeUnit>seconds</qbp:timeUnit></qbp:durationDistribution></qbp:element><qbp:element id="qbp_1618461a-846a-6326-504b-10d182c2bf0f" elementId="Event_0t6ch9h"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="300" arg2="600"><qbp:timeUnit>minutes</qbp:timeUnit></qbp:durationDistribution></qbp:element><qbp:element id="qbp_c45c7b8f-bff0-022c-4f14-4c361cc5afdf" elementId="Event_1ntkg55"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="300" arg2="600"><qbp:timeUnit>minutes</qbp:timeUnit></qbp:durationDistribution></qbp:element><qbp:element id="qbp_965108ec-6630-a2dc-8e07-0575cf3da5a5" elementId="Event_0r3eekz"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="86400" arg2="259200"><qbp:timeUnit>days</qbp:timeUnit></qbp:durationDistribution></qbp:element><qbp:element id="qbp_97adcf6e-81fa-883c-6592-2c489ab1c0d7" elementId="sid-B7516F7F-F3B9-4E7A-9E0C-36DD39F8B280"><qbp:durationDistribution type="UNIFORM" mean="NaN" arg1="21600" arg2="86400"><qbp:timeUnit>hours</qbp:timeUnit></qbp:durationDistribution></qbp:element><qbp:element id="qbp_7244d276-8a05-2187-927c-cfe82a872e39" elementId="Activity_05jg1tp"><qbp:durationDistribution type="EXPONENTIAL" mean="NaN" arg1="1200" arg2="NaN"><qbp:timeUnit>minutes</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0j12m88</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_bff22274-7960-a859-6e74-6ceebd62df94" elementId="sid-7539F8C7-7774-49F6-AB50-37EFEAD46C34"><qbp:durationDistribution type="EXPONENTIAL" mean="NaN" arg1="2400" arg2="NaN"><qbp:timeUnit>minutes</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_1l9mjnq</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_ac89ad26-5a12-f8e4-af53-ca0ab7889aae" elementId="Activity_0hu9c78"><qbp:durationDistribution type="FIXED" mean="0" arg1="NaN" arg2="NaN"><qbp:timeUnit>seconds</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0e2bfgm</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_8655b2b2-4824-d69b-e1cf-69b7f02c2113" elementId="Activity_0ics7uj"><qbp:durationDistribution type="NORMAL" mean="240" arg1="120" arg2="NaN"><qbp:timeUnit>minutes</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0e2bfgm</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_8b0a30f4-b76d-120e-e969-342a714bbe73" elementId="Activity_17fh0q1"><qbp:durationDistribution type="FIXED" mean="1" arg1="NaN" arg2="NaN"><qbp:timeUnit>seconds</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_13g3sgg</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_86d8c988-eb59-7823-ff76-5c365f01df3c" elementId="Activity_0s3cyoa"><qbp:durationDistribution type="NORMAL" mean="240" arg1="120" arg2="NaN"><qbp:timeUnit>minutes</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0e2bfgm</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_98c7df28-6402-83c3-a1b7-07997d335209" elementId="Activity_0wy04s2"><qbp:durationDistribution type="NORMAL" mean="480" arg1="120" arg2="NaN"><qbp:timeUnit>minutes</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0e2bfgm</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_bb8ab9b1-782b-833c-29b8-1b8982bf4b93" elementId="Activity_0emoei7"><qbp:durationDistribution type="NORMAL" mean="600" arg1="120" arg2="NaN"><qbp:timeUnit>minutes</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0e2bfgm</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_2337b38b-2245-8a40-ac21-b77ac74c9bdd" elementId="Activity_012tqx2"><qbp:durationDistribution type="FIXED" mean="60" arg1="NaN" arg2="NaN"><qbp:timeUnit>minutes</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0b2odqj</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_33d27d76-ff13-c0d7-4a20-092975375c6d" elementId="Activity_16i7c4u"><qbp:durationDistribution type="FIXED" mean="60" arg1="NaN" arg2="NaN"><qbp:timeUnit>minutes</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0b2odqj</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_f6081816-77b3-9934-ea06-deaed30ba8ab" elementId="Activity_1bq9ez2"><qbp:durationDistribution type="FIXED" mean="60" arg1="NaN" arg2="NaN"><qbp:timeUnit>minutes</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_13g3sgg</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_f5938faa-32b5-b8c4-0ed2-f292775fc037" elementId="Activity_1ycxj9m"><qbp:durationDistribution type="NORMAL" mean="600" arg1="300" arg2="NaN"><qbp:timeUnit>minutes</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_1l9mjnq</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_aca6d560-3728-af73-3dfa-b186a443cdfc" elementId="Activity_0wlq0gq"><qbp:durationDistribution type="NORMAL" mean="600" arg1="300" arg2="NaN"><qbp:timeUnit>minutes</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0b2odqj</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_6f0635a1-bb9e-f37b-b61a-bcf4b09e537c" elementId="Activity_123g5oq"><qbp:durationDistribution type="NORMAL" mean="600" arg1="300" arg2="NaN"><qbp:timeUnit>minutes</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0e2bfgm</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_13277717-242b-04a5-c7cb-7d26add4f86c" elementId="Activity_14g4wpu"><qbp:durationDistribution type="EXPONENTIAL" mean="1200" arg1="1200" arg2="NaN"><qbp:timeUnit>minutes</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0e2bfgm</qbp:resourceId></qbp:resourceIds></qbp:element><qbp:element id="qbp_06d9ddfc-6e7b-9ce9-f87b-0f378e185571" elementId="sid-4AE8926C-AA23-4EC0-8AA0-70E9D366FB1F"><qbp:durationDistribution type="EXPONENTIAL" mean="1800" arg1="1800" arg2="NaN"><qbp:timeUnit>minutes</qbp:timeUnit></qbp:durationDistribution><qbp:resourceIds><qbp:resourceId>Lane_0e2bfgm</qbp:resourceId></qbp:resourceIds></qbp:element></qbp:elements><qbp:sequenceFlows><qbp:sequenceFlow elementId="Flow_068xuwi" executionProbability="0.8"/><qbp:sequenceFlow elementId="Flow_04uxz7l" executionProbability="0.2"/><qbp:sequenceFlow elementId="Flow_1d7qtyd" executionProbability="0.05"/><qbp:sequenceFlow elementId="Flow_048a375" executionProbability="0.95"/><qbp:sequenceFlow elementId="Flow_10t8e21" executionProbability="0.95"/><qbp:sequenceFlow elementId="Flow_1c1lzwi" executionProbability="0.05"/></qbp:sequenceFlows><qbp:statsOptions/></qbp:processSimulationInfo></definitions>
