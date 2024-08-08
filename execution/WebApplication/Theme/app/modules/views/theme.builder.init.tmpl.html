@@ -1,0 +1,76 @@
+<div ng-class="{'expanded':expanded, 'unexpanded':!expanded}">
+    <header class="col-md-12" style="    background: #E2E2E2;">
+        <div class="navbar-header inline col-xs-12 col-sm-4 col-md-4 col-lg-3" style=" background: #021221; color: white;">
+            <a ui-sref="themeBuilder"><img src="app/ui/images/logo-themebuilder.png"></a>
+            <span>
+                Theme Builder
+            </span>
+        </div>
+
+        <div ng-if="!expanded" class="col-xs-12 col-sm-8 col-md-8 col-lg-9">
+            <ul class="nav nav-tabs" >
+                <li>
+                    <a ui-sref="themeBuilder.smartphone" ng-click="selectDevice(0)">
+                        <span class="inline-middle">Smartphone</span>
+                    </a>
+                </li>
+                <li>
+                    <a ui-sref="themeBuilder.tablet" ng-click="selectDevice(1)">
+                        <span class="inline-middle">Tablet</span>
+                    </a>
+                </li>
+                <!--<li>
+                    <a ui-sref="themeBuilder.desktop" ng-click="selectDevice(2)">
+                        <span class="inline-middle">Desktop</span>
+                    </a>
+                </li>-->
+                
+                <li ng-if="theme && showDevice != 'Desktop'" class="style-file-buttons">
+
+                    <img src="app/ui/images/upload-icon.svg" class="style-file-icon" title="Upload a Configuration" />
+                    <img src="app/ui/images/download-icon.svg" class="style-file-icon" ng-click="downloadStyles()" title="Download Configuration" />
+
+                </li>
+            </ul>
+
+        </div>
+
+        <div ng-if="expanded" class="row-fluid">
+            <div class="col-sm-12 col-md-12 text-center">
+                <h3>Bienvenidos al Theme Builder para Dispositivos</h3>
+                <i class="fa fa-paint-brush fa-4x"></i>
+            </div>
+
+            <div class="col-sm-12 col-md-12 menu-expanded">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6  col-md-6 text-center">
+                        <a ui-sref="themeBuilder.smartphone">
+                            <i ng-if="expanded" class="fa fa-mobile fa-3x"></i>
+                            <p class="hidden-xs">Smartphone</p>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-6  col-md-6 text-center">
+                        <a ui-sref="themeBuilder.tablet">
+                            <i ng-if="expanded" class="fa fa-laptop fa-3x"></i>
+                            <p class="hidden-xs">Tablet</p>
+                        </a>
+                    </div>
+                    <!--<div class="col-xs-12 col-sm-4 col-md-4 text-center">-->
+                        <!--<a ui-sref="themeBuilder.desktop">-->
+                            <!--<i ng-if="expanded" class="fa fa-desktop fa-3x"></i>-->
+                            <!--<p class="hidden-xs">Desktop</p>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                </div>
+
+            </div>
+            <div class="col-sm-12 col-md-12 text-center">
+                Bizagi 2016
+            </div>
+        </div>
+    </header>
+    <div class="col-md-12 theme-body">
+        <ui-view></ui-view>
+    </div>
+
+</div>

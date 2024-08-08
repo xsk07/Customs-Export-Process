@@ -1,0 +1,18 @@
+﻿
+.mixin-text (@a) when (luminance(@a) >= 60%){
+    color: darken(@a,50%);
+}
+.mixin-text (@a) when (luminance(@a) < 60%){
+  color: darken(@a,30%);  
+}
+
+
+.mixin-title (@a) when (luminance(@a) >= 60%){
+    color: darken(@a,50%);
+}
+
+
+.mixin-title (@a) when (luminance(@a) < 60%){
+    color:lighten(@a,50%);
+}
+

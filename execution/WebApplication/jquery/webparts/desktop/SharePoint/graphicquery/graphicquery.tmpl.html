@@ -1,0 +1,151 @@
+﻿<script id="ui-bizagi-webpart-graphicquery" type="text/x-jquery-tmpl">
+    <div class="bz-gq-wrapper">
+        <div class="cf bz-gq-header">
+            <div id="bz-gq-actionbar-container"></div>
+            <div id="bz-gq-summary-container"></div>
+        </div>
+        <div id="bz-gq-processviewer-canvas" {{loading}}>
+        </div>
+    </div>
+</script>
+<!-- .bz-gq-wrapper -->
+    
+<script id="ui-bizagi-webpart-graphicquery-actionbar" type="text/x-jquery-tmpl">
+    <div class="bz-gq-action-bar">
+        <div class="header-left">
+            {{if parentCase}}
+                <div class="header-list">
+                    <button id="bz-gq-button-parent" data-idworkflow="${parentCase.idProcess}" data-idcase="${parentCase.idCase}" class="bz-button bz-button-secondary">
+                        <i class="bz-gq-icon bz-icon-24 bz-gq-icon-parent"></i>
+                        <span class="bz-button-data">%{workportal-widget-graphicquery-actionbar-backtoparent}</span>
+                    </button>
+                </div>
+            {{/if}}
+            <div class="header-list">
+                {{if items.length > 1}}
+                    <label>%{workportal-widget-graphicquery-actionbar-goTo}</label>
+                    <div class="input-select" id="bz-gq-select-item"></div>  
+                {{/if}}
+            </div>
+            <div class="header-list">
+                <button id="bz-gq-button-path" class="bz-button">
+                    <i class="bz-gq-icon bz-icon-24 bz-gq-icon-path"></i>
+                    <span class="bz-button-data">%{workportal-widget-graphicquery-actionbar-path}</span>
+                </button>
+                <!-- <button id="bz-gq-button-status" class="bz-button">
+                    <i class="bz-gq-icon bz-icon-24 bz-gq-icon-status"></i>
+                    <span class="bz-button-data">Current Status</span>
+                </button> -->
+            </div>
+        </div>
+    </div>
+</script>
+<!-- .bz-gq-action-bar -->
+
+<script id="ui-bizagi-webpart-graphicquery-summary" type="text/x-jquery-tmpl">
+    <div class="bz-gq-process-summary">
+        <table id="bz-gq-table-summary" class="bz-table bz-table-bordered">
+            <tbody>
+                <tr>
+                    <th>%{workportal-widget-graphicquery-summary-case}</th>
+                    <td class="ui-bizagi-show-white-spaces">${currentCase.radicationNumber}</td>
+                    <th>%{workportal-widget-inboxcommon-process}</th>
+                    <td>${nameProcess}</td>
+                </tr>
+                <tr>
+                    <th>%{workportal-widget-graphicquery-summary-creatoruser}</th>
+                    <td>${currentCase.creatorUserNameCase}</td>
+                    <th>%{workportal-widget-graphicquery-summary-creationdate}</th>
+                    <td class="formatDate">${currentCase.creationDateCase}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</script>
+<!-- .bz-gq-process-summary -->
+
+
+<script id="ui-bizagi-webpart-graphicquery-parentsummary" type="text/x-jquery-tmpl">
+    <div class="bz-gq-process-summary">
+        <table id="bz-gq-table-summary" class="bz-table bz-table-bordered">
+            <tbody>
+                <tr>
+                    <th colspan="2">%{workportal-widget-graphicquery-psummary-parentcase}</th>
+                    <td class="ui-bizagi-show-white-spaces" colspan="2">${radicationNumber}</td>
+                </tr>
+                <tr>
+                    <th>%{workportal-widget-inboxcommon-parent-process}</th>
+                    <td>${nameProcess}</td>
+                    <th>%{workportal-widget-graphicquery-psummary-task}</th>
+                    <td>${task}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</script>
+
+<script id="ui-bizagi-webpart-graphicquery-tooltip-currenttask" type="text/x-jquery-tmpl">
+    <div class="bz-gq-tooltip">
+        <div class="bz-gq-tooltip-content">
+            <h2 class="bz-gq-tooltip-title">${taskName}</h2>
+            {{if users.length > 0}}
+            <h3 class="bz-gq-tooltip-subtitle">%{workportal-widget-graphicquery-assignedusers}</h3>
+            <ul class="bz-gq-tooltip-list bz-gq-tooltip-list-users">
+                {{each(i, val) users}}
+                    <li>${val.fullName}</li>
+                {{/each}}
+            </ul>
+            {{/if}}
+            <dl class="bz-gq-tooltip-definition">
+                <dt>%{workportal-widget-graphicquery-entrydate}</dt>
+                <dd class="formatDate">${entryDate}</dd>
+                {{if expireDate !== null }}
+                    <dt>%{workportal-widget-graphicquery-expiredate}</dt>
+                    <dd class="formatDate">${expireDate}</dd>
+                {{/if}}
+            </dl>
+        </div>
+    </div>
+</script>
+
+<script id="ui-bizagi-webpart-graphicquery-tooltip-subcases" type="text/x-jquery-tmpl">
+    <div class="bz-gq-tooltip">
+        <div class="bz-gq-tooltip-content">
+            <h2 class="bz-gq-tooltip-title">${taskName}</h2>
+            <dl class="bz-gq-tooltip-definition">
+                <dt>%{workportal-widget-graphicquery-invokedprocess}</dt>
+                <dd>${subprocess}</dd>
+            </dl>
+            <h3 class="bz-gq-tooltip-subtitle">%{workportal-project-subprocesses-title}</h3>
+            <ul class="bz-gq-tooltip-list" data-tasktype="${taskType}" data-parentTaskName="${taskName}">
+                {{each(i, val) cases}}
+                    <li data-idcase="${val.idCase}" data-idworkflow="${val.idWorkflow}" data-idparentworkitem="${val.idParentWorkItem}">${val.radicationNumber}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</script>
+
+<script id="ui-bizagi-webpart-graphicquery-tooltip-users" type="text/x-jquery-tmpl">
+    <div class="bz-gq-tooltip">
+        <div class="bz-gq-tooltip-content">
+            <h2 class="bz-gq-tooltip-title">${taskName}</h2>
+            <ul class="bz-gq-tooltip-list bz-gq-tooltip-list-users">
+                <li><label>%{workportal-widget-activity-log-table-title-username}:</label>${usersAssignees[0].fullName}</li>
+                {{if usersAssignees[0].posDisplayName}}<li><label>%{workportal-widget-admin-dimensions-text-displayName}:</label>${usersAssignees[0].posDisplayName}</li>{{/if}}
+                {{if usersAssignees[0].locDisplayName}}<li><label>%{workportal-widget-admincase-location}:</label>${usersAssignees[0].locDisplayName}</li> {{/if}}
+                {{if usersAssignees[0].areaDisplayName}}<li><label>%{bz-rp-components-dimension-area-label}:</label>${usersAssignees[0].areaDisplayName}</li> {{/if}}
+            </ul>
+            <dl class="bz-gq-tooltip-definition">
+                <dt>%{workportal-widget-graphicquery-entrydate}</dt>
+                <dd class="formatDate">${wiEntryDate}</dd>
+                <dt>%{workportal-widget-graphicquery-finished}</dt>
+                <dd class="formatDate">${wiEstimatedSolutionDate}</dd>
+            </dl>
+        </div>
+    </div>
+</script>
+
+<script id="ui-bizagi-webpart-graphicquery-subcases" type="text/x-jquery-tmpl">
+    <span class="bz-gq-subcases-icon">${ncases}</span>
+</script>

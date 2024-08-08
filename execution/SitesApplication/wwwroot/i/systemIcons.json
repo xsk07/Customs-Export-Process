@@ -1,0 +1,648 @@
+{
+  "info": {
+    "author": "Bizagi",
+    "version": "1.0.0",
+    "font": {
+      "name": "bizagi-font",
+      "baseClass": "bz-icon",
+      "classPrefix": "bz-icon-"
+    },
+    "displayName": "Bizagi Font"
+  },
+  "fontDefinition": {
+    "codePoints": {
+      "0": {
+        "code": "0xE1000",
+        "name": "drag"
+      },
+      "1": {
+        "code": "0xE1001",
+        "name": "interface"
+      },
+      "2": {
+        "code": "0xE1002",
+        "name": "policy"
+      },
+      "3": {
+        "code": "0xE1003",
+        "name": "sap"
+      },
+      "4": {
+        "code": "0xE1004",
+        "name": "interface-o"
+      },
+      "5": {
+        "code": "0xE1005",
+        "name": "file-text-o-o"
+      },
+      "6": {
+        "code": "0xE1006",
+        "name": "connector"
+      },
+      "7": {
+        "code": "0xE1007",
+        "name": "localization"
+      },
+      "8": {
+        "code": "0xE1008",
+        "name": "currency"
+      },
+      "9": {
+        "code": "0xE1009",
+        "name": "development"
+      },
+      "10": {
+        "code": "0xE100a",
+        "name": "disk"
+      },
+      "11": {
+        "code": "0xE100b",
+        "name": "entity"
+      },
+      "12": {
+        "code": "0xE100c",
+        "name": "extended-text"
+      },
+      "13": {
+        "code": "0xE100d",
+        "name": "integer"
+      },
+      "14": {
+        "code": "0xE100e",
+        "name": "master"
+      },
+      "15": {
+        "code": "0xE100f",
+        "name": "parameter"
+      },
+      "16": {
+        "code": "0xE1010",
+        "name": "production"
+      },
+      "17": {
+        "code": "0xE1011",
+        "name": "stakeholder"
+      },
+      "18": {
+        "code": "0xE1012",
+        "name": "string"
+      },
+      "19": {
+        "code": "0xE1013",
+        "name": "test"
+      },
+      "20": {
+        "code": "0xE1014",
+        "name": "accessibility"
+      },
+      "21": {
+        "code": "0xE1015",
+        "name": "activity"
+      },
+      "22": {
+        "code": "0xE1016",
+        "name": "alarm"
+      },
+      "23": {
+        "code": "0xE1017",
+        "name": "asynchronous"
+      },
+      "24": {
+        "code": "0xE1018",
+        "name": "authentication"
+      },
+      "25": {
+        "code": "0xE1019",
+        "name": "case"
+      },
+      "26": {
+        "code": "0xE101a",
+        "name": "case-recent"
+      },
+      "27": {
+        "code": "0xE101b",
+        "name": "checklist"
+      },
+      "28": {
+        "code": "0xE101c",
+        "name": "clip"
+      },
+      "29": {
+        "code": "0xE101d",
+        "name": "cog"
+      },
+      "30": {
+        "code": "0xE101e",
+        "name": "cogs"
+      },
+      "31": {
+        "code": "0xE101f",
+        "name": "comment"
+      },
+      "32": {
+        "code": "0xE1020",
+        "name": "database"
+      },
+      "33": {
+        "code": "0xE1021",
+        "name": "diagram"
+      },
+      "34": {
+        "code": "0xE1022",
+        "name": "dimension"
+      },
+      "35": {
+        "code": "0xE1023",
+        "name": "down"
+      },
+      "36": {
+        "code": "0xE1024",
+        "name": "edit"
+      },
+      "37": {
+        "code": "0xE1025",
+        "name": "eye"
+      },
+      "38": {
+        "code": "0xE1026",
+        "name": "filter"
+      },
+      "39": {
+        "code": "0xE1027",
+        "name": "folder"
+      },
+      "40": {
+        "code": "0xE1028",
+        "name": "form"
+      },
+      "41": {
+        "code": "0xE1029",
+        "name": "hide"
+      },
+      "42": {
+        "code": "0xE102a",
+        "name": "home"
+      },
+      "43": {
+        "code": "0xE102b",
+        "name": "inbox"
+      },
+      "44": {
+        "code": "0xE102c",
+        "name": "info"
+      },
+      "45": {
+        "code": "0xE102d",
+        "name": "leave"
+      },
+      "46": {
+        "code": "0xE102e",
+        "name": "license"
+      },
+      "47": {
+        "code": "0xE102f",
+        "name": "lock"
+      },
+      "48": {
+        "code": "0xE1030",
+        "name": "log"
+      },
+      "49": {
+        "code": "0xE1031",
+        "name": "menu"
+      },
+      "50": {
+        "code": "0xE1032",
+        "name": "new"
+      },
+      "51": {
+        "code": "0xE1033",
+        "name": "next"
+      },
+      "52": {
+        "code": "0xE1034",
+        "name": "open"
+      },
+      "53": {
+        "code": "0xE1035",
+        "name": "order"
+      },
+      "54": {
+        "code": "0xE1036",
+        "name": "order-ascendant"
+      },
+      "55": {
+        "code": "0xE1037",
+        "name": "order-descendant"
+      },
+      "56": {
+        "code": "0xE1038",
+        "name": "overview"
+      },
+      "57": {
+        "code": "0xE1039",
+        "name": "paint"
+      },
+      "58": {
+        "code": "0xE103a",
+        "name": "path"
+      },
+      "59": {
+        "code": "0xE103b",
+        "name": "plan"
+      },
+      "60": {
+        "code": "0xE103c",
+        "name": "plan-activities"
+      },
+      "61": {
+        "code": "0xE103d",
+        "name": "plan-closed"
+      },
+      "62": {
+        "code": "0xE103e",
+        "name": "plan-enable"
+      },
+      "63": {
+        "code": "0xE103f",
+        "name": "play"
+      },
+      "64": {
+        "code": "0xE1040",
+        "name": "point"
+      },
+      "65": {
+        "code": "0xE1041",
+        "name": "prev"
+      },
+      "66": {
+        "code": "0xE1042",
+        "name": "template"
+      },
+      "67": {
+        "code": "0xE1043",
+        "name": "reload"
+      },
+      "68": {
+        "code": "0xE1044",
+        "name": "reports"
+      },
+      "69": {
+        "code": "0xE1045",
+        "name": "rules"
+      },
+      "70": {
+        "code": "0xE1046",
+        "name": "search"
+      },
+      "71": {
+        "code": "0xE1047",
+        "name": "sheet"
+      },
+      "72": {
+        "code": "0xE1048",
+        "name": "sheet-pencil"
+      },
+      "73": {
+        "code": "0xE1049",
+        "name": "sign-out"
+      },
+      "74": {
+        "code": "0xE104a",
+        "name": "tag"
+      },
+      "75": {
+        "code": "0xE104b",
+        "name": "trash"
+      },
+      "76": {
+        "code": "0xE104c",
+        "name": "unlock"
+      },
+      "77": {
+        "code": "0xE104d",
+        "name": "user"
+      },
+      "78": {
+        "code": "0xE104e",
+        "name": "user-data"
+      },
+      "79": {
+        "code": "0xE104f",
+        "name": "user-manage"
+      },
+      "80": {
+        "code": "0xE1050",
+        "name": "users"
+      },
+      "81": {
+        "code": "0xE1051",
+        "name": "watch"
+      },
+      "82": {
+        "code": "0xE1052",
+        "name": "watch-close"
+      },
+      "83": {
+        "code": "0xE1053",
+        "name": "watch-progress"
+      },
+      "84": {
+        "code": "0xE1054",
+        "name": "world"
+      },
+      "85": {
+        "code": "0xE1055",
+        "name": "zoom"
+      },
+      "86": {
+        "code": "0xE1056",
+        "name": "execute"
+      },
+      "87": {
+        "code": "0xE1057",
+        "name": "close"
+      },
+      "88": {
+        "code": "0xE1058",
+        "name": "coin"
+      },
+      "89": {
+        "code": "0xE1059",
+        "name": "attributes"
+      },
+      "90": {
+        "code": "0xE105a",
+        "name": "grid"
+      },
+      "91": {
+        "code": "0xE105b",
+        "name": "list"
+      },
+      "92": {
+        "code": "0xE105c",
+        "name": "log-out"
+      },
+      "93": {
+        "code": "0xE105d",
+        "name": "minus"
+      },
+      "94": {
+        "code": "0xE105e",
+        "name": "stuff"
+      },
+      "95": {
+        "code": "0xE105f",
+        "name": "hexagon-download"
+      },
+      "96": {
+        "code": "0xE1060",
+        "name": "hexagon-info"
+      },
+      "97": {
+        "code": "0xE1061",
+        "name": "hexagon-new"
+      },
+      "98": {
+        "code": "0xE1062",
+        "name": "hexagon-support"
+      },
+      "99": {
+        "code": "0xE1063",
+        "name": "hexagon-upload"
+      },
+      "100": {
+        "code": "0xE1064",
+        "name": "plus"
+      },
+      "101": {
+        "code": "0xE1065",
+        "name": "reply"
+      },
+      "102": {
+        "code": "0xE1066",
+        "name": "reset"
+      },
+      "103": {
+        "code": "0xE1067",
+        "name": "right"
+      },
+      "104": {
+        "code": "0xE1068",
+        "name": "share"
+      },
+      "105": {
+        "code": "0xE1069",
+        "name": "team"
+      },
+      "106": {
+        "code": "0xE106a",
+        "name": "upgrade"
+      },
+      "107": {
+        "code": "0xE106b",
+        "name": "error"
+      },
+      "108": {
+        "code": "0xE106c",
+        "name": "picture"
+      },
+      "109": {
+        "code": "0xE106d",
+        "name": "process"
+      },
+      "110": {
+        "code": "0xE106e",
+        "name": "code-rule"
+      },
+      "111": {
+        "code": "0xE106f",
+        "name": "code-conditional"
+      },
+      "112": {
+        "code": "0xE1070",
+        "name": "bookmark"
+      },
+      "113": {
+        "code": "0xE1071",
+        "name": "add-attribute"
+      },
+      "114": {
+        "code": "0xE1072",
+        "name": "add-sentence"
+      },
+      "115": {
+        "code": "0xE1073",
+        "name": "up"
+      },
+      "116": {
+        "code": "0xE1074",
+        "name": "code-conditional-active"
+      },
+      "117": {
+        "code": "0xE1075",
+        "name": "if"
+      },
+      "118": {
+        "code": "0xE1076",
+        "name": "hexagon-execute"
+      },
+      "119": {
+        "code": "0xE1077",
+        "name": "hexagon-external"
+      },
+      "120": {
+        "code": "0xE1078",
+        "name": "hexagon-person"
+      },
+      "121": {
+        "code": "0xE1079",
+        "name": "environment"
+      },
+      "122": {
+        "code": "0xE107a",
+        "name": "environment-shared"
+      },
+      "123": {
+        "code": "0xE107b",
+        "name": "hexagon-isolated"
+      },
+      "124": {
+        "code": "0xE107c",
+        "name": "hexagon-development"
+      },
+      "125": {
+        "code": "0xE107d",
+        "name": "hexagon-staging"
+      },
+      "126": {
+        "code": "0xE107e",
+        "name": "hexagon-testing"
+      },
+      "127": {
+        "code": "0xE107f",
+        "name": "hexagon-production"
+      },
+      "128": {
+        "code": "0xE1080",
+        "name": "hexagon-all"
+      },
+      "129": {
+        "code": "0xE1081",
+        "name": "environment-default"
+      },
+      "130": {
+        "code": "0xE1082",
+        "name": "environment-custom"
+      },
+      "131": {
+        "code": "0xE1083",
+        "name": "cloud"
+      },
+      "132": {
+        "code": "0xE1084",
+        "name": "menu-items"
+      },
+      "133": {
+        "code": "0xE1085",
+        "name": "stakeholders"
+      },
+      "134": {
+        "code": "0xE1086",
+        "name": "personas"
+      },
+      "135": {
+        "code": "0xE1087",
+        "name": "if-active"
+      },
+      "136": {
+        "code": "0xE1088",
+        "name": "clip-add-outline"
+      },
+      "137": {
+        "code": "0xE1089",
+        "name": "closed-outline"
+      },
+      "138": {
+        "code": "0xE108a",
+        "name": "executing-outline"
+      },
+      "139": {
+        "code": "0xE108b",
+        "name": "pending-outline"
+      },
+      "140": {
+        "code": "0xE108c",
+        "name": "star"
+      },
+      "141": {
+        "code": "0xE108d",
+        "name": "star-outline"
+      },
+      "142": {
+        "code": "0xE108e",
+        "name": "update"
+      },
+      "143": {
+        "code": "0xE108f",
+        "name": "watch-pending-outline"
+      },
+      "144": {
+        "code": "0xE1090",
+        "name": "left-outline"
+      },
+      "145": {
+        "code": "0xE1091",
+        "name": "right-outline"
+      },
+      "146": {
+        "code": "0xE1092",
+        "name": "check-outline"
+      },
+      "147": {
+        "code": "0xE1093",
+        "name": "pencil-outline"
+      },
+      "148": {
+        "code": "0xE1094",
+        "name": "development-outline"
+      },
+      "149": {
+        "code": "0xE1095",
+        "name": "drag-outline"
+      },
+      "150": {
+        "code": "0xE1096",
+        "name": "currency-outline"
+      },
+      "151": {
+        "code": "0xE1097",
+        "name": "entity-outline"
+      },
+      "152": {
+        "code": "0xE1098",
+        "name": "panel-outline"
+      },
+      "153": {
+        "code": "0xE1099",
+        "name": "key-outline"
+      },
+      "154": {
+        "code": "0xE109a",
+        "name": "share-outline"
+      },
+      "155": {
+        "code": "0xE109b",
+        "name": "window-create-outline"
+      },
+      "156": {
+        "code": "0xE109c",
+        "name": "window-export-outline"
+      },
+      "157": {
+        "code": "0xE109d",
+        "name": "help-outline"
+      }
+    }
+  }
+}

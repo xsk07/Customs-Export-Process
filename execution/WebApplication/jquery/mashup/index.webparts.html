@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Bizagi</title>
+    <script>
+        ///reload whitout tag
+        if (location.href.indexOf("#") != -1) {
+            document.location = "index.webparts.html";
+        }
+    </script>
+</head>
+<body>
+<script type='text/javascript' src='../../jquery/bizagi.configuration.js'></script>
+<script type='text/javascript' src='../../jquery/steal.js'></script>
+<script type='text/javascript' src='../../jquery/bizagi.preloader.js'></script>
+<script type='text/javascript' src='../../jquery/bizagi.loader.js'></script>
+<script type='text/javascript' src='../../jquery/common/base/js/lib/less.min.js'></script>
+<script type="text/javascript" language="javascript">
+    /*
+     *   Read the query string parameteres
+     */
+    var getQueryString = function (url) {
+        var params = {};
+        url = url || window.location.href;
+        var query = url.indexOf("?") > 0 ? url.substring(url.indexOf("?") + 1) : "";
+        var pairs = query.split("&");
+        for (var i = pairs.length - 1; i >= 0; i--) {
+            var pos = pairs[i].indexOf('=');
+            if (pos == -1)
+                continue;
+            var argname = pairs[i].substring(0, pos);
+            var value = pairs[i].substring(pos + 1);
+            params[argname] = unescape(value);
+        }
+        return params;
+    };
+
+    var urlParameters = getQueryString();
+
+    bizagiConfig.proxyPrefix = "";
+
+    var session = window.sessionStorage.getItem("bizagiAuthentication") || "{}";
+    session = JSON.parse(session);
+
+    var BIZAGI_LOCAL_RESOURCES = false;
+    var BIZAGI_USE_ABSOLUTE_PATH = false;
+    var BIZAGI_MASHUP_CONTEXT = true;
+    var BIZAGI_SHAREPOINT_CONTEXT = urlParameters.context && urlParameters.context === "sharepoint";
+
+    var BIZAGI_PATH_TO_BASE = "../../";
+
+    var BIZAGI_LANGUAGE = 'en';
+
+    //var BIZAGI_ENVIRONMENT = bizagiConfig.environment || "debug";
+    var BIZAGI_ENVIRONMENT = bizagiConfig.environment || "release";
+
+    //var BIZAGI_DEFAULT_DEVICE = "tablet_android";
+    //var BIZAGI_DEFAULT_DEVICE = "smartphone_android";
+
+    //is boolean
+    var BIZAGI_ENABLE_LOG = typeof bizagiConfig.log !== "undefined" ? bizagiConfig.log : false;
+
+    var BIZAGI_ENABLE_PROFILER = false;
+
+    var BIZAGI_ENABLE_FLAT = true;
+
+    var BIZAGI_DEFAULT_CURRENCY_INFO = {
+        "symbol": session.symbol || "$",
+        "decimalSeparator": session.decimalSeparator || ",",
+        "groupSeparator": session.groupSeparator || ".",
+        "decimalDigits": session.decimalDigits || "2"
+    };
+
+    var BIZAGI_DEFAULT_DATETIME_INFO = {
+        "shortDateFormat": session.shortDateFormat || "dd/MM/yyyy",
+        "timeFormat": session.timeFormat || "H:mm",
+        "longDateFormat": session.longDateFormat || "dddd, dd' de 'MMMM' de 'yyyy"
+    };
+
+    var BIZAGI_SETTINGS = {
+        "UploadMaxFileSize": bizagiConfig.uploadMaxFileSize || "1048576"
+    };
+
+    var loader = bizagi.loader;
+
+    loader.nativeAjax(BIZAGI_PATH_TO_BASE + 'Rest/Users/CurrentUser',
+        function (data) {
+
+            var response = JSON.parse(data.response)
+
+            BIZAGI_DEFAULT_CURRENCY_INFO = {
+                "symbol": response.symbol,
+                "decimalSeparator": response.decimalSeparator,
+                "groupSeparator": response.groupSeparator,
+                "decimalDigits": response.decimalDigits
+            };
+
+            BIZAGI_DEFAULT_DATETIME_INFO = {
+                "shortDateFormat": response.shortDateFormat,
+                "timeFormat": response.timeFormat,
+                "longDateFormat": response.longDateFormat
+            };
+
+            loader.preInit(["bizagiDefault", BIZAGI_ENVIRONMENT, undefined, BIZAGI_PATH_TO_BASE],
+                [
+                    BIZAGI_LANGUAGE, BIZAGI_ENABLE_LOG,
+                    "",
+                    ["$", ".", ",", "2"],
+                    [BIZAGI_DEFAULT_DATETIME_INFO.shortDateFormat, BIZAGI_DEFAULT_DATETIME_INFO.timeFormat, BIZAGI_DEFAULT_DATETIME_INFO.longDateFormat],
+                    [BIZAGI_SETTINGS.UploadMaxFileSize], "",
+                    "ASP.NET_SessionId"
+                ]);
+            var mashup;
+            var moduleDefinitionURL = (BIZAGI_ENVIRONMENT === "release") ? "jquery/production/bizagi.module.definition.json.txt" : "jquery/bizagi.module.definition.json.txt";
+            loader.init({
+
+                url: moduleDefinitionURL,
+                callback: function () {
+
+                    //Detects required module
+                    var module = "workportalflat";
+                    var device = bizagi.detectDevice();
+                    loader.start(module, device).then(function () {
+                        loader.start("rendering", device).then(function () {
+                            startMashup();
+                        });
+                    });
+
+                    function startMashup() {
+                        loader.start("mashup").then(function () {
+                            //bizagi.enableCustomizations = true;
+
+                            mashup = new bizagi.mashup.facade({
+                                proxyPrefix: bizagiConfig.proxyPrefix || "",
+                                authentication: {
+                                    type: "OAuth",
+                                    refreshTokenCallback: function (successCallback, errorCallback) {
+                                        $.ajax({
+                                            type: "POST",
+                                            url: bizagiConfig.proxyPrefix + "oauth2/server/token",
+                                            headers: {
+                                                "Authorization": "Basic " + authorization
+                                            },
+                                            data: {
+                                                "grant_type": "refresh_token",
+                                                "scope": "login api",
+                                                "refresh_token": getAccessData().refresh_token
+                                            }
+                                        }).then(function (response) {
+                                            var tokens = {
+                                                access_token : response.access_token,
+                                                refresh_token : response.refresh_token
+                                            };
+                                            setAccessData(tokens);
+                                            successCallback(response.access_token);
+
+                                        }).fail(function (error) {
+                                            errorCallback(error);
+                                        });
+                                    }
+                                },
+                                onClose: function () {
+                                    console.log("closed");
+                                },
+                                onError: function (e) {
+                                    console.log("error", e);
+                                },
+                                onRenderAction: function (e) {
+                                    console.log(e.actions);
+                                },
+                                onRender: function (params) {
+                                    // Apply theme
+                                    var build = "?build=" + loader.build;
+                                    // Take file
+                                    if (urlParameters.themeVars) {
+                                        loader.loadFile({
+                                            type: "theme",
+                                            src: loader.resources.css["bizagi.mashup.theme"]
+                                        }).then(function () {
+                                            var lessVars = JSON.parse(urlParameters.themeVars) || {};
+                                            // Remove font
+                                            lessVars["@font-family"] = "";
+                                            var content = steal.resources[loader.resources.css["bizagi.mashup.theme"] + build].options.text;
+
+                                            loader.applyWebpartTheme(content, lessVars);
+                                        });
+                                    }
+                                },
+
+                                onMashupResize: function(params) {
+                                    var url = bizagi.util.getQueryString(window.location.href)["remoteServer"];
+                                    var remoteServer = (url) ? url : document.location.origin;
+                                    var destination = window.parent;
+                                    var origin = window;
+                                    var msg = { event: "mashup-resize-content", message: {height: params.height}};
+                                    if (window.parent) {
+                                        try {
+                                            window.parent.postMessage(msg, remoteServer);
+                                        } catch (e) {
+                                            console.log("PostMessage error:", e.toString());
+                                        }
+                                    }
+                                },
+                                showHeader: true
+                            });
+
+                            //mashup.authenticateUser({accessToken: getAccessData().access_token});
+
+                            if(typeof urlParameters.idCase !== "undefined" && typeof urlParameters.idWorkitem !== "undefined") {
+                                mashup.renderCase({
+                                    "idCase": urlParameters.idCase,
+                                    "idWorkitem": urlParameters.idWorkitem,
+                                    "summaryForm": urlParameters.summaryForm
+                                });
+                            } else {
+                                mashup.createNewCase({
+                                    "idProcess": urlParameters.idProcess || urlParameters.idWfClass
+                                });
+                            }
+                            // mashup.showInternalHeader();
+
+                            mashup.hideInternalHeader();
+                        });
+                    }
+                }
+            });
+        },
+
+        function () {
+            alert("You must be logged in order to Render the case");
+        }
+    );
+</script>
+</body>
+</html>

@@ -1,0 +1,486 @@
+.logo-client {
+    background: url("../../images/desktop-logo.png") no-repeat scroll 0 0 transparent;
+    height: 19px;
+    width: 110px;
+}
+
+@font-face {
+    font-family: "NeoSansStdRegular";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../../fonts/neosansstd-regular-webfont.eot?iefix") format("eot"),
+	url("../../fonts/neosansstd-regular-webfont.ttf") format("truetype"),
+	url("../../fonts/neosansstd-regular-webfont.svg#webfontUDPuYi0Y") format("svg");
+}
+@font-face {
+    font-family: "NeoSansStdMedium";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../../fonts/neosansstd-medium-webfont.eot?iefix") format("eot"),
+	url("../../fonts/neosansstd-medium-webfont.ttf") format("truetype"),
+	url("../../fonts/neosansstd-medium-webfont.svg#webfontUR0uETTj") format("svg");
+}
+
+html, body {
+    background-color: #DEDEDE;
+    color: rgba(0, 0, 0, .65);
+    font-family: 'NeoSansStdRegular' , Tahoma, sans-serif;
+    font-size: 10.5px;
+    overflow: hidden;
+}
+a {
+    color: #1F74B2;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+#footer {
+    background: -moz-linear-gradient(center top , #F4F4F4 0%, #B4B4B4 100%) repeat scroll 0 0 transparent;
+    border-top: 1px solid #9B9B9B;
+    box-shadow: 0 -5px 6px 0 rgba(0, 0, 0, 0.2);
+}
+.ui-bizagi-wp-notCompatibleIE-error {
+    background: none repeat scroll 0 0 #DADADA;
+    border-radius: 6px 6px 6px 6px;
+}
+.ui-bizagi-wp-notCompatibleIE-goToOldApplication {
+    color: #2F526C;
+}
+#ui-bizagi-wp-app-inbox-bt-eye {
+    background-image: url("../../images/desktop-sprite.png");
+    background-position: -48px -53px;
+}
+#ui-bizagi-wp-app-inbox-bt-eye:hover, #ui-bizagi-wp-app-inbox-bt-eye:active {
+    background-image: url("../../images/desktop-sprite.png");
+    background-position: -140px -53px;
+}
+#ui-bizagi-wp-app-inbox-bg-eye {
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.3) inset;
+}
+#ui-bizagi-wp-app-inbox-bg-eye:before {
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.15);
+    color: #FFFFFF;
+}
+#contentInbox {
+    box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.2);
+    color: #F5F5F5;
+    font-weight: normal;
+}
+#contentInbox h2:hover {
+    color: #FFFFFF;
+    text-shadow: 0 0 5px #FFFFFF;
+}
+#innerContentInbox {
+    background: url("../../images/desktop-noise.png") repeat scroll 0 0 transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+#contentCases {
+    background: url("../../images/desktop-dots-columns.png") repeat scroll 0 0 #CECECE;
+    border-right: 2px solid #9B9B9B;
+    box-shadow: 2px 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+#contentCases.casesGrid {
+    background: url("../../images/desktop-dots-columns.png") repeat scroll 0 0 #DEDEDE;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+}
+#ui-bizagi-wp-app-inbox-cases-container .selected, #ui-bizagi-wp-app-inbox-cases-container li.selected:hover {
+    background: url("../../images/desktop-dots-lines.png") repeat scroll 0 0 #A6AEB2;
+}
+#ui-bizagi-wp-app-inbox-cases-container li:hover {
+    background: none repeat scroll 0 0 #CBD0D1;
+}
+.ui-bizagi-wp-app-inbox-cases-container ul {
+    background: none repeat scroll 0 0 #E6E6E6;
+    border: 1px solid #98A1A8;
+}
+#ui-bizagi-wp-app-inbox-cases-container #caseId h3 {
+    color: #283238;
+    font-family: 'NeoSansStdMedium';
+    font-size: 135%;
+    font-weight: normal;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+#ui-bizagi-wp-app-inbox-cases-container #caseActivity {
+    border-bottom: 1px solid #BCBCBC;
+    border-top: 1px solid #BCBCBC;
+    color: #2F526C;
+    font-size: 115%;
+    font-weight: normal;
+}
+.ui-bizagi-wp-app-inbox-activity-description {
+    background-color: #F2F2F2;
+    border: 1px solid #98A1A8;
+    color: #444444;
+}
+.ui-bizagi-wp-app-inbox-activity-description > div {
+    background: none repeat scroll 0 0 #E6E6E6;
+}
+.ui-bizagi-wp-app-render-desc-panel .ui-bizagi-wp-app-inbox-activity-description {
+    background-color: #E6E6E6;
+}
+.ui-bizagi-wp-app-render-desc-panel .ui-bizagi-wp-app-inbox-activity-description > div {
+    background-color: #DADADA;
+}
+.ui-bizagi-wp-app-inbox-activity-description h2 {
+    border-bottom: 1px solid #CCCCCC;
+    color: #2F526C;
+    font-family: 'NeoSansStdMedium';
+    font-size: 175%;
+    font-weight: normal;
+}
+.ui-bizagi-wp-app-inbox-activity-description .ui-bizagi-wp-app-inbox-cases-description-ico-state {
+    border-right: 1px solid #B8B8B8;
+}
+.ui-bizagi-wp-app-inbox-activity-description #ui-bizagi-wp-app-inbox-cases-ico-state-Red {
+    background: none repeat scroll 0 0 #EB2C2C;
+}
+.ui-bizagi-wp-app-inbox-activity-description #ui-bizagi-wp-app-inbox-cases-ico-state-Green {
+    background: none repeat scroll 0 0 #10721C;
+}
+.ui-bizagi-wp-app-inbox-activity-description #ui-bizagi-wp-app-inbox-cases-ico-state-Yellow {
+    background: none repeat scroll 0 0 #D4BD09;
+}
+#ui-bizagi-details-tabs dd, .box-description dd {
+    background: none repeat scroll 0 0 #DADADA;
+}
+.ui-tabs-panel a {
+    color: #1F74B2;
+}
+#ui-bizagi-wp-app-inbox-tab-container {
+    border-right: 2px solid #9B9B9B;
+}
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab {
+    border-left: 1px solid #9B9B9B;
+}
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab.active {
+    box-shadow: 0 1px 8px 2px rgba(0, 0, 0, 0.3) inset;
+}
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab.active .toolTip, #ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab:hover .toolTip {
+    background-color: #F2F2F2;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5) inset;
+}
+#ui-bizagi-wp-app-inbox-tab-container .toolTip {
+    background: url("../../images/desktop-dots-lines.png") repeat scroll 0 0 #F2F2F2;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3) inset;
+    color: #333333;
+    font-weight: bold;
+    text-align: center;
+}
+#contentProc {
+    background: url("../../images/desktop-dots-columns.png") repeat scroll 0 0 #CECECE;
+    border-right: 2px solid #9B9B9B;
+    box-shadow: 2px 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+#ui-bizagi-wp-app-inbox-processes-container ul {
+    background: none repeat scroll 0 0 #E6E6E6;
+    border: 1px solid #98A1A8;
+}
+#ui-bizagi-wp-app-inbox-processes-container li {
+    border-top: 1px solid #B8B8B8;
+}
+#ui-bizagi-wp-app-inbox-processes-container li:nth-child(2n) {
+    background-color: #DADADA;
+}
+#ui-bizagi-wp-app-inbox-processes-container .selected, #ui-bizagi-wp-app-inbox-processes-container li.selected:hover {
+    background: url("../../images/desktop-dots-lines.png") repeat scroll 0 0 #A6AEB2;
+}
+#ui-bizagi-wp-app-inbox-processes-container li:hover {
+    background: none repeat scroll 0 0 #CBD0D1;
+}
+.ui-bizagi-wp-app-inbox-processes-ncase {
+    background: url("../../images/desktop-dots-lines.png") repeat scroll 0 0 #F2F2F2;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3) inset;
+    color: #333333;
+}
+#ui-bizagi-wp-app-inbox-processes-container .selected .ui-bizagi-wp-app-inbox-processes-ncase, #ui-bizagi-wp-app-inbox-processes-container li:hover .ui-bizagi-wp-app-inbox-processes-ncase {
+    background-color: #F2F2F2;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5) inset;
+}
+.ui-bizagi-wp-app-inbox-processes-title {
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.2);
+    color: #525252;
+    font-size: 115%;
+    font-weight: normal;
+}
+#contentProc .ui-bizagi-wp-app-inbox-processes-title .arrow.Right {
+    border-left: 5px solid #525252;
+}
+.ui-bizagi-wp-app-inbox-processes-title .arrow.Down {
+    border-top: 4px solid #525252;
+}
+.ui-bizagi-wp-app-inbox-processes-title .arrow.Left {
+    border-right: 6px solid #0072BC;
+}
+.ui-bizagi-wp-app-inbox-processes-name {
+    color: #283238;
+    font-size: 115%;
+    font-weight: normal;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+#casesPagination {
+    border-right: 2px solid #9B9B9B;
+}
+#casesPagination ul li {
+    color: #787878;
+    text-align: center;
+}
+#casesPagination ul li:hover span {
+    color: #525252;
+}
+#casesPagination ul li.active, #casesPagination ul li.active:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.3) inset;
+    color: #F5F5F5;
+}
+#casesPagination ul li.active:hover span {
+    color: #F5F5F5;
+}
+#casesPagination ul li.active span {
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+#tooltipPagination {
+    background-color: #F4F4F4;
+    text-align: center;
+}
+.ui-bizagi-wp-app-inbox-grid-cases-container table, .personalizedColumnsContainer table {
+    background: none repeat scroll 0 0 #E6E6E6;
+    border: 1px solid #98A1A8;
+}
+.ui-bizagi-wp-app-inbox-grid-cases-container table td, .personalizedColumnsContainer table td {
+    border-top: 1px solid #B8B8B8;
+}
+.ui-bizagi-wp-app-inbox-grid-cases-container thead td, .personalizedColumnsContainer table thead td {
+    background: none repeat scroll 0 0 #5D6771;
+    border-bottom: 1px solid #3C4046;
+    color: #F5F5F5;
+    font-size: 115%;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+#ui-bizagi-wp-app-inbox-grid-cases tbody .event, .personalizedColumnsContainer table tbody .event {
+    background-color: #DADADA;
+}
+#ui-bizagi-wp-app-inbox-grid-cases .selected td, .ui-bizagi-wp-app-inbox-grid-cases-container tbody tr:hover td, .personalizedColumnsContainer table tbody tr:hover td {
+    background: url("../../images/desktop-dots-lines.png") repeat scroll 0 0 #B1B8BC;
+}
+.gridListWorkItems li .ui-bizagi-wp-app-inbox-activity-name {
+    color: #1F74B2;
+}
+.ui-bizagi-wp-async-case-number {
+    color: #2F526C;
+    font-family: 'NeoSansStdMedium';
+    font-size: 22.5px;
+    font-weight: normal;
+}
+.ui-bizagi-wp-async-description dd {
+    background: none repeat scroll 0 0 #DADADA;
+    border-radius: 6px 6px 6px 6px;
+}
+.ui-bizagi-wp-async-error {
+    background: none repeat scroll 0 0 #DADADA;
+    border-radius: 6px 6px 6px 6px;
+    font-family: 'NeoSansStdMedium';
+}
+.ui-bizagi-wp-async-goToInbox {
+    color: #2F526C;
+    font-family: 'NeoSansStdMedium';
+}
+.ui-bizagi-wp-mini-arrow {
+    border-color: #F5F5F5 transparent transparent;
+    border-style: solid;
+    border-width: 5px 4px 0;
+    color: #FFFFFF;
+}
+#ui-bizagi-wp-app-menu-container #build {
+    color: rgba(255, 255, 255, 0.4);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+}
+#ui-bizagi-wp-menu-username {
+    background: url("../../images/desktop-sprite.png") no-repeat scroll -354px -186px transparent;
+    color: #F5F5F5;
+    font-family: 'NeoSansStdMedium';
+    font-weight: normal;
+    text-align: right;
+}
+#ui-bizagi-wp-app-search input {
+    background-color: rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5) inset;
+    color: rgba(245, 245, 245, 0.6);
+    font-family: 'NeoSansStdMedium';
+}
+#ui-bizagi-wp-app-search:hover input, #ui-bizagi-wp-app-search input:focus, #ui-bizagi-wp-app-search input:hover {
+    background: url("../../images/desktop-bg-inputs.png") repeat-x scroll 0 0 #F2F2F2;
+    color: #666666;
+}
+#ui-bizagi-wp-app-bt-search {
+    background: url("../../images/desktop-sprite.png") no-repeat scroll -7px -148px transparent;
+}
+#ui-bizagi-wp-app-menu-logo {
+    background-image: url("../../images/desktop-sprite.png");
+    background-position: -544px -244px;
+    height: 43px;
+    width: 108px;
+}
+#ui-bizagi-wp-app-menu-container {
+    background: url("../../images/desktop-dots-header.png") repeat scroll 0 0 transparent;
+}
+#ui-bizagi-wp-app-menu-logo-client img
+{
+    background-size: "contain";               
+    background-repeat:"no-repeat";
+    background: no-repeat scroll 0 0 transparent;
+    height: 19px;
+    width: 110px;
+}
+#ui-bizagi-wp-menu {
+}
+#main_menu li .icon {
+    background: url("../../images/desktop-sprite.png") repeat scroll 0 0 transparent;
+}
+#main_menu li .widgets {
+    background-position: 0 0;
+}
+#main_menu li .new {
+    background-position: -3px -3px;
+}
+#main_menu li .favorites {
+    background-position: -141px -3px;
+}
+#main_menu li .inbox {
+    background-position: -264px -23px;
+}
+#main_menu li .preferences {
+    background-position: -95px -3px;
+}
+#main_menu li .queries {
+    background-position: -187px -3px;
+}
+#main_menu li .admin {
+    background-position: -233px -3px;
+}
+#main_menu li .reports {
+    background-position: -279px -3px;
+}
+#searchNotFound {
+    color: #FFFFFF;
+    margin-top: 3px;
+    text-align: center;
+    text-shadow: 0 0 5px #F66F66;
+}
+.modalMenuBtWidget #modalTitle {
+    color: #F5F5F5;
+}
+#modalContentDisplayWidgets {
+    background-color: #F5F5F5;
+    border-radius: 4px 4px 4px 4px;
+}
+#modalContentDisplayWidgets li a {
+    color: #FFFFFF;
+}
+#modalContentDisplayWidgets .widgetsListDisplay li {
+    border-bottom-color: #000000;
+    color: #333333;
+}
+#modalContentDisplayWidgets .widgetsListDisplay li:hover {
+    background-color: #939CAD;
+    color: #F5F5F5;
+}
+#modalMenuBtList {
+    background: url("../../images/desktop-dots-columns.png") repeat scroll 0 0 #CECECE;
+}
+#modalMenuBtList > div ul {
+    background: none repeat scroll 0 0 #E6E6E6;
+    border: 1px solid #98A1A8;
+}
+#modalMenuBtList > div ul li {
+    color: #444444;
+}
+#modalMenuBtList > div li:hover {
+    background: none repeat scroll 0 0 #B1B8BC;
+}
+#modalMenuBtList > div li h3 {
+    color: #283238;
+    font-family: 'NeoSansStdRegular';
+    font-size: 125%;
+    font-weight: normal;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+#modalMenuBtList > div li p {
+    color: #666666;
+}
+#modalMenuBtList > div li:hover p {
+    color: #444444;
+}
+#modalMenuBtList > div li #arrow {
+    background: url("../../images/desktop-sprite.png") no-repeat scroll -187px -145px transparent;
+}
+#modalMenuBtList > div li .processIco, #modalMenuBtList > div li .categoryIco, #modalMenuBtList > div li .categoryLinkIco {
+    background: url("../../images/desktop-sprite.png") no-repeat scroll 0 0 transparent;
+}
+.categoryTree {
+    border-bottom: 1px solid #ACACAC;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.2);
+}
+.categoryTree li {
+    color: #1F74B2;
+}
+#modalMenuBtList > div li .deleteButton, #modalMenuBtList > div li .editButton, #modalMenuBtList > div li .addButton {
+    background: url("../../images/desktop-sprite.png") no-repeat scroll 0 0 transparent;
+}
+.modal {
+    background: none repeat scroll 0 0 #37464F;
+    border: 1px solid #51616A;
+    box-shadow: 0 0 5px 0 #000000;
+}
+.modal .selectarrow {
+    background: url("../../images/desktop-arrow-up.png") no-repeat scroll 0 0 transparent;
+}
+.ie8 .modal .selectarrow {
+    background: url("../../images/desktop-arrow-up-ie8.png") no-repeat scroll 0 0 transparent;
+}
+.modal .content {
+    background: url("../../images/desktop-dots-header.png") repeat scroll 0 0 transparent;
+}
+.modal #modalTitle {
+    color: #F5F5F5;
+    float: left;
+    font-size: 135%;
+    font-weight: normal;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.35);
+}
+#ui-bizagi-wp-app-render-desc-panel {
+    background: url("../../images/desktop-dots-columns.png") repeat scroll 0 0 #CECECE;
+}
+#panelArrowContainer {
+    background: url("../../images/desktop-dots-lines.png") repeat scroll 0 0 #EEEEEE;
+    border-left: 1px solid #C8C8C8;
+    border-right: 1px solid #B7B7B7;
+}
+#panelArrowContainer:hover {
+    background-color: #EAEAEA;
+}
+#panelArrowContainer:hover #panelArrow.panelArrowLeft {
+    border-right: 5px solid #8A95A7;
+}
+#panelArrowContainer:hover #panelArrow.panelArrowRight {
+    border-left: 5px solid #8A95A7;
+}
+#ui-bizagi-wp-app-render-form {
+    background: url("../../images/desktop-dots-columns.png") repeat scroll 0 0 #DEDEDE;
+}
+.ui-bizagi-wp-app-render-actions .tooltip {
+    background: none repeat scroll 0 0 #29343B;
+    border: 1px solid #51616A;
+    color: #FFFFFF;
+}
+.ui-bizagi-wp-app-render-actions .tooltip:before {
+    background: url("../../images/desktop-arrow-up.png") no-repeat scroll 0 0 transparent;
+}
+#subprocess {
+    background: none repeat scroll 0 0 #E6E6E6;
+}
+.personalizedColumnsContainer table tbody tr:nth-child(2n+1) td {
+    background-color: #DADADA;
+}

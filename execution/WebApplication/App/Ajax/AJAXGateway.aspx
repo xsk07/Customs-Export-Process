@@ -1,0 +1,1 @@
+<%@ Page language="c#" Codebehind="AJAXGateway.aspx.cs" AutoEventWireup="false" Inherits="BizAgiBPM.App.Ajax.AJAXGateway" %>

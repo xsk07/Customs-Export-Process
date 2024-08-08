@@ -1,0 +1,7 @@
+{
+    "bizagi-rateus-title": "как использовать BizAgi вы?",
+    "bizagi-rateus-description": "Пожалуйста, найдите минутку, чтобы оценить нас!",
+    "bizagi-rateus-no": "НЕТ, СПАСИБО",
+    "bizagi-rateus-yes": "Да",
+    "bizagi-rateus-later": "Напомни мне об этом позже"
+}

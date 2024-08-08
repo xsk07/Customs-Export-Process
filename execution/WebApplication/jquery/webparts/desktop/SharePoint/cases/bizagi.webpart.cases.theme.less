@@ -1,0 +1,104 @@
+
+
+
+.gradient(@startColor, @endColor) {
+    background-color: @startColor;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, @startColor), color-stop(100%, @endColor));
+    background: -webkit-linear-gradient(top, @startColor 20%, @endColor 100%);
+    background: -moz-linear-gradient(top, @startColor 20%, @endColor 100%);
+    background: -ms-linear-gradient(top, @startColor 20%, @endColor 100%);
+    background: -o-linear-gradient(top, @startColor 20%, @endColor 100%);
+}
+
+html,
+body{
+    background-color: @background;
+    color:@text!important;
+    font-family: @font-family!important;
+}
+
+.ui-bizagi-sharepoint-webpart-parentdiv, .ui-bizagi-webpart-cases-view-container{
+    background-color: @pane!important;
+}
+.ui-bizagi-wp-case-list{
+    background-color: @content!important;
+}
+
+#ui-bizagi-webpart-cases-container ul dd{
+    background-color: darken(@content, 10%);
+}
+
+#ui-bizagi-webpart-cases-container #caseId h3,
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-app-inbox-processes-title{
+    color: @title;
+    border-bottom: 1px solid @content-border;
+}
+
+#ui-bizagi-webpart-cases-container li dl{
+    color:@text!important;
+}
+#ui-bizagi-webpart-cases-container #caseActivity #ui-bizagi-wp-app-inbox-activity-names{
+    color: @content-link;
+}
+
+#casesPaginationInbox  .bz-wp-cases-pager ul li:hover,
+#casesPaginationInbox  .bz-wp-cases-pager ul li.active
+{
+    background-color: @navigation;    
+    color: darken(@navigation-link, 15%);
+}
+
+#casesPagination{
+    .gradient(@footer-start, @footer-end);
+    border-top: 1px solid darken(@footer-start, 10%);
+}
+
+#ui-bizagi-webpart-cases-container li,
+.ui-bizagi-wp-app-inbox-cases-container ul{
+    background-color: transparent;    
+}
+
+
+.bz-wp-cases-header-views{
+    background: @modal;
+    padding: 0;
+}
+.bz-wp-cases-header-views span{
+    background-color: transparent;
+}
+
+
+
+.ui-wp-cases-grid th {
+    background: darken(@content, 10%);
+    color: @title;
+    font-size: 115%;
+    border-bottom: 1px solid darken(@content-border, 30%) !important;
+}
+
+.ui-wp-cases-grid tr{
+    background-color: darken(@content, 5%);
+}
+.ui-wp-cases-grid .selected td, .ui-wp-cases-grid tbody tr:hover td {
+    background-color: darken(@content, 5%);
+}
+#ui-bizagi-webpart-cases-container #caseActivity #ui-bizagi-wp-app-inbox-activity-name
+{
+	color: @content-link;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-case-list:hover dd{
+    background-color: darken(@content, 5%);
+}
+
+.custom-column
+{
+	color:@text!important;
+}
+
+.cases-grid-button{
+    border-color: lighten(@button, 25%);
+    background-color: @button !important;
+    background-image: none;
+    color: @button-text;
+}

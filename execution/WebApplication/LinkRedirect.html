@@ -1,0 +1,464 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Bizagi BPM</title>
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link type="image/x-icon" rel="icon" href="favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="jquery/workportal/css/desktop/images/BizAgi_logo.png">
+    <link rel="stylesheet" href="css/singlePageBase.css" />
+    <link rel="stylesheet" href="jquery/themes/bizagiDefault/devices/desktop/opensans-font.css" />
+    <script type='text/javascript' src='js/DOMPurify/purify.min.js'></script> 
+    <script type="text/javascript">
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+            var results = regex.exec(location.search);
+
+            return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+
+        function goWeb() {
+            var finalUrl= getURL();
+            if (getParameterByName('caseId') != "")
+                window.location = finalUrl + "?widget=activityform&idCase=" + getParameterByName('caseId');
+            else if (getParameterByName('module') === "smartinbox")
+                window.location = finalUrl + "?widget=smartinbox&action=create&id=" + getParameterByName('id') + "&owner=" + getParameterByName('owner');
+        }
+
+        function getURL() {
+            return DOMPurify.sanitize('<a href="'+getParameterByName('urlWeb')+'"></a>').replace("<a href=\"", "").replace("\"></a>","");
+        }
+
+        (function(device) {
+            var isMobile = (/Android|webOS|iPhone|iPod|iPad|BlackBerry|Windows Phone|IEMobile/i.test(device));
+            if (!isMobile) {
+                goWeb();
+            }
+        })(navigator.userAgent || navigator.vendor || window.opera);
+    </script>
+
+    <style type="text/css">
+        /* ==========================================================================
+        Base
+        ========================================================================== */
+
+        * {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        html {
+            overflow-y: auto;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: #44564e;
+            background-image: url("img/bg-login.jpg");
+            background-image: url("img/bg-login.jpg"), linear-gradient(-180deg, #BFF2DB 0%, #000000 100%);
+            background-position: 25% 50%;
+            color: #f2f2f2;
+            font-size: 0.875em;
+            font-family: 'Open Sans', Geneva, Arial, sans-serif;
+        }
+
+
+        body, form, input, button, select, textarea {
+            font-size: 100%;
+            margin: 0;
+        }
+
+        fieldset {
+            padding: 0;
+            border: none;
+            margin: 0;
+        }
+
+        legend {
+            padding: 0;
+            margin: 2em;
+            color: #efefef;
+        }
+
+        label {
+            display: inline;
+            color: #efefef;
+            margin-bottom: 0.25em;
+        }
+
+        /* ==========================================================================
+        Layout
+        ========================================================================== */
+
+        .link-logo-container {
+            text-align: center;
+            margin: 2rem;
+        }
+
+        /* ==========================================================================
+        Module
+        ========================================================================== */
+        .link-side-container {
+            width: 10%;
+            display: inline-block;
+        }
+
+        .link-center-container {
+            width: 80%;
+            display: inline-block;
+        }
+
+        .link-option-container {
+            text-align: center;
+            width: 45%;
+            display: inline-block;
+            border-radius: 5px;
+            filter: alpha(opacity=70);
+            opacity: .7;
+            border: 1px solid rgba(191, 242, 219, .2);
+            border-radius: 4px;
+            background: rgba(48, 79, 71, 0.5);
+            box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.18);
+        }
+
+        .link-option-container:active,
+        .link-option-container-selected {
+            text-align: center;
+            width: 45%;
+            display: inline-block;
+            border-radius: 5px;
+            border: 1px solid #fff;
+            background: #2b463e;
+        }
+
+        .link-button {
+            display: inline-block;
+            width: 40%;
+            padding: 1em;
+            border: none;
+            border-radius: 4px;
+            background: #619e8e;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .sharesmartinbox {
+            border: 1px solid #fafafa;
+            border-radius: 6px;
+            background-color: #fafafa;
+            transform: translateX(50%);
+            color: orange;
+            width: 400px;
+            text-align: center;           
+        }
+
+        .visible {
+            display:block;
+        }
+        .invisible{
+            display:none;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="ui-bizagi-link-redirect-side-container">
+    </div>
+    <div class="ui-bizagi-link-redirect-center-container">
+        <div class="link-logo-container">
+            <img src="img/bizagi-logo.png" width="70%" alt="Bizagi Logo" />
+        </div>
+        <br /><br />
+        <fieldset class="visible">
+            <legend>
+                Go to case number <label id="caseNumber"></label> using:
+            </legend>
+            <div style="text-align: center;">
+                <div class="link-option-container" id="link-option-browser-container">
+                    <br />
+                    <label class="option" id="link-option-browser" onclick="javascript:setOption(this.id, document.getElementById('link-option-browser-container'), document.getElementById('link-options-application-container'))">
+                        <img src="img/browser.png" style="max-width: 50px;" />
+                        <br /><br />
+                        Web Browser
+                    </label>
+                    <br /><br />
+                </div>
+                <div class="link-option-container" id="link-options-application-container">
+                    <br />
+                    <label class="option" id="link-options-application" onclick="javascript:setOption(this.id, document.getElementById('link-options-application-container'), document.getElementById('link-option-browser-container'))">
+                        <img src="img/icon-50.png" style="max-width: 50px;" />
+                        <br /><br />
+                        Application
+                    </label>
+                    <br /><br />
+                </div>
+            </div>
+            <br />
+            <br />
+            <div id="containerPromptOption" style="text-align: center;">
+                <input type="button" id="btnAlways" class="link-button" value="Always" onclick="javascript:setGo(true);" />
+                <input type="button" id="btnOnlyOnce" class="link-button" value="Just once" onclick="javascript:setGo(false);" />
+            </div>
+        </fieldset>
+       
+            <div class="sharesmartinbox invisible">This functionality is not available for this device. Please open the link on a desktop device</div>
+  
+        <br />
+    </div>
+    <div class="ui-bizagi-link-redirect-side-container"></div>
+    <script type="text/javascript">
+        var query = getQueryString();
+        var cacheName = "optionViewer";        
+        var optionViewer = "";
+        var isMobile = (/Android|webOS|iPhone|iPod|iPad|BlackBerry|Windows Phone|IEMobile/i.test(navigator.userAgent || navigator.vendor || window.opera));
+        var cacheMobile = "appInstalled";
+        var optionMobile = "";
+
+
+        if (query.module && query.module == "smartinbox" && isMobile) {
+            var messageElm = document.querySelector(".ui-bizagi-link-redirect-center-container .sharesmartinbox");
+            var containerElm = document.querySelector(".ui-bizagi-link-redirect-center-container fieldset");
+
+            messageElm.classList.remove("invisible");
+            messageElm.classList.add("visible");
+            containerElm.classList.remove("visible");
+            containerElm.classList.add("invisible");
+        }
+
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+            var results = regex.exec(location.search);
+
+            return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+
+       function getQueryString(url) {
+            var params = {};
+            url = url || window.location.href;
+            var query = url.indexOf("?") > 0 ? url.substring(url.indexOf("?") + 1) : "";
+            var pairs = query.split("&");
+            for (var i = pairs.length - 1; i >= 0; i--) {
+                var pos = pairs[i].indexOf('=');
+                if (pos == -1)
+                    continue;
+                var argname = pairs[i].substring(0, pos);
+                var value = pairs[i].substring(pos + 1);
+                params[argname] = unescape(value);
+            }
+            return params;
+        };
+
+        function setCookie(cookieName, value, exdays) {
+            var exdate = new Date();
+            exdate.setDate(exdate.getDate() + exdays);
+
+            var cookieValue = escape(value) + ((exdays == null) ? "" : ("; Expires=" + exdate.toUTCString()));
+            document.cookie = cookieName + "=" + cookieValue;
+        }
+
+        function clearCookie(name) {
+            document.cookie = name + '=;Path=/;Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+        }
+
+        function getCookie(cookieName) {
+            var i, x, y, ARRcookies = document.cookie.split(";");
+            for (i = 0; i < ARRcookies.length; i++) {
+                x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
+                y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
+                x = x.replace(/^\s+|\s+$/g, "");
+                if (x == cookieName) {
+                    return unescape(y);
+                }
+            }
+        }
+
+        function hasAppInstalled() {
+            var appInstalled = getCookie(cacheMobile);
+            return appInstalled === "hidden";
+        };
+
+        function goWeb() {
+            var urlWeb = getParameterByName('urlWeb');
+            var query = getQueryString();
+            var module = query.module || "";
+            var finalUrl=getURL(urlWeb);
+            if(urlWeb !== undefined && urlWeb.startsWith(window.location.origin)) {
+                switch (module) {
+                    case "smartinbox":
+                        window.location = finalUrl + "index.html?widget=smartinbox&action="+query.action+"&id="+query.id+"&owner="+query.owner;                    
+                        break;
+                    default:
+                        window.location = finalUrl + "index.html?widget=activityform&idCase=" + getParameterByName('caseId');
+                        break;
+                }
+            }
+            else {
+                alert('Invalid url');
+            }
+        }
+
+        function goApp() {
+            var urlMobile = getParameterByName('urlMobile');
+            if(urlMobile !== undefined && urlMobile.startsWith('bizagi://')){
+                window.location = getParameterByName('urlMobile') + getParameterByName('caseId');
+            }
+            else {
+                alert('Invalid protocol')
+            }
+        }
+
+        function showPromp(remember) {
+            optionViewer = "";
+
+            if (remember) {
+                optionViewer = getCookie(cacheName) + "";
+            }
+
+            if (optionViewer === "link-option-browser" || optionViewer === "link-options-application") {
+                goCase();
+            } else {
+                document.getElementById("caseNumber").innerHTML = DOMPurify.sanitize(getParameterByName('caseId'));
+                if (remember) {
+                    document.getElementById("btnAlways").style.display = "";
+                    document.getElementById("btnOnlyOnce").style.display = "";
+                } else {
+                    document.getElementById("btnAlways").style.display = "none";
+                    document.getElementById("btnOnlyOnce").style.display = "";
+                }
+            }
+        }
+
+        function setOption(selectInfo, selectOption, otherOption) {
+            optionViewer = selectInfo;
+
+            selectOption.className = "link-option-container-selected";
+            otherOption.className = "link-option-container";
+        }
+
+        function setGo(remember) {
+            if (optionViewer !== "link-option-browser" && optionViewer !== "link-options-application") {
+                alert("Please, first select a option.");
+            } else {
+                if (remember) {
+                    setCookie(cacheName, optionViewer, 365);
+                }
+
+                goCase();
+            }
+        }
+
+        function goCase() {
+            if (optionViewer === "link-option-browser") {
+                goWeb();
+            } else {
+                if (optionViewer === "link-options-application") {
+                    goApp();
+                } else {
+                    goWeb();
+                }
+            }
+        }
+
+        var queryStringBehavior = getParameterByName("BehaviorCaseLinkInMobile") + "";
+        var isAndroidDevice = false;
+
+        (function (device) {
+             var isMobile = (/Android|webOS|iPhone|iPod|iPad|BlackBerry|Windows Phone|IEMobile/i.test(device));
+             if (isMobile) {
+                 
+                 // AlwaysWeb, AlwaysApp, AlwaysAsk, AlwaysAskAndRemember
+                 switch (queryStringBehavior) {
+                 case "AlwaysWeb":
+                     goWeb();
+                     break;
+                 case "AlwaysApp":
+                     goApp();
+                     break;
+                 case "AlwaysAsk":
+                     showPromp(false);
+                     break;
+                 case "AlwaysAskAndRemember":
+                     showPromp(true);
+                     break;
+                 default:
+                     showPromp(true);
+                 };
+
+                 isAndroidDevice = (/Android/i.test(device));
+             }
+         })(navigator.userAgent || navigator.vendor || window.opera);
+
+        // Detect focus
+        (function() {
+            var hidden = "hidden";
+            clearCookie(cacheMobile);
+
+            // Standards:
+            if (hidden in document) {                
+                document.addEventListener("visibilitychange", onchange);
+            } else if ((hidden = "mozHidden") in document) {
+                document.addEventListener("mozvisibilitychange", onchange);
+            } else if ((hidden = "webkitHidden") in document) {
+                document.addEventListener("webkitvisibilitychange", onchange);
+            } else if ((hidden = "msHidden") in document) {
+                document.addEventListener("msvisibilitychange", onchange);
+            } else if ("onfocusin" in document) { // IE 9 and lower:                
+                document.onfocusin = document.onfocusout = onchange;
+            } else { // All others:                
+                window.onpageshow = window.onpagehide = window.onfocus = window.onblur = onchange;
+            }
+
+            function onchange(evt) {
+                var v = "visible";
+                var h = "hidden";
+                var evtMap = {
+                    focus: v,
+                    focusin: v,
+                    pageshow: v,
+                    blur: h,
+                    focusout: h,
+                    pagehide: h
+                };
+
+                evt = evt || window.event;
+
+                clearCookie(cacheMobile);
+
+                if (evt.type in evtMap) {
+                    document.body.className = evtMap[evt.type];
+                } else {
+                    var status = this[hidden] ? "hidden" : "visible";
+
+                    document.body.className = status;
+
+                    // 1 Minute                    
+                    setCookie(cacheMobile, status, 0.0007);
+                }
+
+                if(isAndroidDevice && evt.type === "visibilitychange" && document.visibilityState === "visible" && 
+                  (queryStringBehavior === 'AlwaysAsk' || queryStringBehavior === 'AlwaysAskAndRemember') ){
+                    location.reload();
+                }
+            }
+
+            // Set the initial state (but only if browser supports the Page Visibility API)
+            if (typeof (document[hidden]) !== "undefined") {
+                onchange({ type: document[hidden] ? "blur" : "focus" });
+                setCookie(cacheMobile, "visible", 0.0007);
+            }
+        })();
+
+
+
+    </script>
+</body>
+</html>
+

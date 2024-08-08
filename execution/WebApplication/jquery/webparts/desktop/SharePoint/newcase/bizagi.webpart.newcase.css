@@ -1,0 +1,628 @@
+/*============================================================
+    STYLE DEFINITION // SHAREPOINT NEW CASE
+===============================================================*/
+
+.viewNewCaseContainer-off{
+    visibility: hidden;
+    display:none;
+}
+.viewNewCaseContainer-on{
+    visibility: visible;
+    display:inline;
+}
+
+
+/*==================================================================
+    NEW CASE WEBPART
+===================================================================*/    
+
+#ui-bizagi-webpart-newcase-container{
+    position: absolute;
+    margin-left: 6px;
+    z-index: 900;
+    background-color: #F1F1F1;
+    border: solid 1px #B6B6B6;
+    border-top: 1px solid #ACACAC;
+    border-bottom: 1px solid #949494;
+    border-radius: 4px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+
+#ui-bizagi-webpart-newcase-container.modalMenuBt{    
+    width: 250px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtHeader{
+    position:relative;
+    border-bottom: 1px solid #e9e9e9;
+    background-color: #E9e9e9;
+    padding-top: 2px;
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+       -moz-border-radius-topleft: 4px;
+       -moz-border-radius-topright: 4px;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList{
+    padding:0px;
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+       -moz-border-radius-bottomright: 4px;
+       -moz-border-radius-bottomleft: 4px;
+            border-bottom-right-radius: 4px;
+            border-bottom-left-radius: 4px;
+}
+
+
+#ui-bizagi-webpart-newcase-container .categoryTree {
+
+    border: none;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #b5b5b5;
+    cursor: pointer;
+
+    background-color: #FBFBFB;
+    padding: 8px 16px;
+
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#ui-bizagi-webpart-newcase-container .categoryTree  li{
+    list-style: none;
+    border:1px solid transparent;
+    cursor: pointer;
+    display: inline-block;
+    color: #0072bc;
+}
+#ui-bizagi-webpart-newcase-container .categoryTree li:hover{    
+    cursor: pointer;
+    text-decoration:underline;
+
+}
+
+#ui-bizagi-webpart-newcase-container.modalMenuBt #categories{   
+    max-height: 260px;
+    overflow-x: auto;
+}
+
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div ul{    
+    margin: 0px;
+    position:relative;
+    margin-top:0px;
+	padding: 0px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div ul li{
+
+    cursor: pointer;
+    border-width: 1px;
+    border-style:solid;
+    border-color: transparent;
+    border-bottom-color: #E1E6E6;
+    list-style: none outside none;
+    overflow: hidden;
+    padding: 10px 45px 10px 28px;
+    position: relative;
+
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div ul li::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    border-left: 1px dotted #e6e6e6;
+    left: 34px;
+    top:0;
+}
+
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li:hover{
+    background-repeat:repeat-x;
+    background-position:left top;
+    background-color: #FFF;
+    cursor:pointer;
+    border-width: 1px;
+    border-style:solid;
+    border-color: #E4E4E4;
+    border-bottom-color: #D7DADD;
+    border-top-color: #DADADA;
+    text-shadow: 1px 1px 0 rgba(255,255,255,0.8);
+
+}
+
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li h3{
+    font-size: 115%;
+    color:#444444;
+    color: #283238;
+    margin:3px 0px;
+    font-weight:normal;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+    width: 140px;
+    padding-left: 18px;
+}
+
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li p{
+    margin:0px 0px 5px 10px;
+    color:#666;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li:hover p{
+    color:#676767;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li #arrow{
+    height:20px;
+    width:20px;
+    text-indent:-9999px;
+    position:absolute;
+    right:5px;
+    top:50%;
+    margin-top:-10px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li:hover #arrow{
+	background-position:-231px -90px;
+}
+
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li .processIco,
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li .categoryIco, 
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li .categoryLinkIco{
+    position:absolute;
+    left:6px;
+    top:50%;
+    margin-top:-10px;
+    width: 20px;
+    height: 20px;
+}
+
+
+/* /////////////////  Edit and delete button /////////////////////*/
+
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li .deleteButton,
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li .editButton,
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li .addButton{
+    position:absolute;
+    width: 13px;
+    height: 13px;
+}
+
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li .deleteButton, 
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li .editButton,
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li .addButton{
+    visibility: hidden;
+    display:inline-block;
+    width:16px;
+    height: 16px;
+    margin-top: 5px;
+}
+
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li:hover .deleteButton, 
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li:hover .editButton, 
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li:hover .addButton{
+    visibility: visible;
+}
+
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li .deleteButton{
+    background-position: -296px -89px;
+    right:5px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li .deleteButton:hover{
+    background-position: -312px -89px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li .editButton{
+    background-position: -264px -89px;
+    right:25px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li .editButton:hover{
+    background-position: -280px -89px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li .addButton{
+    background-position: -328px -89px;
+    right:42px;
+    top:-2px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li .addButton:hover{
+    background-position: -344px -89px;
+}
+
+/*////////////////Admin Modal////////////////////*/
+/*.Admin #modalMenuBtList > div li .categoryIco{
+    background-position: -216px -208px;
+}
+.Admin #modalMenuBtList > div li:hover .categoryIco{
+    background-position: -216px -243px;
+}
+*/
+/*//////////Admin Modal icons//////////////////*/
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.UserAdmin .categoryIco{
+    background-position: -6px -418px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.UserAdmin:hover .categoryIco{
+    background-position: -6px -453px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.EntityAdmin .categoryIco{
+    background-position: -181px -278px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.EntityAdmin:hover .categoryIco{
+    background-position: -181px -313px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.CaseAdmin .categoryIco{
+    background-position: -250px -348px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.CaseAdmin:hover .categoryIco{
+    background-position: -250px -383px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.AlarmAdmin .categoryIco{
+    background-position: -214px -348px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.AlarmAdmin:hover .categoryIco{
+    background-position: -214px -383px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.EncryptionAdmin .categoryIco{
+    background-position: -180px -348px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.EncryptionAdmin:hover .categoryIco{
+    background-position: -180px -383px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.MobileUpdatesAdmin .categoryIco{
+    background-position: -110px -278px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.MobileUpdatesAdmin:hover .categoryIco{
+    background-position: -110px -312px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.AsynchronousWorkitemRetries .categoryIco{
+    background-position: -145px -348px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.AsynchronousWorkitemRetries:hover .categoryIco{
+    background-position: -145px -383px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.UserPendingRequests .categoryIco{
+    background-position: -40px -348px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.UserPendingRequests:hover .categoryIco{
+    background-position: -40px -383px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.AuthenticationLogQuery .categoryIco{
+    background-position: -110px -348px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.AuthenticationLogQuery:hover .categoryIco{
+    background-position: -110px -383px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.CasesMonitor .categoryIco{
+    background-position: -75px -348px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.CasesMonitor:hover .categoryIco{
+    background-position: -75px -383px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.BusinessPolicies .categoryIco{
+    background-position: -217px -278px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.BusinessPolicies:hover .categoryIco{
+    background-position: -217px -313px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.Profiles .categoryIco{
+    background-position: -05px -348px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.Profiles:hover .categoryIco{
+    background-position: -05px -383px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.UserDefaultAssignation .categoryIco{
+    background-position: -250px -278px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.UserDefaultAssignation:hover .categoryIco{
+    background-position: -250px -313px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.LocationResources .categoryIco{
+    background-position: -145px -278px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.LocationResources:hover .categoryIco{
+    background-position: -145px -313px;
+}
+
+
+/*//////////Report Modal icons//////////////////*/
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.BAMProcess .categoryIco{
+    background-position: -110px -278px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.BAMProcess:hover .categoryIco{
+    background-position: -110px -312px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.BAMTask .categoryIco{
+    background-position: -75px -278px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.BAMTask:hover .categoryIco{
+    background-position: -75px -313px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.AnalyticsProcess .categoryIco{
+    background-position: -40px -278px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.AnalyticsProcess:hover .categoryIco{
+    background-position: -40px -313px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.AnalyticsTask .categoryIco{
+    background-position: -05px -278px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.AnalyticsTask:hover .categoryIco{
+    background-position: -05px -313px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.AnalyticsSensor .categoryIco{
+    background-position: -250px -208px;
+}
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li.AnalyticsSensor:hover .categoryIco{
+    background-position: -250px -243px;
+}
+
+
+
+/*///////////////new case header/////////////////*/ 
+#ui-bizagi-webpart-newcase-container.modalMenuBt #bt-back{
+    float:left;
+    height:22px;
+    width:22px;
+    padding:1px;
+    margin-top:4px;
+    cursor: pointer;
+    position:relative;
+    cursor: pointer;
+    position:relative;
+}
+#ui-bizagi-webpart-newcase-container.modalMenuBt #bt-back span{
+    display:block;
+    height:22px;
+    width:22px;
+}
+
+
+
+/*/////////////////////////view option////////////*/
+#ui-bizagi-webpart-newcase-container #newcase-view-options{
+    float:right;
+}
+
+#ui-bizagi-webpart-newcase-container #newcase-view-options li{
+    float:left;
+    display:inline;
+    cursor: pointer;
+    height:25px; 
+    width:25px;
+    /*padding:3px;*/
+    position:relative;
+    margin-left:1px;
+    margin-right: 4px;
+}
+
+#ui-bizagi-webpart-newcase-container #newcase-view-options li span{
+    height: 26px;
+    width: 26px;
+    display: block;
+}
+
+
+
+
+
+
+
+#ui-bizagi-webpart-newcase-container #modalTitle{
+    float: left;
+    margin: 11px 0;
+    padding-left: 20px;
+    font-size: 1.2em;
+    padding-top: 5px;
+}
+
+
+#ui-bizagi-webpart-newcase-container .frecuentCasesOn, 
+#ui-bizagi-webpart-newcase-container #casesList.casesListOn, 
+#ui-bizagi-webpart-newcase-container #frecuentCases:hover, 
+#ui-bizagi-webpart-newcase-container #casesList:hover{
+    background-color:#D6D6D6;
+    /*box shadow*/
+    box-shadow:none;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius:  2px;
+}
+.ie8 #ui-bizagi-webpart-newcase-container .frecuentCasesOn,
+.ie8 #ui-bizagi-webpart-newcase-container #casesList.casesListOn,
+.ie8 #ui-bizagi-webpart-newcase-container #frecuentCases:hover,
+.ie8 #ui-bizagi-webpart-newcase-container #casesList:hover{
+    background: transparent;-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000)"; /* IE8
+	/*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);   /* IE6 & 7 */      /*zoom: 1;*/
+}
+
+#ui-bizagi-webpart-newcase-container .frecuentCasesOn:before, 
+#ui-bizagi-webpart-newcase-container #casesList.casesListOn:before, 
+#ui-bizagi-webpart-newcase-container #frecuentCases:hover:before, 
+#ui-bizagi-webpart-newcase-container #casesList:hover:before, 
+#ui-bizagi-webpart-newcase-container #search:hover:before{
+    content:"";
+    color:white;
+    box-shadow:0px 1px 0px 0px rgba(255,255,255,0.1); 
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+#ui-bizagi-wp-app-search{
+    position: relative;
+    margin-top: 5px;
+}
+#ui-bizagi-wp-app-search.searchNewCase{
+    width: 100% !important;
+    margin: 2px 0px;
+}
+
+/* Modal definition for new case action */
+#ui-bizagi-webpart-newcase-container .modalNewCaseOverlay{
+    display: none;
+}
+#ui-bizagi-webpart-newcase-container .modalNewCaseOverlayShow{
+    display: inline;
+    position: fixed;
+    z-index: 1010;
+}
+
+#ui-bizagi-webpart-newcase-container #modalNewCaseMessage{
+    display: none;    
+}
+#ui-bizagi-webpart-newcase-container #modalNewCaseMessage.show{        
+    display: inline;
+    position: fixed;
+    z-index: 1011;
+    width: 350px;
+    height: auto;
+    box-shadow: 0 0 13px 2px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 0 13px 2px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 0 13px 2px rgba(0,0,0,0.5);    
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;        
+}
+#ui-bizagi-webpart-newcase-container #modalNewCaseMessage #case{
+    color: #8E972D;
+    /*font-family: 'NeoSansStdMedium';*/
+    font-size: 125%;
+    font-weight:bold;
+    text-align: center;
+}
+#ui-bizagi-webpart-newcase-container #modalNewCaseMessage #loading{
+    height: 50px;
+}
+
+
+#ui-bizagi-webpart-newcase-container .loadMoreElements{
+    width: 100%;
+    /*height: 40px;*/
+    text-align: center;
+    margin: 15px 0px 10px;
+    /*padding:5px 0px;*/
+    cursor: pointer;
+}
+#ui-bizagi-webpart-newcase-container .loadMoreElements span{
+    display:inline-block;
+    vertical-align: middle;
+}
+#ui-bizagi-webpart-newcase-container .loadMoreElements span.plus_load_icon{
+    background: url("images/sprite.png") -328px -89px no-repeat;
+    height: 16px;
+    width: 16px;
+    margin-right: 5px;
+}
+#ui-bizagi-webpart-newcase-container .loadMoreElements span.loading_icon{
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 16px;
+    margin-right: 5px;    
+    width: 16px;
+}
+#ui-bizagi-webpart-newcase-container .loadMoreElements:hover span.plus_load_icon{
+    background-position: -344px -89px;
+}
+#ui-bizagi-webpart-newcase-container .loadMoreElements:hover span{
+    color: #1F74B2;
+    text-decoration: underline;
+}
+
+
+
+/*main menu*/
+
+.ui-bizagi-sharepoint-newCase.ui-bizagi-sharepoint-webpart-parentdiv{
+    height: auto;
+    min-height: 40px;
+}
+
+.ui-bizagi-webpart-newcase-menu{
+    padding-left: 0;
+    margin: 0;
+}
+
+
+
+.bz-ui-button,
+.ui-bizagi-webpart-newcase-menu li{
+    display:inline-block;
+    text-align:center; 
+    position:relative;
+    vertical-align: top;
+    background-color: #FBFBFB;
+    border: solid 1px #D9D9D9;
+    border-top: 1px solid #D9D9D9;
+    border-bottom: 1px solid #B5B5B5;
+    border-radius: 4px;
+    padding: 6px 12px;
+    padding-right: 32px;
+    margin: 4px 6px;
+    cursor:pointer;
+    color:#676767!important;
+    line-height: 16px;
+}
+.bz-ui-button:hover,
+.ui-bizagi-webpart-newcase-menu li:hover{
+    border-color: #EFEFEF;
+    border-bottom-color: #E9E9E9;
+    background-color: #fff;
+    text-decoration: none!important;
+}
+.ui-bizagi-webpart-newcase-menu li:after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    right: 22px;
+    top: 0;
+    border-left: 1px solid #D9D9D9;
+}
+.ui-bizagi-webpart-newcase-menu li a{
+    display:inline-block;
+    text-decoration: none;
+    color:#fff;
+    border:none;
+    outline:none;
+    vertical-align: top;
+    padding: 0;
+}
+
+
+.ui-bizagi-webpart-newcase-menu li .ui-bizagi-wp-mini-arrow{ 
+    position:absolute;
+    right:8px;
+    top:50%;
+    margin-top:-1px;
+    border-top-color:#676767;
+}
+.ui-bizagi-webpart-newcase-menu .ui-bizagi-wp-mini-arrow
+{
+    border-top:5px solid #596D80;
+    border-left:4px solid transparent;
+    border-right:4px solid transparent;
+    border-bottom:0px solid transparent;
+    color:#596D80;
+    width: 0px;
+    height: 10px;
+}
+
+
+#newcase-canvas,
+#back-button
+{
+    display:inline-block;
+    vertical-align: middle;
+    width: auto!important;
+    }
+
+#back-button .bz-ui-button{
+    padding-left: 16px;
+    padding-right: 12px;
+    min-height: 30px;
+    }
+
+#back-button .bz-ui-button .icon{
+    
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    }

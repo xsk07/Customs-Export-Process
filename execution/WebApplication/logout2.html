@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Bizagi BPM Logout Page</title>
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link type="image/x-icon" rel="icon" href="favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="workportal/css/tablet/images/BizAgi_logo.png">
+    <script type="text/javascript">
+    var isIE = function () {
+        return (navigator.appName.indexOf("Internet Explorer") > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./));
+    }
+
+     var timestamp = new Date().getTime();
+        document.write("<script type='text/javascript' src='jquery/bizagi.configuration.js?" + timestamp + "'></scr" + "ipt>");
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+    // Redefine path to base
+    var session = window.sessionStorage.getItem("bizagiAuthentication") || "{}";
+    session = JSON.parse(session);
+
+    var BIZAGI_DEFAULT_CURRENCY_INFO = {
+        "symbol": session.symbol || "$",
+        "decimalSeparator": session.decimalSeparator || ",",
+        "groupSeparator": session.groupSeparator || ".",
+        "decimalDigits": session.decimalDigits || "2"
+    };
+    
+    if(bizagiConfig.environment === "release" && !isIE()) {
+        document.write("<script type='text/javascript' src='jquery/production/bizagi.production.js?"+ timestamp +"'></scr" + "ipt>");
+    } else {
+        document.write("<script type='text/javascript' src='jquery/steal.js'></scr" + "ipt>");
+        document.write("<script type='text/javascript' src='jquery/bizagi.preloader.js'></scr" + "ipt>");
+        document.write("<script type='text/javascript' src='jquery/bizagi.loader.js'></scr" + "ipt>");
+    }
+    document.write("<script type='text/javascript' src='jquery/bizagi.init.logout.js'></scr" + "ipt>");
+    </script>
+    <div id='NotificationCenter'></div>
+    <div id='loadModuleStatus'></div>
+</body>
+</html>

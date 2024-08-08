@@ -1,0 +1,213 @@
+body
+{
+    font-family: NeoSansStdRegular, Verdana;
+    color: #666666;
+    font-size: 10px; /*Trick to have 100% height divs inside body*/
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+
+/*-------------------------------- */
+/*---------- Left panel ---------- */
+/*-------------------------------- */
+#divLeftPanel
+{
+    overflow: auto;
+    padding-left: 15px;
+    padding-right: 10px;
+    padding-top: 30px;
+    border-right: #CCCCCC 1px solid;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 270px;
+    height: 100%; /* works only if parent container is assigned a height value */
+}
+
+
+/*---------- Left panel titles ---------- */
+
+.titleDimensionType
+{
+    padding: 2px;
+}
+
+.titleDimensionProcess
+{
+    background-image: url(../../img/analysis/proc_lit.png);
+    background-repeat: no-repeat;
+    text-indent: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    height: 18px;
+    color: #666666;
+    display: block;
+}
+
+#btnNewDimension
+{
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+/*---------- Left panel list items ---------- */
+
+.selectableList
+{
+    list-style-type: none;
+}
+
+.liUnselected
+{
+    background: transparent;
+    cursor: pointer;
+    font-size: 10px;
+    height: 18px;
+    overflow: hidden;
+    background-image: url(../../img/analysis/dimension.png);
+    background-repeat: no-repeat;
+    text-indent: 20px;
+    color: #666666;
+}
+
+.liUnselected:hover
+{
+    background-color: #F5F8F9;
+    cursor: pointer;
+    font-size: 10px;
+    height: 18px;
+    overflow: hidden;
+    background-image: url(../../img/analysis/dimension.png);
+    background-repeat: no-repeat;
+    text-indent: 20px;
+    color: #666666;
+}
+
+.liSelected
+{
+    background-color: #D0E5F5;
+    color: #2E6E9E;
+    cursor: pointer;
+    font-size: 10px;
+    height: 18px;
+    overflow: hidden;
+    background-image: url(../../img/analysis/dimension.png);
+    background-repeat: no-repeat;
+    text-indent: 20px;
+}
+
+.liInvalidDimension
+{
+    background-image: url(../../img/analysis/sign_warning.png);
+    list-style-type: none;
+}
+.liInvalidDimension:hover
+{
+    background-image: url(../../img/analysis/sign_warning.png);
+    list-style-type: none;
+}
+
+/*---------- Left panel containers  ---------- */
+
+
+.dimensionTypeTable table
+{
+    width: 100%;
+}
+
+.divDimensionGroup table
+{
+    width: 100%;
+}
+
+#mainLeftContainer
+{
+}
+
+
+
+/*-------------------------------- */
+/*---------- Right panel ---------- */
+/*-------------------------------- */
+
+
+#divRightPanel
+{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 30px; /* Making space for divLeftPanel */
+    margin-left: 295px;
+    display: block;
+}
+
+
+/*---------- Right panel titles ---------- */
+
+.titleDimensionReadProperties, .titleDimensionEditProperties
+{
+    padding: 5px;
+}
+
+
+
+/*---------- Disabled text for entity path ---------- */
+#txtDisplayEntityPath
+{
+    background-color: #F1F1F1;
+}
+
+
+/*---------- Table with dimension properties (both: read and edit table objects)---------- */
+.dimensionPropertiesTable
+{
+    width: 600px;
+    margin-top: 40px;
+    margin-left: 20px; /*border: 1px #DDDDDD solid;*/
+}
+
+
+.dimensionPropertiesTable th
+{
+    font-size: 11px;
+    font-weight: bold;
+    text-align: left;
+    width: 144px;
+    padding: 7px; /*	background-color:#F1F1F1; 	color:#51859E;*/
+    color: #666666;
+}
+
+
+.dimensionPropertiesTable td
+{
+    font-size: 11px;
+    font-weight: normal;
+    text-align: left;
+    background-color: White;
+    color: #666666;
+    padding-left: 5px;
+}
+
+
+.dimensionPropertiesTable input
+{
+    width: 400px;
+}
+
+/*----------- div with buttons below properties table --------------------*/
+
+.dimensionPropertiesFooter
+{
+    margin-left: 20px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+/*----------- IMG acting as select path button --------------------*/
+#imgSelectPath
+{
+    cursor: pointer;
+}
+

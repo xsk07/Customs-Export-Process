@@ -1,0 +1,714 @@
+@charset "UTF-8";
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+    display: block;
+}
+html {
+    cursor: default;
+    font-size: 100%;
+    overflow-y: scroll;
+    -webkit-tap-highlight-color: transparent;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+body, form, input, button, select, textarea {
+    font-size: 100%;
+    margin: 0;
+}
+a, a:active, a:hover {
+    outline: none;
+}
+a:focus {
+    outline: thin dotted;
+}
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+b, strong {
+    font-weight: bold;
+}
+dfn {
+    font-style: italic;
+}
+mark {
+    background: #ff0;
+    color: #000;
+}
+pre, code, kbd, samp {
+    font-family: monospace,monospace;
+    _font-family: 'courier new',monospace;
+    font-size: 1em;
+}
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+q {
+    quotes: none;
+}
+q:before, q:after {
+    content: '';
+    content: none;
+}
+small, sub, sup {
+    font-size: 75%;
+}
+sub, sup {
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    top: -.5em;
+}
+sub {
+    bottom: -.25em;
+}
+nav ul {
+    list-style: none;
+}
+audio[controls], canvas, video {
+    display: inline-block;
+    *display: inline;
+}
+audio {
+    display: none;
+    *zoom: 1;
+}
+audio[controls] {
+    display: inline-block;
+}
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+legend {
+    *margin-left: -7px;
+}
+button, input, select, textarea {
+    -webkit-appearance: none;
+    border-radius: 0;
+    vertical-align: baseline;
+    *vertical-align: middle;
+}
+button, input {
+    line-height: normal;
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+    overflow: visible;
+}
+input[type="checkbox"], input[type="radio"] {
+    box-sizing: border-box;
+}
+input[type="search"] {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+textarea {
+    vertical-align: top;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+input[type="checkbox"] {
+    -webkit-appearance: checkbox;
+}
+input[type="radio"] {
+    -webkit-appearance: radio;
+}
+select {
+    -webkit-appearance: menulist;
+}
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    overflow-y: auto;
+}
+body {
+    font-family: "Open Sans",sans-serif;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-image: url("images/texture-abstract-multiple.svg");
+    color: #576673;
+}
+fieldset {
+    padding: 0;
+    border: none;
+    margin: 0;
+}
+button.change-style {
+    position: fixed;
+    top: 3%;
+    right: 0;
+    border: none;
+    height: 45px;
+    width: 45px;
+    border-radius: 30px 0 0 30px;
+    cursor: pointer;
+}
+button.change-style span.icon {
+    line-height: 45px;
+}
+.login-wrapper {
+    width: 100%;
+    max-width: 26em;
+    padding: 1em;
+    margin: 0 auto;
+}
+.login-wrapper::before, .login-wrapper::after {
+    content: " ";
+    display: table;
+}
+.login-wrapper::after {
+    clear: both;
+}
+.login-wrapper .bzg-login_multiple-requestcode .bzg-login_multiple__actions {
+    padding: 0;
+    list-style: none;
+}
+.login-wrapper .bzg-login_multiple-requestcode .bzg-login_multiple__actions .login-option {
+    padding-bottom: 8px;
+}
+.login-wrapper .bzg-login_multiple-requestcode input[type=number] {
+    list-style: none;
+}
+.login-wrapper .bzg-login_multiple-requestcode .bzg-input-tm__input {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+.login-wrapper .bzg-login_multiple-requestcode .bzg-input-tm__input::-webkit-outer-spin-button, .login-wrapper .bzg-login_multiple-requestcode .bzg-input-tm__input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    margin: 0;
+}
+.login-wrapper .bzg-login_multiple-requestcode .bzg-input-tm__input::-webkit-input-placeholder {
+    color: #d3d3d3;
+}
+.login-wrapper .bzg-login_multiple-requestcode .bzg-input-tm__input:-ms-input-placeholder {
+    color: #d3d3d3;
+}
+.login-wrapper .bzg-login_multiple-requestcode .bzg-input-tm__input::-ms-input-placeholder {
+    color: #d3d3d3;
+}
+.login-wrapper .bzg-login_multiple-requestcode .bzg-input-tm__input::placeholder {
+    color: #d3d3d3;
+}
+.login-wrapper .bzg-login_multiple-requestcode .btn-verify-disabled {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+.login-wrapper .bzg-login_multiple-requestcode .login-resend-code-action {
+    background-color: transparent;
+    color: #576673;
+}
+.login-wrapper .login-options {
+    list-style: none;
+    padding: 0;
+}
+.login-wrapper .login-field_back_action {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 1.5rem;
+    margin-left: .3rem;
+    cursor: pointer;
+    color: #272727;
+}
+.login-wrapper .login-field_back_action svg {
+    fill: #217d7e;
+}
+.login-wrapper .login-field_back_action span {
+    margin-left: 5px;
+}
+.login-wrapper .login-field__title {
+    color: #272727;
+    font-size: 16px;
+    font-weight: 600;
+}
+.login-wrapper .login-field__title+p {
+    color: #272727;
+    font-size: 14px;
+    margin-bottom: 2rem;
+}
+.login-wrapper .initial-code-options-item input[type=radio] {
+    position: absolute;
+    opacity: 0;
+}
+.login-wrapper .initial-code-options-item input[type=radio]+label::before {
+    content: "";
+    background: #fff;
+    border-radius: 100%;
+    border: 1px solid #1eb0a5;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: .7em;
+    vertical-align: top;
+    cursor: pointer;
+    text-align: center;
+    -webkit-transition: all 250ms ease;
+    -o-transition: all 250ms ease;
+    transition: all 250ms ease;
+}
+.login-wrapper .initial-code-options-item input[type=radio]:checked+label::before {
+    background-color: #1eb0a5;
+    -webkit-box-shadow: inset 0 0 0 2px white;
+    box-shadow: inset 0 0 0 2px white;
+}
+.login-wrapper .initial-code-options-item input[type=radio]:focus+label::before {
+    outline: none;
+    border-color: #fff;
+}
+.login-wrapper .initial-code-options-item input[type=radio]+label:empty::before {
+    margin-right: 0;
+}
+.login-wrapper .initial-code-options-item input[type=radio]+label:hover {
+    cursor: pointer;
+}
+.login-wrapper .login-verify-code-hr {
+    border-bottom: 1px solid rgba(0,0,0,.17);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.login-wrapper .initial-code-options {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.login-wrapper .button-options {
+    display: block;
+    text-align: center;
+    padding: 0;
+}
+.login-wrapper .button-options-item {
+    width: 45%;
+    border-radius: 4px;
+    height: 38px;
+    margin: 10px 5px;
+    background: transparent;
+    border: 1px solid #02645e;
+    color: #02645e;
+    overflow: hidden;
+    -webkit-transition: all .28s ease-in-out;
+    -o-transition: all .28s ease-in-out;
+    transition: all .28s ease-in-out;
+}
+.login-wrapper .button-options-item:hover {
+    cursor: pointer;
+    border: 1px solid #1baca1;
+    color: #1baca1;
+}
+.login-wrapper .button-options-item>svg {
+    fill: #02645e;
+    vertical-align: middle;
+    margin-right: 6px;
+    -webkit-transition: all .28s ease-in-out;
+    -o-transition: all .28s ease-in-out;
+    transition: all .28s ease-in-out;
+}
+.login-wrapper .button-options-item:hover>svg {
+    fill: #1baca1;
+}
+.login-wrapper .login-option>svg {
+    fill: #02645e;
+    overflow: visible;
+}
+.login-wrapper .login-back {
+    margin-top: 25px;
+}
+.login-wrapper .login-back>span {
+    text-decoration: underline;
+    font-size: 12px;
+    color: #555;
+    margin-left: 3px;
+    vertical-align: text-top;
+}
+.login-wrapper .login-back:hover {
+    cursor: pointer;
+}
+.login-wrapper .hide, .login-wrapper .hide>* {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0;
+}
+.login-wrapper legend>strong {
+    color: #555;
+}
+.login-wrapper .logo {
+    margin: 1.5rem 2rem 0 2rem;
+    padding: 0;
+    font-size: 0;
+    text-align: center;
+}
+.login-wrapper .logo img {
+    width: 294px;
+    max-width: 100%;
+}
+.login-wrapper .bzg-login_multiple {
+    padding: 2em;
+    margin-top: 1.5rem;
+}
+.login-wrapper .bzg-login_multiple__title {
+    color: #576673;
+}
+.login-wrapper .bzg-login_multiple__title::after {
+    border-bottom: solid 3px rgba(87,102,115,.31);
+}
+.login-wrapper .bzg-login_multiple__legend {
+    font-family: "Open Sans",sans-serif;
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 1em;
+    letter-spacing: -.2px;
+    color: #576673;
+}
+.login-wrapper .bzg-input-tm, .login-wrapper .bzg-input-tm bzg-login__options, .login-wrapper .bzg-input-tm .bzg-select {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 2.25em;
+}
+.login-wrapper .bzg-input-tm .control-label {
+    position: absolute;
+    top: .25em;
+    pointer-events: none;
+    padding-left: .125em;
+    z-index: 1;
+    font-size: 14px;
+    letter-spacing: -.2px;
+    color: #272727;
+    -webkit-transition: all .28s ease;
+    -o-transition: all .28s ease;
+    transition: all .28s ease;
+}
+.login-wrapper .bzg-input-tm .bar {
+    position: relative;
+    border-bottom: .0625em solid #394651;
+    display: block;
+}
+.login-wrapper .bzg-input-tm .bar::before {
+    content: "";
+    height: 1px;
+    width: 0;
+    left: 50%;
+    bottom: -.0625em;
+    position: absolute;
+    background: #394651;
+    -webkit-transition: left .28s ease,width .28s ease;
+    -o-transition: left .28s ease,width .28s ease;
+    transition: left .28s ease,width .28s ease;
+    z-index: 2;
+}
+.login-wrapper .bzg-input-tm input {
+    display: block;
+    background: none;
+    padding: .125em .125em .0625em;
+    font-size: 14px;
+    border-width: 0;
+    border-color: transparent;
+    line-height: 1.9;
+    width: 100%;
+    color: transparent;
+    -webkit-transition: all .28s ease;
+    -o-transition: all .28s ease;
+    transition: all .28s ease;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.login-wrapper .bzg-input-tm input:focus, .login-wrapper .bzg-input-tm input:valid, .login-wrapper .bzg-input-tm input.form-file, .login-wrapper .bzg-input-tm input.has-value {
+    color: #394651;
+}
+.login-wrapper .bzg-input-tm input:focus~.control-label, .login-wrapper .bzg-input-tm input:valid~.control-label, .login-wrapper .bzg-input-tm input.form-file~.control-label, .login-wrapper .bzg-input-tm input.has-value~.control-label {
+    font-size: .7em;
+    color: #272727;
+    top: -1em;
+    left: 0;
+}
+.login-wrapper .bzg-input-tm input:-webkit-autofill~.control-label {
+    font-size: .7em;
+    color: #1eb0a5;
+    top: -1em;
+    left: 0;
+}
+.login-wrapper .bzg-input-tm input:focus {
+    outline: none;
+    border: none;
+}
+.login-wrapper .bzg-input-tm input:focus~.bar::before {
+    width: 100%;
+    left: 0;
+}
+.login-wrapper .bzg-login-checkbox {
+    margin-top: -1em;
+}
+.login-wrapper .bzg-login-checkbox .form-help, .login-wrapper .bzg-login-checkbox .bzg-login_multiple__options .form-help {
+    position: absolute;
+    width: 100%;
+}
+.login-wrapper .bzg-login-checkbox .form-help {
+    position: relative;
+    margin-bottom: 1em;
+}
+.login-wrapper .bzg-login-checkbox label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: left;
+    color: #576673;
+    font-size: 12px;
+    display: block;
+}
+.login-wrapper .bzg-login-checkbox input {
+    width: auto;
+    opacity: 1 e- 8;
+    position: absolute;
+    left: 0;
+}
+.login-wrapper .bzg-login-checkbox .helper {
+    position: absolute;
+    top: 1.1em;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    z-index: 0;
+    border: .125em solid #b7b7b7;
+    border-radius: 2px;
+    -webkit-transition: border-color .28s ease;
+    -o-transition: border-color .28s ease;
+    transition: border-color .28s ease;
+}
+.login-wrapper .bzg-login-checkbox .helper::before, .login-wrapper .bzg-login-checkbox .helper::after {
+    position: absolute;
+    height: 0;
+    width: .2em;
+    background-color: #555;
+    display: block;
+    -webkit-transform-origin: left top;
+    -ms-transform-origin: left top;
+    transform-origin: left top;
+    border-radius: .25em;
+    content: "";
+    -webkit-transition: opacity .28s ease,height 0s linear .28s;
+    -o-transition: opacity .28s ease,height 0s linear .28s;
+    transition: opacity .28s ease,height 0s linear .28s;
+    opacity: 0;
+}
+.login-wrapper .bzg-login-checkbox .helper::before {
+    top: .9em;
+    left: .45em;
+    -webkit-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    -webkit-box-shadow: 0 0 0 .0625em white;
+    box-shadow: 0 0 0 .0625em white;
+}
+.login-wrapper .bzg-login-checkbox .helper::after {
+    top: .5em;
+    left: 0;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.login-wrapper .bzg-login-checkbox label:hover .helper {
+    color: #576673;
+}
+.login-wrapper .bzg-login-checkbox input:checked~.helper {
+    color: #576673;
+}
+.login-wrapper .bzg-login-checkbox input:checked~.helper::after, .login-wrapper .bzg-login-checkbox input:checked~.helper::before, .login-wrapper .bzg-login-checkbox.checked .helper::after, .login-wrapper .bzg-login-checkbox.checked .helper::before {
+    opacity: 1;
+    -webkit-transition: height .28s ease;
+    -o-transition: height .28s ease;
+    transition: height .28s ease;
+}
+.login-wrapper .bzg-login-checkbox input:checked~.helper::after {
+    height: .5em;
+}
+.login-wrapper .bzg-login-checkbox input:checked~.helper::before {
+    height: 1.2em;
+    -webkit-transition-delay: .28s;
+    transition-delay: .28s;
+}
+.login-wrapper .bzg-login-checkbox+.bzg-login-checkbox {
+    margin-top: 1em;
+}
+.login-wrapper select {
+    margin-bottom: 2.5em;
+    padding-right: 1.5rem;
+}
+.login-wrapper select.bzg-select__input {
+    display: block;
+    font-size: 14px;
+    border: none !important;
+    background-color: transparent !important;
+    width: 100%;
+    font-weight: 100;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.login-wrapper select.bzg-select__input::-ms-expand {
+    display: none;
+}
+.login-wrapper select.bzg-select__input:focus {
+    outline: none;
+}
+.login-wrapper select[disabled] {
+    padding: 5px 0;
+}
+.login-wrapper select[disabled]+.bzg-select__icon {
+    display: none;
+}
+.login-wrapper select[disabled].bzg-select__input {
+    border-bottom: 1px solid #c4c4c4 !important;
+    color: #757575 !important;
+}
+.login-wrapper select[disabled] option {
+    color: #c4c4c4;
+}
+.login-wrapper select:not([disabled]) {
+    cursor: pointer;
+    padding: 5px 1.5rem 5px 0;
+}
+.login-wrapper select:not([disabled]).bzg-select__input {
+    border-bottom: 1px solid #272727 !important;
+    color: #272727 !important;
+}
+.login-wrapper .bzg-select {
+    position: relative;
+    margin-top: -1em;
+}
+.login-wrapper .bzg-select__label {
+    font-size: .7em;
+    color: #272727;
+}
+.login-wrapper .bzg-select__icon {
+    position: absolute;
+    bottom: 5px;
+    right: 2px;
+    height: 1em;
+    width: 1em;
+    background-image: url("images/bz-arrow-down.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    pointer-events: none;
+}
+.login-wrapper .bzg-login_multiple__actions__btn {
+    width: 100%;
+    height: 37px;
+    border: none;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    background-color: #b2b2b2;
+    color: #fff;
+    text-transform: capitalize;
+    outline: none;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.login-wrapper .bzg-login_multiple__actions__btn.valid {
+    cursor: pointer;
+    background-color: #217d7e;
+}
+.login-wrapper .bzg-login_multiple__actions__btn.valid:hover {
+    background-color: #217d7e;
+}
+.login-wrapper #login-message-wrapper .login-message p.secondary-data {
+    position: relative;
+    color: #e64d5f;
+    font-size: 11px;
+    padding-left: 2em;
+}
+.login-wrapper #login-message-wrapper .login-message p::before {
+    content: " ";
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    height: 1.2em;
+    width: 1.2em;
+    background-image: url("images/bz-warning-red.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    pointer-events: none;
+}
+@media(min-width: 1281px) {
+    .login-wrapper .bzg-select__icon {
+        z-index: -1;
+    }
+}
+@media(min-width: 320px) and (max-width: 480px) {
+    .login-wrapper .bzg-login_multiple {
+        padding: 1em 2em;
+    }
+    .login-wrapper .login-wrapper {
+        padding: 0;
+    }
+    .login-wrapper .bzg-input-tm, .login-wrapper bzg-login__options, .login-wrapper .bzg-select {
+        position: relative;
+        margin-top: 0;
+        margin-bottom: 1.7em;
+    }
+    .login-wrapper .bzg-input-tm input {
+        display: block;
+        background: none;
+        padding: .125em .125em .0625em;
+        font-size: 14px;
+        border-width: 0;
+        border-color: transparent;
+        line-height: 1.9;
+        width: 100%;
+        -webkit-transition: all .28s ease;
+        transition: all .28s ease;
+        box-shadow: none;
+        color: #394651;
+    }
+    .login-wrapper .bzg-input-tm input:focus~.control-label, .login-wrapper .bzg-input-tm input:valid~.control-label, .login-wrapper .bzg-input-tm input.form-file~.control-label, .login-wrapper .bzg-input-tm input.has-value~.control-label, .login-wrapper .bzg-input-tm .control-label.valid {
+        font-size: .7em;
+        color: #272727;
+        top: -1em;
+        left: 0;
+    }
+}
+#code {
+    margin-top: 1rem;
+}

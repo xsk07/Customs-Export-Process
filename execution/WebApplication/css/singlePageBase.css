@@ -1,0 +1,49 @@
+html,
+body,
+body[class] {
+    font-family: "Open Sans", sans-serif;
+    min-width: initial;
+}
+
+html {
+    background-image: linear-gradient(315deg, #e0e0e0, #9e9e9e 60%, #757575);
+}
+
+body,
+body[class] {
+    margin: 0;
+    background: url(../img/singlePage/texture-abstract-multiple.svg) no-repeat 0 0;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    box-sizing: border-box;
+    display: block;
+    height: 100vh;
+}
+
+.main-content,
+#content-wrapper.main-content,
+#ui-bizagi-error-wrapper > #error-wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0;
+}
+
+h1.logo-suite{
+	background: url(../img/singlePage/logo-suite.svg) no-repeat 0 0;
+	background-size: contain;
+    width: 224px;
+	text-indent: -9999px;
+	height: 112px;
+	margin: 80px auto 40px;
+}
+
+.logout__container,
+.error__container {
+	padding: 2em;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #FFFFFF;
+    word-break: break-word;
+}

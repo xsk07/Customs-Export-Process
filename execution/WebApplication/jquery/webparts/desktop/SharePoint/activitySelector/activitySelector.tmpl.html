@@ -1,0 +1,78 @@
+<script id="ui-bizagi-webpart-activity-selector" type="text/x-jquery-tmpl">
+<div id="ui-bizagi-wp-app-inbox-activities-routing" class="ui-bizagi-wp-app-inbox-activities-routing-container">
+    {{if checkProcess}}
+    <div class="ui-bizagi-webpart-header-container" ></div> 
+    <div class="text-description-title">
+        %{workportal-widget-routing-process-selector}
+    </div>
+    <div id="ui-bizagi-wp-app-routing-process-container" class="ui-bizagi-wp-app-routing-container">
+        <table id="ui-bizagi-wp-app-routing-process-wf" cellspacing="0" border="0" cellpading="0" class="ui-bizagi-wp-app-routing-table">
+            <thead>
+            <tr>
+                <td>%{workportal-widget-routing-id}</td>
+                <td>%{workportal-widget-routing-name}</td>
+                <td>&nbsp;</td>
+            </tr>
+            </thead>
+            <tbody>
+            {{each subProcessPersonalized}}
+            <tr>
+                <td class="alignLeft">${radNumber}
+                    <input type="hidden" id="idCase" value="${idCase}" />
+                </td>
+                <td class="alignLeft">${displayName}
+                    <input type="hidden" id="idCase" value="${idCase}" />
+                </td>
+                <td class="alignRight">
+                    <button type="button" class="workonitRow">%{workportal-widget-routing-work-on-it}</button>
+                    <!-- <button type="button" class="continueActivities ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button"><span class="ui-button-text">Continue</span></button> -->
+                </td>
+            </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+    <br/>
+    {{/if}}
+    {{if checkWorkItems}}
+    <div class="ui-bizagi-webpart-header-container" ></div> 
+    <div class="text-description-title">
+        %{workportal-widget-routing-activity-selector}
+    </div>
+    <div id="ui-bizagi-wp-app-routing-activity-container" class="ui-bizagi-wp-app-routing-container">
+        <table id="ui-bizagi-wp-app-routing-activity-wf" cellspacing="0" border="0" cellpading="0" class="ui-bizagi-wp-app-routing-table">
+            <thead>
+            <tr>
+                <td>%{workportal-widget-routing-name}</td>
+                <td>%{workportal-widget-routing-due-date}</td>
+                <td>&nbsp;</td>
+            </tr>
+            </thead>
+            <tbody>
+            {{each workItems}}
+            <tr>
+                <td class="alignLeft"> ${displayName}
+                    <input type="hidden" id="idWorkItem" value="${idWorkItem}" />
+                    <input type="hidden" id="idTask" value="${idTask}" />
+                    <input type="hidden" id="idCase" value="${idCase}" />
+                    <input type="hidden" id="isAsynch" value="${isAsynch}" />
+                </td>
+                <td class="alignCenter">${estimatedSolutionDate}</td>
+                <td class="alignRight">
+                    <button type="button" class="workonitRow">%{workportal-widget-routing-work-on-it}</button>
+                    <!-- <button type="button" class="continueActivities ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button"><span class="ui-button-text">Continue</span></button> -->
+                </td>
+            </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+    {{/if}}
+</div>
+</script>
+<script id="ui-bizagi-webpart-title-activity-selector" type="text/x-jquery-tmpl">
+    <div  class="ui-bizagi-webpart-header-render-msg">                
+        <h2>{{html caseNumber}} {{html workItemState}}</h2>
+        <h3>{{html processPath}}</h3>
+    </div> 
+</script>

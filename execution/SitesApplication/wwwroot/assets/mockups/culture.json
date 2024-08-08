@@ -1,0 +1,12 @@
+{
+  "dateFormatStyle": 0,
+  "dateFormatLong": "dddd, MMMM dd, YYYY",
+  "dateFormatShort": "M/d/YYYY",
+  "dateSeparator":"/",
+  "timeFormat":"hh:mm:ss A",
+  "negativeNumbers":0,
+  "decimalDigits": 0,
+  "thousandsSeparator":",",
+  "decimalSeparator":".",
+  "currencySymbol": "$"
+}

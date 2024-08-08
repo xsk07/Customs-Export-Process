@@ -1,0 +1,1091 @@
+{
+  "preview": "",
+  "theme": "4760dc64-e96b-426b-b60c-a04f47f2b4ac",
+  "displayName": "Motorheads",
+  "footer": {
+    "id": "dcd8e82c-e7ee-4b9b-ba00-f1bf7f47669b",
+    "name": "",
+    "parametersBinding": {},
+    "parameters": {
+      "copyright": "Created by Bizagi with Bizagi sites ® - Copyright 2016 ",
+      "nSections": 2
+    },
+    "styles": {
+      "backColor": "#282828",
+      "contentFontColor": "#c7c7c7",
+      "contentFontSize": 12,
+      "height": 100,
+      "sectionFontColor": "#e9e9e9",
+      "sectionFontSize": 14,
+      "showCopyright": true
+    },
+    "type": "footer"
+  },
+  "header": {
+    "id": "041bb295-7ce7-47f8-9555-a2f91a32e72a",
+    "name": "",
+    "navigation": [],
+    "parametersBinding": {},
+    "parameters": {
+      "heroImage": "",
+      "siteLogo": "{{bzImagesSource}}0cc15253-4428-4b83-9f45-08e5043c30a9/c65ce3cb-ca0b-4a89-ad80-d416dfaa1804.png{{/bzImagesSource}}"
+    },
+    "styles": {
+      "showLogo": true
+    },
+    "type": "header"
+  },
+  "images": [
+    "{{bzImagesSource}}0cc15253-4428-4b83-9f45-08e5043c30a9/5e51ad4e-ebcb-46bd-82e3-f2920a89b2cb.jpg{{/bzImagesSource}}",
+    "{{bzImagesSource}}0cc15253-4428-4b83-9f45-08e5043c30a9/d7281f7a-53ee-42f4-bfcc-126deb40bea2.jpg{{/bzImagesSource}}",
+    "{{bzImagesSource}}0cc15253-4428-4b83-9f45-08e5043c30a9/98f174d4-8a04-4366-b07b-6842bc61f512.jpg{{/bzImagesSource}}"
+  ],
+  "sections": {
+    "motorcycles": {
+      "displayName": "Motorcycles",
+      "layouts": [
+        {
+          "id": "7e666866-ac5c-41d7-80ac-7135f5543b59",
+          "displayName": "Motorcycles",
+          "name": "motorcycles",
+          "grid": {
+            "size": 1920,
+            "boundaries": {
+              "left": 360,
+              "right": 1560,
+              "width": 360
+            },
+            "layoutSize": 1200
+          },
+          "controls": [
+            {
+              "id": "453df026-6b34-4a44-9442-1642551dff01",
+              "location": {
+                "height": 68,
+                "width": 450,
+                "x": 44738,
+                "y": 34
+              },
+              "name": "Text",
+              "parametersBinding": {},
+              "parameters": {
+                "text": "MOTORCYCLES"
+              },
+              "styles": {
+                "align": "center",
+                "backColor": "rgba(0,0,0,0)",
+                "bold": true,
+                "fontColor": "#fff",
+                "fontFamily": "monospace",
+                "fontSize": "36px",
+                "lineHeight": 1,
+                "textType": "paragraph",
+                "letterSpacing": 8.5
+              },
+              "type": "text",
+              "visibleTo": [
+                "ALL"
+              ]
+            },
+            {
+              "id": "223ed21c-68dd-4863-89a3-bfed0b79ffaa",
+              "name": "List View",
+              "location": {
+                "x": 44401,
+                "y": 920,
+                "height": 875,
+                "width": 1104
+              },
+              "type": "listView",
+              "styles": {
+                "titleFontSize": "22px",
+                "titleColor": "color-first",
+                "textFontSize": "14px",
+                "textColor": "color-sixth",
+                "infoFontSize": "36px",
+                "infoColor": "color-first",
+                "backgroundColor": "color-fifth",
+                "layout": "one"
+              },
+              "parametersBinding": {},
+              "parameters": {
+                "data": {
+                  "dataSource": 0,
+                  "fixed": [
+                    {
+                      "image": "t/0cc15253-4428-4b83-9f45-08e5043c30a9/4030095b-43d7-4f91-8912-07b86b24d1fc.jpg",
+                      "title": "1934 Harley-Davidson R45",
+                      "text": "Las Vegas, Nevada",
+                      "caption": "US$23.500"
+                    },
+                    {
+                      "image": "t/0cc15253-4428-4b83-9f45-08e5043c30a9/988ff466-9a12-4c37-ac5b-1b15e18dae2d.jpg",
+                      "title": "1910 Harley-Davidson Motorcycle",
+                      "text": "Las Vegas, Nevada",
+                      "caption": "US$28.300"
+                    },
+                    {
+                      "image": "t/0cc15253-4428-4b83-9f45-08e5043c30a9/6764635b-26b4-443c-b782-397a077e8cd3.jpg",
+                      "title": "1926 Harley-Davidson J Model",
+                      "text": "Las Vegas, Nevada",
+                      "caption": "US$23.000"
+                    }
+                  ]
+                },
+                "filter": ""
+              },
+              "inputs": [
+                "parameters.filter"
+              ],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "fields": {
+                "image": {
+                  "active": true,
+                  "styles": {
+                    "imagesSize": "scale",
+                    "opacity": 100,
+                    "background": "rgba(0, 0, 0, 0)",
+                    "border": "border-none"
+                  }
+                },
+                "title": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "28px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-first",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                },
+                "text": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "12px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-sixth",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                },
+                "caption": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "28px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-first",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                }
+              },
+              "actions": null,
+              "layout": "one"
+            },
+            {
+              "id": "d4aea027-09a9-43fb-ab49-d96dc08bf271",
+              "name": "Text",
+              "location": {
+                "x": 4400,
+                "y": 884,
+                "height": 45,
+                "width": 403
+              },
+              "type": "text",
+              "styles": {
+                "fontFamily": "monospace",
+                "fontSize": "24px",
+                "textType": "paragraph",
+                "letterSpacing": 10.5,
+                "lineHeight": 1,
+                "align": "left",
+                "fontColor": "#425968",
+                "backColor": "rgba(0,0,0,0)",
+                "bold": false
+              },
+              "parametersBinding": {},
+              "parameters": {
+                "text": "HARLEY-DAVIDSON"
+              },
+              "inputs": [],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "ce785b45-e3ec-4c14-8456-df0c0d8c5196",
+              "name": "Text",
+              "location": {
+                "x": 4402,
+                "y": 195,
+                "height": 45,
+                "width": 164
+              },
+              "type": "text",
+              "styles": {
+                "fontFamily": "monospace",
+                "fontSize": "24px",
+                "textType": "paragraph",
+                "letterSpacing": 10.5,
+                "lineHeight": 1,
+                "align": "left",
+                "fontColor": "#425968",
+                "backColor": "rgba(0,0,0,0)",
+                "bold": false
+              },
+              "parametersBinding": {},
+              "parameters": {
+                "text": "DUCATI"
+              },
+              "inputs": [],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "f969d337-2214-4e26-8baf-fccb7ea8c9b9",
+              "name": "List View",
+              "location": {
+                "x": 4402,
+                "y": 259,
+                "height": 609,
+                "width": 1110
+              },
+              "type": "listView",
+              "styles": {
+                "titleFontSize": "22px",
+                "titleColor": "color-first",
+                "textFontSize": "14px",
+                "textColor": "color-sixth",
+                "infoFontSize": "36px",
+                "infoColor": "color-first",
+                "backgroundColor": "color-fifth",
+                "layout": "three"
+              },
+              "parametersBinding": {},
+              "parameters": {
+                "data": {
+                  "dataSource": 0,
+                  "fixed": [
+                    {
+                      "image": "t/0cc15253-4428-4b83-9f45-08e5043c30a9/5f199e66-0434-4bfa-8e39-f0143ed8253b.jpg",
+                      "title": "1965 Ducati Mark III",
+                      "text": "Las Vegas, Nevada",
+                      "caption": "US $18.500"
+                    },
+                    {
+                      "image": "t/0cc15253-4428-4b83-9f45-08e5043c30a9/90d2a7dd-9b4f-43be-9d10-208a9c9ab8cc.jpg",
+                      "title": "1973 Ducati Motorcycle",
+                      "text": "Las Vegas, Nevada",
+                      "caption": "US$22.300"
+                    },
+                    {
+                      "image": "t/0cc15253-4428-4b83-9f45-08e5043c30a9/4ef4e6bb-6efd-442e-a248-692cf0e2e429.jpg",
+                      "title": "1975 Ducati 750SS",
+                      "text": "Las Vegas, Nevada",
+                      "caption": "US$26.000"
+                    }
+                  ]
+                },
+                "filter": ""
+              },
+              "inputs": [
+                "parameters.filter"
+              ],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "fields": {
+                "image": {
+                  "active": true,
+                  "styles": {
+                    "imagesSize": "scale",
+                    "opacity": 100,
+                    "background": "rgba(0, 0, 0, 0)",
+                    "border": "border-none"
+                  }
+                },
+                "title": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "28px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-first",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                },
+                "text": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "12px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-sixth",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                },
+                "caption": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "28px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-first",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                }
+              },
+              "actions": null,
+              "layout": "one"
+            }
+          ],
+          "hero": {
+            "id": "776687f5-179e-4ef7-84a1-38b935c20c99",
+            "name": "",
+            "parametersBinding": {},
+            "styles": {
+              "heroImageHeight": 240,
+              "showHeroImage": true,
+              "heroImage": "{{bzImagesSource}}0cc15253-4428-4b83-9f45-08e5043c30a9/1cf610f5-2394-41cd-85a3-d0ba3bf6068f.jpg{{/bzImagesSource}}",
+              "heroSpace": "fluid",
+              "scale": "tofill",
+              "scaleProportionally": 50,
+              "imgOpacity": 100,
+              "imgColorOpacity": 0,
+              "imgColorBackgroundOpacity": "transparent",
+              "backgroundPosition": "center"
+            },
+            "type": "hero"
+          },
+          "preview": "{{bzImagesSource}}0cc15253-4428-4b83-9f45-08e5043c30a9/7c968bc6-f108-4e01-b0e7-78c7a97bc6d8.jpg{{/bzImagesSource}}"
+        }
+      ]
+    },
+    "home": {
+      "displayName": "Home",
+      "layouts": [
+        {
+          "id": "774810e2-033a-4c55-a7be-9e8d13977fa7",
+          "preview": "{{bzImagesSource}}0cc15253-4428-4b83-9f45-08e5043c30a9/b8a754fd-9b91-4a5f-9a1d-ea1ad85dfdce.jpg{{/bzImagesSource}}",
+          "controls": [
+            {
+              "id": "e96141c4-b88a-4e5c-805a-b9d9907dadf5",
+              "name": "List View",
+              "location": {
+                "x": 4382,
+                "y": 778,
+                "height": 910,
+                "width": 1164
+              },
+              "type": "listView",
+              "styles": {
+                "titleFontSize": "22px",
+                "titleColor": "color-first",
+                "textFontSize": "14px",
+                "textColor": "color-sixth",
+                "infoFontSize": "36px",
+                "infoColor": "color-first",
+                "backgroundColor": "color-fifth",
+                "layout": "one"
+              },
+              "parametersBinding": {},
+              "parameters": {
+                "data": {
+                  "dataSource": 0,
+                  "fixed": [
+                    {
+                      "image": "t/0cc15253-4428-4b83-9f45-08e5043c30a9/d7281f7a-53ee-42f4-bfcc-126deb40bea2.jpg",
+                      "title": "1957 Chevrolet Bel Air",
+                      "text": "Newark, Ohio",
+                      "caption": "US$115,000"
+                    },
+                    {
+                      "image": "t/0cc15253-4428-4b83-9f45-08e5043c30a9/aa4601c7-4579-4ce5-b2cb-5655b1f74c5d.jpg",
+                      "title": "1959 Austin-Healey BN6",
+                      "text": "Roswell, Georgia",
+                      "caption": "US $16.600"
+                    },
+                    {
+                      "image": "t/0cc15253-4428-4b83-9f45-08e5043c30a9/98f174d4-8a04-4366-b07b-6842bc61f512.jpg",
+                      "title": "1953 Chevrolet 3100",
+                      "text": "Fayetteville, Georgia",
+                      "caption": "US$15,900"
+                    }
+                  ]
+                },
+                "filter": ""
+              },
+              "inputs": [
+                "parameters.filter"
+              ],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "fields": {
+                "image": {
+                  "active": true,
+                  "styles": {
+                    "imagesSize": "scale",
+                    "opacity": 100,
+                    "background": "rgba(0, 0, 0, 0)",
+                    "border": "border-none"
+                  }
+                },
+                "title": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "28px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-first",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                },
+                "text": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "12px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-sixth",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                },
+                "caption": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "28px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-first",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                }
+              },
+              "actions": null,
+              "layout": "one"
+            },
+            {
+              "id": "1ae6c970-1bf9-4a34-8d4c-e4cae09c8328",
+              "location": {
+                "height": 106,
+                "width": 542,
+                "x": 4397,
+                "y": 16
+              },
+              "name": "Text",
+              "parametersBinding": {},
+              "parameters": {
+                "text": "CLASSICS"
+              },
+              "styles": {
+                "align": "left",
+                "backColor": "rgba(255,255,255,0)",
+                "bold": true,
+                "fontColor": "#fff",
+                "fontFamily": "monospace",
+                "fontSize": "72px",
+                "letterSpacing": 23.5,
+                "lineHeight": 1,
+                "textType": "paragraph"
+              },
+              "type": "text",
+              "visibleTo": [
+                "ALL"
+              ]
+            },
+            {
+              "id": "ded09843-c0dd-4daf-b31b-f5082714f211",
+              "location": {
+                "height": 59,
+                "width": 1194,
+                "x": 4364,
+                "y": 1717
+              },
+              "name": "Text",
+              "parametersBinding": {},
+              "parameters": {
+                "text": "AUCTION SHOWCASE LISTINGS"
+              },
+              "styles": {
+                "align": "center",
+                "backColor": "rgba(255,255,255,0)",
+                "bold": true,
+                "fontColor": "#545353",
+                "fontFamily": "opensans",
+                "fontSize": "22px",
+                "lineHeight": 1,
+                "textType": "paragraph",
+                "letterSpacing": 7.5
+              },
+              "type": "text",
+              "visibleTo": [
+                "ALL"
+              ]
+            },
+            {
+              "id": "9c151268-0f8d-45b7-95b5-680d8caae4a2",
+              "name": "Image Gallery",
+              "location": {
+                "x": 4470,
+                "y": 282,
+                "height": 409,
+                "width": 978.0000000000001
+              },
+              "type": "galleryLink",
+              "styles": {
+                "titleFontSize": "20px",
+                "titleColor": "color-first",
+                "backgroundColor": "color-third",
+                "showPagination": true,
+                "paginationSize": 3,
+                "columns": 3,
+                "layout": "three"
+              },
+              "parametersBinding": {},
+              "parameters": {
+                "data": {
+                  "dataSource": 0,
+                  "fixed": [
+                    {
+                      "image": "t/0cc15253-4428-4b83-9f45-08e5043c30a9/0c34bb3b-3392-40cc-afab-2d28eaf21f97.jpg",
+                      "title": "1964 Chevrolet Impala"
+                    },
+                    {
+                      "image": "t/0cc15253-4428-4b83-9f45-08e5043c30a9/5e51ad4e-ebcb-46bd-82e3-f2920a89b2cb.jpg",
+                      "title": " 1923 Ford T Bucket"
+                    },
+                    {
+                      "image": "t/0cc15253-4428-4b83-9f45-08e5043c30a9/85cf631b-9d5d-4080-8bc1-c3c8889d94e9.jpg",
+                      "title": "1937 Ford 3"
+                    }
+                  ]
+                }
+              },
+
+              "inputs": [],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "fields": {
+                "image": {
+                  "active": true,
+                  "styles": {
+                    "imagesSize": "scale",
+                    "opacity": 100,
+                    "background": "rgba(0, 0, 0, 0)",
+                    "border": "border-none"
+                  }
+                },
+                "title": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label:"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "16px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-first",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                }
+              },
+              "actions": null
+            },
+            {
+              "id": "e9e78b02-7b4d-40e6-8209-83ae6b403db8",
+              "name": "List View",
+              "location": {
+                "x": 4427,
+                "y": 1876,
+                "height": 606,
+                "width": 1064
+              },
+              "type": "listView",
+              "styles": {
+                "titleFontSize": "22px",
+                "titleColor": "color-first",
+                "textFontSize": "14px",
+                "textColor": "color-sixth",
+                "infoFontSize": "36px",
+                "infoColor": "color-first",
+                "backgroundColor": "color-fifth",
+                "layout": "three"
+              },
+              "parametersBinding": {},
+              "parameters": {
+                "data": {
+                  "dataSource": 0,
+                  "fixed": [
+                    {
+                      "image": "t/0cc15253-4428-4b83-9f45-08e5043c30a9/fe9c2919-9ecb-4e62-ae73-e97f780aad3c.jpg",
+                      "title": "1970 Ford MUSTANG MACH",
+                      "text": "Palm Springs, California",
+                      "caption": "US$38,000"
+                    },
+                    {
+                      "image": "t/0cc15253-4428-4b83-9f45-08e5043c30a9/d7281f7a-53ee-42f4-bfcc-126deb40bea2.jpg",
+                      "title": "1958 Edsel Corsair",
+                      "text": "Palm Springs, California",
+                      "caption": "US $46.600"
+                    },
+                    {
+                      "image": "t/0cc15253-4428-4b83-9f45-08e5043c30a9/5f77bee0-b383-40ba-961b-108a4e6203d0.jpg",
+                      "title": "1957 Chevrolet Corvette",
+                      "text": "Atlantic City, New Jersey",
+                      "caption": "US$25,300"
+                    }
+                  ]
+                },
+                "filter": ""
+              },
+              "inputs": [
+                "parameters.filter"
+              ],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "fields": {
+                "image": {
+                  "active": true,
+                  "styles": {
+                    "imagesSize": "scale",
+                    "opacity": 100,
+                    "background": "rgba(0, 0, 0, 0)",
+                    "border": "border-none"
+                  }
+                },
+                "title": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "28px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-first",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                },
+                "text": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "12px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-sixth",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                },
+                "caption": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "28px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-first",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                }
+              },
+              "actions": null,
+              "layout": "one"
+            },
+            {
+              "id": "677c3696-07b2-4f88-8480-a1d22f276568",
+              "location": {
+                "height": 45,
+                "width": 1200,
+                "x": 4354,
+                "y": 704
+              },
+              "name": "Text",
+              "parametersBinding": {},
+              "parameters": {
+                "text": "DEALER SHOWCASE LISTINGS"
+              },
+              "styles": {
+                "align": "center",
+                "backColor": "rgba(255,255,255,0)",
+                "bold": true,
+                "fontColor": "#545353",
+                "fontFamily": "opensans",
+                "fontSize": "22px",
+                "lineHeight": 1,
+                "textType": "paragraph",
+                "letterSpacing": 7.5
+              },
+              "type": "text",
+              "visibleTo": [
+                "ALL"
+              ]
+            },
+            {
+              "id": "1b1f0371-60a5-427b-9725-82ab905fcd04",
+              "name": "Search",
+              "location": {
+                "x": 4554,
+                "y": 132,
+                "height": 132,
+                "width": 834
+              },
+              "type": "search",
+              "styles": {
+                "backColor": "color-sixth",
+                "buttonBackColor": "color-second",
+                "buttonFontColor": "color-sixth",
+                "displaySearch": "basic"
+              },
+              "parametersBinding": {},
+              "parameters": {
+                "searchButtonName": "Search",
+                "searchPlaceholder": "FIND YOUR MODEL",
+                "searchIcon":  "search",
+                "searchCategoryPlaceholder": "Category"
+              },
+              "inputs": [],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": {
+                "onSearch": {
+                  "type": "changeProperty",
+                  "targets": {}
+                }
+              }
+            }
+          ],
+          "displayName": "Home",
+          "grid": {
+            "size": 1920,
+            "boundaries": {
+              "left": 360,
+              "right": 1560,
+              "width": 360
+            },
+            "layoutSize": 1200
+          },
+          "hero": {
+            "id": "776687f5-179e-4ef7-84a1-38b935c20c99",
+            "name": "",
+            "parametersBinding": {},
+            "styles": {
+              "heroImageHeight": 663,
+              "showHeroImage": true,
+              "heroImage": "{{bzImagesSource}}0cc15253-4428-4b83-9f45-08e5043c30a9/75f813f7-21af-42f2-aa25-8bbc5a883a41.jpg{{/bzImagesSource}}",
+              "heroSpace": "fluid",
+              "scale": "tofill",
+              "scaleProportionally": 50,
+              "imgOpacity": 100,
+              "imgColorOpacity": 0,
+              "imgColorBackgroundOpacity": "transparent",
+              "backgroundPosition": "center"
+            },
+            "type": "hero"
+          }
+        }
+      ]
+    },
+    "vehicles": {
+      "displayName": "Vehicles",
+      "layouts": [
+        {
+          "controls": [
+            {
+              "id": "6e8699d3-becf-4813-a137-5fdfd07f810d",
+              "location": {
+                "height": 74,
+                "width": 1018,
+                "x": 4454,
+                "y": 211
+              },
+              "name": "Text",
+              "parametersBinding": {},
+              "parameters": {
+                "text": "DEALER SHOWCASE LISTINGS"
+              },
+              "styles": {
+                "align": "center",
+                "backColor": "rgba(0,0,0,0)",
+                "bold": false,
+                "fontColor": "#425968",
+                "fontFamily": "monospace",
+                "fontSize": "36px",
+                "lineHeight": 1,
+                "textType": "paragraph",
+                "letterSpacing": 8.5
+              },
+              "type": "text",
+              "visibleTo": [
+                "ALL"
+              ]
+            },
+            {
+              "id": "484e3ae3-f700-4bf8-903c-077fe34da1ce",
+              "location": {
+                "height": 122,
+                "width": 1197,
+                "x": 4355,
+                "y": 15
+              },
+              "name": "Text",
+              "parametersBinding": {},
+              "parameters": {
+                "text": "VEHICLES"
+              },
+              "styles": {
+                "align": "center",
+                "backColor": "rgba(0,0,0,0)",
+                "bold": true,
+                "fontColor": "#fff",
+                "fontFamily": "monospace",
+                "fontSize": "36px",
+                "lineHeight": 1,
+                "textType": "paragraph",
+                "letterSpacing": 8.5
+              },
+              "type": "text",
+              "visibleTo": [
+                "ALL"
+              ]
+            },
+            {
+              "id": "e96141c4-b88a-4e5c-805a-b9d9907dadf5",
+              "name": "List View",
+              "location": {
+                "x": 4451,
+                "y": 360,
+                "height": 607,
+                "width": 1016
+              },
+              "type": "listView",
+              "styles": {
+                "titleFontSize": "22px",
+                "titleColor": "color-first",
+                "textFontSize": "14px",
+                "textColor": "color-sixth",
+                "infoFontSize": "36px",
+                "infoColor": "color-first",
+                "backgroundColor": "color-fifth",
+                "layout": "three"
+              },
+              "parametersBinding": {},
+              "parameters": {
+                "data": {
+                  "dataSource": 0,
+                  "fixed": [
+                    {
+                      "image": "t/0cc15253-4428-4b83-9f45-08e5043c30a9/d7281f7a-53ee-42f4-bfcc-126deb40bea2.jpg",
+                      "title": "1957 Chevrolet Bel Air",
+                      "text": "Newark, Ohio",
+                      "caption": "US$115,000"
+                    },
+                    {
+                      "image": "t/0cc15253-4428-4b83-9f45-08e5043c30a9/aa4601c7-4579-4ce5-b2cb-5655b1f74c5d.jpg",
+                      "title": "1959 Austin-Healey BN6",
+                      "text": "Roswell, Georgia",
+                      "caption": "US $16.600"
+                    },
+                    {
+                      "image": "t/0cc15253-4428-4b83-9f45-08e5043c30a9/98f174d4-8a04-4366-b07b-6842bc61f512.jpg",
+                      "title": "1953 Chevrolet 3100",
+                      "text": "Fayetteville, Georgia",
+                      "caption": "US$15,900"
+                    }
+                  ]
+                },
+                "filter": ""
+              },
+              "inputs": [
+                "parameters.filter"
+              ],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "fields": {
+                "image": {
+                  "active": true,
+                  "styles": {
+                    "imagesSize": "scale",
+                    "opacity": 100,
+                    "background": "rgba(0, 0, 0, 0)",
+                    "border": "border-none"
+                  }
+                },
+                "title": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "28px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-first",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                },
+                "text": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "12px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-sixth",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                },
+                "caption": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "28px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-first",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                }
+              },
+              "actions": null,
+              "layout": "one"
+            }
+          ],
+          "hero": {
+            "id": "776687f5-179e-4ef7-84a1-38b935c20c99",
+            "name": "",
+            "parametersBinding": {},
+            "styles": {
+              "heroImageHeight": 240,
+              "showHeroImage": true,
+              "heroImage": "{{bzImagesSource}}0cc15253-4428-4b83-9f45-08e5043c30a9/94ce3abf-cc44-48f1-b611-124cabfdd129.jpg{{/bzImagesSource}}",
+              "heroSpace": "fluid",
+              "scale": "tofill",
+              "scaleProportionally": 50,
+              "imgOpacity": 100,
+              "imgColorOpacity": 0,
+              "imgColorBackgroundOpacity": "transparent",
+              "backgroundPosition": "center"
+            },
+            "type": "hero"
+          },
+          "id": "2c07b195-2e66-4554-9210-f02936f9969b",
+          "displayName": "Vehicles",
+          "name": "vehicles",
+          "grid": {
+            "size": 1920,
+            "boundaries": {
+              "left": 360,
+              "right": 1560,
+              "width": 360
+            },
+            "layoutSize": 1200
+          },
+          "preview": "{{bzImagesSource}}0cc15253-4428-4b83-9f45-08e5043c30a9/a9f84d43-36b3-4663-857c-7369b668a99b.jpg{{/bzImagesSource}}"
+        }
+      ]
+    }
+  }
+}

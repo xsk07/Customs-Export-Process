@@ -1,0 +1,249 @@
+{
+  "info":{
+    "title": "Theme Bizagi Work Portal",
+    "device": "Desktop",
+    "version": "1.0",
+    "author": "UX TEAM at Bizagi"
+  },
+  "less": [
+    {
+      "name": "Desktop Variables"
+    },
+    {
+      "name": "General",
+      "items": [        
+        {
+          "name":"Navigation",
+          "items":[
+            {
+              "name": "Border",
+              "lessFunction": "mix(@one-color-palette,lighten(@one-color-palette, 100%),15%)",
+              "key": "@navigation-border",
+              "value": "#dbe8e8"
+            },
+            {
+              "name": "Background",
+              "lessFunction": "@one-color-palette",
+              "key": "@navigation",
+              "value": "#0d6664"
+            },
+            {
+              "name": "Link",
+              "lessFunction": "lighten(@one-color-palette, 75%)",
+              "key": "@navigation-link",
+              "value": "#f4fefd"
+            }
+          ]
+        },
+        {
+          "name":"Content",
+          "items":[
+            {
+              "name": "Border",
+              "lessFunction": "mix(@one-color-palette, lighten(@one-color-palette, 100%), 40%)",
+              "key": "@content-border",
+              "value": "#9ec2c1"
+            },
+            {
+              "name": "Panel Background",
+              "lessFunction": "mix(@one-color-palette, lighten(@one-color-palette, 100%), 3%)",
+              "key": "@pane",
+              "value": "#f8fafa"
+            },
+            {
+              "name": "Background",
+              "lessFunction": "mix(@one-color-palette, lighten(@one-color-palette, 100%), 12%)",
+              "key": "@content",
+              "value": "#e2edec"
+            },
+            {
+              "name": "Link",
+              "lessFunction": "darken(@one-color-palette,20%)",
+              "key": "@content-link",
+              "value": "#010c0b"
+            }]
+        },
+        {
+          "name":"Widgets",
+          "items":[
+            {
+              "name": "Background Modal",
+              "lessFunction": "mix(@one-color-palette, lighten(@one-color-palette, 100%), 3%)",
+              "key": "@modal",
+              "value": "#f8fafa"
+            },
+            {
+              "name": "Border Modal",
+              "lessFunction": "@one-color-palette",
+              "key": "@modal-border",
+              "value": "#0d6664"
+            },
+            {
+              "name": "Tooltip backgroud",
+              "lessFunction": "lighten(@one-color-palette, 80%)",
+              "key": "@tooltip",
+              "value": "#ffffff"
+            }
+          ]
+        },
+        {
+          "name":"Buttons",
+          "items":[
+            {
+              "name": "Background",
+              "lessFunction": "@one-color-palette",
+              "key": "@button",
+              "value": "#0d6664"
+            },
+            {
+              "name": "Text",
+              "lessFunction": "lighten(@one-color-palette, 100%)",
+              "key": "@button-text",
+              "value": "#ffffff"
+            }]
+        }
+      ]
+    },
+    {
+      "name":"Forms",
+      "items":[
+        {
+          "name":"Common",
+          "items":[
+            {
+              "name": "Background",
+              "lessFunction": "mix(@one-color-palette, lighten(@one-color-palette, 100%), 3%)",
+              "key": "@form-container",
+              "value": "#f8fafa"
+            },
+            {
+              "name": "Text",
+              "lessFunction": "darken(@one-color-palette, 20%)",
+              "key": "@form-text",
+              "value": "#010c0b"
+            }
+          ]
+        },
+        {
+          "name":"Groups",
+          "items":[
+            {
+              "name": "Border",
+              "lessFunction": "@one-color-palette",
+              "key": "@form-group-border",
+              "value": "#0d6664"
+            },
+            {
+              "name": "Background",
+              "lessFunction": "@one-color-palette",
+              "key": "@form-group",
+              "value": "#0d6664"
+            }
+          ]
+        },
+        {
+          "name":"Tabs",
+          "items":[
+            {
+              "name": "Border",
+              "lessFunction": "mix(@one-color-palette, lighten(@one-color-palette, 100%), 40%)",
+              "key": "@form-tab-border",
+              "value": "#9ec2c1"
+            },
+            {
+              "name": "Background",
+              "lessFunction": "mix(@one-color-palette, lighten(@one-color-palette, 100%), 12%)",
+              "key": "@form-tab",
+              "value": "#e2edec"
+            }
+          ]
+        },
+        {
+          "name":"Grids",
+          "items":[
+            {
+              "name": "Border",
+              "lessFunction": "mix(@one-color-palette, lighten(@one-color-palette, 100%), 20%)",
+              "key": "@form-grid-border",
+              "value": "#cfe0e0"
+            },
+            {
+              "name": "Background",
+              "lessFunction": "mix(@one-color-palette, lighten(@one-color-palette, 100%), 25%)",
+              "key": "@form-grid",
+              "value": "#c3d9d8"
+            }
+          ]
+        },
+        {
+          "name":"Inputs",
+          "items":[
+            {
+              "name": "Border",
+              "lessFunction": "mix(@one-color-palette, lighten(@one-color-palette, 100%), 30%)",
+              "key": "@form-input-border",
+              "value": "#b6d1d0"
+            },
+            {
+              "name": "Backgroud",
+              "lessFunction": "lighten(@one-color-palette, 100%)",
+              "key": "@form-input",
+              "value": "#ffffff"
+            }
+          ]
+        },
+        {
+          "name":"Fonts",
+          "items":[
+            {
+              "name": "Font Family",
+              "key": "@font-family",
+              "value": "'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif",
+              "type":"text"
+            }
+          ]
+        },
+        {
+          "name":"Effects",
+          "items":[
+            {
+              "name": "Text shadow",
+              "key": "@active-text-shadow",
+              "value": "false",
+              "type":"boolean"
+            },
+            {
+              "name": "Box Shadow",
+              "key": "@active-box-shadow",
+              "value": "true",
+              "type":"boolean"
+            },
+            {
+              "name": "Border Radius",
+              "key": "@active-border-radius",
+              "value": "true",
+              "type":"boolean"
+            }
+          ]
+        },
+        {
+          "name":"Vertical Space",
+          "items":[
+            {
+              "name": "Normal",
+              "key": "@normal-line-height",
+              "value": "active",
+              "type":"boolean"
+            },
+            {
+              "name": "Minimo",
+              "key": "@minimum-line-height",
+              "value": "inactive",
+              "type":"boolean"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

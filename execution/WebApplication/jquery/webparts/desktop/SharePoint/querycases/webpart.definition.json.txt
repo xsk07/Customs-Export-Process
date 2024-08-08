@@ -1,0 +1,12 @@
+﻿{
+	"name": "querycases",
+	"js": [ {"src": "bizagi.webparts.querycases.js"},
+			{"src": "bizagi.webparts.querycases.override.js"}
+			],
+	"css": [ {"src": "bizagi.webpart.querycases.css"}, {"src": "bizagi.webpart.querycases.override.css"}],
+	"tmpl": [ 
+		{alias: "querycases",  "src": "querycases.tmpl.html#ui-bizagi-webpart-querycases"},
+		{alias: "querycases-grid",  "src": "querycases.tmpl.html#ui-bizagi-webpart-querycases-grid"},
+		{alias: "querycases-thumbnail",  "src": "querycases.tmpl.html#ui-bizagi-webpart-querycases-thumbnail"}
+	]
+}

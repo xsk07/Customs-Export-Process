@@ -1,0 +1,311 @@
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+   * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: auto;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #44564e;
+    background-image: url("../img/bg-login.jpg");
+    background-position: 30% 50%;
+    color: #f2f2f2;
+    font-size: 0.875em;
+    font-family: 'Open Sans', Geneva, Arial, sans-serif;
+    /*-webkit-animation: panning 15s ease;
+    -moz-animation: panning 15s ease;
+    animation: panning 15s ease;*/
+}
+
+a {
+    border: 0px;
+}
+
+fieldset {
+    padding: 0;
+    border: none;
+    margin: 0;
+}
+
+legend {
+    padding: 0;
+    margin: 0 0 1.5em;
+    color: #efefef;
+    display: inline-block;
+}
+
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+.login-wrapper {
+    max-width: 30em;
+    padding: 1em;
+    margin: 0 auto;
+}
+
+.login-wrapper:before,
+.login-wrapper:after {
+    content: " ";
+    display: table;
+}
+
+.login-wrapper:after {
+    clear: both;
+}
+
+.login-icon {
+    float: left;
+}
+
+.logo {
+    margin: 1rem 2rem;
+}
+
+.logo > img {
+    max-width: 100%;
+}
+
+.login-data {
+    padding: 2em;
+    border: 1px solid rgba(191, 242, 219, .2);
+    border-radius: 4px;
+    background: rgba(48, 79, 71, 0.5);
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.18);
+}
+
+.secondary-data {
+    font-size: 0.9em;
+}
+
+@media (min-width: 600px) {
+    .login-wrapper {
+        padding-top: 2em;
+    }
+    .logo {
+        margin: 2rem;
+    }
+    .login-data {
+        padding: 3em;
+    }
+}
+
+
+/* ==========================================================================
+   Module
+   ========================================================================== */
+
+.login-field {
+    margin-bottom: 1.4rem;
+}
+
+.login-field:last-child {
+    margin-bottom: 0;
+}
+
+.login-field label {
+    display: block;
+    margin-bottom: 0.25em;
+    color: #efefef;
+    font-size: .875em;
+}
+
+.login-field input {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+}
+
+.login-input,
+.login-select,
+.login-textarea {
+    padding: .6em 1em !important;
+    border: none !important;
+    border-radius: 4px;
+    font-family: "Open Sans", Geneva, Arial, sans-serif;
+    line-height: normal !important;
+}
+
+.login-button:focus,
+.login-input:focus,
+.login-select:focus,
+.login-textarea:focus {
+    outline: none;
+    box-shadow: 0 0 2px 1px rgba(191, 242, 219, .6);
+}
+
+.login-select {
+    width: 100%;
+}
+
+.login-textarea {
+    width: 100%;
+    resize: none;
+}
+
+.login-button {
+    width: 100%;
+    padding: 1em;
+    border: none;
+    border-radius: 4px;
+    background: #619e8e;
+    color: #fff;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background: #2b463e;
+}
+
+.login-options {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: right;
+}
+
+.login-option {
+    display: inline-block;
+    margin-left: 0.5em;
+}
+
+.login-option input {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: none;
+    background: url("images/sprite-login.png") 0 0 no-repeat;
+    text-indent: -999em;
+    cursor: pointer;
+}
+
+#forgotPassword {
+    background-position: -26px 0;
+}
+
+#unlockPassword {
+    background-position: -52px 0;
+}
+
+#lnkBackToLogin {
+    background-position: -78px 0;
+}
+
+.login-account-options {
+    padding: 0;
+    margin: 2em 0 0;
+    list-style: none;
+}
+
+.login-radio {
+    margin-bottom: 0.5em;
+}
+
+.login-radio input {
+    margin-right: 0.4em;
+}
+
+.login-admin {
+    margin: 1em 0;
+}
+
+.login-admin-button {
+    display: inline-block;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 4px;
+    background: rgba(79, 128, 115, .2);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+
+.login-admin-button:hover {
+    background: rgba(21, 35, 31, 0.2);
+}
+
+.login-message {
+    padding: 0.5em 0.714em;
+    margin: 1em 0 0;
+    border-radius: 6px;
+    background: #420C0E;
+    text-align: left;
+}
+
+.login-message.success {
+    background: #080;
+}
+
+.login-message p {
+    margin: 0;
+}
+
+
+/* ==========================================================================
+   Error Page
+   ========================================================================== */
+
+.error-wrapper {
+    width: 30em;
+    padding: 10em 0;
+    margin: 0 auto;
+}
+
+
+/* ==========================================================================
+   Alert Sending password
+   ========================================================================== */
+
+.login-field .sendingPassword {
+    display: none;
+    width: 100%;
+    background: #dce1e5 url(images/loader2.gif) no-repeat 10px center;
+    height: 35px;
+    border-color: #232b25 transparent #3c546c;
+    border-radius: 3px;
+    padding: 10px 40px;
+    font-size: 13px;
+    color: #232b25;
+}
+
+
+/* ==========================================================================
+   Animation
+   ========================================================================== */
+
+@-webkit-keyframes panning {
+    from {
+        background-position: 0% 50%;
+    }
+    to {
+        background-position: 30% 50%;
+    }
+}
+
+@-moz-keyframes panning {
+    from {
+        background-position: 0% 50%;
+    }
+    to {
+        background-position: 30% 50%;
+    }
+}
+
+@keyframes panning {
+    from {
+        background-position: 0% 50%;
+    }
+    to {
+        background-position: 30% 50%;
+    }
+}

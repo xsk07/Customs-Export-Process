@@ -1,0 +1,53 @@
+A           {	font-size: 10px;  }
+A:hover     { 	font-size: 10px; }
+.nblnk      {	font-size: 10px; }
+SELECT      {   font-size : 9pt; }
+INPUT       { 	font-size: 9pt;  }
+INPUT.edita {   font-size: 9pt ; }
+.filter     {   font-size: 9pt;  }
+TEXTAREA    {   font-size: 9pt;  }
+TD          { 	font-size: 9pt;  }
+.nbTD       {                    }
+TH          {	font-size: 9pt;  }
+.header     {	font-size: 7pt;  }
+.header02   {	font-size: 9pt;  }
+.subheader  { 	font-size: 8pt;  }
+.gridheader {	font-size: 9pt;  }
+.gridfilter {	font-size: 9pt;  }
+.gridfooter {	font-size: 10px; }
+.gridfooter02{	font-size: 9pt;  }
+.gridcolumn {                    }
+.gridalternatecolumn{            }
+.headerlinks{	font-size: 10px; }
+.headerlinks:hover{	font-size: 10px;}
+.gridline1  {                    }
+.gridline2  {                    }
+.gridline3  {                    }
+.conts	    {                    }
+.Amarillo   {  font-size: 10pt;  }
+.AmarilloPeq{  font-size: 9pt;   }
+.AmarilloClaro {font-size: 10pt; }
+.Blanco     {	font-size: 9pt;  }
+.Amarillogrande { 	font-size: 10pt; }
+.gris       { 	font-size: 10pt; }
+.BlancoNObold { font-size: 9pt;  }
+.RojoBl     {	font-size: 9pt;  }
+.sbttn      {	FONT-SIZE: 9px;  }
+.sbttnpeq   {	FONT-SIZE: 9px;  }
+.sbttncons  {	FONT-SIZE: 9px;  }
+.sradio     { 	font-size: 9pt;  }
+.bodyprintversion{	font-size:10px; }
+.tdprintversion{	font-size: 9px; }
+.titulosPeqlink {	font-size: 8pt; }
+.titulosPeqlink:hover {	font-size: 8pt; }
+.Fecha      {  font-size: 8pt; }
+.ItemSeparator{}
+.conts {}
+.tab{		font-size:10pt;}
+.selTab	{	font-size:10pt;}
+.tabContents{}
+.PropGroup{	font-size: 10pt;}
+.PropGroupMO{}
+.tabstrip {	font: 9px Tahoma;}
+.tabstrip:hover {	font: 9px Tahoma;}
+.seltabstrip {	font: 9px Tahoma;}

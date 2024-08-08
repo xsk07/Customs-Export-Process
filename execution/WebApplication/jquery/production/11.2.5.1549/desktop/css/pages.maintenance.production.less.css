@@ -1,0 +1,50 @@
+@charset "UTF-8";
+html {
+    overflow: auto;
+}
+.content {
+    margin: 5px;
+    width: calc(90%);
+    width: calc(100% - 10px);
+    height: calc(90vh);
+    height: calc(100vh - 10px);
+    font-size: 1rem;
+    text-align: center;
+    white-space: nowrap;
+}
+.content:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.element {
+    display: inline-block;
+    width: 90%;
+    max-width: 1350px;
+    vertical-align: middle;
+    white-space: normal;
+}
+.text {
+    margin: 0 0 .5rem;
+    text-align: center;
+}
+.logoBizagi {
+    width: 12vh;
+    position: absolute;
+    top: 3vh;
+    left: 3vh;
+}
+#title {
+    font-size: 5vh;
+    text-transform: uppercase;
+    word-wrap: break-word;
+}
+#subtitle {
+    font-size: 3vh;
+}
+#message {
+    font-size: 2.5vh;
+    word-wrap: break-word;
+    white-space: pre-line;
+}

@@ -1,0 +1,69 @@
+html,body{
+    background-color: @background;
+    color:@text;
+}
+
+.ui-bizagi-webpart-workportal-column .process-column{
+    background-color: @background;
+}
+
+#ui-bizagi-webpart-processes-container li{
+    background-color:@content;
+    
+}
+#ui-bizagi-webpart-processes-container li span{
+    color: @text;
+}
+
+#ui-bizagi-webpart-processes-container li:nth-child(2n){
+  background-color: darken(@content, 5%);
+  color:@text;
+}
+#ui-bizagi-webpart-processes-container li.active {
+    background-color: darken(@content, 10%);
+}
+
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-name{
+    color:@text;
+}
+
+#ui-bizagi-webpart-processes-container li:hover .ui-bizagi-wp-app-inbox-processes-ncase{
+    border-color:  @content-border;
+	background-color: darken(@content, 10%);
+}
+
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-ncase
+{
+	border-color:  @content-border;
+	background-color: darken(@content, 10%);
+}
+
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-title{
+    border-color: @content-border;   
+    background-color: @content;   
+    color: @title;    
+}
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-title:hover{
+     background-color: @content;
+}
+
+.bz-ui-button,
+.ui-bizagi-webpart-newcase-menu li{
+    background-color: @button;
+    color: @button-text;
+}
+.ui-bizagi-webpart-newcase-menu li a .text
+{
+	color: @button-text;
+}
+
+#panelArrowContainer{
+    border-left-color: @content-border;
+    border-right-color: @content-border;
+    background: lighten(@pane, 2%);
+}
+
+#panelArrowContainer.ui-bizagi-sharepoint-webpart-spliter:hover
+{
+    background: @pane;
+}

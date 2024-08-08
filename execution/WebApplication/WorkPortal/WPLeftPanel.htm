@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<title>Footer Frameset</title>
+<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
+<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+</head>
+<frameset rows="*,21" cols="*" frameborder="no" framespacing="0" border=0">
+	<frameset cols="250,9,*" frameborder="no" framespacing="0" border="0" id="ToggleSidePane">
+		<frameset rows="60%,40%" frameborder="no" framespacing="0" border="0" id="ToggleLeft" name ="ToggleLeft">
+			<frameset rows="22,*" frameborder="no" framespacing="0" border="0" id="BATreeFrame">
+				<frame name="BATreeHeader" src="WPFrameHeader.aspx?Frame=BATree" scrolling="no" noresize>
+				<frame name="BATree" src="../App/Inicio/WPTree.aspx" scrolling="auto" noresize>
+			</frameset>
+			<frameset rows="22,*" frameborder="no" framespacing="0" border="0" id= "BASearchToogle">
+				<frame name="BASearchHeader" src="WPFrameHeader.aspx?Frame=BASearch" scrolling="no" noresize>
+				<frame name="BASearch" src="../App/ListaDetalle/WPSearch.aspx" scrolling="auto" noresize>
+			</frameset>
+		</frameset>
+
+		<frame name="VerticalToggle" src="VerticalToggle.htm" scrolling="no" noresize>
+
+		<frameset rows="*,0" frameborder="no" framespacing="0" border="0" id="HorizontalToggle" >
+			<frame name="BAMainFrame" src="a../App/ListaDetalle/listaitems.aspx?I_processState=Running" scrolling="auto" noresize>
+			<frameset rows="24,*" frameborder="no" framespacing="0" border="0" id="ToggleBottom" resize>
+				<frame name="BACaseSummaryHeader" src="WPFrameHeader.aspx?Frame=BACaseSummary" scrolling="no" noresize>
+				<frame name="BACaseSummary" src="" scrolling="auto" resize>
+			</frameset>
+		</frameset>
+
+	</frameset>
+	<frame name="BAStatusBar" src="WPStatusBar.aspx" scrolling="no" noresize>
+</frameset>
+
+
+</noframes>
+</frameset>
+</html>

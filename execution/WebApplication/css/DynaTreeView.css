@@ -1,0 +1,43 @@
+A
+{
+    font-size: 8pt;
+    font-style: normal;
+    background-color: transparent;
+}
+
+BODY
+{
+    background-color: #E8EFF6;
+    background-position: top;
+    background-repeat: repeat-x;
+    color: #666666;
+    scrollbar-3dlight-color: gray;
+    scrollbar-arrow-color: gray;
+    scrollbar-track-color: WHITE;
+    font-family: Verdana;
+    font-size: 10px;
+    scrollbar-darkshadow-color: white;
+    scrollbar-base-color: white;
+}
+
+
+A.dw_em1:link
+{
+    background: white font-style: normal;
+    color: black;
+}
+A.dw_em1:visited
+{
+    background: white font-style: normal;
+    color: black;
+}
+A.dw_em2:link
+{
+    background: white font-style: normal;
+    color: blue;
+}
+A.dw_em2:visited
+{
+    background: white font-style: normal;
+    color: blue;
+}

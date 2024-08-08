@@ -1,0 +1,22 @@
+<div class="modal-script biz-ui-hide modal-background-images" title="%{widget-theme-builder-modal-background-images-title}">
+    <div class="biz-ui-theme-control row">
+        <label>%{widget-theme-builder-modal-background-images-label} </label>
+    </div>
+    <div class="row biz-ui-image-list">
+
+        {{each bgImages}}
+        <div class="col-xs-6 col-md-3 thumbnail-wrapper">
+            <a href="#" class="thumbnail" data-source="${$value.value}" data-value="${$value.src}">
+                <img src="${$value.src}">
+            </a>
+            <!-- div class="caption">
+                <span>${$value.label}</span>
+            </div -->
+        </div>
+        {{/each}}
+    </div>
+    <hr class="darkLine">
+    <div class="biz-ui-theme-button-bar">
+        <button class="biz-ui-button biz-ui-theme-close">%{widget-theme-builder-modal-button-ok}</button>
+    </div>
+</div>

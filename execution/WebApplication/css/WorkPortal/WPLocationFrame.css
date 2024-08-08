@@ -1,0 +1,49 @@
+.LocationFrameBody
+{
+    margin: 0px;
+    background-image: url(../../img/WorkPortal/LocationFrame/LFBg.jpg);
+    background-position: top;
+    background-repeat: repeat-x;
+}
+#LFLeftImage
+{
+    background-color: transparent;
+    display: block;
+    float: left;
+    width: 32px;
+    height: 33px;
+    background-image: url(../../img/WorkPortal/LocationFrame/LFLeftImage.jpg);
+}
+
+#LFRightImage
+{
+    display: block;
+    float: right;
+    width: 19px;
+    height: 33px;
+    background-image: url(../../img/WorkPortal/LocationFrame/LFRightImage.jpg);
+}
+
+#LFIcons
+{
+    float: left;
+    height: 33px;
+    width: 44px;
+}
+
+#LFNavBar
+{
+    float: right;
+    height: 23px;
+    margin-left: 70px;
+    margin-right: 19px;
+    padding-top: 8px;
+}
+
+#LFText
+{
+    height: 23px;
+    margin-left: 70px;
+    margin-right: 19px;
+    padding-top: 10px;
+}

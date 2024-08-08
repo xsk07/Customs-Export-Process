@@ -1,0 +1,65 @@
+<script id="project-processmap-wrapper" type="text/x-jsrender">
+    <div class="ui-bizagi-wp-project-processmap-wrapper">
+        {{if showTabs}}
+        <div class="clearfix ui-bizagi-wp-project-processmap-header">
+            <div class="ui-bizagi-wp-project-processmap-navigation-buttons">
+                <ul class="clearfix">
+                    <li>
+                        <a href="javascript:void(0);" class="ui-bizagi-wp-project-processmap-process-diagram selected">
+                            <span class="icon"></span>
+                            <span class="text">%{workportal-project-casedashboard-diagrams-process-diagram}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="ui-bizagi-wp-project-processmap-activity-map">
+                            <span class="icon"></span>
+                            <span class="text">%{workportal-project-casedashboard-diagrams-activity-map}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="ui-bizagi-wp-project-processmap-subprocess">
+                            <span class="icon"></span>
+                            <span class="text">%{workportal-project-casedashboard-diagrams-process-map}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        {{/if}}
+        <div class="ui-bizagi-wp-project-processmap-content"></div>
+    </div>
+    
+</script>
+    
+    <script id="project-processmap-process-diagram" type="text/x-jsrender">
+        {{if processDiagram}}
+            <div class="ui-bizagi-wp-project-processmap-process-diagram-content"></div>
+        {{/if}}
+    </script>
+    
+    <script id="project-processmap-activity-map" type="text/x-jsrender">
+        {{if activityMap}}
+    
+            <div class="ui-bizagi-wp-project-processmap-activity-map-content">
+                <div id="bz-activity-map"></div>
+                <div class="bz-zoom-container">
+                    <div class="bz-activity-map-zoom-wrapper"></div>
+                </div>
+            </div>
+    
+        {{/if}}
+    </script>
+    
+    <script id="project-processmap-subprocess" type="text/x-jsrender">
+        {{if processMap}}
+    
+            <div class="ui-bizagi-wp-project-processmap-subprocess-content">
+                <div id="bz-subprocess-map" class="bz-subprocess-map" name="bz-subprocess-map"></div>
+            </div>
+             <div class="bz-zoom-container">
+                                <div class="bz-processmap-zoom-wrapper"></div>
+                        </div>
+    
+    
+        {{/if}}
+    </script>

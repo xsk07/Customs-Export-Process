@@ -1,0 +1,81 @@
+hml,body{
+    background-color: @background;
+}
+
+.border-radius(@radius: 0) when (@active-border-radius = false) {
+    -webkit-border-radius: 0;
+    -moz-border-radius:    0;
+    border-radius:         0;
+}
+
+.border-radius(@radius: 6px) when (@active-border-radius = true) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius:    @radius;
+    border-radius:         @radius;
+}
+.ui-bizagi-webpart-case-summary-container,
+.activitiFormContainer{
+    background-color: @pane;
+    color:@text!important;
+}
+
+.ui-bizagi-webpart-case-summary-details-tabs div#details,
+.ui-bizagi-webpart-case-summary-details-tabs div#assignees,
+.ui-bizagi-webpart-case-summary-details-tabs div#subprocess,
+.ui-bizagi-webpart-case-summary-details-tabs div#details,
+.ui-bizagi-webpart-case-summary-details-tabs div#events {
+    border-top-left-radius: 0;
+}
+
+.ui-bizagi-webpart-case-summary-details-tabs #details,
+.ui-bizagi-webpart-case-summary-details-tabs #assignees,
+.ui-bizagi-webpart-case-summary-details-tabs #subprocess,
+.ui-bizagi-webpart-case-summary-details-tabs #details,
+.ui-bizagi-webpart-case-summary-details-tabs #events,
+.ui-bizagi-webpart-case-summary-description{
+    .border-radius();
+    border-color: @content-border;
+    color: @text;
+    background: @content;
+}
+
+.ui-bizagi-webpart-case-summary-details-tabs dd,
+.ui-bizagi-webpart-case-summary-description .box-description dd{    
+    background: darken(@content, 10%); 
+}
+
+.ui-bizagi-webpart-case-summary-details-tabs h3,
+.ui-bizagi-webpart-case-summary-title{
+    color: @title;
+}
+
+.ui-bizagi-webpart-case-summary-description h2{
+    color: @title;
+    border-bottom: 1px solid @content-border;
+}
+
+.ui-bizagi-webpart-case-summary-details-tabs dt,
+.ui-bizagi-webpart-case-summary-description .box-description dt{
+    color: @text;
+}
+
+.ui-bizagi-webpart-case-summary-description .workonitRow {
+    border-color: lighten(@button, 25%);
+    background-color: @button !important;
+    background-image: none;
+    color: @button-text;
+}
+
+.ui-bizagi-webpart-case-summary-description .workonitRow:hover{
+    border-color: lighten(@button, 25%) !important;
+    background: darken(@button, 5%) !important;
+}
+
+.ui-bizagi-container-form{
+ margin: 0;
+}
+
+.ui-tabs .ui-tabs-panel {
+    border-color: @content-border !important;
+    background: @content!important;
+}

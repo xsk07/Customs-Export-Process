@@ -1,0 +1,253 @@
+﻿/* Basic Layout*/
+form.ui-bizagi-container
+{
+	width:70%;
+	min-width:750px;
+	margin:0 auto;
+	padding:40px;
+	background-color:white;
+}
+
+/* Containers*/
+.ui-bizagi-container
+{
+}
+.ui-bizagi-container-tab
+{
+}
+.ui-bizagi-container-panel
+{
+	width: 100%;
+	margin-bottom: 10px;
+}
+.ui-bizagi-container-panel >.ui-bizagi-render
+{
+	border-top-width: 1px;
+	border-bottom-width: 0px;
+}
+.ui-bizagi-container-horizontal 
+{
+	width: 100%;
+	margin-left: 0% !important;
+	padding-right: 0% !important;
+	float: left;
+}
+.ui-bizagi-container-horizontal > .ui-bizagi-render
+{
+	width: 100%;
+	float: left;
+	border-left-width: 1px !important;
+	border-right-width: 0px  !important;
+	border-bottom-width: 0px  !important;
+}
+.ui-bizagi-container-panel > .ui-bizagi-container-horizontal.ui-bizagi-render-last > .ui-bizagi-render
+{
+	border-bottom-width: 1px  !important;
+}
+.ui-bizagi-container-group-header 
+{
+	cursor: pointer; position: relative; margin-top: 1px; zoom: 1;
+}
+.ui-bizagi-container-group-header a { display: block; font-size:12px; padding: .5em .5em .5em .7em; }
+.ui-bizagi-container-group-header .ui-icon { position: absolute; left: .5em; top: 50%; margin-top: -8px; }
+.ui-bizagi-container-group-header a { padding-left: 2.2em; }
+.ui-bizagi-container-group-wrapper
+{
+	padding: 1em 2.2em;
+	border-color: #d3d3d3;
+}
+.ui-bizagi-container-search
+{
+	width: 100%;
+}
+
+/* Render Internal Layout*/
+.ui-bizagi-render
+{
+	overflow:hidden; 
+	/*background-color:#f5f5f5;*/ 
+	padding-top:15px;
+	padding-bottom:15px;
+	background-color:#edf0f1;
+	display:table;
+	height: 100%; 
+	width:99%;
+}
+.ui-bizagi-render-last
+{
+	border-bottom-width: 1px !important;
+}
+.ui-bizagi-container-horizontal > .ui-bizagi-render-last
+{
+	border-right-width: 1px !important;
+}
+
+.ui-bizagi-render .ui-bizagi-label
+{
+	display: table-cell; 
+	vertical-align: middle;
+	width: 50%;
+}
+.ui-bizagi-label label
+{
+	display:block
+}
+.ui-bizagi-render .ui-bizagi-control
+{
+	overflow:hidden;
+	display: table-cell; 
+	vertical-align: middle;
+	width: 50%;
+}
+.ui-bizagi-control.ui-bizagi-render-overflow-visible
+{
+	overflow:visible
+}
+.ui-bizagi-control .ui-bizagi-render-control
+{
+	display: inline;
+}
+.ui-bizagi-control .ui-bizagi-render-control.ui-bizagi-render-display-block
+{
+	display: inline-block;
+	float: left;
+}
+.ui-bizagi-control .ui-bizagi-render-icons
+{
+	display: inline-block;
+	position: relative;
+	right: 0px;
+	width: auto;
+	min-width: 32px;
+} 
+.ui-bizagi-control .ui-bizagi-render-icons span
+{	
+	float:left;
+	margin-left: 1px;
+	display: none;
+	
+}
+
+/* Display types*/
+/* Normal*/
+.ui-bizagi-render-display-normal > .ui-bizagi-label{width:50%; margin:0 auto;}
+.ui-bizagi-render-display-normal > .ui-bizagi-label label{margin: 0px 20px 0px 0px}
+.ui-bizagi-render-display-normal > .ui-bizagi-control {width:49.99%}
+.ui-bizagi-render-display-normal > .ui-bizagi-control .ui-bizagi-render-control {width:78%; margin:0 2% 0 0}
+.ui-bizagi-render-display-normal > .ui-bizagi-control .ui-bizagi-render-icons {}
+
+/* Vertical*/
+.ui-bizagi-render-display-vertical > .ui-bizagi-label{ display:block;padding:0px; margin:0 auto 5px;width:95%;}
+.ui-bizagi-render-display-vertical > .ui-bizagi-control {width:95%;margin:0 auto;display:block;}
+.ui-bizagi-render-display-vertical > .ui-bizagi-control .ui-bizagi-render-control {width:78%; margin:0 1% 0 0}
+.ui-bizagi-render-display-vertical > .ui-bizagi-control .ui-bizagi-render-icons {}
+
+/* Reversed */
+.ui-bizagi-render-display-reversed > .ui-bizagi-label{float:right;width:50%;}
+.ui-bizagi-render-display-reversed > .ui-bizagi-label label{margin:0px 0px 0px 20px}
+.ui-bizagi-render-display-reversed > .ui-bizagi-control {width:49.99%;float:right}
+.ui-bizagi-render-display-reversed > .ui-bizagi-control .ui-bizagi-render-control {}
+.ui-bizagi-render-display-reversed > .ui-bizagi-control .ui-bizagi-render-icons {}
+
+/* Vertical Reversed*/
+.ui-bizagi-render.ui-bizagi-render-display-vertical-reversed{display:block;position:relative}
+.ui-bizagi-render-display-vertical-reversed > .ui-bizagi-label label{margin:0px}
+.ui-bizagi-render-display-vertical-reversed > .ui-bizagi-label{display:block;position:absolute;bottom:15px;left: 2.5%;}
+.ui-bizagi-render-display-vertical-reversed > .ui-bizagi-control {width:95%;margin:0 auto;display:block;margin-bottom:20px}
+.ui-bizagi-render-display-vertical-reversed > .ui-bizagi-control .ui-bizagi-render-control {width:68%;margin:0 1% 0 0}
+.ui-bizagi-render-display-vertical-reversed > .ui-bizagi-control .ui-bizagi-render-icons {}
+
+/* Label*/
+.ui-bizagi-render-display-label > .ui-bizagi-label{width:95%;margin:0 auto;display:block;}
+.ui-bizagi-render-display-label > .ui-bizagi-control {display: none;}
+
+/* Value*/
+.ui-bizagi-render-display-value > .ui-bizagi-label{display:none;}
+.ui-bizagi-render-display-value > .ui-bizagi-control {width:95%;margin:0 auto;display:block;}
+.ui-bizagi-render-display-value > .ui-bizagi-control .ui-bizagi-render-control{width:68%;margin:0 1% 0 0}
+.ui-bizagi-render-display-value > .ui-bizagi-control .ui-bizagi-render-icons {}
+
+/* Align Types*/
+/* Left */
+.ui-bizagi-render-align-left
+{
+	text-align:left;
+}
+.ui-bizagi-render-display-normal .ui-bizagi-label.ui-bizagi-render-align-left label
+{
+	margin-left: 5% !important;
+}
+/* Center */
+.ui-bizagi-render-align-center
+{
+	text-align:center;
+}
+/* Right */
+.ui-bizagi-render-align-right
+{
+	text-align:right;
+}
+/* Buttons */
+.ui-bizagi-button-container 
+{
+	height: 35px;
+    padding-top: 5px;
+	clear: both;
+	margin: 0px 1px 1px 1px;
+}
+.ui-bizagi-button-container input
+{
+    cursor: pointer;
+}
+/* Validations */
+.ui-bizagi-container-form-validations
+{
+    right: 20px;    
+    width: 800px;
+    max-height: 250px;
+    position:absolute;   
+    display: none;
+}
+.ui-bizagi-container-form-validations-header
+{
+    height: 24px;
+    line-height: 24px;
+    padding-left: 5px; 
+}
+.ui-bizagi-validation-box-button
+{
+    position:absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+}
+.ui-bizagi-container-form-validations-content
+{
+    overflow: auto;    
+}
+.ui-bizagi-container-form-validation-item
+{
+    height: 20px;
+    line-height: 20px;
+    padding-left: 5px;
+}
+.ui-bizagi-container-form-validation-item .ui-icon
+{
+    top: 2px;
+    float: left;
+    position: relative;
+}
+.ui-bizagi-container-form-validation-item label
+{
+    float: left;
+    height: 20px;
+    padding-left: 5px;
+    line-height: 20px;
+    text-decoration: underline;
+    cursor: pointer;    
+}
+.ui-bizagi-focus
+{
+    border: 1px solid red !important;
+    background-color: #ffeeee !important;
+}

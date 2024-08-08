@@ -1,0 +1,20 @@
+{
+  "name": "css templates editor",
+  "authors": [
+    "raperezd <ricardop3@gmail.com>"
+  ],
+  "description": "Aplicacion para la modificacion de css templates de rubi",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "codemirror": "CodeMirror#^5.11.0"
+  }
+}

@@ -1,0 +1,195 @@
+/* CSS Document */
+/*
+body{
+	background-color:#003366;
+	font: 11px Verdana, Arial, Helvetica, sans-serif;
+	color:#003366;	
+}
+*/ 
+SELECT, TEXTAREA, INPUT
+{
+	BORDER-RIGHT: 0px;
+	BORDER-TOP: 0px;
+	FONT-SIZE: 8pt; 
+	BACKGROUND: #ffffff;
+	BORDER-LEFT: 0px;
+	COLOR: #666666; 
+	BORDER-BOTTOM: 0px;
+	FONT-FAMILY: Verdana;	
+}
+
+.ddWizard input
+{
+	border:solid 1px red;
+}
+
+ul{
+	margin: 10px;
+	padding: 0px;
+	list-style-type: none;
+	overflow: hidden;
+}
+
+
+
+.listaInicial{
+	float: left;
+	width: 45%;
+	white-space: nowrap;
+}
+
+.listaMedidas{
+	float: left;
+	width: 95%;
+}
+
+.listaActivas{
+	float: right;
+	width: 45%;
+	white-space: nowrap;
+}
+
+.listItems{
+	border-left: 1px solid #666666;
+	border-right: 1px solid  #CCCCCC;	
+}
+
+.itemListContainer{
+	height:250px;
+	border-left: 1px solid #666666;
+	border-right: 1px solid  #CCCCCC;	
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+
+.dlWizard
+{
+	margin-left: 10px;
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+
+.ddWizard{
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+}
+
+.listBtn{
+	display: block;
+	height: 16px;
+	padding-right: 25px;
+	padding-left: 5px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-decoration: none;
+	border: 1px solid #666666;
+	border-right-color:#CCCCCC;
+	border-bottom-color:#336699; /* Este estilo de color debe cambiar con el color de la p�gina */
+}
+
+.listBtn:hover{
+	font-weight:bold;
+}
+
+#listAddBtn{
+	text-align: right;
+	background-image:  url(../../img/graphicanalysis/addBtn.gif);
+	background-position: 99%;
+	background-repeat: no-repeat;
+}
+
+#listDeleteBtn{
+	text-align: left;
+	background-image: url(../../img/graphicanalysis/deleteBtn.gif);
+	background-position: 1%;
+	background-repeat: no-repeat;
+}
+
+.dimensionList{
+	width:100%;
+	height:250px;
+}
+
+
+.itemList{
+	display:block;
+	height: 16px;
+	padding: 2px;
+	color: #999999;
+	text-decoration:none;
+	width:auto;
+	cursor:move;
+	overflow: hidden;
+}
+
+.itemList:hover{
+	font-weight:bold;
+	color: #336699;
+	background-color:#eeeeee;
+}
+
+.listaInicial .itemList:hover{
+	/*background-image:  url(../../img/graphicanalysis/arrowadd.gif);*/
+	background-position: right;
+	background-repeat: no-repeat;
+	width:100%;
+}
+
+
+.listaActivas .itemList:hover{
+/*	background-image:  url(../../img/graphicanalysis/arrowdel.gif);*/
+	background-position: left;
+	background-repeat: no-repeat;
+	width:100%;
+}
+
+
+
+/*
+.listaInicial .itemList:active{
+	font-weight:bold;
+	color: #336699;
+	background-color:#EBF5FF;
+	background-image:  url(../../img/graphicanalysis/arrowadd.gif);
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+.listaActivas .itemList:active{
+	font-weight:bold;
+	color: #336699;
+	background-color:#EBF5FF;
+	background-image:  url(../../img/graphicanalysis/arrowdel.gif);
+	background-position: left;
+	background-repeat: no-repeat;
+}
+*/
+
+
+.addAllBtn{
+	display: block;
+	color: #003366;  /* Este estilo debe cambiar con el color de la p�gina */
+	text-decoration:none;
+	border-right: 1px solid #cccccc;
+	border-bottom:1px solid #CCCCCC;
+	border-left:1px solid #666666;
+}
+
+
+/* estilos de texto */
+
+.colorTextos{
+	color: #003366;
+	/* Este estilo debe cambiar con el color de la p�gina */
+}
+
+.ListTitle{
+	font-size: 11px;
+	font-weight: bold;
+	color:#999999;
+}
+
+.alinearDer{
+	text-align: right;
+}

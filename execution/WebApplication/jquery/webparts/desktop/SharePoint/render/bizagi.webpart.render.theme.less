@@ -1,0 +1,239 @@
+
+
+.ui-bizagi-webpart-workportal-table{
+    background-color:@pane!important;
+}
+
+.ui-bizagi-webpart-workitem-summary-description{
+    background-color:@content!important;
+    color:@text!important;
+}
+
+.ui-bizagi-webpart-workitem-summary-description h2{
+    color:@title !important;
+}
+
+.ui-bizagi-webpart-workitem-summary-description dd{
+    background: darken(@content, 10%)!important; 
+}
+
+.ui-bizagi-webpart-workitem-summary-description dt{
+    color: @text!important;
+}
+
+
+
+/* ------------------COMMON-------------------*/
+.km-actionsheet > li > a{
+    background-color: whitesmoke;
+}
+
+/* ------------------HOME-------------------*/
+
+#home .km-content{
+    background: url("images/menu-bg.png"), linear-gradient(-180deg, #28A6DB 0%, #091C2B 100%) no-repeat;    
+    color: #fff;
+}
+
+#home .bz-home-back.km-state-active{
+    background-color: #39759d;
+}
+
+/* ------------------RENDER-------------------*/
+
+.ui-bizagi-mashup-render .km-content{
+    background-color: #EBEDF1;
+}
+
+.ui-bizagi-mashup-render .km-state-active{
+    background-color: transparent;
+}
+
+.ui-bizagi-mashup-render .km-header{
+    background:-webkit-linear-gradient(-180deg, #28A6DB 0%, #091C2B 100%);
+    background:linear-gradient(-180deg, #28A6DB 0%, #091C2B 100%);
+}
+
+.ui-bizagi-mashup-render .km-navbar{
+    background: url("images/header-bg-1@2x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+
+.ui-bizagi-mashup-render .ui-state-info {
+    background: #f2f2f2;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    box-shadow: 0 1px 2px 0 #C5C7C8;
+    color: #535B61;    
+}
+
+
+/* ------------------SUMMARY CASE-------------------*/
+
+#case-summary .km-content{
+    background-color: #0C1C2B;
+    color: #FFF;
+}
+
+#case-summary .bz-item-case {
+    color: #37B9EB;
+}
+
+/*summary case detail*/
+#case-summary .bz-item-case-detail {
+    border-top: 1px solid #153C52;
+    border-bottom: 1px solid #153C52;
+}
+
+#case-summary .bz-item-case-detail .bz-item-date.overdue {
+    background-color: rgba(236, 57, 57, 0.1);
+    color: #EC3939;
+}
+
+#case-summary .bz-item-case-detail .bz-item-date.today {
+    background-color: rgba(207, 187, 56, 0.1);
+    color: #CFBB38;
+}
+
+#case-summary .bz-item-case-detail .bz-item-date.tomorrow {
+    background-color: rgba(207, 187, 56, 0.1);
+    color: #CFBB38;
+}
+
+#case-summary .bz-item-case-detail .bz-item-date.upcoming {
+    background: rgba(38, 160, 35, 0.1);
+    color: #26A023;
+}
+
+#case-summary .bz-item-case-detail .bz-subitem.processname {
+    background: #6C747C;
+}
+
+/*summary tabs*/
+
+#case-summary .ui-bizagi-container .bz-wp-summary-title,
+#case-summary .ui-bizagi-container .bz-wp-comment-title {
+    color: #E4E7E9;
+}
+
+#case-summary .ui-bizagi-container .bz-wp-summary-value,
+#case-summary .ui-bizagi-container .bz-wp-comment-value {
+    color: #D7DDDF;
+    background: rgba(228,232,233,0.1);
+}
+
+#case-summary .ui-bizagi-container .bz-wp-comment-time {
+    color: #777;
+}
+
+#case-summary .ui-bizagi-container .summaryLink {
+    color: #37BAEC;
+}
+
+#case-summary .ui-bizagi-container .bz-wp-modal-newcase-footer.km-footer {
+    background: none !important;
+}
+
+/* ------------------ROUTING-------------------*/
+
+#ui-bizagi-wp-app-inbox-activities-routing-wrapper
+{
+    background-color: #EBEDF1;
+    color: #5E5F60;
+}
+
+#ui-bizagi-wp-app-inbox-activities-routing .text-description-title
+{
+    color: #195891;
+    background: #DADDE0;
+    border-bottom: 1px solid #37BAEC;
+}
+#ui-bizagi-wp-app-inbox-activities-routing td
+{
+    color: #195891;
+}
+
+#ui-bizagi-wp-app-inbox-activities-routing td button,
+.wp-routing-container-fother button
+{
+    background: #3E515A;
+    color: #E4E8E9;
+    border: 1px solid transparent;
+    border-bottom: 4px solid #798A92;
+}
+
+#ui-bizagi-wp-app-routing-process-wf thead tr
+{
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#D6D8DC), to(#C3C6CB));
+}
+
+#ui-bizagi-wp-app-routing-process-wf tbody tr
+{
+    background-color: #f2f2f2;
+}
+
+#ui-bizagi-wp-app-routing-activity-container thead tr
+{
+    background-color: #E8EEF4;
+}
+
+#ui-bizagi-wp-app-routing-activity-container tbody tr
+{
+    background-color: white;
+    color: #3E515A;
+}
+
+/* ------------------RENDER BUTTON INFO -------------------*/
+
+button.ui-bizagi-info-message-button {
+    background: whitesmoke;
+    border: 1px solid #D0D1D3;
+}
+
+button.ui-bizagi-info-message-button:active {
+    background-color: #BCBEC1;
+    box-shadow: 0 1px 1px 0 #BCBEC1;
+    color: white;
+}
+
+/* ------------------RENDER ASYNC ACTION -------------------*/
+
+/* Asyc Task */
+
+
+.bz-ui-modal-box .ui-bizagi-wp-async
+{
+    color: #195891;
+}
+
+.ui-bizagi-wp-async
+{
+    color: #195891;
+}
+
+.bz-ui-modal-box .ui-bizagi-wp-async-box
+{
+    color: #4c5356;
+}
+
+.bz-ui-modal-box .ui-bizagi-wp-async-case-number
+{
+    background-color: #EBEDF1;
+    color: #61819E;
+    border: 1px solid #E5E5E5;
+}
+
+.bz-ui-modal-box .ui-bizagi-wp-async-title
+{
+    color: #195891;
+}
+
+.bz-ui-modal-box .ui-bizagi-wp-async-task
+{
+    background-color: #FFF;
+    color: #576770;
+    background: #E3E6EA;
+}

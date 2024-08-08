@@ -1,0 +1,21 @@
+/********************************************************************************************************************
+    Variables Definitions for Less Theming
+*******************************************************************************************************************/
+
+@brand-primary: #374C58;
+@brand-secondary: #5E7D8D;
+
+@active-color: #0B8BCB;
+@inactive-color: #DDDDDD;
+
+@gray-base: #EEEEEE;
+
+@font-family: 'Open Sans',Geneva, Arial, sans-serif;
+@body-bg: @gray-base;
+
+@text-color: #374C58;
+@text-color-contrast:#FAFAFA;
+@link-color: #0B8BCB;
+@link-hover-color: ligthen(@link-color, 10%);
+
+@border-radius: 3px;

@@ -1,0 +1,9 @@
+{
+	"name": "queryform",
+	"js": [ {"src": "bizagi.webparts.queryform.js"}, {"src": "../iframeCommunicator/bizagi.webpart.services.iframeCommunicator.js"} ],
+	"css": [ {"src": "bizagi.webpart.queryform.css"} ],
+	"theme": {"src": ""} ,
+	"tmpl": [ 
+		{alias: "queryForm",  "src": "queryform.tmpl.html#ui-bizagi-webpart-queryform"}
+	]
+}

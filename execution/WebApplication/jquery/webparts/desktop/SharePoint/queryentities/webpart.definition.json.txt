@@ -1,0 +1,10 @@
+﻿{
+	"name": "queryentities",
+	"js": [ {"src": "bizagi.webparts.queryentities.js"},{"src": "bizagi.webparts.queryentities.override.js"}],
+	"css": [ {"src": "bizagi.webpart.queryentities.css"}, {"src": "bizagi.webpart.queryentities.override.css"}],
+	"tmpl": [ 
+		{alias: "queryentities",  "src": "queryentities.tmpl.html#ui-bizagi-webpart-queryentities"},
+		{alias: "queryentities-grid",  "src": "queryentities.tmpl.html#ui-bizagi-webpart-queryentities-grid"},
+		{alias: "queryentities-thumbnail",  "src": "queryentities.tmpl.html#ui-bizagi-webpart-queryentities-thumbnail"}
+	]
+}

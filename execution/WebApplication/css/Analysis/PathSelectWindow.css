@@ -1,0 +1,31 @@
+body
+{
+	font-family: NeoSansStdRegular, Verdana;
+	font-size:10px;
+	background-color: Transparent;
+}
+
+#treeFooterTable td
+{
+	text-align:center;
+}
+
+#treeMainTable
+{
+	width:100%
+}
+
+#treeFooterTable 
+{
+	width:100%
+}
+
+#divTreeFrame
+{
+	width:460px;
+	height:180px;	
+	border: 1px solid;
+	border-color:#CCC;
+	overflow: auto;
+	background-color: Transparent;
+}

@@ -1,0 +1,72 @@
+﻿<html debug="true">
+<head>
+    <title>Bizagi</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	
+    <link rel="stylesheet" href="../css/bizagi.login.css" type="text/css"/>
+
+
+</head>
+<body>
+
+
+<!--<div class="bz-container-settings">&#8942;</div>-->
+
+<div class="bz-container-logo">
+    <!--<div id="bz-form-login-logo" class="bz-logo"></div>-->
+    <img id="bz-form-login-logo" src="../css/images/bizagi-logo.png" alt="your image" class="target-image" style="width: auto; height: auto; max-width: 200px; max-height: 115px;">
+</div>
+
+<div class="contentForm bz-form-login-inputs">
+
+    <div class="bz-form-login-inputs-container">
+        <label >SERVER</label>
+        <input type="text"  class="bz-form-login bz-proxy"  placeholder="server.com/myproject" autocorrect="off" autocapitalization="off" >
+    </div>
+    <div class="bz-form-login-inputs-container ">
+        <label >USERNAME</label>
+        <input type="text"  class="bz-form-login bz-user"   placeholder="Username" autocorrect="off" autocapitalization="off" >
+    </div>
+    <div class="bz-form-login-inputs-container ">
+        <label >PASSWORD</label>
+        <input type="password"  class="bz-form-login bz-pass" placeholder="Password">
+    </div>
+
+    <div class="form">Error Message</div>
+
+    <button class="bz-form-next-button">Next</button>
+
+    <button class="bz-form-login-button bz-display-none">Login</button>
+    <div class="bz-form-grouped-buttons ">
+        <button class="bz-form-back-button">Back</button>
+        <button class="bz-form-login-history-button">Login History</button>
+
+        <!--<p><div class="button" onclick="GetAnimals()">/Rest/Users/SamlSession</div></p>-->
+        <!--<div id="UserData"></div>-->
+
+    </div>
+</div>
+
+<div class="bz-loader km-widget" data-role="loader" >
+    <span class="bz-loading km-spin"></span>
+    <span class="bz-loading-left"></span>
+    <span class="bz-loading-right"></span>
+</div>
+
+<div id="bz-form-login-domain-container" class="bz-form-login-domain-container">
+    <div id="bz-form-login-domain-shadow" class="bz-form-login-domain-shadow"></div>
+    <div class="bz-form-login-domain">
+        <div class="bz-form-login-domain-label">
+            <label>Select a domain</label>
+        </div>
+        <div id="bz-form-login-domain-button-container" class="bz-form-login-domain-button-container">
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html> 

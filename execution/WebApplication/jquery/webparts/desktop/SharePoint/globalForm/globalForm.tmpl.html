@@ -1,0 +1,31 @@
+<script id="ui-bizagi-webpart-global-form" type="text/x-jquery-tmpl">
+    <div>
+        <div class="ui-bizagi-webpart-header-container"></div>
+        <div id="ui-bizagi-webpart-global-form-container"></div>
+    </div>
+</script>
+
+<script id="ui-bizagi-webpart-render-loading" type="text/x-jquery-tmpl">
+    <div class="ui-bizagi-webpart-render-loading-class">
+        <div class="ui-bizagi-webpart-render-loading-image"></div>
+        %{webpart-render-loading}
+    </div>
+</script>
+
+<script id="ui-bizagi-webpart-info-render" type="text/x-jquery-tmpl">
+    <div class="ui-bizagi-info-container">
+        <div class="ui-bizagi-info">
+            <div class="ui-state-info">
+                <span class="ui-icon ui-icon-info"></span>
+                <div class="ui-bizagi-info-message-text">{{html message}}</div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script id="ui-bizagi-webpart-title-render" type="text/x-jquery-tmpl">
+    <div class="ui-bizagi-webpart-header-render-msg">
+        <h2>{{html caseNumber}} {{html workItemState}}</h2>
+        <h3>{{html processPath}}</h3>
+    </div>
+</script>

@@ -1,0 +1,142 @@
+[
+  {
+    "id": "a50f07ee-5225-4d6d-aa9a-01643fb79eb8",
+    "displayName": "Smart Template",
+    "preview": "{{bzImagesSource}}a50f07ee-5225-4d6d-aa9a-01643fb79eb8/05b20bab-2c94-404f-9dcf-05a3c13ea23c.jpg{{/bzImagesSource}}",
+    "description": "TMPL_SMART_DESC",
+    "sections": {
+      "home": {
+        "displayName": "Home",
+        "type": "home",
+        "layouts": [
+          {
+            "id": "774810e2-033a-4c55-a7be-9e8d13977fa7",
+            "preview": "{{bzImagesSource}}a50f07ee-5225-4d6d-aa9a-01643fb79eb8/26116b48-4cba-4922-9c23-71352e8ac6ed.jpg{{/bzImagesSource}}"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "2001c2f1-0761-47cf-902f-5552ed16902c",
+    "displayName": "Travel and Living",
+    "preview": "{{bzImagesSource}}2001c2f1-0761-47cf-902f-5552ed16902c/91481c28-3c6a-429b-9543-4fd5d2bc0062.jpg{{/bzImagesSource}}",
+    "description": "TMPL_TRAVEL_DESC",
+    "sections": {
+      "home": {
+        "displayName": "Home",
+        "type": "home",
+        "layouts": [
+          {
+            "id": "1e8eba79-6d5f-412a-a54b-c3604d6eea20",
+            "preview": "{{bzImagesSource}}2001c2f1-0761-47cf-902f-5552ed16902c/d21aae4d-a9d5-4fd7-bc43-bb7b350a6b62.jpg{{/bzImagesSource}}"
+          }
+        ]
+      },
+      "rooms": {
+        "displayName": "Rooms",
+        "type": "page",
+        "layouts": [
+          {
+            "id": "5542e107-d9b9-4880-89d0-35eb1ae3e78b",
+            "preview": "{{bzImagesSource}}2001c2f1-0761-47cf-902f-5552ed16902c/a9f84d43-36b3-4663-857c-7369b668a99b.jpg{{/bzImagesSource}}"
+          },
+          {
+            "id": "47e22a27-dcb5-417f-929c-1a0c58c648c0",
+            "preview": "{{bzImagesSource}}2001c2f1-0761-47cf-902f-5552ed16902c/143a69e9-dd00-45c4-a909-48841642c8de.jpg{{/bzImagesSource}}"
+          }
+        ]
+      },
+      "explore": {
+        "displayName": "Explore",
+        "type": "page",
+        "layouts": [
+          {
+            "id": "802f6bd3-996c-44be-a57b-f9f317f0787c",
+            "preview": "{{bzImagesSource}}2001c2f1-0761-47cf-902f-5552ed16902c/45ea49ff-8df7-41c4-abcc-ccf40571bbd2.jpg{{/bzImagesSource}}"
+          },
+          {
+            "id": "762df7d3-ca1a-4bb5-8904-5cb3d9a60239",
+            "preview": "{{bzImagesSource}}2001c2f1-0761-47cf-902f-5552ed16902c/67ebbaa4-e2d8-4e46-962e-d061ff097a40.jpg{{/bzImagesSource}}"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "0cc15253-4428-4b83-9f45-08e5043c30a9",
+    "displayName": "Motorheads",
+    "preview": "{{bzImagesSource}}0cc15253-4428-4b83-9f45-08e5043c30a9/dff703c1-8123-49cf-af86-2408134bd990.jpg{{/bzImagesSource}}",
+    "description": "TMPL_MOTORHEADS_DESC",
+    "sections": {
+      "home": {
+        "displayName": "Home",
+        "type": "home",
+        "layouts": [
+          {
+            "id": "774810e2-033a-4c55-a7be-9e8d13977fa7",
+            "preview": "{{bzImagesSource}}0cc15253-4428-4b83-9f45-08e5043c30a9/b8a754fd-9b91-4a5f-9a1d-ea1ad85dfdce.jpg{{/bzImagesSource}}"
+          }
+        ]
+      },
+      "vehicles": {
+        "displayName": "Vehicles",
+        "type": "page",
+        "layouts": [
+          {
+            "id": "2c07b195-2e66-4554-9210-f02936f9969b",
+            "preview": "{{bzImagesSource}}0cc15253-4428-4b83-9f45-08e5043c30a9/a9f84d43-36b3-4663-857c-7369b668a99b.jpg{{/bzImagesSource}}"
+          }
+        ]
+      },
+      "motorcycles": {
+        "displayName": "Motorcycles",
+        "type": "page",
+        "layouts": [
+          {
+            "id": "7e666866-ac5c-41d7-80ac-7135f5543b59",
+            "preview": "{{bzImagesSource}}0cc15253-4428-4b83-9f45-08e5043c30a9/7c968bc6-f108-4e01-b0e7-78c7a97bc6d8.jpg{{/bzImagesSource}}"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "f61644eb-a79b-44df-bea6-3c38fd98d2c1",
+    "displayName": "Trade Central",
+    "preview": "{{bzImagesSource}}f61644eb-a79b-44df-bea6-3c38fd98d2c1/176f01c3-627b-4a2c-8f0e-aad0b4177312.jpg{{/bzImagesSource}}",
+    "description": "TMPL_TRADE_DESC",
+    "sections": {
+      "home": {
+        "displayName": "Home",
+        "type": "home",
+        "layouts": [
+          {
+            "id": "aa83b37a-2bd2-4386-aca2-f5f076e964c4",
+            "preview": "{{bzImagesSource}}f61644eb-a79b-44df-bea6-3c38fd98d2c1/d21aae4d-a9d5-4fd7-bc43-bb7b350a6b62.jpg{{/bzImagesSource}}"
+          }
+        ]
+      },
+      "credit_cards": {
+        "displayName": "Credit Cards",
+        "type": "page",
+        "layouts": [
+          {
+            "id": "a2217ce2-95b9-4f41-843b-72cf36c9eacd",
+            "preview": "{{bzImagesSource}}f61644eb-a79b-44df-bea6-3c38fd98d2c1/a9f84d43-36b3-4663-857c-7369b668a99b.jpg{{/bzImagesSource}}"
+          }
+        ]
+      },
+      "bank": {
+        "displayName": "Bank",
+        "type": "page",
+        "layouts": [
+          {
+            "id": "82f89b6e-b9a2-4b8f-9639-a2fb5224f747",
+            "preview": "{{bzImagesSource}}f61644eb-a79b-44df-bea6-3c38fd98d2c1/45ea49ff-8df7-41c4-abcc-ccf40571bbd2.jpg{{/bzImagesSource}}"
+          }
+        ]
+      }
+    }
+  }
+]

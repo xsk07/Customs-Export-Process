@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="175px" height="35px" viewBox="0 0 175 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>line-shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Developers-documentation" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Bizagi-Control-Visual-Shapes" transform="translate(-131.000000, -402.000000)" fill-rule="nonzero" stroke="#D5D5D5" stroke-width="5">
+            <g id="Bizagi-controls-Experience-Elements" transform="translate(111.000000, 92.000000)">
+                <g id="Group-16-Copy-4" transform="translate(17.000000, 281.000000)">
+                    <path d="M6,47 L175,47" id="Line-2"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

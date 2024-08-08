@@ -1,0 +1,743 @@
+/* CSS Document */
+
+body {
+	font: 10px Verdana, Arial, Helvetica, sans-serif; 
+	white-space: nowrap;
+    position:relative;
+}
+
+body.contentBkgorund {
+    overflow: hidden;
+}
+
+.contentBkgorund{
+	margin-left: 0px;
+	position:relative;
+}
+
+
+#contenedor{
+	margin-left: 10px;
+}
+
+#MediWidget, #DimenWidget{
+	width: 180px;
+	background-image: url(../../img/graphicanalysis/fondWidget.gif);
+	background-position:top right;
+	background-repeat: no-repeat;  /* estaba repeat-y xxxx */
+	font: 10px Verdana, Arial, Helvetica, sans-serif; 
+}
+
+.downWidget{
+	margin: 0px;
+	padding: 0px;
+	height: 5px;
+}
+
+#MediWidget ul, #DimenWidget ul{
+	list-style-type: none;
+	margin: 5px;
+	padding: 0px;
+	width: 175px;
+}
+
+#MediWidget ul li, #DimenWidget ul li{
+	margin: 0px;
+	padding: 0px;
+}
+
+#listaMedidas{
+	display: block;
+	height: 200px;
+}
+
+#listaDimen{
+	display: block;
+	height: 200px;
+}
+
+.topWidget{
+	display: block;
+	width: 185px;
+	height: 20px;
+	padding: 2px;
+	padding-left: 30px;
+	background-image: url(../../img/graphicanalysis/topwidgets.gif);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+.addToList{
+	display: block;
+	height: 16px;
+	padding: 2px;
+	padding-left:20px;
+	background-image: url(../../img/graphicanalysis/greenCross.gif);
+	background-position:left center;
+	background-repeat: no-repeat;
+	text-decoration: none;
+}
+
+.upList{
+	display: block;
+	width: 170px;
+	background-image:url(../../img/graphicanalysis/upList.gif);
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 10px;
+	border-bottom: 1px solid #999999;
+	text-align: center;
+	text-decoration: none;
+}
+
+.downList{
+	display: block;
+	width: 170px;
+	background-image:url(../../img/graphicanalysis/downList.gif);
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 10px;
+	border-top: 1px solid #999999;
+	text-align: center;
+	text-decoration: none;
+}
+
+.clipingList
+{
+	display: block;
+	overflow: hidden;
+	width: 170px;
+	height: 160px;
+	background-image: url(../../img/graphicanalysis/FondClippingList.jpg);
+	background-position: left;
+	background-repeat: repeat-y;
+	padding-right: 10px;
+}
+
+.eliminarItem{
+	display: block;
+	float: left;
+	width: 16px;
+	height: 16px;
+	background-image: url(../../img/graphicanalysis/eliminar.gif);
+	background-position: center;
+	background-repeat:no-repeat;
+	text-decoration: none;
+}
+
+.nomMedida{
+	text-decoration: none;
+	color: #666666;
+	width:150px;
+	font: 10px Verdana, Arial, Helvetica, sans-serif; 
+}
+
+#ContenedorGraficas {
+    float: left;
+    width: 100%;
+}
+
+#GraphicsToolBar{
+	display: block;
+	float: right;
+	height: 16px;
+	padding: 3px;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+#GraphicsToolBar a{
+	display: block;
+	width: 24px;
+	height: 16px;
+	text-decoration: none;
+	border: 1px solid #ffffff;
+}
+
+#GraphicsToolBar a:hover{
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+}
+
+/* submenus de listados */
+
+
+table{
+/*	border-collapse: collapse;*/
+	margin: 0px;
+	padding: 0px;
+}
+
+.TablaButtons
+{
+	background-color:#FFFFFF;
+	border-bottom: 1px solid #cccccc;
+	display: inline;
+	list-style-type: none;
+	padding-right: 20px;
+	visibility:hidden;
+	display:none;
+}
+
+.TablaButtons ul li {
+	display:block;
+	margin:0px;
+	padding:0px;
+}
+
+.TablaButtons ul li a{
+	display:block;
+	width: 16px;
+	height: 16px;
+	margin:2px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-bottom:0px;
+	padding-top:0px;
+	float:left;
+	text-decoration: none;
+}
+
+
+.clipingList ul li {
+	float:left;
+	padding: 5px;
+	
+	position:relative;
+	display:block;
+	border-style:none;
+	margin:0px;
+	width:150px;
+	
+}
+
+.clipingList ul li:hover{
+	background-color:#FFFFFF;
+}
+
+*html .clipingList ul li a.nomMedida:hover{
+	display: block;
+	position:relative;
+	left: 0px;
+	top: 0px;
+	z-index: 0;
+	display: inline;
+	list-style-type: none;
+	padding-right: 20px;
+}
+
+.clipingList ul li:hover ul{
+	display: block;
+	margin: 0px;
+	padding: 0px;
+}
+
+*html .clipingList ul li a:hover ul{
+	display: block;
+}
+
+/* Tool Bar */
+
+#GraphicsToolBar ul {
+	margin:0px;
+	padding:0px;
+}
+
+#GraphicsToolBar ul li {
+	float:right;
+	margin:0px;
+	padding:0px;
+	list-style-type: none;
+}
+
+#GraphicsToolBar ul li a.Switchbtn{
+	float: left;
+}
+
+#optionsToolbar td a{
+	display:block;
+	width: 16px;
+	height: 16px;
+	float:left;
+	margin-top:1px;
+	margin-left:1px;
+	margin-right:1px;
+	text-decoration: none;
+	border: 0px;
+	z-index: 100;
+}
+
+#optionsToolbar td a:hover{
+	border: 0px;
+	border-bottom:solid 1px #BFBFBF;
+}
+
+#chartTypeDiv
+{
+	display:none;
+	visibility:hidden;
+	margin-left:10px;
+	float:right;
+	position:absolute;
+	background-color:#FFFFFF;
+	border-left:solid 1px #999999;
+	border-right:solid 1px #999999;
+	border-bottom:solid 1px #999999;
+}
+
+#separatorDiv{
+	position:absolute;
+	height:25px;
+	width:300px;
+	border: 0px;
+}
+
+#waitingBackgroundDiv{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	visibility:visible;
+	display:block;
+	border: 0px;
+	background-repeat:no-repeat;
+
+	background-color: #DCDCDC;
+	filter:alpha(opacity=60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+	z-index:140;
+}
+
+#waitingDiv{
+	background-image:url(../../img/graphicanalysis/WaitBoard.gif);
+	position:absolute;
+	top:45%;
+	left:43%;
+	width:200;
+	height:100;
+	background-position: center center;
+	visibility:visible;
+	display:block;
+	border: 0px;
+	background-repeat:no-repeat;
+	z-index:150;
+}
+
+#textContainer
+{
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+	margin:2px;
+	border:0px;
+	width:100px;
+	height:75px;
+	white-space:normal;
+	position:relative;
+	top:10px;
+	left:80px;
+	z-index:151;
+}
+
+#textContainer table{
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+	white-space:normal;
+	width:100px;
+}
+
+
+#GraphicsToolBar ul li:hover ul{
+	display: block;
+	border-left: 1px solid #999999;
+	width: 240px;
+	height: 16px;
+}
+
+*html #GraphicsToolBar ul li a:hover ul{
+	display:block;
+	border-left: 1px solid #999999;
+	width: 240px;
+	margin-left: 24px;
+	height: 16px;
+}
+
+
+/* Estilos de texto */
+
+.colorGris{
+	color: #666666;
+}
+
+.submenuFunciones{
+	width: 90px;
+	/*height: 110px;*/
+	height: 90px;
+	padding: 5px;
+	padding-left: 10px;
+	border-right: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	background-image: url(../../img/graphicanalysis/fondMenuFunciones.jpg);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+
+/* Imagenes de botones Para Funciones */
+
+.maxbtn, .minbtn, .avgbtn, .sumbtn, .countbtn, .maxbtnActive, .minbtnActive, .avgbtnActive, .sumbtnActive, .countbtnActive{
+	display:block;
+	height: 16px;
+	padding-left: 20px;
+	margin:3px;
+	text-decoration: none;
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+	background-position: left;
+	background-repeat: no-repeat;
+}
+
+.maxbtn{
+	background-image:url(../../img/graphicanalysis/MaxIcon.gif);
+}
+
+.maxbtn:hover{
+	background-image:url(../../img/graphicanalysis/MaxIconb.gif);
+}
+
+.maxbtnActive{
+	background-image:url(../../img/graphicanalysis/MaxIcon_f2.gif);
+}
+
+.maxbtnActive:hover{
+	background-image:url(../../img/graphicanalysis/MaxIcon_f2.gif);
+}
+
+.minbtn{
+	background-image: url(../../img/graphicanalysis/MinIcon.gif);
+}
+
+.minbtn:hover{
+	background-image: url(../../img/graphicanalysis/MinIconb.gif);
+}
+
+.minbtnActive{
+	background-image: url(../../img/graphicanalysis/MinIcon_f2.gif);
+}
+
+.minbtnActive:hover{
+	background-image: url(../../img/graphicanalysis/MinIcon_f2.gif);
+}
+
+.avgbtn{
+	background-image: url(../../img/graphicanalysis/AverageIcon.gif);
+}
+
+.avgbtn:hover{
+	background-image: url(../../img/graphicanalysis/AverageIconb.gif);
+}
+
+.avgbtnActive{
+	background-image: url(../../img/graphicanalysis/AverageIcon_f2.gif);
+}
+
+.avgbtnActive:hover{
+	background-image: url(../../img/graphicanalysis/AverageIcon_f2.gif);
+}
+
+.sumbtn{
+	background-image: url(../../img/graphicanalysis/SumIcon.gif);
+}
+
+.sumbtn:hover{
+	background-image: url(../../img/graphicanalysis/SumIconb.gif);
+}
+
+.sumbtnActive{
+	background-image: url(../../img/graphicanalysis/SumIcon_f2.gif);
+}
+
+.sumbtnActive:hover{
+	background-image: url(../../img/graphicanalysis/SumIcon_f2.gif);
+}
+
+.countbtn{
+	background-image: url(../../img/graphicanalysis/CountIcon.gif);
+}
+
+.countbtn:hover{
+	background-image: url(../../img/graphicanalysis/CountIconb.gif);
+}
+
+.countbtnActive{
+	background-image: url(../../img/graphicanalysis/CountIcon_f2.gif);
+}
+
+.countbtnActive:hover{
+	background-image: url(../../img/graphicanalysis/CountIcon_f2.gif);
+}
+
+
+
+/* ToolBar botones */
+
+.Savebtn{
+	background-image: url(../../img/graphicanalysis/savebtn.gif);
+	background-position:center;
+	background-repeat: no-repeat;
+}
+
+.Exportbtn{
+	background-image: url(../../img/graphicanalysis/excelbtn.gif);
+	background-position:center;
+	background-repeat: no-repeat;
+}
+
+.Printbtn{
+	background-image: url(../../img/graphicanalysis/print.gif);
+	background-position:center;
+	background-repeat: no-repeat;
+}
+
+.Viewbtn{
+	background-image: url(../../img/graphicanalysis/view.gif);
+	background-position:center;
+	background-repeat: no-repeat;
+}
+
+.Switchbtn{
+	background-image: url(../../img/graphicanalysis/switch.gif);
+	background-position: 4px top;
+	background-repeat: no-repeat;
+}
+
+.2dbarsbtn{
+	background-image: url(../../img/graphicanalysis/2dbars.gif);
+	background-position:top;
+	background-repeat: no-repeat;
+}
+
+.bars2dbtn{
+	background-image: url(../../img/graphicanalysis/2dbars.gif);
+	background-position:top;
+	background-repeat: no-repeat;
+}
+
+.3dbarsbtn{
+	background-image:url(../../img/graphicanalysis/3dbars.gif);
+	background-position:center;
+	background-repeat: no-repeat;
+}
+
+.bars3dbtn{
+	background-image:url(../../img/graphicanalysis/3dbars.gif);
+	background-position:center;
+	background-repeat: no-repeat;
+}
+
+.2dstackedbtn{
+	background-image: url(../../img/graphicanalysis/2dstacked.gif);
+	background-position:center;
+	background-repeat: no-repeat;
+}
+
+.stacked2dbtn{
+	background-image: url(../../img/graphicanalysis/2dstacked.gif);
+	background-position:center;
+	background-repeat: no-repeat;
+}
+
+.3dstackedbtn{
+	background-image: url(../../img/graphicanalysis/3dstacked.gif);
+	background-position:center;
+	background-repeat: no-repeat;
+}
+
+.stacked3dbtn{
+	background-image: url(../../img/graphicanalysis/3dstacked.gif);
+	background-position:center;
+	background-repeat: no-repeat;
+}
+
+.linesbtn{
+	background-image: url(../../img/graphicanalysis/lines.gif);
+	background-position:center;
+	background-repeat: no-repeat;
+}
+
+.areasbtn{
+	background-image: url(../../img/graphicanalysis/areas.gif);
+	background-position:center;
+	background-repeat: no-repeat;
+}
+
+.piebtn{
+	background-image: url(../../img/graphicanalysis/pie.gif);
+	background-position:center;
+	background-repeat: no-repeat;
+}
+
+.3dpiebtn{
+	background-image: url(../../img/graphicanalysis/3dpie.gif);
+	background-position:center;
+	background-repeat: no-repeat;
+}
+
+.pie3dbtn{
+	background-image: url(../../img/graphicanalysis/3dpie.gif);
+	background-position:center;
+	background-repeat: no-repeat;
+}
+
+.donutbtn{
+	background-image: url(../../img/graphicanalysis/donut.gif);
+	background-position:center;
+	background-repeat: no-repeat;
+}
+
+.3ddonutbtn{
+	background-image:url(../../img/graphicanalysis/3ddonut.gif);
+	background-position:center;
+	background-repeat: no-repeat;
+}
+
+.donut3dbtn{
+	background-image:url(../../img/graphicanalysis/3ddonut.gif);
+	background-position:center;
+	background-repeat: no-repeat;
+}
+	
+.tabContent
+{
+	border:solid 1px #BFBFBF;
+	height: 410px;
+	width: 560px;
+	background-color:#FFFFFF;
+}
+
+
+/* dialogs */
+
+#divaddMeasureDialog ul, #divaddDimensionsDialog ul{
+	margin: 0px;
+	padding: 15px;
+	list-style-type: none;
+	overflow: hidden;
+	text-decoration:none;
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+	color:#003366;
+}
+
+#divaddMeasureDialog li, #divaddDimensionsDialog li{
+	margin: 5px;
+	text-decoration:none;
+}
+
+#iconoBig{
+	float:right;
+}
+
+.ListTitle
+{
+	font: 11px Verdana, Arial, Helvetica, sans-serif;
+	text-decoration:none;
+}
+
+
+.dlAddDialog{
+	width: 240px;
+	padding: 3px;
+	background-color: #FFFFFF;
+	border: 1px solid #666666;
+	border-right-color:#CCCCCC;
+	border-bottom-color:#CCCCCC;
+	height: 220px;
+	overflow: auto;
+}
+
+.ddAddDialog{
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+}
+
+.addAllBtn{
+	display: block;
+	color: #003366;  /* Este estilo debe cambiar con el color de la p�gina */
+	text-decoration:none;
+}
+
+INPUT
+{
+	BORDER-RIGHT: 0px;
+	BORDER-TOP: 0px;
+	FONT-SIZE: 8pt; 
+	BACKGROUND: #ffffff;
+	BORDER-LEFT: 0px;
+	COLOR: #666666; 
+	BORDER-BOTTOM: 0px;
+	FONT-FAMILY: Verdana;	
+}
+
+#piechartdiv,
+#mainchartdiv {
+    overflow-x: hidden;
+}
+
+#mainchartdiv > div,
+#piechartdiv > div {
+    overflow: hidden;
+}
+
+#piechartdiv > div {
+    width: 100%;
+    height: 100%;
+    border-bottom: solid 1px #666666;
+    background-color: #f5f5f5;
+}
+
+#piechartdiv > div:last-child {
+    border-bottom: hidden;
+}
+
+/* Note over graphic */
+#xpTab1 {
+	position: relative;
+}
+
+.limit-results {
+    background: #FFF5E4;
+	border-left: 3px solid #F9A825;
+	display: none;
+    height: 24px;
+    right: 40px;
+    position: absolute;
+    top: 90px;
+    z-index: 1;
+}
+
+.limit-results span {
+	color:#233343;
+    line-height: 24px;
+	vertical-align: middle;
+}
+
+.limit-results .close-button, .limit-results .warning-icon {
+	vertical-align: middle;
+}
+
+.limit-results .close-button {
+	border: 0; background: transparent;
+	cursor: pointer;
+	height: 24px;
+	padding: 0;
+	width: 24px;
+	opacity: 0.6;
+}
+
+.limit-results .close-button:hover {
+	opacity: 1;
+}
+
+.limit-results .warning-icon {
+	height: 16px;
+	width: 16px;
+	padding-left: 5px;
+}

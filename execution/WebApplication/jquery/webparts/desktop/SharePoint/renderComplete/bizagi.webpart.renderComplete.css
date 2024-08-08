@@ -1,0 +1,383 @@
+/*============================================================
+	STYLE DEFINITION // SHAREPOINT RENDER
+===============================================================*/
+#ui-bizagi-webpart-render-container
+{
+    width: 100%;
+    height: 100%;
+}
+
+#ui-bizagi-webpart-render-container .ui-bizagi-container-form
+{
+    border-radius: 0 !important;
+    margin: 0px;
+    border: none !important;
+    background-color: #FBFBFB;
+    padding-bottom: 0px;
+}
+
+#ui-bizagi-webpart-render-container .ui-bizagi-button-container
+{
+    border: none !important;
+    border-top: 1px solid #D9D9D9 !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+#ui-bizagi-webpart-render-container .ui-bizagi-webpart-render-loading-class
+{
+    margin-top: 20px;
+    margin-left: 48%;
+}
+
+
+
+#ui-bizagi-webpart-render-container .ui-bizagi-button-container:hover, #ui-bizagi-webpart-render-container .ui-bizagi-button-container
+{
+    margin-bottom: 0px;
+    background-color: transparent;
+    border-bottom: none;
+    padding-bottom:16px;
+    background-color: #F4F4F4;
+}
+
+#ui-bizagi-webpart-render-container .ui-bizagi-render-control .ui-selectmenu
+{
+    width: 100%;
+}
+
+#ui-bizagi-webpart-render-container .ui-bizagi-render-control .ui-selectmenu .biz-btn-caret
+{
+    margin-top: 12px;
+}
+
+
+/*=============================================================
+	GROUPS RENDER FLAT
+===============================================================*/
+
+#ui-bizagi-webpart-render-container .ui-bizagi-container-group.ui-drop-shadow.ui-lifted
+{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border-radius: 0 !important;
+}
+
+#ui-bizagi-webpart-render-container .ui-bizagi-container-group
+{
+    border: 1px solid #D9D9D9;
+}
+
+#ui-bizagi-webpart-render-container .ui-bizagi-container-group-header
+{
+    -moz-border-radius-topleft: 0;
+    -webkit-border-top-left-radius: 0;
+    border-top-left-radius: 0;
+    -moz-border-radius-topright: 0;
+    -webkit-border-top-right-radius: 0;
+    border-top-right-radius: 0;
+    background: #E9E9E9;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+#ui-bizagi-webpart-render-container .ui-bizagi-container-group-wrapper
+{
+    background: none #fff;
+}
+
+.ui-dialog
+{
+    border: 5px solid #CECECE;
+    background-color: #EDEDED;
+}
+
+.ui-dialog .ui-bizagi-container-form
+{
+    background-color: #F6F6F6;
+}
+
+.ui-dialog .ui-widget-header
+{
+    background: #E9E9E9;
+    color: #555555;
+    border-bottom: 1px solid #CECECE;
+}
+.ui-dialog .ui-dialog-title
+{
+    background: none;
+    color: #555555;
+    text-shadow: none;
+    font-weight: bold;
+}
+
+
+/*================================================================
+	INPUTS RENDER FLAT
+=================================================================*/
+.ui-dialog .ui-bizagi-render input, .ui-dialog .ui-bizagi-render textarea, .ui-dialog .ui-bizagi-render .ui-selectmenu, #ui-bizagi-webpart-render-container .ui-bizagi-render input, #ui-bizagi-webpart-render-container .ui-bizagi-render textarea, #ui-bizagi-webpart-render-container .ui-bizagi-render .ui-selectmenu
+{
+    background: none #fff;
+    box-shadow: none;
+}
+
+
+/*=================================================================
+	GRID RENDER FLAT
+==================================================================*/
+#ui-bizagi-webpart-render-container .bz-rn-grid-container-foother, #ui-bizagi-webpart-render-container .ui-bizagi-grid
+{	
+    border-radius: 0;
+}
+
+#ui-bizagi-webpart-render-container .ui-bizagi-render-grid-container div[data-bizagi-component=emptyTable]
+{
+    background: #FBFBFB;
+    padding: 15px;
+    text-align: center;
+    border: none;
+}
+#ui-bizagi-webpart-render-container .bz-rn-grid-container-foother, #ui-bizagi-webpart-render-container .bz-rn-grid-cn-header
+{
+    background: none #E9E9E9;
+}
+
+.ui-tabs .ui-tabs-nav li
+{
+    background: none #F9F9F7;
+    border-top: 1px solid #F9F9F7;
+    border-left: 1px solid #F9F9F7;
+    border-right: 1px solid #F9F9F7;
+    border-bottom: 1px solid transparent;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active
+{
+    background: none #F9F9F7;
+    border-top: 1px solid #CECECE;
+    border-left: 1px solid #CECECE;
+    border-right: 1px solid #CECECE;
+    border-bottom: 1px solid transparent;
+}
+
+
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a
+{
+    background: none;
+}
+
+.ui-tabs .ui-tabs-panel
+{
+    background-color: #F9F9F7;
+    border-radius: 0px;
+    border: solid 1px #CECECE;
+}
+
+
+@media screen and (max-width: 1020px)
+{
+
+}
+
+/*============================================================
+	STYLE DEFINITION // SHAREPOINT RENDER // Compuerta paralela
+===============================================================*/
+#case-task-item {
+    -ms-grid-columns: 30px 1fr auto;
+    -ms-grid-rows: 80px;
+    display: -ms-grid;
+}
+
+.case-task-state-color {
+    -ms-grid-column: 1;
+    display: inline-block;
+    width: 20px;
+}
+
+#case-task-item.Green .case-task-state-color {
+    background-color: rgb(103, 176, 111);
+}
+
+#case-task-item.Yellow .case-task-state-color {
+    background-color: rgb(191, 191, 61);
+}
+
+#case-task-item.Red .case-task-state-color {
+    background-color: rgb(179, 79, 79);
+}
+
+#case-task-item.Green {
+    border: 1px solid rgb(103, 176, 111);
+}
+
+#case-task-item.Yellow {
+    border: 1px solid rgb(191, 191, 61);
+}
+
+#case-task-item.Red {
+    border: 1px solid rgb(179, 79, 79);
+}
+
+.case-task-state {
+    -ms-grid-column: 2;
+    -ms-grid-row-align: center;
+}
+
+.case-task-title {
+    margin: 0;
+}
+
+.case-task-date {
+    margin: 0;
+    font-size: 9pt;
+}
+
+.case-task-work {
+    -ms-grid-column: 3;
+    -ms-grid-row-align: center;
+    padding-right: .5em;
+}
+
+.case-task-work-button {
+    font-family: 'Segoe UI Symbol', sans-serif;
+    color: rgb(19, 77, 116);
+    background: none;
+    background-clip: border-box;
+    min-width: 32px;
+    min-height: 32px;
+    margin: 0;
+    padding: 6px 0;
+  
+    font-size: 11pt;
+    font-weight: normal;
+    line-height: 16px;
+    text-align: center;
+    writing-mode: lr-tb;
+}
+
+    .case-task-work-button:hover {
+        border-color: rgb(19, 77, 116);
+        background-color: rgba(22, 91, 137, .2);
+        color: rgb(19, 77, 116);
+    }
+
+        .case-task-work-button:active,
+        .case-task-work-button:hover:active {
+            border-color: rgb(19, 77, 116);
+            background-color: rgb(19, 77, 116);
+            color: rgb(255, 255, 255);
+        }
+
+.case-task-work-button-text {
+    margin: 0 20px 0 4px;
+    font-size: 11pt;
+}
+/*
+	ASYNC FEEDBACK STYLES
+*/
+/* NEXT ONE JUST IE*/
+* #ui-bizagi-webpart-render-async-wrapper{
+	background-color: #efefef;
+	filter: alpha(opacity=50);
+}
+#ui-bizagi-webpart-render-async-wrapper{
+	position: absolute;
+    height: 100%;
+	width: 100%;
+	top: 0;
+	background-color: rgba(235,235,235,0.5);
+}
+#ui-bizagi-webpart-render-async-box{
+	position: absolute;
+	background-color: white;
+    width: 400px;
+    height: 150px;
+    top: 50%;
+    left: 50%;
+    margin-top: -125px;
+    margin-left: -200px;
+    padding: 20px;
+	border: 1px solid #cccccc;
+}
+.ui-bizagi-webpart-render-async-case-number{
+	font-size: 22.5px;
+    margin:0px 0px 10px 0px;
+    font-weight:normal;
+    color: #2f526c;
+}
+.ui-bizagi-webpart-render-async-description{
+	
+}
+.ui-bizagi-webpart-render-async-description dt {
+    float:left;
+    clear:left;
+    padding:5px;
+}
+.ui-bizagi-webpart-render-async-description dd 
+{
+    margin-bottom:10px;
+    margin-left:140px;
+    background:#dadada;
+    -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;
+    padding:5px;
+}
+.ui-bizagi-webpart-render-async-waiting {
+    width: 100%; height: 30px; position: relative; top: 20px;
+}
+.ui-bizagi-webpart-render-async-waiting .ui-bizagi-sharepoint-loading-icon {
+    display: inline-block;
+	left: 125px;
+	position: absolute;
+	width: 24px;
+}
+.ui-bizagi-webpart-render-async-waiting-message-text {
+    display: inline-block;left: 160px; top: 0px; line-height: 30px; position: absolute;
+}
+.ui-bizagi-webpart-render-async-error
+{
+    margin-bottom:10px;
+    background:#dadada;
+    -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;
+    padding:5px;
+    height: 70px;
+    overflow-y: auto;
+}
+
+/*============================================================
+	STYLE DEFINITION // SHAREPOINT RENDER // Title
+===============================================================*/
+
+.ui-bizagi-webpart-header-render-msg {
+	padding: 0.9em 1.75em;
+	background: #F3F3F3;
+}
+
+.ui-bizagi-webpart-header-render-msg h2 {
+	font-weight: bold;
+	font-size: 1.5em;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+	color: #464747;
+	margin-bottom: 3px;
+}
+
+.ui-bizagi-webpart-header-render-msg h3{
+	font-size: 11px;
+	height: 13px;
+	margin-top: 3px;
+}
+
+/*============================================================
+	STYLE DEFINITION // SHAREPOINT RENDER // JQUERY OVERRIDE
+===============================================================*/
+
+.ui-dialog .ui-dialog-titlebar {
+  filter: none;
+}
+
+.bz-sharepoint-webpart .ui-bizagi-button-container.ui-bizagi-button-container-popup {
+    margin-left: 0;
+    margin-right: 0;
+}

@@ -1,0 +1,29 @@
+.WPMainBGColor{	background-color:#336699;}
+.BAHlColor{	color:#224466;}
+.BAMainFontColor{	color:#003366;}
+A{	color:#224466;}
+A:hover{	color:#336699;}
+#WPMainMenu a:link, #WPMainMenu a:visited {	color:#003366;}
+BODY
+{
+background-color: #EAEFF5;
+background-image: url(../../img/WorkPortal/PageBg.jpg);
+background-position: top;
+background-repeat: repeat-x;
+COLOR: #666666; 
+SCROLLBAR-3DLIGHT-COLOR: gray; 
+SCROLLBAR-ARROW-COLOR: gray;
+SCROLLBAR-TRACK-COLOR: WHITE; 
+font-size:10px;
+font-family:  Arial;
+SCROLLBAR-DARKSHADOW-COLOR: white;
+SCROLLBAR-BASE-COLOR: white; 
+}
+.LeftTabBg
+{
+		background-color: #EAEFF5;
+}
+.BizBgColor1
+{
+		background-color: #EAEFF5;
+}

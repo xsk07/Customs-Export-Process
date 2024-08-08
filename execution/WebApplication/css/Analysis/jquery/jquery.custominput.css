@@ -1,0 +1,54 @@
+/*///////////////radiobuttons & checkboxes///////////////////*/
+/*	wrapper divs */
+.custom-checkbox, .custom-radio { position: relative; }
+	
+/* input, label positioning */
+.custom-checkbox input, 
+.custom-radio input {
+	position: absolute;
+	left: 6px;
+	top: 6px;
+	*left: 2px;
+	*top: 3px;	
+	margin: 0;
+	z-index: 0;
+}
+
+.custom-checkbox label, 
+.custom-radio label {
+	display: block;
+	position: relative;
+	z-index: 1;
+	padding-right: 1em;
+	line-height: 1;
+	padding: .5em 0 .5em 30px !important;
+	margin: 0 0 .3em;
+	cursor: pointer;
+}
+
+	
+/* states */
+.custom-checkbox label { background: url(images/checkbox.png) no-repeat !important; }
+
+.custom-radio label { background: url(images/radiobutton.png) no-repeat !important; }
+
+.custom-checkbox label, .custom-radio label {
+	background-position: -10px -14px  !important;
+}
+
+.custom-checkbox label.hover,
+.custom-checkbox label.focus,
+.custom-radio label.hover,
+.custom-radio label.focus {
+	background-position: -10px -114px  !important;
+}
+
+.custom-checkbox label.checked, 
+.custom-radio label.checked {
+	background-position: -10px -214px !important;
+}
+
+.custom-checkbox label.checkedHover, 
+.custom-checkbox label.checkedFocus {
+	background-position: -10px -314px !important;
+}

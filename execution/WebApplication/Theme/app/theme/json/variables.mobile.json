@@ -1,0 +1,172 @@
+{
+    "info": {
+        "title": "Theme Bizagi Work Portal",
+        "device": "Mobile",
+        "version": "1.0",
+        "author": "UX TEAM at Bizagi"
+    },
+    "less": [
+        {
+            "name": "Mobile Variables"
+        },
+        {
+            "name": "LOGIN",
+            "items": [
+                {
+                    "name": "Background",
+                    "key": "@mobile-login-background",
+                    "lessFunction": "@one-color-palette",
+                    "lessFunctionParam": {
+                        "type": "equals"
+                    },
+                    "value": "#dbe8e8"
+                },
+                {
+                    "name": "Logo Background",
+                    "key": "@mobile-logo-bck",                    
+                    "value": "transparent"
+                },
+                {
+                    "name": "Text",
+                    "key": "@mobile-login-text",
+                    "lessFunction": "contrast",
+                    "lessFunctionParam": {
+                        "type": "contrast",
+                        "element": "@header",
+                        "param1": {
+                            "lessFunc": "darken",
+                            "value": 50
+                        },
+                        "param2": {
+                            "lessFunc": "lighten",
+                            "value": 50
+                        }
+                    },
+                    "value": "#ffffff"
+                },
+                {
+                    "name": "Inputs",
+                    "key": "@mobile-login-inputs",
+                    "lessFunction": "lighten",
+                    "lessFunctionParam": {
+                        "type": "int",
+                        "value": 5
+                    },
+                    "value": "#0d6664"
+                },
+                {
+                    "name": "Buttons",
+                    "key": "@mobile-login-button",
+                    "lessFunction": "lighten",
+                    "lessFunctionParam": {
+                        "type": "int",
+                        "value": 20
+                    },
+                    "value": "#0d6664"
+                },
+                {
+                    "name": "Error Messages",
+                    "key": "@mobile-login-error",
+                    "lessFunction": "multiply",
+                    "lessFunctionParam": {
+                        "type": "mix",
+                        "value": {
+                            "r": 150,
+                            "g": 0,
+                            "b": 0
+                        }
+                    },
+                    "value": "#F03548"
+                },
+                {
+                    "name": "Error Messages Label",
+                    "key": "@mobile-login-error-label",
+                    "lessFunction": "contrast",
+                    "lessFunctionParam": {
+                        "type": "contrast",
+                        "element": "@mobile-login-error",
+                        "param1": {
+                            "lessFunc": "darken",
+                            "value": 50
+                        },
+                        "param2": {
+                            "lessFunc": "lighten",
+                            "value": 50
+                        }
+                    },
+                    "value": "#000000"
+                }
+
+            ]
+        },        
+        {
+            "name": "SIDE PANELS",
+            "items": [
+                {
+                    "name": "Background",
+                    "key": "@mobile-drawers",
+                    "lessFunction": "multiply",
+                    "lessFunctionParam": {
+                        "type": "mix",
+                        "value": {
+                            "r": 150,
+                            "g": 150,
+                            "b": 150
+                        }
+                    },
+                    "value": "#dbe8e8"
+                },
+                {
+                    "name": "Text",
+                    "key": "@mobile-text-drawers",
+                    "lessFunction": "contrast",
+                    "lessFunctionParam": {
+                        "type": "contrast",
+                        "element": "@mobile-drawers",
+                        "param1": {
+                            "lessFunc": "darken",
+                            "value": 30
+                        },
+                        "param2": {
+                            "lessFunc": "lighten",
+                            "value": 40
+                        }
+                    },
+                    "value": "#ffffff"
+                },
+                {
+                    "name": "Title",
+                    "key": "@mobile-title-drawers",
+                    "lessFunction": "contrast",
+                    "lessFunctionParam": {
+                        "type": "contrast",
+                        "element": "@mobile-drawers",
+                        "param1": {
+                            "lessFunc": "darken",
+                            "value" : 50
+                        },
+                        "param2": {
+                            "lessFunc": "lighten",
+                            "value" : 50
+                        }
+                    },
+                    "value": "#031514"
+                },
+                {
+                    "name": "Search Box",
+                    "key": "@mobile-search-drawers",
+                    "lessFunction": "screen",
+                    "lessFunctionParam": {
+                        "type": "mix",
+                        "value": {
+                            "r": 30,
+                            "g": 30,
+                            "b": 30
+                        }
+                    },
+                    "value": "#f1fafa"
+                }
+            ]
+        }
+    ]
+}

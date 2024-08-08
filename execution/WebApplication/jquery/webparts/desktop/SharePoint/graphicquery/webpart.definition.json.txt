@@ -1,0 +1,16 @@
+﻿{
+	"name": "graphicquery",
+	"js": [ {"src": "bizagi.webparts.graphicquery.js"}],
+	"css": [ {"src": "bizagi.webpart.graphicquery.css"} ],
+	"theme":  {"src": "bizagi.webpart.graphicquery.theme.less"},
+	"tmpl": [ 
+		{"alias": "graphicquery",			"src": "graphicquery.tmpl.html#ui-bizagi-webpart-graphicquery"},
+		{"alias": "graphicquery-actionbar",			"src": "graphicquery.tmpl.html#ui-bizagi-webpart-graphicquery-actionbar"},
+		{"alias": "graphicquery-summary",				"src": "graphicquery.tmpl.html#ui-bizagi-webpart-graphicquery-summary"},
+		{"alias": "graphicquery-parentsummary",		"src": "graphicquery.tmpl.html#ui-bizagi-webpart-graphicquery-parentsummary"},
+		{"alias": "graphicquery-tooltip-currenttask",	"src": "graphicquery.tmpl.html#ui-bizagi-webpart-graphicquery-tooltip-currenttask"},
+		{"alias": "graphicquery-tooltip-subcases",		"src": "graphicquery.tmpl.html#ui-bizagi-webpart-graphicquery-tooltip-subcases"},
+		{"alias": "graphicquery-tooltip-users",		"src": "graphicquery.tmpl.html#ui-bizagi-webpart-graphicquery-tooltip-users"}, 
+		{"alias": "graphicquery-subcases",				"src": "graphicquery.tmpl.html#ui-bizagi-webpart-graphicquery-subcases"} 
+	]
+}

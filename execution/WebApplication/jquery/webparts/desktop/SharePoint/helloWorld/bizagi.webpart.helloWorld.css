@@ -1,0 +1,9 @@
+.ui-bizagi-helloWorld-style{
+	margin: 10px;
+	font-size: large;
+	background-color: lightgray;
+	-webkit-border-radius: 8px;
+	padding: 0px 5px;
+	text-align: center;
+	color: red;
+}

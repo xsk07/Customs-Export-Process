@@ -1,0 +1,121 @@
+<script id="ui-bizagi-webpart-gridcases" type="text/x-jquery-tmpl">
+    <div id="ui-bizagi-wp-app-inbox-grid-cases-container"  class="ui-bizagi-wp-app-inbox-grid-cases-container">
+        <div id="ui-bizagi-wp-app-inbox-grid-cases-container"  class="ui-bizagi-wp-app-inbox-grid-cases-container heightToAdjust scrollCasesGrid">
+            <div class="ui-bizagi-wp-app-inbox-processes-title"></div>
+            <table id="ui-bizagi-wp-app-inbox-grid-cases" cellspacing="0" border="0" cellpading="0">
+                <thead>
+                    <tr>
+                        <td>&nbsp; <!-- empty cell for actions--></td>
+			            {{each columnTitle}}                       
+                            <td class="sortColumnsData" data-fieldName="${fieldName}" data-order="${order}" data-orderfieldname="${orderFieldName}" data-order-type="${orderType}" >
+                                <div>
+                                    <span>${displayName}</span> 
+                                    {{if isOrdered=="true"}}
+                                        {{if orderType==0}}
+                                            <span class="sortColumnsDataDownIcon"><span class="arrowUpIcon"></span><span class="arrowDownIcon"></span></span>
+                                        {{else}}
+                                            <span class="sortColumnsDataUpIcon"><span class="arrowUpIcon"></span><span class="arrowDownIcon"></span></span>
+                                        {{/if}}
+                                    {{else}}
+                                        <span class="sortColumnsDataIcon"><span class="arrowUpIcon"></span><span class="arrowDownIcon"></span></span>
+                                    {{/if}}
+                                    <input type="hidden" id="isOrdered" value="${isOrdered}" />
+                                    <input type="hidden" id="orderFieldName" value="${orderFieldName}" />
+                                    <input type="hidden" id="orderType" value="${orderType}" />
+                                    <input type="hidden" id="order" value="${order}" />
+                                </div>
+                            </td>
+			            {{/each}}
+                        <!--
+                        <td>&nbsp;<!-- empty cell for work on it</td>
+                        -->
+                    </tr>            
+                </thead>
+                <tbody>
+			{{each rows}}
+                    <tr>
+                        <td>
+				            {{if isFavorite=="true"}}
+                                <div id="ui-bizagi-wp-wg-bt-start-on" class="ui-bizagi-wp-app-inbox-cases-start on"></div>
+				            {{else}}
+                                <div id="ui-bizagi-wp-wg-bt-start-off" class="ui-bizagi-wp-app-inbox-cases-start off"></div>
+				            {{/if}}
+                            <div id="ui-bizagi-wp-app-inbox-cases-ico-view bz-icon bz-icon-16 bz-icon-diagram-outline">
+                                <span></span>
+                            </div>
+                            {{if enableFolders}}
+                                <div class="ui-bizagi-inbox-folder inboxGridFolder" data-idcase="${id}"></div>
+                            {{/if}}
+                            <input type="hidden" id="idCase" value="${id}" />
+                            <input type="hidden" id="taskState" value="${taskState}" />
+                            <input type="hidden" id="isFavorite" value="${isFavorite}" />
+                            <input type="hidden" id="guidFavorite" value="${guidFavorite}" />
+                        </td>
+			            {{each(e, fi) fields }}                                             
+                                    {{if $item.isArray(fi)   }}
+                                        <td>
+                                            <div style="text-align='center'">
+                                                <ul class="gridListWorkItems">
+                                                    {{each workitems}}
+                                                    <li>
+                                                        <span class="ui-bizagi-wp-app-inbox-activity-name" data-workitem-id="${idWorkItem}" data-case-id="${id}" >
+                                                            <span id="ui-bizagi-wp-app-inbox-cases-ico-state-${State}" class="ui-bizagi-wp-app-inbox-cases-grid-ico-state"></span>
+                                                            ${TaskName} &nbsp;
+                                                        </span>
+                                                    </li>
+                                                    {{/each}}
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    {{else}}                        
+                                        {{if $item.isArray(fi) }}
+                                            <td>${fields["taskState"]}&nbsp;</td> 
+                                        {{/if}}
+
+                                        {{if $item.isDate(fi) }}
+                                            <td class="formatDate">{{html fi}}</td>
+                                        {{else}}
+                                            <td>{{html fi}}&nbsp;</td>
+                                        {{/if}}                        
+                                    {{/if}}                           
+                        {{/each}}
+                      
+                    </tr>
+			{{/each}}
+                </tbody>
+            </table>
+                {{if totalPages > 1}}
+                    {{tmpl "#ui-bizagi-webpart-gridcases-pager"}}
+                {{/if}}
+               
+        </div>
+    </div>
+
+</script>
+
+<script id="ui-bizagi-webpart-gridcases-pager" type="text/x-jquery-tmpl">
+    <div class="bz-wp-gridcases-pager"> 
+        <ul>
+            {{if totalPages > 14}}
+                    <li class="pageArrow first">&lt;&lt;</li> <li class="pageArrow prev">&lt;</li> 
+            {{/if}}
+
+            {{each pages}}  
+        
+            <li {{if active}} class="bz-state-selected" {{/if}} data-page="${number}" 
+                
+                {{if number > 14}}
+                class="hidden"
+                {{/if}}
+                
+                >${number}</li>
+            {{/each}}            
+
+            {{if totalPages > 14}}
+                      <li class="pageArrow next">&gt;</li> <li class="pageArrow last">&gt;&gt;</li> 
+            {{/if}}
+
+        </ul>
+    </div>
+</script>
+

@@ -1,0 +1,46 @@
+﻿<!-- <!DOCTYPE html> -->
+<html>
+
+<head>
+    <title>Bizagi BPM</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link type="image/x-icon" rel="icon" href="favicon.ico" />
+
+    <script type='text/javascript' src='jquery/bizagi.configuration.js'></script>
+    <script type='text/javascript' src='jquery/steal.js'></script>
+    <script type='text/javascript' src='jquery/bizagi.loader.js'></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var BIZAGI_PATH_TO_BASE = "./",
+            BIZAGI_LOCAL_RESOURCES = true,
+            BIZAGI_ENVIRONMENT = bizagiConfig.environment || 'release',
+            loader = bizagi.loader;
+
+        (function () {
+            loader.init(function () {
+                loader.start("connector-tableau")
+                    .then(function () {
+                        $.get('Api/Authentication/BizagiConfig', function () { })
+                            .done(function (bizagiConfigRes) {
+                                var applicationUrl = bizagiConfigRes.applicationUrl ? bizagiConfigRes.applicationUrl + "/" : window.location.href.split("tableau.html")[0],
+                                    tableauController = new TableauController(applicationUrl, bizagiConfigRes.defaultLanguage.substring(0, 2));
+                                tableauController.init();
+                            });
+                    });
+            });
+        })();
+    </script>
+
+    <div id="tableau-content"></div>
+</body>
+
+</html>

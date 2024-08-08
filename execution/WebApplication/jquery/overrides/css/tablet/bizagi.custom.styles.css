@@ -1,0 +1,112 @@
+/* GENERAL LAYOUTS MEDIA-QUERIES (MUST BE > 1280 to avoid android tablet crashes)
+=========================================================
+
+
+
+@media only screen and (min-width: 1281px)
+{
+	#process-column,
+	#case-column,
+	#summary-column { height: 100%; }
+
+	.scroll-content { height: 100%; }
+
+	
+	.slide-summary-column-to-left
+	{
+	
+		left: 280px !important;
+		width: 100% !important;
+	}
+
+	.slide-case-column-to-left
+	{
+		
+		left: 0 !important;
+	}
+
+	.hide-case-summary .render-case-summary
+	{
+		width: 0 !important;
+		display: none;
+	}
+
+	.hide-case-summary .render-form
+	{
+		width: 100% !important;
+		border-left: none;
+	}
+
+	#contentFramework .render-case-summary,
+	#contentFramework .render-form { height: 100%;	}
+
+	.slide-render-column-to-left-grid
+	{
+		left: 0 !important;
+		width: 50% !important;
+	}
+}
+
+
+
+/* LANDSCAPE LAYOUTS ONLY MEDIA-QUERIES
+=========================================================
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)
+{
+	.ui-bizagi-workportal-application{
+		height: 100%;
+		width: 100%;	
+	}
+	.scroll-content { height: 661px; }
+
+	#process-column,
+	#case-column,
+	#summary-column { height: 760px; }
+	#contentFramework .render-case-summary, #contentFramework .render-form {   height: 750px;	 }
+	
+	.ui-slide-upload > .ui-slide-upload-preview{
+	position: relative;	
+	height: auto;
+	width: auto;
+	max-height: 100%;
+	max-width: 100%;
+
+	}
+}
+
+
+/* PORTRAIT LAYOUTS ONLY MEDIA-QUERIES
+=========================================================
+@media only screen and (min-device-width: 768px) and (max-device-width: 1536px) and (orientation:portrait)
+{
+
+	.ui-bizagi-workportal-application{
+		height: 100%;
+		width: 100%;
+	}
+	#process-column { height: 100%;
+	                  width:39%;}
+	
+	#case-column { height: 100%;
+	                  width:36%;}
+
+	#summary-column
+	{
+	    height: 100%;
+	    width:25%
+	}
+	
+	.scroll-content { height: 91%; }
+	.ui-slide-upload > .ui-slide-upload-preview{
+	position: relative;	
+	height: auto;
+	width: auto;
+	max-width: 100%;
+	max-height: 100%;
+
+}
+*/
+    #menu-toggler
+    {
+        left:40%;
+    }

@@ -1,0 +1,9 @@
+﻿{
+	"name": "showInfo",
+	"js": [ {"src": "bizagi.webparts.showInfoWebPart.js"}],
+	"css": [ 
+	{"src": "bizagi.webpart.showInfoWebPart.css"}],
+	"tmpl": [ 
+		{alias: "showInfo",  "src": "showInfoWebPart.tmpl.html#ui-bizagi-webpart-showInfo"} 
+	]
+}

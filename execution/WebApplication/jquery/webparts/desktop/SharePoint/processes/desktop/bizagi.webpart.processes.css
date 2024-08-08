@@ -1,0 +1,397 @@
+/*============================================================
+    STYLE DEFINITION // SHAREPOINT PROCESSES
+===============================================================*/
+#ui-bizagi-webpart-processes-container,
+#ui-bizagi-wp-app-inbox-cases-container{
+    padding:0;
+    width: 100%;
+}
+
+#ui-bizagi-webpart-processes-container > div{
+    margin-top:15px;
+}
+#ui-bizagi-webpart-processes-container > div:first-child{
+    margin-top:0px;
+    min-width: 225px;
+}
+
+#ui-bizagi-webpart-processes-container ul{    
+    padding: 0px;
+    margin:0px;
+    position:relative;
+}
+#ui-bizagi-webpart-processes-container .scrollProcess{
+    margin-bottom: 36px;
+    padding-top:0;
+}
+
+#ui-bizagi-webpart-processes-container .scrollProcess ul{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+#ui-bizagi-webpart-processes-container li{
+    border-top:1px solid #dedede; 
+	list-style: none outside none;
+	/*min-height: 37px;*/
+	overflow:hidden;
+	padding:10px 45px 10px 46px;
+    position: relative;	
+}
+#ui-bizagi-webpart-processes-container li span{
+    display:inline-block;
+}
+#ui-bizagi-webpart-processes-container li:nth-child(2n){
+   background-color:  #ECECEC;
+}
+
+
+#ui-bizagi-webpart-processes-container li{
+    border:solid 1px transparent;
+}
+#ui-bizagi-webpart-processes-container li:hover{
+    background-repeat:repeat-x;
+    background-position:left top;
+}
+
+#ui-bizagi-webpart-processes-container li.active {
+    background-repeat:repeat-x;
+    background-position:left top;
+    color: #1C1E08 !important;
+}
+.ui-bizagi-wp-app-inbox-processes-ul .active li:hover {
+    background-repeat:repeat-x;
+    background-position:left top;
+    border-width: 3px !important;
+}
+.ui-bizagi-wp-app-inbox-processes-ul .active li:active {
+    background-repeat:repeat-x;
+    background-position:left top;
+    background-color:  #D0D5BB; 
+    border:solid 1px #CBD36D !important;
+    border-top-color: #DCE29E !important;
+    border-width: 3px !important;
+    color: #1C1E08 !important;
+    cursor: pointer;
+    
+}
+
+#ui-bizagi-webpart-processes-container li:hover .ui-bizagi-wp-app-inbox-processes-ncase{
+    background-color: #FFF;
+}
+
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-ncase{
+    box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    position: absolute;
+    right: 5px;
+    top: 40%;
+    min-width: 25px;
+    text-align: center;
+    height: 22px;
+    margin-top: -8px;
+    line-height: 18px;
+}
+
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-container .selected .ui-bizagi-wp-app-inbox-processes-ncase, 
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-container li:hover .ui-bizagi-wp-app-inbox-processes-ncase{      
+    background-color: #fff;
+    box-shadow:inset 0px 1px 2px 0px rgba(0,0,0,0.5);
+}
+.ui-bizagi-wp-app-inbox-processes-title .arrow 
+{
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 4px 4px 0 4px;
+	border-color: #676767 transparent transparent transparent;
+	position:absolute;
+	left:7px;	
+    margin-top: 10px;	
+}
+
+.ui-bizagi-wp-app-inbox-processes-title .arrow.Right {
+    width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 4px 0 4px 4px;
+	border-color: transparent transparent transparent #676767;
+	position:absolute;
+	left:7px;
+}
+
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-title{
+
+    border:1px solid #CECECE;
+    background-repeat:repeat-x;
+    background-position:left top;
+    background-color: #F2F2F2;
+    vertical-align: middle;
+    min-height: 25px;
+    border-top: none;
+    border-bottom: 1px solid #B5B5B5;
+    line-height: 25px;
+    font-size: 1.25em;
+    font-weight: normal;
+    color: #121212;
+    padding: 8px 0;
+    padding-left: 22px;
+    position: relative;
+    border-right: none;
+    border-left: none;
+    cursor: pointer;
+}
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-title:hover{
+    background-color: #F7F7F7;
+}
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-container .scrollProcess > div:first-child,
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-cases-container > div:first-child {
+    margin-top:0px;
+}
+
+
+#ui-bizagi-webpart-processes-container .loadMore{    
+    background-color: #627d97;
+    box-shadow: 0px 0px 2px 1px #C3C3C3;
+    color: #FFFFFF;
+    height: 11px;
+    left: 228px;
+    margin: 4px;
+    padding: 2px;
+    position: absolute;
+    text-align: center;
+    cursor: pointer;
+    top: 0px;
+}
+
+#ui-bizagi-webpart-processes-container .loadMore:hover{ 
+    box-shadow: 0px 0px 2px 1px #d4d4d4;
+    background-color: #3A4A59;
+}
+
+#ui-bizagi-webpart-processes-container .loadMore>span{
+    position: relative;
+    top: -6px;
+}
+#ui-bizagi-webpart-processes-container .ui-bizagi-inbox-folder{ 
+    background-position: -75px -173px;
+    height:16px;
+    width:16px;    
+}
+
+#ui-bizagi-webpart-processes-container .ui-bizagi-inbox-folder.inboxdetails{
+    float: left;
+    margin: 5px 8px 0 -7px;
+    background-position: -147px -421px;
+    width: 20px;
+    height: 20px;
+}
+#ui-bizagi-webpart-processes-container .ui-bizagi-inbox-folder.inboxdetails:hover{
+    background-position: -76px -421px;
+    cursor:pointer;
+}
+
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-start{
+    display:block;
+    height:16px;
+    width:16px;
+  
+    /*position:absolute;
+    top:25px;
+    left: 8px;*/
+	/*adidas*/
+	margin:0px 5px 0px 0px;
+    position: absolute;
+    left: 14px;
+    top: 6px;
+}
+
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-start.on{
+    background-position: -214px -121px;
+    
+}
+
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-start-wait{
+
+    height:16px;
+    width:16px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top:25px;
+    left: 5px;
+}
+
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-start.off{
+    background-position: -214px -148px;  
+}
+
+#ui-bizagi-webpart-processes-container #ui-bizagi-wp-app-inbox-processes-ico-paper{        
+    position: absolute;
+    left: 18px;
+    top: 1px;
+    margin-top: 5px;
+}
+#ui-bizagi-webpart-processes-container #ui-bizagi-wp-app-inbox-processes-ico-mark{
+    background-position: -52px -94px;
+    width: 31px;
+    height: 31px;
+}
+
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-ico-mark{
+    position: relative;
+    padding-left: 31px;
+    padding-bottom: 12px;  
+    top: 5px;
+    left: 35px;
+}
+
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-name{
+    font-size: 100%;
+    color:#444;
+    font-weight:normal;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+    vertical-align:top;
+    overflow: hidden;
+    padding-left: 4px;
+}
+
+/*////////////////////////tabs de colores////////////////////////*/
+.ui-bizagi-processes-tab
+{
+    position: absolute;
+    bottom: -39px;
+    right: 0;
+}
+
+#ui-bizagi-wp-app-inbox-tab-container{
+    height: 34px;
+    width:auto;
+    border-right:none;
+    border-top:1px solid #E1E6E6;
+    /*float:left;*/
+    position: relative;
+    top: 0;
+    left: 0;
+
+    vertical-align:bottom;
+    margin-left: -10px;
+}
+#ui-bizagi-wp-app-inbox-tab-container ul{
+    margin:0;
+    padding:0;
+    /* overflow:hidden;*/
+    position:relative;
+    height:30px;
+}
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab{
+    display: inline;
+    float: left;
+    height: 30px;
+    width: 38px;
+    cursor:pointer;
+    border-left:1px solid #D9D9D9;
+    padding:0;
+    position: relative;
+}
+
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab .text{
+    margin-top: -8px;
+}
+
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#all .text{
+    margin-top: 0;
+}
+
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#favourites .text{
+    margin-top: 0;
+}
+
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#favourites{
+    width: 37px;
+}
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#red,
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#yellow,
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#green{
+   width: 60px;
+}
+
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab.active{
+
+    background-repeat:repeat-x;
+    background-position:left top;
+}
+
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab.active .toolTip,
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab:hover .toolTip
+{
+    background-color: #F2F2F2;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5) inset;
+}
+.ui-bizagi-wp-app-inbox-tab .text{
+    display:inline-block;
+    text-indent:-9999px;
+}
+
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#all .text
+{
+    background-position: -105px -171px;
+}
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#all .toolTip{
+    display:none;
+}
+
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#favourites .text
+{
+    background-position: -245px -170px;
+}
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#favourites .text,#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#all .text{
+    height:30px; width:34px;
+}
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#red .text
+{
+    background-position: -236px -116px;
+}
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#yellow .text
+{
+    background-position: -236px -132px;
+}
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#green .text
+{
+    background-position: -236px -148px;
+}
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#green .text, #ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#red .text, #ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#yellow .text{
+    height:16px; width:16px; vertical-align:middle;
+}
+#ui-bizagi-wp-app-inbox-tab-container .toolTip{
+    background: none repeat 0 0 #f2f2f2;
+    -moz-border-radius: 4px;
+    -webkit-border-radius:4px;
+    border-radius: 4px;
+   
+    box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+    color: #333333;
+    font-weight: bold;
+    display: inline-block;
+    padding: 1px 3px;
+    text-align: center;
+    min-width: 21px;
+    margin-top:6px;
+    max-width: 38px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#footer #ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab {
+	padding: 0 3px;
+}
+
+#footer #ui-bizagi-wp-app-inbox-tab-container #favourites {
+	padding: 0 4px;
+}

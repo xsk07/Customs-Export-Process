@@ -1,0 +1,185 @@
+@charset "utf-8";
+/* CSS Document */
+/* history.addHandlers() */
+body {
+    background: #162934;
+    font-family: "Segoe UI", "OriyaSangamMN", "Thonburi", "Roboto" "Droid Sans", Geneva, Arial, sans-serif;
+
+}
+
+ul {
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+
+}
+
+#bz-form-login-logo {
+    height: 79px;
+    display: inline-block;
+    background: url('images/bizagi-logo-s.png') center no-repeat;
+    /*float: center;*/
+    width: 200px;
+    text-align: left;
+}
+
+@media only screen
+and (-webkit-min-device-pixel-ratio: 2 ),
+only screen and (min-device-pixel-ratio: 2) {
+    #bz-form-login-logo {
+        background: url('images/bizagi-logo.png') center no-repeat;
+        background-size: 200px 79px;
+    }
+}
+
+.bz-form-back-button,
+.bz-form-clear-history-button {
+    background: transparent;
+    border-radius: 5px;
+    padding: 5px;
+    color: #E1E7EC;
+    display: block;
+    font-size: 15px;
+    border: 1px solid #7F92A0;
+    height: 35px;
+    /*width: 46%;*/
+}
+
+div.bz-form-grouped-buttons > button.bz-form-clear-history-button {
+    float: right;
+    width: 49%;
+    /*margin-right: 10px;*/
+}
+
+
+div.bz-form-grouped-buttons > button.bz-form-back-button {
+    float: left;
+    width: 49%;
+    /*margin-right: 10px;*/
+}
+
+.bz-container-header,
+.bz-container,
+.bz-container-logo {
+    position: relative;
+    top: 10%;
+    margin-right: 10%;
+    left: 50%;
+    right: 50%;
+    width: 215px;
+    margin-left: -107px;
+}
+
+.bz-container-header,
+.bz-container-logo {
+    text-align: center;
+}
+
+.bz-container-header {
+    color: #E1E7EC;
+    border-bottom: 1px solid #BACDDE;
+    text-align: left;
+    padding: 0 0 5px 10px;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.bz-container-list {
+    list-style: none outside none;
+    max-height: 238px;
+    overflow: scroll;
+}
+
+.bz-li-arrow {
+    float: right;
+    position: relative;
+    top: 15px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid rgba(255, 255, 255, 0.7);
+}
+
+.bz-container-list li {
+    background: rgba(65, 89, 104, 0.2);
+    border-radius: 5px;
+    min-height: 50px;
+    padding: 10px 10px 10px 10px;
+    margin: 0 0 10px 0;
+    color: #E1E7EC;
+}
+
+.bz-li-project {
+    color: rgba(255, 255, 255, 0.58);
+    font-style: italic;
+}
+
+.bz-container-list li div {
+    font-size: 12.5px;
+    vertical-align: middle;
+    margin: 5px 0 0 0;
+}
+
+.bz-form-grouped-buttons {
+    position: fixed;
+    width: 215px;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -109px;
+}
+
+/* iPhone Landscape */
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation:landscape) {
+    .bz-container-list {
+        max-height: 150px;
+    }
+
+    .bz-container-header, .bz-container, .bz-container-logo {
+        top: 1%;
+    }
+
+    .bz-form-grouped-buttons {
+        bottom: 10px;
+    }
+}
+
+/* iPad Portrait */
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+
+    .bz-container-header,
+    .bz-container,
+    .bz-container-logo {
+        width: 415;
+        margin-left: -207px;
+    }
+
+    .bz-form-grouped-buttons {
+        width: 408px;
+        margin-left: -210px;
+    }
+
+    .bz-container-list {
+        max-height: 760px;
+    }
+}
+
+/* iPad Landscape */
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+    .bz-container-list {
+        max-height: 500px;
+    }
+}

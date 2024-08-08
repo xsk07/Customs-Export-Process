@@ -1,0 +1,299 @@
+.overlay_dialog
+{
+    background-color: #DCDCDC;
+    filter: alpha(opacity=60);
+    -moz-opacity: 0.6;
+    opacity: 0.6;
+}
+
+.dialog_nw
+{
+    width: 9px;
+    height: 23px;
+    background: transparent url(../../img/WorkPortal/BAWindow/top_left.gif) no-repeat 0 0;
+}
+
+.dialog_n
+{
+    background: transparent url(../../img/WorkPortal/BAWindow/top_mid.gif) repeat-x 0 0;
+    height: 23px;
+}
+
+.dialog_ne
+{
+    width: 9px;
+    height: 23px;
+    background: transparent url(../../img/WorkPortal/BAWindow/top_right.gif) no-repeat 0 0;
+}
+
+.dialog_e
+{
+    width: 2px;
+    background: transparent url(../../img/WorkPortal/BAWindow/center_right.gif) repeat-y 0 0;
+}
+
+.dialog_w
+{
+    width: 2px;
+    background: transparent url(../../img/WorkPortal/BAWindow/center_left.gif) repeat-y 0 0;
+}
+
+.dialog_sw
+{
+    width: 9px;
+    height: 19px;
+    background: transparent url(../../img/WorkPortal/BAWindow/bottom_left.gif) no-repeat 0 0;
+}
+
+.dialog_s
+{
+    background: transparent url(../../img/WorkPortal/BAWindow/bottom_mid.gif) repeat-x 0 0;
+    height: 19px;
+}
+
+.dialog_se
+{
+    width: 9px;
+    height: 19px;
+    background: transparent url(../../img/WorkPortal/BAWindow/bottom_right.gif) no-repeat 0 0;
+}
+
+.dialog_sizer
+{
+    width: 9px;
+    height: 19px;
+    background: transparent url(../../img/WorkPortal/BAWindow/sizer.gif) no-repeat 0 0;
+    cursor: se-resize;
+}
+
+.dialog_close
+{
+    width: 14px;
+    height: 14px;
+    background: transparent url(../../img/WorkPortal/BAWindow/close.gif) no-repeat 0 0;
+    position: absolute;
+    top: 5px;
+    right: 11px;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+.dialog_minimize
+{
+    width: 14px;
+    height: 15px;
+    background: transparent url(../../img/WorkPortal/BAWindow/minimize.gif) no-repeat 0 0;
+    position: absolute;
+    top: 5px;
+    right: 55px;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+.dialog_maximize
+{
+    width: 14px;
+    height: 15px;
+    background: transparent url(../../img/WorkPortal/BAWindow/maximize.gif) no-repeat 0 0;
+    position: absolute;
+    top: 5px;
+    right: 33px;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+.dialog_title
+{
+    float: left;
+    height: 14px;
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+    color: #000;
+}
+
+.dialog_content
+{
+    overflow: auto;
+    color: #DDD;
+    font-family: NeoSansStdRegular, Tahoma, Arial, Sans Serif;
+    font-size: 10px;
+    background-color: #DEDEDE;
+}
+
+.top_draggable, .bottom_draggable
+{
+    cursor: move;
+}
+
+/* DO NOT CHANGE THESE VALUES*/
+.dialog
+{
+    display: block;
+    position: absolute;
+}
+
+.dialog table.table_window
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.dialog table.table_window td, .dialog table.table_window th
+{
+    padding: 0;
+}
+
+.dialog .title_window
+{
+    -moz-user-select: none;
+}
+
+/* For alert/confirm dialog */
+.dialog_window
+{
+    background: white;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+.dialog_message
+{
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    height: 84px;
+    color: #666666;
+    background-color: white;
+    font-weight: bold;
+}
+
+.dialog_buttons
+{
+    text-align: center;
+    width: 100%;
+}
+
+.dialog_buttons input
+{
+    width: 20%;
+    margin: 10px;
+}
+
+.dialog_progress
+{
+    float: left;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    height: 16px;
+    background: #FFF url(../../img/WorkPortal/BAWindow/progress.gif) no-repeat center center;
+}
+
+.readOnlyBackgroundDiv
+{
+    filter: alpha(opacity=30);
+    -moz-opacity: 0.3;
+    opacity: 0.3;
+}
+
+#messageDiv
+{
+    position: absolute;
+    width: 200;
+    height: 100;
+    background-position: center center;
+    visibility: visible;
+    display: block;
+    border: 0px;
+    background-repeat: no-repeat;
+    z-index: 150;
+}
+
+#messageBackgroundDiv
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+    display: block;
+    border: 0px;
+    background-repeat: no-repeat;
+    background-color: #DCDCDC;
+    z-index: 140;
+}
+
+.customOverlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #DCDCDC;
+    height: 100%;
+    width: 100%;
+    z-index: 150;
+    opacity: 0.3;
+}
+
+.messageBackgroundDiv
+{
+    filter: alpha(opacity=60);
+    -moz-opacity: 0.6;
+    opacity: 0.6;
+}
+
+.readOnlyBackgroundDiv
+{
+    filter: alpha(opacity=30);
+    -moz-opacity: 0.3;
+    opacity: 0.3;
+}
+
+.readOnlyMessage
+{
+    top: 0%;
+    left: 80%;
+    border: solid 1px purple;
+    background-image: url(../../img/graphicanalysis/infoboard.gif);
+}
+
+.waitMessage
+{
+    top: 45%;
+    left: 43%;
+    background-image: url(../../img/graphicanalysis/WaitBoard.gif);
+}
+.infoMessage
+{
+    top: 45%;
+    left: 43%;
+    background-image: url(../../img/graphicanalysis/infoboard.gif);
+}
+.errorMessage
+{
+    top: 45%;
+    left: 43%;
+    background-image: url(../../img/graphicanalysis/errorboard.gif);
+}
+#textContainer
+{
+    font-family: NeoSansStdRegular, Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    margin: 2px;
+    border: 0px;
+    width: 100px;
+    height: 75px;
+    white-space: normal;
+    position: relative;
+    top: 10px;
+    left: 80px;
+    z-index: 151;
+}

@@ -1,0 +1,85 @@
+body
+{
+    font-size: 62.5%;
+    font-family: NeoSansStdRegular, "Trebuchet MS" , "Helvetica" , "Arial" , "Verdana" , "sans-serif";
+}
+.ui-analysis-report-filters-header
+{
+    font-weight: bold;
+    color: #666666;
+    font-size: 1.2em;
+    height: 18px;
+    padding: 3px;
+    padding-left: 5px;
+}
+.ui-analysis-report-filters
+{
+    position: relative;
+    padding: 5px;
+    padding-right: 10px;
+}
+.ui-analysis-report-filters > ul
+{
+    list-style-type: none;
+}
+.ui-analysis-report-filter
+{
+    margin: 5px;
+    position: relative;
+    margin-bottom: 20px;
+}
+.ui-analysis-report-filter-label
+{
+    float: left;
+    display: inline-block;
+    width: 30%;
+    padding: 5px;
+    padding-left: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #666666;
+}
+.ui-analysis-report-filter-filters
+{
+    display: inline-block;
+    width: 50%;
+    padding: 5px;
+    position: relative;
+}
+.ui-analysis-report-filter-filter
+{
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    width: 100%;
+}
+.ui-analysis-report-filter-icons
+{
+    height: 20px;
+    padding: 3px;
+    display: none;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+.ui-analysis-report-filter-icon
+{
+    float: left;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    cursor: pointer;
+}
+.ui-analysis-buttons
+{
+    position: relative;
+    height: 30px;
+}
+.ui-analysis-add-report-filter
+{
+    float: right;
+    height: 26px !important;
+    margin-right: 5px;
+}

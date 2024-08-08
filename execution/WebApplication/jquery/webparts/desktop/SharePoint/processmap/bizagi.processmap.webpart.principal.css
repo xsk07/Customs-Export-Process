@@ -1,0 +1,334 @@
+.ui-bizagi-wp-project-processmap-wrapper {
+    height: 100%;
+}
+
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-header .ui-bizagi-wp-project-processmap-title {
+    float: left;
+}
+
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-header .ui-bizagi-wp-project-processmap-navigation-buttons ul {
+    padding: 0;
+    margin: 0 0 1em;
+}
+
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-header.row {
+    margin: 0;
+}
+
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-navigation-buttons ul {
+    border-bottom: 1px solid #DCDCDC;
+    list-style: none;
+}
+
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-navigation-buttons ul li {
+    float: left;
+    margin-bottom: -1px;
+}
+
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-navigation-buttons ul li a {
+    display: block;
+    padding: 1em;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    margin-right: .6em;
+    text-decoration: none;
+    outline: 0;
+}
+
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-navigation-buttons ul li a:hover,
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-navigation-buttons ul li a.selected {
+    border-color: #DCDCDC;
+    border-bottom-color: transparent;
+    background: #F5F5F5;
+    color: #234F6F;
+}
+
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-activity-map-content {
+    position: relative;
+    padding: 0 .9em;
+    border: 1px solid #EEE;
+    border-radius: 4px;
+    background: #FFF;
+    height:100%;
+}
+
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-activity-map-content #bz-activity-map {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-activity-map-content #bz-activity-map svg {
+    cursor: move;
+}
+
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-content {
+    overflow: hidden;
+    position:relative;
+    height:100%;
+}
+
+.ui-bizagi-wp-project-processmap-wrapper [role="widget.bizagi.processviewer"] {
+    border-color: #EEE;
+    border-radius: 0 0 4px 4px;
+    margin: 0;
+}
+
+.tree * {
+    margin: 0;
+    padding: 0;
+}
+
+.tree ul {
+    padding-top: 20px;
+    position: relative;
+    /*display: inline-flex;*/
+    width: 100%;
+}
+
+.tree li {
+    float: left;
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 5px 0 5px;
+}
+
+.tree li:only-child {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.tree li.center {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.tree li::before, .tree li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    border-top: 2px solid #7F7F7F;
+    width: 50%;
+    height: 20px;
+}
+
+.tree li::after {
+    right: auto;
+    left: 50%;
+    border-left: 1px solid #7F7F7F;
+}
+
+.tree li:only-child::after, .tree li:only-child::before {
+    display: none;
+}
+
+.tree li:only-child {
+    padding-top: 0;
+}
+
+.tree li:first-child::before, .tree li:last-child::after {
+    border: 0 none;
+}
+
+.tree li:last-child::before {
+    border-right: 1px solid #7F7F7F;
+    border-radius: 0 5px 0 0;
+}
+
+.tree li:first-child::after {
+    border-radius: 5px 0 0 0;
+}
+
+.tree ul ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 1px solid #7F7F7F;
+    width: 0;
+    height: 20px;
+}
+
+.tree li {
+    font-size: 1.2em;
+}
+
+.tree li a {
+    border: 2px solid #03689A;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: #3f5766;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #F2F4FF;
+}
+
+.tree li a:hover {
+    box-shadow: 0px 0px 8px rgba(107, 166, 196, 0.50);
+    -moz-box-shadow: 0px 0px 8px rgba(107, 166, 196, 0.50);
+    -webkit-box-shadow: 0px 0px 8px rgba(107, 166, 196, 0.50);
+}
+
+.tree li .arrow {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #7F7F7F;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%, 0);
+    display: block;
+}
+
+.ui-bizagi-wp-project-processmap-subprocess-content {
+    overflow: hidden;
+    position: relative;
+    width: 102%;
+    padding: 1.4em;
+    border: 1px solid #EEE;
+    border-radius: 4px;
+    background: #FFF;
+    height:100%;
+}
+
+.bz-subprocess-map {
+    -webkit-backface-visibility: hidden;
+}
+
+/**activity map*/
+
+.activity-map-activity-name {
+    fill: #374C58;
+}
+
+.activity-map-connector {
+    stroke: #7cb5ec;
+    stroke-width: 1px;
+}
+
+.activity-map-legend-title {
+    padding: 0;
+    margin: 0 0 .2em;
+    font-weight: normal;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#legend-box {
+    padding: 0 0 1em;
+    border-bottom: 1px solid #EEE;
+    margin-bottom: 1em;
+    background: #FFF;
+    color: #374C58;
+    font-size: 11px;
+    padding-top:1.4em;
+}
+
+.activity-map-legend-row {
+    width: 200px;
+    padding: 2px 5px 1px 3px;
+    color: #3F5766;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.activity-map-legend-row-process {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 8px;
+    border-radius: 3px;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.activity-map-legend-row-label {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 4px;
+}
+
+.activity-map-legend-row:hover, .activity-map-highlight {
+    background-color: #E5E9EB;
+    border: 1px solid #BDCED9;
+}
+
+.activity-map-activity-highlight {
+    stroke: #1179e0;
+    stroke-opacity: 0.9;
+    stroke-width: 3;
+}
+
+.activity-map-activity-default-status {
+    stroke-opacity: 1;
+    stroke-width: 2;
+    fill-opacity: 0.5;
+}
+
+.activity-map-activity-date {
+    fill: #374C58;
+    fill-opacity: 0.3;
+}
+
+.activity-map-activity-time {
+    fill: #374C58;
+    fill-opacity: 0.4;
+}
+
+.activity-map-background-line {
+    stroke-dasharray: 10, 4;
+    stroke-width: 0.5px;
+}
+
+
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-activity-map-content .bz-zoom-container, .ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-content .bz-zoom-container {
+    left: ~"calc(50% - 150px)";
+    bottom: 15px;
+    box-shadow: none;
+    opacity: 0.7;
+}
+
+.ui-bizagi-wp-project-processmap-content * {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+
+    /*
+      Introduced in IE 10.
+      See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+    */
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-content .ui-bizagi-wp-project-processmap-process-diagram-content {
+    height:100%;
+}
+
+
+
+.ui-bizagi-wp-project-processmap-wrapper .bz-zoom-container .ui-slider-horizontal .ui-slider-handle,
+.ui-bizagi-wp-project-processmap-content .bz-zoom-container .ui-slider-horizontal .ui-slider-handle {
+    background-color: #374C58;
+}
+
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-activity-map-content .bz-zoom-container:hover,
+.ui-bizagi-wp-project-processmap-content .bz-zoom-container:hover {
+    opacity: 1;
+}
+
+.ui-bizagi-wp-project-processmap-wrapper  .bz-zoom-container {
+    left: 50% !important;
+    transform: translate(-50%,0);
+}
+
+.bz-zoom-container .ui-slider-horizontal {
+   height: 20px;
+}

@@ -1,0 +1,149 @@
+{
+  "controls": {
+    "inbox": {
+      "ACTIVITIES": "Inbox activities text",
+      "ACTIVITY": "Inbox Activity text",
+      "ACTIVITY_DUE_DATE": "Activity due date",
+      "ADVICE": "Search by text advice",
+      "ALL": "All text",
+      "AT_RISK": "At risk state text",
+      "CASE_CREATION_DATE": "Case creation date",
+      "CASE_DUE_DATE": "Case due date",
+      "CASE_NUMBER": "Case number",
+      "CASES": "Cases",
+      "CLEAR": "Clear search text",
+      "EMPTY": "You have no state cases in your inbox!",
+      "ON_TIME": "On time",
+      "OVERDUE": "Overdue",
+      "PROCESS": "Process",
+      "PROCESS_CREATION_DATE": "Process creation date",
+      "RESULT": "Results for:",
+      "SEARCH_EMPTY": "No result found for:",
+      "SEARCH_INPUT_PLACEHOLDER": "Search by case number",
+      "SHOW_ALL_ACTIVITIES": "Show all activities",
+      "TITLE": "Inbox",
+      "WORK_ON_IT": "Work on it"
+    },
+    "my-cases": {
+      "ALL_CASES": "All cases",
+      "ALL_PROCESS": "All processes",
+      "CASES_NO_FOUND": "Cases not found",
+      "DISPLAY_DENSITY": "Display density",
+      "DISPLAY_DENSITY_COMFORTABLE": "Comfortable",
+      "DISPLAY_DENSITY_COMPACT": "Compact",
+      "DISPLAY_DENSITY_NORMAL": "Normal",
+      "FILTER_BY_STATE": "Status filter",
+      "SEACH_BY_CASE": "Search by case number",
+      "STATE_ABORTED": "Canceled",
+      "STATE_COMPLETED": "Completed",
+      "STATE_PENDING": "Pending",
+      "STATE_RUNNING": "Running",
+      "VIEW_CARD": "Card view",
+      "VIEW_TABLE": "List view"
+    },
+    "relevants": {
+      "CATEGORY": "Category",
+      "PROCESS": "Process",
+      "TITLE": "Relevant to me"
+    }
+  },
+  "messages": {
+    "buttons": {
+      "DONT_CHANGE_PAGE_NAME": "Cancel",
+      "GO_BACK": "Go back",
+      "YES_DISCARD": "Discard"
+    },
+    "error": {
+      "CHECK_FORM": "Form error text",
+      "ERROR_OPEN_FORM_TITLE": "Error opening the form",
+      "ERROR_TITLE_GENERAL": "Error",
+      "ERROR_USER_UNAUTHORIZED_FORM": "User permissions error text",
+      "PROCESS_ERROR_TEXT": "Error loading form text",
+      "PROCESS_ERROR_TITLE": "We’re sorry!"
+    },
+    "info": {
+      "CASE_CANCELED": "This case is canceled",
+      "CASE_CLOSED": "This case is closed",
+      "DATA_NOT_AVAILABLE": "There is no data available",
+      "LIST_NO_RECORDS": "There are no records on the list",
+      "PLEASE_WAIT": "Please wait..."
+    },
+    "session": {
+      "BTN_CONTINUE": "Continue",
+      "BTN_LOGIN": "Log In",
+      "LOGIN": "Log in",
+      "LOGOUT": "Log out",
+      "MSG_IDLE": "Click continue to keep it open.",
+      "MSG_TIMEOUT": "Please log in again",
+      "TITLE_IDLE": "Your session is about to expire",
+      "TITLE_TIMEOUT": "Your session has expired"
+    },
+    "warning": {
+      "CONTACT_SITE_ADMINISTRATOR": "Contact the site administrator",
+      "NO_ACCESS_TO_RENDER": "You do not have access to this page",
+      "PAGE_NOT_FOUND": "We couldn't find the page you are looking for",
+      "SOMETHING_IS_MISSING": "Something is missing",
+      "UNAUTHORIZED_TITLE": "Sorry,",
+      "WARNING_MESSAGE": "Warning!"
+    }
+  },
+  "siteeditor": {
+    "cultureconfig": {
+      "AFTER": "After",
+      "APOSTROPHE": "apostrophe",
+      "BEFORE": "Before",
+      "CLOSE": "Close",
+      "COMMA": "comma",
+      "CURRENCY_SYMBOL": "Currency symbol",
+      "CUSTOM_NUMBERS_TITLE_SECTION": "Custom Numbers Format",
+      "DATE_FORMAT": "Date format",
+      "DATE_SEPARATOR": "Date separator",
+      "DATE_TIME_TITLE_SECTION": "Custom Date and Time Format",
+      "DECIMAL_DIGITS": "Decimal digits",
+      "DECIMAL_SEPARATOR": "Decimal separator",
+      "DEFAULT": "Default",
+      "DIALOG_TITLE": "Preferences",
+      "DOT": "dot",
+      "FOWARD_SLASH": "forward slash",
+      "GENERAL_DESCRIPTION": "Preferences description",
+      "HYPHEN": "hyphen",
+      "LONG_DATE_FORMAT": "Long Date",
+      "NEGATIVE_NUMBER": "Negative numbers",
+      "SAVE": "Save",
+      "SHORT_DATE_FORMAT": "Short date",
+      "SPACE": "space",
+      "THOUSANDS_SEPARATOR": "Thousands separator",
+      "TIME": "Time"
+    },
+    "formsettings": {
+      "ACTIVITIES": "Activities",
+      "CASE_ACTIVITIES": "Case Activities",
+      "DONT_SAVE_FORM_BUTTON": "Do not save",
+      "DUE_DATE": "Due date",
+      "FORM_ACTIVITY_TAB": "Context form",
+      "FORM_SHOW_GLOBAL": "Global form",
+      "FORM_SUMMARY_TAB": "Description",
+      "GO_DOWN": "Go down",
+      "MESSAGE_SAVE_FORM": "Do you want to save the changes?",
+      "NEW_CASE": "New case",
+      "NEXT_ACTIVITY": "Next Activity",
+      "PREVIOUS_ACTIVITY": "Previous Activity",
+      "SELECT_ACTIVITY_TO_WORK": "Select the activity you want to work on",
+      "SELECT_ORGANIZATION_MESSAGE": "Select the organization to start the new case.",
+      "SELECT_ORGANIZATION_TITLE": "Select organization",
+      "TITLE_SAVE_FORM": "Changes without saving",
+      "WORK_ON_IT": "Work on it"
+    },
+    "global": {
+      "CANCEL": "Cancel",
+      "CLOSE": "Close",
+      "OK": "OK",
+      "SAVE": "Save",
+      "VIEW_MORE": "+ More"
+    },
+    "settings": {
+      "LANGUAGE_MANAGER_CULTURE_CUSTOM_TEXT_RENDER": "Change settings description advice",
+      "LANGUAGE_MANAGER_CULTURE_TEXT_RENDER": "Current language"
+    }
+  }
+}

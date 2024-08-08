@@ -1,0 +1,279 @@
+﻿{
+  "root": {
+    "stuff": {
+      "type": "collection",
+      "ref": "entityItem"
+    },
+    "searches": {
+      "type": "collection",
+      "ref": "search"
+    },
+    "relevants": {
+      "type": "collection",
+      "ref": "processItem"
+    },
+    "stakeholders": {
+      "type": "collection",
+      "ref": "stakeholder"
+    },
+    "userProfile": {
+      "type": "entity",
+      "ref": "userProfile"
+    },
+    "processesByUser": {
+      "type": "function",
+      "parameters": {
+        "parameters": [
+          {
+            "type": "domain",
+            "ref": "string"
+          },
+          {
+            "type": "userName",
+            "ref": "string"
+          }
+        ]
+      },
+      "returnType": "collection",
+      "unbounded": true,
+      "ref": "processItem",
+      "resultEntityPath": "processes"
+    },
+    "processes": {
+      "type": "collection",
+      "ref": "processItem"
+    },
+    "cases": {
+      "type": "collection",
+      "ref": "caseItem"
+    },
+    "casesWithWorkitems": {
+      "type": "collection",
+      "ref": "caseWithWorkitem"
+    },
+    "queries": {
+      "type": "collection",
+      "ref": "queryCase"
+    },
+    "entities": {
+      "type": "collection",
+      "ref": "entityItem"
+    },
+    "searchByCaseNumber": {
+      "type": "function",
+      "parameters": {
+        "parameters": {
+          "type": "caseNumber",
+          "ref": "string"
+        }
+      },
+      "returnType": "collection",
+      "unbounded": true,
+      "ref": "caseItem",
+      "resultEntityPath": "cases"
+    }
+  },
+  "stakeholder" : {
+		"id" : {	"type" : "property",	"ref" : "guid", "key": true},
+		"name" : {	"type" : "property",	"ref" : "string"},
+		"displayName" : {	"type" : "property",	"ref" : "string"},
+    "iconName" : {	"type" : "property",	"ref" : "string"},
+    "contexts": { "type": "collection","ref": "contextItem"}
+  },
+  "entityItem": {
+		"id" : {	"type" : "property",	"ref" : "guid", "key": true},
+		"name" : {	"type" : "property",	"ref" : "string"},
+		"displayName" : {	"type" : "property",	"ref" : "string"},
+    "type": { "type" : "property", "ref" : "string" },
+    "context": { "type" :  "property", "ref" : "guid"},
+    "template" : {	"type" : "collection",	"ref" : "parameter"},  
+    "values": { "type": "collection","ref": "entityData", "navigate":  true},
+    "actions" : {	"type" : "collection",	"ref" : "action", "navigate":  true},    
+    "creationParameters" : {	"type" : "collection",	"ref" : "parameter", "navigate":  true},    
+    "editionParameters" : {	"type" : "collection",	"ref" : "parameter", "navigate":  true},
+    "create": {
+      "type": "function",
+      "parameters": { "parameters": { "type": "collection", "ref": "parameter"} },
+      "returnType":  "simple",
+      "ref":  "string"
+    }
+  },
+  "search": {
+		"id" : {	"type" : "property",	"ref" : "guid", "key": true},
+		"name" : {	"type" : "property",	"ref" : "string"},
+		"displayName" : {	"type" : "property",	"ref" : "string"},
+		"context": { "type" :  "property", "ref" : "guid"},
+    "parameters" : {	"type" : "collection",	"ref" : "searchParameter"	},
+    "template" : {	"type" : "collection",	"ref" : "parameter"	},
+    "actions" : {	"type" : "collection",	"ref" : "action", "navigate": true	},
+    "results" : {	"type" : "collection",	"ref" : "entityData", "navigate":  true},    
+    "relatedEntities":  { "type" :  "collection", "ref" :  "relatedEntity", "navigate": true}, 
+    "performSearch": {
+      "type": "function",
+      "parameters": { "parameters": { "type": "collection", "ref": "searchParameter"} },
+      "returnType":  "collection",
+      "ref":  "entityData",
+      "resultEntityPath": "./results"
+    }
+  },
+  "processItem": {
+		"id" : {	"type" : "property",	"ref" : "guid", "key": true},
+		"name" : {	"type" : "property",	"ref" : "string"},
+		"displayName" : {	"type" : "property",	"ref" : "string"},
+		"context": { "type" :  "property", "ref" : "guid"},
+    "categoryName":  { "type" :  "property", "ref" : "string"},
+    "processId" : {	"type" : "property",	"ref" : "int"},
+	  "processType" : {	"type" : "property",	"ref" : "string"},
+    "parameters" : {	"type" : "collection",	"ref" : "parameter"	},
+		"template" : {	"type" : "collection",	"ref" : "parameter"	},    
+    "actions" : {	"type" : "collection",	"ref" : "action", "navigate": true	},
+    "cases": { "type" :  "collection", "ref" :  "caseItem", "navigate": true},        
+    "relatedEntities":  { "type" :  "collection", "ref" :  "relatedEntity", "navigate": true}, 
+    "start": {
+      "type": "function",
+      "parameters": { "parameters": { "type": "collection", "ref": "parameter"} },
+      "returnType":  "simple",
+      "ref":  "int"
+    }
+  },
+  "relatedEntity": {
+    "id" : {	"type" : "property",	"ref" : "guid", "key": true},		
+    "name" : {	"type" : "property",	"ref" : "string"},
+    "xpath" : {	"type" : "property",	"ref" : "string"},
+    "values": { "type": "collection","ref": "relatedEntityData", "navigate":  true}
+  },
+  "relatedEntityData": {
+    "id": {	"type" : "property",	"ref" : "guid", "key": true},
+    "label": {	"type" : "property",	"ref" : "string"	},
+    "value": {	"type" : "property",	"ref" : "string"	}
+  },
+  "contextItem": {
+    "id" : {	"type" : "property",	"ref" : "guid", "key": true},
+    "name" : {	"type" : "property",	"ref" : "string"}
+  },
+  "parameter": {
+		"id" : {	"type" : "property",	"ref" : "guid", "key": true},
+		"name" : {	"type" : "property",	"ref" : "string"},
+		"displayName" : {	"type" : "property",	"ref" : "string"},
+		"xpath" : {	"type" : "property",	"ref" : "string"},
+    "value" : {	"type" : "property",	"ref" : "string"	},
+    "type" : {	"type" : "property",	"ref" : "string"	},
+    "searchType" : {	"type" : "property",	"ref" : "string"	},
+    "required" : {	"type" : "property",	"ref" : "string"	},
+    "rows" : {	"type" : "collection",	"ref" : "rowType"	},
+    "columns" : {	"type" : "collection",	"ref" : "parameter"	},
+    "files":  {	"type" : "collection",	"ref" : "fileItem"},
+    "values": { "type": "collection","ref": "relatedEntityData", "navigate":  true}
+  },
+	"rowType": {
+		"columns" : {	"type" : "collection",	"ref" : "parameter"}
+  },
+  "fileItem": {
+    "fileName": {	"type" : "property",	"ref" : "string"},
+    "data": {	"type" : "property",	"ref" : "string"},    
+    "url": {	"type" : "property",	"ref" : "string"}
+  },
+  "searchParameter": {
+		"id" : {	"type" : "property",	"ref" : "guid", "key": true},
+		"xpath" : {	"type" : "property",	"ref" : "string"},
+    "value" : {	"type" : "property",	"ref" : "string"	},
+    "searchType" : {	"type" : "property",	"ref" : "string"	}
+	},
+  "action": {
+		"id" : {	"type" : "property",	"ref" : "guid", "key": true },
+		"name" : {	"type" : "property",	"ref" : "string"},
+		"displayName" : {	"type" : "property",	"ref" : "string"},
+		"context": { "type" :  "property", "ref" : "guid"},
+    "parameters" : {	"type" : "collection",	"ref" : "parameter"	},
+    "processId" : {	"type" : "property",	"ref" : "int"},
+    "relatedEntities":  { "type" :  "collection", "ref" :  "relatedEntity", "navigate": true}, 
+    "execute": {
+      "type": "function",
+      "parameters": { "parameters": { "type": "collection", "ref": "parameter"} },
+      "returnType":  "simple",
+      "ref":  "int"
+    }
+  },
+	"entityData": {
+		"id" : {	"type" : "property",	"ref" : "guid", "key": true},
+		"parameters" : {	"type" : "collection",	"ref" : "parameter"	},
+	  "actions" : {	"type" : "collection",	"ref" : "action", "navigate":  true},
+	  "navigations" : {	"type" : "collection",	"ref" : "entityItem", "navigate": true},
+	  "update": {
+      "type": "function",
+      "parameters": { "parameters": { "type": "collection", "ref": "parameter"} },
+      "returnType":  "simple",
+      "ref":  "string"
+    }
+  },
+  "userProfile": {
+    "userName" : {	"type" : "property",	"ref" : "string", "key":  true	},
+    "domain" : {	"type" : "property",	"ref" : "string"	},
+    "fullName" : {	"type" : "property",	"ref" : "string"	},
+    "email" : {	"type" : "property",	"ref" : "string"	},
+    "picture" : {	"type" : "property",	"ref" : "string"	},
+    "userInits" : {	"type" : "property",	"ref" : "string"	}
+  },
+  "caseItem": {
+		"@processEntityKey" : {	"type" : "property",	"ref" : "guid"},
+    "id" : {	"type" : "property",	"ref" : "int","key":  true},
+    "caseNumber" : {	"type" : "property",	"ref" : "string"},
+    "creationDate" : {	"type" : "property",	"ref" : "string"	},
+    "estimatedSolutionDate" : {	"type" : "property",	"ref" : "string"	},
+    "solutionDate" : {	"type" : "property",	"ref" : "string"},   
+    "parameters" : {	"type" : "collection",	"ref" : "parameter"	},
+    "processName" : {	"type" : "property",	"ref" : "string"},
+    "closed" : {	"type" : "property",	"ref" : "boolean"	},
+    "actions" : {	"type" : "collection",	"ref" : "action", "navigate": true},
+    "navigations" : {	"type" : "collection",	"ref" : "entityItem", "navigate": true},  
+    "workitems" : {	"type" : "collection",	"ref" : "workitem", "navigate":  true}  ,
+		"taskName" : {	"type" : "collection",	"ref" : "workitem"}  ,
+		"events" : {"type" : "collection",	"ref" : "workitem"}
+		
+  }, 
+  "caseWithWorkitem": {
+    "@processEntityKey" : {	"type" : "property",	"ref" : "guid"},
+    "id" : {	"type" : "property",	"ref" : "int","key":  true},
+    "caseNumber" : {	"type" : "property",	"ref" : "string"},
+    "creationDate" : {	"type" : "property",	"ref" : "string"	},
+    "estimatedSolutionDate" : {	"type" : "property",	"ref" : "string"	},
+    "solutionDate" : {	"type" : "property",	"ref" : "string"	},    
+    "parameters" : {	"type" : "collection",	"ref" : "parameter"	},
+    "processName" : {	"type" : "property",	"ref" : "string"},
+    "closed" : {	"type" : "property",	"ref" : "boolean"	},
+    "workitems" : {	"type" : "collection",	"ref" : "workitem"}
+  },
+  "workitem": {
+    "id" : {	"type" : "property",	"ref" : "int",	"key":  true	}, 
+    "taskName" : {	"type" : "property",	"ref" : "string"},
+    "taskDisplayName" : {	"type" : "property",	"ref" : "string"},
+    "state" : {	"type" : "property",	"ref" : "string"	},
+    "estimatedSolutionDate" : {	"type" : "property",	"ref" : "string" },
+    "parameters" : {	"type" : "collection",	"ref" : "parameter"	},
+    "relatedEntities":  { "type" :  "collection", "ref" :  "relatedEntity", "navigate": true}, 
+    "next": {
+      "type": "function",
+      "parameters": { "parameters": { "type": "collection", "ref": "parameter"} },
+      "returnType":  "simple",
+      "ref":  "int"
+    },
+		"save": {
+      "type": "function",
+      "parameters": { "parameters": { "type": "collection", "ref": "parameter"} },
+      "returnType":  "simple",
+      "ref":  "int"
+    }
+  },
+  "queryCase": {
+    "id" : {	"type" : "property",	"ref" : "guid", "key": true},
+    "displayName" : {	"type" : "property",	"ref" : "string"	},
+    "parameters" : {	"type" : "collection",	"ref" : "parameter", "navigate": true},
+    "executeQuery": {
+      "type": "function",
+      "parameters": { "parameters": { "type": "collection", "ref": "searchParameter"} },
+      "returnType":  "collection",
+      "ref":  "caseWithWorkitem",
+      "resultEntityPath": "../casesWithWorkitems"
+    }
+  }
+}

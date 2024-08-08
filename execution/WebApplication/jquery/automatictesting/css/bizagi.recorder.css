@@ -1,0 +1,100 @@
+﻿.bz-at-recorder {
+    background-color: #cccccc;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    left: 10px;
+    padding: 9px 25px;
+    position: absolute;
+    top: 10px;
+    z-index: 9999;
+}
+
+.bz-at-recorder button {
+    border: 1px solid white;
+    color: red;
+    cursor: pointer;
+    margin-right: 10px;
+    padding: 4px 8px;
+}
+
+.bz-at-recorder .bz-at-recorder-start { }
+
+.bz-at-recorder .bz-at-recorder-stop { }
+
+.quickLogin select {
+    border-radius: 6px;
+    color: #7B8693;
+    margin: 5px 0 5px 0;
+    padding: 5px 5px 5px 10px;
+    width: 223px !important;
+}
+
+#main_menu { display: none !important; }
+
+#ui-bizagi-wp-app-search { display: none !important; }
+
+.no-close .ui-dialog-titlebar-close { display: none }
+
+.no-close .ui-dialog-titlebar-maximize { display: none }
+
+.no-close .ui-dialog-titlebar-minimize { display: none }
+
+.bz-at-loading-container {
+    display: inline-block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 8;
+}
+
+.ui-bizagi-loading-icon {
+    background-image: url(../../workportal/css/desktop/images/loader2.gif);
+    background-repeat: no-repeat;
+    height: 18px;
+    width: 18px;
+}
+
+.bz-util-loading {
+    left: 50%;
+    margin-left: -16px;
+    margin-top: -16px;
+    position: absolute;
+    top: 50%;
+}
+
+#contentInbox .ui-bizagi-workportal-widget-global-options { display: none }
+
+#contentInbox .renderNavigation { display: none }
+
+#contentInbox .widget-title { display: none }
+
+.bz-at-soap-upload { }
+
+.bz-at-soap-xml { }
+
+.bz-at-soap-message { color: red; }
+
+.bz-at-scenario-upload { }
+
+.bz-at-init-panel { }
+
+.bz-at-tab-process-widget { }
+
+.bz-at-tab-queryforms-widget { }
+
+.bz-at-init-panel { z-index: 10010; }
+
+.bz-at-tab-container { 
+    z-index: 10010; 
+}
+
+.bz-at-button {
+    margin-right: 15px;
+}
+
+.modalMenuBt #modalMenuBtList>div {
+    min-height: 300px;
+    height: 300px;
+}

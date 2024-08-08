@@ -1,0 +1,22 @@
+<div class="modal-script biz-ui-hide modal-save" title="%{widget-theme-builder-modal-save-theme-title}">
+    <div class="biz-ui-theme-control">
+        <label>%{widget-theme-builder-modal-field-theme-name}: </label>
+        <input type="text" value="" name="name"/>
+    </div>
+    <div class="biz-ui-theme-control biz-ui-hide">
+        <label>%{widget-theme-builder-modal-field-description}: </label>
+        <textarea rows="8" name="description"></textarea>
+    </div>
+    <div class="biz-ui-theme-control biz-ui-theme-thumbs-selector">
+        <label>%{widget-theme-builder-modal-field-palette-colors}: </label>
+        {{each thumbs}}
+            <input type="text" value="#000000" class="color-picker"/>
+        {{/each}}
+    </div>
+    <hr class="darkLine">
+    <input type="hidden" id="biz-output-lines" class="prettyprint linenums lang-js"/>
+    <input type="hidden" id="biz-output-json" class="prettyprint linenums lang-js"/>
+    <div class="biz-ui-theme-button-bar">
+        <button class="biz-ui-button biz-ui-theme-save">%{widget-theme-builder-modal-button-save}</button>
+    </div>
+</div>

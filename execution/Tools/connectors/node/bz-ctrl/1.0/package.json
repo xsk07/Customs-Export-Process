@@ -1,0 +1,11 @@
+{
+  "name": "bz-ctrl",
+  "version": "1.0.0",
+  "dependencies": {    
+    "express": "3.2.6",        
+    "querystring": "0.2.0",
+    "request": "2.74.0",
+    "node-fs": "0.1.7",
+    "moment": "2.10.3"
+  }
+}

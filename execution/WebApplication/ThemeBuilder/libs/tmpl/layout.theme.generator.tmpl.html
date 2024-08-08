@@ -1,0 +1,46 @@
+<header class="clearfix biz-ui-theme-header">
+    <div id="logo" title="%{widget-theme-builder-modify-in-bas}"><a href="#"><img alt="${brand.alt}" src="${brand.logo}"></a></div>
+    <h1 class="biz-theme-title-name"><div class="biz-theme-title">${title} <span class="biz-theme-version">${version}</span></div><div class="biz-theme-name"></div></h1>
+    <!-- Comment Reload Button For Production -->
+    <!--<button class="biz-ui-button biz-theme-reload">Reload Less CSS for Theme</button>-->
+</header>
+<div class='biz-layout-panel-container'>
+    <div class='biz-layout-panel-left' id="panelControls">
+        <div class='biz-ui-actions-bar'>
+            <div class="biz-ui-theme-button-bar">
+                <button class="biz-ui-button biz-theme-reset">%{widget-theme-builder-ui-button-reset}</button>
+                <button class="biz-ui-button biz-theme-new">%{widget-theme-builder-ui-button-new}</button>
+                <button class="biz-ui-button biz-theme-save biz-ui-hide">%{widget-theme-builder-ui-button-save}</button>
+            </div>
+        </div>
+        <div class="biz-ui-control-panel">
+            <h2 class="biz-ui-up-category">%{widget-theme-builder-title-predefined-theme}</h2>
+            <div class="biz-ui-themes-list"></div>
+            <h2 class="biz-ui-up-category">%{widget-theme-builder-title-customize-theme}</h2>
+            <div class="biz-ui-one-color-palette is-customizable"></div>
+            <div class='biz-ui-control-list is-customizable'></div>
+            <div class="is-not-customizable">
+                <div class="biz-ui-theme-control biz-theme-category biz-theme-color-base">
+                    <h3>
+                        %{widget-theme-builder-title-is-not-customizable-theme}
+                        <span class="biz-theme-arrow-button">
+                            <div class="biz-theme-arrow"></div>
+                        </span>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='biz-layout-panel-right'>
+        {{if updateVersion}}
+        <div class="biz-ui-theme-button-bar biz-ui-hide">
+            <a href="#update" class="biz-ui-link biz-ui-update-all-themes">%{widget-theme-builder-ui-button-update-version}</a>
+        </div>
+        {{/if}}
+    </div>
+
+    <div class="biz-ui-theme-save-panel"></div>
+    <div class="biz-ui-theme-new-panel"></div>
+    <div class="biz-ui-theme-update-panel"></div>
+    <div class="biz-ui-theme-change-logo-panel"></div>
+</div>

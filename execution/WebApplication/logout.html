@@ -1,0 +1,398 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Logout</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="stylesheet" href="jquery/themes/bizagiDefault/devices/desktop/opensans-font.css" />
+    <link rel="stylesheet" href="css/singlePageBase.css" type="text/css">
+    <link rel="stylesheet" href="css/logout.css">
+    <link type="image/x-icon" rel="icon" href="favicon.ico" />
+
+    <script type='text/javascript' src='js/DOMPurify/purify.min.js'></script>  
+    <script type='text/javascript' src='jquery/bizagi.configuration.js'></script>
+    <script type='text/javascript' src='jquery/steal.js'></script>
+    <script type='text/javascript' src='jquery/bizagi.loader.js'></script>
+</head>
+<body>
+    <script type="text/javascript">
+
+        var isIE = function () {
+            return (navigator.appName.indexOf("Internet Explorer") > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./));
+        }
+
+        var isIE8 = function () {
+            return isIE() && document.documentMode == 8;
+        };
+
+        if (!String.prototype.startsWith) {
+          String.prototype.startsWith = function(searchString, position) {
+            position = position || 0;
+            return this.indexOf(searchString, position) === position;
+          };
+        }
+
+        if (!String.prototype.endsWith) {
+            String.prototype.endsWith = function (searchString, position) {
+                var subjectString = this.toString();
+                if (typeof position !== 'number' || !isFinite(position)
+                    || Math.floor(position) !== position || position > subjectString.length) {
+                    position = subjectString.length;
+                }
+                position -= searchString.length;
+                var lastIndex = subjectString.indexOf(searchString, position);
+                return lastIndex !== -1 && lastIndex === position;
+            };
+        }
+
+        var urlParams;
+        (window.onpopstate = function () {
+            var match,
+                pl = /\+/g,  // Regex for replacing addition symbol with a space
+                search = /([^&=]+)=?([^&]*)/g,
+                decode = function (s) { return unescape(s.replace(pl, " ")); },
+                query = window.location.search.substring(1);
+
+            urlParams = {};
+            while (match = search.exec(query))
+                urlParams[decode(match[1])] = decode(match[2]);
+        })();
+
+        function sanitize(input) {
+            if (input) {
+                return input.replace(/[<>();,{}]/g, '');                
+            }
+        }
+
+        function sanitizeURL(url) {
+            if (url) {
+                var node = document.createElement('a');
+                node.setAttribute('href', url);
+                var cleanNode = DOMPurify.sanitize(node, {IN_PLACE: true});
+                return cleanNode.href;
+            }
+        }
+        
+        var invalidateAccessToken = sanitize(urlParams['invalidateAccessToken']) || '';
+        var domainAndUsername = sanitize(urlParams['domainAndUsername']) || '';
+        var assertionId = sanitize(urlParams['assertionId']) || '';
+        var userIdentity = sanitize(urlParams['userIdentity']) || '';
+        var postLogoutRedirectUri = sanitizeURL(urlParams['post_logout_redirect_uri']) || sanitizeURL(urlParams['redirect']);
+        if ((postLogoutRedirectUri === undefined || postLogoutRedirectUri == "") && (document.URL != document.referrer)) {
+            postLogoutRedirectUri = document.referrer;
+        }
+
+        if (!postLogoutRedirectUri.endsWith('/') && !postLogoutRedirectUri.endsWith('.html') && !postLogoutRedirectUri.endsWith('.aspx') && !postLogoutRedirectUri.endsWith('.xml')) {
+            postLogoutRedirectUri += '/';
+        }
+
+        function logoutBridge(url, federationLogoutBindingProtocol) {
+            if (federationLogoutBindingProtocol === 'POST') {
+                window.document.open('text/html');
+                window.document.write(url);
+                window.document.close();
+            }
+            else {
+                url = url.replace(/post_logout_redirect_uri=[^&]*/, "post_logout_redirect_uri=" + postLogoutRedirectUri);
+
+                var iframe = document.createElement('iframe');
+                $(iframe).css('border', '0px');
+                $(iframe).css('display', 'none');
+
+                iframe.src = url;
+                document.getElementsByTagName('body')[0].appendChild(iframe);
+            }
+        }
+
+        function federated(authenticationSubType, applicationUrl, logOffURL, federationLogoutBindingProtocol, redirectToLogoffPageAfterLogoffProcess, userIdentity, assertionId, domainAndUsername, invalidateAccessToken, postLogoutRedirectUri) {
+            if (authenticationSubType) {
+                authenticationSubType = authenticationSubType.toLowerCase();
+            }
+
+            if (authenticationSubType === 'wsfederated') {
+                var logoutParams = { sourceLogout: "user", userIdentity: userIdentity };
+                $.post('Rest/Authentication/logout', logoutParams, function () { }).done(function (logoutResponse) {
+                    if (logOffURL) {
+                        var url = decodeURI(logOffURL);
+                        logoutBridge(url, federationLogoutBindingProtocol);
+                    }
+                }).fail(function () {
+                    window.location.href = postLogoutRedirectUri;
+                });
+            }
+            else if (authenticationSubType === 'saml') {
+
+                if (redirectToLogoffPageAfterLogoffProcess || redirectToLogoffPageAfterLogoffProcess == "true") {
+                    postLogoutRedirectUri = applicationUrl + '/post-logout.html';
+                }
+
+                var params = { assertionId: assertionId, state: 'post_logout_redirect_uri' + postLogoutRedirectUri, userIdentity: userIdentity };
+
+                if (domainAndUsername) {
+                    params.domainAndUsername = domainAndUsername;
+                }
+
+                if (invalidateAccessToken) {
+                    params.invalidateAccessToken = invalidateAccessToken;
+                }
+
+                $.get('Api/Authentication/FederateLogoffUrl', params, function () { })
+                    .done(function (logOffResponse) {
+                        if (typeof logOffResponse == 'object' && logOffResponse.federateLogoffUrl.indexOf('auth-error.html', 0) >= 0) {
+                            var params = { sourceLogout: "user", invalidateAccessToken: invalidateAccessToken };
+                            $.get('oauth2/server/logout', params, function () { })
+                                .done(function (response) {
+                                    var json = response;
+                                    if (typeof response != 'object') {
+                                        try {
+                                            json = JSON.parse(response);
+                                        } catch (e) {
+                                            json = { assertionId: '' };
+                                        }
+                                    }
+
+                                    if (!assertionId || assertionId === '') {
+                                        assertionId = json.assertionId;
+                                    }
+
+                                    params.assertionId = assertionId;
+                                    $.get('Api/Authentication/FederateLogoffUrl', params, function () { })
+                                        .done(function (logOffResponse) {
+                                            if (typeof logOffResponse == 'object' && logOffResponse.federateLogoffUrl.indexOf('auth-error.html', 0) >= 0) {
+                                                window.location.href = postLogoutRedirectUri;
+                                            }
+                                            else {
+                                                var url = decodeURI(logOffResponse.federateLogoffUrl);
+                                                logoutBridge(url, federationLogoutBindingProtocol);
+                                            }
+                                        });
+                                });
+                        }
+                        else {
+                            var logoutParams = { sourceLogout: "user", userIdentity: userIdentity };
+                            $.post('Rest/Authentication/logout', logoutParams, function () { }).done(function (logoutResponse) {
+                                var url = decodeURI(logOffResponse.federateLogoffUrl);
+                                logoutBridge(url, federationLogoutBindingProtocol);
+                            }).fail(function () {
+                                window.location.href = postLogoutRedirectUri;
+                            });
+                        }
+                    });
+            }
+        }
+
+        function oauth2(userIdentity, invalidateAccessToken, assertionId, domainAndUsername, postLogoutRedirectUri, domain) {
+            var logoutParams = { sourceLogout: "user", userIdentity: userIdentity };
+            $.post('Rest/Authentication/logout', logoutParams, function () { }).done(function (logoutResponse) {
+                var params = { sourceLogout: "user", invalidateAccessToken: invalidateAccessToken, userIdentity: userIdentity };
+                $.get('oauth2/server/logout', params, function () { })
+                    .done(function (response) {
+                        var json = response;
+                        if (typeof response != 'object') {
+                            try {
+                                json = JSON.parse(response);
+                            } catch (e) {
+                                json = { assertionId: '' };
+                            }
+                        }
+
+                        if (!assertionId || assertionId === '') {
+                            assertionId = json.assertionId;
+                        }
+
+                        var paramsConfig = { domain: domain }
+                        $.get('Api/Authentication/OAuth2/OAuth2AuthenticationConfig', paramsConfig, function () { }).done(function (oauthbizagiConfig) {
+                            if (oauthbizagiConfig.logoutUrl && oauthbizagiConfig.logoutUrl != "") {
+
+                                var url = oauthbizagiConfig.logoutUrl;
+
+                                if (!oauthbizagiConfig.redirectToLogoffPageAfterLogoffProcess || oauthbizagiConfig.redirectToLogoffPageAfterLogoffProcess != "true") {
+                                    url = url.replace(/post_logout_redirect_uri=[^&]*/, "post_logout_redirect_uri=" + postLogoutRedirectUri);
+                                }
+
+                                if (url.indexOf("domainAndUsername") === -1 && domainAndUsername) {
+                                    url += '&domainAndUsername=' + domainAndUsername;
+                                }
+
+                                if (assertionId && url.indexOf("assertionId") === -1) {
+                                    url += '&assertionId=' + assertionId;
+                                }
+
+                                if (logoutResponse.invalidateAccessToken) {
+                                    url = url.replace(/invalidateAccessToken=[^&]*/, "invalidateAccessToken=" + logoutResponse.invalidateAccessToken);
+                                }
+
+                                if (logoutResponse.idTokenHint && url.indexOf("id_token_hint") >= 0) {
+                                    url = url.replace(/id_token_hint=[^&]*/, "id_token_hint=" + logoutResponse.idTokenHint);
+                                }
+
+                                window.location.href = url;
+                            }
+                            else {
+                                window.location.href = postLogoutRedirectUri;
+                            }
+                        }).fail(function () {
+
+                        });
+                    });
+            }).fail(function () {
+                window.location.href = postLogoutRedirectUri;
+            });
+        }
+
+        function authenticators(userIdentity, postLogoutRedirectUri, domain) {
+            var logoutParams = { sourceLogout: "user", userIdentity: userIdentity };
+            $.post('Rest/Authentication/logout', logoutParams, function () { }).done(function (logoutResponse) {
+                window.location.href = postLogoutRedirectUri;
+            }).fail(function () {
+                window.location.href = postLogoutRedirectUri;
+            });
+        }
+
+        function multiple(userDomain, userName, userProAssertionId) {
+            var domain = { domain: userDomain };
+            $.get('Api/Authentication/User/MultipleAuthenticator/Config', domain).done(function (multipleAuthConfig) {
+                switch (multipleAuthConfig.multipleAuthenticationType.toLowerCase()) {
+                    case 'federated':
+                        if (!assertionId) {
+                            assertionId = userProAssertionId;
+                        }
+
+                        if (!domainAndUsername) {
+                            domainAndUsername = userDomain + '\\' + userName;
+                        }
+
+                        federated(multipleAuthConfig.multipleAuthenticationSubType, multipleAuthConfig.applicationUrl, multipleAuthConfig.logOffURL, multipleAuthConfig.federationLogoutBindingProtocol, multipleAuthConfig.redirectToLogoffPageAfterLogoffProcess, userIdentity, assertionId, domainAndUsername, invalidateAccessToken, postLogoutRedirectUri);
+
+                        break;
+                    case 'oauth2':
+                        oauth2(userIdentity, invalidateAccessToken, assertionId, domainAndUsername, postLogoutRedirectUri, userDomain);
+                        break;
+                    case 'windows':
+                    case 'custom':
+                    case 'bizagi':
+                    case 'ldap':
+                        authenticators(userIdentity, postLogoutRedirectUri, userDomain);
+                        break;
+                    default:
+                        window.location.href = postLogoutRedirectUri;
+                        break;
+                }
+            }).fail(function () {
+                window.location.href = postLogoutRedirectUri;
+            });
+        }
+
+        var BIZAGI_PATH_TO_BASE = "./";
+        var BIZAGI_LOCAL_RESOURCES = true;
+        var BIZAGI_ENVIRONMENT = bizagiConfig.environment || 'release';
+        var loader = bizagi.loader;
+
+        
+        /**
+         * validate if the xhr fail by 503 (maintenanceWindow) and is redirected
+         * @param {XHR} xhr request
+         */
+        function failBizagiConfig(xhr) {
+            if (xhr.status === 503) {
+                window.location.href = postLogoutRedirectUri;
+            }
+        }
+
+        loader.init(function () {
+            loader.start("static-pages")
+                .then(function () {
+                    $(document).ready(function () {
+                        $.get('Api/Authentication/BizagiConfig', function () { })
+                            .done(function (bizagiConfigRes) {
+                                if (bizagiConfigRes) {
+                                    if (postLogoutRedirectUri === '/') {
+                                        postLogoutRedirectUri = bizagiConfigRes.applicationUrl;
+                                    }
+
+                                    switch (bizagiConfigRes.authenticationType) {
+                                        case 'Federate':
+                                            federated(bizagiConfigRes.authenticationSubType, bizagiConfigRes.applicationUrl, bizagiConfigRes.logOffURL, bizagiConfigRes.federationLogoutBindingProtocol, bizagiConfigRes.redirectToLogoffPageAfterLogoffProcess, userIdentity, assertionId, domainAndUsername, invalidateAccessToken, postLogoutRedirectUri);
+                                            break;
+                                        case 'OAuth2':
+                                            oauth2(userIdentity, invalidateAccessToken, assertionId, domainAndUsername, postLogoutRedirectUri);
+                                            break;
+                                        case 'Windows':
+                                        case 'Custom':
+                                        case 'BizAgi':
+                                        case 'Mixed':
+                                            authenticators(userIdentity, postLogoutRedirectUri);
+                                            break;
+                                        case 'Multiple':
+                                            if (invalidateAccessToken) {
+                                                var params = { accessToken: invalidateAccessToken };
+                                                $.post('Api/Authentication/OAuth2/Profile', params, function () { }).done(function (userProfile) {
+                                                    if (userProfile) {
+                                                        multiple(userProfile.domain, userProfile.username, userProfile.assertionId);
+                                                    }
+                                                    else {
+                                                        window.location.href = postLogoutRedirectUri;
+                                                    }
+                                                }).fail(function () {
+                                                    window.location.href = postLogoutRedirectUri;
+                                                });
+                                            }
+                                            else if (userIdentity) {
+                                                var params = { userIdentity: userIdentity };
+                                                $.get('Rest/Users/CurrentUserGuid', params, function () { }).done(function (currentUser) {
+                                                    if (currentUser) {
+                                                        multiple(currentUser.domain, currentUser.userName, undefined);
+                                                    }
+                                                    else {
+                                                        window.location.href = postLogoutRedirectUri;
+                                                    }
+                                                }).fail(function (e) {
+                                                    window.location.href = postLogoutRedirectUri;
+                                                });
+                                            }
+                                            else {
+                                                $.get('Rest/Users/CurrentUserGuid', function () { }).done(function (currentUser) {
+                                                    if (currentUser) {
+                                                        multiple(currentUser.domain, currentUser.userName, undefined);
+                                                    }
+                                                    else {
+                                                        window.location.href = postLogoutRedirectUri;
+                                                    }
+                                                }).fail(function () {
+                                                    window.location.href = postLogoutRedirectUri;
+                                                });
+                                            }
+
+                                            break;
+                                        default:
+                                            window.location.href = postLogoutRedirectUri;
+                                            break;
+                                    }
+                                }
+
+                                $('#linkUrlHome').attr('href', postLogoutRedirectUri);
+                                $('#linkUrl').attr('href', postLogoutRedirectUri);
+                            }).fail(failBizagiConfig);
+                    });
+                });
+        });
+
+    </script>
+
+    <div id="content" class="main-content">
+        <a id="linkUrlHome" href="#" style="color:#FFFFFF;">
+            <h1 class="logo-suite">bizagi suite</h1>
+        </a>
+        <div class="logout__container">
+            <p class="txt">You should be logged-out in no time.</p>
+            <p class="txt">If it's taking too long, then please <a id="linkUrl" href="#">click here.</a></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Error</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link type="image/x-icon" rel="icon" href="favicon.ico"></link>
+    <link rel="apple-touch-icon-precomposed" href="workportal/css/tablet/images/BizAgi_logo.png">
+    <link rel="stylesheet" href="css/singlePageBase.css" type="text/css">
+    <link rel="stylesheet" href="css/error.css" type="text/css">
+
+    <script type='text/javascript' src='jquery/bizagi.configuration.js'></script>
+    <script src="js/json2.js"></script>
+	<script type='text/javascript' src='js/DOMPurify/purify.min.js'></script>
+</head>
+<body>
+    <div id="ui-bizagi-error-wrapper">
+        <div id="error-wrapper" class="error-wrapper">
+            Loading...
+        </div>
+    </div>
+
+    <script>
+            (function(){
+                function GetURLParameter(sParam) {
+                    var sPageURL = window.location.search.substring(1);
+                    var sURLVariables = sPageURL.split('&');
+                    for (var i = 0; i < sURLVariables.length; i++) {
+                        var sParameterName = sURLVariables[i].split('=');
+                        if (sParameterName[0] == sParam) {
+                            return sParameterName[1];
+                        }
+                    }
+                }
+                function nativeAjax(url, callbackFunction, errorCallback) {
+                    var xhr;
+                    if (window.XMLHttpRequest) {
+                        xhr = new XMLHttpRequest();
+                    } else if (window.ActiveXObject) {
+                        xhr = new ActiveXObject("Microsoft.XMLHTTP");
+                    }
+
+                    var timestamp = new Date().getTime();
+                    xhr.open('get', url + '?ts=' + timestamp, false); //sync
+
+                    // Assign a handler for the response
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState == 4) {
+                            if (xhr.status == 200) {
+                                return (callbackFunction) ? callbackFunction(xhr) : xhr.response;
+                            } else {
+                                return (errorCallback) ? errorCallback(xhr) : xhr.response;
+                            }
+                        }
+                    };
+                    // Actually send the request to the server
+                    xhr.send(null);
+                };
+
+                var getLanguage = function(){
+                    return (navigator.language) ? navigator.language : (navigator.browserLanguage ? navigator.browserLanguage : 'en');
+                }
+
+                function getResource(key, resource) {
+                    return (resource[key]) ? resource[key] : key;
+                }
+
+                function sanitizeHTML(str) {
+                    var temp = document.createElement('div');
+                    temp.textContent = str;
+                    return temp.innerHTML;
+                }
+
+                function showErrorMessage(params) {
+                    params = params || {};
+
+                            var template = '<a href="{homeUrl}"><h1 class="logo-suite">bizagi suite</h1></a>';
+                            template += '<div class="error__container"><p><h1>{error} : <span class="error-code">{errorCode}</span></h1> <h1> <span class="error-message">{errorMessage}</span></h1> </p>';
+                            template += '<div class="error-alert">';
+                            template += '<h3><p>{tryAgain}</p>';
+                            template += '<p>{message}<p></h3>';
+                            template += '</div></div>';
+                    
+					for (var data in params) {
+                        if (params.hasOwnProperty(data)) {							
+							if('errorMessage' == data || 'errorCode' == data) {
+								template = template.replace("{" + data + "}", sanitizeHTML(params[data]));
+							} else {
+								template = template.replace("{" + data + "}", params[data]);
+							}
+                        }
+                    }
+
+                    return template;
+                }
+
+                var type = GetURLParameter('type');
+                var message = GetURLParameter('message');
+                var messageInfo1 = GetURLParameter('message-info1');
+                var messageInfo2 = GetURLParameter('message-info2');
+                type = unescape(type);
+                message = unescape(message);
+                messageInfo1 = unescape(messageInfo1);
+                messageInfo2 = unescape(messageInfo2);
+                var homeUrl = window.location.pathname.substr(0, window.location.pathname.lastIndexOf('/'));
+
+                function processResponseCulture(data) {
+                    var response = data.response || data.responseText;
+                   var resourceLanguage = JSON.parse(response);
+                   var resources;
+                    
+                   if(resourceLanguage.status === "error"){ //Default english
+                      resources = {
+                         errorMessageTitle: "Error",
+                         errorMessageInfo1: messageInfo1 ? messageInfo1 : "Please try again later.",
+                         errorMessageInfo2: messageInfo2 ? messageInfo2 : "If the error persists contact the system administrator."
+                      };
+                      if(message == "workportal-general-error-generic"){
+                         message = "The request could not be completed.";
+                      }
+                   }
+                   else{
+                      resources = {
+                         errorMessageTitle: getResource("workportal-general-error-page-title", resourceLanguage),
+                         errorMessageInfo1: messageInfo1 ? messageInfo1 : getResource("workportal-general-error-page-info1", resourceLanguage),
+                         errorMessageInfo2: messageInfo2 ? messageInfo2 : getResource("workportal-general-error-page-info2", resourceLanguage)
+                      };
+                      message = getResource(message, resourceLanguage);
+                   }
+
+
+                   var renderedHtml = showErrorMessage({
+                      error: DOMPurify.sanitize(resources.errorMessageTitle),
+                      tryAgain: DOMPurify.sanitize(resources.errorMessageInfo1),
+                      message: DOMPurify.sanitize(resources.errorMessageInfo2),
+                      errorCode: DOMPurify.sanitize(type),
+                      errorMessage: DOMPurify.sanitize(message),
+                      homeUrl: homeUrl
+                   });
+
+                   var errorWraper = document.querySelector("#error-wrapper");
+                   errorWraper.innerHTML = renderedHtml;
+                }
+
+                nativeAjax("Rest/Multilanguage/Client?cultureName=" + bizagiConfig.defaultLanguage,
+                        processResponseCulture,//.NET
+                        processResponseCulture);//JEE response 403 Error
+
+            })();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,1537 @@
+@charset "UTF-8";
+#ui-bizagi-workportal-widget-view-options {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+#ui-bizagi-workportal-widget-view-options li {
+    display: inline;
+    cursor: pointer;
+    position: relative;
+}
+#ui-bizagi-workportal-widget-view-options li span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 42px;
+    height: 21px;
+}
+#ui-bizagi-workportal-widget-view-options li span:first-child {
+    display: block;
+    position: relative;
+    z-index: 100;
+}
+#ui-bizagi-wp-app-inbox-bg-eye {
+    background-color: rgba(0,0,0,.1);
+    box-shadow: inset 0 1px 5px 2px rgba(0,0,0,.3);
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+}
+.ie8 #ui-bizagi-wp-app-inbox-bg-eye {
+    background: transparent;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C0000,endColorstr=#4C0000)";
+}
+#ui-bizagi-wp-app-inbox-bg-eye::before {
+    content: "";
+    color: #fff;
+    box-shadow: 0 1px 0 0 rgba(255,255,255,.15);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+.eye-focus-on {
+    visibility: visible;
+}
+.eye-focus-off {
+    visibility: hidden;
+}
+#ui-bizagi-workportal-widget-global-options {
+    margin: 0 0 0 -15px;
+    float: left;
+    padding: 0;
+}
+#ui-bizagi-workportal-widget-global-options li {
+    float: left;
+    display: inline;
+    height: 22px;
+    width: 22px;
+    padding: 1px;
+    margin-left: 10px;
+    position: relative;
+    cursor: pointer;
+    background: url(images/sprite.png) -185px -117px no-repeat;
+}
+#ui-bizagi-workportal-widget-global-options li:first-child {
+    margin-left: 0;
+}
+.ui-bizagi-wp-app-inbox-bt-back span {
+    display: block;
+    height: 22px;
+    width: 22px;
+    background: url(images/sprite.png) 1px -68px no-repeat;
+}
+#ui-bizagi-workportal-widget-global-options li.ui-bizagi-wp-app-inbox-bt-back:hover span {
+    background-position: -22px -68px;
+}
+#ui-bizagi-wp-app-inbox-bt-comments {
+    background-image: url(images/sprite.png);
+    background-position: -473px -48px;
+    width: 20px;
+    height: 18px;
+}
+.ui-bizagi-wp-app-inbox-bt-comments {
+    position: relative;
+    top: 3px;
+    left: 0;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+#ui-bizagi-wp-app-inbox-bt-undo {
+    background-image: url(images/sprite.png);
+    background-position: -503px -48px;
+    width: 19px;
+    height: 18px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+.ui-bizagi-wp-app-inbox-bt-undo {
+    position: relative;
+    top: 3px;
+    left: 10px;
+}
+#ui-bizagi-wp-app-inbox-bt-folder {
+    background-image: url(images/sprite.png);
+    background-position: -534px -48px;
+    width: 19px;
+    height: 18px;
+}
+.ui-bizagi-wp-app-inbox-bt-folder {
+    position: relative;
+    top: 3px;
+    left: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+#ui-bizagi-wp-app-inbox-bt-trash {
+    background-image: url(images/sprite.png);
+    background-position: -569px -48px;
+    width: 13px;
+    height: 18px;
+}
+.ui-bizagi-wp-app-inbox-bt-trash {
+    position: relative;
+    top: 3px;
+    left: 34px;
+    padding-left: 20px;
+}
+#ui-bizagi-wp-app-inbox-bt-row-back {
+    background-image: url(images/sprite.png);
+    background-position: -599px -48px;
+    width: 11px;
+    height: 18px;
+}
+.ui-bizagi-wp-app-inbox-bt-row-back {
+    position: relative;
+    top: 12px;
+    left: 70px;
+    padding-left: 15px;
+}
+#ui-bizagi-wp-app-inbox-bt-row-forward {
+    background-image: url(images/sprite.png);
+    background-position: -623px -48px;
+    width: 11px;
+    height: 18px;
+}
+.ui-bizagi-wp-app-inbox-bt-row-forward {
+    position: relative;
+    top: 12px;
+    left: 75px;
+    padding-left: 15px;
+}
+#ui-bizagi-wp-app-inbox-actions-separator {
+    width: 1px;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: #aaa;
+}
+.ui-bizagi-wp-app-inbox-actions-separator {
+    position: relative;
+    top: 1px;
+    left: 50px;
+    padding-bottom: 23px;
+}
+.ui-bizagi-wp-app-magic-button {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #008000;
+    position: relative;
+    float: right;
+    cursor: pointer;
+    z-index: 1001;
+}
+.ui-bizagi-wp-app-magic-button:before {
+    content: "+";
+    color: #fff;
+    font-size: 20pt;
+    text-align: center;
+    display: block;
+    position: relative;
+    top: -3px;
+}
+#contentInbox {
+    position: absolute;
+    right: -35px;
+    top: 10px;
+}
+#contentInboxName {
+    position: absolute;
+    top: 20px;
+    left: 5%;
+    display: inline-block;
+    z-index: 1;
+    font-weight: 600;
+    line-height: 22px;
+}
+#contentItemsPaginationInbox {
+    position: absolute;
+    top: -1px;
+    right: 5%;
+    height: 0;
+    z-index: 2;
+    margin-right: 29px;
+}
+#contentItemsPaginationInbox>.contentItemsPaginationInbox-verticalAlign {
+    vertical-align: middle;
+    display: table-cell;
+    height: 50px;
+}
+.label-select-pagination {
+    float: left;
+    margin-right: 24px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+.input-select-pagination {
+    width: 65px;
+    display: inline-block;
+}
+.input-select-pagination #numberRows {
+    outline: unset;
+    height: 100%;
+    box-shadow: none !important;
+    cursor: default;
+}
+#contentInbox h2 {
+    cursor: pointer;
+    margin: 0 0 0 10px;
+    color: #f5f5f5;
+    font-weight: normal;
+    font-size: 135%;
+    line-height: 25px;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.35);
+    float: left;
+}
+#contentInbox h2:hover {
+    text-shadow: 0 0 5px white;
+    color: #fff;
+}
+#contentInbox h2.widget-title {
+    float: inherit;
+    font-size: 120%;
+}
+#contentFramework {
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    position: relative;
+}
+#contentFramework>ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    width: 100%;
+    overflow-x: hidden;
+    position: absolute;
+    height: 100%;
+}
+#innerContentInbox {
+    padding: .5em;
+    border: none;
+    border-radius: 20px;
+}
+#contentCases {
+    background: #f5f7f7;
+}
+#contentCases.cases li i {
+    margin: 0 4px 0 2px;
+}
+#contentCases.casesGrid {
+    box-sizing: border-box;
+    position: relative;
+    border: none;
+}
+.bz-wp-content-detail-cases {
+    padding: 0;
+    margin: 0;
+}
+#ui-bizagi-wp-app-inbox-grid-noresults {
+    overflow: hidden;
+    position: absolute;
+    width: 90%;
+}
+#ui-bizagi-wp-app-inbox-caselist-noresults {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+}
+#ui-bizagi-wp-app-inbox-grid-nocases, #ui-bizagi-wp-app-inbox-caselist-nocases, #ui-bizagi-wp-app-inbox-caselist-nocases-when-filtered {
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    width: 600px;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    left: 50%;
+}
+#ui-bizagi-wp-app-inbox-caselist-nocases, #ui-bizagi-wp-app-inbox-caselist-nocases-when-filtered {
+    display: none;
+}
+.ui-bizagi-wp-app-inbox-grid-nocases-image, .ui-bizagi-wp-app-inbox-caselist-nocases-image {
+    background-image: url(images/inbox-nodata.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 400px;
+    width: 600px;
+}
+#ui-bizagi-wp-app-inbox-grid-nocases label, #ui-bizagi-wp-app-inbox-caselist-nocases label, #ui-bizagi-wp-app-inbox-caselist-nocases-when-filtered label {
+    display: block;
+    position: relative;
+    font-weight: 600;
+    font-size: 14px;
+}
+#ui-bizagi-wp-app-inbox-grid-nocases button, #ui-bizagi-wp-app-inbox-caselist-nocases button, #ui-bizagi-wp-app-inbox-caselist-nocases-when-filtered button {
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 16px;
+}
+#contentCases.cases {
+    position: relative;
+    overflow-y: scroll !important;
+    box-sizing: border-box;
+    float: left;
+    width: 40%;
+    border: none;
+}
+#contentCases.casesGrid div#contentQuickActions {
+    height: 45px;
+    margin-right: 257px;
+}
+.browser-ie10 #contentCases.casesGrid div#contentQuickActions {
+    margin-right: 310px;
+}
+#contentCases.adjustCanvas {
+    width: 100%;
+    position: relative;
+    border: none;
+    left: 0;
+    background: #e4e8e9;
+}
+#contentCases.adjustCanvas>div {
+    padding-left: 0;
+}
+#contentDesc.description {
+    width: 60%;
+    float: left;
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+.ui-bizagi-wp-app-inbox-wrapper-smartinbox-button {
+    height: 80px;
+}
+.ui-bizagi-wp-app-inbox-processes-container>div {
+    margin-top: 0;
+}
+.ui-bizagi-wp-app-inbox-processes-container>div:first-child {
+    margin-top: 0;
+}
+.ui-bizagi-wp-app-inbox-processes-container ul {
+    position: relative;
+    padding: 0;
+    list-style: none;
+}
+.ui-bizagi-wp-app-inbox-processes-container ul li:first-child {
+    border: none;
+}
+.ui-bizagi-wp-app-inbox-processes-container li {
+    overflow: hidden;
+    position: relative;
+    padding: 16px 8px 16px 20px;
+}
+.ui-bizagi-wp-app-inbox-processes-container li span {
+    display: inline-block;
+}
+.ui-bizagi-wp-app-inbox-processes-container .ul-processes-list li {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.ui-bizagi-wp-app-inbox-processes-container .ul-processes-list li #ui-bizagi-wp-app-inbox-processes-ico-paper {
+    align-self: center;
+    flex: 0 0 16px;
+}
+.ui-bizagi-wp-app-inbox-processes-container .ul-processes-list li .ui-bizagi-wp-app-inbox-processes-name {
+    flex-grow: 1;
+}
+.ui-bizagi-wp-app-inbox-processes-container .ul-processes-list.bz-all-cases .ui-bizagi-wp-app-inbox-processes-name {
+    top: -2px;
+    position: relative;
+}
+.browser-ie10 .ui-bizagi-wp-app-inbox-processes-container .ul-processes-list li .ui-bizagi-wp-app-inbox-processes-name {
+    max-width: 147px;
+}
+.ui-bizagi-wp-app-inbox-processes-container .ul-processes-list li span.ui-bizagi-wp-app-inbox-processes-ncase {
+    align-self: center;
+    display: none;
+}
+.ui-bizagi-wp-app-inbox-processes-container .ul-processes-list li span.ui-bizagi-wp-app-inbox-processes-ncase.bz-visible {
+    display: inline-block;
+}
+.ui-bizagi-wp-app-inbox-processes-container .ui-bizagi-wp-inbox-filtered {
+    position: relative;
+    background: #dadddd;
+    border-radius: 6px;
+    height: 20px;
+    display: none;
+    text-align: center;
+    align-self: center;
+    min-width: 23px;
+}
+.ui-bizagi-wp-app-inbox-processes-container .ui-bizagi-wp-inbox-filtered.bz-visible {
+    display: inline-block;
+}
+.ui-bizagi-wp-app-inbox-processes-container .ui-bizagi-wp-inbox-filtered svg {
+    height: 12px;
+    width: 12px;
+    margin-top: 5px;
+}
+.ui-bizagi-wp-app-inbox-processes-container .ul-processes-list li .ui-bizagi-wp-app-inbox-processes-pin {
+    visibility: hidden;
+}
+.ui-bizagi-wp-app-inbox-processes-container .ul-processes-list li:hover .ui-bizagi-wp-app-inbox-processes-pin {
+    visibility: visible;
+}
+.ui-bizagi-wp-app-inbox-processes-container .ul-processes-list li .ui-bizagi-wp-app-inbox-processes-pin.pinned {
+    visibility: visible;
+}
+.ui-bizagi-wp-app-inbox-processes-container .ul-processes-list li:hover .ui-bizagi-wp-app-inbox-processes-drag.container-bz-icon-svg {
+    display: block;
+}
+.ui-bizagi-wp-app-inbox-processes-drag.container-bz-icon-svg {
+    position: absolute;
+    left: 4px;
+    display: none;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.ui-bizagi-wp-app-inbox-processes-drag.container-bz-icon-svg::before {
+    content: none;
+}
+.ui-bizagi-wp-app-inbox-processes-drag.container-bz-icon-svg svg {
+    fill: #999;
+    height: 14px;
+    width: 14px;
+    pointer-events: all;
+}
+.ui-bizagi-wp-app-inbox-processes-pin {
+    border-radius: 6px;
+    margin-right: 4px;
+    padding-left: 2px;
+    line-height: 14px;
+    align-self: center;
+    padding-right: 2px;
+}
+.ui-bizagi-wp-app-inbox-processes-pin svg {
+    height: 14px;
+    width: 14px;
+    pointer-events: all;
+}
+.ui-bizagi-wp-app-inbox-processes-smartinbox-settings svg {
+    width: 14px;
+    height: 14px;
+    float: right;
+    margin-top: 2px;
+}
+.ui-bizagi-wp-app-inbox-processes-container .ul-processes-list li .ui-bizagi-wp-app-inbox-processes-smartinbox-settings {
+    display: none;
+    align-self: center;
+}
+.ui-bizagi-wp-app-inbox-processes-container .ul-processes-list li:hover .ui-bizagi-wp-app-inbox-processes-smartinbox-settings {
+    display: block;
+}
+.ui-bizagi-wp-app-inbox-processes-smartinbox-menu {
+    width: 120px;
+    height: 110px;
+    display: block;
+    position: fixed;
+    z-index: 1000;
+    background-color: #fffdf9;
+    padding: 0;
+    border-radius: 7px;
+    box-shadow: 4px 2px 5px 0 rgba(0,0,0,.1);
+}
+.ui-bizagi-wp-app-inbox-processes-smartinbox-menu li {
+    list-style: none;
+    cursor: pointer;
+    padding: 10px;
+}
+.ui-bizagi-wp-app-inbox-processes-smartinbox-menu li:last-child {
+    color: #f00;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+.ui-bizagi-wp-app-inbox-processes-smartinbox-menu li:hover {
+    background-color: #fffaef;
+}
+.ui-bizagi-wp-app-inbox-processes-container li, #ui-bizagi-wp-app-inbox-cases-container li {
+    cursor: pointer;
+}
+.ui-bizagi-wp-app-inbox-processes-ncase {
+    float: right;
+    padding: 2px 8px;
+    position: relative;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+.ul-processes-list .ui-bizagi-wp-app-inbox-processes-ncase {
+    float: none;
+}
+#ui-bizagi-wp-app-inbox-cases-container, .ui-bizagi-wp-app-inbox-processes-title {
+    padding: 1em;
+    background: none;
+}
+.scrollSummary .ui-bizagi-wp-app-inbox-processes-title {
+    background: none;
+}
+#contentProc .ui-bizagi-wp-app-inbox-processes-title {
+    position: relative;
+    padding: 16px 8px 16px 20px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+}
+#contentProc .ui-bizagi-wp-app-inbox-processes-title .arrow {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    text-align: center;
+}
+#contentProc .ui-bizagi-wp-app-inbox-processes-title .arrow i {
+    display: inline-block;
+    vertical-align: middle;
+}
+.ui-bizagi-wp-app-inbox-smart-inbox-new {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    content: "";
+    position: fixed;
+    bottom: 50px;
+    left: 200px;
+    box-shadow: 3px 3px 6px 1px rgba(0,0,0,.2);
+    cursor: pointer;
+}
+.ui-bizagi-wp-app-inbox-smart-inbox-new svg {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    position: relative;
+    left: 10px;
+    top: 10px;
+    fill: white;
+}
+.ui-bizagi-wp-app-inbox-processes-title .arrow.Right i {
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+}
+.ui-bizagi-wp-app-inbox-processes-title .arrow.Down i {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+}
+.ui-bizagi-wp-app-inbox-processes-start {
+    display: block;
+    height: 16px;
+    width: 16px;
+    background-image: url(images/sprite.png);
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+.ui-bizagi-wp-app-inbox-processes-start.on {
+    background-position: -214px -121px;
+}
+.ui-bizagi-wp-app-inbox-processes-start-wait {
+    height: 16px;
+    width: 16px;
+    background-image: url(images/loading_cube_mini.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.ui-bizagi-wp-app-inbox-processes-start.off {
+    background-position: -214px -148px;
+}
+#ui-bizagi-wp-app-inbox-processes-ico-paper {
+    margin-right: 12px;
+}
+.ui-bizagi-wp-app-inbox-processes-name {
+    overflow: hidden;
+    font-size: 115%;
+    font-weight: normal;
+    word-wrap: break-word;
+    vertical-align: top;
+}
+#ui-bizagi-wp-app-inbox-cases-container {
+    min-width: 225px;
+}
+#ui-bizagi-wp-app-inbox-cases-container ul {
+    padding: 0;
+    margin: 0;
+}
+.ui-bizagi-wp-app-inbox-cases-container ul {
+    padding: 1px;
+    margin: 0;
+    position: relative;
+    background: #e6e6e6;
+    border: 1px solid #98a1a8;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    margin-top: 4px;
+}
+.ui-bizagi-wp-app-inbox-cases-container ul:first-child {
+    margin: 0;
+}
+#ui-bizagi-wp-app-inbox-cases-container li {
+    position: relative;
+    padding: 1.4em 2em;
+    margin-bottom: 1em;
+    list-style: none;
+}
+#ui-bizagi-wp-app-inbox-cases-container #caseId {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 5px;
+}
+#ui-bizagi-wp-app-inbox-cases-container #caseId h3 {
+    float: left;
+    font-weight: normal;
+    margin: 0 .2em 0 0;
+}
+.ui-bizagi-inbox-folder.inboxGridFolder {
+    background-position: -147px -421px;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-left: 5px;
+    position: relative;
+    top: 3px;
+}
+.ui-bizagi-inbox-folder.inboxGridFolder:hover {
+    background-position: -76px -421px;
+    cursor: pointer;
+}
+#ui-bizagi-wp-app-inbox-cases-container #caseActivity {
+    overflow: hidden;
+    padding: 1em 0;
+    font-size: 115%;
+    font-weight: normal;
+}
+.ui-bizagi-wp-app-inbox-activity-item:last-child dl {
+    margin-bottom: 0;
+}
+#ui-bizagi-wp-app-inbox-cases-container #caseActivity #ui-bizagi-wp-app-inbox-activity-name {
+    max-width: 180px;
+}
+#ui-bizagi-wp-app-inbox-cases-container #caseActivity .ui-bizagi-wp-app-inbox-cases-ico-state {
+    clear: left;
+}
+.bz-inbox-actions>*, .bz-search-actions>* {
+    margin-right: .6rem;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.bz-search-actions {
+    text-align: left !important;
+    padding-left: 10px !important;
+}
+.ui-bizagi-wp-app-inbox-processes-title .ui-bizagi-wp-app-inbox-processes-title--wrapper-actions-buttons {
+    display: inline;
+    margin-right: 6px;
+    position: relative;
+    top: -2px;
+}
+.ui-bizagi-wp-app-inbox-processes-title .ui-bizagi-wp-app-inbox-processes-title--wrapper-actions-buttons>i {
+    cursor: pointer;
+    margin-right: 6px;
+}
+#ui-bizagi-wp-app-inbox-cases-ico-close {
+    display: inline-block;
+    vertical-align: middle;
+}
+#ui-bizagi-wp-app-inbox-cases-ico-close+span {
+    display: inline-block;
+    vertical-align: middle;
+}
+#ui-bizagi-wp-app-inbox-cases-ico-close span {
+    background: url(images/sprite.png) -278px -116px no-repeat;
+    display: block;
+    height: 16px;
+    width: 16px;
+    position: relative;
+}
+#ui-bizagi-wp-app-inbox-cases-ico-event {
+    display: block;
+    float: left;
+    position: relative;
+}
+#ui-bizagi-wp-app-inbox-cases-ico-event span {
+    background: url(images/isevent.png);
+    display: block;
+    height: 16px;
+    width: 16px;
+    margin-right: 6px;
+    position: relative;
+    background-repeat: no-repeat;
+}
+.ui-bizagi-wp-app-inbox-cases-aborted {
+    float: left;
+    height: 16px;
+    left: 5px;
+    position: relative;
+    top: 5px;
+    width: 16px;
+    background: url(images/sprite.png) -296px -89px no-repeat;
+}
+.ui-bizagi-wp-app-inbox-cases-aborted-summary {
+    float: left;
+    height: 16px;
+    position: relative;
+    width: 16px;
+    background: url(images/sprite.png) -296px -89px no-repeat;
+}
+#ui-bizagi-wp-app-inbox-cases-container li .ui-bizagi-wp-app-inbox-cases-ico-state {
+    background: url(images/sprite.png) 0 0 no-repeat;
+    width: 16px;
+    height: 16px;
+    display: block;
+    float: left;
+    margin: 2px 5px 0 0;
+}
+#ui-bizagi-wp-app-inbox-cases-container li #ui-bizagi-wp-app-inbox-cases-ico-state-Green {
+    background-position: -236px -148px;
+}
+#ui-bizagi-wp-app-inbox-cases-container li #ui-bizagi-wp-app-inbox-cases-ico-state-Red {
+    background-position: -236px -116px;
+}
+#ui-bizagi-wp-app-inbox-cases-container li #ui-bizagi-wp-app-inbox-cases-ico-state-Yellow {
+    background-position: -236px -132px;
+}
+#ui-bizagi-wp-app-inbox-cases-container li dl {
+    overflow: hidden;
+    padding-left: 2em;
+}
+#ui-bizagi-wp-app-inbox-cases-container li dl dt, #ui-bizagi-wp-app-inbox-cases-container li dl dd {
+    width: 50%;
+}
+#ui-bizagi-wp-app-inbox-cases-container li dl dt {
+    clear: left;
+    float: left;
+    font-weight: bold;
+    margin-top: 0;
+    margin-right: 7%;
+    margin-left: 0;
+}
+#ui-bizagi-wp-app-inbox-cases-container li dl dt, #ui-bizagi-wp-app-inbox-cases-container li dl dd {
+    font-size: 12px;
+}
+#ui-bizagi-wp-app-inbox-cases-container li dl dd.longContent {
+    width: 100%;
+    margin-left: 0;
+}
+#ui-bizagi-wp-app-inbox-cases-container li dl dd {
+    float: left;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 40%;
+}
+#ui-bizagi-wp-app-inbox-cases-container li dl dd div {
+    word-wrap: break-word;
+}
+#formSummary>.ui-bizagi-container-form {
+    margin: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+#formSummary {
+    min-height: 71px;
+}
+.bz-wp-content-detail-cases #ui-bizagi-wp-app-inbox-description-container .scrollSummaryInbox.ui-bizagi-wp-app-inbox-processes-title {
+    padding-top: 15px;
+}
+#ui-bizagi-wp-app-inbox-description-container .scrollSummary, .bz-wp-content-detail-cases #ui-bizagi-wp-app-inbox-description-container .scrollSummaryInbox {
+    padding: 10px 40px 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.ui-bizagi-wp-app-inbox-activity-description {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2em;
+}
+#ui-bizagi-wp-app-render-desc-panel .ui-bizagi-wp-app-inbox-activity-description>div {
+    padding-right: 25px;
+}
+.ui-bizagi-wp-app-inbox-activity-description>div {
+    position: relative;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    padding: 7px 25px 7px 25px;
+}
+.ui-bizagi-wp-app-render-desc-panel .ui-bizagi-wp-app-inbox-activity-description {
+    background-color: #e6e6e6;
+}
+.ui-bizagi-wp-app-render-desc-panel .ui-bizagi-wp-app-inbox-activity-description>div {
+    background-color: #dadada;
+}
+.ui-bizagi-wp-app-inbox-activity-description h2 {
+    font-size: 175%;
+    font-weight: normal;
+    margin: 5px 0 15px;
+    padding: 0 0 10px;
+}
+.ui-bizagi-wp-app-inbox-activity-description .ui-bizagi-wp-app-inbox-cases-description-ico-state {
+    width: 8px;
+    height: 100%;
+    position: absolute;
+    float: left;
+    left: 0;
+    top: 0;
+}
+.ui-bizagi-wp-app-inbox-activity-description #ui-bizagi-wp-app-inbox-cases-ico-state-Red {
+    background: #eb2c2c;
+}
+.ui-bizagi-wp-app-inbox-activity-description #ui-bizagi-wp-app-inbox-cases-ico-state-Green {
+    background: #10721c;
+}
+.ui-bizagi-wp-app-inbox-activity-description #ui-bizagi-wp-app-inbox-cases-ico-state-Yellow {
+    background: #d4bd09;
+}
+.ui-bizagi-wp-app-inbox-activity-description #ui-bizagi-wp-app-inbox-cases-ico-state-lock {
+    background: #808080;
+}
+.ui-bizagi-wp-app-inbox-activity-description .box-description {
+    overflow: hidden;
+    margin: 0;
+}
+.box-description .activity-separator:only-child {
+    border: none;
+    box-shadow: none;
+}
+.activity-separator {
+    border-bottom: 1px solid #acacac;
+    box-shadow: 0 1px 0 0 rgba(255,255,255,.2);
+    color: #525252;
+    margin-bottom: 15px;
+}
+#ui-bizagi-details-tabs {
+    overflow: inherit !important;
+    margin: 0 0 75px 0;
+    width: 100%;
+}
+#ui-bizagi-details-tabs #ui-bizagi-details-tabs-container {
+    overflow: hidden;
+}
+#ui-bizagi-details-tabs dt, .box-description dt {
+    float: left;
+}
+#ui-bizagi-details-tabs dt, .box-description dt {
+    clear: left;
+    padding: 4px;
+}
+#ui-bizagi-wp-app-render-desc-content .box-description dt {
+    width: 35%;
+}
+#ui-bizagi-details-tabs dd, .box-description dd {
+    margin-bottom: 5px;
+    margin-left: 160px;
+    border-radius: 2px;
+    padding: 5px;
+    min-height: 15px;
+}
+.ui-bizagi-wp-app-inbox-activity-description .box-description dd.task_description_needs_modal {
+    background-color: transparent;
+    border: hidden;
+    padding-left: 0;
+    padding-top: 7px;
+}
+#ui-bizagi-details-tabs .ui-tabs-panel {
+    -moz-border-radius: 0 6px 6px 6px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+.ui-bizagi-wp-app-inbox-description-start {
+    padding-left: 20px;
+    position: relative;
+    top: 5px;
+    left: 14px;
+}
+.ui-bizagi-wp-app-inbox-description-ico-view {
+    position: relative;
+    top: 9px;
+    left: 10px;
+}
+.ui-bizagi-wp-app-inbox-description-start {
+    position: relative;
+    top: 6px;
+    left: 14px;
+    padding-left: 10px;
+}
+#ui-bizagi-wp-app-inbox-description-bt {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+}
+#description {
+    position: relative;
+    top: -300px;
+    left: 500px;
+}
+.ui-tabs .ui-tabs-panel {
+    background: #fff;
+}
+.ui-tabs .ui-tabs-nav {
+    padding: 0;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a {
+    background: none;
+}
+a:active, a:active * {
+    outline: none !important;
+    -moz-outline-style: none !important;
+}
+a:focus, a:focus * {
+    outline: none !important;
+    -moz-outline-style: none !important;
+}
+#ui-bizagi-wp-app-inbox-tab-container {
+    height: 30px;
+    min-width: 260px;
+    width: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+#ui-bizagi-wp-app-inbox-tab-container ul {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 30px;
+}
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab {
+    display: inline;
+    float: left;
+    height: 30px;
+    width: 33px;
+    cursor: pointer;
+    padding: 0 5px;
+    position: relative;
+}
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#favourites {
+    width: 34px;
+}
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#red, #ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#yellow, #ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#green {
+    min-width: 52px;
+    width: auto;
+}
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab.active .toolTip, #ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab:hover .toolTip {
+    background-color: #e2e1e1;
+}
+.ui-bizagi-wp-app-inbox-tab .text {
+    display: inline-block;
+    text-indent: -9999px;
+    background: url(images/sprite.png) 0 0 no-repeat;
+}
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#all .text {
+    background-position: -105px -171px;
+}
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#all .toolTip {
+    display: none;
+}
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#favourites .text {
+    background-position: -245px -170px;
+}
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#favourites .text, #ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#all .text {
+    height: 30px;
+    width: 34px;
+}
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#red .text {
+    background-position: -236px -116px;
+}
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#yellow .text {
+    background-position: -236px -132px;
+}
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#green .text {
+    background-position: -236px -148px;
+}
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#green .text, #ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#red .text, #ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#yellow .text {
+    height: 16px;
+    width: 16px;
+    vertical-align: middle;
+}
+#ui-bizagi-wp-app-inbox-tab-container .toolTip {
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 1px 11px;
+    text-align: center;
+    width: auto;
+    margin-top: 6px;
+    font-size: .8em;
+}
+#footer #ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab {
+    padding: 0 3px;
+}
+#footer #ui-bizagi-wp-app-inbox-tab-container #favourites {
+    padding: 4px;
+    text-align: center;
+}
+#casesPagination {
+    height: 30px;
+    width: 258px;
+    left: 262px;
+    position: absolute;
+}
+#casesPagination.gridCasePagination {
+    width: 100%;
+    float: none;
+    border: none;
+    position: relative;
+    left: 0;
+}
+#casesPagination.gridCasePagination ul {
+    position: relative;
+    min-width: 1024px;
+    width: auto;
+    padding-left: 260px;
+}
+#casesPagination.detailsPagination {
+    width: 100%;
+    float: none;
+    border: none;
+    position: relative;
+    left: 0;
+}
+#casesPagination.detailsPagination ul {
+    float: left;
+    left: 227px;
+    position: absolute;
+    width: 36%;
+    z-index: 51;
+    white-space: nowrap;
+}
+#casesPagination.detailsPagination ul li {
+    padding: 2px 3px;
+}
+#casesPagination ul {
+    margin: 0 auto;
+    height: 24px;
+    padding: 6px 0 0 0;
+    width: 100%;
+    text-align: center;
+}
+#casesPagination ul li {
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    margin-left: 0;
+    cursor: pointer;
+    padding: 2px 5px;
+    min-width: 10px;
+}
+#casesPagination ul li:first-child {
+    margin: 0;
+}
+#casesPagination ul li span {
+    display: block;
+}
+#casesPagination ul li.active span {
+    text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+}
+#casesPagination ul .prev {
+    margin-left: 5px;
+}
+#tooltipPagination {
+    width: 86px;
+    height: 17px;
+    text-align: center;
+    background-color: #f4f4f4;
+    visibility: hidden;
+}
+.gridCasePagination #tooltipPagination {
+    position: absolute;
+    bottom: 100%;
+    left: calc(130%);
+    left: calc(50% + 80px);
+    padding: 2px 5px;
+    width: auto;
+    height: auto;
+}
+.detailsPagination #tooltipPagination {
+    position: absolute;
+    bottom: 100%;
+    left: calc(105%);
+    left: calc(25% + 80px);
+    padding: 2px 5px;
+    width: auto;
+    height: auto;
+}
+.scrollCasesGrid {
+    padding: 4em 1px;
+    overflow: auto;
+}
+.ui-bizagi-wp-app-inbox-grid-cases-container-parent-tableHeadFixed {
+    height: 100%;
+    overflow-y: hidden;
+}
+.ui-bizagi-wp-app-inbox-grid-cases-container-tableHeadFixed {
+    overflow: auto;
+    max-height: calc(-5%);
+    max-height: calc(100% - 105px);
+    padding: 0;
+}
+.browser-ie10 .ui-bizagi-wp-app-inbox-grid-cases-container-tableHeadFixed {
+    max-height: calc(-8%);
+    max-height: calc(100% - 108px);
+}
+.ui-bizagi-wp-app-inbox-grid-cases-container table, .personalizedColumnsContainer table {
+    width: 100%;
+}
+.ui-bizagi-wp-app-inbox-grid-cases-container table td, .personalizedColumnsContainer table td {
+    padding: 4px;
+    text-align: center;
+}
+.ui-bizagi-wp-app-inbox-grid-cases-container table td.bz-inbox-actions {
+    text-align: left;
+}
+.ui-bizagi-wp-app-inbox-grid-cases-container table td.I_idWFClass {
+    text-align: center;
+}
+.ui-bizagi-wp-app-inbox-grid-cases-container table tbody tr:first-child td, .personalizedColumnsContainer table tbody tr:first-child td {
+    border-top: none;
+}
+.ui-bizagi-wp-app-inbox-grid-cases-container thead td, .personalizedColumnsContainer table thead td {
+    position: relative;
+}
+.ui-bizagi-wp-app-inbox-grid-cases-container thead td>div {
+    position: relative;
+    padding-right: 32px;
+}
+.ui-bizagi-wp-app-inbox-grid-cases-container thead td.sortColumnsData {
+    cursor: pointer;
+    position: relative;
+}
+#ui-bizagi-wp-app-inbox-grid-cases th>.ui-bizagi-wp-app-inbox-grouped {
+    text-decoration: underline;
+    cursor: pointer;
+}
+#ui-bizagi-wp-app-inbox-grid-cases .workonitRow {
+    border: none !important;
+    margin: 0;
+    background-color: transparent !important;
+    vertical-align: middle;
+}
+#ui-bizagi-wp-app-inbox-grid-cases .workonitRow span {
+    padding: 0;
+}
+#ui-bizagi-wp-app-inbox-grid-cases .bz-icon-abort-outline {
+    cursor: default;
+}
+.bz-icon-text {
+    vertical-align: middle;
+}
+.gridListWorkItems {
+    margin: 0;
+    padding: 0;
+}
+.gridListWorkItems li {
+    overflow: hidden;
+    list-style-type: none;
+    display: block;
+    margin-top: 5px;
+    min-height: 17px;
+}
+.gridListWorkItems li:first-child {
+    margin: 0;
+}
+.gridListWorkItems li span {
+    float: left;
+    display: block;
+    text-align: left;
+}
+.gridListWorkItems li .ui-bizagi-wp-app-inbox-cases-grid-ico-state {
+    background: url(images/sprite.png) 0 0 no-repeat;
+    width: 16px;
+    height: 16px;
+    display: block;
+    float: left;
+    margin: 0 5px 0 0;
+}
+.gridListWorkItems li #ui-bizagi-wp-app-inbox-cases-ico-state-Green {
+    background-position: -236px -148px;
+}
+.gridListWorkItems li #ui-bizagi-wp-app-inbox-cases-ico-state-Red {
+    background-position: -236px -116px;
+}
+.gridListWorkItems li #ui-bizagi-wp-app-inbox-cases-ico-state-Yellow {
+    background-position: -236px -132px;
+}
+.gridListWorkItems li.ui-bizagi-wp-app-quickAction-container, div.sortColumnRight.ui-bizagi-wp-app-quickAction-container {
+    cursor: pointer;
+    display: flex;
+}
+.gridListWorkItems li .ui-bizagi-wp-app-inbox-activity-name {
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float: initial;
+}
+.gridListWorkItems li .formatDate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.ui-bizagi-wp-app-inbox-activity-name i {
+    margin-bottom: .4em;
+}
+.sortColumnsDataDownIcon, .sortColumnsDataUpIcon, .sortColumnsDataIcon {
+    position: absolute;
+    top: 50%;
+    height: 12px;
+    width: 8px;
+    margin-top: -6px;
+    margin-left: 2px;
+    cursor: pointer;
+}
+.sortColumnsDataIcon {
+    display: none;
+}
+.sortColumnRight .sortColumnsDataDownIcon, .sortColumnRight .sortColumnsDataUpIcon, .sortColumnRight .sortColumnsDataIcon {
+    right: 2px;
+}
+.arrowDownIcon {
+    border-top: 5px solid rgba(0,0,0,.4);
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 0 solid transparent;
+}
+.arrowUpIcon {
+    border-top: 0 solid transparent;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 5px solid rgba(0,0,0,.4);
+}
+.arrowDownIcon, .arrowUpIcon {
+    float: none;
+    margin: 0;
+    position: absolute;
+}
+.arrowDownIcon {
+    top: 65%;
+    left: 0;
+}
+.arrowUpIcon {
+    top: 15%;
+    left: 0;
+}
+.sortColumnsDataDownIcon .arrowDownIcon {
+    opacity: .3;
+}
+.sortColumnsDataUpIcon .arrowUpIcon {
+    opacity: .3;
+}
+.filterColumns {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    top: 4px;
+    margin: 0 8px;
+}
+.filterColumns svg {
+    width: 16px;
+    height: 16px;
+}
+.filterColumns::after {
+    border-radius: 12px;
+    width: 16px;
+    color: #fff;
+    content: attr(data-value);
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    text-align: center;
+    font-size: .8em;
+    padding: 1px;
+    height: 16px;
+    visibility: hidden;
+}
+.filterColumns.active::after {
+    visibility: visible;
+}
+.filterColumnsHover {
+    visibility: hidden;
+    cursor: pointer;
+    float: right;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    min-width: 24px;
+    border-radius: 16px;
+    padding-top: 2px;
+    right: 10px;
+}
+.filterColumnsHover.active {
+    visibility: visible;
+}
+.filterColumnsData:hover .filterColumnsHover, .sortColumnsData:hover .filterColumnsHover {
+    visibility: visible;
+}
+.filterColumnsHover svg {
+    width: 12px;
+    height: 12px;
+}
+.noOverlap {
+    width: 100%;
+}
+.noOverlapLeft {
+    width: 100%;
+    float: left;
+    margin-right: 10px;
+}
+.noOverlapRight {
+    float: right;
+}
+.noOverlap:hover .sortColumnsDataIcon, .sortColumnsData:hover .sortColumnsDataIcon {
+    display: block;
+    opacity: .7;
+}
+.ui-dialog #ui-bizagi-wp-app-inbox-description-container {
+    padding: 0 25px;
+}
+.ui-dialog #ui-bizagi-wp-app-inbox-description-container .scrollSummary {
+    padding: 0;
+    height: auto !important;
+}
+#ui-bizagi-wp-app-inbox-grid-cases tr:hover .workonitrow.ui-button {
+    background: url(images/lupa-on.png);
+    background-color: #b6b6b6 !important;
+    transition: none;
+}
+.ui-bizagi-wp-app-inbox-activity-description .workonitRow {
+    float: right;
+    margin-top: 5px;
+}
+.workonitRow.showDesc.ui-button.bizagi-ui-icon-show-summary-grid {
+    background-image: url(images/lupa-off.png);
+    width: 16px;
+    height: 16px;
+}
+.workonitRow.showDesc.ui-button.bizagi-ui-icon-show-summary-grid span {
+    display: none;
+}
+.workonitRow.showDesc.ui-button.bizagi-ui-icon-show-summary-grid:hover {
+    background-image: url(images/lupa-on.png);
+    background-color: #b6b6b6 !important;
+    transition: none;
+}
+.ui-bizagi-wp-app-inbox-activity-description .workonitRow.render {
+    margin-top: 5px;
+}
+.bz-inbox-actions .ui-button-text {
+    padding: 0;
+}
+.bz-inbox-actions-padding {
+    padding-left: 16px !important;
+}
+.bz-inbox-actions-new-item-text {
+    font-weight: bold;
+}
+.viewSummaryBT {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    margin-top: -18px;
+}
+.modalEyePopup li {
+    float: left;
+    min-width: 48px;
+    padding: .8em .2em;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    text-align: center;
+    cursor: pointer;
+}
+.modalEyePopup li:first-child {
+    margin-right: 4px;
+}
+.modalEyePopup li>i {
+    margin-bottom: .2em;
+}
+.ui-bizagi-wp-app-inbox-bt-modal-view-details {
+    background-position: -105px -81px;
+}
+.modalEyePopup li:hover .ui-bizagi-wp-app-inbox-bt-modal-view-details {
+    background-position: -175px -81px;
+}
+.ui-bizagi-wp-app-inbox-bt-modal-view-grid {
+    background-position: -70px -81px;
+}
+.modalEyePopup li:hover .ui-bizagi-wp-app-inbox-bt-modal-view-grid {
+    background-position: -140px -81px;
+}
+.modalEyePopup li span {
+    display: block;
+}
+.modalEyePopup li:hover {
+    background: #f4f0f0;
+}
+#homeContentProc {
+    width: 260px;
+    position: absolute;
+    border-right: 2px solid #9b9b9b;
+    -webkit-box-shadow: 2px 0 3px 0 rgba(0,0,0,.2);
+    -moz-box-shadow: 2px 0 3px 0 rgba(0,0,0,.2);
+    box-shadow: 2px 0 3px 0 rgba(0,0,0,.2);
+    background: #cecece url("images/dots_columns.png") 0 0 repeat;
+}
+#homeContentCases {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#content-cases {
+    padding-left: 340px;
+    box-sizing: border-box;
+    overflow-y: scroll !important;
+    width: 100%;
+    position: relative;
+    border: none;
+}
+.ui-bizagi-wp-points-container {
+    position: relative;
+    padding: .5em .1em;
+    display: block;
+}
+.ui-bizagi-wp-points-container .bz-icon {
+    position: absolute;
+    z-index: 1;
+}
+.ui-bizagi-wp-points-container .ui-bizagi-wp-base-points {
+    position: absolute;
+    z-index: 0;
+    color: #ddd;
+}
+.point-red, #ui-bizagi-wp-app-inbox-cases-ico-state-Red {
+    color: #e32a2a;
+}
+.point-yellow, #ui-bizagi-wp-app-inbox-cases-ico-state-Yellow {
+    color: #e3d006;
+}
+.point-green, #ui-bizagi-wp-app-inbox-cases-ico-state-Green {
+    color: #44ab52;
+}
+.point-grey, #ui-bizagi-wp-app-inbox-cases-ico-state-lock {
+    color: #808080;
+}
+.point-white {
+    color: #fff;
+}
+.inbox-grid-tooltip-button button .ui-button-text {
+    padding: .2em;
+}
+#casesPagination.inbox__pagination {
+    background-color: #fff;
+    border: 1px solid #e7e7e7;
+    bottom: 40px;
+    border-radius: 3px;
+    height: auto;
+    left: calc(252%);
+    left: calc(5% + 247px);
+    padding: 12px;
+    position: absolute;
+    width: calc(-150%);
+    width: calc(90% - 240px);
+}
+#casesPagination.inbox__pagination ul {
+    height: auto;
+    min-width: 100%;
+    padding: 0;
+}
+#casesPagination.inbox__pagination ul li {
+    border-radius: 4px;
+    color: #4a4a4a;
+    height: 20px;
+    min-width: 20px;
+    padding: 0;
+    vertical-align: middle;
+}
+#casesPagination.inbox__pagination ul li span {
+    border-radius: 4px;
+    height: 20px;
+    line-height: 20px;
+    min-width: 20px;
+    text-align: center;
+    padding: 0 3px;
+}
+#casesPagination.inbox__pagination ul li.active, #casesPagination.inbox__pagination ul li:hover {
+    background-color: #006c5f;
+    border-radius: 4px;
+    color: #fff;
+}
+#casesPagination.inbox__pagination ul li.active span, #casesPagination.inbox__pagination ul li:hover span {
+    background-color: #006c5f;
+    border-radius: 4px;
+}
+#casesPagination ul li.next.pagination-disabled:hover, #casesPagination ul li.prev.pagination-disabled:hover, #casesPagination ul li.first.pagination-disabled:hover, #casesPagination ul li.last.pagination-disabled:hover {
+    background-color: inherit;
+    cursor: default;
+    opacity: .3;
+}
+#casesPagination.inbox__pagination ul li.next.pagination-disabled:hover, #casesPagination.inbox__pagination ul li.prev.pagination-disabled:hover, #casesPagination.inbox__pagination ul li.first.pagination-disabled:hover, #casesPagination.inbox__pagination ul li.last.pagination-disabled:hover {
+    color: inherit;
+}
+#casesPagination ul li.next.pagination-disabled, #casesPagination ul li.prev.pagination-disabled, #casesPagination ul li.first.pagination-disabled, #casesPagination ul li.last.pagination-disabled {
+    opacity: .3;
+}

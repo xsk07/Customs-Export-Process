@@ -1,0 +1,8 @@
+.error__container > h1 {
+    font-size: 1.2em;
+}
+
+.error__container .error-alert > h3 {
+    font-size: 15px;
+    font-weight: initial;
+}

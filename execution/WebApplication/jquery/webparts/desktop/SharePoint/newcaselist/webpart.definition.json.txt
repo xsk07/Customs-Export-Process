@@ -1,0 +1,12 @@
+﻿{
+	"name": "newcaselist",
+	"js": [ {"src": "bizagi.webparts.newcaselist.js"},	{"src": "../../../../overrides/js/desktop/sharePoint/newcaselist/bizagi.webparts.newcaselist.override.js"}],
+	"css": [ {"src": "bizagi.webpart.newcaselist.css"} ],
+	"theme": {"src": "bizagi.webpart.newcaselist.theme.less"} ,
+	"tmpl": [ 
+		{alias: "newcase",  "src": "newcaselist.tmpl.html#ui-bizagi-webparts-newcase"},
+		{alias: "newCase-categories",  "src": "newcaselist.tmpl.html#ui-bizagi-webparts-newcase-categories"},
+		{alias: "newCase-categories-tree",  "src": "newcaselist.tmpl.html#ui-bizagi-webparts-newcase-categories-tree"},
+		{alias: "newCase-categories-recent-process",  "src": "newcaselist.tmpl.html#ui-bizagi-webparts-newcase-recent-process"}
+	]
+}

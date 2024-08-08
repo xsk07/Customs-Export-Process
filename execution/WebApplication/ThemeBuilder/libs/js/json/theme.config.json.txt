@@ -1,0 +1,195 @@
+{
+    "theme": {
+        "title": "Theme Builder",
+        "version": "11.0.14",
+        "date": "",
+        "brand": {
+            "url": "http://www.bizagi.com",
+			"logo": "libs/css/img/logo-white.svg",
+            "logoLight": "libs/css/img/bizagi-logo-white.svg",
+			"defaultLogo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAABPCAYAAABRavg1AAAABmJLR0QA/wD/AP+gvaeTAAASJUlEQVR42u1dCXhU1RUmXbCLrdpqtVaqVav42SJ+ahULFKuCcStakZ0SQGSRFJUWF6BIC1URERQVlFWpSEUstgiKSoJA9kAImyTEBBLIRpKZTJaZJLfnzHfH7+XNvffN22Ym4fzfd76BzHv33XeXf84959xzu3QhEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIEQTQ4cO7Q6yHqQc5O3BgwdfRq1CIBDiCoMGDfrZkCFDlgJJBUCYRvz4d/j+AmolAoEQU4wePfpsIKV/Dhs2zKclquHDh1fqiMsL18weM2bMD2JApmfCs8/RS2Ji4hnUgwTC6UFU3wHNaRoQUbWWmJKTkzOKi4tLGKCwsLBsypQpeTriwqXiFCCRrtGqK9TzA10dggKkNZ56kkDoxJg9e/Y3YKIPAhI4qp38Y8eOPZSbm3uYCZCZmXkQvj+sI4tiJAwgrm8SYREIBMcBE/w2mOh7tJN+xIgRpZs2bUpva2tjKuD327Ztyxs5cuQxHXHkIwESYREIBKcm/I0wwbfrJvup5cuXp/v9/hZmAoFAwL9u3bpUsHFVacuDZ3wBn72JsAgEgiVoQhTaNJO8YcGCBbt9Pl9jmBbVWMua965t97e8k+8yf4svjLi8Xq/nueeeS4EyG3XE9SE845dEWAQCISKA9nORIEShddq0aVnl5eVVYezTGggSVd2Snsy7+o52X63MHcDeyOrDskqXs5Y2f9itlZWVJ2fMmJEK5bfoQyFguflTIiwCgSAEuvphcj8Lk7lBO7EnT56cBx6/EoFlivkP/Zd53ujNaud3C4qIsBan/Tooa/bczY5Ubw3ep0dRUVEheBSzdITiw/pg6AQRFoFACAJDDGDy/hkm8SnthIaYqYNZWVn5IltUS2kW864d+DVRRUJYIVmfP4yVerKFNq709PScpKSkQzpyqYb6TcdQCiIsAuH0tlP9EeS4diKPGjWqZPPmzbtFnr/WqiPMt2lCGFGZIayQfHj4EVbTWCzyKLah5xE9kDqSKQKSuZMIi0A4DQEhBr9A25RmAlevWbNmJ3jywjx/rd4TrGHrdFb7wiVSsjJLWCivpF/LPjv6DPP5K8OICzyQzeCJTIO61WqIJgAa4XlEWATC6add3R6avEBexbW1tTVh2k6zlzXueJ7VvXSFkqisElZIXs/sxTKOL2OB1kaRYb4MtK0Tmm0/NxFhEQinMWFhiEGYnapif9DzFwlR2SWskKzIuZXtr9gAy8LWduXMnDkzlQiLQCDCCk7eRYsWbRcGeh79jHmW9YoaYYVk7d77WFOL5+ty5s6duz2WhIUG/3vuued7NGocNUl8Hz3T0dieZRahDfPwzwTqqQ5EWMFlob+BNabMM7RfOUlYKJ6m0pgQFg5WuGcwfL8GrtuHcWGa++rhuyPw+RHIYyBX2+0HeM6lUGYfgVxicF9f3C4VDYG8Zr+y8YoJ0E694H3+Bp9b0Hmii7tj3E6ZA7ICnjcaPs+Nxhzge2P7Qt3mwOc23OOqtetywV0ZmfDda3DdMBgfZznxbCirm6jfnQ6c7vSEVecPsIqm5vBQhhN7mHfVgE5LWJj6Bq6dC9/ViK5XyF647wEc/Bb7YaGoXIxBM7jvpMl6WhZoq7Vm3wv66Ydw7184QZl9JgYtb3RruxZqT1D203oPeYTShMkpoX+utTn/npb0+5vETiYIq6C+nv1ux072zrHjrLVNENWevQKM8Fd2KsLiG7uP2ZzY+6BuvyXCCrb5GJ5KyPazoawNIBc6NOwToKwJXGuyWzfUxFZBGNCPibBiTFjXfZ4SlDE5uaywPnwvYGttMatfP6xTEBb8O0mQKdWqtEC5T52uhIVaKteMnK5DJSxL+9sZ7zzZ5P9cqNtx6KubibDigLBQbtyeyhYXHmXNra3hsVKwNafulWs6LGHB50CBPcUJWRKpwbazEBbGx8F12S7Www/lD7Ey1nFfKrdHulW3BrNBzURYLhFWSO5Ly2BZNTXhRnlfJWvYPLXDERbIM7qgVCbIjprCM1as4r/OeQKjrEz+0VkIC+qy0sirhobpCMuz065+s5oW16z2Rli3Up5K6R2Q1UBCm+HzgDZjiYq00LlAhBUnhIVyPcjcw1+y+vBgeBYo/JT5No7rSBqWT2RQhb8vgklxg8yIzjWJURH8YrdBXe92kbB6QD2usytod+OeT9l74N7O8w3q8raRodqoXdEzyNs1z2h5iIeemOj/DQbloef3WXh2T5WGhhq5QTuhHIvUpkWEFQXCCknirjSWUlkliIFo6Ugall4+gYnwczMucbhnnD67hd6+gd4yNwjLCYwfP/7bmINMsRTEVNYXG3jc7jdYTm41267caK9q1/cj9AYON+jz94zIWN9ecP1UXaiLXlYQYcUZYYXk0bx8Vt7UJM0w2oEIa1m/fv2+ZaUdUWsw8IjNikfCwoBNvvSRki3GiBmU0VUVtgDv8KrVdoV7rzdo194GdfsuXFNmsGRPsFi3fnB/ncJ72IMIKw4JC6UfhEC8X1bGRFnds8tWsiUZ18c7YW2xG20NZfxO4WmsUqXGiRFhoXv/TZWdCYj4qgje+08KsvrQamyapu/6KLSZ/xjcO0HxfqvsNiCQ+R9kti0MOibCilPCCsnYnD3sqC88BKK2sYRtPPhQvBJWrVNR1RgtrZi8D8QRYSVg1LaiTWoiDYqEa3fK7Ex2Ey9qiGG2LIQEtvf8RFG3HEm7HkXty6G6vSIzwKMjgggrjglLHQLRxg5WbmLLIF1ynBHWMw4usc7SJ0HUyOp4ISyYZPMV7VGHS9xIysFU2goNY7pT9eUR89WS54yVGMkvV9jUxjpVNwxoldnajE6DIsKKA8IKyYMZWWxvXV2YtuXzV7GPC56KF8JqM2NwjZAMFsmM1/FAWFDuPMVE9uG+OhNljZCFHji1307Tri+a+SHgzhChRo2Gc4fb9C1J/71MhNVBCMsoBKKoJpWtzOkfa8LKcUF7uVNGCDJvYbQIC43/BoGPtzhBzhhj5UK7DpBth5Jc/5psm48L80hG3LuIsDoQYYXkjl272acV4RlFMVnfzpKF7OX0a2JFWEucblMepCgkBVhqXRMrwuI5+2Vk1RxJvJig3rJtLvOcble+5UeoFXYRePowREVSt8dcINNLZY4LIqwOSFhGIRAV9QfYO/sejEXg6EyX2lVm0+gbC8JCm40iUhu3JT1osdxsSb2TXWrXetHzRMZt+HuupG7DnK4XD58Qmhy6KMImiLDinLBCIRCiLBCtEHCKZxdqQyCcIiwMMpQMjMkutetxCWENiDZh8bAD2ZaXVgystFH2QUm5I1xq1zIJYV0guPaQpG53RPNHCpMUEmF1YMIKyTgIgSiShUAcGOcoYeHGXcngfTKamoAs0NEtwuInIgUUDoeHbZafLyl7ktNtyncVBCS2wYsEdcuTtOlgp+uWmJh4hkyDVTkfiLA6EGGh9ErZwZZ/VcwCYceJtbH88g1Bj6JDGtZiycRa6HSb4i+qwoZ1VbQIiwc1qraPPG73XaF+uyWa5GwXxuq5CmeGiLB2SOr2iNN14+EdjAirkxNWSAZDCESeIARCC5s2rEclA2q7CwbYvjKNRhas6DRh8X5tVJDVkw6Nn/WS8je50K4DTBLWW25FuAvG131EWDEkrGJfA7shioSFcgMEnM4/UsB8LS1uENatsngho43JFgbvXMmz9iv6wTHCwswLiiWpo9qPIrLfi3sMHR6rL5ghLEyiKLn+RBeHD5aAMl8nwooyYS1cuPBzLUEc8nrZ5L15USUtlLt2p7GShoYwwpozZ45lwuK5mvxu21vQlsEPMRARxWtuExa2C9znUWhWL0VL64G6j3TqObgPU5V7XUJYfRWkfb+DdTtbsbuBCMstwpowYUJ2m+Bs+vRTp9iIrOyokFUSpGPOra0VHV3fCnE4+6wSFn/XLbL8RaqNySYn8CMK+1V/NwkLY7xk21c0k8BRzQKPPVMQ5JdWszQINLlk1eZ1EWHxLBKy9tjnVN1UOweIsBwGT4vydUMlJyfvLisrKwkjDJCt5RXs3rR0V4jqgfRM9rkotxYuT4uLCydNmpSh69TuFgbWCMXAet2Bgdtdlm4EtS7VBLFLWHgEF242VmUmsJs1QUEmKxXPXeBQu3rMEhav26sKLWuRAz9QtxmdBUCE5SB4PiS94bQZBvdncGx9eVhkOihgG0rLWP+dux2LgMfyWsIVO1ZdXV01a9asnYIBsdziu3ZVnYqDkeA2Ju2Fipgkw0BKO4SFZ9gZ5Hx6zyltQlL3Hqr0wfAOD9ls1wNGucxkhMXbRpWv/2mrWie3FVYb1Y0IywXwX4osfdpYOL5+e0NDg0dPJg1gGF9VXML67vjCElH1Sf0imNFBZGBvbGysX7p0KdqrvLr6pJnd6yZ4z9EGA2wx2qFMTqqbeR5waXphIwO0VcLCLJ5w3VcKsvjA6Y2+knZda5BxdL5ZIzy3xx0XpAKKmLB42y4zOkLMTLplHB9wzzSDkBEirCgAcyQNggY7rBts1UgggUAg7GTVGr8/SDw3paRGnHoGN0NXNwsOaW1p8a9bty4Vnleh68ADPE1HgkPvuM1gkH2F6XlVEcp8kvYEWWdwOEEgkoNArRAWTjK4plCV7tkp21wE9T/fYEkazEGFUfdG7co1tn8JovPxB+x5s4TFD0w1Oiy1iS8ffy/7weLLbjwUtkSUP4wfrkqEFW3wo7sH6dPeQmL9oi1btuwSGeYxDGJ6/oFgdgZZ1gb8/pjA+4flYbkwkIsFucTH280Eqgc/7imSA1NxAH6MZIK5neBzCnfjr5Z5AgUD79EIJ7xpwkKNM1on5mjkdgMHTiTHpTVijndBu65SaYsYOwbyV7OExevWyyAuTX8wCS5DU/iPG562U2Fwz3iZ9keEFT37VlfeEe1yaiclJe3PzMzMFRnI93s87OHcve3IauKePHbQ4xUa1NPS0rKhPL3tpxIHspvaATzjaqNB6IDMM1Ef04TFNZa4ISyuzYwycQSaGdnO7a2WCIu3110yLcjmeY2YCjmBCCt+iOtM/kvYzlMzceLE3CMAERGlVlWzx/flQ0hEjZCoCgoK9sP9+m0dXpygTgdyKjStyxUbZG0d9olag0kC7RSExUnrflXgqgXJwmUdbyfLhMXv7+3wWY7vhmxzRFjxR1zn4QTS/Uq1Tp06ddeJEydKWAQoLy8vnTFjRqruV7gZyl3qdObPSID2FJ7ozSmtYA+e9GJB4+s0hMXfp7tDS9aN2rzwdgkrNI65k8BOn+Py8gmtXVW25DQ4fIQIKwoeoYs5wWjtFc1IRBAKIQym8ng81ehx1JMdhlQYHSMVpXfqCXX5t40j6/PRA2nV3tbZCCvk4IA63mviNOh2BnpcXgrayTZhaYzoV+FyziiOSqA9r4Z7r9CWxQNohbnGDPqdCCta4Hag9br1fA16FJubm4PW9aamJh/+H/6uD6j8JJJz22KgRaLnbQpu3jWwcSHx7kJCAbnRrgcTj7LCWC2B3Ky4ZwIu1aMp8MxLrLwfxizB/X+H+zMUms1xfkbiQFkoBkbzo11VL0aeR4M+x4NDBmL2WexT7nmt5/XELTd78FRr9ByjdiZ5v4usZBxFbVzS77cSw7innfTVH/UEHXgSouYxbkrv6v4U/vabDvRu5+Ak4RPuFjzWHQZTN7eixk8HYBArBoTiMWJ87PRw6pi1GP543y4hrHTq8fid3LfJ0tLi3i2jI48IhI4KWdYK3LZErRPH0MRwFfBOK0KVnTQSQicnrAxZfBa1TgcAGp9hKXUZERUhxku1J/iWs3aCW4UcJKt+soSN6KCiXiAQCJESVm+Z9w5taHbLR+eALE00hnVQDxAIBDNIUGR7KMBtWja1q1cVnuSh1PwEAsEsqdyl2uiOHmCzZeJuDIxyV5Sb52ZKHwKB0LlJa4OCXDDbxnsYmmCUAofHW83CvPCK8loiydBBIBAIQgAR/QgPAYkgkr2exxSuwoykaJzHqHPMKxZphg4MsKUWJxAIdrWsbvqUSS5kbphPLU0gEBwBRtQDqWx2gayaoNyJ1MIEAsFR8ODm8ZLMoVbkI/A2XkktSyAQXAM/Q3IszyobMElSFZixxEoqIQKBQLAFNMrzQ2ExZ/sK7lXEjCI7eOYOTIv9Iqa80aeWIRAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEDoV/g+luf5ncJl5VgAAAABJRU5ErkJggg==",
+            "defaultLogoLight": "data:image/png;base64,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",
+            "alt": "Bizagi"
+        },
+        "support": [
+            "Chrome",
+            "Firefox",
+            "Edge",
+            "IE10+"
+        ],
+        "less": "libs/js/json/base.theme.json.txt",
+        "templates": [
+            {
+                "name": "custom.theme.layout",
+                "src": "libs/tmpl/layout.theme.generator.tmpl.html"
+            },
+            {
+                "name": "custom.theme.layout.tabs",
+                "src": "libs/tmpl/previewTabs.theme.generator.tmpl.html"
+            },
+            {
+                "name": "custom.theme.category.list",
+                "src": "libs/tmpl/categoryControls.theme.generator.tmpl.html"
+            },
+            {
+                "name": "custom.theme.ui.controls.select",
+                "src": "libs/tmpl/select.theme.ui.control.tmpl.html"
+            },
+            {
+                "name": "custom.theme.ui.controls.new",
+                "src": "libs/tmpl/new.theme.ui.control.tmpl.html"
+            },
+            {
+                "name": "custom.theme.ui.controls.switch",
+                "src": "libs/tmpl/switch.theme.ui.control.tmpl.html"
+            },
+            {
+                "name": "custom.theme.ui.controls.radio",
+                "src": "libs/tmpl/radio.theme.ui.control.tmpl.html"
+            },
+            {
+                "name": "custom.theme.ui.controls.preview.workportal",
+                "src": "libs/tmpl/preview.workportal.theme.ui.control.tmpl.html"
+            },
+            {
+                "name": "custom.theme.ui.controls.preview.webparts",
+                "src": "libs/tmpl/preview.webparts.theme.ui.control.tmpl.html"
+            },
+            {
+                "name": "custom.theme.ui.controls.themes",
+                "src": "libs/tmpl/prebuild.theme.ui.control.tmpl.html"
+            },
+            {
+                "name": "custom.theme.ui.controls.save.panel",
+                "src": "libs/tmpl/save.theme.ui.control.tmpl.html"
+            },
+            {
+                "name": "custom.theme.ui.controls.new.panel",
+                "src": "libs/tmpl/new.dialog.theme.ui.control.tmpl.html"
+            },
+            {
+                "name": "custom.theme.ui.controls.change.background.image.panel",
+                "src": "libs/tmpl/changeBackgroundImages.dialog.ui.control.tmpl.html"
+            },
+            {
+                "name": "custom.theme.ui.controls.changeLogo.panel",
+                "src": "libs/tmpl/changeLogo.dialog.theme.ui.control.tmpl.html"
+            },
+            {
+                "name": "custom.theme.ui.controls.update.panel",
+                "src": "libs/tmpl/update.theme.ui.control.tmpl.html"
+            },
+            {
+                "name": "custom.theme.ui.controls.color.base",
+                "src": "libs/tmpl/color.base.theme.ui.control.tmpl.html"
+            },
+            {
+                "name": "access.denied.form",
+                "src": "libs/tmpl/access.denied.form.tmpl.html"
+            }
+        ],
+        "css": {
+            "securefonts": [
+                {
+                    "label": "Arial",
+                    "value": "Arial, 'Helvetica Neue', Helvetica, sans-serif"
+                },
+                {
+                    "label": "Franklin Gothic",
+                    "value": "'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif"
+                },
+                {
+                    "label": "Geneva",
+                    "value": "Geneva, Tahoma, Verdana, sans-serif"
+                },
+                {
+                    "label": "Helvetica Neue",
+                    "value": "'Helvetica Neue', Helvetica, Arial, sans-serif"
+                },
+                {
+                    "label": "Optima",
+                    "value": "Optima, Segoe, 'Segoe UI', Candara, Calibri, Arial, sans-serif"
+                },
+                {
+                    "label": "Open Sans",
+                    "value": "'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif"
+                },
+				{
+                    "label": "Segoe UI",
+                    "value": "'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif"
+                },
+                {
+                    "label": "Tahoma",
+                    "value": "Tahoma, Verdana, Segoe, sans-serif"
+                },
+                {
+                    "label": "Trebuchet MS",
+                    "value": "'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif"
+                },
+                {
+                    "label": "Verdana",
+                    "value": "Verdana, Geneva, sans-serif"
+                }
+            ],
+            "sideBackgrounds":[
+                {
+                    "label": "Mountains",
+                    "value": "url('bg-images/bg-landscape.png')",
+                    "src":"bg-images/bg-landscape.png"
+                },
+                {
+                    "label": "Artic",
+                    "value": "url('bg-images/bg-landscape-artic.png')",
+                    "src":"bg-images/bg-landscape-artic.png"
+                },
+                {
+                    "label": "Island",
+                    "value": "url('bg-images/bg-landscape-island.png')",
+                    "src":"bg-images/bg-landscape-island.png"
+                },
+                {
+                    "label": "Ligth House",
+                    "value": "url('bg-images/bg-landscape-lighthouse.png')",
+                    "src":"bg-images/bg-landscape-lighthouse.png"
+                },
+                {
+                    "label": "Analytics",
+                    "value": "url('bg-images/bg-landscape-analytics.png')",
+                    "src":"bg-images/bg-landscape-analytics.png"
+                },
+                {
+                    "label": "None",
+                    "value": "none",
+                    "src":"bg-images/not-alowed.png"
+                }
+            ]
+        },
+        "previewPanels": [
+            {
+                "id": "tabsWorkportal",
+                "name": "WorkPortal",
+                "url": "../index.html",
+                "css": "biz-ui-theme-panel-workportal"
+            }
+        ],
+        "localization": {
+            "en": "resources/bizagi.resources.json.txt",
+            "en_us": "resources/bizagi.resources.json.txt",
+            "es": "resources/bizagi.resources.es.json.txt",
+            "es_es": "resources/bizagi.resources.es-es.json.txt",
+            "de": "resources/bizagi.resources.de.json.txt",
+            "fr": "resources/bizagi.resources.fr.json.txt",
+            "it": "resources/bizagi.resources.it.json.txt",
+            "ja": "resources/bizagi.resources.ja.json.txt",
+            "nl": "resources/bizagi.resources.nl.json.txt",
+            "pt-br": "resources/bizagi.resources.pt-br.json.txt",
+            "pt": "resources/bizagi.resources.pt.json.txt",
+            "ru": "resources/bizagi.resources.ru.json.txt",
+            "zh": "resources/bizagi.resources.zh.json.txt",
+			"cs-cz": "resources/bizagi.resources.cs-cz.json.txt",
+			"cs": "resources/bizagi.resources.cs-cz.json.txt",
+			"ar": "resources/bizagi.resources.ar.json.txt",
+			"ar-sa": "resources/bizagi.resources.ar.json.txt"
+        }
+    }
+}

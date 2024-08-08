@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="BizAgiBPM.WebServices.SecureCacheSOA" Factory="BizAgiBPM.WebServices.CacheServiceHostFactory" %>

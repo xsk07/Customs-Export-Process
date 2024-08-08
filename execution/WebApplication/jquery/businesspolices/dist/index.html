@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head><base href="./">
+  <meta charset="utf-8">
+  <title>Businesspolices</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    .loader {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      display: flex;
+    }
+
+    .spinner {
+      width: 40px;
+      height: 40px;
+      position: relative;
+      margin: auto;
+    }
+
+    .double-bounce1,
+    .double-bounce2 {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #333;
+      opacity: 0.6;
+      position: absolute;
+      top: 0;
+      left: 0;
+      -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+      animation: sk-bounce 2.0s infinite ease-in-out;
+    }
+
+    .double-bounce2 {
+      -webkit-animation-delay: -1.0s;
+      animation-delay: -1.0s;
+    }
+
+    @-webkit-keyframes sk-bounce {
+      0%,
+      100% {
+        -webkit-transform: scale(0.0)
+      }
+      50% {
+        -webkit-transform: scale(1.0)
+      }
+    }
+
+    @keyframes sk-bounce {
+      0%,
+      100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+      }
+      50% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+      }
+    }
+  </style>
+<link rel="stylesheet" href="styles.1c5a4cd448ec8d75da8e.css"></head>
+
+<body>
+  <app-root>
+    <div class="loader">
+      <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+      </div>
+    </div>
+  </app-root>
+<script src="polyfills-es5.2364f706236f53f5e0ea.js" nomodule defer></script><script src="polyfills-es2015.fdd064a6aac7d6cd6975.js" type="module"></script><script src="runtime-es2015.b948044840398824f16e.js" type="module"></script><script src="main-es2015.75e8770140d461a60757.js" type="module"></script><script src="runtime-es5.b948044840398824f16e.js" nomodule defer></script><script src="main-es5.75e8770140d461a60757.js" nomodule defer></script></body>
+
+</html>

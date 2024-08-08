@@ -1,0 +1,36 @@
+﻿<html>
+<head>
+    <title>Tramite</title>
+    <link href="js/Kendo/styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="js/Kendo/styles/kendo.flat.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jsonSetter.js"></script>
+    <script type="text/javascript" src="js/Highcharts/highcharts.src.js"></script>
+    <script type="text/javascript" src="js/Highcharts/highcharts-more.src.js"></script>
+    <script type="text/javascript" src="js/hicharts-loader.js"></script>
+    <script type="text/javascript" src="../jquery/common/base/js/lib/jquery.rest.js"></script>
+    <script type="text/javascript" src="js/Kendo/js/kendo.all.min.js"></script>
+    <script type="text/javascript" src="js/kendo-viz-loader.js"></script>
+</head>
+<body>
+    <form action="" id="formdata" method="POST" onsubmit="">
+        <div id="div-chart-type">
+            <select id="chart-type">
+                <option value="bar">bar</option>
+                <option value="column">column</option>
+                <option value="area">area</option>
+                <option value="line">line</option>
+            </select>
+            <input id="div-chart-stacked" type="checkbox" checked="checked" /><span>Stacked:</span>
+        </div>
+    <div id="highcharts-wrapper">
+        <div id="highchart-viz-chart">
+        </div>
+    </div>
+    <div id="kendo-chart-wrapper" style="height: 400px;">
+        <div id="kendo-viz-chart">
+        </div>
+    </div>
+    </form>
+</body>
+</html>

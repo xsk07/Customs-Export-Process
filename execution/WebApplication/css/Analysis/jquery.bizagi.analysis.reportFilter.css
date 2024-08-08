@@ -1,0 +1,156 @@
+legend
+{
+    padding: 2px;
+}
+.ui-analysis-report-filter-detail label
+{
+    padding: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #666666;
+    text-align: left;
+}
+.ui-analysis-report-filter-detail-header
+{
+    height: 32px;
+}
+.ui-analysis-report-filter-detail-header label
+{
+    float: left;
+    display: inline-block;
+    width: 50%;
+    line-height: 24px;
+    height: 20px;
+}
+.ui-analysis-report-filter-detail-header div
+{
+    float: right;
+    display: inline-block;
+    padding: 5px;
+    position: relative;
+}
+.ui-analysis-report-filter-detail-selectDimension
+{
+    width: 200px;
+    float: right;
+}
+
+.dimensionDescription
+{
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 32px;
+    padding-left: 4px;
+    padding-right: 2px;
+    padding-top: 5px;
+    margin-bottom: 5px;
+    vertical-align: middle;
+}
+
+.dimensionDescription label
+{
+    font-size: 0.9em;
+    font-weight: normal;
+}
+
+.dimensionDescription img
+{
+    vertical-align: middle;
+    float: left;
+    margin-left: 4px;
+    margin-top: 4px;
+    margin-right: 5px;
+    height: 20px;
+    width: 20px;
+}
+
+.ui-analysis-report-filter-detail-content
+{
+    height: 260px;
+    padding: 0px 10px 10px 10px;
+}
+.ui-analysis-report-filter-detail-content-spacer
+{
+    height: 5px;
+}
+.ui-analysis-report-filter-detail-content-label
+{
+    min-height: 16px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-size: 1.0em;
+    font-weight: bold;
+    color: #666666;
+    text-align: left;
+}
+.ui-analysis-report-filter-detail-tabs
+{
+    height: 210px;
+}
+.ui-analysis-report-filter-detail-tab
+{
+    margin: 0px;
+    overflow: auto;
+    height: 100%;
+}
+.ui-analysis-report-filter-detail-footer
+{
+    height: 30px;
+}
+.ui-analysis-report-filter-detail-footer label
+{
+    width: auto !important;
+}
+.ui-analysis-report-filter-detail-footer > div
+{
+    float: left;
+    display: inline-block;
+    padding: 5px;
+    position: relative;
+}
+.ui-analysis-report-filter-detail-footer label
+{
+    padding-left: 30px;
+    line-height: 16px;
+}
+/* Controles especiales*/
+.ui-analysis-report-filter-detail-multiSearch
+{
+    padding-top: 10px;
+}
+.ui-analysis-report-filter-detail-multiTree
+{
+    padding-top: 10px;
+}
+
+.ui-analysis-multiTree
+{
+    height: 135px;
+    overflow: auto;
+    position: relative;
+}
+.ui-analysis-report-filter-detail-multiTree .custom-checkbox .ui-tree-node-text
+{
+    height: 12px !important;
+    min-height: 12px !important;
+    line-height: 12px !important;
+}
+.ui-analysis-report-filter-detail-multiTree .ui-tree .ui-tree-node-header A
+{
+    height: 26px;
+}
+/* Dimension icons*/
+.ui-analysis-fixed-dimension .ui-selectmenu-item-icon
+{
+    background: url(../../img/analysis/cube_red.png) 0 0 no-repeat;
+}
+.ui-analysis-system-dimension .ui-selectmenu-item-icon
+{
+    background: url(../../img/analysis/cube_grey.png) 0 0 no-repeat;
+}
+.ui-analysis-administrable-dimension .ui-selectmenu-item-icon
+{
+    background: url(../../img/analysis/cube_blue.png) 0 0 no-repeat;
+}

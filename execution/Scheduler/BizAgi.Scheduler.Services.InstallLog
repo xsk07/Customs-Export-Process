@@ -1,0 +1,15 @@
+﻿Installazione dell'assembly 'C:\Bizagi\Projects\DoganaProj\Scheduler\BizAgi.Scheduler.Services.exe' in corso...
+I parametri interessati sono:
+   logtoconsole = 
+   name = BizAgiDoganaProjSchedulerService
+   assemblypath = C:\Bizagi\Projects\DoganaProj\Scheduler\BizAgi.Scheduler.Services.exe
+   logfile = C:\Bizagi\Projects\DoganaProj\Scheduler\BizAgi.Scheduler.Services.InstallLog
+Installazione del servizio BizAgiDoganaProjSchedulerService in corso...
+Installazione di BizAgiDoganaProjSchedulerService completata.
+È in corso la creazione dell'origine di EventLog BizAgiDoganaProjSchedulerService nel log Application...
+Commit dell'assembly 'C:\Bizagi\Projects\DoganaProj\Scheduler\BizAgi.Scheduler.Services.exe' in corso...
+I parametri interessati sono:
+   logtoconsole = 
+   name = BizAgiDoganaProjSchedulerService
+   assemblypath = C:\Bizagi\Projects\DoganaProj\Scheduler\BizAgi.Scheduler.Services.exe
+   logfile = C:\Bizagi\Projects\DoganaProj\Scheduler\BizAgi.Scheduler.Services.InstallLog

@@ -1,0 +1,85 @@
+{
+  "preview": "",
+  "theme": "0748c562-1d16-439e-8795-8f0be0bb5971",
+  "displayName": "Smart Template",
+  "footer": {
+    "id": "l456c970-1bf9-4a34-8d4c-e3cte09c8176",
+    "name": "",
+    "parametersBinding": {},
+    "parameters": {
+      "copyright": "Copyright © Bizagi | 2017",
+      "nSections": 2
+    },
+    "styles": {
+      "backColor": "#282828",
+      "contentFontColor": "#c7c7c7",
+      "contentFontSize": 12,
+      "height": 100,
+      "sectionFontColor": "#e9e9e9",
+      "sectionFontSize": 14,
+      "showCopyright": true
+    },
+    "type": "footer"
+  },
+  "header": {
+    "id": "938ed95c-36c7-43d1-808e-fa8d370d3eb3",
+    "name": "",
+    "navigation": [],
+    "parametersBinding": {},
+    "parameters": {
+      "heroImage": "",
+      "siteLogo": "{{bzImagesSource}}a50f07ee-5225-4d6d-aa9a-01643fb79eb8/fda525f6-dd69-4c12-a492-2003d7e1966e.png{{/bzImagesSource}}"
+    },
+    "styles": {
+      "showLogo": true,
+      "logoSize": "105",
+      "height": "65"
+    },
+    "type": "header"
+  },
+  "images": [
+    "{{bzImagesSource}}2001c2f1-0761-47cf-902f-5552ed16902c/9a8b4fbd-a0f6-4c3e-b52c-07bcf91cdb77.jpg{{/bzImagesSource}}",
+    "{{bzImagesSource}}2001c2f1-0761-47cf-902f-5552ed16902c/8f5834ce-ddd2-40a8-900b-2d87f8fabd05.jpg{{/bzImagesSource}}",
+    "{{bzImagesSource}}2001c2f1-0761-47cf-902f-5552ed16902c/482b8aee-c911-45e3-bafa-71c25315a5dc.jpg{{/bzImagesSource}}"
+  ],
+  "sections": {
+    "home": {
+      "displayName": "Home",
+      "layouts": [
+        {
+          "id": "774810e2-033a-4c55-a7be-9e8d13977fa7",
+          "grid": {
+            "size": 1920,
+            "boundaries": {
+              "left": 360,
+              "right": 1560,
+              "width": 360
+            },
+            "layoutSize": 1200
+          },
+          "preview": "{{bzImagesSource}}a50f07ee-5225-4d6d-aa9a-01643fb79eb8/26116b48-4cba-4922-9c23-71352e8ac6ed.jpg{{/bzImagesSource}}",
+          "controls": [],
+          "displayName": "Home",
+          "hero": {
+            "id": "776687f5-179e-4ef7-84a1-38b935c20c99",
+            "name": "",
+            "parametersBinding": {},
+            "styles": {
+              "heroImageHeight": 598,
+              "showHeroImage": true,
+              "heroImage": "",
+              "heroSpace": "fluid",
+              "scale": "tofill",
+              "scaleProportionally": 50,
+              "imgOpacity": 100,
+              "imgColorOpacity": 0,
+              "imgColorBackgroundOpacity": "transparent",
+              "backgroundPosition": "center"
+            },
+            "type": "hero"
+          }
+        }
+      ]
+    }
+  }
+}

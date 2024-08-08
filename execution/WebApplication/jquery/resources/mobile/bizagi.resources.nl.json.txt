@@ -1,0 +1,7 @@
+{
+    "bizagi-rateus-title": "Hou je van het gebruik van Bizagi?",
+    "bizagi-rateus-description": "Neem een minuut om te beoordelen ons!",
+    "bizagi-rateus-no": "NEE, DANK U",
+    "bizagi-rateus-yes": "JA",
+    "bizagi-rateus-later": "HERINNER MIJ HIEROVER LATER"
+}

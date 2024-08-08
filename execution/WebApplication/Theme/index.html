@@ -1,0 +1,54 @@
+﻿<!doctype html>
+<html lang="en" version="0.1.0" ng-app="_themeBuilder">
+<head>
+    <meta charset="UTF-8">
+    <title>Theme Builder</title>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:600,300,400,300italic,600italic,700,700italic,900,200italic,200,400italic' rel='stylesheet' type='text/css'>
+    <link href="app/ui/bootstrap/bootstrap.css" rel="stylesheet">
+	<link href="app/ui/bootstrap/bootstrap-theme.css" rel="stylesheet">
+	<link href="app/ui/font-awesome.css" rel="stylesheet">
+	<link href="app/ui/colorpicker.css" rel="stylesheet">
+    <link rel="stylesheet/less" type="text/css"  href="app/ui/less/app.less">
+		
+</head>
+<body ng-controller="ThemeBuilderController" >
+    <ui-view></ui-view>
+    <script src="app/libs/app.config.js"></script>
+    <script src="app/libs/jquery/jquery.js"></script>
+    <script src="app/libs/less/less.js"></script>
+    <script src="app/libs/colorthief/color-thief.js"></script>
+    <script src="app/libs/underscore/underscore.js"></script>
+    <script src="app/libs/bootstrap/bootstrap.js"></script>
+    <script src="app/libs/colorpicker/colorpicker.js"></script>
+    <script src="app/libs/jszip/jszip.min.js"></script>
+    <script src="app/libs/jszip/FileSaver.js"></script>
+    <script src="app/libs/angular/angular.js"></script>
+    <script src="app/libs/angular/angular-animate.js"></script>
+    <script src="app/libs/angular/angular-base64.js"></script>
+    <script src="app/libs/angular/angular-cookies.js"></script>
+    <script src="app/libs/angular/angular-moment.js"></script>
+    <script src="app/libs/angular/angular-resource.js"></script>
+    <script src="app/libs/angular/angular-route.js"></script>
+    <script src="app/libs/angular/angular-sanitize.js"></script>
+    <script src="app/libs/angular/angular-ui-router.js"></script>
+    <script src="app/libs/angular/colorpicker/angular.colorpicker.js"></script>
+    <script src="app/libs/angular/colorpicker/angular.colorpicker.controller.js"></script>
+        
+    <script src="app/libs/angular/splashScreens/angular.splash.screens.controller.js"></script>
+    
+    <script src="app/libs/angular/uiBootstrap/ui-bootstrap.js"></script>
+    <script src="app/libs/angular/uiBootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="app/modules/_themeBuilder/theme.builder.module.js"></script>
+    <script src="app/modules/_themeBuilder/theme.builder.module.constants.js"></script>
+    <script src="app/modules/_themeBuilder/theme.builder.module.controller.js"></script>
+    <script src="app/modules/_themeBuilder/theme.builder.module.desktop.controller.js"></script>
+    <script src="app/modules/_themeBuilder/theme.builder.module.mobile.controller.js"></script>
+    <script src="app/modules/_themeBuilder/theme.builder.module.services.js"></script>
+    <script src="app/modules/_themeBuilder/theme.builder.module.image.color.js"></script>
+    <script src="app/modules/_themeBuilder/theme.builder.module.routing.js"></script>
+    <script src="app/modules/selector/selector.module.js"></script>
+    <script src="app/modules/selector/selector.module.controller.js"></script>
+
+    <div id="overlayArea" ng-click="overlayclicked()"></div>
+</body>
+</html> 

@@ -1,0 +1,7 @@
+{
+    "bizagi-rateus-title": "Mögen Sie Bizagi?",
+    "bizagi-rateus-description": "Bitte nehmen Sie sich eine Minute, um uns zu bewerten!",
+    "bizagi-rateus-no": "NEIN DANKE",
+    "bizagi-rateus-yes": "JA",
+    "bizagi-rateus-later": "ERINNERN SIE MICH ZU DIESEM SPÄTER"
+}

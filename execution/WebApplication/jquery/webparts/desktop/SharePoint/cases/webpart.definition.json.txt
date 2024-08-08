@@ -1,0 +1,38 @@
+﻿{
+	"name": "cases",
+	"defaultDevice":"desktop",
+	"devices":{
+    	    "desktop":{
+                "js": [ {"src": "desktop/cases.js"},{"src": "../../../../overrides/js/desktop/sharePoint/cases/bizagi.webparts.cases.override.js"}],
+                "css": [ {"src": "desktop/cases.css"} ],
+				"theme": {"src": "bizagi.webpart.cases.theme.less"},
+                "tmpl": [
+                    {alias: "cases",  "src": "desktop/cases.tmpl.html#ui-bizagi-webpart-cases"},
+                    {alias: "pagination-inbox",  "src": "desktop/cases.tmpl.html#ui-bizagi-webpart-cases-pagination-inbox"} ,
+                    {alias: "pagination",  "src": "desktop/cases.tmpl.html#ui-bizagi-webpart-cases-pagination"}
+                ]
+	        },
+	         "responsive":{
+                     "js": [ {"src": "desktop/cases.js"},{"src": "../../../../overrides/js/desktop/sharePoint/cases/bizagi.webparts.cases.override.js"}],
+                     "css": [ {"src": "desktop/cases.css"} ],
+					 "theme": {"src": "bizagi.webpart.cases.theme.less"},
+                     "tmpl": [
+                         {alias: "cases",  "src": "desktop/cases.tmpl.html#ui-bizagi-webpart-cases"},
+                         {alias: "pagination-inbox",  "src": "desktop/cases.tmpl.html#ui-bizagi-webpart-cases-pagination-inbox"} ,
+                         {alias: "pagination",  "src": "desktop/cases.tmpl.html#ui-bizagi-webpart-cases-pagination"}
+                     ]
+            	    },
+            "tablet_ios":{
+               "reuseResourceFrom":"responsive",
+            },
+            "tablet_android":{
+                "reuseResourceFrom":"responsive",
+            },
+            "smartphone_ios":{
+                "reuseResourceFrom":"responsive"
+            },
+            "smartphone_android":{
+                "reuseResourceFrom":"responsive"
+            }
+	}
+}

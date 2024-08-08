@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script type='text/javascript' src='../../jquery/js/lib/steal.js'></script>
+    <script type='text/javascript' src='../../jquery/js/bizagi.loader.js'></script>
+    <script type="text/javascript" language="javascript">
+    	// Gets the loader instance, and load the module
+    	// Redefine path to base
+        var BIZAGI_PATH_TO_BASE = "../../";
+        var loader = bizagi.loader;
+        loader.init(function() {
+        //Load the style 
+           var cssName = "jquery/production/"+loader.build+"/desktop/css/workportal.desktop.production.css";
+            loader.loadFile({
+                src: cssName,
+                type: "css"
+            });            
+    	});
+        
+    </script>
+	<script type="text/javascript">
+		// Redefine path to base
+        try{
+			var BIZAGI_PATH_TO_BASE = window.parent.BIZAGI_PATH_TO_BASE;
+			var BIZAGI_LANGUAGE = window.parent.BIZAGI_LANGUAGE;
+			var BIZAGI_ENVIRONMENT = window.parent.BIZAGI_ENVIRONMENT;
+			var BIZAGI_ENABLE_LOG =  window.parent.BIZAGI_ENABLE_LOG;
+			var BIZAGI_DEFAULT_CURRENCY_INFO = window.parent.BIZAGI_DEFAULT_CURRENCY_INFO;
+			var BIZAGI_SETTINGS= window.parent.BIZAGI_SETTINGS;
+		}catch (ex){}
+		function inicio()
+		{
+			try{
+				// Apply translations for labels
+				if (BIZAGI_LANGUAGE=='en' || BIZAGI_LANGUAGE=='en-US')
+				{
+					document.getElementById("title").innerText="Forward by e-mail";
+					document.getElementById("lblEmail").innerText="Email*:";
+					document.getElementById("lblSubject").innerText="Subject*:";
+					document.getElementById("lblComments").innerText="Comments:";
+				}
+				else if (BIZAGI_LANGUAGE=='pt-BR' || BIZAGI_LANGUAGE=='pt')
+				{
+					document.getElementById("title").innerText="Reenviar por e-mail";
+					document.getElementById("lblEmail").innerText="Email*:";
+					document.getElementById("lblSubject").innerText="Assunto*:";
+					document.getElementById("lblComments").innerText="Comentários:";
+				}
+			} catch(ex){}
+		}
+	</script>
+</head>
+<body style="width: 100%; height: 100%; margin: 0px; padding: 0px; overflow: auto" onload="javascript:inicio();">
+	<table width="100%"><tr><td align="center">
+		<div class="ui-bizagi-container clearfix ui-bizagi-container-group" style="width: 90%; box-shadow: 3px 3px 3px 3px gray;">
+			<h3 id="title" class="ui-helper-reset ui-state-active ui-corner-top" 
+				style="font-size: 18px; background: none; border: 0px; font-weight: bold; text-align: center;">
+					Remitir por correo
+			</h3>
+			<div class="ui-bizagi-container clearfix ui-bizagi-container-panel">
+				<div class="ui-bizagi-render ui-corner-all ui-widget-content ui-bizagi-render-display-normal">
+					<span class="ui-bizagi-label ui-bizagi-render-align-left"><label id="lblEmail" style="font-weight: bold;">Email*:</label></span>
+					<div class="ui-bizagi-control ui-bizagi-render-align-left">
+						<div class="ui-bizagi-control-wrapper">
+							<span class="ui-bizagi-render-control ">
+								<input type="text" id="email" value="" size="90"/>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="ui-bizagi-render ui-corner-all ui-widget-content ui-bizagi-render-display-normal">
+					<span class="ui-bizagi-label ui-bizagi-render-align-left"><label id="lblSubject" style="font-weight: bold;">Asunto*:</label></span>
+					<div class="ui-bizagi-control ui-bizagi-render-align-left">
+						<div class="ui-bizagi-control-wrapper">
+							<span class="ui-bizagi-render-control ">
+								<textarea id="subject" style="color: rgb(86, 86, 86); overflow: auto;" class="ui-bizagi-render-text-extended" rows="5"></textarea>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="ui-bizagi-render ui-corner-all ui-widget-content ui-bizagi-render-display-normal">
+					<span class="ui-bizagi-label ui-bizagi-render-align-left"><label id="lblComments">Comentarios:</label></span>
+					<div class="ui-bizagi-control ui-bizagi-render-align-left">
+						<div class="ui-bizagi-control-wrapper">
+							<span class="ui-bizagi-render-control ">
+								<textarea rows="10" id="comments" style="color: rgb(86, 86, 86); overflow: auto;" class="ui-bizagi-render-text-extended"></textarea>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</td></tr></table>
+</body>
+</html>

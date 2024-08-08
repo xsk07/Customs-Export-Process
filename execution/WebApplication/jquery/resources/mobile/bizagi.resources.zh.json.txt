@@ -1,0 +1,7 @@
+﻿{
+    "bizagi-rateus-title": "你喜欢使用Bizagi吗？",
+    "bizagi-rateus-description": "请花一分钟给我们评价！",
+    "bizagi-rateus-no": "不用了，谢谢",
+    "bizagi-rateus-yes": "是",
+    "bizagi-rateus-later": "提醒我关于这个后"
+}

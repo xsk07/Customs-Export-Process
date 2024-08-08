@@ -1,0 +1,136 @@
+{
+	"dateFormat": {
+		"long": [
+			" - ",
+			"MMMM DD, YYYY",
+			"dddd, MMMM, YYYY",
+			"dddd, DD MMMM, YYYY",
+			"dd MMMM, YYYY",
+			"dddd, MMMM DD, YYYY",
+			"MMMM DD, YYYY",
+			"DD MMMM, YYYY"
+		],
+		"short": [
+			" - ",
+			"M/D/YYYY",
+			"M/D/YY",
+			"MM/DD/YY",
+			"MM/DD/YYYY",
+			"YY/MM/DD",
+			"YYYY/MM/DD",
+			"DD/MM/YYYY",
+			"DD/MMMM/YY",
+			"DD/MM/YY"
+		],
+		"separator": [{
+			"tag": "foward_slash",
+			"label": "siteeditor.cultureconfig.DEFAULT",
+			"value": "/"
+			},
+			{
+				"tag": "foward_slash",
+				"label": "siteeditor.cultureconfig.FOWARD_SLASH",
+				"value": "/"
+			},
+			{
+				"tag": "space",
+				"label": "siteeditor.cultureconfig.SPACE",
+				"value": " "
+			},
+			{
+				"tag": "hyphen",
+				"label": "siteeditor.cultureconfig.HYPHEN",
+				"value": "-"
+			},
+			{
+				"tag": "dot",
+				"label": "siteeditor.cultureconfig.DOT",
+				"value": "."
+			}
+		]
+	},
+	"timeFormat": [
+		{
+		"label": "siteeditor.cultureconfig.DEFAULT",
+		"format": "hh:mm:ss A"
+		},
+		{
+			"label": "h:mm:ss tt",
+			"format": "h:mm:ss A"
+		},
+		{
+			"label": "H:mm:ss",
+			"format": "H:mm:ss"
+		},
+		{
+			"label": "HH:mm:ss",
+			"format": "HH:mm:ss"
+		}
+	],
+	"numbersFormat": {
+		"negative": [{
+			"value": 0,
+			"label": "siteeditor.cultureconfig.DEFAULT",
+			"color": "default"
+			},
+			{
+				"value": 0,
+				"label": "-$1,234.56",
+				"color": "default"
+			},
+			{
+				"value": 1,
+				"label": "$(1,234.56)",
+				"color": "default"
+			}
+		],
+		"thousandsSeparator": [{
+			"tag": "comma",
+			"label": "siteeditor.cultureconfig.DEFAULT",
+			"value": ","
+			},
+			{
+				"tag": "comma",
+				"label": "siteeditor.cultureconfig.COMMA",
+				"value": ","
+			},
+			{
+				"tag": "dot",
+				"label": "siteeditor.cultureconfig.DOT",
+				"value": "."
+			},
+			{
+				"tag": "apostrophe",
+				"label": "siteeditor.cultureconfig.APOSTROPHE",
+				"value": " ' "
+			}
+		],
+		"decimalSeparator": [
+			{
+				"tag": "comma",
+				"label": "siteeditor.cultureconfig.DEFAULT",
+				"value": ","
+			},
+			{
+				"tag": "comma",
+				"label": "siteeditor.cultureconfig.COMMA",
+				"value": ","
+			},
+			{
+				"tag": "dot",
+				"label": "siteeditor.cultureconfig.DOT",
+				"value": "."
+			},
+			{
+				"tag": "hyphen",
+				"label": "siteeditor.cultureconfig.HYPHEN",
+				"value": "-"
+			},
+			{
+				"tag": "foward_slash",
+				"label": "siteeditor.cultureconfig.FOWARD_SLASH",
+				"value": "/"
+			}
+		]
+	}
+}

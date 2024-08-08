@@ -1,0 +1,306 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+body {
+    background: #162936;
+    font-family: "Segoe UI", "OriyaSangamMN", "Thonburi", "Roboto" "Droid Sans", Geneva, Arial, sans-serif;
+}
+
+input:focus {
+    background: rgba(65, 89, 104, 0.7);
+}
+
+#bz-form-login-logo {
+    height: 79px;
+    display: inline-block;
+    background: url('images/bizagi-logo-s.png') center no-repeat;
+    float: center;
+    width: 200px;
+    text-align: left;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2 ),
+only screen and (min-device-pixel-ratio: 2) {
+    #bz-form-login-logo {
+        background: url('images/bizagi-logo.png') center no-repeat;
+        background-size: 200px 79px;
+    }
+}
+
+label {
+    color: white;
+    font-size: 9px;
+    display: inline-block;
+    margin: 0px 0px 4px 10px;
+}
+
+.bz-form-login-button,
+.bz-form-login-button-demo,
+.bz-form-next-button {
+    background: rgb(65, 89, 104);
+    border-radius: 5px;
+    padding: 5px;
+    color: #E1E7EC;
+    display: block;
+    width: 98%;
+    font-size: 15px;
+    border: 1px solid #7F92A0;
+    height: 35px;
+}
+
+.bz-form-login-button {
+    margin-top: 20px;
+}
+
+.bz-form-grouped-buttons {
+    position: relative;
+    width: 215px;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -107px;
+    margin-top: 65px;
+}
+
+.bz-form-back-button,
+.bz-form-login-history-button {
+    background: transparent;
+    border-radius: 5px;
+    padding: 5px;
+    color: #E1E7EC;
+    display: block;
+    font-size: 14px;
+    border: 1px solid #7F92A0;
+    height: 35px;
+}
+
+.bz-form-back-button {
+    float: left;
+    width: 49%;
+}
+
+.bz-form-login-history-button {
+    float: right;
+    width: 49%;
+}
+
+.bz-form-login {
+    background: rgba(65, 89, 104, 0.2);
+    color: rgba(255, 255, 255, 0.5);
+    padding: 10px 0 10px 10px;
+    margin: 0 0 12px 0;
+    font-size: 12.5px;
+    width: 98%;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+}
+
+.bz-form-login-inputs,
+.bz-container-logo {
+    position: relative;
+    top: 10%;
+    left: 50%;
+    right: 50%;
+    width: 215px;
+    margin-left: -107px;
+    max-height: 80px;
+}
+
+.bz-form-login-inputs {
+    margin-top: 40px;
+}
+
+.bz-container-logo {
+    text-align: center;
+}
+
+.session,
+.form,
+.fields {
+    background: #F03548;
+    width: 98%;
+    position: relative;
+    border-radius: 3px;
+    margin: -5px 0 5px 0;
+    font-size: 10px;
+    min-height: 15px;
+    color: white;
+    opacity: 0.8;
+    text-align: center;
+}
+
+.highlight {
+    background: #155182;
+}
+
+
+/* tablet */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+    {
+    .bz-form-login-inputs,
+    .bz-container-logo {
+        width:415px;
+        margin-left:-207px;
+    }
+
+    .bz-form-login-inputs {
+        margin-top: 75px;
+    }
+
+    .bz-form-login-button {
+        margin-top: 40px;
+    }
+
+    .bz-form-grouped-buttons {        
+        padding-bottom: 50px;
+        margin-left:-204px;
+        width:408px;
+        position: absolute;
+        top: 450px;
+    }
+    
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 640px)
+and (orientation:landscape) {
+
+    .bz-form-login-inputs,
+    .bz-container-logo {
+        top: 1%;
+    }
+
+    .bz-form-login-inputs {
+        margin-top: 4px;
+    }
+
+    .bz-form-login-button {
+        margin-top: 0;
+    }
+
+    .bz-form-grouped-buttons {
+        bottom: 0;
+        position: absolute;
+        top: 185px;
+    }
+
+    .bz-form-login-inputs-container > label {
+        display: none;
+    }
+
+    .bz-form-login {
+        color: rgba(255, 255, 255, 0.5);
+        padding: 10px 0 10px 10px;
+        margin: 0 0 12px 0;
+        font-size: 10.5px;
+        width: 98%;
+        border: none;
+        border-radius: 5px;
+        height: 30px;
+    }
+}
+
+/* Z1 - LG G2 */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px)
+and (orientation : portrait) {
+    .bz-form-login-inputs {
+        margin-top: 0;
+    }
+
+    .bz-form-grouped-buttons {
+        position: absolute;
+        width: 215px;
+        top: 300px;
+        bottom: 0;
+    }
+}
+
+
+.bz-display-none
+{
+    display: none;
+}
+
+/* Domain Popup Android */
+
+.bz-form-login-domain-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    left: -1000px;
+    top: 0;
+}
+
+.bz-form-login-domain-shadow {
+    width: 100%;
+    height: 100%;
+    background-color: #162936;
+    opacity: 0.9;
+    position: absolute;
+}
+
+
+.bz-form-login-domain-items-shade {
+    width: auto;
+    height: 42px;
+    top: -42px;
+    position: relative;
+}
+
+.bz-form-login-domain {
+    width: 95%;
+    height: auto;
+    min-height: 100px;
+    max-height: 250px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #282828;
+    text-align: center;
+}
+
+.bz-form-login-domain-label{
+    height:50px;
+    line-height: 50px;
+    border-bottom: 2px solid #33b8e9;
+    text-transform: uppercase;
+}
+
+.bz-form-login-domain-label label{
+    color: #33b8e9;
+    font-size: 12px;
+}
+
+.bz-form-login-domain-container-animate{
+    opacity:1;
+    left:0;
+}
+
+.bz-form-login-domain-button-container {
+    height: auto;
+    min-height: 100px;
+    max-height: 201px;
+}
+
+.bz-form-domain-button {
+    background: #282828;
+    opacity: 0.5;
+    border-radius: 0;
+    padding: 1px;
+    color: white;
+    display: block;
+    width: 100%;
+    border: 1px solid #434343;
+    height: 50px;
+    font-size: 12px;
+}
+

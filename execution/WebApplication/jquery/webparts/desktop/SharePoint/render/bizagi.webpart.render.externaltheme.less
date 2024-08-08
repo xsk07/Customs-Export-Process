@@ -1,0 +1,3045 @@
+/* ==========================================================================
+   Webparts Overrides - New case
+   ========================================================================== */
+   
+/* Scrollbar
+========================================================================== */
+
+#bz-webpart {
+    overflow-y: auto;
+}
+#bz-webpart::-webkit-scrollbar,
+#bz-webpart .ui-select-dropdown.open ul::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+#bz-webpart::-webkit-scrollbar-button
+,
+#bz-webpart .ui-select-dropdown.open ul::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+#bz-webpart::-webkit-scrollbar-thumb,
+#bz-webpart .ui-select-dropdown.open ul::-webkit-scrollbar-thumb{
+    background: @form-grid-border;
+    border: none;
+    border-radius: 100px;
+}
+#bz-webpart::-webkit-scrollbar-thumb:hover,
+#bz-webpart .ui-select-dropdown.open ul::-webkit-scrollbar-thumb:hover {
+    background: @form-grid-border;
+}
+#bz-webpart::-webkit-scrollbar-thumb:active
+#bz-webpart .ui-select-dropdown.open ul::-webkit-scrollbar-thumb:active {
+    background: @title;
+}
+#bz-webpart::-webkit-scrollbar-track,
+#bz-webpart .ui-select-dropdown.open ul::-webkit-scrollbar-track {
+    background: @background;
+    border: none;
+    border-radius: 50px;
+}
+#bz-webpart::-webkit-scrollbar-track:hover,
+#bz-webpart .ui-select-dropdown.open ul::-webkit-scrollbar-track:hover {
+    background: @background;
+}
+#bz-webpart::-webkit-scrollbar-track:active,
+#bz-webpart .ui-select-dropdown.open ul::-webkit-scrollbar-track:active {
+    background: @background;
+}
+#bz-webpart::-webkit-scrollbar-corner,
+#bz-webpart .ui-select-dropdown.open ul::-webkit-scrollbar-corner {
+    background: transparent;
+}
+/* Headings
+  ========================================================================== */
+#bz-webpart .ui-bizagi-webpart-header-render-msg {
+    background: transparent;
+    border-bottom: 1px solid #DEDEDE;
+    padding: .9em 1.75em;
+}
+#bz-webpart .ui-bizagi-webpart-header-render-msg h2 {
+    font-weight: 700;
+    font-size: 1.5em;
+    color: @text;
+    margin-bottom: 3px;
+}
+#bz-webpart .ui-bizagi-webpart-header-render-msg h3 {
+    font-size: 11px;
+    height: 13px;
+    margin-top: 3px;
+}
+/* Forms, labels, input text, number, select, file
+  ========================================================================== */
+#bz-webpart input,
+#bz-webpart textarea {
+    font-size: 14px;
+    // border: 1px solid @color-second;
+}
+#bz-webpart input:focus,
+#bz-webpart textarea:focus {
+    outline: none;
+    border: 1px solid @title;
+}
+#bz-webpart ul li:focus{
+	outline: none;
+	border:none;
+}
+
+#bz-webpart #ui-bizagi-webpart-render-container a.ui-bizagi-render-link {
+    cursor:pointer !important;
+    color: @title !important;
+}
+#bz-webpart #ui-bizagi-webpart-render-container a:hover {
+    background-color:transparent;
+}
+#bz-webpart .ui-bizagi-render-control {
+    padding-top:0 !important;
+}
+/*Labels*/
+#bz-webpart label,
+#bz-webpart .ui-bizagi-label{
+	font-size:14px;
+    min-height: 15px;
+	color: @text;
+	font-weight:normal;
+}
+#bz-webpart .ui-bizagi-label .ui-bizagi-render-align-left label {
+    padding: 0 2em 0 4px;
+    line-height: 1em;
+}
+#bz-webpart .ui-bizagi-container-form {
+    background-color: @background;
+    font-size: 14px;
+    width: 98%;
+    margin: 1%;
+    padding: 0;
+    overflow: hidden;
+}
+#render-canvas .ui-bizagi-render input,
+#bz-webpart .ui-dialog .ui-bizagi-render input,
+#bz-webpart .ui-bizagi-render-text
+#bz-webpart .ui-dialog .ui-bizagi-render input,
+#bz-webpart .ui-dialog .ui-bizagi-render textarea,
+#bz-webpart .ui-dialog .ui-bizagi-render .ui-selectmenu,
+#bz-webpart #ui-bizagi-webpart-render-container .ui-bizagi-render input,
+#bz-webpart #ui-bizagi-webpart-render-container .ui-bizagi-render textarea,
+#bz-webpart #ui-bizagi-webpart-render-container .ui-bizagi-render .ui-selectmenu {
+    font-size: 14px;
+    font-family: 'Segoe UI',Arial,sans-serif;
+    display: block;
+    border: 1px solid @form-input-border;
+    color: @text;
+    width: 100%;
+    font-weight: 100;
+    border-radius: 0;
+    background-color:white;
+}
+#render-canvas .ui-bizagi-render .ui-bizagi-render-control-required {
+    padding-left: 0 !important;
+    width: 1px;
+    background: #db3c50;
+}
+/* Upload
+  ========================================================================== */
+#bz-webpart .ui-bizagi-render-upload-wrapper {
+    margin: 0;
+}
+/* Image Upload
+  ========================================================================== */
+#bz-webpart .ui-bizagi-render-upload-wrapper .resizable_img {
+    border-radius: 5px;
+    border: 0;
+    background-color: @background;
+}
+#render-canvas.ui-bizagi-render-image-wrapper {
+    display: block;
+    margin: .5em;
+}
+
+/*Dropdown*/
+#bz-webpart .ui-bizagi-render-control .ui-selectmenu .biz-btn-caret {
+    margin:0;
+}
+
+#bz-webpart .ui-select-dropdown.open.open ul li{
+    background:transparent !important;
+    border: 1px solid @form-group-border !important;
+}
+#bz-webpart .ui-select-dropdown.open.open ul li:hover{
+    background-color:@content-border !important;
+    color:@button-text !important;
+    border:1px solid @content-border !important;
+}
+
+
+#bz-webpart .ui-selectmenu .ui-selectmenu-btn {
+    padding: 12px !important;
+}
+
+
+/* States
+  ========================================================================== */
+#bz-webpart .ui-state-active {
+    background-image: none;
+    background-color: @form-grid-border;
+    border: 0;
+    color: @text;
+}
+#bz-webpart .ui-state-highlight {
+    opacity:0.9;    
+}
+/* Search
+  ========================================================================== */
+#bz-webpart .ui-bizagi-render-search-cell{
+	
+}
+#bz-webpart .ui-bizagi-advanced-search input{
+	border-right:none;
+}
+#bz-webpart .ui-bizagi-advanced-search .ui-bizagi-render-search-button {
+	width:42px;
+    background-color: #FFFFFF !important;
+    border:1px solid @form-input-border;
+	border-left:none;
+    box-shadow: none;
+}
+
+#bz-webpart .ui-bizagi-advanced-search .ui-bizagi-render-search-button i{
+	color:@form-input-border;
+	right:10px;
+}
+/* Form Structure
+  ========================================================================== */
+
+#bz-webpart .ui-bizagi-render-display-normal>.ui-bizagi-control {
+    width: 80%;
+}
+/* Button
+  ========================================================================== */
+
+#bz-webpart .ui-bizagi-buttons-group .ui-bizagi-button,
+#bz-webpart .ui-bizagi-control-wrapper .ui-bizagi-render-button.ui-button,
+#bz-webpart .ui-bizagi-render-button.ui-button,
+#bz-webpart #ui-bizagi-webpart-render-container .ui-bizagi-render input.ui-bizagi-render-button,
+#bz-webpart .ui-bizagi-buttons-group .ui-button {
+    cursor: pointer;
+    font-weight: 600;
+    padding: 0.5em 1.5em;
+    font-size: 16px;
+    display: inline-block;
+    text-shadow: none;
+    box-shadow: none;
+    letter-spacing: -0.2px;
+    opacity: .9;
+    transition: 0.25s;
+    border-radius: 4px;
+}
+
+#bz-webpart .ui-bizagi-buttons-group .ui-bizagi-button:hover,
+#bz-webpart .ui-bizagi-control-wrapper .ui-bizagi-render-control .ui-bizagi-render-button.ui-button:hover {
+    opacity: 1;
+}
+#bz-webpart .ui-dialog .ui-dialog-buttonpane button {
+    margin: 0 0 0 15px;
+    border: 1px solid @form-input-border;
+    background: @form-input-border;
+    border-radius: 0;
+    padding: .7em 1.2em;
+    box-shadow: none;
+    color: @text;
+    opacity: .9;
+    transition: 0.25s;
+}
+#bz-webpart .ui-dialog .ui-dialog-buttonpane button:hover {
+    background: @form-input-border !important;
+    border-color: @form-input-border;
+    opacity: 1;
+}
+#bz-webpart .ui-button span {
+    font-weight: 600;
+    text-shadow: none;
+    padding: 0;
+    font-size: 13px;
+    color: @text;
+}
+#bz-webpart .ui-button:hover span {
+    color: @text;
+}
+
+
+#bz-webpart .ui-bizagi-control-wrapper .ui-bizagi-render-control .ui-bizagi-render-button.ui-button > span.ui-button-text {
+        line-height: 2em;
+}
+/* Modal / Dialog
+  ========================================================================== */
+& when not (@sites = true) {
+    #bz-webpart .ui-dialog .ui-corner-all {
+        color: @title;
+    }
+
+    #bz-webpart .ui-dialog .ui-corner-all .ui-dialog-titlebar-maximize {
+        display: none !important;
+    }
+
+    #bz-webpart .ui-dialog {
+        color: @text;
+        // font-family: @font;
+        // font-size: @fontSize;
+        margin-top: 0;
+        padding: 1em 2em !important;
+        top: 0 !important;
+        width: 100% !important;
+        left: 0 !important;
+        height: 100% !important;
+        position: absolute !important;
+        overflow-y: auto;
+        border: 1px solid #DEDEDE;
+        border-radius: 8px !important;
+        background: #FFF;
+    }
+
+    #bz-webpart .ui-widget-overlay.ui-front {
+    background: transparent;
+    }
+    #bz-webpart .ui-dialog .ui-dialog-titlebar {
+        margin-bottom: 2em;
+        background: #FFF;
+    }
+    #bz-webpart .ui-dialog .ui-dialog-title {
+        font-weight: 100;
+        color: @title;
+        font-size: 16px;
+    }
+    #bz-webpart .ui-dialog .ui-dialog-content {
+        height: auto !important;
+    }
+}
+/* Tabs
+  ========================================================================== */
+#bz-webpart .ui-tabs-panel{
+    border:none;
+}
+#bz-webpart .ui-tabs-anchor a,
+#bz-webpart .ui-tabs-panel
+{
+    background-color:@content;
+}
+#bz-webpart li.ui-tabs-active {
+    color:@title;
+}
+#bz-webpart li.ui-tabs-active a {
+    background-color:white;
+}
+#bz-webpart .ui-tabs-anchor label{
+    color:@title;
+    cursor:pointer;
+}
+#bz-webpart .ui-tabs.ui-widget-content .ui-tabs .ui-tabs-nav li,
+#bz-webpart .ui-tabs.ui-widget-content .ui-tabs .ui-tabs-nav li label{
+    cursor:pointer;
+}
+
+#bz-webpart .ui-bizagi-render-upload-dialog-noflash .ui-bizagi-title {
+    border-color: @form-input-border;
+    padding: .5em 0;
+    height: auto;
+    font-size: 16px;
+    color: @text;
+}
+#bz-webpart .ui-tabs-nav a{
+    background-color: #DEDEDE;
+}
+
+#bz-webpart .ui-tabs-nav .ui-state-active a{
+ background-color: @form-input-border;
+}
+
+#bz-webpar .ui-bizagi-container.ui-bizagi-container-tab.ui-tabs.ui-widget.ui-widget-content.ui-corner-all {
+    border: none !important;
+}
+#bz-webpart .ui-bizagi-container-tab.ui-tabs .ui-bizagi-container-tabItem {
+    border: 1px solid #DEDEDE;
+}
+/* Summary description 
+TODO: Delete this rule when the webpart for summary forms it's ready.
+========================================================================== */
+#bz-webpart .ui-bizagi-webpart-case-summary-description {
+    display: none;
+}
+
+/* Grid
+  ========================================================================== */
+#bz-webpart .ui-bizagi-grid-body tr {
+    background-color:@form-grid;
+} 
+#bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr{
+	background-color: @form-grid;
+    border-bottom:2px solid @background;
+}
+#bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr:hover td{
+	background-color:@form-container;
+    opacity:0.7;
+    border-bottom:2px solid @background;
+}
+#bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr.ui-bizagi-state-selected td {
+    background-color:@form-container;
+    opacity:1;
+    color: @text;
+}
+#bz-webpart .bz-rn-grid-header-title {
+    color: @title !important;
+    font-size: 16px !important;
+    text-transform: uppercase;
+	border-bottom:1px solid @form-input-border
+}
+#bz-webpart .bz-rn-grid-cn-header-rtl {
+    color: @title !important;
+    font-size: 16px !important;
+    text-transform: uppercase;
+	border-bottom:1px solid @form-input-border
+}
+#bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-header th {
+    font-size: 14px;
+    background: @form-grid-border;
+    color: @text;
+    padding: .5em 0;
+    font-weight: 600;
+}
+#bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-header th label {
+    font-weight: bold !important;
+    color: @text;
+}
+#bz-webpart .ui-bizagi-grid .ui-bizagi-grid-body tr {
+    background: @background;
+}
+#bz-webpart .ui-bizagi-grid .ui-bizagi-grid-body tr.ui-bizagi-state-selected,
+#bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr:hover {
+    background: @form-container;
+}
+/*
+    Grouped table
+*/
+#bz-webpart .bz-rn-grid-container-foother,
+#bz-webpart .bz-rn-grid-cn-header {
+    background:none;
+}
+/* Containers
+  ========================================================================== */
+#bz-webpart .ui-bizagi-webpart-render-container,
+#bz-webpart .ui-bizagi-container.ui-bizagi-container-group {
+    border: none !important;
+    background-color: #FFF;
+}
+
+#bz-webpart .ui-bizagi-container-group-wrapper,
+#bz-webpart .ui-bizagi-component-adjustable {
+    border: 1px solid #DEDEDE;
+    border-radius: 8px;
+}
+#bz-webpart .ui-dialog .ui-bizagi-container-group-wrapper,
+#bz-webpart .ui-dialog .ui-bizagi-component-adjustable,
+#bz-webpart .ui-bizagi-container-group-wrapper .ui-bizagi-container-group-wrapper,
+#bz-webpart .ui-bizagi-component-adjustable .ui-bizagi-container-group-wrapper,
+#bz-webpart .ui-bizagi-container-group-wrapper .ui-bizagi-component-adjustable,
+#bz-webpart .ui-bizagi-component-adjustable .ui-bizagi-component-adjustable{
+    border: none;
+    border-radius: 0;
+}
+
+#bz-webpart #ui-bizagi-webpart-render-container h3.ui-bizagi-container-group-header {
+    background-color: transparent;
+    border-bottom: 1px solid #DEDEDE;
+}
+#bz-webpart .ui-tabs-nav>* {
+    color: @title !important;
+}
+#bz-webpart .ui-bizagi-container-group-header.ui-state-active .ui-icon.ui-icon-triangle-1-s {
+    background-position: -17px 0;
+}
+#bz-webpart .ui-bizagi-container-group-wrapper .ui-widget-content {
+    background: transparent;
+}
+#bz-webpart .ui-bizagi-wrapper-render-list {
+    border: @form-input-border;
+	overflow-y:hidden;
+}
+/* Lists
+  ========================================================================== */
+
+#bz-webpart .ui-bizagi-wrapper-render-list .ui-bizagi-render-list {
+    background-color: @form-container;
+}
+/* Paragraphs
+  ========================================================================== */
+
+#bz-webpart .ui-bizagi-form-process-path {
+    display: none;
+}
+#bz-webpart .ui-bizagi-button-container,
+#bz-webpart .ui-bizagi-button-container:hover {
+    background-color: transparent;
+}
+#bz-webpart .ui-bizagi-webpart-info-render-msg h2 {
+    background-color: transparent;
+    text-shadow: none;
+    border-color: transparent;
+    color: @text;
+    text-align: center;
+    padding: 10px;
+    font-weight: lighter;
+}
+#bz-webpart .ui-bizagi-render {
+    position: relative;
+    padding-top: .5em;
+    width: 100%;
+    font-weight: 100;
+}
+#bz-webpart .ui-bizagi-render .ui-selectmenu {
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    border-bottom: 1px solid @form-input-border;
+    height: 100%;
+}
+#bz-webpart .ui-selectmenu .biz-btn-caret {
+    border-top: 7px solid @form-input-border;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+}
+#bz-webpart .ui-bizagi-button-container {
+    border-top: 1px solid transparent !important;
+}
+#bz-webpart .ui-bizagi-buttons-group {
+    padding: 0 1.5em;
+}
+/*Tables*/
+#bz-webpart .ui-bizagi-grid .ui-bizagi-grid-buttons ul{
+	height: auto;
+}
+#render-canvas .ui-bizagi-grid,
+#bz-webpart .ui-bizagi-grid {
+    border: 0;
+}
+#bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table {
+    border: 1px solid transparent;
+}
+#bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-render {
+    margin-bottom: 0;
+    padding-top: 0;
+}
+#bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-render input {
+    border: 0;
+    border-bottom: 1px solid transparent;
+    background: white;
+    color: @form-input-border;
+}
+
+#bz-webpart .ui-bizagi-render input {
+    font-size: 12px !important;
+}
+#bz-webpart .ui-bizagi-grid .ui-bizagi-grid-body tr,
+#bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr td {
+    background: white;
+}
+#bz-webpart #ui-bizagi-webpart-render-container .bz-rn-grid-container-foother {
+    background: @form-tab-border;
+}
+#bz-webpart #ui-bizagi-webpart-render-container .bz-rn-grid-container-foother label {
+    color: @text;
+}
+#bz-webpart #ui-bizagi-webpart-render-container .ui-bizagi-render-grid-container div[data-bizagi-component=emptyTable] {
+    background: @background;
+}
+/*Activity selector*/
+#bz-webpart .ui-bizagi-wp-app-routing-table {
+    border-radius: 4px;
+}
+#bz-webpart .ui-bizagi-wp-app-routing-table thead td{
+    background-color:@form-tab-border !important;
+    color:@text;
+}
+#bz-webpart .ui-bizagi-wp-app-routing-table tbody tr:hover {
+    background-color:@form-input-border !important;
+}
+#bz-webpart  .ui-bizagi-wp-app-routing-table tbody tr:nth-child(even) td {
+    background-color:@form-input !important;
+}
+#bz-webpart  .ui-bizagi-wp-app-routing-table tbody tr:nth-child(odd) td {
+    background-color:@form-container !important;
+}
+
+/*Polymorphic launcher*/
+#bz-webpart .bz-action-launcher-container{
+	border:1px solid transparent;
+}
+#bz-webpart .ui-bizagi-render-polymorphicLauncher-list li:hover{
+	border:1px solid @form-input-border;
+}
+#bz-webpart .ui-bizagi-render-polymorphicLauncher-list li:hover>span{
+	color:@title;
+}
+
+/*iframe*/
+
+#render .ui-bizagi-sharepoint-loading-container {
+    background: red;
+}
+/*/iframe*/
+#bz-webpart .ui-bizagi-sharepoint-loading-container {
+    background: red;
+}
+/*Datepicker*/
+#bz-webpart .ui-bizagi-wp-app-icon-date{
+	right:12px;
+}
+#bz-webpart .ui-datepicker.ui-widget-content {
+    background: #fff;
+    border-color: @form-input-border;
+}
+.ui-widget-content .ui-state-highlight {
+    background: @navigation;
+    color: #FFF;
+    border: 0;
+}
+#bz-webpart .ui-datepicker th {
+    color: @text;
+}
+#bz-webpart .ui-datepicker td a{
+	color:@text;
+}
+#bz-webpart .ui-datepicker td:hover a {
+    color: @text;
+}
+#bz-webpart .ui-datepicker .ui-datepicker-title select {
+    margin: 3px 2px;
+    border: 0;
+    width: 46%;
+    border-bottom: 1px solid @form-input-border;
+    color: @text;
+}
+#bz-webpart .ui-datepicker {
+    width:19em;
+}
+#bz-webpart .ui-datepicker-div a,
+
+#bz-webpart .ui-bizagi-render-upload-wrapper.image-wrapper .img {
+    box-shadow: none;
+    border: 1px solid @background;
+    padding: .4em;
+    background-color: #FFFFFF;
+    box-shadow: none;
+}
+
+
+
+/*-----------------Notifications --------------*/
+#bz-webpart .ui-bizagi-notifications-container {
+    position: fixed;
+    bottom: 70px;
+}
+
+#bz-webpart .ui-bizagi-notifications-header.ui-widget-header {
+    background-color: #DEDEDE;
+    font-size: 14px;
+    padding: 0 24px;
+}
+
+#bz-webpart .ui-bizagi-notifications-content.ui-widget-content {
+    background-color: white !important;
+}
+
+#bz-webpart .ui-bizagi-notification-item.ui-widget-content label {
+    font-size: 12px;
+}
+
+/* ==========================================================================
+   Mashup Overrides - New case
+   ========================================================================== */
+html,body{
+    background-color:@background;
+}
+
+
+/* ------------------COMMON-------------------*/
+.km-actionsheet > li > a{
+    background-color: whitesmoke;
+}
+
+/* ------------------HOME-------------------*/
+
+#home .km-content{
+    background: url("images/menu-bg.png"), linear-gradient(-180deg, @content 0%, @content 100%) no-repeat;    
+    color:@text;
+}
+
+#home .bz-home-back.km-state-active{
+    background-color: #39759d;
+}
+
+/* ------------------RENDER-------------------*/
+.ui-bizagi-form {
+    color: @text;    
+    background:@form-container !important;
+}
+.ui-bizagi-label > label{
+    color: @text;
+}
+
+
+.ui-bizagi-mashup-render .km-content{
+    background-color: @content;
+}
+
+.ui-bizagi-mashup-render .km-state-active{
+    background-color: transparent;
+}
+
+.ui-bizagi-mashup-render .ui-state-info {
+    background: #f2f2f2;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    box-shadow: 0 1px 2px 0 #C5C7C8;
+    color: #535B61;    
+}
+input[type="text"], 
+input[type="password"], 
+input[type="number"], 
+input:not([type]), 
+input[type="email"], 
+input[type="number"], 
+input[type="password"], 
+input[type="tel"], 
+input[type="url"], 
+input[type="text"]
+textarea,
+.ui-selectmenu,
+.ui-bizagi-render-list,
+.ui-bizagi-render-search.ui-autocomplete-input,
+.biz-wp-input-combo,
+.bz-render-comboSelected-listBoxSelects,
+.biz-wp-combo-data-container
+.ui-bizagi-render-numeric
+ {
+    border-color: @form-input-border;
+    background: @form-input;
+    color: @form-text;
+}
+input[readonly].bz-rn-text.bz-rn-date-control {
+    color: @form-text;
+}
+.ui-bizagi-button-container div.action-button,
+.ui-slide-button-container div.action-button,
+.ui-bizagi-resolutionUploadFrame button {
+    background: @button;
+    color: @button-text;
+}
+/* ------------------ROUTING-------------------*/
+
+#ui-bizagi-wp-app-inbox-activities-routing-wrapper
+{
+    background-color: @content!important;
+    color: @text!important;
+}
+#ui-bizagi-wp-app-inbox-activities-routing .text-description-title
+{   
+    color: @title!important;    
+    background: @content!important;
+}
+#ui-bizagi-wp-app-inbox-activities-routing td button,
+.wp-routing-container-fother button
+{
+    background: @button;
+    color: @button-text;    
+    border:0;
+}
+#ui-bizagi-wp-app-inbox-activities-routing td{
+    color:@text;
+}
+#ui-bizagi-wp-app-routing-process-wf tbody tr
+{
+    background-color: @content;
+}
+
+#ui-bizagi-wp-app-routing-activity-container thead tr
+{
+    background-color: @content;
+}
+
+#ui-bizagi-wp-app-routing-activity-container tbody tr
+{
+    background-color: @content;
+    color: @text;
+}
+
+#bz-webpart .ui-bizagi-advanced-search .ui-bizagi-render-search-button {
+    top: 0;
+    right: 0;
+}
+
+
+   /* ==========================================================================
+   Render Webpart Overrides - Sites
+   ========================================================================== */
+
+   @sites: false;
+
+    @neutral-100: #FFFFFF;
+    @neutral-200: #FAFAFA;
+    @neutral-300: #E0E0E0;
+    @neutral-400: #9E9E9E;
+    @neutral-500: #757575;
+    @neutral-600: #272727;
+    
+    @color-success: #2D8631;
+    @color-warning: #F9A825;
+    @color-error: #DA3B3B;
+    @color-info: #1377D9;
+
+    
+    
+
+
+    & when (@sites = true) {
+        #bz-webpart input,
+        #bz-webpart textarea,
+        #bz-webpart a,
+        #bz-webpart h3,
+        #bz-webpart h2,
+        #bz-webpart span {
+            font-size: 14px !important;
+        }
+        #bz-webpart .ui-bizagi-component-adjustable{
+            border: none;
+        }
+        #bz-webpart .ui-button span, #bz-webpart .ui-button:hover span {
+            color:  @color-fourth;
+        }
+       
+        #bz-webpart .bz-icon-close-outline:after, #bz-webpart .bz-icon-close-outline:before {
+            position: absolute;
+            content: ' ';
+            height: 16px;
+            width: 2.25px;
+            background-color: @neutral-400;
+        }
+        #bz-webpart .bz-icon-close-outline:after {
+            transform: rotate(-45deg);
+        }
+        #bz-webpart .bz-icon-close-outline:before {
+            transform: rotate(45deg);
+        }
+        #bz-webpart .ui-bizagi-container-group-wrapper {
+            background-color: @neutral-100 !important;
+        }
+        #bz-webpart .ui-bizagi-notifications-container {
+            position: fixed;
+            bottom: 16px !important;
+            right: 16px !important;
+        }
+        #bz-webpart .bz-gq-wrapper {
+            padding: 32px 24px 24px 24px;
+
+        }
+        #bz-webpart .bz-gq-wrapper .bz-gq-header{
+            padding-top: 24px;
+
+        }
+        #bz-webpart .containerPopUp .activitiFormContainer {
+            background-color: @neutral-100;
+            border: 0;
+            border-radius: 4px;
+            box-shadow: 0 4px 16px 2px rgba(0,0,0,.08), 0 6px 32px 6px rgba(0,0,0,.08), 0 8px 8px rgba(0,0,0,.16);
+            display: flex;
+            flex-direction: column;
+        }
+        #bz-webpart .ui-bizagi-render-control {
+            display: table-cell;
+        }
+        #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-buttons ul .grid-button-grid-export-options,
+        #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-buttons-rtl ul .grid-button-grid-export-options-rtl {
+            padding-top: 0px;
+        }
+        @media all and (max-width: 800px) {
+            #bz-webpart .ui-dialog:not(.ui-dialog-minimized) {
+                padding: 2em !important;
+                top: 100px !important;
+                min-width: 400px !important;
+                border-radius: 6px !important;
+            }
+
+            #bz-webpart .ui-dialog .ui-widget-header {
+                border-bottom: 1px solid @neutral-300 !important;
+            }
+        }
+        #bz-webpart .webpartCanvasPopUp-waiting,
+        #bz-webpart .ui-bizagi-sharepoint-loading-container {
+            background: @neutral-100;
+        }
+        #bz-webpart .ui-bizagi-webpart-case-summary-container, #bz-webpart.activitiFormContainer {
+            color: @neutral-600 !important;
+        }
+        #bz-webpart .bz-rn-grid-cn-header-rtl,
+        #bz-webpart .bz-rn-grid-header-title {
+            color: @neutral-500 !important;
+            border-bottom:1px solid @neutral-400;
+        }
+        #bz-webpart .ui-bizagi-render-upload-dialog-noflash .ui-bizagi-title {
+            border-color: @neutral-300;
+            color: @neutral-600;
+        }
+        #bz-webpart .ui-dialog .ui-widget-header {
+            border-bottom: 1px solid @neutral-300;
+        }
+        #bz-webpart .ui-bizagi-grid-export-options-content,
+        #bz-webpart .ui-bizagi-grid-export-options-content-rtl {
+            background-color: @neutral-200;
+            border-color: @neutral-300;
+            border-radius: 4px;
+        }
+        #bz-webpart .ui-bizagi-grid-export-options-content ul,
+        #bz-webpart .ui-bizagi-grid-export-options-content-rtl ul {
+            margin: 2px 4px;
+        }
+        #bz-webpart .ui-bizagi-grid-export-options-content .ui-button span,
+        #bz-webpart .ui-bizagi-grid-export-options-content-rtl .ui-button span {
+            color: @neutral-600;
+        }
+        #bz-webpart .ui-bizagi-grid-export-options-content .ui-button:hover,
+        #bz-webpart .ui-bizagi-grid-export-options-content-rtl .ui-button:hover {
+            background-color: @neutral-300 !important;
+        }
+        #bz-webpart label,
+        #bz-webpart .ui-bizagi-label{
+            min-height: 20px;
+        }
+        #bz-webpart .ui-bizagi-render.ui-corner-all.ui-widget-content .ui-bizagi-render-search-cell button.ui-bizagi-render-search-button {
+            margin: 0 !important;
+            max-height: none !important;
+            width: 28px !important;
+        }
+        #bz-webpart .ui-bizagi-advanced-search .ui-bizagi-render-search-button i {
+            right: 6px !important;
+        }
+        #bz-webpart .ui-bizagi-render.ui-corner-all.ui-widget-content input.ui-bizagi-render-search:focus + .ui-bizagi-render-search-button {
+            border: 1px solid @color-second !important;
+            border-left-style: none !important;
+        }
+        #bz-webpart .ui-bizagi-render.ui-corner-all.ui-widget-content input.ui-bizagi-render-search:focus + .ui-bizagi-render-search-button i {
+            right: 5px !important;
+        }
+        #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr:hover td,
+        #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr.ui-bizagi-state-selected:hover,
+        #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr.ui-bizagi-state-selected td{
+            opacity:1;
+            color: initial;
+        }
+        #bz-webpart .ui-bizagi-buttons-group {
+            text-align: right;
+        }
+        #bz-webpart .ui-bizagi-rtl .ui-bizagi-buttons-group {
+            text-align: left;
+        }
+        #bz-webpart .desktop.ui-bizagi-container.ui-bizagi-container-form {
+            padding-bottom: 140px;
+        }
+        #bz-webpart .ui-bizagi-container-form-wrapper-animation {
+            padding: 2px;
+            padding-bottom: 140px;
+        }
+        #bz-webpart .bz-collectionnavigator-navigationform .desktop.ui-bizagi-container.ui-bizagi-container-form.ui-widget-content {
+            padding: 8px;
+        }
+        #bz-webpart .ui-bizagi-container.ui-bizagi-container-collectionnavigator, .ui-bizagi-container.ui-bizagi-container-collectionnavigator 
+        #bz-webpart .ui-bizagi-container-collectionnavigator .bz-collectionnavigator-controls {
+            border-radius: 0;
+            background-color: @neutral-300;
+            border: 1px solid @neutral-300 !important;
+        }
+        #bz-webpart #ui-bizagi-webpart-render-container > .ui-bizagi-container.ui-bizagi-container-form:nth-child(1) .ui-bizagi-buttons-group {
+            text-align: center;
+        }
+        #bz-webpart .ui-datepicker.ui-widget-content .ui-datepicker-title {
+            display: flex;
+            justify-content: center;
+        }
+        #bz-webpart .ui-select-dropdown--border-top {
+            border-top: 1px solid @color-second !important;
+        }
+        #bz-webpart .ui-bizagi-dialog-search .ui-bizagi-container-form {
+            height: 99.5% !important;
+        }
+        #bz-webpart .ui-bizagi-control-wrapper > .ui-bizagi-render-control, .ui-bizagi-control-wrapper > .ui-bizagi-render-icons.ui-hidden {
+            padding: 0 !important;
+        }
+        #bz-webpart .bz-multiselect__visible .bz-multiselect__content {
+            max-width: 100% !important;
+        }
+        #bz-webpart .bz-multiselect__visible .bz-multiselect__content--border-top {
+            border-top-color: @neutral-300;
+        }
+        #bz-webpart .ui-bizagi-button-container .ui-bizagi-buttons-group{
+            padding: 0;
+        }
+        #bz-webpart .ui-bizagi-button-container,
+        #bz-webpart .ui-bizagi-button-container:hover {
+            position: fixed;
+            bottom: 0;
+            min-height: 35px;
+            position: fixed;
+            left: 0px;
+            margin: 0px;
+            width: 100%;
+            padding: 8px 4px;
+            background: @neutral-200;
+            z-index: 2;
+        }
+        #bz-webpart .desktop .bz-form-old-item .ui-bizagi-render-control.control-required .bz-multiselect .bz-multiselect__tags,
+        #bz-webpart .desktop .bz-form-old-item[dir=ltr] .ui-bizagi-render-control.control-required .bz-multiselect .bz-multiselect__tags {
+            border-left: 3px solid @color-error;
+        }
+        @media all and (max-width: 800px){
+            .ui-dialog{
+                padding: 2em !important;
+            }
+            .ui-dialog .ui-dialog-titlebar{
+                padding-bottom: 1em !important;
+            }
+        }
+        #bz-webpart .ui-bizagi-render-date-input {
+            min-width: auto !important;
+        }
+        .ui-bizagi-label label, .ui-bizagi-render > .ui-bizagi-label > label {
+            word-break: normal;
+        }
+
+        #bz-webpart  .ui-bizagi-render .ui-bizagi-label {
+            display: table-cell;
+        }
+        #bz-webpart .ui-bizagi-container-horizontal .ui-bizagi-container-panel .ui-bizagi-label label {
+           word-break: break-word;
+        }
+       
+        #bz-webpart .ui-bizagi-render-documentgenerator {
+            margin-bottom: 7px;
+        }
+        #bz-webpart .ui-bizagi-render-boolean-yesno .ui-radio {
+            vertical-align: top;
+        }
+        #bz-webpart .ui-bizagi-div-documentgenerator .ui-bizagi-container-documents {
+            padding-right: 5px;
+        }
+        #bz-webpart .ui-bizagi-control.ac-is-visible.ac-clear-floats .ui-selectmenu.ui-selectmenu--closed {
+            border-color: @neutral-300 !important;
+            border-radius: 4px !important;
+        }
+        #bz-webpart #render-canvas #ui-bizagi-webpart-render-container .Captcha_MainDivClass input {
+            display: none;
+        }
+        #bz-webpart #render-canvas #ui-bizagi-webpart-render-container .Captcha_MainDivClass .captcha_wrap {
+            margin-bottom: 10px;
+        }
+        #bz-webpart .ui-bizagi-render-align-left .ui-bizagi-control-wrapper {
+            margin: 0 !important;
+        }
+        #bz-webpart label {
+            font-size: 14px;
+        }
+        #bz-webpart .bz-file-name {
+            cursor: pointer;
+        }
+        #bz-webpart .ui-bizagi-webpart-case-summary-details-tabs .box-description dd,
+        #bz-webpart .ui-bizagi-summary-form .ui-bizagi-control-wrapper {
+            border: 0 !important;
+        }
+        #bz-webpart .ui-bizagi-render-display-vertical {
+            display: block !important;
+        }
+        #bz-webpart .ui-bizagi-render-display-vertical .ui-bizagi-control {
+            display: inline-block !important;
+        }
+        #bz-webpart .ui-bizagi-render-display-vertical .ui-bizagi-control-wrapper {
+            padding: 0 4px;
+        }
+        #bz-webpart .ui-bizagi-notifications-header.ui-widget-header {
+            background-color: @neutral-300 !important;
+        }
+
+    }
+
+    /*************************BUTTONS********************************/
+
+    #bz-webpart .closeCanvas {
+        background: transparent;
+        box-shadow: none;
+        position: absolute;
+        right: 24px;
+        top: 24px;
+        width: 16px;
+        height: 16px;
+        color: @neutral-400;
+    }
+    #bz-webpart .closeCanvas:before, #bz-webpart .closeCanvas:after {
+        position: absolute;
+        content: ' ';
+        height: 16px;
+        width: 2.25px;
+        background-color: @neutral-400;
+    }
+    #bz-webpart .closeCanvas:before {
+        transform: rotate(45deg);
+    }
+    #bz-webpart .closeCanvas:after {
+        transform: rotate(-45deg);
+    }
+
+    #bz-webpart .ui-bizagi-render {
+        padding: 0;
+    }
+
+    #bz-webpart .ui-bizagi-buttons-group .ui-button:hover {
+        background-color: @color-second !important;
+        opacity: 70%;
+    }
+
+    #bz-webpart input.ui-bizagi-render-button  {
+        border: 0 !important;
+        background-color: @color-second;
+        color: @color-fourth;
+    }
+    #bz-webpart .ui-bizagi-buttons-group input {
+        font-size: 14px !important;
+        padding: 4px 8px !important;
+        width: auto;
+    }
+
+    #bz-webpart .ui-bizagi-buttons-group .ui-bizagi-button:hover,
+    #bz-webpart .ui-dialog .ui-dialog-buttonpane button:hover,
+    #bz-webpart input.ui-bizagi-render-button:hover {
+        opacity: 70%;
+    }
+    #bz-webpart .ui-dialog .ui-dialog-buttonpane button {
+        font-size: 14px;
+        padding: 4px 8px !important;
+        width: auto !important;
+        border-radius: 4px !important;
+        font-family: inherit !important;
+
+    }
+
+    #bz-webpart .ui-bizagi-control-wrapper .ui-bizagi-render-control .ui-bizagi-render-button {
+        font-size: 14px !important;
+        padding: 4px 8px !important;
+        width: auto !important;
+    }
+
+    #bz-webpart .header-list .bz-button,
+    #bz-webpart .bz-actions-container .ui-bizagi-button,
+    #bz-webpart .ui-bizagi-control-wrapper .ui-bizagi-render-control .ui-bizagi-render-button.button-primary.ui-button, 
+    #bz-webpart .ui-bizagi-render.ui-corner-all.ui-widget-content input.ui-bizagi-render-button.button-secondary,
+    #bz-webpart .ui-bizagi-buttons-group .ui-bizagi-button,
+    #bz-webpart .ui-bizagi-control-wrapper .ui-bizagi-render-button.ui-button,
+    #bz-webpart .ui-bizagi-render-button.ui-button,
+    #bz-webpart #ui-bizagi-webpart-render-container .ui-bizagi-render input.ui-bizagi-render-button,
+    #bz-webpart .ui-bizagi-buttons-group .ui-button {    
+        background: @color-second;
+        color: @color-fourth;
+        padding: 4px 8px !important;
+        align-items: center;
+        justify-content: center;
+        min-width:  100px;
+        min-height: 28px;
+        overflow: visible;
+        font-size: 1.45454545455rem;
+        font-weight: 600 !important;
+        line-height: 100%;    
+        text-align: center;
+        text-decoration: none;
+        white-space: normal;
+        vertical-align: middle;
+        touch-action: manipulation;
+        cursor: pointer !important;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;    
+        border: 0;
+        border-radius: 4px !important;
+        will-change: transform;
+    }
+
+    #bz-webpart .header-list .bz-button {
+        border: 1px solid @color-second !important;
+        color: @color-second;
+        background: @neutral-100;
+        display: flex;
+        align-items: center;
+        box-shadow: none;
+        height: 30px;
+        min-width: 90px;
+    }
+    #bz-webpart .header-list .biz-ui-controls-combo {
+        margin-top: 8px;
+    }
+
+    #bz-webpart .ui-bizagi-render input,
+    #bz-webpart .ui-bizagi-control-wrapper .ui-bizagi-render-button.button-primary.ui-button, 
+    #bz-webpart .ui-bizagi-render-button.button-primary.ui-button, 
+    #bz-webpart #ui-bizagi-webpart-render-container .ui-bizagi-render input.ui-bizagi-render-button.button-primary{
+        font-size: 1.45454545455rem;
+    }
+
+    #bz-webpart .bz-actions-container .ui-bizagi-button:hover,
+    #bz-webpart .ui-bizagi-buttons-group .ui-bizagi-button.button-secondary:hover, 
+    #bz-webpart .ui-bizagi-control-wrapper .ui-bizagi-render-control .ui-bizagi-render-button.ui-button.button-secondary:hover,
+    #bz-webpart .ui-bizagi-buttons-group .ui-bizagi-button.button-primary:hover, 
+    #bz-webpart .ui-bizagi-control-wrapper .ui-bizagi-render-control .ui-bizagi-render-button.ui-button.button-primary:hover 
+    #bz-webpart .ui-bizagi-control-wrapper .ui-bizagi-render-button.ui-button:hover, 
+    #bz-webpart .ui-bizagi-render-button.ui-button:hover, 
+    #bz-webpart #ui-bizagi-webpart-render-container .ui-bizagi-render input.ui-bizagi-render-button:hover{
+        opacity: 70%;
+        background-color: @color-second !important;
+    }
+
+    #bz-webpart .ui-bizagi-button--m {
+        padding: 8px 16px !important;
+        min-height: 38px !important;
+    }
+    
+
+    /**********************************COMBOS****************************************/
+    #bz-webpart .ui-selectmenu-btn:before {
+        content: '';
+        position: absolute;
+        width: 1.2em;
+        left: 0;
+        border: .125em solid @neutral-400;
+        border-right-style: none;
+        border-top-style: none;
+        height: .35em;
+        -webkit-transform: translate(0.25em, 0.33653846em) rotate(-45deg);
+        transform: translate(0.7em, -0.15em) rotate(-45deg);
+        width: 0.35em;
+    }
+    #bz-webpart .input-select .ui-select-dropdown li,
+    #bz-webpart .ui-select-dropdown li {
+        padding: 4px  8px !important;
+        line-height: normal !important;
+    }
+    #bz-webpart .input-select .ui-select-dropdown.open,
+    #bz-webpart .ui-select-dropdown.open.bz-combo__list--comfortable{
+        border: 1px solid @color-second;
+        border-top: none !important;
+    }
+    #bz-webpart .ui-bizagi-control.ac-is-visible.ac-clear-floats .ui-selectmenu {
+        padding: 0 !important;
+        border: 1px solid @color-second !important;
+        border-bottom: 1px solid transparent !important;
+        border-radius: 4px 4px 0 0 !important;
+    }
+    #bz-webpart  .ui-select-dropdown ul li {
+        font-size: 14px !important;
+    }
+    #bz-webpart .biz-wp-combo-data-container {
+        border: 0 !important;
+    }
+
+    #bz-webpart .biz-wp-combo-data-container input{
+        box-shadow: none;
+        padding: 4px 8px;
+        font-family: inherit !important;
+        border: 1px solid @neutral-300 !important;
+        border-radius: 4px !important;
+    }
+
+    #bz-webpart .biz-wp-combo-data-container input:focus{
+        border: 1px solid @color-second !important;
+        border-radius: 4px 4px 0 0 !important;
+    }
+    #bz-webpart .input-select .ui-select-dropdown.open {
+        width: 100% !important;
+    }
+    #bz-webpart .input-select .ui-select-dropdown li:hover,
+    #bz-webpart .ui-select-dropdown.open.open ul li:hover {
+        background-color: @neutral-200 !important;
+        border: 0 !important;
+    }
+    #bz-webpart .ui-select-dropdown.open.bz-combo__list--comfortable ul li.ui-selected.active {
+        background-color: @neutral-200 !important;
+        color: @color-second !important;
+    }
+
+    #bz-webpart .ui-select-dropdown.open.bz-combo__list--comfortable ul li.ui-selected.active:after {
+        border: none !important;
+    }
+
+    #bz-webpart .ui-bizagi-render .ui-selectmenu,
+    #bz-webpart .ui-bizagi-control.ac-is-visible.ac-clear-floats td .ui-selectmenu,
+    .ui-bizagi-render.ui-bizagi-render-display-cell .ui-selectmenu {
+        border: 1px solid @neutral-300 !important;
+        border-radius: 4px !important;
+        font-size: 1.45454545455rem !important;
+        max-height: 30px;
+    }
+
+    #bz-webpart .ui-selectmenu-btn{
+        background: url(../../portal/common/css/images/arrow_down.svg) no-repeat !important;
+        background-position-y: center !important;
+        background-size: 16px 16px !important;
+    }
+
+    #bz-webpart .ui-selectmenu-btn when (@sites = true) {
+        background: transparent !important;
+    }
+
+    #bz-webpart .ui-selectmenu-btn i{
+        border: 0px solid transparent !important;
+    }
+
+    #bz-webpart .ui-select-dropdown.open.open ul li,
+    #bz-webpart .ui-select-dropdown.open.open ul li{
+        font-weight: 400 !important;
+        border: 0px solid transparent !important;
+    }
+    #bz-webpart .ui-selectmenu .ui-select-data-container input.ui-select-data.ui-selectmenu-value {
+        border: none !important;
+    }
+
+    #bz-webpart .ui-select-dropdown::-webkit-scrollbar {
+        width: 6px;
+    }
+    #bz-webpart .ui-select-dropdown::-webkit-scrollbar-track {
+    background: @neutral-300;
+    border: none;
+    border-radius: 50px;
+    }
+    #bz-webpart .ui-select-dropdown::-webkit-scrollbar-thumb {
+    background-color: @neutral-400;
+    outline: 1px solid  @neutral-300;
+    border-radius: 50px;
+    }
+    #bz-webpart .desktop .ui-select-dropdown.open.bz-combo__list--comfortable {
+        max-height: 140px;
+        max-width: 100% !important;
+    }
+
+    //  MULTISELECT
+    #bz-webpart .bz-multiselect__search .bz-multiselect__search_input {
+        padding-right: 32px;
+        font-family: inherit;
+    }
+    #bz-webpart .desktop .bz-multiselect .bz-multiselect__tags > .bz-multiselect__tag:hover, 
+    #bz-webpart .desktop .bz-view-more__content .bz-multiselect__tags > .bz-multiselect__tag:hover {
+        background-color: @neutral-200;
+    }
+    #bz-webpart .bz-multiselect__tags  .bz-multiselect__tag .bz-btn-icn svg {
+        display: none;
+    }
+    #bz-webpart .bz-multiselect__tags  .bz-multiselect__tag .bz-btn-icn:after, 
+    #bz-webpart .bz-multiselect__tags  .bz-multiselect__tag .bz-btn-icn:before {
+        position: absolute;
+        content: ' ';
+        height: 10px;
+        width: 2.25px;
+        top: 16px;
+        background-color: @neutral-400;
+    }
+    #bz-webpart .bz-multiselect__tags  .bz-multiselect__tag .bz-btn-icn:after {
+        transform: rotate(-45deg);
+    }
+    #bz-webpart .bz-multiselect__tags  .bz-multiselect__tag .bz-btn-icn:before {
+        transform: rotate(45deg);
+    }
+
+    #bz-webpart  .bz-multiselect__tags {
+        border-color: @neutral-300;
+        border-radius: 4px;
+    }
+    #bz-webpart .bz-multiselect__visible .bz-multiselect__tags  {
+        border-color: @color-second;
+        border-bottom-color: transparent;
+        border-radius: 4px 4px 0 0;
+    }
+    #bz-webpart .bz-multiselect__visible .bz-multiselect__content {
+        border-color: @color-second;
+        border-top-color: @neutral-300;
+        max-width: 98.5%;
+        max-height: 140px;
+    }
+    #bz-webpart .desktop .bz-checkbox__appearance {
+        background-color: @neutral-100;
+    }
+    #bz-webpart .desktop .bz-multiselect__content li {
+        border: 0;
+        padding: 4px 8px;
+    }
+    #bz-webpart .desktop .bz-multiselect__content li:hover {
+        background-color: @neutral-200;
+        border: 0;
+    }
+    #bz-webpart .desktop .bz-checkbox__input:not(:checked) + .bz-checkbox__label:hover .bz-checkbox__appearance::before {
+        display: none;
+    }
+    #bz-webpart .desktop .bz-checkbox__input:not(:checked) + .bz-checkbox__label:hover .bz-checkbox__appearance {
+        border-color: @color-second;
+    }
+    #bz-webpart .desktop .bz-checkbox__input:checked + .bz-checkbox__label .bz-checkbox__appearance {
+        background-color: @color-second;
+        border-color: @color-second;
+    }
+    #bz-webpart .desktop .bz-checkbox__input:checked + .bz-checkbox__label .bz-checkbox__appearance::before {
+        border-bottom: 2px solid @color-fourth;
+        border-left: 2px solid @color-fourth;
+    }
+
+    #bz-webpart .desktop .bz-multiselect .bz-multiselect__tags > .bz-multiselect__tag.bz-multiselect__plus {
+        background-color: @color-second;
+        color: @color-fourth;
+    }
+    #bz-webpart .bz-checkbox__label .bz-checkbox__appearance.bz-checkbox__appearance--20 {
+        height: 1.45rem !important;
+        width: 1.45rem !important;
+        border-radius: 2px !important;
+        min-height: 15px !important;
+    }
+
+    #bz-webpart .desktop .bz-checkbox__input:checked + .bz-checkbox__label .bz-checkbox__appearance::before {
+        content: "";
+        display: block;
+        border: .125em solid @color-fourth;
+        border-right-style: none;
+        border-top-style: none;
+        height: .275em;
+        -webkit-transform: translate(-0.1rem, 0rem) rotate(-45deg);
+        transform: translate(-0.1rem, 0rem) rotate(-45deg);
+        width: .65em;
+    }
+    #bz-webpart .bz-btn-icn.bz-multiselect__arrow svg {
+        display: none;
+    }
+    #bz-webpart .bz-btn-icn.bz-multiselect__arrow:before {
+        content: '';
+        position: absolute;
+        width: 0.6rem !important;
+        border: .125em solid @neutral-400;
+        border-right-style: none;
+        border-top-style: none;
+        height: 0.6rem;
+        -webkit-transform: translate(0.25em, 0.33653846em) rotate(-45deg);
+        transform: translate(0.7em, -0.15em) rotate(-45deg);
+        top: 42%;
+        left: 2px;
+    }
+    #bz-webpart .desktop .bz-multiselect .bz-multiselect__arrow {
+        width: 32px;
+    }
+
+    /****************************CHECKS***********************************/
+
+    #bz-webpart .ui-checkbox label {
+        background: @neutral-100 !important;
+        height: 1.45rem !important;
+        width: 1.45rem !important;
+        border: 1px solid @neutral-400 !important;
+        border-radius: 2px !important;
+        min-height: 15px !important;
+    }
+    #bz-webpart .ui-bizagi-render-control.ui-bizagi-render-boolean-yesno-ie,
+    #bz-webpart .ui-bizagi-render-boolean-yesno .ui-checkbox {
+        vertical-align: middle;
+        margin: auto;
+    }
+    .ui-bizagi-render .ui-bizagi-control .ui-bizagi-render-control.ui-bizagi-render-boolean-yesno {
+        height: 30px;
+        display: table !important;
+    }
+
+    #bz-webpart .ui-bizagi-render-boolean-yesno-ie {
+        margin: 0px;
+        display: table !important;
+    }
+
+    #bz-webpart .ui-bizagi-render-boolean-yesno-ie label {
+        top: 5px;
+        background: @neutral-100 !important;
+        height: 1.25em !important;
+        width: 1.25em !important;
+        border: 1px solid @neutral-400 !important;
+        border-radius: 2px !important;
+        min-height: 15px !important;
+    }
+    #bz-webpart .ui-bizagi-grid .ui-bizagi-render-boolean-yesno-ie label {
+        top: 3px;
+    }
+    #bz-webpart .ui-bizagi-render-boolean-yesno.control-required .ui-checkbox label {
+        border-left: 3px solid @color-error !important; 
+        border-radius: 2px;
+    }
+    #bz-webpart .ui-bizagi-render-control.ui-bizagi-render-boolean-yesno-ie.control-required .checkbox-ie {
+        border-left: 3px solid @color-error !important; 
+        border-radius: 2px;
+    }
+
+    #bz-webpart .ui-checkbox label:hover,
+    #bz-webpart label.checkbox-ie:hover {
+        border: 1px solid @color-second !important;
+    }
+
+    #bz-webpart .ui-checkbox label.ui-checkbox-state-checked,
+    #bz-webpart .ui-bizagi-render-boolean-yesno-ie label.ui-checkbox-state-checked,
+    #bz-webpart .ui-checkbox label.ui-checkbox-state-checked.ui-checkbox-state-hover {
+        background: @color-second !important;
+        border: 1px solid @color-second !important;
+    }
+
+    #bz-webpart .ui-checkbox label.ui-checkbox-state-checked:after,
+    #bz-webpart .ui-bizagi-render-boolean-yesno-ie label.ui-checkbox-state-checked:after,
+    #bz-webpart .ui-checkbox label.ui-checkbox-state-checked.ui-checkbox-state-hover:after {
+        content: "";
+        display: block;
+        border: .125em solid #fff;
+        border-right-style: none;
+        border-top-style: none;
+        height: .275em;
+        -webkit-transform: translate(.25em,.3365384615em) rotate(-45deg);
+        transform: translate(0.1em, 0.18em) rotate(-45deg);
+        width: .65em;
+    }
+    #bz-webpart .checkbox-ie.ui-checkbox-state-checked:after {
+        -webkit-transform: translate(0.2em, 0.28em) rotate(-45deg) !important;
+        transform: translate(0.2em, 0.28em) rotate(-45deg) !important;
+    }
+    
+    #bz-webpart .ui-bizagi-rtl .ui-checkbox label.ui-checkbox-state-checked:after {
+        -webkit-transform: translate(0.8em, 0.18em) rotate(-45deg);
+        transform: translate(0.8em, 0.18em) rotate(-45deg);
+    }
+
+    #bz-webpart .control-required .checkbox-ie::before,
+    #bz-webpart .control-required .ui-checkbox label::before {
+        border: none !important;
+
+    }
+
+
+    //Fix for Internet explorer
+    #bz-webpart .ui-bizagi-render-boolean-yesno-ie input[type="checkbox"],
+    #bz-webpart .checkbox-ie input[type='checkbox'] {
+        position: absolute !important;
+        left: -999px !important;
+    }
+
+
+    /************************************DIALOG*************************************/
+    #bz-webpart .ui-dialog, #bz-webpart .ui-dialog:focus {
+        background: @neutral-100;
+        border: 1px solid transparent !important;
+        outline: none;
+    }
+
+    #bz-webpart .ui-dialog .ui-widget-header {
+        background: @neutral-100;
+    }
+    #bz-webpart .ui-bizagi-container-search-criteria {
+        padding: 16px 8px;
+    }
+    #bz-webpart .ui-bizagi-container-search-results {
+        padding: 8px;
+    }
+    #bz-webpart .ui-widget-overlay.ui-front {
+        background: rgba(248, 248, 248, 0.842) !important;
+    }
+    #bz-webpart .ui-bizagi-main-section.ui-bizagi-section-behavior {
+        padding: 0;
+    }
+    #bz-webpart .ui-bizagi-dialog-search .ui-bizagi-container.ui-bizagi-container-form {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+    }
+    #bz-webpart .desktop.ui-bizagi-container.ui-bizagi-container-form.ui-widget-content .ui-bizagi-rendering-mode-execution
+    .ui-bizagi-dialog-search .ui-bizagi-container-search-form,
+    #bz-webpart .ui-bizagi-main-section.ui-bizagi-section-behavior .ui-bizagi-container-search-form {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0;
+    }
+    
+    #bz-webpart .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    #bz-webpart #ui-bizagi-webpart-render-async-wrapper {
+        background: transparent;
+    }
+    #bz-webpart #ui-bizagi-webpart-render-async-box {
+        border: 0 !important;
+        border-radius: 4px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.24);
+        height: 230px !important;
+
+    }
+    #bz-webpart .ui-bizagi-webpart-render-async-case-number {
+        border-bottom: 1px solid @neutral-600;
+        padding: 4px;
+        padding-bottom: 8px;
+    }
+    
+    #bz-webpart .ui-bizagi-webpart-render-async-description {
+        padding: 8px;
+        font-size: 14px;
+    }
+    #bz-webpart .ui-bizagi-webpart-render-async-description dt {
+        padding-right: 16px;
+    }
+    #bz-webpart  .ui-bizagi-webpart-render-async-description dd {
+        background: transparent;
+    }
+    /************************************** DATEPICKER***********************************/
+    
+    #bz-webpart .mbsc-fr-w,
+    #bz-webpart .mbsc-bizagi-theme .mbsc-cal-day-date, .mbsc-bizagi-theme .mbsc-fr-btn, .mbsc-bizagi-theme.mbsc-fr-pointer .mbsc-sc-itm {
+        font-family: inherit;
+    }
+    #bz-webpart .mbsc-fr-btn.mbsc-btnSet {
+        color: @color-fourth;
+    }
+    #bz-webpart .timeEntry_wrap .timeEntry_control {
+        height: 25px !important;
+        position: absolute;
+        top: 1px !important;
+        right: 5px !important;
+        margin-top: 0 !important;
+    }
+    #bz-webpart .timeEntry_wrap input {
+        padding-right: 20px;
+        min-width: 87px;
+        border-radius: 4px !important;
+    }
+    #bz-webpart .ui-bizagi-rtl .timeEntry_wrap input {
+        padding-right: 2px;
+        padding-left: 20px
+    }
+    #bz-webpart .ui-bizagi-wp-app-icon-date {
+        right: 4px;
+    }
+    #bz-webpart .ui-bizagi-rtl .ui-bizagi-wp-app-icon-date  {
+        left: 4px;
+        right: auto;
+    }
+    #bz-webpart .ui-bizagi-rtl .timeEntry_wrap .timeEntry_control {
+        left: 4px;
+        right: auto !important;
+    }
+    #bz-webpart input.ui-bizagi-render-date.ui-bizagi-render-date-only {
+        padding-right: 16px;
+    }
+    #bz-webpart .ui-bizagi-rtl input.ui-bizagi-render-date.ui-bizagi-render-date-only {
+        padding-right: 4px;
+        padding-left: 16px;
+    }
+    #bz-webpart .ui-datepicker {
+        border-color: @neutral-300 !important;
+    }
+
+    #bz-webpart .ui-datepicker .ui-datepicker-header .ui-datepicker-title select {
+        border-bottom: 1px solid @color-second !important;
+        font-family: inherit;
+    }
+    #bz-webpart .ui-datepicker .ui-datepicker-title  .ui-datepicker-year {
+        width: 46%;
+    }
+
+    #bz-webpart .ui-datepicker .ui-datepicker-title .ui-datepicker-month {
+        width: auto;
+    }
+    #bz-webpart .ui-datepicker .ui-datepicker-calendar  a.ui-state-active {
+        background-color: @color-second !important;
+        color: @color-fourth;
+    }
+    #bz-webpart .ui-datepicker .ui-datepicker-calendar  a.ui-state-highlight {
+        background-color: @neutral-100 !important;
+        border: 1px solid @color-second !important;
+        color: @neutral-600;
+    }
+    #bz-webpart .mbsc-bizagi-theme .mbsc-cal-c .mbsc-cal .mbsc-cal-body .mbsc-cal-row .mbsc-selected .mbsc-cal-cell-txt {
+        background: @color-second !important;
+
+    }
+    #bz-webpart .mbsc-bizagi-theme .mbsc-fr-hdr, .mbsc-bizagi-theme .mbsc-fr-btn {
+        color:  @color-second;
+    }
+    #bz-webpart .mbsc-fr-btn.mbsc-btnClear {
+        border: 1px solid @color-second;
+        color:  @color-second;
+    }
+    .mbsc-bizagi-theme.mbsc-no-touch:not(.mbsc-ev-cal) .mbsc-cal-cell:not(.mbsc-disabled):hover .mbsc-cal-cell-txt, 
+    .mbsc-bizagi-theme.mbsc-no-touch .mbsc-cal-day:not(.mbsc-disabled) .mbsc-cal-day-date:hover, 
+    .mbsc-bizagi-theme .mbsc-cal-cell:focus .mbsc-cal-cell-txt,
+    .mbsc-bizagi-theme.mbsc-no-touch:not(.mbsc-ev-cal) .mbsc-cal-cell:not(.mbsc-disabled):not(.mbsc-selected):hover .mbsc-cal-cell-txt, 
+    .mbsc-bizagitheme.mbsc-no-touch .mbsc-sc-itm.mbsc-btn-e:hover {
+        background: @neutral-300 !important;
+    }
+    .mbsc-fr-btn.mbsc-btnNow:hover {
+        text-decoration: none;
+    }
+    .mbsc-fr-btn.mbsc-btnClear:hover,
+    .mbsc-bizagi-theme .mbsc-cal-today {
+        color:  @color-second !important;
+    }
+    .mbsc-bizagi-theme .mbsc-sc-whl-l {
+        border-top: 1px solid @color-second;
+        border-bottom: 1px solid @color-second;
+    }
+    .mbsc-bizagi-theme .mbsc-cal-month:hover, .mbsc-bizagi-theme .mbsc-cal-year:hover, .mbsc-bizagi-theme .mbsc-sc-itm-sel {
+        color:  @color-second;
+    }
+    .mbsc-fr-btn.mbsc-btnClear:hover {
+        border: 1px solid @color-third !important;
+        color:  @color-third !important;
+    }
+    .mbsc-fr-btn.mbsc-btnSet:hover {
+        background: @color-third !important;
+        border: 1px solid @color-third;
+    }
+    .mbsc-fr-btn.mbsc-btnSet {
+        background: @color-second;
+        border: 1px solid @color-second;
+    }
+
+    /************************************GRID****************************************/
+
+    #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr:hover td,
+    #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr.ui-bizagi-state-selected td {
+       background-color: @neutral-300;
+       border-bottom: 1px solid @neutral-300 !important;
+    }
+    #bz-webpart .ui-bizagi-grid-cell .ui-selectmenu {
+        padding-left: 0 !important;
+    }
+
+    #bz-webpart .ui-bizagi-render-control.ui-bizagi-render-grid-container {
+        display: table-cell;
+    }
+    #bz-webpart .ui-bizagi-render-control.ui-bizagi-render-grid-container {
+        border: 1px solid @neutral-300 !important;
+        border-top: 0 !important;
+    }
+    #bz-webpart .ui-bizagi-grid-table .ui-bizagi-render-control input.ui-bizagi-render-text{
+        width: 96% !important;
+    }
+
+    #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-header tr th,
+    #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-header {
+        border-bottom: 1px solid @neutral-600 !important;
+    }
+
+    #bz-webpart .bz-rn-grid-header-title{
+        color: @neutral-600 !important;
+        font-weight: 400 !important;
+        border-bottom: 1px solid @neutral-300 !important;
+        font-size: 14px !important;
+    }
+
+    #bz-webpart .ui-bizagi-grid,
+    #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-header tr th{
+        border: none;
+    }
+    #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-header tr th,
+    #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-header,
+    #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-body tr:nth-child(even),
+    #bz-webpart .ui-bizagi-render-grid-container div[data-bizagi-component=emptyTable]{
+        background: @neutral-100 !important;
+    }
+
+    #bz-webpart .bz-rn-grid-cn-header-rtl,
+    #bz-webpart .bz-rn-grid-header-title-rtl,
+    #bz-webpart .bz-rn-grid-cn-header,
+    #bz-webpart.bz-rn-grid-header-title{
+        background: @neutral-300 !important;
+        font-weight: 700;
+    }
+
+    .bz-rn-grid-header-collapse .bz-rn-grid-header-title {
+        padding: .3em .5em .2em 2.2em;
+    }
+    #bz-webpart .ui-bizagi-grid-table thead th:hover{
+        background: @neutral-100 !important;
+    }
+
+    #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-header div.ui-bizagi-grid-column{
+        font-weight: 700;
+    }
+
+    #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr:hover,
+    #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-body tr:nth-child(even):hover,
+    #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-body tr.ui-bizagi-state-selected{
+        background-color: @neutral-300 !important;
+    }
+
+    #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-header label{
+        color: @neutral-600;
+    }
+
+    #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-header th{
+        padding: .4rem 0 !important;
+    }
+
+    #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-header tr{
+        height: 3rem;
+    }
+
+    #bz-webpart .bz-rn-grid-container-foother{
+        background: 0 0 !important;
+    }
+
+    #bz-webpart .ui-bizagi-render-grid-container div[data-bizagi-component=emptyTable]{
+        font-weight: 400;
+    }
+
+    #bz-webpart .ui-bizagi-grid-table .ui-bizagi-grid-header .resizableColumn,
+    #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr {
+        border-bottom: 1px solid @neutral-300 !important;
+    }
+
+    #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr:last-child{
+        border-bottom: 1px solid @neutral-600 !important;
+    }
+
+    #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr:hover {
+        background-color: @neutral-300 !important;
+    }
+
+    @media (max-width: 768px) {
+        #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table {
+            min-width: 400px;
+        }
+        #bz-webpart .bz-rn-grid-data-wraper::-webkit-scrollbar {
+            height: 6px;
+        }
+        #bz-webpart .bz-rn-grid-data-wraper::-webkit-scrollbar-track {
+        background: @neutral-300;
+        border: none;
+        border-radius: 50px;
+        }
+        #bz-webpart .bz-rn-grid-data-wraper::-webkit-scrollbar-thumb {
+        background-color: @neutral-400;
+        outline: 1px solid  @neutral-300;
+        border-radius: 50px;
+        }
+        .bz-rn-grid-container-foother > table th {
+            width: 100%;
+        }
+    }
+    #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr {
+        background-color: @neutral-100 !important;
+    }
+    /**********************************HEADERS********************************/
+
+    #bz-webpart .ui-bizagi-button-container, #bz-webpart .ui-bizagi-button-container:hover {
+        border: none !important;
+    }
+    #bz-webpart .ui-bizagi-container.ui-bizagi-container-group {
+        border: 1px solid @neutral-300 !important;
+    }
+
+    #bz-webpart .ui-bizagi-container-section-header.ui-bizagi-container-section-header-type-section.ui-helper-reset.ui-state-active {
+        background-color: @color-second;
+        color: @color-fourth;
+    }
+    #bz-webpart .ui-bizagi-container-section-header-type-section.ui-state-active svg.bz-icn,
+    #bz-webpart .ui-bizagi-container-section-header.ui-bizagi-container-section-header-type-section.ui-helper-reset.ui-state-active a {
+        color: @color-fourth;
+        fill: @color-fourth;
+    }
+
+    #bz-webpart .bz-gq-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #bz-webpart .ui-bizagi-webpart-header-render-msg {
+        display: none;
+    }
+    #bz-webpart .ui-bizagi-container .ui-bizagi-container-group-header a {
+        font-weight: 800;
+        font-family: inherit;
+    }
+    #bz-webpart #ui-bizagi-webpart-render-container h3.ui-bizagi-container-group-header {
+        background-color: transparent !important;
+    }
+
+    #bz-webpart .ui-bizagi-container h3.ui-bizagi-container-group-header.group-expand {
+        padding: 8px 0px !important;
+        border-bottom: 1px solid @color-second !important;
+        background: @neutral-200 !important;
+    }
+    #bz-webpart .ui-bizagi-container h3.ui-bizagi-container-group-header a,
+    #bz-webpart .ui-bizagi-container h3.ui-bizagi-container-group-header a:hover,
+    #bz-webpart .ui-bizagi-container h3.ui-bizagi-container-group-header a:active,
+    #bz-webpart .ui-bizagi-container h3.ui-bizagi-container-group-header a:focus {
+        color: @neutral-600 !important;
+        background-color: transparent !important;
+        border: none !important;
+    }
+
+    #bz-webpart .ui-dialog .ui-dialog-title,
+    #bz-webpart .ui-dialog .ui-corner-all {
+        color: @neutral-600 !important;
+        font-weight: 600;
+    }
+
+    /********************************INPUT*************************************/
+    #bz-webpart .ui-dialog  input,
+    #bz-webpart .ui-dialog .ui-bizagi-render-control input,
+    #bz-webpart .ui-dialog .ui-bizagi-render textarea,
+    #bz-webpart .bz-input-icon.bz-input-icon--date input,
+    #bz-webpart .bz-input-icon.bz-input-icon--date-time input,
+    #bz-webpart .ui-bizagi-render-date-control .ui-bizagi-render-date-input input {
+        font-family: inherit !important;
+    }
+    
+    #bz-webpart .ui-bizagi-grid-align-center .ui-bizagi-grid-cell .bz-form-old-item.ui-widget-content .ui-bizagi-label  {
+       display: none;
+    }
+    #bz-webpart .bz-actions__status {
+        text-align: left;
+    }
+    #bz-webpart .ui-bizagi-render input {
+        font-size: 14px !important;
+    }
+    #bz-webpart input:focus, #bz-webpart textarea:focus {
+        border: 1px solid  @color-second !important;
+    }
+    #bz-webpart .ui-bizagi-render-time {
+        min-width: 73px;
+        border: 1px solid  @neutral-300 !important;
+    }
+    #bz-webpart .ui-bizagi-render-time:focus{
+        border: 1px solid  @color-second !important;
+    }
+
+    #bz-webpart .bz-input-icon .bz-input-icon__input:focus,
+    #bz-webpart .ui-bizagi-grid-table .bz-input-icon .bz-input-icon__input {
+        border: 1px solid transparent !important;
+    }
+    #bz-webpart .ui-bizagi-render.ui-corner-all.ui-widget-content input.ui-bizagi-render-text, textarea.ui-bizagi-render-text-extended, input.ui-bizagi-render-date,
+    #bz-webpart input.ui-bizagi-render-search, input.ui-bizagi-render-numeric, .ui-bizagi-grid-table .ui-bizagi-render-control input.ui-bizagi-render-text,
+    #bz-webpart .bz-input-icon {
+        border: 1px solid @neutral-300 !important;
+        border-radius: 4px !important;
+        font-size: 14px !important;
+    }
+    #bz-webpart .bz-input-icon:focus-within {
+        border: 1px solid @color-second !important;
+    }
+    #bz-webpart .ui-bizagi-grid-table .ui-bizagi-render-control.control-required input.ui-bizagi-render-text{
+        border-left: 3px solid @color-error !important;
+    }
+    
+    #bz-webpart .ui-bizagi-render.ui-corner-all.ui-widget-content .ui-bizagi-render-control.control-required input.ui-bizagi-render-text,
+    #bz-webpart .ui-bizagi-render-control.control-required > input,
+    #bz-webpart .ui-bizagi-render-control.control-required > .bz-input-icon,
+    #bz-webpart .ui-bizagi-render-control.control-required textarea,
+    #bz-webpart .ui-bizagi-render-control.control-required .ui-selectmenu .ui-select-data-container input.ui-select-data.ui-selectmenu-value {
+        border-left: 3px solid @color-error !important;
+    }
+
+    #bz-webpart .ui-bizagi-render-control.control-required .bz-signature input {
+        border-left: none !important;
+    }
+
+    #bz-webpart .ui-bizagi-render.ui-corner-all.ui-widget-content input.ui-bizagi-render-text:focus, 
+    #bz-webpart .ui-bizagi-render.ui-corner-all.ui-widget-content input.ui-bizagi-render-date:focus, 
+    #bz-webpart .ui-bizagi-render.ui-corner-all.ui-widget-content input.ui-bizagi-render-search:focus, 
+    #bz-webpart .ui-bizagi-render.ui-corner-all.ui-widget-content input.ui-bizagi-render-numeric:focus,
+    .ui-bizagi-render.ui-corner-all.ui-widget-content textarea:focus {
+        border: 1px solid @color-second !important;
+    }
+
+    #bz-webpart .ui-bizagi-grid-table .ui-bizagi-render-control.control-required input.ui-bizagi-render-text:focus{
+        border-left: 3px solid @color-error !important;
+        border-top: 1px solid @color-second !important;
+        border-bottom: 1px solid @color-second !important;
+        border-right: 1px solid @color-second !important;
+    }
+
+    #bz-webpart .ui-bizagi-render.ui-corner-all.ui-widget-content .ui-bizagi-label,
+    #bz-webpart .ui-bizagi-render.ui-corner-all.ui-widget-content .ui-bizagi-label label{
+       color: @neutral-600;
+    }
+
+    #bz-webpart .ui-bizagi-render.ui-corner-all.ui-widget-content.dhl-required .ui-bizagi-label label::after{
+        content: ' *';
+        font-weight: bold;
+    }
+
+    #bz-webpart .ui-bizagi-render.ui-corner-all.ui-widget-content .ui-bizagi-render-search-cell button.ui-bizagi-render-search-button {
+        border: none;
+        background: @neutral-300 !important;
+        width: 32px;
+        max-height: 20px;
+        line-height: normal;
+        margin: 1px;
+        top: 0px;
+    }
+    
+    #bz-webpart .ui-bizagi-render.ui-corner-all.ui-widget-content .ui-bizagi-render-search-cell button.ui-bizagi-render-search-button:hover {
+        background: @color-second !important;
+    }
+    #bz-webpart .ui-bizagi-advanced-search .ui-bizagi-render-search-button i {
+        right: 8px;
+    }
+    #bz-webpart .ui-autocomplete .ui-bizagi-render-search-item {
+        background-color: @neutral-200 !important;
+    }
+
+    #bz-webpart .ui-bizagi-render-date-input {
+        min-width: 100px;
+    }
+    #bz-webpart .ui-bizagi-rtl .ui-bizagi-advanced-search .ui-bizagi-render-search-button {
+        left: 0 !important;
+        right: auto;
+    }
+    #bz-webpart .ui-bizagi-rtl .ui-bizagi-advanced-search .ui-bizagi-render-search-button i {
+        left: 8px;
+        right: auto;
+    }
+
+    #bz-webpart .bz-collectionnavigator-controls .bz-navigation-control-counter .bz-navigation-current-row {
+        border: 0 !important;
+        display: inline-block !important;
+        margin-right: 0;
+        padding-left: 0;
+        text-align: center;
+        width: 30px !important;
+    }
+    
+    #bz-webpart .bz-collectionnavigator-controls .bz-navigation-control-counter .bz-navigation-total-rows {
+        padding-right: 0;
+        margin-left: 0;
+        text-align: center;
+        width: 30px !important;
+    }
+    
+
+    /************************************LINK*****************************/
+
+        #bz-webpart #ui-bizagi-webpart-render-container a.ui-bizagi-render-link {
+        color: @neutral-600 !important;
+    }
+    #bz-webpart #ui-bizagi-webpart-render-container a.ui-bizagi-render-link:hover,
+    #bz-webpart #ui-bizagi-webpart-render-container a.ui-bizagi-render-link:active {
+        color: @color-second !important;
+    }
+
+
+    /*********************************LIST*******************************/
+    #bz-webpart .ui-bizagi-render-boolean-yesno.control-required .ui-bizagi-wrapper-render-list {
+        border-left: 3px solid @color-error;
+    }
+    #bz-webpart .ui-bizagi-wrapper-render-list .ui-bizagi-render-list  {
+        max-height: 150px !important;
+        background: @neutral-100 !important;
+        overflow: auto;
+    }
+    #bz-webpart .ui-bizagi-wrapper-render-list .ui-bizagi-render-list li {
+        padding: 4px  8px !important;
+        line-height: normal !important;
+        margin: 0 !important;
+    }
+    
+    #bz-webpart .ui-bizagi-wrapper-render-list .ui-bizagi-render-list li.ui-selectable-item.ui-selected.ui-state-active {
+        background-color: @neutral-200 !important;
+        color: @color-second !important;
+    }
+    #bz-webpart .ui-bizagi-wrapper-render-list .ui-bizagi-render-list li.ui-selectable-item:hover {
+        background-color: @neutral-200 !important;
+    }
+
+    #bz-webpart .ui-bizagi-wrapper-render-list {
+        border: 1px solid @color-second;
+        top: 0 !important;
+        max-height: 200px !important;
+    }
+
+    #bz-webpart .ui-bizagi-render-list::-webkit-scrollbar {
+        width: 6px;
+    }
+    #bz-webpart .ui-bizagi-render-list::-webkit-scrollbar-track {
+    background: @neutral-300;
+    border: none;
+    border-radius: 50px;
+    }
+    #bz-webpart .ui-bizagi-render-list::-webkit-scrollbar-thumb {
+    background-color: @neutral-400;
+    outline: 1px solid  @neutral-300;
+    border-radius: 50px;
+    }
+
+    /*******************************RADIO********************************/
+
+    #render-canvas .ui-bizagi-render .ui-bizagi-render-control-required {
+        padding-left: 3px !important;
+        background: @color-error;
+    }
+    #bz-webpart .ui-checkbox, #bz-webpart .ui-radio {
+        position: relative;
+    }
+    #bz-webpart .ui-radio label{
+        position: relative;
+        background: none !important;
+        padding-left: 24px !important;
+        height: auto;
+        margin-left: 0px;
+        padding-top: 4px;
+        margin-right: 0;
+    }
+ 
+    #bz-webpart .ui-radio label:before {
+        content: '';
+        border: 1px solid @neutral-400;
+        border-radius: 50%;
+        display: block;
+        height: 1.27rem;
+        position: absolute;
+        width: 1.3rem;
+        left: 0;
+        top: 8px;
+    }
+ 
+    #bz-webpart .ui-radio label.ui-radio-state-checked:before{
+        content: '';
+        border: 1px solid @color-second;
+        border-radius: 50%;
+        display: block;
+        height: 1.27rem;
+        position: absolute;
+        width: 1.3rem;
+        left: 0;
+        top: 8px;
+    }
+ 
+    #bz-webpart .ui-radio label.ui-radio-state-checked:after{
+        content: '';
+        background: @color-second;
+        border-radius: 50%;
+        height: .95rem;
+        position: absolute;
+        width: .95rem;
+        display: block;
+        left: 3px;
+        top: 10.5px;
+ 
+    }
+
+    & when (@sites = true) {
+
+        #bz-webpart .ui-bizagi-render .ui-bizagi-control .ui-bizagi-render-control.ui-bizagi-render-boolean-yesno > .ui-bizagi-render-radio {
+            margin-left: 3px;
+        }
+
+        #bz-webpart .ui-radio label {
+            line-height: normal;
+        }
+    
+        #bz-webpart .ui-radio label{
+            position: relative;
+            background: none !important;
+            padding-left: 24px !important;
+            margin-left: 0px;
+            padding-top: 2px;
+            margin-right: 0;
+        }
+
+        #bz-webpart .ui-radio label:before {
+            content: '';
+            border: 1px solid @neutral-400;
+            background: @neutral-100;
+            border-radius: 50%;
+            display: block;
+            height: 1.35rem;
+            position: absolute;
+            width: 1.35rem;
+            left: 0;
+            top: 2px;
+        }
+
+        #bz-webpart .ui-radio label.ui-radio-state-checked:before{
+            content: '';
+            border: 1px solid @color-second;
+            background: @neutral-100;
+            border-radius: 50%;
+            display: block;
+            height: 1.35rem;
+            position: absolute;
+            width: 1.35rem;
+            left: 0;
+            top: 2px;
+        }
+
+        #bz-webpart .ui-radio label.ui-radio-state-checked:after{
+            content: '';
+            background: @color-second;
+            border-radius: 50%;
+            border: 1px solid @color-second;
+            height: 1.35rem;
+            position: absolute;
+            width: 1.35rem;
+            display: block;
+            left: 0;
+            top: 2px;
+            transform: scale(0.6);
+        }
+
+    }
+
+    #bz-webpart .ui-radio label.ui-radio-state-hover:before {
+        border: 1px solid @color-second;
+    }
+
+    /****************************************TABS**********************************************/
+    #bz-webpart .ui-tooltip {
+        font-size: 12px !important;
+    }
+
+    #bz-webpart .ui-tabs .ui-tabs-panel {
+        padding: 1.6rem !important;
+    }
+    #bz-webpart .ui-tabs .ui-tabs-nav li a {
+        font-size: 12px !important;
+        padding: .8rem !important;
+    }
+
+    #bz-webpart .ui-tabs .ui-tabs-nav li,
+    #bz-webpart .ui-tabs-panel{
+        border-radius: 0px !important;
+    }
+
+    #bz-webpart .ui-tabs-nav .ui-state-active a,
+    #bz-webpart .ui-state-active,
+    #bz-webpart .ui-tabs-nav .ui-state-default a{
+        background-color: @neutral-100 !important;
+    }
+
+    #bz-webpart .ui-tabs .ui-tabs-nav li{
+        border: 0px solid transparent !important;
+        display: flex;
+        flex-flow: nowrap;
+    }
+
+    #bz-webpart .ui-bizagi-rendering-mode-execution .ui-tabs .ui-tabs-nav li.ui-tabs-active a::after{
+        background-color:  @color-second !important;
+        height: 1px;
+    }
+    #bz-webpart .ui-bizagi-rendering-mode-execution .ui-tabs .ui-tabs-nav li {
+        margin-bottom: 0;
+    }
+    #bz-webpart .ui-tabs-nav .ui-state-active a.ui-tabs-anchor label,
+    #bz-webpart .ui-tabs .ui-tabs-nav .ui-state-default a.ui-tabs-anchor label {
+        padding: 0 !important;
+        white-space: nowrap !important;
+        text-transform: uppercase;
+    }
+
+    #bz-webpart .ui-tabs .ui-tabs-nav li.ui-state-default a label{
+        color: @neutral-500 !important;
+    }
+
+    #bz-webpart .ui-tabs .ui-tabs-nav li.ui-tabs-active.ui-state-active a label {
+        color: @neutral-600 !important;
+    }
+
+    #bz-webpart .ui-tabs .ui-tabs-nav li.ui-tabs-active.ui-state-active.ui-state-focus a,
+    #bz-webpart .ui-tabs .ui-tabs-nav li.ui-state-hover.ui-state-focus a {
+        outline: none !important;
+    }
+
+    #bz-webpart .ui-bizagi-container-tab .ui-tabs-nav {
+        display: flex;
+        flex-flow: wrap;
+    }
+
+
+    /****************** SCROLL ******************************/
+    #bz-webpart::-webkit-scrollbar,
+    #bz-webpart .bz-multiselect__content::-webkit-scrollbar,
+    #bz-webpart .ui-bizagi-grid .bz-rn-grid-data-wraper::-webkit-scrollbar,
+    #bz-webpart .ui-bizagi-component-loading::-webkit-scrollbar,
+    #bz-webpart .ui-select-dropdown.open ul::-webkit-scrollbar {
+        width: 8px;
+        height: 6px;
+    }
+    #bz-webpart::-webkit-scrollbar-thumb,
+    #bz-webpart .bz-multiselect__content::-webkit-scrollbar-thumb,
+    #bz-webpart .ui-bizagi-grid .bz-rn-grid-data-wraper::-webkit-scrollbar-thumb,
+    #bz-webpart .ui-bizagi-component-loading::-webkit-scrollbar-thumb,
+    #bz-webpart .ui-select-dropdown.open ul::-webkit-scrollbar-thumb{
+        background: @neutral-400;
+        border: none;
+        border-radius: 100px;
+    }
+    #bz-webpart::-webkit-scrollbar-thumb:hover,
+    #bz-webpart .bz-multiselect__content::-webkit-scrollbar-thumb:hover,
+    #bz-webpart .ui-bizagi-grid .bz-rn-grid-data-wraper::-webkit-scrollbar-thumb:hover,
+    #bz-webpart .ui-bizagi-component-loading::-webkit-scrollbar-thumb:hover,
+    #bz-webpart .ui-select-dropdown.open ul::-webkit-scrollbar-thumb:hover {
+        background: @neutral-400;
+    }
+    #bz-webpart::-webkit-scrollbar-thumb:active
+    #bz-webpart .bz-multiselect__content::-webkit-scrollbar-thumb:active,
+    #bz-webpart .ui-bizagi-grid .bz-rn-grid-data-wraper::-webkit-scrollbar-thumb:active,
+    #bz-webpart .ui-bizagi-component-loading::-webkit-scrollbar-thumb:active,
+    #bz-webpart .ui-select-dropdown.open ul::-webkit-scrollbar-thumb:active {
+        background: @neutral-300;
+    }
+    #bz-webpart::-webkit-scrollbar-track,
+    #bz-webpart .bz-multiselect__content::-webkit-scrollbar-track,
+    #bz-webpart .ui-bizagi-grid .bz-rn-grid-data-wraper::-webkit-scrollbar-track,
+    #bz-webpart .ui-bizagi-component-loading::-webkit-scrollbar-track,
+    #bz-webpart .ui-select-dropdown.open ul::-webkit-scrollbar-track {
+        background: @neutral-300;
+        border: none;
+        border-radius: 50px;
+    }
+    #bz-webpart::-webkit-scrollbar-track:hover,
+    #bz-webpart .bz-multiselect__content::-webkit-scrollbar-track:hover,
+    #bz-webpart .ui-bizagi-grid .bz-rn-grid-data-wraper::-webkit-scrollbar-track:hover,
+    #bz-webpart .ui-bizagi-component-loading::-webkit-scrollbar-track:hover,
+    #bz-webpart .ui-select-dropdown.open ul::-webkit-scrollbar-track:hover {
+        background: @neutral-300;
+    }
+    #bz-webpart::-webkit-scrollbar-track:active,
+    #bz-webpart .bz-multiselect__content::-webkit-scrollbar-track:active,
+    #bz-webpart .ui-bizagi-grid .bz-rn-grid-data-wraper::-webkit-scrollbar-track:active,
+    #bz-webpart .ui-bizagi-component-loading::-webkit-scrollbar-track:active,
+    #bz-webpart .ui-select-dropdown.open ul::-webkit-scrollbar-track:active {
+        background: @neutral-300;
+    }
+    #bz-webpart::-webkit-scrollbar-corner,
+    #bz-webpart .bz-multiselect__content::-webkit-scrollbar-corner,
+    #bz-webpart .ui-bizagi-grid .bz-rn-grid-data-wraper::-webkit-scrollbar-corner,
+    #bz-webpart .ui-bizagi-component-loading::-webkit-scrollbar-corner,
+    #bz-webpart .ui-select-dropdown.open ul::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+
+    /******************************** SUMMARY FORMS **************************/
+    #bz-webpart #bz-gq-table-summary.bz-table th, #bz-gq-table-summary.bz-table td {
+        font-size: 14px !important;
+    }
+    #bz-webpart .ui-bizagi-webpart-case-summary-container, .ui-bizagi-sharepoint-caseSummary,
+    #bz-webpart .ui-bizagi-webpart-case-summary-description {
+        background: @neutral-100 !important;
+    }
+    #bz-webpart .ui-bizagi-webpart-case-summary-details-tabs .ui-tabs-nav {
+        border-bottom: 1px solid @neutral-400;
+        li {
+            max-width: 25%;
+            a {
+                color: @neutral-600;
+                font-size: 14px !important;
+                padding: 1.2em 1em !important;
+                white-space: nowrap;
+                width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+    #bz-webpart .ui-bizagi-summary-form .ui-bizagi-control-wrapper {
+        border: 1px solid @neutral-300;
+        background: transparent;
+    }
+    #bz-webpart .ui-bizagi-webpart-case-summary-details-tabs .ui-tabs-nav .ui-tabs-active.ui-state-active {
+        border-bottom: 2px solid @color-second !important;
+    }
+    #bz-webpart .ui-bizagi-webpart-case-summary-details-tabs .box-description {
+        font-size: 14px;
+        dd {
+            border: 1px solid @neutral-300;
+            background: transparent;
+        }
+    }
+
+    #bz-webpart .ui-bizagi-webpart-case-summary-details-tabs  #details {
+        background: @neutral-100;
+    }
+
+    #bz-webpart  .ui-bizagi-webpart-case-summary-workitems .ui-helper-reset.ui-state-active {
+        background-color: transparent;
+        border-bottom: 1px solid @neutral-300;
+    }
+
+    #bz-webpart .ui-bizagi-summary-form  .ui-bizagi-container .ui-tabs-nav .ui-tabs-active.ui-state-active {
+        border-bottom: transparent !important;
+    }
+    #bz-webpart .ui-bizagi-webpart-case-summary-details-tabs  .ui-bizagi-container .ui-tabs-nav {
+        border-bottom: transparent !important;
+    }
+    #bz-webpart .ui-bizagi-summary-form .bz-rn-grid-container-foother {
+        min-height: 0;
+    }
+    #bz-webpart .ui-bizagi-webpart-case-summary-details-tabs h3, .ui-bizagi-webpart-case-summary-title,
+    #bz-webpart .ui-bizagi-webpart-case-summary-details-tabs .box-description, 
+    #bz-webpart .ui-bizagi-webpart-case-summary-details-tabs dt, .ui-bizagi-webpart-case-summary-description .box-description dt {
+        color: @neutral-600 !important;
+    }
+
+    /* ==========================================================================
+   Render Webpart Overrides - New workportal
+   ========================================================================== */
+
+   @newWP: false;
+
+   html.bz-html-webpart when (@newWP = true) {
+       overflow-y: auto;
+   }
+
+  /* ------------------- Form header (case and activity details) ------------------- */
+  
+  .ui-bizagi-webpart-header-container when (@newWP = true) {
+      display: none
+  }
+  
+  /* ------------------- Form ------------------- */
+  
+  #bz-webpart .ui-bizagi-container-form when (@newWP = true) {
+      margin: 0;
+      padding: 0 24px !important;
+      width: 100%;
+  }
+
+  #bz-webpart .bz-rn-grid-header-title when (@newWP = true) {
+       color: @title!important;
+  }
+  
+  /* ------------------- Buttons ------------------- */
+  
+  #bz-webpart .ui-bizagi-button-container when (@newWP = true) {
+      background-color: @content !important;
+      border-radius: 0;
+      box-shadow: 0px 0px 30px #E8E8E8;
+      display: flex;
+      justify-content: flex-end;
+      z-index: 10 !important;
+  }
+  
+  #bz-webpart .ui-bizagi-buttons-group > input when (@newWP = true) {
+      font-size: 14px !important;
+  }
+
+  #bz-webpart h3 when (@newWP = true) {
+      color: @title!important;
+  }
+
+//    BUTTONS GENERAL
+
+  #bz-webpart .ui-bizagi-control-wrapper .ui-bizagi-render-button.ui-button when (@newWP = true) {
+       background: @content!important;   
+       color: @title!important;
+       border-color: @title!important;
+       padding: .8rem 1.6rem;
+       min-width: 0;
+  }
+  
+  #bz-webpart .ui-bizagi-control-wrapper .ui-bizagi-render-button.ui-button .ui-button-text when (@newWP = true) {
+      color: @title!important;
+      font-weight: 600!important;
+      background: transparent!important;
+   }
+
+  #bz-webpart .ui-bizagi-control-wrapper .ui-bizagi-render-button.ui-button .ui-button-text .ui-icon.file-print when (@newWP = true) {
+       background: url(../../../../rendering/css/desktop/images/sprite.png) -359px -119px no-repeat!important;
+  }
+
+  #bz-webpart .ui-bizagi-control-wrapper .ui-bizagi-render-control .ui-bizagi-render-button.ui-button:hover when (@newWP = true) {
+       background: @color-third!important;
+       color: @content!important;
+   }
+
+   #bz-webpart .ui-bizagi-control-wrapper .ui-bizagi-render-button.ui-button:hover .ui-button-text when (@newWP = true) {
+       background: transparent!important;
+       color: @content!important;
+   }
+
+  #bz-webpart .ui-bizagi-control-wrapper .ui-bizagi-render-button.ui-button:hover .ui-button-text .ui-icon.file-print when (@newWP = true) {
+       background: url(../../../../rendering/css/desktop/images/sprite.png) -339px -119px no-repeat!important;
+   }
+
+//      BUTTON DISABLED
+
+   #bz-webpart .ui-bizagi-control-wrapper .ui-bizagi-render-button.ui-button.ui-button-disabled when (@newWP = true){
+       background: @form-group!important;
+       border-color: @form-group!important;
+  }
+
+  #bz-webpart .ui-bizagi-control-wrapper .ui-bizagi-render-button.ui-button.ui-button-disabled .ui-button-text when (@newWP = true){
+       color: #757575!important;
+   }
+
+   #bz-webpart .ui-bizagi-control-wrapper .ui-bizagi-render-button.ui-button.ui-button-disabled .ui-button-text .ui-icon.file-print when (@newWP = true) {
+       background: url(../../../../rendering/css/desktop/images/sprite.png) -339px -119px no-repeat!important;
+  }
+
+  #bz-webpart .ui-bizagi-control-wrapper .ui-bizagi-render-control .ui-bizagi-render-button.ui-button.ui-button-disabled:hover when (@newWP = true) {
+       background: @form-group!important;
+   }
+
+   #bz-webpart .ui-bizagi-control-wrapper .ui-bizagi-render-button.ui-button.ui-button-disabled:hover .ui-button-text when (@newWP = true) {
+       color: #757575!important;
+   }
+
+//      BUTTONS UPLOAD AND CANCEL
+
+   #bz-webpart .ui-dialog .ui-dialog-buttonpane button when (@newWP = true) {
+       background: @content!important;   
+       border-color: @title!important;
+       border-radius: 4px;
+       padding: .8rem 1.6rem;
+       min-width: 0;
+    }
+
+    #bz-webpart .ui-dialog .ui-dialog-buttonpane button .ui-button-text when (@newWP = true) {
+       background: transparent!important;
+       color: @title!important;
+       font-weight: 600!important;
+    }
+
+    #bz-webpart .ui-dialog .ui-dialog-buttonpane button:hover when (@newWP = true) {
+       background: @title!important;   
+    }
+
+    #bz-webpart .ui-dialog .ui-dialog-buttonpane button:hover .ui-button-text when (@newWP = true) {
+       color: @content!important;
+    }
+
+
+//      TABS    
+
+   #bz-webpart .ui-tabs-nav .ui-state-active when (@newWP = true) {
+       background: transparent!important;
+   }
+
+   #bz-webpart .ui-tabs-nav a when (@newWP = true) {
+       background: transparent!important;
+   }
+   #bz-webpart .ui-tabs-nav .ui-state-active a when (@newWP = true) {
+       background: transparent!important;
+       color: @title!important;
+       font-weight: 600!important;
+       min-width: 75px;
+       padding: .8rem;
+       text-align: center;
+   }
+
+   #bz-webpart .ui-tabs-nav .ui-state-active a:after when (@newWP = true) {
+       background: @title!important;
+       height: 2px!important;
+       bottom: 1px!important;
+   }
+
+   #bz-webpart .ui-tabs-nav a label when (@newWP = true) {
+       color: @text!important;
+   }
+
+   #bz-webpart .ui-tabs-nav .ui-state-active a label when (@newWP = true) {
+       color: @title!important;
+   }
+
+//      LINK
+    #bz-webpart .ui-select-dropdown.open when (@newWP = true) {
+        color: @color-second!important;
+    }
+//      SELECT
+
+   #bz-webpart .ui-select-dropdown.open when (@newWP = true) {
+       background: white!important;
+       border-radius: 0 0 6px 6px !important;
+   }
+
+   #bz-webpart .ui-select-dropdown.open.open ul li when (@newWP = true) {
+       color: @text!important;
+   }
+   
+   //      TEXTAREA
+   
+   #bz-webpart textarea when (@newWP = true) {
+       background: white!important;
+       color: @text!important;
+   }
+
+//      TABLAS
+
+    #bz-webpart .bz-rn-grid-container-foother  when (@newWP = true) {
+        border-top: 1px solid @neutral-300 !important;
+    }
+    
+   #bz-webpart .ui-bizagi-grid  when (@newWP = true) {
+       background: transparent !important;
+   }
+
+   #bz-webpart .bz-rn-grid-cn-header when (@newWP = true) {
+       border-color: @form-group-border !important;
+   }
+
+   #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table when (@newWP = true) {
+       border: none!important;
+   }
+   #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr:hover when (@newWP = true) {
+        background: white!important;
+   }
+   #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr:hover td when (@newWP = true) {
+        background: none!important;
+        border-bottom: none;
+    }
+
+    #bz-webpart .ui-bizagi-container.ui-bizagi-container-collectionnavigator when (@newWP = true) {
+        border-color: @neutral-300!important;
+        background: @neutral-100!important;
+    }
+    #bz-webpart .ui-bizagi-container-collectionnavigator .bz-collectionnavigator-controls when (@newWP = true) {
+        border-color: @neutral-300!important;
+        background: @neutral-100!important;
+    }
+    #bz-webpart .ui-bizagi-container-collectionnavigator .actions-group when (@newWP = true) {
+        background: @neutral-100!important;
+    }
+    #bz-webpart .ui-bizagi-container-collectionnavigator .forms-group when (@newWP = true) {
+        background: @neutral-100!important;
+    }
+    #bz-webpart .ui-bizagi-container-collectionnavigator .bz-collectionnavigator-wrapper when (@newWP = true) {
+        background: @neutral-100!important;
+    }
+    #bz-webpart .ui-bizagi-container-collectionnavigator .bz-collectionnavigator-controls .actions-group::before when (@newWP = true) {
+        background: @neutral-100!important;
+    }
+    #bz-webpart .ui-bizagi-container-collectionnavigator .bz-collectionnavigator-controls .forms-group::after    when (@newWP = true) {
+        background: @neutral-100!important;
+    }
+    #bz-webpart .ui-bizagi-container-collectionnavigator .bz-collectionnavigator-controls .bz-navigation-control-counter when (@newWP = true) {
+        background: @neutral-100!important;
+    }
+    #bz-webpart .ui-bizagi-container-collectionnavigator .bz-collectionnavigator-controls .bz-navigation-control-counter input when (@newWP = true) {
+        display: inline-block!important;
+        width: 30px!important;
+    }    
+    #bz-webpart .ui-tabs-panel a span when (@newWP = true) {
+        color: @color-second!important;
+    }
+    #bz-webpart .ui-tabs-panel a span when (@newWP = true) {
+        color: @color-second!important;
+    }
+    #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr td when (@newWP = true) {
+        border-color: @neutral-300!important;
+    }
+    #bz-webpart .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr:hover td when (@newWP = true) {
+        border-bottom: 1px solid @neutral-300!important;
+    }
+
+//  --------------------------
+
+   #bz-webpart .ui-widget-content when (@newWP = true) {
+       color: @title!important;
+   }
+
+   #bz-webpart .ui-widget-contentwhen:focus when (@newWP = true) {
+       outline: none!important;
+   }
+
+   #bz-webpart .ui-datepicker .ui-datepicker-header when (@newWP = true) {
+       background-color: @form-input!important;
+   }
+
+//      BUTTONS FOOTER
+
+   #bz-webpart .ui-bizagi-button-container:hover when (@newWP = true) {
+       border-color: @form-group!important;
+   }
+
+   #bz-webpart .ui-bizagi-buttons-group input.ui-bizagi-button when (@newWP = true) {
+       background: @content!important;   
+       color: @title!important;
+       border: 1px solid @title!important;
+       padding: .8rem 1.6rem;
+       min-width: 0;
+   }
+
+   #bz-webpart .ui-bizagi-buttons-group input.ui-bizagi-button:hover when (@newWP = true) {
+       background: @content!important;   
+       color: @color-third!important;
+       border-color: @color-third!important;
+   }
+
+   #bz-webpart .ui-bizagi-buttons-group .ui-bizagi-button:last-child when (@newWP = true) {
+       background: @title!important;   
+       color: @content!important;
+       opacity: 1;
+   }
+
+   #bz-webpart .ui-bizagi-buttons-group input.ui-bizagi-button:last-child:hover when (@newWP = true) {
+        background: @color-third!important;
+        color: @content!important;
+        border-color: @title!important;
+    }
+
+   #bz-webpart .ui-bizagi-button-container when (@newWP = true) {
+       box-shadow: none;
+       position: fixed;
+       left: 0;
+       right: 0;
+       bottom: 0;
+       border-top: 1px solid @form-group!important;
+       padding-right: 24px;
+       padding-left: 24px;
+   }
+
+   #bz-webpart when (@newWP = true) {
+       height: 100vh!important;
+   }
+
+   #contracapprovalform when (@newWP = true) {
+       height: 100%;
+   }
+   
+   #bz-webpart .ui-bizagi-sharepoint-render.ui-bizagi-sharepoint-webpart-parentdiv when (@newWP = true) {
+       height: 100%;
+   }
+
+   #bz-webpart .ui-bizagi-sharepoint-render.ui-bizagi-sharepoint-webpart-parentdiv > div when (@newWP = true) {
+       height: 100%;
+   }
+   
+   #bz-webpart #render-canvas when (@newWP = true) {
+       height: 100%;
+   }
+   
+   #bz-webpart .ui-bizagi-component-adjustable when (@newWP = true) {
+       height: 100%;
+   }
+   
+   #bz-webpart .ui-bizagi-container-form when (@newWP = true) {
+       height: calc(100% - 71px);
+       height: ~"calc(100% - 71px)";
+       overflow-y: auto;
+   }
+
+   #bz-webpart #ui-bizagi-webpart-render-container a  when (@newWP = true) {
+       color: @title!important;
+       font-size: 14px !important;
+       padding: .8rem .5em .8rem 2em;
+   }
+
+   /* ------------------- Summary form webpart ------------------- */
+
+  #bz-webpart .ui-bizagi-sharepoint-webpart-parentdiv.ui-bizagi-sharepoint-caseSummary when (@newWP = true) {
+       height: 100%;
+       background:  transparent none!important;
+   }
+
+   #bz-webpart .ui-bizagi-webpart-case-summary-details-tabs when (@newWP = true){
+       background: #fafafa;
+       height: 100%;
+       padding: 1.6rem;
+   }
+
+   #bz-webpart .ui-bizagi-webpart-case-summary-details-tabs > #form > .ui-bizagi-summary-form when (@newWP = true){
+       padding: 1.6rem 2.4rem;
+       border-radius: 4px;
+       border: 1px solid @form-group;
+   }
+
+   /*-------------------------- Query Form -----------------------*/
+   #bz-webpart .ui-bizagi-render-control-included-all-container when (@newWP = true) { // TODO: Validate if it is necessary have another parameter as in preferences
+       text-align: right;
+       margin-right: 5px;
+   }
+   /* Others */
+  
+    #bz-webpart .ui-bizagi-component-adjustable when (@newWP = true){
+        border: none;
+    }
+
+    #bz-webpart #ui-bizagi-webpart-render-container a  when (@newWP = true) {
+        font-size: 14px !important;
+        padding: .8rem .5em .8rem 2em;
+    }
+
+    #bz-webpart #ui-bizagi-webpart-render-container h3.ui-bizagi-container-group-header when (@newWP = true) {
+        background: transparent!important;
+    }
+
+    #bz-webpart .ui-bizagi-container-group-wrapper when (@newWP = true) {
+        background: transparent!important;
+    }
+
+    /*-------------------------- Query Form -----------------------*/
+
+    @queryform: false;
+    #bz-webpart .ui-bizagi-render-control-included-all-container when (@newWP = true) {
+        text-align: right;
+        margin-right: 5px;
+    }
+
+    #bz-webpart #ui-bizagi-webpart-render-container .ui-bizagi-render input.ui-bizagi-render-control-included when (@newWP = true) {
+        width: auto;
+    }
+
+    #bz-webpart .ui-bizagi-container-form when (@newWP = true) {
+        height: 100%;
+    }
+
+    /* #bz-webpart .bz-webpart.ui-bizagi-sharepoint-webpart-parentdiv when (@newWP = true) and (@queryform = true) {
+        height: 100%;
+    } */
+
+    /* #bz-webpart .bz-webpart.ui-bizagi-sharepoint-webpart-parentdiv > div when (@newWP = true) and (@queryform = true) {
+        height: 100%;
+    }
+ */
+    #bz-webpart .ui-bizagi-container-form when (@newWP = true) and (@queryform = true)  {
+        padding: 16px 24px !important;
+    }
+
+    #bz-webpart .ui-button.ui-state-default when (@newWP = true) and (@queryform = true) {
+        min-width: 25px;
+    }
+
+    #bz-webpart .ui-button.ui-state-default:hover .ui-bizagi-render-icon-search when (@newWP = true) and (@queryform = true) {
+        background-position: -7px -149px;
+    }
+
+    #bz-webpart .ui-bizagi-render-control .bz-render-getUser-container #btn-get-user i.ui-bizagi-render-icon-search when (@newWP = true) and (@queryform = true) {
+        left: 0;
+    }
+
+    #bz-webpart .ui-bizagi-sharepoint-webpart-parentdiv {
+        min-height: auto;
+    }
+
+  /*---------------------------- Preferences -----------------------------*/
+
+  @preferences: false;
+
+  /* Preferences Container */
+
+  #bz-webpart .bz-webpart.ui-bizagi-sharepoint-webpart-parentdiv when (@newWP = true) and (@preferences = true), (@queryform = true) {
+   height: 100%;
+  }
+
+  #bz-webpart .bz-webpart.ui-bizagi-sharepoint-webpart-parentdiv > div when (@newWP = true) and (@preferences = true), (@queryform = true){
+   height: 100%;
+   }
+
+   #bz-webpart .ui-bizagi-container-form when (@newWP = true) and (@preferences = true){
+       height: 100%;
+       overflow-y: hidden;
+   }
+
+   #bz-webpart .ui-bizagi-container-horizontal > div:first-of-type when (@newWP = true) and (@preferences = true){
+       display: none !important;
+   }
+
+   #bz-webpart #render-canvas when (@newWP = true) and (@preferences = true){
+       overflow: initial;
+   }
+
+   #bz-webpart .ui-bizagi-container-form when (@newWP = true) and (@preferences = true) { 
+       overflow: initial; 
+   }
+
+   .desktop .ui-select-dropdown.open.bz-combo__list--comfortable when (@newWP = true) and (@preferences = true) {
+       width: 100% !important;
+   } 
+
+   /* Preferences Dialogs*/
+
+    #bz-webpart .ui-dialog when (@newWP = true) and (@preferences = true), (@queryform = true) {
+        overflow-x: hidden;
+    }
+
+    #bz-webpart .ui-dialog .ui-resizable-se when (@newWP = true)  and (@preferences = true), (@queryform = true) {
+        display: none !important;
+        pointer-events: none;
+        cursor: initial;
+    }
+
+    #bz-webpart .ui-dialog .ui-resizable-s when (@newWP = true) and (@preferences = true), (@queryform = true) {
+        pointer-events: none;
+        cursor: initial;
+        display: none !important;
+    }
+
+    #bz-webpart .ui-dialog .ui-resizable-n when (@newWP = true) and (@preferences = true), (@queryform = true) {
+        pointer-events: none;
+        cursor: initial;
+    }
+
+    #bz-webpart .ui-dialog .ui-resizable-w when (@newWP = true) and (@preferences = true), (@queryform = true) {
+        pointer-events: none;
+        cursor: initial;
+    }
+
+    #bz-webpart .ui-dialog .ui-resizable-e when (@newWP = true) and (@preferences = true), (@queryform = true) {
+        pointer-events: none;
+        cursor: initial;
+    }
+
+    #bz-webpart .ui-dialog .ui-resizable-sw when (@newWP = true) and (@preferences = true), (@queryform = true) {
+        display: none !important;
+    }
+
+
+
+    /* Search and delete buttons in Preferences container */
+
+    #bz-webpart .ui-button.ui-state-default  when (@newWP = true) and (@preferences = true), (@queryform = true) {
+        background: transparent!important;
+        border: none;
+    }
+
+    #bz-webpart .ui-button.ui-state-default i when (@newWP = true) and (@preferences = true), (@queryform = true) {
+    color: #9E9E9E!important;
+    font-weight: 600 !important;
+    }
+
+    #bz-webpart .ui-button.ui-state-default:hover when (@newWP = true) and (@preferences = true), (@queryform = true) {
+        background-color: transparent !important;
+    }
+
+    #bz-webpart .ui-button.ui-state-default:hover i when (@newWP = true) and (@preferences = true), (@queryform = true) {
+        color: @title!important;
+        font-weight: 600 !important;
+    }
+
+
+    /* Users Search in preferences form */
+
+    #bz-webpart .ui-bizagi-component-search-user .filters-container .filters-cell span when (@newWP = true) and (@preferences = true), (@queryform = true) {
+        font-size: 14px;
+        min-height: 15px;
+        color: @text;
+        font-weight: normal;
+    }
+
+    #bz-webpart .ui-bizagi-component-search-user .biz-wp-table when (@newWP = true) and (@preferences = true), (@queryform = true) {
+        font-size: 14px;
+        min-height: 15px;
+        color: @text;
+        font-weight: normal;
+    }
+
+    #bz-webpart .ui-bizagi-component-search-user #buttonsContainer when (@newWP = true) and (@preferences = true), (@queryform = true) {
+        padding: 8px;
+    }
+
+    #bz-webpart .ui-bizagi-component-search-user .ui-button when (@newWP = true) and (@preferences = true), (@queryform = true) {
+        align-items: center;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        cursor: pointer;
+        display: inline-flex;
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 1.5; // You can define your line-height without a unit of measurement and the browser will do all the hard math for you.
+        padding: .8rem 1.6rem;
+        white-space: normal;
+        word-break: break-all;
+        word-wrap: break-word;
+        box-shadow: none;
+    }
+
+    #bz-webpart .ui-bizagi-component-search-user #btnClear when (@newWP = true) and (@preferences = true), (@queryform = true) {
+        background: transparent;
+        border: 1px solid @title;
+        margin: 8px;
+    }    
+
+    #bz-webpart .ui-bizagi-component-search-user #btnClear.ui-button span when (@newWP = true) and (@preferences = true), (@queryform = true) {
+        color: @title!important;
+        background: transparent!important;
+    }
+
+    #bz-webpart .ui-bizagi-component-search-user #btnClear:hover when (@newWP = true) and (@preferences = true), (@queryform = true) {
+        background: transparent !important;
+        border-color: @color-third;
+    }
+    #bz-webpart .ui-bizagi-component-search-user #btnClear.ui-button:hover span when (@newWP = true) and (@preferences = true), (@queryform = true) {
+        color: @color-third!important;
+    }
+
+    #bz-webpart .ui-bizagi-component-search-user .bizagi-wp-usertable-userlink when (@newWP = true) and (@preferences = true), (@queryform = true) {
+        background: transparent;
+        border-color: @title;
+    }   
+
+    #bz-webpart .ui-bizagi-component-search-user .bizagi-wp-usertable-userlink span when (@newWP = true) and (@preferences = true), (@queryform = true) {
+        color: @title;
+    }
+
+    #bz-webpart .ui-bizagi-component-search-user .bizagi-wp-usertable-userlink:hover when (@newWP = true) and (@preferences = true), (@queryform = true) {
+        background: transparent !important;
+        border-color: @color-third;
+    }
+
+    #bz-webpart .ui-bizagi-component-search-user .bizagi-wp-usertable-userlink:hover span when (@newWP = true) and (@preferences = true), (@queryform = true) {
+        color: @color-third;
+    }
+
+    #bz-webpart .ui-bizagi-component-search-user #btnSearchUsers when (@newWP = true) and (@preferences = true), (@queryform = true) {
+        background: @content;
+        margin: 8px;
+        border: 1px solid @title;
+    }
+
+    #bz-webpart .ui-bizagi-component-search-user #btnSearchUsers.ui-button span when (@newWP = true) and (@preferences = true), (@queryform = true) {
+        color: @title!important;
+        background: @content!important;
+    }
+
+    #bz-webpart .ui-bizagi-component-search-user #btnSearchUsers:hover when (@newWP = true) and (@preferences = true), (@queryform = true){
+        background: @content!important;
+        border-color: @color-third !important;
+    }
+
+    #bz-webpart .ui-bizagi-component-search-user #btnSearchUsers.ui-button:hover span when (@newWP = true) and (@preferences = true), (@queryform = true) {
+        color: @color-third!important;
+    }
+
+
+    /* Pagination in User Search Preferences*/
+
+    #bz-webpart .biz-wp-table-summary-wrapper when (@newWP = true) and (@preferences = true), (@queryform = true) {
+        overflow: hidden;
+        text-align: center;
+        padding: 3px 0;
+        position: relative;
+    }
+
+    #bz-webpart #biz-wp-userstable-pager when (@newWP = true) and (@preferences = true), (@queryform = true) {
+        margin-top: 6px;
+    }
+
+    #bz-webpart .biz-wp-table-summary-wrapper ul when (@newWP = true) and (@preferences = true), (@queryform = true) {
+        margin: 0 auto;
+        height: 24px;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        display: inline;
+    }
+
+    #bz-webpart .biz-wp-table-pager-wrapper li when (@newWP = true) and (@preferences = true), (@queryform = true) {
+        list-style: none;
+        display: inline-block;
+        cursor: pointer;
+        padding: 2px 5px 3px;
+        min-width: 20px;
+    }
+
+    #bz-webpart .biz-wp-table-summary-wrapper ul li.active when (@newWP = true) and (@preferences = true), (@queryform = true) {
+        background-color: @title;
+        border-radius: 6px;
+        color: @content;
+    }

@@ -1,0 +1,38 @@
+﻿.ui-radio{ position: relative; }
+.ui-radio input {
+	position: absolute;
+	left: 6px;
+	top: 6px;
+	margin: 0;
+	z-index: 0;
+	border-width: 0px;
+}
+
+html ui-radio input {
+	left: 2px !important;
+	top: 3px  !important;	
+}
+
+.ui-radio label 
+{
+	display: block;
+	position: relative;
+	z-index: 1;
+	padding-right: 1em;
+	line-height: 1;
+	padding: .5em 0 .5em 30px !important;
+	margin: 0 0 .3em;
+	cursor: pointer;
+	min-height: 26px;
+}
+.ui-radio label { background: url(images/ui-radiobutton.png) no-repeat !important; }
+.ui-radio label {
+	background-position: -10px -14px  !important;
+}
+.ui-radio label.ui-radio-state-hover,
+.ui-radio label.ui-radio-state-highlight {
+	background-position: -10px -114px  !important;
+}
+.ui-radio label.ui-radio-state-checked {
+	background-position: -10px -214px !important;
+}

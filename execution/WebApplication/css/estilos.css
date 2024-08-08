@@ -1,0 +1,961 @@
+@font-face {
+    font-family: "Neo Sans Regular";
+    src: url("../jquery/themes/bizagiDefault/fonts/neosansstd-regular-webfont.eot"); /* IE9 Compat Modes */
+    src: url("../jquery/themes/bizagiDefault/fonts/neosansstd-regular-webfont.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+         url("../jquery/themes/bizagiDefault/fonts/neosansstd-regular-webfont.woff") format('woff'); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;      
+}
+
+body {
+	background: #F5F5F5 !important;
+	font-family: "Open Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #444;
+}
+
+a { color: #2f526c !important; }
+
+a:hover { color: #437499 !important; }
+
+td { font-size: 12px !important; }
+
+form { text-align: left; }
+
+.WPLeftPanelBody {
+    font-family: "Neo Sans Regular", Tahoma, Geneva, sans-serif;
+    font-size: 12px;
+    color: #234E7A;
+}
+
+.WPBgBody {
+    background-image: none;
+    font-size: 12px;
+    color: #234E7A;
+}
+
+.HelpMessgeTitle {
+    background-color: #CCC;
+    font-weight: bold;
+    color: white;
+}
+
+.header {
+    border-bottom: #DDD 1px solid;
+    font: normal bold 12px "Neo Sans Regular", Tahoma, Geneva, sans-serif;
+    white-space: nowrap;
+    text-align: left;
+    color: #657383;
+}
+
+.gridSummaryheader {
+    border-bottom: #DDD 1px solid;
+    font: normal bold 12px "Neo Sans Regular", Tahoma, Geneva, sans-serif;
+    white-space: nowrap;
+    color: #657383;
+}
+
+.gridSummary {
+    border-bottom: #DDDDDD 1px solid;
+    font: normal bold 12px "Neo Sans Regular", Tahoma, Geneva, sans-serif;
+    white-space: nowrap;
+    color: #657383;
+}
+
+.gridline1 {
+    padding: 2px;
+    background-color: #FFF;
+    font-size: 12px;
+}
+
+.gridline1 td {
+    font-size: 12px;
+}
+
+.gridline2 {
+    font-size: 12px;
+    background-color: #F0F0F0;
+    padding: 2px;
+}
+
+.gridline2 td {
+    font-size: 12px;
+    line-height: 21px;
+}
+
+.gridline1 .icon, 
+.gridline2 .icon {
+    height:16px;
+    width:16px;
+    cursor:pointer;
+}
+
+.gridgroup { font-weight: bold; }
+
+#rounded-corner {
+    width: 480px;
+    border-collapse: collapse;
+    margin: 20px;    
+    font-family: "Neo Sans Regular", Tahoma, Geneva, sans-serif;
+    font-size: 12px;
+    text-align: left;
+}
+
+#rounded-corner th {    
+    padding: 8px;
+    font-size: 12px;
+    font-weight: normal;
+    background: #b9C9FE;
+    color: #039;
+}
+
+#rounded-corner td {
+    padding: 8px;
+    border-top: 1px solid #FFF;
+    background: #e8EDFF;
+    color: #669;
+}
+
+#rounded-corner tfoot td.rounded-foot-left { background: #e8edff url("http://88.198.60.17/images/express-css-table-design/table-images/botleft.png") left bottom no-repeat; }
+
+#rounded-corner tfoot td.rounded-foot-right { background: #e8edff url("http://88.198.60.17/images/express-css-table-design/table-images/botright.png") right bottom no-repeat; }
+
+#rounded-corner tbody tr:hover td { background: #D0DAFD; }
+
+.headerlinks a {
+    border: 0;
+    color: #666;
+    font-size: 12px;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.headerlinks a:hover {
+    border: 0;
+    color: #666;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.ListHeaderLinks {
+    padding: 5px;
+    background-color: #dadada;
+    vertical-align: middle;
+}
+
+.ListHeaderLinks a {
+    border: 0;
+    font-size: 12px;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.ListHeaderLinks a:hover {
+    border: 0;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.headerlinksNI {
+    height: 5px;
+    padding: 0 5px;
+    background-color: #DAE1E8;
+    color: #666;
+    font-size: 12px;
+    font-family: "Neo Sans Regular", Tahoma, Geneva, sans-serif;
+    white-space: nowrap;    
+    vertical-align: middle;
+}
+
+.headerlinks {  
+    height: 5px;
+    padding: 0 5px;
+    background-color: #DAE1E8;
+    background-image: url(../img/WorkPortal/dividerLong.gif);
+    background-repeat: no-repeat;
+    color: #666;
+    font-size: 12px;
+    font-family: "Neo Sans Regular", Tahoma, Geneva, sans-serif;
+}
+
+.nblnk {
+    font-size: 12px;
+    font-family: "Neo Sans Regular", Tahoma, Geneva, sans-serif;
+    text-decoration: none;
+}
+
+img { border: 0; }
+
+input {
+    font-size: 12px;
+    color: #666;
+}
+
+.BgInput {
+    border: solid 1px #7F9DB9;
+}
+
+select,
+textarea {
+    border: 1px solid #4A618C;
+    background: #FFF;
+    font-size: 12px;
+    font-family: "Neo Sans Regular", Tahoma, Geneva, sans-serif;   
+    color: #666;
+    z-index: 1;
+}
+
+th {
+    background-color: #183063;
+    color: #FFF;
+    font-family: "Neo Sans Regular", Tahoma, Geneva, sans-serif;
+    font-size: 12px;
+}
+
+.filterInput {
+    width: 70px;
+    height: 18px;
+    border: none;
+    background: #FFF;
+    color: #000;
+    font-size: 12px;
+    font-family: "Neo Sans Regular", Tahoma, Geneva, sans-serif;
+}
+
+.gridheader {
+    background-color: #EAE6D3;
+    color: #656358;
+    font-size: 12px; 
+    font-family: "Neo Sans Regular", Tahoma, Geneva, sans-serif;
+}
+
+.gridfilter {
+    background-color: #C6C6C6;
+    color: #4A618C;
+    font-size: 12px; 
+    font-family: "Neo Sans Regular", Tahoma, Geneva, sans-serif;    
+}
+
+.gridfooter {
+    background-color: #999;
+    color: #FFF;    
+    font-size: 12px; 
+    font-family: "Neo Sans Regular", Tahoma, Geneva, sans-serif;        
+}
+
+.lightHeader {
+    background-color: #4B569C;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 12px; 
+    font-family: "Neo Sans Regular", Tahoma, Geneva, sans-serif;        
+}
+
+.PropGroup {
+    background-color: #D0DAF8;
+    color: #FFF;    
+    font: normal normal 12px "Neo Sans Regular", Tahoma, Geneva, sans-serif;
+    text-align: left;    
+}
+
+.GroupHeader {
+    padding-left: .7em;
+    background: none;
+    color: #657383;
+    font-weight: bold;  
+    font-size: 12px; 
+    font-family: "Neo Sans Regular", Tahoma, Geneva, sans-serif;
+    text-align: left !important;
+}
+
+img[src*="LeftGroup.jpg"],
+img[src*="GroupBorder.jpg"],
+img[src*="WPLeftButton.gif"],
+img[src*="WPRightButton.gif"] { display: none; }
+
+.GroupHeaderRight {
+    color: #657383;
+    font-weight: bold;  
+    font-size: 12px;
+    font-family: "Neo Sans Regular", Tahoma, Geneva, sans-serif;    
+    cursor: pointer;
+}
+
+.PropGroupMO {
+    background-color: #718fb5;    
+    color: #FFF;
+    font: normal normal 12px "Neo Sans Regular", Tahoma, Geneva, sans-serif;
+    text-align: left;
+}
+
+.sbttnHover2 {
+    width: 110px;
+    height: 22px;
+    border-top: #EFEFEF 2px solid;    
+    border-right: #808080 2px solid;
+    border-bottom: #808080 2px solid;
+    border-left: #EFEFEF 2px solid;    
+    background-color: #8FB4E8;
+    color: #657383;    
+    font: normal normal 12px "Neo Sans Regular", Tahoma, Geneva, sans-serif;
+    text-decoration: none;
+    cursor: pointer;    
+}
+
+.sbttn {
+    width: 110px;
+    height: 22px;    
+    border-top: #7F93B4 1px solid;
+    border-right: #7F93B4 1px solid;
+    border-bottom: #5B6D92 1px solid;            
+    border-left: #5B6D92 1px solid;
+    background: #AEBBD1 url("../img/WorkPortal/BgButton.gif");
+    color: #FFF;
+    font: normal normal 12px "Neo Sans Regular", Tahoma, Geneva, sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.selTab {
+    border-top: #FFF thin solid;
+    border-right: #000 thin solid;
+    border-left: #FFF thin solid;
+    font-weight: bold;  
+    font-size: 12px;
+    font-family: "Neo Sans Regular", Tahoma, Geneva, sans-serif;   
+    text-decoration: underline;
+    cursor: pointer;    
+}
+
+.seltabstrip {
+   position: relative;    
+    top: 1px;    
+    width: 150px;
+    height: 18px;
+    padding: 2px 0 0;    
+    border: none;
+    margin: 1px 1px 1px 0;    
+    background-image: url(tab.active.gif);
+    font-size: 12px;
+    font-family: "Neo Sans Regular", Tahoma, Geneva, sans-serif;
+    text-decoration: none;
+}
+
+.tab {
+    border-top: #E0E0E0 thin solid;
+    border-right: gray thin solid;
+    border-left: #E0E0E0 thin solid;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: "Neo Sans Regular", Tahoma, Geneva, sans-serif;
+    text-decoration: none;
+    cursor: pointer;    
+}
+
+.tabContents {
+    border-right: gray thin solid;
+    border-bottom: gray thin solid;
+    border-left: white thin solid;
+}
+
+.tabHidden { display: none; }
+
+.tabstrip {
+    position: relative;
+    top: 0;
+    width: 150px;
+    height: 18px;    
+    padding: 2px 0 0;
+    border: none;
+    margin: 1px 1px 1px 0;
+    background-image: url(tab.gif);
+    font-size: 12px;
+    font-family: "Neo Sans Regular", Tahoma, Geneva, sans-serif;
+    cursor: pointer;    
+}
+
+.tabstrip:hover {
+    position: relative;
+    top: 0;
+    width: 150px;
+    height: 18px;
+    padding: 2px 0 0;        
+    border: none;
+    margin: 1px 1px 1px 0;
+    background-image: url(tab.hover.gif);
+    font-size: 12px;
+    font-family: "Neo Sans Regular", Tahoma, Geneva, sans-serif;
+}
+
+.BizagiUserTable {
+    border: 1px gray solid;
+    border-collapse: collapse;
+    background-color: LightGoldenrodYellow;
+    color: #000;
+    font-size: 12px;
+    font-family: "Neo Sans Regular", Tahoma, Geneva, sans-serif;
+}
+
+.UserTableAlternative {
+    background-color: PaleGoldenrod;
+    color: #000;
+}
+
+.BAContextMenu {
+    position: absolute;
+    z-index: 100;    
+    border: 1px solid navy;
+    font-size: 12px;
+    font-family: "Neo Sans Regular", Tahoma, Geneva, sans-serif;
+    line-height: 15px;
+    visibility: hidden;
+    cursor: default;    
+}
+
+.BACMenItems {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.BASimpleListItem {
+    float: left;
+    overflow: visible;
+    background-color: White;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    font-size: 12px;
+}
+
+.WarningMessage { color: red; }
+
+.BAMnColor {
+    color: #666;
+    text-decoration: none;
+}
+
+.BAHlColor { color: #D01313; }
+
+.BAOpColor { color: #C7C7C7; }
+
+.BAOpColorSelected {
+    color: #666;
+    font-weight: bold;
+}
+
+TABLE.SummaryTable {
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 2px;
+    vertical-align: baseline;
+    padding-top: 2px;
+}
+
+.TDSumary { border: none; }
+
+.nbTD {
+    padding-right: 5px;
+    padding-left: 5px;
+    font-family: "Neo Sans Regular", Tahoma, Geneva, sans-serif;
+}
+
+.BorderCell {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+#Marca {
+    display: block;
+    float: left;
+    width: 210px;
+    height: 50px;
+    background-image: url(../img/img/barra/BALogoBg.jpg);
+}
+
+.iconImg { float: left; }
+    
+.FFElement { display: block; }
+    
+.IEElement { display: none; }
+
+* html .FFElement { display: none; }
+
+* html .IEElement { display: block; }
+
+/* Tabs form */
+
+.BAXPTab {
+    padding: 2em;
+    border: 1px solid #C4C9CC;
+    background: #FAFAFA;
+}
+
+.BAXPTab td { 
+    padding-top: 4px; 
+    padding-bottom: 4px;
+}
+
+.BAXPTabTable {
+    width: 96% !important;
+	padding: 0;
+	border: none !important;
+    background-color: #FAFAFA;  
+}
+
+td[background*="tab_active_tile.gif"] {
+	position: relative;
+	top: 1px;
+	border-width: 1px 1px 0;
+	border-color: #C4C9CC;
+	border-style: solid;
+	background: #FAFAFA;
+	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.6) inset;
+}
+
+.BACaseInformation { background-color: #FAFAFA; }
+
+.BACaseInformation td { padding: .4em; }
+
+.BAListaItemsOptions {
+    width: 170px;
+    margin-left: 20px;
+}
+
+.NormalRow {
+    height: 25px;
+    padding-left: 20px;
+    background-image: url("../img/tools/association/asociationnormalrow.gif");
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.SelectedRow {
+    height: 25px;
+    padding-left: 20px;
+    border-bottom: 1px solid #CCC;    
+    background-image: url("../img/tools/association/fondasociacion.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+#Opciones {
+    width: auto;
+    border-left: 1px solid #999;
+}
+
+#Opciones table td {
+    height: 25px;
+    padding-left: 20px;
+    background-image: url("../img/tools/RedLittleArrow.gif");
+    background-position: 8px;
+    background-repeat: no-repeat;
+}
+
+#flipAsoci {
+    float: left;
+    padding: 3px 6px 0 25px;
+    border-top: none;
+    border-right: 2px solid #DDD;
+    border-bottom: 2px solid #CCC;
+    border-left: 1px solid #EEE;
+    background-color: #FFF;
+    background-image: url(../img/tools/association/flipasocibtn.gif);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.separadorAsoci {
+    float: left;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #999;
+    background-color: #FAFAFA;
+}
+
+.BACheckBox { cursor: pointer; }
+
+.ui-bizagi-admin #CategoryMainContainer {
+    overflow-y: scroll;
+    width: 230px !important;
+}
+
+/* Wizard */
+
+#floater1Div {
+    position: fixed;
+    top: auto;
+    bottom: 15px;
+    left: auto;
+    right: 15px;
+}
+
+#divClose {
+    bottom: 18px;
+    left: 0;
+}
+
+/* Form */
+
+.header {
+    padding-bottom: 8px;
+    border: none;
+}
+
+.old-render-tab {
+    background-color: #FAFAFA !important;
+    background-image: none !important;
+}
+
+.old-render-tab.start-tab,
+.old-render-tab.end-tab,
+.old-render-tab.inactive-tab { background: none !important; }
+
+.old-render-tab img { display: none !important; }
+
+.old-render-tab nobr { line-height: 24px; }
+
+.old-render-tab.inactive-tab {
+    border: 1px solid #C4C9CC;
+    border-bottom: 0;
+}
+
+.GroupHeaderParent td {
+    border-bottom: 1px dotted #C4C9CC;
+    background: none !important;
+}
+
+.GroupHeaderParent img[src*="LeftGroup.jpg"],
+.GroupHeaderParent img[src*="GroupBorder.jpg"] { display: none; }
+
+.TDShadow { display: none; }
+
+/* UI Bizagi old render */
+
+.ui-bizagi-old-render {
+    overflow-y: scroll;
+    background: rgb(222, 222, 222) url("../jquery/themes/bizagiDefault/images/desktop-dots-columns.png") repeat;
+    font-size: 12px !important;
+    font-family: "Neo Sans Regular", Tahoma, Geneva, sans-serif !important;
+}
+
+.ui-bizagi-old-render input { font-family: "Neo Sans Regular", Tahoma, Geneva, sans-serif; }
+
+.ui-bizagi-old-render select,
+.ui-bizagi-old-render .ui-checkbox { margin: 0 4px 8px 0; }
+
+.ui-bizagi-old-render a { color: #2f526c; }
+
+.ui-bizagi-old-render a:hover { color: #437499; }
+
+.ui-bizagi-old-render .ui-text,
+.ui-bizagi-old-render .ui-password,
+.ui-bizagi-old-render .mask,
+.ui-bizagi-old-render select,
+.ui-bizagi-old-render textarea {
+    padding: 0 1em;
+    border-radius: 4px;
+    border: 1px solid #C6CACC;
+    margin: 0 8px 8px 0;
+    color: #565656;
+    height: auto;
+    min-height: 28px;
+    background: #FFF;
+}
+
+.ui-bizagi-old-render textarea {
+     height: auto !important;
+}
+
+.selectedCell #frmDatetime > input.mask[name="dateTimeEditor"] {
+    width: 100px;
+}
+
+.ui-bizagi-old-render .mask {
+    line-height: normal;
+}
+
+.ui-bizagi-old-render #AlarmsAdmin select { height: auto; }
+
+.WPButton,
+.ui-bizagi-old-render .WPButton {
+    float: none;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 0;
+    border: none;
+    margin: 0;
+    background: none;
+    box-shadow: none;
+    cursor: pointer;  
+}
+
+.WPButton .WPButtonI,
+.ui-bizagi-old-render .ui-btnSMUsrGet,
+.ui-bizagi-old-render .ui-btnSMUsrClear,
+.ui-bizagi-old-render input[name^="btnAdd_dgrMMGrid"],
+.ui-bizagi-old-render input[name^="btnDel_dgrMMGrid"],
+.ui-bizagi-old-render .WPButton .WPButtonI {
+   
+    float: none !important;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border:0;
+    margin: 0 4px 8px 0;
+    background: #6F6F6F;
+    transition: background .1s ease-in-out;
+    cursor: pointer;
+    color:#FFF;
+}
+
+.ui-bizagi-old-render input.inputDisabledConstantsDefinitions{
+    background-color:lightgray;
+}
+
+.ui-bizagi-old-render .WPButton.btnDisabledConstantsDefinitions:hover .WPButtonI{
+    cursor: default;
+    background-color: #6F6F6F;
+}
+
+.WPButton:hover .WPButtonI,
+.ui-bizagi-old-render .WPButton:hover .WPButtonI,
+.ui-bizagi-old-render .ui-btnSMUsrGet:hover,
+.ui-bizagi-old-render .ui-btnSMUsrClear:hover,
+.ui-bizagi-old-render input[name^="btnDel_dgrMMGrid"]:hover,
+.ui-bizagi-old-render input[name^="btnAdd_dgrMMGrid"]:hover {
+    background: #525252;
+    color: #fafafa;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.35);
+}
+
+.ui-bizagi-old-render input:hover[value="Invalidate"],
+.ui-bizagi-old-render input:hover[value="Reassign"],
+.ui-bizagi-old-render .WPButton:hover > input { color: #fafafa; }
+
+.ui-bizagi-old-render input[value="Invalidate"],
+.ui-bizagi-old-render input[value="Reassign"] {
+    padding: 3px 6px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+
+
+.ui-bizagi-old-render #CategoryMainContainer {
+    width: 230px !important;
+    overflow-y: scroll;
+}
+
+.ui-bizagi-old-render #datagridprofiles,
+.ui-bizagi-old-render #dguserpendingrequests,
+.ui-bizagi-old-render #dgauthlogqueryresult {
+    border-color: #e6e6e6 !important;
+    margin: 10px 0;
+}
+
+.ui-bizagi-old-render .header,
+.ui-bizagi-old-render .headerlinksNI td,
+.ui-bizagi-old-render .gridheader,
+.ui-bizagi-old-render .ListHeaderLinks {
+    border-color: #ccc;
+    font-family: "Neo Sans Regular", Tahoma, Geneva, sans-serif;
+    color: #2f526c;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);    
+}
+
+.ui-bizagi-old-render .headerlinksNI,
+.ui-bizagi-old-render .gridheader,
+.ui-bizagi-old-render .ListHeaderLinks {
+    border-color: #ccc;
+    padding: 6px;
+    background: #ccc url("../jquery/themes/bizagiDefault/images/tabs_bg.png") repeat-x !important;
+    color: #2f526c;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.ui-bizagi-old-render tr[style*="8px"],
+.ui-bizagi-old-render .TDShadow { display: none; }
+
+.ui-bizagi-old-render .headerlinksNI > td,
+.ui-bizagi-old-render tr[class^="gridline"] > td,
+#DataGridUser td {
+    border-color: #ccc;
+    padding: 3px;
+    font-size: 12px;
+}
+
+.ui-bizagi-old-render .gridline1 { background-color: #e6e6e6; }
+
+.ui-bizagi-old-render .gridline2 { background-color: #ececec; }
+
+.ui-bizagi-old-render .TDSumary { border: none; }
+
+.ui-bizagi-old-render .BAXPTabTable {
+    border: none;
+    background-color: transparent;
+}
+
+.ui-bizagi-old-render .expiration-date td {
+	padding: 0 !important;
+}
+
+.ui-bizagi-old-render .case-item-fields {
+    display: table;
+    margin: 0;
+    min-width: 80px;
+    max-width: 340px;
+    padding: 0;
+    width: 100%;
+    white-space: normal;
+}
+
+.ui-bizagi-old-render .case-item-fields li:first-child,
+.ui-bizagi-old-render .case-item-fields li:last-child{
+    width: 10%;
+}
+
+.ui-bizagi-old-render .case-item-fields .case-item-field-item {
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    vertical-align: middle;
+    width: auto;
+}
+
+.ui-bizagi-old-render .case-item-fields input {
+    display: inline-block;
+    margin: 0;
+}
+
+.ui-bizagi-old-render .current-task-text {
+	line-height:normal;
+}
+
+.ui-bizagi-old-render .current-task-state .icon{
+    display: inline-block;
+}
+
+.ui-bizagi-old-render.Licenses #imgTrialLicense {
+    float: left;
+    margin: 15px;
+}
+
+.ui-bizagi-old-render.Licenses #lblTrialLicense {
+    float: left;
+    margin: 25px 0 0;
+}
+
+/*	__tabs
+---------------*/
+#tabhtml > table { padding-left: .5em; }
+
+#tabhtml td
+{
+	font-size: 14px;
+    text-shadow: 0 1px white;
+    z-index: 1;
+}
+
+td[width="4"],
+td[width="5"] { display: none; }
+
+td[bgcolor] { background: none !important; }
+
+td[background*="tab_inactive_tile.gif"] { background: none !important; }
+
+.baxptabtable tr[id$="Tab"] > td[valign="top"] { display: none; }
+
+/* groups */
+.group { border-radius: 8px; }
+
+.group > td { padding: 1em 0; }
+
+.right-span {
+	display: block;
+	width: 16px;
+	height: 16px;
+	background-image: url(../jquery/common/jquery.ui/css/desktop/images/ui-icons_454545_256x240.png);
+}
+
+.right-span-hide { background-position: -66px 0; }
+
+.right-span > img,
+.save-span > img { opacity: 0; }
+
+.GroupHeader {
+	padding-left: .7em;
+	font-family: "Neo Sans Regular", Tahoma, Geneva, sans-serif;
+	font-size: 13px;
+	font-weight: normal;
+	text-align: left !important;
+	color: #2f526c;
+}
+
+.groupheader[background] { background: none !important; }
+
+#RR_idNOC__idNOCDatosGenerales__idNOCAutorizacion__sTituloFormulario[style] { background-color: #e2e2e2 !important }
+
+/* controls */
+.save-span {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url(../jquery/workportal/css/desktop/images/sprite.png) -294px -116px no-repeat;
+}
+
+.bginput {
+	border-color: #98a1a8;
+}
+
+.listheaderlinks { background-color: #dadada; }
+
+.listheaderlinks a {
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+	color: #2f526c;
+}
+
+.GroupHeaderParent {
+	background: none;
+}
+
+.GroupHeaderRight img {
+    position: relative;
+    top: -5px;
+}
+
+.iframe-panel { overflow: hidden; }
+
+.ui-bizagi-old-render #tblUserConfig select,
+.ui-bizagi-old-render #tblUserOrganizations select
+{
+    height:auto;
+    width: 180px;
+}
+
+#chkDocsList * { display: block !important; }
+
+#popupcalendar {
+    background: #EBEBEB;
+    border: 1px solid silver;
+}
+
+#popupcalendar > form{
+    height: auto !important;
+}
+
+#popupcalendar > form > table{
+    width: auto !important;
+}
+
+.bz-table-policies {
+    background: #FAFAFA;
+    padding: .5em 1em;
+    border: 1px solid #E7E7E7;
+    border-radius: 4px;
+}
+
+#TabHTML table tbody tr .old-render-tab small {
+    font-size:12px;
+}

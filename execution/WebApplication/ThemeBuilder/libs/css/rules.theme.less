@@ -1,0 +1,4507 @@
+@import "libs/css/mixins";
+.mixinThemeOther (@themeIN) when (@themeIN = 'other') {
+    @focus: lighten(@one-color-palette, 20%);
+    @white: #FFF;
+    @border-radius-default: 6px;
+
+
+    @sidebar-image-theme-available: true;
+
+    /* ==========================================================================
+    Common
+    ========================================================================== */
+    :focus {
+        outline-color: @focus;
+    }
+
+    #ui-bizagi-wp-application * {
+        filter:none !important;
+    }
+
+    /* Global utility classes */
+    /*.theme-one-color-palette-color{
+        color: @one-color-palette;
+    }
+    .theme-one-color-palette-bgc{
+    background-color: @one-color-palette;
+    }*/
+
+    .theme-background-color{
+        color: @background;
+    }
+
+    .theme-background-bgc{
+        background-color: @background;
+    }
+
+    .theme-border-color {
+        border-color: @background;
+    }
+
+    .theme-background-fill svg{
+        fill: @background;
+    }
+
+    .theme-text-color{
+        color: @text;
+    }
+
+    .theme-text-bgc{
+        background-color: @text;
+    }
+
+    .theme-text-fill svg{
+        fill: @text;
+    }
+
+    .theme-title-color{
+        color: @title;
+    }
+
+    .theme-title-bgc{
+        background-color: @title;
+    }
+
+    .theme-title-fill svg{
+        fill: @title;
+    }
+
+    .theme-navigation-border-color{
+        color: @navigation-border;
+    }
+
+    .theme-navigation-border-bgc{
+        background-color: @navigation-border;
+    }
+
+    .theme-navigation-border-fill svg{
+        fill: @navigation-border;
+    }
+
+    .theme-navigation-color{
+        color: @navigation;
+    }
+
+    .theme-navigation-bgc{
+        background-color: @navigation;
+    }
+    .theme-navigation-fill svg{
+        fill: @navigation;
+    }
+
+    .theme-navigation-border{
+        border-color: @navigation;
+    }
+
+    .theme-navigation-link-color{
+        color: @navigation-link;
+    }
+
+    .theme-navigation-link-bgc{
+        background-color: @navigation-link;
+    }
+
+    .theme-navigation-link-fill svg{
+        fill: @navigation-link;
+    }
+
+    .theme-content-border-color{
+        color: @content-border;
+    }
+
+    .theme-content-border-bgc{
+        background-color: @content-border;
+    }
+
+    .theme-content-border-fill svg{
+        fill: @content-border;
+    }
+
+    .theme-pane-color{
+        color: @pane;
+    }
+
+    .theme-pane-bgc{
+        background-color: @pane;
+    }
+
+    .theme-pane-fill svg{
+        fill: @pane;
+    }
+
+    .theme-content-color{
+        color: @content;
+    }
+
+    .theme-content-bgc{
+        background-color: @content;
+    }
+
+    .theme-content-fill svg{
+        fill: @content;
+    }
+
+    .theme-content-link-color{
+        color: @content-link;
+    }
+
+    .theme-content-link-bgc{
+        background-color: @content-link;
+    }
+    .theme-content-link-fill svg{
+        fill: @content-link;
+    }
+
+    .theme-modal-color{
+        color: @modal;
+    }
+
+    .theme-modal-bgc{
+        background-color: @modal;
+    }
+
+    .theme-modal-fill svg{
+        fill: @modal;
+    }
+
+    .theme-modal-border-color{
+        color: @modal-border;
+    }
+
+    .theme-modal-border-bgc{
+        background-color: @modal-border;
+    }
+
+    .theme-modal-border-fill svg{
+        fill: @modal-border;
+    }
+
+    .theme-tooltip-color{
+        color: @tooltip;
+    }
+
+    .theme-tooltip-bgc{
+        background-color: @tooltip;
+    }
+
+    .theme-tooltip-fill svg{
+        fill: @tooltip;
+    }
+
+    .theme-button-color{
+        color: @button;
+    }
+    
+    .theme-button-bgc{
+        background-color: @button;
+    }
+
+    .theme-button-fill svg{
+        fill: @button;
+    }
+
+    .theme-button-text-color{
+        color: @button-text;
+    }
+
+    .theme-button-text-bgc{
+        background-color: @button-text;
+    }
+
+    .theme-button-text-fill svg{
+        fill: @button-text;
+    }
+
+    .theme-form-container-color{
+        color: @form-container;
+    }
+
+    .theme-form-container-bgc{
+        background-color: @form-container;
+    }
+
+    .theme-form-container-fill svg{
+        fill: @form-container;
+    }
+
+    .theme-form-text-color{
+        color: @form-text;
+    }
+
+    .theme-form-text-bgc{
+        background-color: @form-text;
+    }
+    .theme-form-text-fill svg{
+        fill: @form-text;
+    }
+
+    .theme-form-group-border-color{
+        color: @form-group-border;
+    }
+
+    .theme-form-group-border-bgc{
+        background-color: @form-group-border;
+    }
+
+    .theme-form-group-border-fill svg{
+        fill: @form-group-border;
+    }
+
+    .theme-form-group-color{
+        color: @form-group;
+    }
+
+    .theme-form-group-bgc{
+        background-color: @form-group;
+    }
+
+    .theme-form-group-fill svg{
+        fill: @form-group;
+    }
+
+    .theme-form-tab-border-color{
+        color: @form-tab-border;
+    }
+
+    .theme-form-tab-border-bgc{
+        background-color: @form-tab-border;
+    }
+
+    .theme-form-tab-border-fill svg{
+        fill: @form-tab-border;
+    }
+
+    .theme-form-tab-color{
+        color: @form-tab;
+    }
+
+    .theme-form-tab-bgc{
+        background-color: @form-tab;
+    }
+
+    .theme-form-tab-fill svg{
+        fill: @form-tab;
+    }
+
+    .theme-form-grid-border-color{
+        color: @form-grid-border;
+    }
+
+    .theme-form-grid-border-bgc{
+        background-color: @form-grid-border;
+    }
+
+    .theme-form-grid-border-fill svg{
+        fill: @form-grid-border;
+    }
+
+    .theme-form-grid-color{
+        color: @form-grid;
+    }
+
+    .theme-form-grid-bgc{
+        background-color: @form-grid;
+    }
+
+    .theme-form-grid-fill svg{
+        fill: @form-grid;
+    }
+
+    .theme-form-input-border-color{
+        color: @form-input-border;
+    }
+
+    .theme-form-input-border-bgc{
+        background-color: @form-input-border;
+    }
+
+    .theme-form-input-border-fill svg{
+        fill: @form-input-border;
+    }
+
+    .theme-form-input-color{
+        color: @form-input;
+    }
+
+    .theme-form-input-bgc{
+        background-color: @form-input;
+    }
+
+    .theme-form-input-fill svg{
+        fill: @form-input;
+    }
+
+    .theme-font-family{
+        font-family: @font-family;
+    }
+
+
+    /* Elements */
+    html,
+    body {
+        background-color: @background;
+        color: @text;
+        font-family: @font-family;
+    }
+
+    a {
+        .contrastLight(@content-link;@navigation);
+        color: @contrastLight;
+        text-decoration: none;
+    }
+
+    p {
+        .contrastLight(@text;@navigation);
+        color: @contrastLight;
+    }
+
+    h1,
+    .bz-wp-title {
+        color: darken(@text, 8%);
+    }
+
+    h2,
+    .bz-wp-subtitle {
+        color: darken(@text, 8%);
+    }
+
+    h3,
+    .bz-wp-section {
+        .contrastLight(@title,@navigation);
+        color: @contrastLight;
+    }
+
+
+    h4,
+    .bz-wp-subsection {
+        color: darken(@text, 8%);
+    }
+
+    label {
+        .contrastLight(@text;@navigation);
+        color: @contrastLight;
+    }
+
+    #home-content .wdg-stf-header,
+    #home-content .wdg-plans-header,
+    #home-content .wdg-cases-header {
+        border-color: lighten(@content-border, 10%);
+    }
+
+    .highlight {
+        position: relative;
+    }
+
+    .highlight::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9000;
+        background: fade(darken(@one-color-palette, 25%), 60%);
+    }
+
+    .highlight::after {
+        .drop-shadow();
+        .border-radius();
+        content: attr(data-selection);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 9001;
+        width: 200px;
+        height: 22px;
+        border: 1px solid @navigation-border;
+        margin-top: -11px;
+        margin-left: -100px;
+        background: @tooltip;
+        color: @content-link;
+        text-align: center;
+        line-height: 22px;
+    }
+
+    .ui-curved-vt-2,
+    .ui-curved-hz-1 {
+        .drop-shadow(0, 6px, 6px, -6px, darken(@content, 20%));
+    }
+
+    .ui-lifted {
+        .drop-shadow(0, 6px, 6px, -6px, darken(@content, 20%));
+    }
+
+    /* ==========================================================================
+    Components
+    ========================================================================== */
+    /* Menu
+    ========================================================================== */
+    /* Menu background */
+    #ui-bizagi-wp-app-menu-container {
+        background: @navigation;
+    }
+
+    #ui-bizagi-wp-menu {
+        background: @navigation;
+        border-top: 0;
+    }
+    /* Menu logo */
+    #ui-bizagi-wp-app-menu-logo-client {
+        position: relative;
+    }
+
+    #ui-bizagi-wp-app-menu-selector.vertical_division {
+        .drop-shadow(1px, 0, 0, 0, @navigation-border);
+        background: darken(@navigation-border, 10%);
+    }
+    /* Sprite search */
+    #ui-bizagi-wp-app-bt-search {
+        .sprite();
+    }
+
+    .biz-theme-ie #ui-bizagi-wp-app-bt-search {
+        .sprite-ie();
+    }
+    /* Menu search */
+    #ui-bizagi-wp-app-search input {
+        .inner-shadow();
+        .border-radius(8px);
+        background: @navigation;
+        font-family: @font-family;
+        color: @white;
+    }
+
+    .bz-card {
+        .border-radius(6px);
+    }
+
+    .bz-card .bz-icon,
+    .bz-card .bz-icon-ctg{
+        color: @text;
+    }
+
+    #ui-bizagi-wp-app-search:hover input,
+    #ui-bizagi-wp-app-search input:focus,
+    #ui-bizagi-wp-app-search input:hover {
+        background: lighten(@navigation, 5%);
+        color: lighten(@navigation-link, 10%);
+    }
+
+    #ui-bizagi-wp-app-search.searchNewCase {
+        padding: 3px 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    /* Menu text */
+    #main_menu li a .text {
+        .text-shadow() !important;
+        .border-radius();
+        background-color: transparent;
+        .contrast(@navigation-link,@navigation,70%);
+        color:@contrast;
+        font-family: @font-family;
+    }
+
+    #main_menu li a:hover .text,
+    #main_menu li.active .text,
+    #logout .ui-button-text,
+    #about .ui-button-text {
+        .text-shadow();
+        background-color: transparent;
+        color: darken(@navigation-link, 15%);
+    }
+
+    #main_menu li a:hover .text,
+    #main_menu li.active .text,
+    #logout .ui-button-text,
+    #about .ui-button-text {
+        .contrast(@navigation-link,@navigation,90%);
+        color:@contrast;
+    }
+
+    /*mobiscroll theme*/
+
+    .mbsc-bizagi-theme .mbsc-cal-today{
+        color: @navigation;
+    }
+
+    .mbsc-bizagi-theme .mbsc-fr-hdr{
+        color: @navigation;
+    }
+
+    .mbsc-bizagi-theme .mbsc-cal-c .mbsc-cal .mbsc-cal-body .mbsc-cal-row .mbsc-selected .mbsc-cal-cell-txt,
+    .mbsc-bizagi-theme .mbsc-fr-w .mbsc-cal-tabs-c .mbsc-cal-tabs .mbsc-cal-tab.mbsc-selected {
+        background: @navigation;    
+    }
+
+    .mbsc-bizagi-theme .mbsc-cal-tab{
+        border: 1px solid @navigation;
+    }
+
+    .mbsc-bizagi-theme .mbsc-cal .mbsc-cal-btn{
+        color: @navigation;
+    }
+
+    .mbsc-bizagi-theme .mbsc-sc-whl-l{
+        border-top: 1px solid @navigation;
+        border-bottom: 1px solid @navigation;
+    }
+
+    .mbsc-bizagi-theme.mbsc-no-touch:not(.mbsc-ev-cal) .mbsc-cal-cell:not(.mbsc-disabled):not(.mbsc-selected):hover .mbsc-cal-cell-txt,
+    .mbsc-bizagitheme.mbsc-no-touch .mbsc-sc-itm.mbsc-btn-e:hover{
+        background: lighten(@navigation, 40%);
+    }
+
+    .mbsc-bizagi-theme .mbsc-cal-month:hover, .mbsc-bizagi-theme .mbsc-cal-year:hover, .mbsc-bizagi-theme .mbsc-sc-itm-sel {    
+        color: @navigation;
+    }
+
+        /*Buttons's Styles*/
+
+    .mbsc-bizagi-theme .mbsc-fr-btn.mbsc-btnSet {
+        background: @navigation;
+        color: #ffffff;
+        border: 1px solid @navigation;
+    }
+
+    .mbsc-bizagi-theme .mbsc-fr-btn.mbsc-btnSet:hover {
+        background: lighten(@navigation, 10%) !important;    
+        border: 1px solid lighten(@navigation, 10%);        
+    }
+
+    .mbsc-bizagi-theme .mbsc-fr-btn.mbsc-btnClear {
+        border: 1px solid @navigation;
+        color: @navigation;
+    }
+
+    .mbsc-bizagi-theme .mbsc-fr-btn.mbsc-btnClear:hover {
+        border: 1px solid lighten(@navigation, 10%);    
+        color: lighten(@navigation, 10%);        
+    }
+
+    .mbsc-bizagi-theme .mbsc-fr-btn.mbsc-btnNow{
+        color: @navigation;
+    }
+
+    /* Menu font size */
+    .ui-bizagi-wp-bt-font {
+        .text-shadow();
+        position: static;
+        margin: 0;
+        color: @navigation-link;
+    }
+
+    .ui-bizagi-wp-bt-font:hover {
+        .text-shadow();
+        color: darken(@navigation-link, 15%);
+    }
+
+    .ui-bizagi-wp-bt-font.active {
+        .text-shadow();
+        color: darken(@navigation-link, 15%);
+    }
+
+    .ui-bizagi-wp-font-content .font-switcher {
+        .drop-shadow(0, 1px, 0, 0, @content-border);
+        .border-radius();
+        .text-shadow();
+        border-color: @content-border;
+        color: @content-link;
+    }
+
+    .ui-bizagi-wp-font-content .font-switcher.active,
+    .ui-bizagi-wp-font-content .font-switcher:hover {
+        .inner-shadow(0, 1px, 5px, 0, fadeout(@content-link, 15%));
+        border-color: lighten(@content-link, 10%);
+        color: @content-link;
+    }
+    /* Menu username logout and about */
+    #ui-bizagi-wp-menu-username {
+        .sprite();
+        background-color: transparent;
+        color: @text;
+        font-family: @font-family;
+    }
+
+    .biz-theme-ie #ui-bizagi-wp-menu-username {
+        .sprite-ie();
+    }
+
+    #ui-bizagi-wp-menu-username .text {
+        .text-shadow();
+        background-color: transparent;
+        color: @navigation-link;
+        filter:none !important;
+    }
+
+    #userprofile > button .ui-icon-logout,
+    #userprofile > button .ui-icon-about {
+        .sprite();
+    }
+
+    .biz-theme-ie #userprofile > button .ui-icon-logout,
+    .biz-theme-ie #userprofile > button .ui-icon-about {
+        .sprite-ie();
+    }
+
+    #ui-bizagi-wp-menu-username .text,
+    #userprofile > button .ui-button-text {
+        .text-shadow();
+        color: @navigation-link;
+        background-color: transparent;
+    }
+
+    #userprofile > button:hover .ui-button-text {
+        .text-shadow();
+        color: darken(@navigation-link, 15%);
+        background-color: transparent;
+    }
+
+    #main_menu li a .text,
+    #ui-bizagi-wp-menu-username .text,
+    #logout .ui-button-text,
+    #about .ui-button-text {
+        -moz-transition: opacity 0.3s ease-in-out;
+        -webkit-transition: opacity 0.3s ease-in-out;
+        -o-transition: opacity 0.3s ease-in-out;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    #main_menu li a .text:before,
+    #ui-bizagi-wp-menu-username .text:before,
+    #logout .ui-button-text:before,
+    #about .ui-button-text:before {
+        background: none !important;
+    }
+    /* Menu build */
+    #ui-bizagi-wp-app-menu-container #build {
+        .text-shadow();
+        right: 100px;
+        color: @text;
+    }
+    /* Menu build */
+    #ui-bizagi-wp-app-menu-bt-container > ul li:hover,
+    #ui-bizagi-wp-app-menu-bt-container .activeMenu {
+        background: darken(@navigation, 10%);
+        color: lighten(@navigation, 30%);
+    }
+
+    #searchNotFound {
+        .text-shadow();
+        margin-top: 3px;
+        color: @text;
+        text-align: center;
+    }
+
+    @media screen and (max-width: 1230px) {
+        #ui-bizagi-wp-menu-username .text,
+        #userprofile > button:hover .ui-button-text {
+            .drop-shadow();
+            border-color: @navigation-border;
+            background: @tooltip;
+            color: @content-link;
+        }
+
+        #ui-bizagi-wp-menu-username .text,
+        #ui-bizagi-wp-menu-username:hover .text,
+        #logout:hover .ui-button-text,
+        #logout .ui-button-text {
+            .border-radius();
+        }
+    }
+
+    @media screen and (max-width: 1416px) {
+        #main_menu li a .text {
+            .drop-shadow();
+            border-color: @navigation-border;
+        }
+    }
+    /* Menu triangle */
+    #main_menu li .ui-bizagi-wp-mini-arrow {
+        border-top-color: @navigation-link;
+    }
+
+    #main_menu li:hover .ui-bizagi-wp-mini-arrow,
+    #main_menu li.active .ui-bizagi-wp-mini-arrow {
+        border-top-color: darken(@navigation-link, 15%);
+    }
+    /* Menu icons sprite */
+    #main_menu li .icon {
+        .sprite();
+    }
+
+    .biz-theme-ie #main_menu li .icon {
+        .sprite-ie();
+    }
+
+    #main_menu li .widgets {
+        background-position: 0 0;
+    }
+
+    #main_menu li .new {
+        background-position: -3px -3px;
+    }
+
+    #main_menu li .favorites {
+        background-position: -141px -3px;
+    }
+
+    #main_menu li .inbox {
+        background-position: -49px -3px;
+    }
+
+    #main_menu li .preferences {
+        background-position: -95px -3px;
+    }
+
+    #main_menu li .queries {
+        background-position: -187px -3px;
+    }
+
+    #main_menu li .admin {
+        background-position: -233px -3px;
+    }
+
+    #main_menu li .reports {
+        background-position: -279px -3px;
+    }
+    /* Inbox bar
+    ========================================================================== */
+    /* Inbox bar background */
+    #contentItemsPaginationInbox #contentInbox {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow:none;
+    }
+
+    #contentInbox {
+        .drop-shadow();
+        height: auto;
+    }
+
+    #innerContentInbox {
+        border-top: 1px solid @navigation-border;   
+        .contrast(@navigation-link,@navigation,70%);
+        color:@navigation;
+    }
+
+    #innerContentInbox:hover {
+        color: darken(@navigation,10%);
+    }
+
+    #innerContentInbox:hover {
+        color: darken(@navigation,10%);
+    }
+
+    /* Inbox bar text */
+    #contentInbox h2 {
+        .text-shadow();
+        color: @navigation-link;
+    }
+
+    #contentInbox h2:hover {
+        .text-shadow();
+        color: darken(@navigation-link, 15%);
+    }
+
+    #ui-bizagi-wp-app-inbox-bt-eye,
+    #ui-bizagi-wp-app-inbox-bt-eye:hover,
+    #ui-bizagi-wp-app-inbox-bt-eye:active {
+        .sprite();
+    }
+
+    .biz-theme-ie #ui-bizagi-wp-app-inbox-bt-eye,
+    .biz-theme-ie #ui-bizagi-wp-app-inbox-bt-eye:hover,
+    .biz-theme-ie #ui-bizagi-wp-app-inbox-bt-eye:active {
+        .sprite-ie();
+    }
+
+    .bz-inbox-actions i {
+        color:lighten(@navigation,30%);
+        &:hover{
+            color:@navigation;
+        }
+    }
+
+    .ui-bizagi-wp-project-discussion-delete i,
+    .ui-bizagi-wp-app-inbox-cases-ico-view i,
+    .bz-inbox-actions i,
+    .bz-search-actions i,
+    #ui-bizagi-wp-app-inbox-grid-cases
+    .workonitRow span,
+    .bz-wp-cd-option-link,
+    .ui-bizagi-wp-app-inbox-processes-title
+    .ui-bizagi-wp-app-inbox-cases-ico-view,
+    .bz-project-timeline-content
+    .bz-hover-icons i,
+    .bz-project-timeline-type-activity
+    .bz-project-timeline-content h2,
+    .bz-project-timeline-type-event
+    .bz-project-timeline-content h2,
+    .bizagi-wp-userstable-userlink,
+    .bz-icon-svg
+    {
+        .contrastLight(@content-link,@navigation);
+        .percentColor(@contrastLight,80%);
+        color: @result;
+        fill: @result;
+    }
+
+
+    .container-bz-icon-svg .bz-icon-svg {
+        .contrastLight(@content-link,@navigation);
+        .percentColor(@contrastLight,80%);
+        fill: @result;
+    }
+
+    .container-bz-icon-svg:hover .bz-icon-svg {
+        fill: darken(@navigation,13%);
+    }
+
+    .bz-project-timeline-content
+    .bz-hover-icons .bz-icon-svg{
+        .contrastLight(@content-link,@navigation);
+        .percentColor(@contrastLight,80%);
+        fill: @result;
+    }
+
+    .ui-bizagi-wp-project-discussion-delete i:hover,
+    .ui-bizagi-wp-app-inbox-cases-ico-view i:hover,
+    .bz-inbox-actions i:hover,
+    .bz-search-actions i:hover,
+    #ui-bizagi-wp-app-inbox-grid-cases
+    .workonitRow span:hover,
+    .bz-wp-cd-option-link:hover,
+    .ui-bizagi-wp-app-inbox-processes-title
+    .ui-bizagi-wp-app-inbox-cases-ico-view:hover,
+    .ui-bizagi-wp-app-inbox-processes-title .ui-bizagi-wp-app-inbox-processes-title--wrapper-actions-buttons > i,
+    .bz-project-timeline-content
+    .bz-hover-icons i:hover,
+    .bz-project-timeline-type-activity
+    .bz-project-timeline-content h2:hover,
+    .bz-project-timeline-type-event
+    .bz-project-timeline-content h2:hover,
+    .bizagi-wp-userstable-userlink:hover, 
+    .bz-icon-svg:hover {
+        color: @content-link;
+        fill: @content-link;
+    }
+
+    .modalEyePopup li span {
+        .text-shadow();
+        color: @content-link;
+    }
+
+    .modalEyePopup li:hover span {
+        .text-shadow();
+        color: @content-link;
+        text-decoration: underline;
+    }
+
+    .modalEyePopup li:active {
+        .inner-shadow();
+        background: none;
+    }
+
+    .modalEyePopup li > i{
+        color: @content-link;
+    }
+
+    .modal .ui-bizagi-component-empty {
+        color: @navigation;
+    }
+
+    /* Processes area
+    ========================================================================== */
+    /* Processes background and borders */
+    /* Processes titles */
+    .biz-wp-window-title,
+    #ui-bizagi-wp-app-inbox-activities-routing .text-description-title,
+    .ui-bizagi-wp-app-inbox-processes-title {
+        .drop-shadow(0, 1px, 0, 0, rgba(255, 255, 255, .2));
+        .text-shadow();
+        border-color: @content-border;
+        .contrastLight(@title,@navigation);
+        color: @contrastLight;
+        font-size: 115%!important;
+        font-weight: normal;
+    }
+
+    .biz-wp-window-title {
+        font-size: 130%!important;
+        border-bottom: solid 1px @content-border;
+    }
+    /* Processes triangles */
+
+    #contentProc .ui-bizagi-wp-app-inbox-processes-title {
+        .contrastLight(@content-link;@navigation);
+        color: @contrastLight;
+    }
+
+    .ui-bizagi-wp-app-inbox-processes-title .arrow.Down i {
+        .contrastLight(@content-link;@navigation);
+        border-top: 4px solid  @contrastLight;
+    }
+
+    .ui-bizagi-wp-app-inbox-processes-title .arrow.Right i {
+        .contrastLight(@content-link;@navigation);
+        border-left: 4px solid  @contrastLight;
+    }
+    /* Processes container */
+    .ui-bizagi-wp-app-inbox-processes-name,
+    .bz-shorcut__title{
+        .text-shadow();
+        font-size: 115%;
+        .contrastLight(@text;@navigation);
+        color:@contrastLight;
+        font-weight: normal;
+    }
+    /* Processes number of cases */
+    .ui-bizagi-wp-inbox-filtered {
+        .inner-shadow();
+        .border-radius();
+        .percentColor(@navigation,20%);
+        background-color: @result !important;
+        .contrastLight(@content-link,@navigation);
+        color: lighten(@contrastLight,30%);
+    }
+
+    .ui-bizagi-wp-app-inbox-processes-ncase {
+        .inner-shadow();
+        .border-radius();
+        .percentColor(@navigation,20%);
+        background-color: @result;
+        .contrastLight(@content-link,@navigation);
+        color: lighten(@contrastLight,30%);
+    }
+
+    .ui-bizagi-wp-app-inbox-processes-container li i:not('bz-icon-point'),
+    #ui-bizagi-wp-app-inbox-cases-container li i:not('bz-icon-point') {
+        .contrastLight(@text;@navigation);
+        color:@contrastLight;
+    }
+
+    #ui-bizagi-wp-app-inbox-processes-container .selected .ui-bizagi-wp-app-inbox-processes-ncase,
+    #ui-bizagi-wp-app-inbox-processes-container li:hover .ui-bizagi-wp-app-inbox-processes-ncase {
+        .inner-shadow();
+        .contrastLight(@content-link,@navigation);
+        color: lighten(@contrastLight,30%);
+
+    }
+
+    .ui-bizagi-wp-app-inbox-processes-container .ul-processes-list .ui-bizagi-wp-app-inbox-processes-pin.pinned {
+        .percentColor(@navigation,13%);
+        background-color: @result;
+    }
+
+    .bizagi-wp-app-inbox-processes-container .ul-processes-list .selected .ui-bizagi-wp-app-inbox-processes-pin {
+        .percentColor(@navigation,6%);
+        background-color: @result;
+    }
+
+    .ui-bizagi-wp-app-inbox-processes-container .ul-processes-list .selected .ui-bizagi-wp-app-inbox-processes-pin.pinned {
+        .percentColor(@navigation,6%);
+        background-color: @result;
+    }
+
+    .ui-bizagi-wp-app-inbox-processes-container .ul-processes-list li:hover .ui-bizagi-wp-app-inbox-processes-pin.pinned {
+        .percentColor(@navigation,6%);
+        background-color: @result;
+    }
+
+    .ui-bizagi-wp-app-inbox-processes-container .ul-processes-list li:hover .ui-bizagi-wp-app-inbox-processes-pin:hover {
+        .inner-shadow();
+        .border-radius();
+        .percentColor(@navigation,20%);
+        background-color: @result;
+        .contrastLight(@content-link,@navigation);
+        fill: lighten(@contrastLight,30%);
+    }
+
+    /* Cases area
+    ========================================================================== */
+    /* -------------- Workportal Table -------------- */
+    .biz-wp-table tr {
+        border: 1px solid @content-border;
+        border-radius: 0;
+    }
+
+    .biz-wp-table-body tr {
+        background: @content;
+    }
+
+    .biz-wp-table-head th {
+        .text-shadow();
+        background: darken(@content, 10%);
+        color: @title;
+        border-bottom: 1px solid darken(@content-border, 30%) !important;
+    }
+
+    .biz-wp-table-head th a {
+        .text-shadow();
+        color: @title;
+    }
+    /* -------------- Grid mode -------------- */
+    /* Grid area background */
+    #contentFramework #contentCases {
+        .drop-shadow();
+    }
+
+    #contentCases.casesGrid,
+    #contentCases.cases,
+    #contentDesc.description {
+        .drop-shadow();
+        .contrastBgColor(@pane);
+
+    }
+    /* Grid background and border */
+    .ui-bizagi-wp-app-routing-container table,
+    .ui-bizagi-wp-app-inbox-grid-cases-container table,
+    .personalizedColumnsContainer table {
+        background: @content;
+        border: 1px solid @content-border;
+        border-radius: 0;
+    }
+    /* Grid links color */
+    .gridListWorkItems li .ui-bizagi-wp-app-inbox-activity-name,
+    .ui-bizagi-wp-app-inbox-activity-name {
+        color: @content-link;
+    }
+    /* Grid top border cells */
+    .ui-bizagi-wp-app-routing-container table td,
+    .ui-bizagi-wp-app-inbox-grid-cases-container table td,
+    .personalizedColumnsContainer table td {
+        border-top: 1px solid @content-border !important;
+    }
+    /* Grid header */
+    .ui-bizagi-wp-app-routing-container thead td,
+    .ui-bizagi-wp-app-inbox-grid-cases-container thead td,
+    .personalizedColumnsContainer table thead td {
+        .text-shadow();
+        background: darken(@content, 10%);
+        color: @title;
+        font-size: 115%;
+        border-bottom: 1px solid darken(@content-border, 30%) !important;
+    }
+
+    /* Grid even rows */
+    .ui-bizagi-wp-app-routing-container tbody .event,
+    .biz-wp-table tbody .biz-wp-table-row-even,
+    #ui-bizagi-wp-app-inbox-grid-cases tbody .event,
+    .personalizedColumnsContainer table tbody .event {
+        .percentColor(@content,20%);
+        background-color: @result;
+    }
+
+    /* Grid hover rows */
+    #ui-bizagi-wp-app-inbox-grid-cases .selected td,
+    .ui-bizagi-wp-app-routing-container .selected td,
+    .ui-bizagi-wp-app-routing-container tbody tr:hover td,
+    .ui-bizagi-wp-app-inbox-grid-cases-container tbody tr:hover td,
+    .personalizedColumnsContainer table tbody tr:hover td {
+        .percentColor(@content,20%);
+        background-color: @result;
+    }
+
+    /* Grid Border */
+    .ui-bizagi-grid,
+    .ui-bizagi-grid .ui-bizagi-grid-table,
+    .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-header th,
+    .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr td,
+    .bz-rn-grid-container-foother-rtl,
+    .bz-rn-grid-container-foother {
+        border-color: @form-grid-border !important;
+    }
+
+    /* -------------- Details mode -------------- */
+    /* Details area background */
+    #contentCases {
+        .drop-shadow(2px, 0, 3px, 0, rgba(0, 0, 0, .2));
+        border-right: 1px solid lighten(@content-border, 25%);
+        background: lighten(@pane, 2%);
+    }
+    /* Details case background and border */
+    .ui-bizagi-wp-app-inbox-cases-container ul {
+        border: 1px solid @content-border;
+        background: @content;
+    }
+
+    .ui-bizagi-wp-app-inbox-cases-container ul {
+        .border-radius();
+    }
+
+    #ui-bizagi-wp-app-inbox-cases-container li {
+        .border-radius(4px);
+    }
+
+    #ui-bizagi-wp-app-inbox-cases-container li:hover,
+    #ui-bizagi-wp-app-inbox-cases-container .selected,
+    #ui-bizagi-wp-app-inbox-cases-container li.selected:hover {
+        background: darken(@content, 10%) !important;
+    }
+    /* Details activity title */
+    #ui-bizagi-wp-app-inbox-cases-container #caseId h3 {
+        .text-shadow();
+        font-weight: normal;
+        font-family: @font-family;
+        font-size: 135%;
+        .contrastLight(@title,@navigation);
+        color:@contrastLight;
+    }
+
+    /* Details activity name color and borders */
+    #ui-bizagi-wp-app-inbox-cases-container #caseActivity span {
+        color: @text;
+    }
+
+    #ui-bizagi-wp-app-inbox-cases-container li #caseActivity {
+        border-color: @content-border;
+    }
+
+    #ui-bizagi-wp-app-inbox-cases-container li:hover #caseActivity,
+    #ui-bizagi-wp-app-inbox-cases-container .selected #caseActivity {
+        border-color: @content-border;
+    }
+    /* Details activity content color */
+    #ui-bizagi-wp-app-inbox-cases-container li dl,
+    #ui-bizagi-wp-app-inbox-cases-container li:hover dl,
+    #ui-bizagi-wp-app-inbox-cases-container li.selected dl {
+        .contrastLight(@text,@navigation);
+        color: @contrastLight;
+    }
+    /* -------------- Summary -------------- */
+    /* Summary area background */
+    #contentDesc {
+        background: lighten(@pane, 2%);
+    }
+    /* Summary activity border, background and text */
+    .ui-bizagi-wp-app-inbox-activity-description {
+        .border-radius();
+        border-color: @content-border;
+        .contrastLight(@text,@navigation);
+        color: @contrastLight;
+    }
+
+    .ui-bizagi-wp-app-inbox-activity-description > div {
+        .border-radius();
+        background: @content;
+    }
+
+    .ui-bizagi-wp-app-inbox-activity-description .ui-bizagi-wp-app-inbox-cases-description-ico-state {
+        .border-radiuses(0, 0, 4px, 4px);
+    }
+    /* Summary activity state */
+    .ui-bizagi-wp-app-inbox-activity-description #ui-bizagi-wp-app-inbox-cases-ico-state-Red {
+        background: #ff5917 !important;
+    }
+
+    .ui-bizagi-wp-app-inbox-activity-description #ui-bizagi-wp-app-inbox-cases-ico-state-Green {
+        background: #379c44 !important;
+    }
+
+    .ui-bizagi-wp-app-inbox-activity-description #ui-bizagi-wp-app-inbox-cases-ico-state-Yellow {
+        background: #d4bd09 !important;
+    }
+    /* Summary activity title */
+    .ui-bizagi-wp-app-inbox-activity-description h2 {
+        .text-shadow();
+        font-size: 175%;
+        font-weight: normal;
+        font-family: @font-family;
+        .contrastLight(@title,@navigation);
+        color:@contrastLight;
+        border-bottom: 1px solid @content-border;
+    }
+    /* Summary activity data */
+    #ui-bizagi-details-tabs dd,
+    .box-description dd {
+        background: darken(@pane, 4%);
+    }
+
+    .ui-bizagi-container.ui-bizagi-container-collectionnavigator {
+        background: darken(@form-grid, 2%);
+        border-color: @content-border !important;
+    }
+
+    .ui-bizagi-container-collectionnavigator .forms-group,
+    .ui-bizagi-container-collectionnavigator .bz-collectionnavigator-wrapper,
+    .ui-bizagi-container-collectionnavigator .actions-group,
+    .ui-bizagi-container-collectionnavigator .bz-collectionnavigator-controls .actions-group::before,
+    .ui-bizagi-container-collectionnavigator .bz-collectionnavigator-controls .forms-group::after {
+        background: darken(@form-grid, 2%);
+    }
+
+    .ui-bizagi-container-collectionnavigator .bz-collectionnavigator-controls {
+        background: darken(@form-grid, 5%);
+        border-color: @content-border !important;
+    }
+
+    .ui-bizagi-container-collectionnavigator .bz-navigation-control-counter {
+        background: darken(@form-grid, 5%);
+    }
+
+    .ui-bizagi-container-collectionnavigator .ui-icon:hover {
+        background-color: lighten(darken(@content, 5%), 5%);
+    }
+    /* Summary tabs */
+    //.ui-tabs .ui-tabs-nav li { border-color: transparent; }//
+    #ui-bizagi-wp-application .ui-tabs .ui-tabs-nav li {
+        position: relative;
+        top: 1px;
+    }
+
+    .ui-tabs .ui-tabs-nav li.ui-tabs-active {
+        border-color: @form-tab-border;
+        border-bottom: 1px solid transparent;
+        background: mix(@form-tab,lighten(@form-tab, 100%),60%);
+    }
+
+    .ui-tabs .ui-tabs-nav li a label{
+        .text-shadow();
+        background: none;
+        .contrast(@text,@form-tab,70%);
+        color:@contrast;
+        font-family: @font-family;
+    }
+
+    .ui-tabs .ui-tabs-nav li:hover a,
+    .ui-tabs .ui-tabs-nav li.ui-tabs-active a {
+        outline: 0;
+        background: none;
+        .contrastLight(@title,@navigation);
+        color: @contrastLight;
+    }
+
+    .ui-corner-top {
+        .border-radiuses(2px, 0, 0, 2px);
+    }
+
+    #ui-bizagi-details-tabs .ui-tabs-panel {
+        .border-radiuses(6px, 6px, 6px, 0px);
+    }
+
+    .ui-bizagi-rendering-mode-execution .ui-tabs .ui-tabs-nav li.ui-tabs-active a::after {
+        background: mix(@form-tab,lighten(@form-tab, 100%),60%);
+    }
+
+    /* Footer
+    ========================================================================== */
+    /* Footer background */
+    #footer {
+        .drop-shadow(0, -2px);
+        background: @navigation;
+    }
+
+    .ui-bizagi-wp-app-inbox-tab .text {
+        .sprite();
+    }
+
+    .biz-theme-ie .ui-bizagi-wp-app-inbox-tab .text {
+        .sprite-ie();
+    }
+
+    #ui-bizagi-wp-app-inbox-tab-container #favourites {
+        border-right: none;
+    }
+    /* Footer buttons */
+    #ui-bizagi-wp-app-inbox-tab-container .toolTip {
+        .inner-shadow();
+        .border-radius();
+        color:#687785;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    #ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab.active .toolTip,
+    #ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab:hover .toolTip {
+        .inner-shadow();
+        background: @navigation;
+            color: lighten(@navigation, 15%);
+    }
+
+    #ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab.active,
+    #ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab:hover {
+        .inner-shadow();
+        background: lighten(@navigation, 5%);
+    }
+
+    /* Footer Filter Case */
+    #ui-bizagi-wp-app-filter-cases{
+        background: @navigation;
+    }
+    #ui-bizagi-wp-app-filter-cases ul li.ui-bizagi-wp-app-inbox-tab.active,
+    #ui-bizagi-wp-app-filter-cases ul li.ui-bizagi-wp-app-inbox-tab:hover {
+        .inner-shadow();
+        background: lighten(@navigation, 5%);
+    }
+
+    /* Footer pagination */
+    .gridCasePagination #tooltipPagination {
+        .border-radiuses(4px, 0, 0, 4px);
+    }
+
+    #casesPagination {
+        border-right: 1px solid @navigation-border;
+    }
+
+    .biz-wp-table-summary-wrapper ul li {
+        .text-shadow();
+        color: @text;
+        text-align: center;
+    }
+
+    .biz-wp-table-summary-wrapper ul li {
+        .text-shadow();
+        text-align: center;
+    }
+
+    #casesPagination ul li {
+        .contrast(@navigation-link,@navigation,80%);
+        color:@contrast;
+        opacity: 0.7;
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    #casesPagination ul li:hover span {
+        .contrast(@navigation-link,@navigation,80%);
+        color:@contrast;
+    }
+
+    #casesPagination ul li.active,
+    #casesPagination ul li.active:hover,
+    #biz-wp-userstable-pager ul li.active {
+        .inner-shadow();
+    }
+
+    #casesPagination ul li.active,
+    .biz-wp-table-summary-wrapper ul li.active,
+    #casesPagination ul li.active:hover,
+    #casesPagination ul li.active:hover span {
+        .border-radius();
+        background-color: @navigation;
+        .contrast(@navigation-link,@navigation,80%);
+        color:@contrast;
+        opacity:1;
+    }
+
+    #casesPagination ul li.active span,
+    #biz-wp-userstable-pager ul li.active span {
+        .text-shadow(0, -1px, 0, rgba(0, 0, 0, .25));
+    }
+
+    div#casesPagination.inbox__pagination ul > li.active.bz-page,div#casesPagination.inbox__pagination ul > li:hover, div#casesPagination.inbox__pagination ul li.active span, div#casesPagination.inbox__pagination ul li:hover span{
+        background-color: @navigation;
+    }
+    /* ==========================================================================
+    Forms
+    ========================================================================== */
+    .ui-bizagi-container-form.ui-widget-content .ui-bizagi-section-behavior .ui-bizagi-section-border {
+        background: @form-container;
+        border-color: darken(@pane, 10%) !important;
+    }
+
+    .ui-bizagi-button-container {
+        .inner-shadow();
+        border-color: @content-border !important;
+        background: desaturate(@form-container, 15%);
+    }
+
+    .ui-bizagi-button-container:hover {
+        background: desaturate(darken(@form-container, 15%), 25%);
+    }
+
+    #panelArrowContainer {
+        overflow: hidden;
+        border-left-color: @content-border;
+        border-right-color: @content-border;
+        background: lighten(@pane, 2%);
+    }
+
+    #panelArrow.panelArrowRight {
+        border-left-color: @content-border;
+    }
+
+    #panelArrowContainer:hover #panelArrow.panelArrowRight {
+        border-left-color: darken(@content-border, 10%);
+    }
+
+    #panelArrow.panelArrowLeft {
+        border-right-color: @content-border;
+    }
+
+    #panelArrowContainer:hover #panelArrow.panelArrowLeft {
+        border-right-color: darken(@content-border, 10%);
+    }
+
+    #panelArrowContainer:hover {
+        background: @pane;
+    }
+    /* Description panel background */
+    #ui-bizagi-wp-app-render-desc-panel {
+        background: @pane;
+    }
+    /* -------------- Buttons -------------- */
+    /* General */
+    .ui-button,
+    .ui-button.ui-state-default,
+    .ui-bizagi-button-container .ui-bizagi-button,
+    .ui-dialog .ui-button,
+    .ui-bizagi-wp-app-routing-container table .ui-button {
+        .border-radius(4px);
+        .text-shadow();
+        background: @button;
+        color: @button-text;
+        font-family: @font-family;
+        transition: none;
+    }
+
+    .bz-wp-btn .bz-icon-svg, .bz-wp-btn .bz-icon-svg:hover{
+        margin: 0 0.3rem 0 0;
+        fill: @button-text;
+    }
+
+    .ui-button:hover,
+    .ui-button.ui-state-default:hover,
+    .ui-dialog .ui-button:hover,
+    .ui-bizagi-wp-app-routing-container table .ui-button:hover {
+        background: darken(@button, 3%) !important;
+    }
+
+    .ui-button span {
+        .text-shadow();
+    }
+    /* Grid text */
+    .ui-button .ui-button-text {
+        .border-radius(0);
+        color: @button-text;
+    }
+    /* Grid */
+    .ui-bizagi-wp-app-inbox-activity-description:hover .workonitRow.ui-button,
+    .ui-bizagi-wp-app-inbox-grid-cases-container table tr:hover .workonitRow.ui-button,
+    .ui-bizagi-wp-app-routing-container table tr:hover .workonitRow.ui-button {
+        background-image: none;
+    }
+
+    .ui-bizagi-wp-app-inbox-activity-description:hover .workonitRow.ui-button:hover,
+    .ui-bizagi-wp-app-inbox-grid-cases-container table tr:hover .workonitRow.ui-button:hover,
+    .ui-bizagi-wp-app-routing-container table tr:hover .workonitRow.ui-button:hover {
+        border-color: @form-input-border;
+    }
+
+    .ui-bizagi-wp-app-inbox-activity-description:hover .workonitRow.ui-button:hover span,
+    .ui-bizagi-wp-app-inbox-grid-cases-container table tr:hover .workonitRow.ui-button span,
+    .ui-bizagi-wp-app-routing-container table tr:hover .workonitRow.ui-button span {
+        .text-shadow();
+        color: darken(@button-text, 5%);
+    }
+
+    .ui-bizagi-wp-app-routing-container table tr:hover .workonitRow.ui-button {
+        border-color: @button;
+    }
+
+    .ui-bizagi-wp-app-inbox-activity-description:hover .workonitRow.ui-button span {
+        .text-shadow();
+        color: @button-text;
+    }
+
+    .workonitRow.showDesc.ui-button.bizagi-ui-icon-show-summary-grid {
+        .border-radius(@border-radius-default/2);
+    }
+
+    #ui-bizagi-wp-app-inbox-grid-cases .workonitRow,
+    #ui-bizagi-wp-app-inbox-grid-cases .workonitRow span {
+        border: none !important;
+        background: transparent !important;
+    }
+
+
+    /* Modal hover */
+    .ui-button:hover span,
+    .ui-dialog .ui-bizagi-button:hover{
+        .text-shadow();
+    }
+    /* Form border */
+    .ui-bizagi-container-form {
+        border-color: @content-border !important;
+    }
+    /* Form background */
+    #ui-bizagi-wp-app-render-form {
+        background: darken(@pane, 2%);
+    }
+    /* Form render background */
+    //.ui-bizagi-container-form  > .ui-bizagi-render { background-color: darken(@form-container, 5%) !important; }
+    /* Form label */
+    .ui-bizagi-render > .ui-bizagi-control > .ui-bizagi-control-wrapper >.ui-bizagi-render-control:not(.ui-bizagi-render-grid-container){
+        color: @form-text;
+    }
+    .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-header .ui-bizagi-grid-column label
+    {
+        color: @form-text;
+    }
+
+    /* Form input */
+    input[type="text"],
+    input[type="password"],
+    input[type="number"],
+    textarea,
+    .ui-selectmenu,
+    .ui-bizagi-wrapper-render-list,
+    .ui-bizagi-render-search.ui-autocomplete-input,
+    .biz-wp-input-combo,
+    .bz-render-comboSelected-listBoxSelects,
+    .biz-wp-combo-data-container,
+    .desktop .bz-multiselect .bz-multiselect__tags, .desktop .bz-view-more__content .bz-multiselect__tags,
+    .desktop .bz-form-old-item .ui-bizagi-render-control .bz-multiselect .bz-multiselect__tags, 
+    .desktop .bz-form-old-item[dir=ltr] .ui-bizagi-render-control .bz-multiselect .bz-multiselect__tags,
+    .desktop .bz-query-filter .bz-query-advanced,
+    .desktop .bz-form-old-item .ui-bizagi-render-control .bz-query-filter .bz-query-advanced, 
+    .desktop .bz-form-old-item[dir=ltr] .ui-bizagi-render-control .bz-query-filter .bz-query-advanced,
+    .desktop .bz-form-old-item .ui-bizagi-render-control .bz-input-icon,
+    .desktop .bz-form-old-item[dir=ltr] .ui-bizagi-render-control .bz-input-icon   {
+        .inner-shadow();
+        .border-radius();
+        border-color: @form-input-border;
+        background: @form-input;
+        color: @form-text;
+    }
+
+    .desktop .bz-form-old-item .ui-bizagi-render-control .bz-input-icon .bz-input-icon__input {
+        color: @form-text;
+    }
+
+    /* Independent styling to avoid IE incompatibility */
+    .desktop .bz-form-old-item .ui-bizagi-render-control .bz-input-icon .bz-input-icon__input::placeholder {
+        color: @form-text;
+    }
+
+
+    input.biz-wp-combo-input:focus {
+        border-color: #ddd;
+        box-shadow: 0 0 3px 2px @form-input-border !important;
+    }
+
+    .desktop .bz-multiselect .bz-multiselect__tags, .desktop .bz-view-more__content .bz-multiselect__tags.bz-multiselect--disabled,
+    .desktop .bz-form-old-item .ui-bizagi-render-control .bz-multiselect .bz-multiselect__tags.bz-multiselect--disabled, 
+    .desktop .bz-form-old-item[dir=ltr] .ui-bizagi-render-control .bz-multiselect .bz-multiselect__tags.bz-multiselect--disabled {
+        background-color: #f7f7f7;
+    }
+
+    .desktop .bz-multiselect__content {
+        border-color: @form-input-border;
+    }
+
+    input[type="text"]:hover,
+    input[type="password"]:hover,
+    input[type="number"]:hover,
+    textarea:hover,
+    .ui-selectmenu:hover,
+    .bz-render-comboSelected-listBoxSelects:hover,
+    .ui-bizagi-render-search.ui-autocomplete-input:hover {
+        background: lighten(@form-input, 10%);
+    }
+
+    .ui-bizagi-ltr .control-required .ui-bizagi-render-text,
+    .ui-bizagi-ltr .control-required .ui-bizagi-render-date,
+    .ui-bizagi-ltr .control-required .ui-bizagi-render-numeric,
+    .ui-bizagi-ltr .control-required .ui-bizagi-render-text-extended,
+    .ui-bizagi-ltr .control-required .ui-selectmenu,
+    .ui-bizagi-ltr .control-required .biz-render-input-search,
+    .ui-bizagi-ltr .control-required .ui-bizagi-render-search,
+    .bz-form-item[dir=ltr] .ui-bizagi-render-control .ui-bizagi-render-upload-container,
+    .bz-form-item .ui-bizagi-render-control .ui-bizagi-render-upload-container {
+    .border-radiuses(@border-radius-default, @border-radius-default, 3px, 3px)
+    }
+
+    .ui-bizagi-rtl .control-required .ui-bizagi-render-text,
+    .ui-bizagi-rtl .control-required .ui-bizagi-render-date,
+    .ui-bizagi-rtl .control-required .ui-bizagi-render-numeric,
+    .ui-bizagi-rtl .control-required .ui-bizagi-render-text-extended,
+    .ui-bizagi-rtl .control-required .ui-selectmenu,
+    .ui-bizagi-rtl .control-required .biz-render-input-search,
+    .ui-bizagi-rtl .control-required .ui-bizagi-render-search,
+    .bz-form-item[dir=rtl] .ui-bizagi-render-control .ui-bizagi-render-upload-container{    
+        .border-radiuses(3px, 3px, @border-radius-default, @border-radius-default)
+    }
+
+    .ui-button {
+        font-family: @font-family;
+    }
+
+    .ui-bizagi-render-search.ui-autocomplete-input {
+        .border-radius(@border-radius-default);
+    }
+
+    .ui-button.ui-widget.ui-bizagi-render-search-button {
+        box-shadow: none;
+    }
+
+    .ui-selectmenu input {
+        box-shadow: none !important;
+    }
+
+
+    /* Groups */
+    .ui-bizagi-container-group .ui-bizagi-container-group-header {
+        border-radius: 0;
+    }
+
+    .ui-bizagi-container-group .ui-bizagi-container-group-header.group-expand {
+        .border-radiuses(@border-radius-default - 1, 0px, 0px, @border-radius-default - 1);
+    }
+
+    .ui-bizagi-container-group .ui-bizagi-container-group-header.group-collapse {
+        .border-radius(@border-radius-default - 1);
+    }
+
+    .ui-bizagi-container-group,
+    .ui-bizagi-container-section-header.ui-bizagi-container-section-header-type-section.ui-state-active {
+        .border-radius();
+        border-color: darken(@form-group-border, 10%);
+        background: lighten(@form-tab,7%);
+    }
+
+    #ui-bizagi-wp-app-render-form h3,
+    .ui-bizagi-container-group .ui-bizagi-container-group-header,
+    .ui-bizagi-container-section-header.ui-bizagi-container-section-header-type-section.ui-state-active {
+        /*.border-radiuses(6px, 0, 0, 6px);*/
+        border-color: darken(@form-group-border, 10%);
+        background: darken(@form-group, 3%);
+    }
+
+    .bz-rn-grid-cn-header-rtl .bz-rn-grid-header-title-rtl,
+    .bz-rn-grid-cn-header .bz-rn-grid-header-title,
+    .ui-bizagi-container-group-header a {
+        .text-shadow();
+        .contrast(@form-text;@form-group;30%);
+        color: @contrast !important;
+        font-family: @font-family;
+    }
+
+    .ui-bizagi-container-group
+    .ui-bizagi-container-group-wrapper
+    .ui-bizagi-container label {
+    .contrast(@form-text;@form-group;90%);
+    color: @contrast;
+    }
+
+    .bz-rn-grid-buttonsbar-top-rtl table.bz-rn-grid-table-buttons-rtl tr,
+    .bz-rn-grid-buttonsbar-top table.bz-rn-grid-table-buttons tr {
+    background: darken(@form-group,10%);
+    }
+
+    /* Tabs */
+    #ui-bizagi-wp-app-render-form-content .ui-tabs .ui-tabs-panel {
+        .border-radiuses(6px, 6px, 6px, 0);
+        border-color: @form-tab-border;
+        background: @form-tab;
+    }
+
+    #ui-bizagi-wp-app-render-form-content .ui-bizagi-tab-item-header {
+        .border-radiuses(6px, 0, 0, 0);
+        border-bottom: none;
+        background: @form-tab;
+    }
+
+    .ui-tabs .ui-tabs-nav li {
+        background: #fff;
+        .contrast(@form-tab-border;@navigation;14%);
+        border-color: @contrast;
+        .border-radiuses(6px, 0, 0, 6px);
+    }
+
+    #ui-bizagi-wp-app-render-form-content .ui-tabs .ui-tabs-nav li a {
+        outline: 0;
+        color: @form-text;
+    }
+
+    #ui-bizagi-wp-app-render-form-content .ui-tabs .ui-tabs-nav li.ui-tabs-active {
+        .border-radiuses(3px, 0, 0, 3px);
+        z-index: 10;
+        border-bottom: none !important;
+        border-color: @form-tab-border;
+        background: @form-tab;
+    }
+
+    .ui-tabs-panel a,
+    .ui-tabs-panel a span {
+        color: @content-link;
+        text-decoration: underline;
+    }
+    /* Grid */
+    .ui-bizagi-grid {
+        .border-radius();
+        border-color: @form-tab-border;
+        background: @form-tab;
+    }
+
+    .ui-bizagi-simple-grid-wrapper .bz-rn-grid-cn-header,
+    .ui-bizagi-simple-grid-wrapper .bz-rn-grid-container-footer {
+        background: darken(@form-tab,10%);
+    }
+
+    .bz-rn-grid-cn-header-rtl,
+    .bz-rn-grid-cn-header {
+        .border-radiuses(6px, 0, 0, 6px);
+        border-color: @form-tab-border;
+        background: @form-grid;
+    }
+
+    .bz-rn-grid-cn-header-rtl.bz-rn-grid-header-collapse,
+    .bz-rn-grid-cn-header.bz-rn-grid-header-state-collapsed{
+        border-radius:inherit;
+    }
+
+    .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-header {
+        border-bottom: 1px solid @form-grid-border;
+    }
+
+    .ui-bizagi-grid-header.ui-state-default,
+    .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-header tr th {
+        box-shadow: none;
+        background:darken(@form-grid,10%);
+    }
+
+    .bz-rn-grid-header-title-rtl,
+    .bz-rn-grid-header-title {
+        .text-shadow();
+        color: @form-text !important;
+    }
+
+    .ui-bizagi-grid-body {
+        background: darken(@form-grid, 10%);
+    }
+
+    .ui-bizagi-render-grid-container div[data-bizagi-component=emptyTable] {
+        border-left: none;
+        border-right: none;
+        background: @form-group;
+    }
+
+    .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr:hover,
+    .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr:nth-child(even):hover {
+        background-color: @form-grid;
+        color: @form-text;
+        cursor: pointer;
+    }
+
+    .ui-bizagi-grid table tbody tr.ui-bizagi-state-selected,
+    .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr.ui-bizagi-state-selected:hover {
+        background: darken(@form-grid, 20%);
+        color: @form-text;
+    }
+
+    .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr td {
+        border-bottom-color: @form-grid-border;
+    }
+
+    .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr:last-child td {
+        border-bottom: none;
+    }
+
+    .bz-rn-grid-container-foother-rtl,
+    .bz-rn-grid-container-foother {
+        border-top: 1px solid @form-grid-border;
+        .contrastFixIconJquery(#8c8a8c,@form-grid,90%);
+        background: @contrastFixIconJquery;
+        .border-radiuses(0px, @border-radius-default - 1, @border-radius-default - 1, 0px);
+    }
+    /* ==========================================================================
+    Widgets
+    ========================================================================== */
+    div[id^="ui-tooltip-"],
+    .ui-tooltip.ui-widget-content {
+        .border-radius() !important;
+        .drop-shadow();
+        border: 1px solid fade(@content, 90%);
+        background: fade(#FFF, 95%);
+        background-clip: padding-box;
+        color: @text;
+        font-family: @font-family;
+    }
+
+    .ui-widget-content {
+        .contrastLight(@text,@navigation);
+        color: @contrastLight;
+    }
+    /* -------------- Dialog -------------- */
+    .ui-dialog {
+        .border-radius();
+        border-color: @modal-border;
+        background-color: @modal;
+    }
+    /* Dialog title */
+    .ui-dialog .ui-dialog-titlebar {
+        border-bottom: none;
+    }
+
+    .ui-dialog .ui-dialog-title {
+        .text-shadow();
+        margin: 0;
+        font-family: @font-family;
+    }
+    /* Modal box */
+    .modal {
+        .drop-shadow();
+        .border-radius();
+        border: 7px solid @modal-border;
+    }
+
+    .modal .selectarrow {
+        display: none;
+    }
+    /* Modal menu */
+    .frecuentCasesOn,
+    #casesList.casesListOn,
+    #frecuentCases:hover,
+    #casesList:hover {
+        .border-radiuses(6px, 0, 0, 6px);
+        background: @modal;
+        box-shadow: none;
+    }
+
+    #modalMenuBtHeader {
+        background: @modal-border;
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    .modal #modalTitle {
+        .text-shadow();
+        .contrastLight(@title;@navigation);
+        color: @contrastLight;
+        font-family: @font-family;
+    }
+
+    .modal .content {
+        background: @modal;
+        padding: 0;
+    }
+
+    #modalMenuBtList {
+        background: @modal;
+    }
+
+    #modalMenuBtList > div ul {
+        border-color: @content-border;
+        background: @content;
+    }
+
+    .bz-wp-widget-reportsmenu-item {
+        border-color: @content-border;
+        background: @content;
+    }
+
+    #modalMenuBtList > div ul,
+    #modalMenuBtList > div ul li {
+        .border-radius();
+    }
+
+    #modalMenuBtList > div li:hover {
+        .percentColor(@navigation,15%);
+        background-color: @result;
+    }
+
+    #modalMenuBtList > div li h3 {
+        color: @text;
+        font-family: @font-family;
+    }
+
+    .categoryTree {
+        border-color: @content-border;
+        box-shadow: none;
+    }
+
+    .categoryTree li {
+        color: @content-link;
+    }
+
+    .ui-bizagi-notifications-header {
+        font-family: @font-family;
+    }
+    /* ==========================================================================
+    Module
+    ========================================================================== */
+    /* Reports
+    ========================================================================== */
+    /* General */
+    .bz-rp-form-label,
+    .biz-wp-combo-label {
+        color: @text !important;
+    }
+
+    li.ui-bizagi-wp-widget-reports-menu-active::after {
+        background-color: darken(@content, 35%) !important;
+    }
+
+    .ui-bizagi-wp-widget-reports-menu li {
+        color: fade(@text, 50%) !important;
+    }
+
+    .ui-bizagi-wp-widget-reports-menu li:hover,
+    li.ui-bizagi-wp-widget-reports-menu-active {
+        color: @text !important;
+    }
+
+    .bz-rp-components,
+    .ui-bizagi-wp-widget-sensors-menu {
+        border-bottom-color: fade(@content-border, 15%) !important;
+    }
+
+    .ui-bizagi-wp-widget-sensors-menu li.ui-bizagi-wp-widget-reports-menu-active {
+        border-right-color: fade(@content-border, 15%) !important;
+        border-left-color: fade(@content-border, 15%) !important;
+    }
+    /* Report */
+    .bz-rp-report {
+        border-color: darken(@content, 35%) !important;
+    }
+
+    .bz-rp-info {
+        background-color: darken(@content, 35%) !important;
+    }
+    /* Summary */
+    .bz-rp-summary {
+        border-color: darken(@content, 35%) !important;
+    }
+
+    .bz-rp-summary thead th {
+        background-color: darken(@content, 35%) !important;
+    }
+
+    .bz-rp-summary th,
+    .bz-rp-summary td {
+        border-color: darken(@content, 35%) !important;
+    }
+
+    .bz-rp-reports .bz-rp-sensors-processlist-sublist-item:nth-child(odd) {
+        background: lighten(@form-grid, 10%) !important;
+    }
+
+    .bz-rp-summary tbody tr:nth-child(even),
+    .bz-rp-reports .bz-rp-sensors-processlist-row.bz-rp-sensors-sltitem,
+    .bz-rp-reports .bz-rp-sensors-processlist-sublist-item.bz-rp-sensors-sltitem,
+    .bz-rp-sensors-list-item:nth-child(odd) {
+        background: lighten(@form-grid, 5%) !important;
+    }
+
+    .bz-rp-sensors-list-item.bz-rp-sensors-selected {
+        background: @content !important;
+    }
+
+    .bz-rp-summary tbody th,
+    .bz-rp-summary tbody td {
+        color: @text !important;
+    }
+    /* Sensors */
+    .bz-rp-reports-sensors-header {
+        background: darken(@content, 35%) !important;
+    }
+
+    #bz-rp-sensors-processlist a {
+        color: @text !important;
+    }
+    /* Controls */
+    .ui-rangeSlider-bar {
+        background: darken(@content, 35%) !important;
+    }
+
+    .processviewer-slider-container .processviewer-resetZoom-button > .bz-icon-svg{
+        .contrast(@navigation-link,@navigation,70%);
+        fill:@contrast;
+    }
+
+    .processviewer-slider-output,
+    .ui-slider-horizontal .ui-slider-handle {
+        background-color: darken(@content, 35%) !important;
+    }
+
+    .ui-rangeSlider-label-value {
+        color: @form-text !important;
+    }
+
+    .ui-rangeSlider-container,
+    .ui-rangeSlider-arrow {
+        border-top-color: lighten(@form-input-border, 20%) !important;
+        border-bottom-color: lighten(@form-input-border, 20%) !important;
+    }
+
+    .ui-rangeSlider-leftArrow:hover,
+    .ui-rangeSlider-rightArrow:hover {
+        background: lighten(@form-input, 10%) !important;
+    }
+
+    .ui-rangeSlider-leftArrow {
+        border-left-color: lighten(@form-input-border, 20%) !important;
+    }
+
+    .ui-rangeSlider-rightArrow {
+        border-right-color: lighten(@form-input-border, 20%) !important;
+    }
+
+    .ui-rangeSlider-leftArrow .ui-rangeSlider-arrow-inner {
+        border-right-color: darken(@content, 35%) !important;
+    }
+
+    .ui-rangeSlider-rightArrow .ui-rangeSlider-arrow-inner {
+        border-left-color: darken(@content, 35%) !important;
+    }
+
+    ul.bz-rp-detaillist-pagination li.bz-rp-detaillist-pagination-active span {
+        background-color: darken(@content, 35%) !important;
+        color: lighten(@text, 80%) !important;
+    }
+
+    ul.bz-rp-detaillist-pagination li span {
+        color: @text !important;
+    }
+    /* Forms */
+    #bz-rp-reports-sensors-create ul.bz-rp-sensors-form {
+        background: @content !important;
+    }
+
+    .bz-rp-form-control {
+        border-color: @form-input-border !important;
+        color: @form-text !important;
+    }
+
+    .ui-tabs .ui-tabs-panel {
+        .contrast(@form-tab-border;@navigation;14%);
+        border-color: @contrast;
+    }
+
+    input.biz-wp-combo-input :focus,
+    .bz-rp-reports-wrapper :focus {
+        outline-color: @form-input-border !important;
+    }
+
+    .bz-rp-sensors-form textarea:hover {
+        background: lighten(@form-input, 10%) !important;
+    }
+
+    .bz-rp-sensors-form input,
+    .bz-rp-sensors-form textarea {
+        .inner-shadow() !important;
+        .border-radius() !important;
+    }
+
+    .bz-rp-reports .biz-wp-combo-input {
+        box-shadow: 0 1px #ddd !important;
+        border-color: lighten(@form-input-border, 20%) !important;
+        background: #fff;
+    }
+
+    .biz-wp-combo-btn-caret {
+        border-top-color: darken(@content, 35%) !important;
+    }
+
+    .ui-select-dropdown.open,
+    .desktop .bz-multiselect__content {
+        .drop-shadow();
+        .border-radius();
+        border-color: @form-input-border;
+        background: @form-input;
+        color: @form-text !important;
+    }
+
+    .bz-render-comboSelected-listBoxSelects {
+        border-color: @form-input-border;
+        .border-radiuses(0, 0, @border-radius-default, @border-radius-default);
+        background: @form-input;
+        color: @form-text !important;
+    }
+
+    .ui-select-dropdown li,
+    .desktop .bz-multiselect__content li.bz-multiselect__item.bz-checkbox {
+        border-bottom-color: @form-input-border !important;
+        color: @form-text !important;
+    }
+
+    .ui-select-dropdown li:hover {
+        border-color: transparent !important;
+        background: lighten(@form-input, 10%);
+    }
+
+    .bz-rp-button,
+    input.bz-rp-filters-time-input {
+        .border-radius() !important;
+        border-color: lighten(@form-input-border, 20%) !important;
+        color: @form-text !important;
+    }
+
+    .bz-rp-button:hover {
+        background: lighten(@form-input, 10%);
+    }
+
+    .bz-rp-sensors-form .bz-rp-button-secondary {
+        color: @form-text !important;
+    }
+
+    .bz-rp-filters-time-buttons-list-item {
+        border-color: lighten(@form-input-border, 20%) lighten(@form-input-border, 20%) lighten(@form-input-border, 20%) transparent !important;
+        color: @form-text !important;
+    }
+
+    .bz-rp-filters-time-buttons-list-item:hover {
+        background-color: lighten(@form-input, 10%) !important;
+    }
+
+    .bz-rp-filters-time-buttons-list-item:first-child {
+        border-left-color: lighten(@form-input-border, 20%) !important;
+    }
+
+    .bz-rp-frequentspaths-header input[type=text] {
+        color: @text !important;
+    }
+    /* Thumb */
+    input[type="range"]::-webkit-slider-thumb {
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, darken(@content, 35%)), color-stop(100%, darken(@content, 15%))) !important;
+        background-image: -webkit-linear-gradient(top , darken(@content, 35%) 0, darken(@content, 15%) 100%) !important;
+        background-image: linear-gradient(to bottom, darken(@content, 35%) 0, darken(@content, 15%) 100%) !important;
+    }
+
+    input[type="range"]::-moz-range-thumb {
+        background-image: linear-gradient(to bottom, darken(@content, 35%) 0, darken(@content, 15%) 100%) !important;
+    }
+
+    input[type="range"]::-ms-thumb {
+        background-image: linear-gradient(to bottom, darken(@content, 35%) 0, darken(@content, 15%) 100%) !important;
+    }
+    /*************************************************************************************
+        RUBIK SUPPORT STYLES
+    *************************************************************************************/
+    /*******************************************************************
+    NAVIGATION
+    ********************************************************************/
+    .modal {
+        border: 1px solid @navigation-border;
+    }
+
+    #modalMenuBtHeader,
+    #modalMenuBtList {
+        background: @white;
+    }
+
+    #modalMenuBtList > div ul,
+    .bz-wp-widget-reportsmenu-item {
+        background: @navigation-submenu-background;
+        border-bottom: 1px solid @navigation-border;
+        border-radius: 2px !important;
+    }
+
+    #modalMenuBtList > div ul li:hover {
+        .contrast(@navigation-submenu-text,@navigation,80%);
+        color:@contrast;
+        h3 {
+            text-shadow: none;
+            color:@contrast;
+        }
+    }
+
+    #ui-bizagi-wp-app-search input,
+        #ui-bizagi-wp-app-search:hover input {
+        .contrastOneDarken(@navigation,15%);
+        background: @contrastOneDarken;
+    }
+
+    #ui-bizagi-wp-app-search input:hover,
+    #ui-bizagi-wp-app-search input:focus {
+        .contrastOneDarken(@navigation,20%);
+        background: @contrastOneDarken;
+    }
+
+    .categoryTree {
+        border-bottom: 1px solid @navigation-border;
+    }
+
+    #ui-bizagi-wp-app-menu-logo-container,
+    .wdg-usmry-panel {
+        background: @logo-background;
+    }
+
+    .bz-wp-left-sidebar,
+    #project-collapse-leftpanel .ui-bizagi-wp-project-panel-collapseicon {
+        .percentColor(@navigation,8%);
+        background-color: @result;
+    }
+
+    #left-sidebar-wrapper,
+    .bz-wp-sidebar-inbox {
+        .drop-shadow();
+        .percentColor(@navigation,8%);
+        background-color: @result;
+        .side-bar-image(@sidebar-image-theme);
+    }
+
+    .bz-wp-ls-list-item,
+    .sidebar-content .wdg-stf-content,
+    .sidebar-content .wdg-process-card,
+    .sidebar-content .wdg-plan-filter-card,
+    .ui-bizagi-wp-app-inbox-processes-title,
+    .ui-bizagi-wp-app-inbox-processes-container ul,
+    #modalMenuBtList #queries-shortcut ul,
+    .ui-bizagi-wp-project-tab-links {
+        .percentColor(@navigation,13%);
+        background-color: @result;
+    }
+
+    .ui-bizagi-wp-project-tab-links .indentation {
+        .percentColor(@navigation,13%);
+        background-color: @result;
+    }
+
+    #contentProc .ui-bizagi-wp-app-inbox-processes-title {
+        .percentColor(@navigation,10%);
+        background-color: @result;
+        border-color: @content-border;
+    }
+
+    .sidebar-content .wdg-process-card.wdg-plst-selected,
+    .sidebar-content .bz-card.wdg-stf-selected,
+    .sidebar-content .wdg-plan-filter-card.wdg-ftr-selected,
+    .ui-bizagi-wp-app-inbox-processes-container .selected,
+    .ui-bizagi-wp-project-tab-links li.active {
+        .percentColor(@navigation,6%);
+        background-color: @result;
+    }
+
+    .ui-bizagi-wp-app-inbox-processes-title:hover,
+    #modalMenuBtList #queries-shortcut ul li:hover,
+    .ui-bizagi-wp-app-inbox-processes-container li:hover,
+    .sidebar-content .wdg-plan-filter-card:hover,
+    .ui-bizagi-wp-project-tab-links li:hover,
+    .sidebar-content .bz-card:hover,
+    .bz-wp-ls-list-item:hover,
+    .sidebar-content .wdg-process-card:hover{
+        .percentColor(@navigation,6%);
+        background-color: @result;
+    }
+
+
+    .ui-bizagi-wp-project-tab-links a {
+        .contrastLight(@text;@navigation);
+        color: @contrastLight;
+    }
+
+    #contentLinks .biz-wp-icon,
+    .wdg-db-header {
+        color: @title;
+    }
+
+    #ui-bizagi-wp-app-menu-bt-container > ul li:hover {
+        transition: background 0.6s ease-in-out;
+        background: darken(@navigation,14%);
+    }
+
+    #main_menu li:hover,
+    #main_menu li.activeMenu,
+    #main_menu li:hover,
+    #main_menu li.activeMenu {
+        background: darken(@navigation,14%);
+        color: @navigation-link;
+    }
+
+    #main_menu li:hover .ui-bizagi-wp-mini-arrow,
+    #main_menu li.activeMenu .ui-bizagi-wp-mini-arrow,
+    #main_menu li.active .ui-bizagi-wp-mini-arrow {
+        .contrast(@navigation-link,@navigation,80%);
+        border-top-color: @contrast;
+    }
+
+    #main_menu li .ui-bizagi-wp-mini-arrow {
+        .contrast(@navigation-link,@navigation,50%);
+        border-top-color: @contrast;
+    }
+
+    #main_menu li:hover::after, #main_menu li.activeMenu::after {
+        .contrast(@navigation-link,@navigation,40%);
+        background: @contrast;
+    }
+
+    #main_menu li a span {
+        .contrast(@navigation-link,@navigation,70%);
+        color:@contrast;
+    }
+
+    #contentLinks .biz-wp-icon {
+        color: @navigation-link;
+    }
+    //Avatar Background
+    #user .menu-user-photo,
+    .bz-wp-avatar {
+        .percentColor(@navigation,16%);
+        background-color: @result;
+        border:1px solid darken(@content, 10%);
+    }
+
+    //icon colors in admin menu
+
+    #modalMenuBtList > div ul,
+    #modalMenuBtList > div ul li{
+        .contrast(@navigation-submenu-text,@navigation-submenu-background,70%);
+        color: @contrast;
+    }
+
+    #modalMenuBtList > div ul li svg {
+        .contrast(@navigation-submenu-text,@navigation-submenu-background,70%);
+        fill: @contrast;
+    }
+
+
+    ///MODAL
+
+    .ui-bizagi-wp-project-popupform-h4,
+    .ui-rubik-popup-wrapper .ui-rubik-h4 {
+        color: @title;
+    }
+    //end modal
+    /**********************************************************************
+    DASHBOARD
+    ***********************************************************************/
+
+
+    #content-wrapper,
+    #navigation-panel #home-navbar,
+    div:not(#query-form-main-container) > .ui-bizagi-container-form.ui-bizagi-rendering-mode-execution:before,
+    div:not(#query-form-main-container) > .ui-bizagi-container-form.ui-bizagi-rendering-mode-execution:after {
+        .contrastBgColor(@background)
+    }
+
+    .modal .content {
+        .contrastBgColor(@background);
+    }
+
+    .frecuentCasesOn,
+    #casesList.casesListOn,
+    #frecuentCases:hover,
+    #casesList,
+    #newcase-view-options li i{
+        .contrast(@text, mix(@navigation,lighten(@navigation, 100%),12%),70% );
+        color:@contrast;
+        /*color: darken(@navigation, 10%);*/
+    }
+
+    .frecuentCasesOn,
+    #casesList.casesListOn,
+    #frecuentCases:hover,
+    #casesList:hover,
+    #newcase-view-options li i:hover {
+        .percentColor(@navigation,12%);
+        background-color: @result;
+    }
+
+    .bz-wp-ls-list-category {
+        border-color: darken(@navigation, 15%);
+    }
+
+    #home-navbar .nav-items-ctn > ul > li > span {
+        color: @text;
+    }
+
+    #home-navbar .navbar-back a,
+    #home-navbar .navbar-date,
+    #navigation-panel #home-navbar .navbar-print a,
+    #navigation-panel #home-navbar .navbar-help a{
+        .contrast(@content-link,@background,70%);
+        color:@contrast;
+    }
+
+    #navigation-panel #home-navbar .navbar-help .bz-icon-svg{
+        .contrast(@content-link,@background,70%);
+        fill:@contrast;
+    }
+
+    #home-navbar .navbar-back a:hover,
+    #navigation-panel #home-navbar .navbar-print a:hover,
+    #navigation-panel #home-navbar .navbar-help a:hover{
+        .contrast(@content-link,@background,70%);
+        color:darken(@contrast,10%);
+        
+    }
+
+    #navigation-panel #home-navbar .navbar-help .bz-icon-svg:hover {
+        .contrast(@content-link,@background,70%);
+        fill:darken(@contrast,10%);
+    }
+
+
+
+    .wdg-db-card:hover,
+    .stuff-content .wdg-stf-card:hover,
+    .plans-content .wdg-plans-card:hover {
+        border-color: darken(@content-border,7%);
+    }
+
+    .wdg-usmry-panel {
+        border-color: darken(@navigation,13%);
+        background: none;
+    }
+
+    .bz-wp-right-sidebar,
+    #project-collapse-rightpanel .ui-bizagi-wp-project-panel-collapseicon {
+        .percentColor(@navigation,14%);
+        background-color: @result;
+    }
+
+    .bz-case-navigation {
+        .percentColor(@navigation,6%);
+        background-color: @result;
+    }
+
+    .biz-wp-button-secondary, .ui-dialog .ui-button.biz-wp-button-secondary {
+        border-color: @navigation!important;
+        color: @navigation!important;
+    }
+
+    .biz-wp-button-secondary:hover, .ui-dialog .ui-button.biz-wp-button-secondary:hover {
+        border-color: darken(@navigation,15%)!important;
+        color: darken(@navigation,15%)!important;
+    }
+
+    .biz-wp-button-secondary .ui-button-text, .ui-dialog .ui-button.biz-wp-button-secondary .ui-button-text{
+        background: transparent!important;
+        color: @navigation!important;
+    }
+
+    .biz-wp-button-secondary:hover .ui-button-text, .ui-dialog .ui-button.biz-wp-button-secondary:hover .ui-button-text{
+        background: transparent!important;
+        color: darken(@navigation,15%) !important;
+    }
+
+    .bz-case-navigation .case-summary-next:hover,
+    .bz-case-navigation .case-summary-back:hover, 
+    .biz-wp-button-terciary[class]:hover {
+        .percentColor(@navigation,10%);
+        background-color: @result;
+        border-color: @navigation;
+        color: @navigation;
+    }
+
+    #project-collapse-rightpanel .ui-bizagi-wp-project-panel-collapseicon:hover {
+        .percentColor(@navigation,40%);
+        background: @result;
+        .contrast(@navigation-link,@result,50%);
+        color: @contrast;
+    }
+    .ui-bizagi-wp-project-discussion-delete i,
+    .ui-bizagi-wp-app-inbox-cases-ico-view i,
+    .ui-bizagi-wp-app-inbox-cases-start,
+    #ui-bizagi-wp-app-inbox-grid-cases .workonitRow span {
+        color: @content-link;
+    }
+
+    .bz-inbox-actions-new-item {
+        .contrastLight(@content-link,@navigation);
+        .percentColor(@contrastLight,80%);
+        box-shadow: inset 3px 0 0 @result;
+    }
+
+    .bz-inbox-actions-new-item-detail {
+        .contrastLight(@content-link,@navigation);
+        .percentColor(@contrastLight,80%);
+        box-shadow: inset 8px 0 0 @result !important;
+    }
+
+    /************************************************************************
+    CONTENT
+    ************************************************************************/
+
+    .ui-widget-header .ui-state-default {
+        border-top: 1px solid desaturate(@content-border, 100%);
+        border-right: 1px solid desaturate(@content-border, 100%);
+    }
+
+    #casestemplate-dataviewer > ul > li:hover .casetemplate-box-element {
+        border-color: darken(@content-border,7%);
+    }
+
+    .casetemplate-box-footer,
+    .template-box-footer {
+        background: darken(@pane, 2%);
+    }
+
+    .ui-bizagi-render-label,
+    .bz-wp-section {
+        .contrastLight(@title,@navigation);
+        color: @contrastLight;
+    }
+
+    .ui-bizagi-render-label label {
+        .contrast(@form-text;@form-group;30%);
+        color: @contrast;
+    }
+
+    .bz-tpl-img-txt .bz-tpl-data li,
+    .bz-tpl-header div {
+        color: @title;
+    }
+
+    .ui-bizagi-form-process-path {
+        color: mix(@text,@white,60%);
+    }
+    ///BUTTONS
+    .bz-wp-btn-secondary,
+    .bz-wp-btn .bz-wp-btn-secondary,
+    .bz-wp-btn-secondary .ui-button .ui-widget,
+    .biz-wp-btn-secondary .ui-button .ui-button-text{
+        border-color: @button;
+        color: @button;
+    }
+    .bz-wp-btn-secondary:hover,
+    .bz-wp-btn .bz-wp-btn-secondary:hover,
+    .bz-wp-btn-secondary .ui-button .ui-widget:hover,
+    .biz-wp-btn-secondary .ui-button .ui-button-text:hover{
+        border-color: darken(@button, 8%);
+        .contrastLight(@button; @navigation);
+        background: darken(@contrastLight, 8%);
+        color: @button-text;
+    }
+
+    .bz-wp-btn-primary,
+    .ui-button .ui-button-text,
+    .wgd-sortbar-container .wgd-sortbar-add-button,
+    .ui-bizagi-div-button-documentgenerator .ui-bizagi-render-button,
+    #ui-bizagi-wp-project-plan-content-dashboard .ui-bizagi-button-container .ui-button,
+    .desktop .bz-multiselect .bz-multiselect__tags > .bz-multiselect__tag.bz-multiselect__plus,
+    #project-plan-activity-form-cancel {
+        .border-radius(4px);
+        .contrastLight(@button; @navigation);
+        border-color: @button;
+        background: @contrastLight;
+        color: @button-text !important;
+    }
+
+    .bz-wp-button-secondary-real {
+        .border-radius(4px);
+        .contrastLight(@button; @navigation);
+        border-color: @contrastLight;
+        background: @button-text;
+        color: @contrastLight;
+    }
+
+    [quickactions] .bz-wp-btn svg.bz-icon-svg {
+        .contrastLight(@button; @navigation);
+        fill: @contrastLight;
+    }
+
+    .bz-wp-btn-primary:hover,
+    .ui-button .ui-button-text:hover,
+    .wgd-sortbar-container .wgd-sortbar-add-button:hover,
+    .desktop .bz-multiselect .bz-multiselect__tags > .bz-multiselect__tag.bz-multiselect__plus:hover,
+    #project-plan-activity-form-cancel:hover {
+        border-color: darken(@button, 8%);
+        .contrastLight(@button; @navigation);
+        background: darken(@contrastLight, 8%);
+        color: @button-text;
+    }
+
+    .desktop .bz-multiselect .bz-multiselect__tags > .bz-multiselect__tag.bz-multiselect__plus svg {
+        fill: @button-text;
+    }
+
+    .bz-wp-my-search ul,
+    .bz-wp-my-search ul .btn-primary,
+    .wgd-sortbar-container .sortbar-left > ul,
+    .wgd-sortbar-container .sortbar-right > ul,
+    .wgd-sortbar-container .sortbar-right > ul .btn-primary,
+    .wgd-sortbar-container .sortbar-left > ul .btn-primary {
+        color: @button;
+        background: transparent;
+    }
+
+    .ui-bizagi-wp-project-discussions-comment-buttons-share {
+        border-color: @button;
+        color: @button-text;
+    }
+
+    .ui-bizagi-wp-project-discussions-comment-buttons-share:hover {
+        background-color: darken(@button,5%);
+    }
+
+    .ui-bizagi-button {
+        background: @button;
+    }
+
+    .ui-bizagi-wp-project-discussions-comment-buttons-share:hover {
+        border: darken(@button,5%) !important;
+    }
+
+    .ui-bizagi-wp-project-discussions-comment-buttons-cancel {
+        border-color: darken(@button,5%) !important;
+        color: darken(@button,5%) !important;
+    }
+
+    .wdg-tple-button,
+    .btn-primary {
+        background-color: @button;
+        border-color: @button;
+        color: @button-text;
+    }
+
+    .wdg-tple-button:hover,
+    .btn-primary:hover {
+        background-color: lighten(@button,5%);
+        border-color: lighten(@button,5%);
+    }
+
+    .filter-icon i {
+        color: @button;
+    }
+
+    #casestemplate-dataviewer .casetoolbar ul li i:hover,
+    #casestemplate-dataviewer .casetoolbar ul li i.on,
+    #casestemplate-dataviewer .casetoolbar ul li i:hover,
+    #casestemplate-dataviewer .casetoolbar ul li i.on {
+        color: @button;
+    }
+
+    .bz-wp-cd-option-link {
+        color: @navigation;
+    }
+
+    .bz-wp-cd-option-link:hover {
+        color: darken(@navigation,10%);
+    }
+
+    .ui-bizagi-wp-project-discussions-comment-buttons-share {
+        background-color: @button;
+    }
+
+    .ui-bizagi-wp-project-discussion-delete i:hover {
+        color: @navigation;
+        background-color: darken(@button,10%);
+    }
+
+    .ui-bizagi-button-container .ui-bizagi-button {
+        .contrastLight(@button;@navigation);
+        background: @contrastLight !important;
+        .contrast(@button-text;@contrastLight;90%);
+        color: @contrast;
+        &:hover {
+            background: darken(@contrastLight,10%) !important;
+            color: darken(@contrast,10%) !important;
+        }
+    }
+
+    .ui-button, .ui-dialog .ui-button, .ui-bizagi-wp-app-routing-container table .ui-button, .ui-bizagi-wp-project-discussions-comment-buttons-share {
+        .contrastLight(@button;@navigation);
+        background: @contrastLight !important;
+    }
+
+    .ui-button.bz-btn--secondary, .ui-dialog .ui-button.bz-btn--secondary {
+        background: @white !important;
+        .contrastLight(@button;@navigation);
+        border-color: @contrastLight !important;
+        color: @contrastLight !important;
+    }
+
+    .ui-button.bz-btn--secondary .ui-button-text, .ui-dialog .ui-button.bz-btn--secondary .ui-button-text {
+        background: @white !important;
+        .contrastLight(@button;@navigation);
+        color: @contrastLight !important;
+    }
+
+    .ui-button:hover, .ui-dialog .ui-button:hover, .ui-bizagi-wp-app-routing-container table .ui-button:hover, .ui-bizagi-wp-project-discussions-comment-buttons-share:hover {
+        .contrastLight(@button;@navigation);
+        background: darken(@contrastLight,10%) !important;
+    }
+
+    /* Quick actions - Buttons */
+    #ui-bizagi-wp-project-plan-content-dashboard .ui-bizagi-button-container .ui-button.bz-btn--secondary,
+    .desktop .bz-form-buttons__actions .ui-button.bz-btn--secondary,
+    .desktop .bz-form-buttons__actions .ui-bizagi-button.bz-btn--secondary,
+    .desktop .bz-actions-container .ui-bizagi-button.bz-btn--secondary {
+        .text-shadow();
+        .contrastLight(@button;@navigation);
+        background: transparent;
+        border-color: @contrastLight !important;
+        color: @contrastLight !important;
+
+        &:hover {
+            background: transparent;
+            border-color: darken(@contrastLight, 10%) !important;
+            color: darken(@contrastLight, 10%) !important;
+        }
+    }
+
+    .desktop .ui-bizagi-button-container.bz-form-buttons .bz-form-buttons__more:hover {
+        .percentColor(@navigation,40%);
+        background: @result;
+        border-color: @navigation;
+    }
+
+    .desktop .ui-bizagi-button-container.bz-form-buttons .bz-form-buttons__more svg {
+        .contrastLight(@button;@navigation);
+        fill: @contrastLight;
+    }
+
+    .bz-wp-btn-link {
+        color: @navigation;
+    }
+
+    .bz-wp-btn-link:hover {
+        color: darken(@navigation,13%);
+    }
+
+    .ui-selectmenu .ui-selectmenu-value,
+    .ui-bizagi-old-render,
+    #admin-entity-main-wrapper .admin-dialog-leftframe select,
+    .ui-select-dropdown li,
+    .bz-wp-btn-primary, .ui-rubik-button-accept, .wdg-tple-button,
+    .ui-bizagi-wp-project-popupform-button-action,
+    .ui-bizagi-wp-project-popupform-button {
+        font-family: @font-family;
+    }
+
+    #admin-entity-main-wrapper .button-toggle-manage-entities svg.bz-icon-svg {
+        .contrast(@navigation-submenu-text,@navigation,80%);
+        fill: @contrast;
+    }
+
+    #admin-entity-main-wrapper .button-toggle-manage-entities svg.bz-icon-svg:hover {
+        .contrast(@content-link,@background,70%);
+        fill:darken(@contrast,10%);
+    }
+
+    .ui-bizagi-wp-project-popupform-button-action,
+    #button-accept-edit-template {
+        background-color: @button;
+        color: @button-text;
+        border-color: @button;
+    }
+
+    .ui-bizagi-wp-project-popupform-button-action:hover,
+    #button-accept-edit-template:hover {
+        background-color: lighten(@button,6%);
+        border-color: lighten(@button,6%);
+    }
+
+    .ui-bizagi-wp-project-popupform-button-cancel,
+    .ui-rubik-popup-wrapper .ui-rubik-button-cancel {
+        border-color: @button;
+        color: @button;
+    }
+
+    .ui-bizagi-wp-project-popupform-button-cancel:hover,
+    .ui-rubik-popup-wrapper .ui-rubik-button-cancel:hover {
+        border-color: darken(@button,8%);
+    }
+
+    .ui-bizagi-wp-project-discussions-add-attachments .k-upload-button:hover {
+        color: @navigation;
+    }
+
+    #home-project-discussions-wrapper .ui-bizagi-wp-action-new a:hover {
+        background-color: @button;
+        color:@button-text;
+    }
+
+    #home-project-discussions-wrapper .ui-bizagi-wp-action-new a {
+        border-color:@button;
+        color:@button-text;
+        background: @button;
+    }
+
+    .bz-wp-btn-primary,
+    .ui-rubik-button-accept,
+    .wdg-tple-button,
+    .ui-bizagi-wp-project-popupform-button-action {
+        .contrastLight(@button;@navigation);
+        background: @contrastLight;
+        color:@button-text;
+    }
+
+
+    .ui-rubik-button-accept:hover,
+    .wdg-tple-button:hover,
+    .ui-bizagi-wp-project-popupform-button-action:hover {
+    background: darken(@button, 10%);
+    color: @button-text;
+    }
+
+    .bz-wp-btn-default,
+    .ui-rubik-button-cancel,
+    .ui-bizagi-wp-project-popupform-button-cancel {
+        color:@button;
+    }
+
+    /// END BUTTONS
+    #ui-bizagi-wp-project-dashboard-frame .subtitle,
+    .ui-bizagi-wp-project-case-state-number,
+    #ui-bizagi-wp-project-case-state-wrapper .case-summary-favorite,
+    #ui-bizagi-wp-project-case-state-wrapper .case-summary-favorite:hover,
+    .ui-bizagi-wp-project-files-file,
+    #ui-bizagi-render-activity-log .activity-log-table .listHeaderLinks a,
+    .ui-bizagi-wp-project-discussions-sidebar-h3 {
+        .contrastLight(@title;@navigation);
+        color: @contrastLight;
+    }
+
+    .bz-icon-url-help.show-process-help.bz-icon-svg {
+        .contrastLight(@title;@navigation);
+        fill: @contrastLight;
+    }
+
+
+
+    #ui-bizagi-wp-app-menu-container #user-profile .bz-icon-svg {
+        .contrastLight(@text;@navigation);
+        fill: @contrastLight;
+    }
+
+
+    .ui-bizagi-wp-project-case-remaining-date .interval-date,
+    .ui-bizagi-wp-project-case-remaining-date .remaining-days .descripcion-remaining,
+    .ui-bizagi-wp-project-activity-state-dates-wrapper .interval-date,
+    .ui-bizagi-wp-project-activity-state-dates-wrapper .remaining-days .descripcion-remaining,
+    .ui-bizagi-wp-project-files-user,
+    #ui-bizagi-wp-app-menu-container #user-profile ul li,
+    #ui-bizagi-wp-app-menu-container #user-profile ul li .icon {
+        .contrastLight(@text;@navigation);
+        color: @contrastLight;
+    }
+
+    button#ui-bizagi-wp-project-activity-button {
+        background-color: @navigation;
+    }
+
+    #ui-bizagi-wp-project-activity-button.ui-bizagi-wp-project-activity-shared:hover svg.bz-icon-svg,
+    #ui-bizagi-wp-project-activity-button.ui-bizagi-wp-project-activity-shared svg.bz-icon-svg:hover,
+    #ui-bizagi-wp-project-activity-button.ui-bizagi-wp-project-activity-shared svg.bz-icon-svg {
+        fill: @navigation;
+    }
+
+    #ui-bizagi-wp-app-menu-container #user-profile ul li:hover,
+    #ui-bizagi-wp-app-menu-container #user-profile ul li:hover {
+        background: darken(@pane,3%);
+    }
+
+    #ui-bizagi-render-activity-log .activity-log-table .listHeaderLinks:hover {
+        background: @navigation;
+    }
+
+    #ui-bizagi-render-activity-log .activity-log-table .listHeaderLinks:hover a {
+        color: @navigation-link;
+        text-shadow: none;
+    }
+
+    #ui-bizagi-render-activity-log .activity-log-table .gridline2 {
+        background: darken(@pane, 4%);
+    }
+
+    #ui-bizagi-render-activity-log .activity-log-table .gridline2:hover {
+        background: @white;
+    }
+
+    #ui-bizagi-render-activity-log .main-menu li a.active {
+        background: darken(@pane,7%);
+    }
+
+    .ui-bizagi-wp-project-files-wrapitem {
+        border-color: lighten(@content-border,8%);
+    }
+
+    #ui-bizagi-wp-project-dashboard-main li.active a,
+    #ui-bizagi-wp-project-dashboard-main li.active a:hover {
+        background: @white;
+    }
+
+    #ui-bizagi-wp-project-process-state-wrapper .summaryLink span {
+        color: @content-link;
+        text-decoration: underline;
+    }
+
+    #ui-bizagi-wp-project-process-state-wrapper .summaryLink span:hover {
+        color: lighten(@content-link,15);
+    }
+
+    .ui-bizagi-wp-project-case-remaining-date .remaining-days .bar-completed.Closed {
+        background: @navigation;
+    }
+
+    .wgd-sortbar-container .sortbar-box-menu li:hover {
+        background-color: mix(@navigation,@white,15%);
+    }
+    ////////PANEL MINE
+    .sidebar-content .wdg-stf-card:hover {
+        .percentColor(@navigation,6%);
+        color: @navigation-link;
+    }
+
+    .wdg-stf-panel {
+        border-color: darken(@navigation, 13%);
+    }
+
+    .navbar-print a:hover {
+        .percentColor(@navigation,80%);
+    }
+    /*************************************************************************
+        FORMS
+        *************************************************************************/
+
+    #ui-bizagi-wp-app-inbox-grid-cases thead tr td {
+        .percentColor(@content,25%);
+        .contrast(@result,@content,20%);
+        background: @content;
+    }
+
+    #ui-bizagi-wp-app-inbox-grid-cases thead tr td {
+        .percentColor(@content,25%);
+        .contrast(@title,@result,70%);
+        color: @contrast;
+    }
+
+    .ui-bizagi-container
+    .ui-bizagi-container-group-wrapper {
+    background-color: @form-group;
+    .border-radiuses(0px, @border-radius-default, @border-radius-default, 0px);
+    }
+
+    #ui-bizagi-wp-app-inbox-grid-cases tbody tr {
+        background: @white;
+        border: 0;
+    }
+
+    #ui-bizagi-wp-app-inbox-grid-cases tbody tr td,
+    #ui-bizagi-wp-app-inbox-grid-cases thead tr td {
+        border: 0 !important;
+    }
+
+    .ui-bizagi-wp-app-inbox-activity-name,
+    .gridListWorkItems li .ui-bizagi-wp-app-inbox-activity-name {
+        .percentColor(@navigation,10%);
+        .contrast(@content-link,@result,80%);
+        color: @contrast;
+    }
+
+    #ui-bizagi-wp-app-inbox-grid-cases tbody tr td {
+        .percentColor(@navigation,10%);
+        .contrast(@text,@result,40%);
+        color: @contrast;
+    }
+
+    .ui-select-dropdown li:hover,
+    .ui-select-dropdown li.ui-selected,
+    .bz-multiselect__list .bz-multiselect__item.bz-checkbox:hover,
+    .desktop .bz-multiselect .bz-multiselect__tags > .bz-multiselect__tag:hover, 
+    .desktop .bz-view-more__content .bz-multiselect__tags > .bz-multiselect__tag:hover {
+        background: darken(@pane,5%);
+    }
+
+    .bz-action-launcher-container .ui-bizagi-render-vertical-items .ui-bizagi-render-actionLauncher-vertical-item {
+        background-color: darken(@pane,7%);
+    }
+
+    .ui-bizagi-container-form .ui-autocomplete {
+        background-color: @form-tab;
+    }
+
+    .ui-bizagi-container-form .ui-autocomplete li a label {
+        color: @text;
+    }
+
+    .ui-bizagi-container-form .ui-autocomplete .biz-ui-even {
+        background: darken(@form-tab, 3%);
+    }
+
+    .ui-state-hover,
+    .ui-widget-content .ui-state-hover,
+    .ui-widget-header .ui-state-hover,
+    .ui-state-focus,
+    .ui-widget-content li.ui-state-focus,
+    .ui-widget-header .ui-state-focus {
+        border-color: @form-tab;
+        background: lighten(@form-tab,4%);
+    }
+    /*********************************************************************
+        Work On It
+    **********************************************************************/
+    .ui-bizagi-wp-project-tab-content,
+    .ui-bizagi-wp-project-dashboard-breadcrumb-container {
+        background: @pane;
+    }
+
+    .ui-bizagi-render-upload-wrapper .resizable_img {
+        background-color: darken(@pane,7%);
+        border-color: lighten(@content-border,8);
+    }
+
+    #ui-bizagi-wp-app-render-form h3{
+        background: darken(@form-group, 10%);
+        border-color: darken(@form-tab-border, 20%);
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="number"],
+    textarea,
+    .ui-selectmenu,
+    .ui-bizagi-render-list,
+    .ui-bizagi-render-search.ui-autocomplete-input,
+    .biz-wp-input-combo,
+    .bz-render-comboSelected-listBoxSelects,
+    .biz-wp-combo-data-container,
+    .bz-rp-form-control,
+    .desktop .bz-multiselect .bz-multiselect__tags, .desktop .bz-view-more__content .bz-multiselect__tags,
+    .desktop .bz-form-old-item .ui-bizagi-render-control .bz-multiselect .bz-multiselect__tags, 
+    .desktop .bz-form-old-item[dir=ltr] .ui-bizagi-render-control .bz-multiselect .bz-multiselect__tags,
+    .desktop .bz-query-filter .bz-query-advanced, 
+    .desktop .bz-form-old-item .ui-bizagi-render-control .bz-query-filter .bz-query-advanced, 
+    .desktop .bz-form-old-item[dir=ltr] .ui-bizagi-render-control .bz-query-filter .bz-query-advanced,
+    .desktop .bz-form-old-item .ui-bizagi-render-control .bz-input-icon,
+    .desktop .bz-form-old-item[dir=ltr] .ui-bizagi-render-control .bz-input-icon {
+        background: @white;
+        border-color: darken(@pane,20%);
+    }
+
+    input[type="text"]:hover,
+    input[type="password"]:hover,
+    input[type="number"]:hover,
+    textarea:hover,
+    .ui-selectmenu:hover,
+    .bz-render-comboSelected-listBoxSelects:hover,
+    .ui-bizagi-render-search.ui-autocomplete-input:hover {
+        background: @white;
+    }
+    /*******************************************************************************
+    GRIDS
+    ********************************************************************************/
+    .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-header th {
+        border: 1px solid darken(@form-grid-border,15%);
+    }
+
+    .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr:nth-child(even),
+    .ui-bizagi-grid .ui-bizagi-grid-body tr:nth-child(odd){
+        background: lighten(@form-grid, 6%);
+    }
+
+    .bizagi-entities-entity-selected,
+    .bizagi-objects-object-selected {
+        background-color: darken(@form-grid,4%) !important;
+    }
+
+    .bizagi-entities-entity-selected,
+    .bizagi-objects-object-selected label {
+        color: darken(@form-grid,50%);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: darken(@form-grid,40%);
+    }
+
+    .ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-navigation-buttons ul li a:hover,
+    .ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-navigation-buttons ul li a.selected {
+        background-color: @form-tab;
+    }
+
+    .ui-bizagi-grid table tbody tr.ui-bizagi-state-selected,
+    .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr.ui-bizagi-state-selected {
+        background: darken(@form-grid,20%);
+    }
+    ///*********  COLLATERALS  ********///
+    .ui-widget-header,
+    .bz-render-association .ui-accordion-header {
+        background: @form-tab;
+        border-color: @form-tab-border;
+    }
+
+    .ui-accordion .ui-accordion-header.ui-state-active,
+    .bz-render-association .ui-accordion .ui-accordion-header.ui-state-active {
+        background: darken(@form-tab,4%);
+    }
+
+    .bz-render-association .bz-render-association-left-container li,
+    .bz-render-association .bz-render-association-right-container li {
+        background-color: lighten(@form-tab,2%);
+    }
+
+    .bz-render-association .bz-render-association-left-container li:nth-child(2n) {
+        background-color: darken(@form-tab,2%);
+    }
+
+    .bz-render-association .bz-render-association-left-container li:hover,
+    .bz-render-association .bz-render-association-right-container li:hover {
+        background-color: darken(@form-tab,5%);
+    }
+
+    #admin-language-wrapper .ui-accordion-header {
+        background: darken(@form-tab,7%);
+    }
+    /// ******* END COLLATERALS ******///
+    //****************************************************************************
+    //INPUTS
+    //******************************************************************************//
+    .ui-bizagi-grid-cell input[type="text"],
+    .ui-bizagi-grid-cell input[type="password"],
+    .ui-bizagi-grid-cell input[type="number"],
+    .ui-bizagi-grid-cell .ui-selectmenu {
+        background: @form-input;
+        border: 1px solid @form-input-border;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="number"],
+    textarea,
+    .ui-selectmenu,
+    .ui-bizagi-render-list,
+    .ui-bizagi-render-search.ui-autocomplete-input,
+    .biz-wp-input-combo,
+    .bz-render-comboSelected-listBoxSelects,
+    .biz-wp-combo-data-container,
+    .bz-rp-form-control,
+    .desktop .bz-multiselect .bz-multiselect__tags, .desktop .bz-view-more__content .bz-multiselect__tags,
+    .desktop .bz-form-old-item .ui-bizagi-render-control .bz-multiselect .bz-multiselect__tags, 
+    .desktop .bz-form-old-item[dir=ltr] .ui-bizagi-render-control .bz-multiselect .bz-multiselect__tags,
+    .desktop .bz-query-filter .bz-query-advanced,
+    .desktop .bz-form-old-item .ui-bizagi-render-control .bz-query-filter .bz-query-advanced, 
+    .desktop .bz-form-old-item[dir=ltr] .ui-bizagi-render-control .bz-query-filter .bz-query-advanced,
+    .desktop .bz-form-old-item .ui-bizagi-render-control .bz-input-icon,
+    .desktop .bz-form-old-item[dir=ltr] .ui-bizagi-render-control .bz-input-icon {
+        background: @form-input;
+        border: 1px solid @form-input-border;
+    }
+
+    .control-required .ui-bizagi-render-text,
+    .control-required .ui-bizagi-render-date,
+    .control-required .ui-bizagi-render-numeric,
+    .control-required .ui-bizagi-render-text-extended,
+    .control-required .ui-selectmenu,
+    .control-required .biz-render-input-search,
+    .control-required .ui-bizagi-render-search.ui-autocomplete-input,
+    .grid-control-required .bz-rn-grid-cn-header,
+    .control-required .bz-render-comboSelected-wrapper select,
+    .control-required .biz-render-searchlist ul,
+    .desktop .bz-form-old-item .ui-bizagi-render-control.control-required .bz-multiselect .bz-multiselect__tags, 
+    .desktop .bz-form-old-item[dir=ltr] .ui-bizagi-render-control.control-required .bz-multiselect .bz-multiselect__tags,
+    .desktop .bz-form-old-item .ui-bizagi-render-control.control-required .bz-input-icon,
+    .desktop .bz-form-old-item[dir=ltr] .ui-bizagi-render-control.control-required .bz-input-icon {
+        border: 1px solid @form-input-border;
+        border-left: 3px solid red;
+    }
+
+    .ui-bizagi-grid-cell .control-required .ui-bizagi-render-text,
+    .ui-bizagi-grid-cell .control-required .ui-bizagi-render-date,
+    .ui-bizagi-grid-cell .control-required .ui-bizagi-render-numeric,
+    .ui-bizagi-grid-cell .control-required .ui-bizagi-render-text-extended,
+    .ui-bizagi-grid-cell .control-required .ui-selectmenu,
+    .ui-bizagi-grid-cell .control-required .biz-render-input-search,
+    .ui-bizagi-grid-cell .control-required .ui-bizagi-render-search.ui-autocomplete-input,
+    .ui-bizagi-grid-cell .control-required .bz-render-comboSelected-wrapper select,
+    .ui-bizagi-grid-cell .control-required .biz-render-searchlist ul {
+        border: 1px solid @form-input-border;
+        border-left: 3px solid red;
+    }
+
+
+    .ui-bizagi-rtl .control-required .ui-bizagi-render-text,
+    .ui-bizagi-rtl .control-required .ui-bizagi-render-date,
+    .ui-bizagi-rtl .control-required .ui-bizagi-render-numeric,
+    .ui-bizagi-rtl .control-required .ui-bizagi-render-text-extended,
+    .ui-bizagi-rtl .control-required .ui-selectmenu,
+    .ui-bizagi-rtl .control-required .biz-render-input-search,
+    .ui-bizagi-rtl .control-required .ui-bizagi-render-search.ui-autocomplete-input,
+    .ui-bizagi-rtl .grid-control-required .bz-rn-grid-cn-header-rtl,
+    .ui-bizagi-rtl .control-required .bz-render-comboSelected-wrapper select,
+    .ui-bizagi-rtl .control-required .biz-render-searchlist ul,
+    .desktop .bz-form-old-item[dir=rtl] .ui-bizagi-render-control.control-required .bz-multiselect .bz-multiselect__tags,
+    .ui-bizagi-rtl .bz-form-old-item .ui-bizagi-render-control.control-required .bz-multiselect .bz-multiselect__tags,
+    .desktop .bz-form-old-item[dir=rtl] .ui-bizagi-render-control.control-required .bz-query-filter .bz-query-advanced,
+    .desktop .bz-form-old-item[dir=rtl] .ui-bizagi-render-control.control-required .bz-input-icon,
+    .ui-bizagi-rtl .bz-form-old-item .ui-bizagi-render-control.control-required .bz-input-icon {
+        border: 1px solid @form-input-border;
+        border-right: 3px solid red;
+    }
+
+    .ui-bizagi-grid-cell .ui-bizagi-rtl .control-required .ui-bizagi-render-text,
+    .ui-bizagi-grid-cell .ui-bizagi-rtl .control-required .ui-bizagi-render-date,
+    .ui-bizagi-grid-cell .ui-bizagi-rtl .control-required .ui-bizagi-render-numeric,
+    .ui-bizagi-grid-cell .ui-bizagi-rtl .control-required .ui-bizagi-render-text-extended,
+    .ui-bizagi-grid-cell .ui-bizagi-rtl .control-required .ui-selectmenu,
+    .ui-bizagi-grid-cell .ui-bizagi-rtl .control-required .biz-render-input-search,
+    .ui-bizagi-grid-cell .ui-bizagi-rtl .control-required .ui-bizagi-render-search.ui-autocomplete-input,
+    .ui-bizagi-grid-cell .ui-bizagi-rtl .control-required .bz-render-comboSelected-wrapper select,
+    .ui-bizagi-grid-cell .ui-bizagi-rtl .control-required .biz-render-searchlist ul {
+        border: 1px solid @form-input-border;
+        border-right: 3px solid red;
+    }
+
+    //****************************************************************************
+    //MY SEARCH
+    //******************************************************************************//
+    .sortbar-box-tooltip .multiplicity-separator {
+        border-color: @modal-border;
+        background-color: @content;
+        color: @title;
+    }
+
+    .sortbar-box-tooltip {
+        color: @text;
+    }
+    //** Un Error, se ven las sombras en las cajas de texto del menu
+    // Buscar #main_menu li a .text <- Ahí estan haciendo un box shadwo
+    //
+    // **//
+    #main_menu li a .text {
+        box-shadow: none;
+    }
+    /*
+    #ui-bizagi-wp-menu {
+        .test(red,13%);
+        background-color: @result;
+    }
+    */
+    .line-height();
+
+    .biz-render-searchlist ul li:not(:last-child) {
+        background-color: @button;
+    }
+
+    .bz-assignee-initials {
+        .percentColor(@navigation,8%);
+        background-color: @result;
+    }
+
+    #ui-bizagi-wp-app-inbox-grid-cases th {
+        color: @text;
+    }
+
+    #ui-bizagi-wp-app-inbox-grid-cases 
+    th>.ui-bizagi-wp-app-inbox-grouped {
+        color: @content-link;
+    }
+
+    #modalMenuBtList #queries-shortcut li .bz-shorcut__icon:hover {
+        background-color: @navigation;
+        .contrast(@navigation-link,@navigation,70%);
+        color:@contrast;
+    }
+
+    .ui-state-default, .ui-widget-content .ui-state-default {
+        background: transparent;
+    }
+
+    //--------- Arrows to order the table ------------//
+
+    .arrowDownIcon {
+        border-top: 5px solid  lighten(@title, 10%) !important;
+        border-left: 4px solid transparent !important;
+        border-right: 4px solid transparent !important;
+        border-bottom: 0 solid transparent !important;
+    }
+
+    .arrowUpIcon {
+        border-top: 0 solid transparent !important;
+        border-left: 4px solid transparent !important;
+        border-right: 4px solid transparent !important;
+        border-bottom: 5px solid  lighten(@title, 10%) !important;
+    }
+
+    .arrowDownIcon,
+    .arrowUpIcon {
+        float: none !important;
+        margin: 0 !important;
+        position: absolute !important;
+    }
+
+    .arrowDownIcon {
+        bottom: 0 !important;
+        left: 0 !important;
+    }
+
+    .arrowUpIcon {
+        top: 0 !important;
+        left: 0 !important;
+    }
+
+    .sortColumnsDataDownIcon .arrowDownIcon {
+        border-top-color: transparent !important;
+    }
+
+    .sortColumnsDataUpIcon .arrowUpIcon {
+        border-bottom-color: transparent !important;
+    }
+
+    .filterColumns::after {
+        background-color: @navigation;
+    }
+
+    .theme-text-color .bootstrap-tagsinput .tag {
+        color: @text !important;
+        border: 1px solid @navigation !important;
+    }
+    //****************************************************************************
+    //INVALIDATE CASES TREE
+    //******************************************************************************//
+    div.cases__process .biz-wp-tree-selected-option + .biz-wp-link {
+        color: @content-link;
+    }
+    
+    div.cases__process .biz-wp-tree-selected-option + .biz-wp-link::before{
+        background: @content-link;
+    }
+    
+    div.cases__process > .biz-wp-form-row:last-child .biz-wp-form-cell:last-child label{
+        color: @content-link;
+    }
+    
+    div.cases__process .searchInLabel{
+        color: @content-link;
+    }
+
+    div.cases__process .biz-wp-form-cell, div.cases__process .biz-wp-link, div.deleteCases__text{
+        .contrastLight(@text,@navigation);
+        color: @contrastLight;
+    }
+
+    //***** Tooltip *************//
+    p.userstooltip__name{
+        margin-bottom: 5px;
+        width: 100%;
+    }
+    .userstooltip__container{
+        .contrastLight(@text,@navigation);
+        color: @contrastLight;
+    }
+
+    .userstooltip__container{
+        .contrastLight(@text,@navigation);
+        color: @contrastLight;
+    }
+
+    //***** Loading *************//
+    #modalModuleStatus > div > p {
+        color: @navigation;
+    }
+
+    //***** Project plan (Plan activities) *************//
+    .project-plan-activity-list li{
+        .percentColor(@navigation,13%);
+        border-bottom: 1px solid @result !important;
+    }
+
+    .ui-bizagi-wp-project-form-buttons-actions,
+    .project-plan-activity-list > li.selected,
+    .project-plan-activity-list > li:hover{
+        .percentColor(@navigation,13%);
+        background-color: @result !important;
+    }
+
+    .ui-bizagi-render-checkList-add-item button {   
+        color: @navigation;
+    }
+
+    .ui-bizagi-render-checkList-add-item button:hover {
+        background:  @navigation;
+        border: 1px solid  @navigation;
+    }
+
+    .project-plan-activity-list .item-workonit-button {
+        .contrastLight(@button; @navigation);
+        border-color: @button !important;
+        background: @contrastLight !important;
+        color: @button-text !important;
+    }
+
+    .project-plan-activity-list .item-edit-button>i:hover{
+        .contrastLight(@button; @navigation);
+        color: @contrastLight !important;
+    }
+
+    .project-plan-activity-list .item-workonit-button:hover,
+    .project-plan-activity-list .item-workonit-button>i:hover {
+        .contrastLight(@button; @navigation);
+        border-color: darken(@button, 8%) !important;
+        background: darken(@contrastLight, 8%) !important;
+        color: @button-text !important; 
+    }
+
+    //***** Case search *************//
+    .row-background td{
+        background: darken(@content, 10%) !important;
+    }
+
+    //************* Project quick actions *************//
+
+    /**
+    * Buttons modal
+    */
+
+    .ui-dialog.ui-quick-action-modal-confirm button.ui-button.biz-wp-btn-secondary-real {
+        .border-radius(4px);
+        .contrastLight(@button; @navigation);
+        border-color: @contrastLight !important;
+        background: @button-text;
+        color: @contrastLight;
+    }
+
+    .ui-dialog.ui-quick-action-modal-confirm button.ui-button.biz-wp-btn-secondary-real span {
+        .contrastLight(@button; @navigation);
+        color: @contrastLight !important;
+        background: transparent;
+    }
+
+    .ui-dialog.ui-quick-action-modal-confirm button.ui-button.biz-wp-btn-warning {
+        background-color: #DA3B3B !important;
+    }
+
+    .ui-dialog.ui-quick-action-modal-confirm button.ui-button.biz-wp-btn-warning span.ui-button-text {
+        background: transparent;
+    }
+
+    /** QUICK ACTIONS*/
+    [collapsibleItem] div.collapsible-title {
+        color: @navigation !important;    
+    }
+
+    .quick-actions-checkbox-checked{
+        border: 1px solid @navigation !important;
+        background-color: @navigation !important;
+    }
+    //****************************************************************************
+    //Hand Signature control
+    //******************************************************************************//
+
+    .desktop .bz-signature .bz-signature__container .bz-signature__underline{
+        .contrastLight(@button;@navigation);
+        border-color: @contrastLight;
+    }
+    //************* End Hand Signature *************//
+}
+.mixinThemeOther(@theme);
+
+//* Light Styles *//
+.mixinThemeLight (@themeIN) when (@themeIN = 'Light') {
+
+    @one-color-theme: @navigation;
+
+    @sidebar-image-theme-available: true;
+
+    html, body {
+        color: #272727;
+    }
+    //Menu styles
+
+    #ui-bizagi-wp-menu {
+        background: @one-color-theme;
+    }
+
+    #ui-bizagi-wp-app-menu-logo-container {
+        background: @one-color-theme;
+        box-shadow: none;
+    }
+
+    #ui-bizagi-wp-app-menu-container {
+        background: @one-color-theme;
+        box-shadow: none;
+    }
+
+    i.processIco.bz-icon.bz-icon-24.bz-icon-case-outline{
+        display: none;
+    }
+    
+    #modalMenuBtList > div li:hover, #user-profile > ul li:hover {
+        background-color: #FAFAFA;
+    }
+    
+    #modalMenuBtList > div li h3 {
+        font-size: 100% !important;
+    }
+
+    .modal {
+        color: #272727;
+    }
+
+    .bz-wp-avatar.bz-wp-avatar-48.menu-user-photo{
+        width: 32px;
+        height: 32px;
+    }
+
+    //Avatar Background
+    #user .menu-user-photo {
+        border: 1px solid #fff;
+        cursor: pointer;
+    }
+    
+    //Me avatar
+    #user .menu-user-photo,
+    .bz-wp-avatar {
+        background-color: #CFF2F2;
+    }
+
+    #user {
+        top: 60%;
+    }
+
+    #user .adm-user {
+        display: none;
+    }
+
+    div.bz-wp-avatar.bz-wp-avatar-48.menu-user-photo > span.bz-wp-avatar-label {
+        top: 8px;
+        font-size: 12px;
+    }
+
+    #ui-bizagi-wp-widget-searchContainer {
+        margin-right: 0px;
+    }
+
+    .bz-wp-avatar-48.wdg-usmry-photo-wrapper {
+        width: 32px;
+        height: 32px;
+    }
+
+    .bz-wp-avatar.bz-wp-avatar-48.wdg-usmry-photo-wrapper > span.bz-wp-avatar-label{
+        top: 8px;
+        font-size: 12px;
+    }
+
+    #ui-bizagi-wp-app-search input,
+        #ui-bizagi-wp-app-search:hover input {
+        .contrastOneDarken(@one-color-theme,6%);
+        background: @contrastOneDarken;
+    }
+    //input search menu
+    #ui-bizagi-wp-app-search input::placeholder {
+        color:  #E0E0E0;
+    }
+
+    #ui-bizagi-wp-app-search:hover input, #ui-bizagi-wp-app-search input:focus, 
+    #ui-bizagi-wp-app-search input:hover {
+        .contrastOneDarken(@one-color-theme,6%);
+        color:  #E0E0E0;
+        background: @contrastOneDarken;
+    }
+
+    /* Footer background */
+    #footer {
+        .drop-shadow(0, -2px);
+        background: @one-color-theme;
+    }
+
+    #ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab.active,
+    #ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab:hover {
+        .inner-shadow();
+        background: darken(@one-color-theme, 6%);
+    }
+
+    #casesPagination ul li.active, #casesPagination ul li.active:hover {
+        background-color: darken(@one-color-theme, 6%);
+    }
+    
+    /* Inbox left sidebar */
+    #left-sidebar-wrapper,
+    .bz-wp-sidebar-inbox {
+        .side-bar-image(@sidebar-image-theme);
+    }
+
+    .container-bz-icon-svg .bz-icon-svg {
+        fill: @one-color-theme;
+    }
+
+    .bz-wp-sidebar-inbox {
+        background-color: #FAFAFA;
+        box-shadow: none;
+        border-right: 1px solid #E0E0E0;
+    }
+
+    .ui-bizagi-wp-app-inbox-processes-container .ul-processes-list li #ui-bizagi-wp-app-inbox-processes-ico-paper {
+        display: none;
+    }
+
+    .bz-wp-ls-list-item, 
+    .sidebar-content .wdg-stf-content,
+    .ui-bizagi-wp-app-inbox-processes-container ul, 
+    #modalMenuBtList #queries-shortcut ul, 
+    .ui-bizagi-wp-project-tab-links {
+        background: rgba(224, 224, 224, 0.5);
+    }
+    
+    .sidebar-content .wdg-plan-filter-card,
+    .sidebar-content .wdg-process-card {
+        background: #E0E0E0;
+    }
+
+    .bz-wp-ls-list-item:hover, 
+    .sidebar-content .wdg-process-card:hover, 
+    .sidebar-content .wdg-process-card.wdg-plst-selected, 
+    .sidebar-content .bz-card:hover, 
+    .sidebar-content .bz-card.wdg-stf-selected, 
+    .sidebar-content .wdg-plan-filter-card:hover, 
+    .sidebar-content .wdg-plan-filter-card.wdg-ftr-selected, 
+    #contentProc .ui-bizagi-wp-app-inbox-processes-title:hover, 
+    .ui-bizagi-wp-app-inbox-processes-container li:hover, 
+    #modalMenuBtList #queries-shortcut ul li:hover, 
+    .ui-bizagi-wp-app-inbox-processes-container .selected, 
+    .ui-bizagi-wp-project-tab-links li:hover, 
+    .ui-bizagi-wp-project-tab-links li.active, 
+    .ui-state-hover, .ui-widget-content .ui-state-hover, 
+    .ui-widget-header .ui-state-hover, 
+    .ui-state-focus, 
+    .ui-widget-content .ui-state-focus, 
+    .ui-widget-header .ui-state-focus {
+        background-color: #f2f3f3;
+    }
+
+    #contentProc .ui-bizagi-wp-app-inbox-processes-title {
+        background-color: #FAFAFA; 
+        padding: 16px 8px 16px 20px;
+        font-size: 1em !important; 
+        border: none;
+    }
+
+    .ui-bizagi-wp-app-inbox-processes-name {
+        font-size: 100% !important;
+    }
+
+    .theme-navigation-bgc {
+        background-color: @one-color-theme;
+    }
+
+    .ui-bizagi-wp-app-inbox-processes-container .ul-processes-list li .ui-bizagi-wp-app-inbox-processes-name {
+        padding-left: 30px;
+    }
+
+    .ui-bizagi-wp-app-inbox-processes-container .ul-processes-list.bz-all-cases .ui-bizagi-wp-app-inbox-processes-name {
+        padding-left: 0px;
+        top: 2px;
+    }
+    /* Inbox Grid  */
+    #contentCases.casesGrid, #contentCases.cases, #contentDesc.description {
+        background: #ffffff;
+    }
+
+    .bz-inbox-actions-new-item {
+        box-shadow: inset 3px 0 0 @one-color-theme;
+    }
+
+    .bz-inbox-actions-new-item-detail {
+        box-shadow: inset 8px 0 0 @one-color-theme !important;
+    }
+
+    .ui-bizagi-wp-project-discussion-delete i, 
+    .ui-bizagi-wp-app-inbox-cases-ico-view i, 
+    .bz-inbox-actions i, .bz-search-actions i, 
+    #ui-bizagi-wp-app-inbox-grid-cases .workonitRow span, 
+    #ui-icon-action-detail-ico, #ui-icon-action-edit-ico, 
+    #ui-icon-action-trash-ico, .bz-wp-cd-option-link, 
+    .ui-bizagi-wp-app-inbox-processes-title .ui-bizagi-wp-app-inbox-cases-ico-view, 
+    .ui-bizagi-wp-app-inbox-processes-title .ui-bizagi-wp-app-inbox-processes-title--wrapper-actions-buttons > i, 
+    .bz-project-timeline-content .bz-hover-icons i, 
+    .bz-project-timeline-type-activity .bz-project-timeline-content h2, 
+    .bz-project-timeline-type-event .bz-project-timeline-content h2, 
+    .bizagi-wp-userstable-userlink, 
+    .bz-icon-svg {
+        color: #757575;
+        fill: #757575;
+    }
+
+    .ui-bizagi-wp-app-inbox-activity-name, .gridListWorkItems li .ui-bizagi-wp-app-inbox-activity-name {
+        color: @one-color-theme;
+    }
+
+    #ui-bizagi-wp-app-inbox-grid-cases tbody tr {
+        background: #ffffff;
+    }
+
+    .ui-bizagi-wp-app-routing-container tbody .event, .biz-wp-table tbody .biz-wp-table-row-even,
+    #ui-bizagi-wp-app-inbox-grid-cases tbody .event, .personalizedColumnsContainer table tbody .event {
+        background-color:  #ffffff;
+    }
+
+    .ui-bizagi-wp-app-routing-container thead td, .ui-bizagi-wp-app-inbox-grid-cases-container thead td, .personalizedColumnsContainer table thead td {
+        background: #fff;
+        font-size: 100%;
+        border-bottom: 1px solid #E0E0E0 !important;
+    }
+
+    div#casesPagination.inbox__pagination ul > li.active.bz-page, 
+    div#casesPagination.inbox__pagination ul > li:hover, 
+    div#casesPagination.inbox__pagination ul li.active span, 
+    div#casesPagination.inbox__pagination ul li:hover span {
+        background-color: @one-color-theme;
+    }
+
+    .project-plan-activity-list .item-workonit-button {
+        .contrastLight(@one-color-theme; @one-color-theme);
+        border-color: @one-color-theme !important;
+        background: @contrastLight !important;
+    }
+
+    .project-plan-activity-list .item-workonit-button:hover,
+    .project-plan-activity-list .item-workonit-button>i:hover {
+        .contrastLight(@one-color-theme; @one-color-theme);
+        border-color: darken(@one-color-theme, 8%) !important;
+        background: darken(@contrastLight, 8%) !important; 
+    }
+	
+	.ui-bizagi-render-checkList-add-item button {   
+        color: @one-color-theme;
+    }
+
+    .ui-bizagi-render-checkList-add-item button:hover {
+        background:  @one-color-theme;
+        border: 1px solid  @one-color-theme;
+    }
+	
+	.project-plan-activity-list .item-edit-button>i:hover{
+        .contrastLight(@one-color-theme; @one-color-theme);
+        color: @contrastLight !important;
+    }
+
+    #ui-bizagi-wp-app-inbox-grid-cases tbody tr td, 
+    #ui-bizagi-wp-app-inbox-grid-cases thead tr td {
+        border-bottom: 1px solid #E0E0E0 !important;
+    }
+
+    #ui-bizagi-wp-app-inbox-grid-cases .selected td, 
+    .ui-bizagi-wp-app-inbox-grid-cases-container tbody tr:hover td, 
+    .personalizedColumnsContainer table tbody tr:hover td, 
+    .ui-bizagi-wp-app-routing-container .selected td, 
+    .ui-bizagi-wp-app-routing-container tbody tr:hover td, 
+    .biz-wp-table-body tr:hover td {
+        background: #FAFAFA;
+    }
+
+    .filterColumns svg {
+        fill: #757575;
+    }
+
+    #ui-bizagi-wp-app-inbox-bt-eye{
+        fill: #757575;
+        color: #757575;
+    }
+
+    #casesPagination.inbox__pagination {
+        border: none !important;
+    }
+    
+    #casesPagination.inbox__pagination ul li.active span, #casesPagination.inbox__pagination ul li:hover span {
+        background-color: @one-color-theme !important;
+    }
+    
+
+    .theme-navigation-fill svg {
+        fill: #757575;
+    }
+
+    .filterColumns::after {
+        background-color: @one-color-theme;
+    }
+
+    /* Inbox Details */
+    #ui-bizagi-wp-app-inbox-cases-container li:hover,
+    #ui-bizagi-wp-app-inbox-cases-container .selected,
+    #ui-bizagi-wp-app-inbox-cases-container li.selected:hover {
+        background: lighten(@one-color-theme, 35%) !important;
+    }
+
+    h3, .bz-wp-section {
+        color: #272727;
+    }
+
+    h2, .bz-wp-subtitle {
+        color: @one-color-theme;
+    }
+
+    a {
+        color: @one-color-theme;
+    }
+
+    .ui-tabs-panel a,
+    .ui-tabs-panel a span {
+        text-decoration: underline;
+    }
+
+    /* Buttons */
+
+    .ui-button span {
+        text-shadow: none;
+    }
+
+    .bz-wp-btn-secondary,
+    .bz-wp-btn .bz-wp-btn-secondary,
+    .bz-wp-btn-secondary .ui-button .ui-widget,
+    .biz-wp-btn-secondary .ui-button .ui-button-text{
+        border-color: @one-color-theme;
+        color: @one-color-theme;
+    }
+    .bz-wp-btn-secondary:hover,
+    .bz-wp-btn .bz-wp-btn-secondary:hover,
+    .bz-wp-btn-secondary .ui-button .ui-widget:hover,
+    .biz-wp-btn-secondary .ui-button .ui-button-text:hover{
+        border-color: darken(@one-color-theme, 8%);
+        .contrastLight(@one-color-theme; @one-color-theme);
+        background: darken(@contrastLight, 8%);
+        color: @button-text;
+    }
+
+    .bz-wp-btn-primary,
+    .ui-button .ui-button-text,
+    .ui-bizagi-div-button-documentgenerator .ui-bizagi-render-button,
+    #ui-bizagi-wp-project-plan-content-dashboard .ui-bizagi-button-container .ui-button,
+    .desktop .bz-multiselect .bz-multiselect__tags > .bz-multiselect__tag.bz-multiselect__plus,
+    #project-plan-activity-form-cancel {
+        .border-radius(4px);
+        .contrastLight(@one-color-theme; @one-color-theme);
+        border-color: @one-color-theme;
+        background: @contrastLight;
+        color: @button-text !important;
+    }
+
+    .wgd-sortbar-container .wgd-sortbar-add-button {
+        color: @one-color-theme;
+    }
+
+    .bz-wp-button-secondary-real {
+        .border-radius(4px);
+        .contrastLight(@one-color-theme; @one-color-theme);
+        border-color: @contrastLight;
+        background: @button-text;
+        color: @contrastLight;
+    }
+
+    [quickactions] .bz-wp-btn svg.bz-icon-svg {
+        .contrastLight(@one-color-theme; @one-color-theme);
+        fill: @contrastLight;
+    }
+
+    .bz-wp-btn-primary:hover,
+    .ui-button .ui-button-text:hover,
+    .wgd-sortbar-container .wgd-sortbar-add-button:hover,
+    .desktop .bz-multiselect .bz-multiselect__tags > .bz-multiselect__tag.bz-multiselect__plus:hover,
+    #project-plan-activity-form-cancel:hover {
+        border-color: darken(@one-color-theme, 8%);
+        .contrastLight(@one-color-theme; @one-color-theme);
+        background: darken(@contrastLight, 8%);
+        color: @button-text;
+    }
+
+    .desktop .bz-multiselect .bz-multiselect__tags > .bz-multiselect__tag.bz-multiselect__plus svg {
+        fill: @button-text;
+    }
+
+    .bz-wp-my-search ul,
+    .bz-wp-my-search ul .btn-primary,
+    .wgd-sortbar-container .sortbar-left > ul,
+    .wgd-sortbar-container .sortbar-left > ul .btn-primary {
+        color: @one-color-theme;
+        background: transparent;
+    }
+
+    .ui-bizagi-wp-project-discussions-comment-buttons-share {
+        border-color: @one-color-theme;
+        color: @button-text;
+    }
+
+    .ui-bizagi-wp-project-discussions-comment-buttons-share:hover {
+        background-color: darken(@one-color-theme,5%);
+    }
+
+    .ui-bizagi-button {
+        background: @one-color-theme;
+    }
+
+    .ui-bizagi-wp-project-discussions-comment-buttons-share:hover {
+        border: darken(@one-color-theme,5%) !important;
+    }
+
+    .ui-bizagi-wp-project-discussions-comment-buttons-cancel {
+        border-color: darken(@one-color-theme,5%) !important;
+        color: darken(@one-color-theme,5%) !important;
+    }
+    .wdg-plans-leftmenu:hover {
+        color: @one-color-theme;
+    }
+
+    .bz-wp-cd-option-link {
+        color: @one-color-theme;
+    }
+
+    .bz-wp-cd-option-link:hover {
+        color: darken(@one-color-theme,10%);
+    }
+
+    .ui-bizagi-wp-project-discussions-comment-buttons-share {
+        background-color: @one-color-theme;
+    }
+
+    .ui-bizagi-wp-project-discussion-delete i:hover {
+        color: @one-color-theme;
+        background-color: darken(@one-color-theme,10%);
+    }
+
+    .ui-bizagi-button-container .ui-bizagi-button {
+        .contrastLight(@one-color-theme;@one-color-theme);
+        background: @contrastLight !important;
+        .contrast(@button-text;@contrastLight;90%);
+        color: @contrast;
+        &:hover {
+            background: darken(@contrastLight,10%) !important;
+            color: darken(@contrast,10%) !important;
+        }
+    }
+
+    .ui-button, .ui-dialog .ui-button, .ui-bizagi-wp-app-routing-container table .ui-button, .ui-bizagi-wp-project-discussions-comment-buttons-share {
+        .contrastLight(@one-color-theme;@one-color-theme);
+        background: @contrastLight !important;
+    }
+
+    .ui-button.bz-btn--secondary, .ui-dialog .ui-button.bz-btn--secondary {
+        background: @white !important;
+        .contrastLight(@one-color-theme;@one-color-theme);
+        border-color: @contrastLight !important;
+        color: @contrastLight !important;
+    }
+
+    .ui-button.bz-btn--secondary .ui-button-text, .ui-dialog .ui-button.bz-btn--secondary .ui-button-text {
+        background: @white !important;
+        .contrastLight(@one-color-theme;@one-color-theme);
+        color: @contrastLight !important;
+        border-radius: 3px;
+    }
+
+    .ui-button:hover, .ui-dialog .ui-button:hover, .ui-bizagi-wp-app-routing-container table .ui-button:hover, .ui-bizagi-wp-project-discussions-comment-buttons-share:hover {
+        .contrastLight(@one-color-theme;@one-color-theme);
+        background: darken(@contrastLight,10%) !important;
+    }
+
+    /* Quick actions - Buttons */
+    #ui-bizagi-wp-project-plan-content-dashboard .ui-bizagi-button-container .ui-button.bz-btn--secondary,
+    .desktop .bz-form-buttons__actions .ui-button.bz-btn--secondary,
+    .desktop .bz-form-buttons__actions .ui-bizagi-button.bz-btn--secondary,
+    .desktop .bz-actions-container .ui-bizagi-button.bz-btn--secondary {
+        .text-shadow();
+        .contrastLight(@one-color-theme;@one-color-theme);
+        background: transparent;
+        border-color: @contrastLight !important;
+        color: @contrastLight !important;
+
+        &:hover {
+            background: transparent;
+            border-color: darken(@contrastLight, 10%) !important;
+            color: darken(@contrastLight, 10%) !important;
+        }
+    }
+
+    .desktop .ui-bizagi-button-container.bz-form-buttons .bz-form-buttons__more:hover {
+        .percentColor(@one-color-theme,40%);
+        background: @result;
+        border-color: @one-color-theme;
+    }
+
+    .desktop .ui-bizagi-button-container.bz-form-buttons .bz-form-buttons__more svg {
+        .contrastLight(@one-color-theme;@one-color-theme);
+        fill: @contrastLight;
+    }
+
+    .bz-wp-btn-link {
+        color: @one-color-theme;
+    }
+
+    .bz-wp-btn-link:hover {
+        color: darken(@one-color-theme,13%);
+    }
+
+    .ui-selectmenu .ui-selectmenu-value,
+    .ui-bizagi-old-render,
+    #admin-entity-main-wrapper .admin-dialog-leftframe select,
+    .ui-select-dropdown li,
+    .bz-wp-btn-primary, .ui-rubik-button-accept, .wdg-tple-button,
+    .ui-bizagi-wp-project-popupform-button-action,
+    .ui-bizagi-wp-project-popupform-button {
+        font-family: @font-family;
+    }
+
+    #admin-entity-main-wrapper .button-toggle-manage-entities svg.bz-icon-svg {
+        .contrast(@navigation-submenu-text,@one-color-theme,80%);
+        fill: @contrast;
+    }
+
+    #admin-entity-main-wrapper .button-toggle-manage-entities svg.bz-icon-svg:hover {
+        .contrast(@content-link,@background,70%);
+        fill:darken(@contrast,10%);
+    }
+
+    .ui-bizagi-wp-project-popupform-button-action,
+    #button-accept-edit-template {
+        background-color: @one-color-theme;
+        color: @button-text;
+        border-color: @one-color-theme;
+    }
+
+    .ui-bizagi-wp-project-popupform-button-action:hover,
+    #button-accept-edit-template:hover {
+        background-color: lighten(@one-color-theme,6%);
+        border-color: lighten(@one-color-theme,6%);
+    }
+
+    .ui-bizagi-wp-project-popupform-button-cancel,
+    .ui-rubik-popup-wrapper .ui-rubik-button-cancel {
+        border-color: @one-color-theme;
+        color: @one-color-theme;
+    }
+
+    .ui-bizagi-wp-project-popupform-button-cancel:hover,
+    .ui-rubik-popup-wrapper .ui-rubik-button-cancel:hover {
+        border-color: darken(@one-color-theme,8%);
+    }
+
+    .ui-bizagi-wp-project-discussions-add-attachments .k-upload-button:hover {
+        color: @one-color-theme;
+    }
+
+    #home-project-discussions-wrapper .ui-bizagi-wp-action-new a:hover {
+        background-color: @one-color-theme;
+        color:@button-text;
+    }
+
+    #home-project-discussions-wrapper .ui-bizagi-wp-action-new a {
+        border-color:@one-color-theme;
+        color:@button-text;
+        background: @one-color-theme;
+    }
+
+    .bz-wp-btn-primary,
+    .ui-rubik-button-accept,
+    .wdg-tple-button,
+    .ui-bizagi-wp-project-popupform-button-action {
+        .contrastLight(@one-color-theme;@one-color-theme);
+        background: @contrastLight;
+        color:@button-text;
+    }
+
+    .ui-rubik-button-accept:hover,
+    .wdg-tple-button:hover,
+    .ui-bizagi-wp-project-popupform-button-action:hover {
+    background: darken(@one-color-theme, 10%);
+    color: @button-text;
+    }
+
+    .bz-wp-btn-default,
+    .ui-rubik-button-cancel,
+    .ui-bizagi-wp-project-popupform-button-cancel {
+        color: @one-color-theme;
+    }
+
+    .biz-wp-button-secondary, .ui-dialog .ui-button.biz-wp-button-secondary {
+        border-color: @one-color-theme!important;
+        color: @one-color-theme!important;
+    }
+
+    .biz-wp-button-secondary:hover, .ui-dialog .ui-button.biz-wp-button-secondary:hover {
+        border-color: darken(@one-color-theme,15%)!important;
+        color: darken(@one-color-theme,15%)!important;
+    }
+
+    .biz-wp-button-secondary .ui-button-text, .ui-dialog .ui-button.biz-wp-button-secondary .ui-button-text{
+        background: transparent!important;
+        color: @one-color-theme!important;
+    }
+
+    .biz-wp-button-secondary:hover .ui-button-text, .ui-dialog .ui-button.biz-wp-button-secondary:hover .ui-button-text{
+        background: transparent!important;
+        color: darken(@one-color-theme,15%) !important;
+    }
+
+    .bz-case-navigation .case-summary-next:hover,
+    .bz-case-navigation .case-summary-back:hover, 
+    .biz-wp-button-terciary[class]:hover {
+        .percentColor(@one-color-theme,10%);
+        background-color: @result;
+        border-color: @one-color-theme;
+        color: @one-color-theme;
+    }
+
+    /// END BUTTONS
+    /* Me */
+    // Me sidebar left
+    .bz-wp-left-sidebar {
+        background: #FAFAFA;
+        box-shadow: none;
+        border-right: 1px solid #E0E0E0;
+    }
+
+    .wdg-usmry-panel {
+        border-bottom: 1px solid #E0E0E0;
+        background: #FAFAFA;
+    }
+
+    .wdg-usmry-box {
+        display: flex;
+        align-items: center;
+    }
+
+    .wdg-usmry-user-info {
+        margin-top: .4em;
+        margin-left: 1em;
+    }
+    
+    .bannerfootersidebar-logo {
+        background: url(img/img/barra/powered_bizagi.png) no-repeat;
+        width: 108px;
+        height: 19px;
+        margin: 0.8em;
+    }
+
+    #ui-bizagi-wp-app-filter-cases {
+        background: @one-color-theme;
+    }
+
+    #ui-bizagi-wp-app-filter-cases ul li.ui-bizagi-wp-app-inbox-tab.active, 
+    #ui-bizagi-wp-app-filter-cases ul li.ui-bizagi-wp-app-inbox-tab:hover {
+        background: darken(@one-color-theme, 10%);
+    }
+
+    .wdg-usmry-stk-container p {
+        font-style: italic;
+    }
+    //Me initial content
+    #navigation-panel #home-navbar {
+        background-color: #fff;
+    }
+
+    #content-wrapper {
+        background-color: #fff;
+    }
+    // Me cardz
+    .bz-card .bz-icon, 
+    .bz-card .bz-icon-ctg {
+        color: @one-color-theme;
+    }
+
+    h4, 
+    .bz-wp-subsection { 
+        color: @one-color-theme;
+    }
+
+    .bz-card .bz-card-text h4{
+        color: #272727;
+    }
+
+    .bz-card,
+    .bz-rp-report,
+    .ui-bizagi-form-process-path,
+    .ui-bizagi-container-form,
+    .wdg-plans-card-vc,
+    .wdg-plans-manager-card,
+    #template-dataviewer-list > li > div.template-box-element,
+    #casestemplate-dataviewer-list > li > div.casetemplate-box-element,
+    .ui-bizagi-wp-project-discussions-item-comment-summary-wrapper,
+    .bz-wp-cd-option,
+    .bz-project-timeline-content,
+    #ui-bizagi-wp-app-inbox-cases-container li,
+    .ui-bizagi-wp-app-inbox-activity-description {
+        border-radius: 4px;
+        background-color: #fff;
+        box-shadow: 0 0 4px rgba(0, 0, 0, .06), 0 2px 2px rgba(0, 0, 0, .12);
+    }
+
+    .bz-card:hover {
+        background: #FAFAFA;
+    }
+    //Activity form left sidebar
+    .ui-bizagi-wp-project-tab-links a {
+        color: #272727;
+    }
+    
+    #modalMenuBtList > div ul li {
+        overflow: hidden;
+        position: relative;
+        padding: 1em;
+        list-style: none;
+    }
+    .ui-bizagi-wp-project-tab-links li:hover i, 
+    .ui-bizagi-wp-project-tab-links li.active i {
+        color: @one-color-theme;
+    }
+    
+    .ui-bizagi-wp-project-tab-links .bz-icon,
+    .ui-bizagi-wp-project-tab-links .bz-icon:hover {
+        color: @one-color-theme;
+    }
+    
+    .navbar-actions .navbar-print a:hover{
+        color: @one-color-theme;
+    }
+
+    .ui-bizagi-wp-project-tab-links li {
+        background: #FAFAFA;
+    }
+
+    .ui-bizagi-wp-project-tab-links .indentation {
+        background: #FAFAFA;
+    }
+
+    .ui-bizagi-collapse-bottom-bar {
+        background-color: transparent;
+    }
+
+    .ui-bizagi-collapse-bottom-bar svg {
+        fill: #757575;
+    }
+
+    #project-collapse-leftpanel i.bz-icon-left-outline.ui-bizagi-wp-arrow-left:hover svg, #project-collapse-leftpanel i.bz-icon-right-outline.ui-bizagi-wp-arrow-left:hover svg {
+        fill: @one-color-theme;
+    }
+    //Activity form footer background
+    .ui-bizagi-button-container {
+        background-color: #fff;
+    }
+    //Activity form content
+    div:not(#query-form-main-container) > .ui-bizagi-container-form.ui-bizagi-rendering-mode-execution {
+        background-color: inherit;
+        border-radius: inherit;
+        box-shadow: inherit;
+        padding: inherit;
+        box-shadow: 0 0 4px rgba(0, 0, 0, .06), 0 2px 2px rgba(0, 0, 0, .12);
+        border-radius: 4px;
+    }
+
+    .ui-bizagi-container-form .ui-bizagi-section-behavior .ui-bizagi-section-border {
+        box-shadow: none;
+    }
+    //Activity form right sidebar
+    .bz-wp-main-wrapper {
+        background: #FAFAFA;
+    }
+
+    .bz-wp-right-sidebar {
+        background-color:  #FAFAFA;
+        border-left: 1px solid #E0E0E0;
+        box-shadow: none;
+    }
+
+    .bz-case-navigation {
+        background-color:  #FAFAFA;
+    }
+
+    #project-collapse-rightpanel .ui-bizagi-wp-project-panel-collapseicon {
+        background-color: #E0E0E0;
+        box-shadow: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: -32px;
+        border-radius: 4px 0 0 4px;
+        color: #757575;
+    }
+
+    #project-collapse-rightpanel:hover .ui-bizagi-wp-project-panel-collapseicon {
+        background: rgba(158, 158, 158, 15%);
+        color: @one-color-theme;
+    }
+
+    .ui-bizagi-wp-project-panel-collapseicon {
+        top: 8px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .ui-bizagi-wp-project-case-state-number i {
+        height: 16px;
+        width: 16px;
+        color: #757575;
+        cursor: pointer;
+    }
+
+    .ui-bizagi-wp-project-case-state-number i:hover {
+        color: @one-color-theme;
+        fill: @one-color-theme;
+    }
+    
+    .bz-wp-date {
+        color: #272727;
+    }
+
+    #navigation-panel #home-navbar .navbar-help .bz-icon-svg {
+        fill: @one-color-theme;
+    }
+	
+	#home-navbar .navbar-help a:hover {
+        color: @one-color-theme;
+    }
+
+    .bz-icon-url-help.show-process-help.bz-icon-svg {
+        fill: #757575;
+    }
+
+    .bz-icon-url-help.show-process-help.bz-icon-svg:hover {
+        fill: @one-color-theme;
+    }
+
+    //Discussions 
+    #home-project-discussions-wrapper .ui-bizagi-wp-action-new a.bz-wp-btn.bz-wp-btn-primary{
+        color: @one-color-theme !important;
+        background: #fff
+    }
+
+    #home-project-discussions-wrapper .ui-bizagi-wp-action-new a.bz-wp-btn.bz-wp-btn-primary:hover {
+        border-color: darken(@one-color-theme, 8%);
+        .contrastLight(@one-color-theme; @one-color-theme);
+        background: darken(@contrastLight, 8%);
+        color: #fff !important;
+    }
+    //Queries Permissions Manager Modal
+    #mainForm.queries-management-mainForm .queries-management-content {
+        background: #f5f5f5;
+    }
+
+    .queries-management-container {
+        background-color: #f5f5f5;
+    }
+    //Queries search
+    .biz-wp-table th, 
+    .ui-bizagi-wp-app-inbox-grid-cases-container thead td, 
+    .personalizedColumnsContainer table thead td, 
+    .ui-bizagi-wp-app-routing-container thead td {
+        background-color: transparent;
+        font-size: 1em;
+    }
+    
+    .biz-wp-table, 
+    .ui-bizagi-wp-app-inbox-grid-cases-container table, 
+    .personalizedColumnsContainer table, 
+    .ui-bizagi-wp-app-routing-container table {
+        border: none;
+    }
+    //Reports
+    li.ui-bizagi-wp-widget-reports-menu-active::after {
+        background-color: @one-color-theme;
+    }
+    .ui-rangeSlider-bar {
+        background: @one-color-theme;
+    }
+    // Smart Inbox Colors
+    .theme-navigation-border {
+        border-color: @one-color-theme;
+    }
+    .theme-navigation-color {
+        color: @one-color-theme;
+    }
+    //Admin cases cancel cases
+    .cases__process .biz-wp-tree-selected-option + .biz-wp-link {
+        color: @one-color-theme !important;
+    }
+    
+    .cases__process > .biz-wp-form-row:last-child .biz-wp-form-cell:last-child label {
+        color: @one-color-theme !important;
+    }
+
+    .cases__process .biz-wp-tree-selected-option::before{
+        background: @one-color-theme !important;
+    }
+    /** QUICK ACTIONS*/
+    [collapsibleItem] div.collapsible-title {
+        color: @one-color-theme  !important;    
+    }
+
+    .quick-actions-checkbox-checked{
+        border: 1px solid @one-color-theme  !important;
+        background-color: @one-color-theme  !important;
+    }
+
+    #ui-bizagi-wp-app-menu-logo-client {
+        position: relative;
+    }
+
+    /*
+    Webparts
+    */
+
+    #bz-webpart #btnNewCase.ui-button span {
+        color: #ffffff;
+    }
+
+    #bz-webpart #ui-bizagi-wp-app-search input {
+        color: white;
+    }
+
+    #bz-webpart .ui-bizagi-render-getUser-wrapper-buttons button .bz-icon {
+        color: white;
+    }
+
+    #bz-webpart .ui-bizagi-webpart-newcase-menu li:hover {
+        background-color: darken(@one-color-theme, 8%);
+    }
+    
+    #bz-webpart div:not(#query-form-main-container) > .ui-bizagi-container-form.ui-bizagi-rendering-mode-execution {
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    #bz-webpart #bz-wp-cases-view-options li{
+    background-color: #fff;
+    }
+
+    #bz-webpart .ui-bizagi-webpart-newcase-menu li .ui-bizagi-wp-mini-arrow {
+        border-top-color: #fff;
+    }
+
+    /* Form datepicker mobiscroll theme*/
+
+    .mbsc-bizagi-theme .mbsc-cal-today {
+        color: @one-color-theme;
+    }
+
+    .mbsc-bizagi-theme .mbsc-fr-hdr {
+        color: @one-color-theme;
+    }
+
+    .mbsc-bizagi-theme .mbsc-cal-c .mbsc-cal .mbsc-cal-body .mbsc-cal-row .mbsc-selected .mbsc-cal-cell-txt,
+    .mbsc-bizagi-theme .mbsc-fr-w .mbsc-cal-tabs-c .mbsc-cal-tabs .mbsc-cal-tab.mbsc-selected {
+        background: @one-color-theme;    
+    }
+
+    .mbsc-bizagi-theme .mbsc-cal-tab {
+        border: 1px solid @one-color-theme;
+    }
+
+    .mbsc-bizagi-theme .mbsc-cal .mbsc-cal-btn {
+        color: @one-color-theme;
+    }
+
+    .mbsc-bizagi-theme .mbsc-sc-whl-l{
+        border-top: 1px solid @one-color-theme;
+        border-bottom: 1px solid @one-color-theme;
+    }
+
+    .mbsc-bizagi-theme.mbsc-no-touch:not(.mbsc-ev-cal) .mbsc-cal-cell:not(.mbsc-disabled):not(.mbsc-selected):hover .mbsc-cal-cell-txt,
+    .mbsc-bizagitheme.mbsc-no-touch .mbsc-sc-itm.mbsc-btn-e:hover {
+        background: lighten(@one-color-theme, 40%);
+    }
+
+    .mbsc-bizagi-theme .mbsc-cal-month:hover, .mbsc-bizagi-theme .mbsc-cal-year:hover, .mbsc-bizagi-theme .mbsc-sc-itm-sel {    
+        color: @one-color-theme;
+    }
+
+    /* Form datepicker buttons's Styles*/
+
+    .mbsc-bizagi-theme .mbsc-fr-btn.mbsc-btnSet {
+        background: @one-color-theme;
+        color: #ffffff;
+        border: 1px solid @one-color-theme;
+    }
+
+    .mbsc-bizagi-theme .mbsc-fr-btn.mbsc-btnSet:hover {
+        background: lighten(@one-color-theme, 10%) !important;    
+        border: 1px solid lighten(@one-color-theme, 10%);        
+    }
+
+    .mbsc-bizagi-theme .mbsc-fr-btn.mbsc-btnClear {
+        border: 1px solid @one-color-theme;
+        color: @one-color-theme;
+    }
+
+    .mbsc-bizagi-theme .mbsc-fr-btn.mbsc-btnClear:hover {
+        border: 1px solid lighten(@one-color-theme, 10%);    
+        color: lighten(@one-color-theme, 10%);        
+    }
+
+    .mbsc-bizagi-theme .mbsc-fr-btn.mbsc-btnNow {
+        color: @one-color-theme;
+    }
+
+}
+.mixinThemeLight(@theme);

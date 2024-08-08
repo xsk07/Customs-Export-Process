@@ -1,0 +1,416 @@
+﻿.caseSummaryDiv{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    float: none!important;
+    display: block;
+    height: 100%;
+    overflow-y:auto;
+}
+
+.containerPopUp .caseSummaryDiv{
+    width: 100%;
+}
+
+.ui-bizagi-webpart-case-summary-title{
+    line-height: 38px;
+    height: 38px;
+    font-size: 1.2em;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #CECECE;
+    font-weight: bold;
+}
+
+.ui-bizagi-webpart-case-summary-description{
+    border: 1px solid #CECECE;
+    border-radius: 3px;
+    margin: 15px;
+    padding: 5px 13px;
+    position: relative;
+    padding-bottom: 16px;
+}
+
+[class*="bizagi-webpart"] .ui-bizagi-webpart-case-summary-details-tabs .ui-tabs-nav {
+	padding: 0;
+}
+
+.ui-bizagi-webpart-case-summary-description .box-description dl:after,
+.ui-bizagi-webpart-case-summary-details-tabs dl:after,
+.ui-bizagi-webpart-case-summary-description:after{
+    content:'';
+    clear: both;
+    display: block;
+    width: 100%;
+}
+
+.ui-bizagi-webpart-case-summary-description h2{
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #676767;
+    border-bottom: 1px solid #ccc;
+    margin: 3px 0px;
+    padding-bottom: 6px;
+    padding-right: 35%;
+    padding-bottom: 8px;
+    padding-top: 5px;
+}
+
+
+
+
+.ui-bizagi-webpart-case-summary-details-tabs dt,
+.ui-bizagi-webpart-case-summary-description .box-description dt{
+    width: 38%;
+    float: left;
+    color: #444;
+    font-weight: bold;
+    padding: 4px;
+    clear: both;
+}
+
+.ui-bizagi-webpart-case-summary-details-tabs dd,
+.ui-bizagi-webpart-case-summary-description .box-description dd{
+    clear: right;
+    width: 50%;
+    float: left;
+    padding: 4px;
+    margin: 0px;
+    
+}
+
+.ui-bizagi-webpart-case-summary-description .workonitRow {
+    position: absolute;
+    right: 10px;
+    top: 2px;
+    background-color: #FBFBFB;
+    padding: 8px 16px;
+}
+
+.ui-bizagi-webpart-case-summary-description .workonitRow:hover{
+    border-color:#EFEFEF;
+    border-bottom-color:#E9E9E9;
+    background-color: #fff;
+}
+
+.ui-bizagi-webpart-case-summary-details-tabs{
+    padding: 5px 16px;
+}
+.ui-bizagi-webpart-case-summary-details-tabs #details {
+    display: block;
+    border: none;
+    padding: 2em 1.4em 1.4em;
+    background: none;
+    border: 1px solid #CECECE;
+    border-radius: 3px;
+}
+
+.ico-state{
+    width: 8px;
+    height: 100%;
+    position: absolute;
+    float: left;
+   
+    left: 0;
+    top: 0;
+    border-right: 1px solid #b8b8b8;
+    -moz-border-radius: 4px 0 0 4px;
+    -webkit-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+}
+
+
+.ico-state-Red{
+    background: rgb(235,44,44);
+   
+}
+
+.ico-state-Green{
+    background: rgb(16,114,28);
+   
+}
+
+.ico-state-Yellow{
+    background: #d4bd09;
+    background-image: url("images/lines.png");
+}
+
+.ui-bizagi-webpart-case-summary-ico-state{
+    width:8px;
+    height:100%;
+    position:absolute;
+    float:left;    
+    left:0;
+    top:0;
+    border-right:1px solid #b8b8b8;
+    border-radius: 3px 0 0 3px;
+}
+
+.ui-bizagi-webpart-case-summary-ico-view{
+    height: 32px;
+    margin-top: 4px;
+}
+.wp-empty-data{
+    font-size: 1.25em;
+    color: #444;
+    line-height: 25px;
+    font-weight: normal;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+    vertical-align: top;
+    overflow: hidden;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    border-bottom: 1px solid #d9d9d9;
+    border-left: 1px solid #d9d9d9;
+    text-align: center;
+}
+
+/****************//****/
+/*** ADD workitem summary temporaly ***/
+
+.caseSummaryDiv{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    float: none!important;
+    display: block;
+    height: 100%;
+    overflow-y:auto;
+}
+
+.containerPopUp .caseSummaryDiv{
+    width: 100%;
+}
+
+.ui-bizagi-webpart-case-summary-title{
+    line-height: 38px;
+    height: 38px;
+    font-size: 1.2em;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #CECECE;
+    font-weight: normal;
+    color:#444;
+}
+
+.ui-bizagi-webpart-case-summary-description{
+    border: 1px solid #CECECE;
+    border-radius: 3px;
+    margin: 9px auto;
+    padding: 5px 13px;
+    position: relative;
+    padding-bottom: 16px;
+    background: none #F9F9F9;
+}
+
+.ui-bizagi-webpart-case-summary-description .box-description dl:after,
+.ui-bizagi-webpart-case-summary-details-tabs dl:after,
+.ui-bizagi-webpart-case-summary-description:after{
+    content:'';
+    clear: both;
+    display: block;
+    width: 100%;
+}
+
+.ui-bizagi-webpart-case-summary-description h2{
+    font-size: 1.4em;
+    font-weight: normal;
+    color: #444;
+    border-bottom: 1px solid #ccc;
+    margin: 3px 0px;
+    padding: 5px 35% 8px 8px;
+}
+
+
+
+
+.ui-bizagi-webpart-case-summary-details-tabs dt,
+.ui-bizagi-webpart-case-summary-description .box-description dt{
+    width: 38%;
+    float: left;
+    color: #444;
+    font-weight: normal;
+    padding: 4px;
+    clear:both;
+}
+
+.ui-bizagi-webpart-case-summary-details-tabs dd,
+.ui-bizagi-webpart-case-summary-description .box-description dd{
+    clear: right;
+    width: 50%;
+    padding: 4px;
+    margin: 2px 0px;
+    background: #E9E9E9;
+    border-radius: 3px;
+}
+
+.ui-bizagi-webpart-case-summary-description .workonitRow {
+    position: absolute;
+    right: 10px;
+    top: 2px;
+    background-color: #FBFBFB;
+    padding: 8px 16px;
+    font-size: 1em;
+}
+
+.ui-bizagi-webpart-case-summary-description .workonitRow:hover{
+    border-color:#EFEFEF;
+    border-bottom-color:#E9E9E9;
+    background-color: #fff;
+}
+
+.ui-bizagi-webpart-case-summary-details-tabs{
+    padding: 5px 16px;
+}
+.ui-bizagi-webpart-case-summary-details-tabs #details,
+.ui-bizagi-webpart-case-summary-details-tabs #assignees,
+.ui-bizagi-webpart-case-summary-details-tabs #subprocess,
+.ui-bizagi-webpart-case-summary-details-tabs #details,
+.ui-bizagi-webpart-case-summary-details-tabs #events{
+    display: block;
+    border: none;
+    padding: 2em 1.4em 1.4em;
+    background: none #F9F9F9;
+    border: 1px solid #CECECE;
+    border-radius: 3px;
+}
+
+.ico-state{
+    width: 8px;
+    height: 100%;
+    position: absolute;
+    float: left;
+    
+    left: 0;
+    top: 0;
+    border-right: 1px solid #b8b8b8;
+    -moz-border-radius: 4px 0 0 4px;
+    -webkit-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+}
+
+
+.ico-state-Red{
+    background: rgb(235,44,44);
+}
+
+.ico-state-Green{
+    background: rgb(16,114,28);
+}
+
+.ico-state-Yellow{
+    background: #d4bd09;
+}
+
+
+.ui-bizagi-webpart-case-summary-ico-view{
+    height: 32px;
+    margin-top: 4px;
+}
+.ui-bizagi-webpart-workitem-summary-description{
+    width: 90%;
+    margin: 15px auto;
+    border: 1px solid #CECECE;
+    background: none #F9F9F9;
+}
+.ui-bizagi-webpart-workitem-summary-description dl::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.ui-bizagi-webpart-workitem-summary-description dt{
+    width: 38%;
+    float: left;
+    color: #444;
+    font-weight: normal;
+    padding: 4px;
+    clear:both;
+}
+.ui-bizagi-webpart-workitem-summary-description dd{
+    clear: right;
+    width: 50%;
+    float: left;
+    padding: 4px;
+    margin: 2px 0px;
+    background: #E9E9E9;
+    border-radius: 3px;
+    
+}
+.ui-bizagi-webpart-workitem-summary-description h2 {
+    font-size: 1.4em;
+    font-weight: normal;
+    color: #444;
+    border-bottom: 1px solid #ccc;
+    margin: 3px 0px;
+    padding: 8px;
+}
+
+.ui-bizagi-webpart-workitem-summary-description .ui-bizagi-wp-app-inbox-cases-description-ico-state{
+    width:8px;
+    height:100%;
+    position:absolute;
+    float:left;    
+    left:0;
+    top:0;
+    border-right:1px solid #b8b8b8;
+    -moz-border-radius: 4px 0 0 4px;
+    -webkit-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+}
+
+
+  /*****************************/
+ /*****************************/
+/*         DESCRIPTION       */
+
+.ui-bizagi-webpart-workitem-summary-description{
+    position:relative;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+.ui-bizagi-webpart-workitem-summary-description > div{
+    padding-left: 15px;
+}
+.ui-bizagi-wp-app-render-desc-panel .ui-bizagi-webpart-workitem-summary-description{
+    background-color: #e6e6e6;
+}
+.ui-bizagi-wp-app-render-desc-panel .ui-bizagi-webpart-workitem-summary-description > div{
+    background-color: #dadada;
+}
+
+/*         Workportal secondary button       */
+
+a.biz-wp-button-secondary {
+    border-radius: 5px;
+    font-size: 1em;
+    padding: .4em .5em;
+    border: solid 1px #aaa9aa;
+    color: #737174;
+    vertical-align: top;
+}
+
+.ui-bizagi-webpart-case-summary-container .box-description dd a.biz-wp-button-secondary {
+    text-decoration: none;
+}
+
+a.biz-wp-button-secondary:hover {
+    background-color: #cfe5e2;
+    border-color: #5f968f;
+    color: #5f968f;
+}
+
+.ui-bizagi-webpart-case-summary-container .box-description dd.task_description_needs_modal {
+    background-color: transparent !important;
+}
+
+.ui-bizagi-webpart-case-summary-container .box-description dd.task_description_needs_modal,
+.ui-bizagi-webpart-case-summary-description .box-description dd.task_description_needs_modal {
+    background-color: transparent;
+    border: hidden;
+    padding-left: 0;
+    padding-top: 7px;
+}
+
+div#webpartCanvasPopUp {
+    height: 100%;
+}

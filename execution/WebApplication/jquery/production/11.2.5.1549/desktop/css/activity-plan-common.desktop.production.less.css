@@ -1,0 +1,3322 @@
+@charset "UTF-8";
+#ui-bizagi-wp-project-dashboard-main {
+    overflow-y: auto;
+}
+.ui-bizagi-wp-project-popupform-button {
+    padding: .6em 1.2em;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin-left: .5em;
+    text-shadow: none;
+    cursor: pointer;
+}
+.ui-bizagi-wp-project-popupform-button-action:disabled {
+    background-color: #7d7d7d;
+    cursor: wait;
+}
+.ui-bizagi-wp-project-discussions-item-comment-summary-wrapper {
+    position: relative;
+    padding: 1em;
+    margin: .4em 0 1em 6em;
+}
+.ui-bizagi-wp-project-discussions-item-comment-summary-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10px;
+    border-bottom: 24px solid transparent;
+}
+.ui-bizagi-wp-project-discussions-item-reply-summary {
+    display: block;
+    height: 78px;
+    overflow-y: hidden;
+}
+.ui-bizagi-wp-project-discussions-item-user, .ui-bizagi-wp-project-discussions-item-comment-user {
+    float: left;
+    text-align: center;
+}
+.ui-bizagi-wp-project-container-validator-relative {
+    position: relative;
+    margin-bottom: 1em;
+}
+#home-project-discussions-wrapper {
+    position: relative;
+}
+#home-project-discussions-wrapper .ui-bizagi-wp-action-new {
+    float: left;
+}
+#home-project-discussions-wrapper .ui-bizagi-wp-action-new a {
+    cursor: pointer;
+    margin-right: 0;
+}
+#home-project-discussions-wrapper .ui-bizagi-wp-action-new a:hover {
+    text-decoration: none;
+}
+#home-project-discussions-wrapper .ui-bizagi-wp-filter-tags {
+    float: right;
+    overflow: hidden;
+}
+#home-project-discussions-wrapper .ui-bizagi-wp-filter-tags .multiselect {
+    margin: 0 auto;
+    width: 270px;
+}
+#home-project-discussions-wrapper .ui-bizagi-wp-filter-tags .multiselect .k-widget.k-multiselect.k-header {
+    width: 100%;
+    color: #565656;
+    border: 1px solid #dcdcdc;
+    box-sizing: border-box;
+}
+#home-project-discussions-wrapper .ui-bizagi-wp-filter-tags .multiselect input {
+    color: #565656;
+    height: 30px;
+    padding-left: 12px;
+    max-width: 240px;
+}
+#home-project-discussions-wrapper .ui-bizagi-wp-filter-tags .multiselect li {
+    line-height: 29px;
+    max-width: 64%;
+}
+#home-project-discussions-wrapper .ui-bizagi-wp-filter-tags .multiselect li>span:first-child {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 90%;
+}
+.k-animation-container .k-list-container li {
+    word-wrap: break-word;
+}
+.ui-bizagi-wp-project-discussions-header {
+    overflow: hidden;
+}
+.ui-bizagi-wp-project-discussions-h3 {
+    float: left;
+    font-size: 24px;
+    margin: 0;
+}
+.ui-bizagi-wp-project-popupform-h4 {
+    font-size: 1.5em;
+    margin: 1em 1.5em .5em;
+    color: #374c58;
+}
+.ui-bizagi-wp-project-popupform-user-image {
+    height: 48px;
+    width: 48px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+}
+.ui-bizagi-wp-project-popupform-field-name {
+    font-size: 1.4em;
+}
+.ui-bizagi-wp-project-popupform-field-name.field-title {
+    margin-bottom: 30px;
+}
+.ui-bizagi-wp-project-discussions-list {
+    width: 86%;
+    margin: 0 auto;
+}
+.ui-bizagi-wp-project-discussions-sidebar-right {
+    width: 150px;
+}
+.ui-bizagi-wp-project-popupform-form .bz-bizagi-wp-project-discussions-attachment-filename {
+    width: auto !important;
+}
+.ui-bizagi-wp-project-popupform-form>table {
+    width: 100%;
+}
+.ui-bizagi-wp-project-popupform-form>table tr {
+    border: 10px solid transparent;
+}
+.ui-bizagi-wp-project-popupform-form .first-column {
+    width: 89px;
+    text-align: right;
+    padding-right: 8px;
+}
+#project-popupform-wrapper-discussion tr:first-child .ui-bizagi-wp-project-container-validator-relative {
+    margin-bottom: 0;
+}
+.ui-bizagi-wp-project-popupform-field-name.field-description {
+    display: block;
+    font-size: 12px;
+    color: #999;
+}
+.ui-bizagi-wp-project-discussions-popupform-textarea {
+    box-sizing: border-box;
+    overflow: auto;
+    width: 100%;
+    height: 70px;
+    resize: none;
+    border-radius: 4px;
+    border-color: #ddd;
+    padding: .8em 6em .8em .8em;
+    background: #fafafa;
+    color: #374c58;
+    line-height: 1.4;
+}
+.ui-bizagi-wp-project-popupform-actions {
+    text-align: right;
+    padding-top: 1em;
+}
+#project-popupform-wrapper-discussion .ui-bizagi-wp-project-popupform-actions {
+    padding-right: 19px;
+}
+.ui-bizagi-wp-project-discussions-item {
+    margin-bottom: 21px;
+    overflow: hidden;
+    width: 100%;
+}
+.ui-bizagi-wp-project-discussions-item-summary>h1 {
+    padding: .5em 0;
+    border-bottom: 1px solid #ddd;
+    margin: 10px 0 0;
+    font-size: 1.5em;
+    color: #374c58;
+}
+.ui-bizagi-wp-project-discussions-item-summary>h1>img {
+    height: 30px;
+    vertical-align: middle;
+    width: 30px;
+}
+.ui-bizagi-wp-project-discussions-item-summary>h1>span {
+    vertical-align: middle;
+}
+.ui-bizagi-wp-project-discussions-item-actions {
+    float: right;
+}
+.ui-bizagi-wp-project-discussions-item-actions .bz-wp-avatar {
+    display: inline-block;
+    vertical-align: middle;
+}
+.ui-bizagi-wp-project-discussions-created-by-user-image {
+    vertical-align: middle;
+}
+.ui-bizagi-wp-project-discussions-container-description .ui-bizagi-wp-project-discussions-description {
+    color: #999;
+    display: block;
+    line-height: 1.5;
+    margin-bottom: 1em;
+    white-space: pre-line;
+    word-wrap: break-word;
+}
+.ui-bizagi-wp-project-discussions-add-comment {
+    padding-left: 72px;
+    position: relative;
+}
+.ui-bizagi-wp-project-discussions-add-comment textarea {
+    overflow: auto;
+    width: 100%;
+    min-height: 48px;
+    border-radius: 4px;
+    border-color: #ddd;
+    resize: none;
+    padding: .8em 6em .8em .8em;
+    background: #fafafa;
+    color: #262d33;
+    line-height: 1.5em;
+}
+.ui-bizagi-wp-project-discussions-attachments-cmmtwrapper {
+    margin: 0 0 .4em 6em;
+}
+.ui-bizagi-wp-project-discussion-textwrapper {
+    position: relative;
+    padding-top: .4em;
+}
+.ui-bizagi-wp-project-discussions-attachments-cmnwrapper {
+    margin: 0;
+}
+.ui-bizagi-wp-project-discussions-attachments-cmnwrapper .bz-bizagi-wp-project-discussions-attachment-delete, .bz-bizagi-wp-project-discussions-attachment-itemwrapper, .ui-bizagi-wp-project-attachments-list span, .ui-bizagi-wp-project-comments-item-reply>div {
+    display: inline-block;
+}
+.ui-bizagi-wp-project-discussions-add-attachments {
+    position: absolute;
+    top: -2px;
+    right: 6px;
+}
+.ui-bizagi-wp-project-discussions-add-attachments .k-dropzone {
+    padding: 0;
+}
+.ui-bizagi-wp-project-discussions-add-attachments .k-upload-button {
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    min-width: 32px;
+    height: 42px;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    background: none;
+    color: #999;
+    font: normal 32px/1 "bizagi-font";
+    vertical-align: middle;
+    text-transform: none;
+    text-rendering: optimizeLegibility;
+    box-shadow: none;
+}
+.ui-bizagi-wp-project-discussions-add-attachments .k-upload-button:hover {
+    color: #374c58;
+}
+.ui-bizagi-wp-project-discussions-add-attachments .k-upload-button::before {
+    content: "󡂈";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -16px;
+    margin-left: -16px;
+}
+.ui-bizagi-wp-project-discussions-add-attachments .k-dropzone em {
+    display: none;
+}
+.ui-bizagi-wp-project-discussions-add-attachments .k-state-disabled .k-upload-button:hover {
+    background: transparent url("https://cdn0.iconfinder.com/data/icons/iconsweets2/40/paper_clip_attachment.png") no-repeat 0 -4px;
+}
+.ui-bizagi-wp-project-discussions-add-attachments .k-widget {
+    background-color: transparent;
+    background-image: none;
+    border: 0;
+}
+.ui-bizagi-wp-project-discussions-add-attachments .k-upload-button:active {
+    background-color: transparent;
+}
+.ui-bizagi-wp-project-discussions-add-attachments .k-upload-button span, .ui-bizagi-wp-project-discussions-add-attachments button.k-upload-selected, .ui-bizagi-wp-project-discussions-add-attachments .k-upload-status-total {
+    display: none;
+}
+.ui-bizagi-wp-project-attachments-list {
+    overflow: auto;
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
+.ui-bizagi-wp-project-attachments-list>li {
+    cursor: pointer;
+}
+.ui-bizagi-wp-project-attachments-list>li i {
+    vertical-align: middle;
+}
+.ui-bizagi-wp-project-attachments-list .bz-icon-plan {
+    margin-right: .1em;
+}
+.ui-bizagi-wp-project-attachments-list .bz-bizagi-wp-project-discussions-attachment-filename {
+    margin-right: .25em;
+}
+.bz-bizagi-wp-project-icon-16x16 {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+}
+.bz-bizagi-wp-project-discussions-attachment-delete {
+    cursor: pointer;
+    display: none;
+}
+.ui-bizagi-wp-project-attachments-list li {
+    float: left;
+    padding: .4em;
+    border-radius: 4px;
+    margin-right: .5em;
+    margin-bottom: .5em;
+}
+.ui-bizagi-wp-project-attachments-list li>.fa-file, .ui-bizagi-wp-project-attachments-list li>span {
+    display: inline-block;
+    vertical-align: middle;
+}
+.k-notification-attcherror.k-group, .k-notification-bannedfiles.k-group {
+    background: #f00;
+    color: #fff;
+}
+.k-notification-attcherror, .k-notification-bannedfiles {
+    min-width: 350px;
+    max-width: 400px;
+    min-height: 100px;
+}
+.k-notification-attcherror img, .k-notification-bannedfiles img {
+    float: left;
+    margin: 30px 15px 30px 30px;
+}
+.k-notification-attcherror h3, .k-notification-bannedfiles h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0;
+    padding: 20px 0 0 0;
+    max-width: 265px;
+    overflow: hidden;
+    white-space: pre-line;
+}
+.k-notification-attcherror ul>li, .k-notification-bannedfiles ul>li {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.k-notification-attcherror ul, .k-notification-bannedfiles ul {
+    padding: 0;
+    margin: 5px;
+    list-style: none;
+    max-height: 80px;
+    overflow: auto;
+}
+#project-popupform-wrapper-discussion {
+    display: none;
+    padding: 0;
+    background: transparent;
+}
+#project-popupform-wrapper-discussion form {
+    margin: 5px 10px 10px;
+}
+#project-popupform-wrapper-discussion .ui-bizagi-wp-project-container-validator-relative {
+    position: relative;
+}
+#project-popupform-wrapper-discussion .ui-bizagi-wp-project-container-validator-relative span {
+    bottom: -19px;
+    left: 0;
+    position: absolute;
+}
+#project-popupform-wrapper-discussion .ui-bizagi-wp-project-discussion-textwrapper .position-message-validate>span {
+    display: block;
+    margin-top: -8px;
+}
+.ui-bizagi-wp-project-discussions-popupform-input {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 32px !important;
+    padding: .8em !important;
+    border-color: #ddd !important;
+    border-radius: 4px !important;
+    background: #fafafa !important;
+    font-size: 12px;
+    color: #374c58;
+}
+.ui-bizagi-wp-project-discussions-popupform-input.k-multiselect {
+    border: 1px solid #c6cacc;
+    padding: 8px 5px 5px !important;
+}
+.ui-bizagi-wp-project-discussions-popupform-input.k-multiselect .k-multiselect-wrap {
+    background: transparent;
+}
+.ui-bizagi-wp-project-discussions-options {
+    border-bottom: 1px dashed #ccc;
+    margin-top: 10px;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+.ui-bizagi-wp-project-discussions-options .option {
+    float: left;
+    margin-right: 10px;
+}
+.ui-bizagi-wp-project-discussions-options .option label {
+    color: #606060 !important;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 22px !important;
+    margin-bottom: 5px;
+}
+.ui-bizagi-wp-project-discussions-options .option.notify-email {
+    width: 101px;
+}
+.ui-bizagi-wp-project-discussions-options .option.notify-email>div {
+    margin-top: 6px;
+}
+.ui-bizagi-wp-project-discussions-options .option.category {
+    width: 220px;
+}
+.ui-bizagi-wp-project-discussions-options .option.privacy {
+    width: 150px;
+}
+.ui-bizagi-wp-project-discussions-options .option.privacy>div {
+    margin-top: 6px;
+}
+.ui-bizagi-wp-project-discussions-options .option.files {
+    width: 108px;
+    margin-right: 0;
+}
+.ui-bizagi-wp-project-discussions-options .option.files>div {
+    margin-top: 6px;
+}
+.ui-bizagi-wp-project-discussions-actions {
+    margin-top: 20px;
+}
+.k-multiselect-wrap.k-floatwrap {
+    font-size: 1.2em;
+}
+.ui-bizagi-wp-project-comments-item-reply {
+    padding: 22px 0;
+    clear: both;
+}
+.ui-bizagi-wp-project-comments-item-reply-text {
+    float: left;
+    width: 80%;
+    padding: 5px;
+}
+.ui-bizagi-wp-project-comments-item-reply-date {
+    position: absolute;
+    right: 50px;
+}
+.ui-bizagi-wp-project-discussions-comment-buttons-wrapper {
+    display: none;
+    float: right;
+}
+.ui-bizagi-wp-project-discussions-comment-buttons-share {
+    padding: .6em 1.2em;
+    border: none;
+    border-radius: 4px;
+    margin-left: .5em;
+    text-shadow: none;
+    cursor: pointer;
+}
+.ui-bizagi-wp-project-discussions-comment-buttons-share:hover, .ui-bizagi-wp-project-discussions-comment-buttons-share:active {
+    border-color: #4f6c7d;
+    background: #4f6c7d;
+}
+.ui-bizagi-wp-project-discussions-comment-buttons-cancel {
+    padding: .6em 1.2em;
+    border-radius: 4px;
+    text-shadow: none;
+    cursor: pointer;
+}
+.ui-bizagi-wp-project-discussions-item-comment {
+    clear: both;
+    overflow: hidden;
+    position: relative;
+    padding: 1em 0;
+}
+.ui-bizagi-wp-project-discussion-comment-list .ui-bizagi-wp-project-discussions-item-comment {
+    border-bottom: 1px solid #eee;
+}
+.ui-bizagi-wp-project-discussion-comment-list .ui-bizagi-wp-project-discussions-item-comment:last-child {
+    border-bottom: none;
+}
+.ui-bizagi-wp-project-discussion-delete {
+    position: absolute;
+    top: 24px;
+    right: 12px;
+    cursor: pointer;
+}
+.ui-bizagi-wp-project-discussion-showmore-comments {
+    text-align: center;
+    padding: 1.5em 0;
+    border-top: 1px solid #ddd;
+    margin: 1.5em 0;
+}
+.ui-bizagi-wp-project-discussions-comment-complete, .ui-bizagi-wp-project-discussions-comment-truncate {
+    word-wrap: break-word;
+    white-space: pre-line;
+}
+.ui-bizagi-wp-project-discussions-comment-shortcomment .ui-bizagi-wp-project-discussions-comment-complete {
+    display: none;
+    white-space: pre-line;
+}
+.ui-bizagi-wp-project-discussions-comment-longcomment .ui-bizagi-wp-project-discussions-comment-truncate {
+    display: none;
+}
+.ui-bizagi-wp-project-discussions-comment-view {
+    padding: 0 0 0 5px;
+    word-break: normal;
+    text-decoration: underline;
+}
+.ui-bizagi-wp-project-discussion-showmore-comments div {
+    color: #999;
+}
+.ui-bizagi-wp-project-discussion-showmore-no-more-comments, .ui-bizagi-wp-project-discussion-showmore-loading-comments {
+    display: none;
+}
+.bz-wp-discussion-user {
+    margin-bottom: .4em;
+}
+.bz-wp-discussion-username {
+    margin-right: .4em;
+}
+@media screen and (min-width: 1500px) {
+    .ui-bizagi-wp-project-discussions-container-description-and-comments {
+        overflow: hidden;
+    }
+}
+.ui-bizagi-wp-project-popupform-scroll {
+    max-height: 345px;
+    overflow: auto;
+}
+.ui-bizagi-wp-project-popupform-user .bz-wp-avatar {
+    float: right;
+    margin-top: -10px;
+}
+.ui-bizagi-wp-project-popupform-user label.bz-wp-avatar-label {
+    top: 13px;
+}
+.ui-bizagi-wp-project-discussions-item-user {
+    margin-top: 30px;
+}
+.ui-bizagi-wp-project-discussions-item-actions .bz-wp-avatar-24 .bz-wp-avatar-label {
+    display: block;
+    top: 0;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.bz-icon-discussion-comment, .bz-icon-discussion-comment:hover {
+    fill: #687785;
+}
+.ui-bizagi-wp-project-menuitem-expanded svg.bz-icon-discussion-comment, .ui-bizagi-wp-project-menuitem-expanded svg.bz-icon-discussion-comment:hover {
+    height: 18px;
+    width: 18px;
+}
+#bz-project-timeline-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#project-timeline-switcher {
+    margin-top: 30px;
+}
+.bz-timeline-checkbox-button {
+    border: 2px solid #b3abab;
+    display: inline-block;
+    padding: 7px 12px;
+    width: 170px;
+    border-radius: 4px;
+    background-color: #d2d2d2;
+    opacity: .5;
+}
+.bz-timeline-checkbox-button.bz-active {
+    opacity: 1;
+}
+.bz-timeline-checkbox {
+    width: 200px;
+    position: relative;
+    margin: 4px 0;
+}
+.bz-timeline-checkbox label {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fcfff4;
+    background: linear-gradient(top,#fcfff4 0%,#dfe5d7 40%,#b3bead 100%);
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px white,0 1px 3px rgba(0,0,0,.5);
+}
+.bz-timeline-checkbox label:after {
+    content: '';
+    width: 9px;
+    height: 5px;
+    position: absolute;
+    top: 7px;
+    left: 6px;
+    border: 3px solid #333;
+    border-top: none;
+    border-right: none;
+    background: transparent;
+    opacity: 0;
+    transform: rotate(-45deg);
+}
+.bz-timeline-checkbox label:hover::after {
+    opacity: .5;
+}
+.bz-timeline-checkbox input[type=checkbox] {
+    visibility: hidden;
+}
+.bz-timeline-checkbox input[type=checkbox]:checked+label:after {
+    opacity: 1;
+}
+.bz-timeline-checkbox span {
+    position: absolute;
+    left: 26px;
+    line-height: 21px;
+    font-size: 124%;
+    font-weight: bold;
+    cursor: pointer;
+}
+#bz-project-timeline {
+    position: relative;
+    padding: 2em 0;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+#bz-project-timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 48px;
+    left: 50%;
+    width: 2px;
+    margin-left: -1px;
+    background: #ddd;
+}
+.bz-project-timeline-block {
+    position: relative;
+    margin: 4em 0;
+}
+.bz-project-timeline-block:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.bz-project-timeline-block:first-child {
+    margin-top: 0;
+}
+.bz-project-timeline-block:last-child {
+    margin-bottom: 0;
+}
+.bz-project-timeline-img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-left: -32px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 0 0 4px white,inset 0 2px 0 rgba(0,0,0,.1),0 4px 2px 3px rgba(0,0,0,.1);
+}
+.bz-project-timeline-start .bz-project-timeline-img {
+    width: 16px;
+    height: 16px;
+    margin-top: -38px;
+    margin-left: -8px;
+    background-color: #ddd;
+    box-shadow: none;
+}
+.bz-project-timeline-now .bz-project-timeline-img {
+    right: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    border: none;
+    margin-top: -16px;
+    margin-left: 0;
+    background-color: #f5f5f5;
+    font-size: 1.6em;
+    box-shadow: none;
+}
+.bz-project-timeline-img i {
+    line-height: 64px;
+}
+.bz-project-timeline-block.bz-project-timeline-type-activity.cs-status-open .bz-project-timeline-img.bz-project-timeline-picture {
+    box-shadow: 0 0 0 4px #63cf8b,inset 0 2px 0 rgba(0,0,0,.1),0 4px 2px 3px rgba(0,0,0,.1);
+}
+.bz-project-timeline-block.bz-project-timeline-type-activity.cs-status-closed .bz-project-timeline-img.bz-project-timeline-picture {
+    background: #ddd;
+}
+.bz-project-timeline-block.bz-project-timeline-type-planactivity.cs-status-open .bz-project-timeline-img.bz-project-timeline-picture {
+    box-shadow: 0 0 0 4px #63cf8b,inset 0 2px 0 rgba(0,0,0,.1),0 4px 2px 3px rgba(0,0,0,.1);
+}
+.bz-project-timeline-block.bz-project-timeline-type-planactivity.cs-status-closed .bz-project-timeline-img.bz-project-timeline-picture {
+    background: #ddd;
+}
+.bz-project-timeline-type-activity .bz-project-timeline-img.bz-project-timeline-picture .bz-icon-play {
+    transform: scale(4);
+    left: calc(65%);
+    top: calc(64%);
+}
+.bz-project-timeline-type-planstart .bz-project-timeline-img.bz-project-timeline-picture {
+    background: #75ce66;
+}
+.bz-project-timeline-type-event .bz-project-timeline-img.bz-project-timeline-picture {
+    background: #f1ee84;
+}
+.bz-project-timeline-type-planend .bz-project-timeline-img.bz-project-timeline-picture {
+    background: #e89494;
+}
+.cssanimations .bz-project-timeline-img.is-hidden {
+    visibility: hidden;
+}
+.cssanimations .bz-project-timeline-img.bounce-in {
+    visibility: visible;
+}
+.bz-project-timeline-content {
+    position: relative;
+    width: 45%;
+    padding: 1em 2em;
+}
+.bz-project-timeline-content:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.bz-project-timeline-content h2 {
+    margin: .3em 2em .3em 2.5em;
+    line-height: 1.2;
+}
+.bz-project-timeline-type-activity .bz-project-timeline-content h2:hover, .bz-project-timeline-type-event .bz-project-timeline-content h2:hover {
+    cursor: pointer;
+}
+.bz-project-timeline-content p, .bz-project-timeline-content .bz-project-timeline-date {
+    font-size: 14px;
+    font-size: .875rem;
+}
+.bz-project-timeline-content .bz-project-timeline-date {
+    display: inline-block;
+}
+.bz-project-timeline-content .bz-project-timeline-date div {
+    display: block;
+    font-size: 13px;
+}
+.bz-project-timeline-content .bz-project-timeline-date label {
+    display: inline-block;
+    font-size: 11px;
+}
+.bz-project-timeline-content p {
+    margin: 1em 0;
+    line-height: 1.6;
+}
+.bz-project-timeline-content .bz-project-timeline-date {
+    float: left;
+    padding: .8em 0;
+    opacity: .7;
+    position: absolute;
+    width: 100%;
+    left: 122%;
+    top: 6px;
+    font-size: 16px;
+    font-size: 1rem;
+}
+#bz-project-timeline-content #bz-project-timeline-activities {
+    padding-bottom: 100px;
+}
+.bz-project-timeline-content::before {
+    content: '';
+    position: absolute;
+    right: 100%;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-right: 7px solid #fff;
+    top: 24px;
+    left: 100%;
+    border-color: transparent;
+    border-left-color: #fff;
+}
+.bz-project-timeline-block:nth-child(even) .bz-project-timeline-content {
+    float: right;
+}
+.bz-project-timeline-block:nth-child(even) .bz-project-timeline-content::before {
+    top: 24px;
+    left: auto;
+    right: 100%;
+    border-color: transparent;
+    border-right-color: #fff;
+}
+.bz-project-timeline-block:nth-child(even) .bz-project-timeline-content .bz-project-timeline-date {
+    left: auto;
+    right: 122%;
+    text-align: right;
+}
+.cssanimations .bz-project-timeline-content.is-hidden {
+    visibility: hidden;
+}
+.cssanimations .bz-project-timeline-content.bounce-in {
+    visibility: visible;
+}
+.bz-assignee {
+    float: left;
+}
+.bz-assignee-picture {
+    max-width: 48px;
+    border-radius: 50%;
+}
+.bz-assignee-initials {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 1.5em;
+    line-height: 48px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.bz-more-assignees {
+    float: left;
+}
+.bz-more-assignees>.bz-assignee-initials {
+    background-color: #ddd;
+    line-height: 44px;
+}
+.bz-more-assignees~h2 {
+    margin-top: 0;
+}
+.browser-ie10 .bz-more-assignees~h2 {
+    margin-bottom: 0;
+}
+.bz-project-timeline-content>.bz-more-users-link {
+    margin-left: 1em;
+    display: inline-block;
+    cursor: pointer;
+}
+.browser-ie10 .bz-project-timeline-content>.bz-more-users-link {
+    margin-left: 2em;
+}
+.bz-more-assignees>.bz-assignee-initials svg, .bz-more-assignees>.bz-assignee-initials svg:hover {
+    fill: #9e9e9e;
+}
+.bz-project-timeline-tooltip, .bz-project-timeline-arrow:after {
+    background: #fff;
+    border: 1px solid #c5c5c5;
+}
+.bz-project-timeline-tooltip {
+    pointer-events: none;
+    display: inline-block;
+    position: absolute;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0 0 7px #d0d0d0;
+}
+.bz-project-timeline-arrow {
+    width: 29px;
+    height: 16px;
+    overflow: hidden;
+    position: absolute;
+    left: -26px;
+    top: 33%;
+}
+.bz-project-timeline-arrow:after {
+    content: "";
+    position: absolute;
+    left: 23px;
+    top: -5px;
+    width: 24px;
+    height: 24px;
+    box-shadow: 6px 5px 9px -9px black,5px 6px 9px -9px black;
+    transform: rotate(135deg);
+}
+.bz-assignees .bz-assignee {
+    position: relative;
+    width: 48px;
+    display: inline-block;
+    height: 48px;
+}
+.bz-assignees .bz-assignee .bz-assignee-picture {
+    box-shadow: #e4e4e4 0 0 3px 2px;
+}
+.bz-assignees .bz-assignee .bz-assignee-initials {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    left: 0;
+}
+.bz-project-timeline-tooltip-animation {
+    animation: bz-project-timeline-tooltip-animation .5s;
+    z-index: 1000000093;
+}
+@keyframes bz-project-timeline-tooltip-animation {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.bz-project-timeline-content:hover .bz-hover-icons {
+    visibility: visible;
+}
+.bz-project-timeline-content .bz-hover-icons {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    margin-top: -12px;
+}
+.bz-project-timeline-content .bz-hover-icons i, .bz-project-timeline-content .bz-hover-icons svg {
+    cursor: pointer;
+}
+#bz-project-timeline-wrapper {
+    overflow: hidden;
+}
+#bz-project-timeline-content {
+    visibility: hidden;
+}
+.bz-project-timeline-content-bounce {
+    visibility: visible !important;
+    animation: bz-project-timeline-animation .5s ease-in-out;
+}
+@keyframes bz-project-timeline-animation {
+    0% {
+        transform: translateY(-93%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+.bz-project-timeline-search .bz-icon {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    margin-top: -12px;
+    color: #ddd;
+    cursor: pointer;
+}
+.bz-project-timeline-search input {
+    width: 100%;
+    padding: 10px 20px;
+    height: auto;
+    border-radius: 6px;
+    color: #565656;
+    border: 1px solid #dcdcdc;
+}
+.bz-project-timeline-search input::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+.bz-project-timeline-search {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+}
+.bz-project-timeline-search-compact {
+    float: right;
+    width: 30%;
+}
+.bz-project-timeline-date {
+    display: inline;
+    line-height: 40px;
+}
+.ui-dialog-content .bz-project-timeline-search input, .ui-dialog-content .bz-project-timeline-content {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.bz-wp-tt-user {
+    text-align: left;
+}
+.ui-bizagi-wp-usertooltip {
+    list-style-type: none;
+    margin: 8px;
+    padding: 0;
+}
+.bz-wp-tt-user-info {
+    margin-bottom: 1em;
+}
+.bz-wp-tt-user-info>.bz-wp-avatar {
+    float: left;
+}
+.bz-wp-tt-user-info-content {
+    margin-left: 4em;
+}
+.ui-bizagi-wp-usertooltip h4 {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.ui-bizagi-wp-tasklist {
+    margin: 0;
+}
+.ui-bizagi-wp-tasklist-item {
+    margin-bottom: 1em;
+    font-size: 10px;
+}
+.ui-bizagi-wp-tasklist-item-type {
+    float: left;
+    margin: 0 5px 0 0;
+    text-align: right;
+}
+.ui-bizagi-wp-tasklist-item-name {
+    margin: 0 0 0 48px;
+}
+.content-empty-results {
+    margin-top: 25vh;
+}
+#bz-project-timeline-sidebar .bz-wp-btn {
+    margin-top: 5px;
+}
+#ui-bizagi-wp-project-plan-content-dashboard .ui-bizagi-button-container {
+    bottom: 0;
+    min-height: 35px;
+    position: fixed;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    padding-right: 360px;
+    z-index: 2;
+}
+#ui-bizagi-wp-project-plan-content-dashboard .ui-bizagi-button-container .ui-bizagi-buttons-group {
+    bottom: 2px;
+    position: relative;
+    text-align: right;
+}
+#ui-bizagi-wp-project-plan-content-dashboard .desktop.ui-bizagi-rtl .ui-bizagi-button-container .ui-bizagi-buttons-group {
+    text-align: left;
+}
+#ui-bizagi-wp-project-plan-content-dashboard .ui-bizagi-button-container.bz-form-buttons .ui-button, #ui-bizagi-wp-project-plan-content-dashboard .ui-bizagi-button-container .ui-button {
+    margin: 5px 5px 0 5px;
+    color: #fff;
+}
+#ui-bizagi-wp-project-plan-content-dashboard .ui-bizagi-button-container .ui-bizagi-buttons-group.bz-form-buttons__actions {
+    bottom: 1px;
+}
+#ui-bizagi-wp-project-plan-content-dashboard .desktop.ui-bizagi-rtl .ui-bizagi-button-container.bz-form-buttons .bz-form-buttons__more {
+    margin: 0 4px 0 8px;
+}
+#ui-bizagi-wp-project-plan-content-dashboard .ui-bizagi-button-container.bz-form-buttons .ui-button {
+    margin: 4px 4px 0 4px;
+}
+.enabled-right-sidebar.ui-bizagi-wp-project-collapse-rightpanel #ui-bizagi-wp-project-plan-content-dashboard .ui-bizagi-button-container {
+    padding-right: 0;
+}
+.enabled-right-sidebar.ui-bizagi-wp-project-open-rightpanel #ui-bizagi-wp-project-plan-content-dashboard .ui-bizagi-button-container {
+    padding-right: 360px;
+}
+.enabled-right-sidebar.ui-bizagi-wp-project-collapse-leftpanel #ui-bizagi-wp-project-plan-content-dashboard .ui-bizagi-button-container {
+    padding-left: 65px;
+}
+.enabled-right-sidebar.ui-bizagi-wp-project-open-leftpanel #ui-bizagi-wp-project-plan-content-dashboard .ui-bizagi-button-container {
+    padding-left: 260px;
+}
+@media screen and (max-width: 1366px) {
+    #ui-bizagi-wp-project-plan-content-dashboard .ui-bizagi-button-container {
+        padding-right: 0;
+    }
+    .enabled-right-sidebar #ui-bizagi-wp-project-plan-content-dashboard .ui-bizagi-button-container {
+        padding-left: 65px;
+    }
+}
+@media screen and (min-width: 1367px) {
+    #ui-bizagi-wp-project-plan-content-dashboard .ui-bizagi-button-container {
+        padding-right: 360px;
+    }
+    .enabled-right-sidebar #ui-bizagi-wp-project-plan-content-dashboard .ui-bizagi-button-container {
+        padding-left: 260px;
+    }
+}
+#project-files-showmore, #project-files-nomore {
+    display: none;
+    text-align: center;
+    clear: both;
+}
+#project-files-showmore, .k-upload-status-total {
+    display: none;
+}
+#home-project-files-wrapper .k-header {
+    background-color: transparent;
+    border: 0;
+}
+#home-project-files-wrapper .k-upload-files {
+    position: fixed;
+    right: 230px;
+    bottom: 0;
+    width: 30%;
+    z-index: 2;
+}
+#home-project-files-wrapper .k-upload-button {
+    position: relative;
+    width: 100%;
+    padding: 4em 1em 4em 50%;
+    border: 2px dashed #ddd;
+    background-color: #fff;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
+}
+#home-project-files-wrapper .k-button:hover {
+    background-color: #eee;
+    color: #ccc;
+}
+.bz-wp-files-upload {
+    margin-bottom: 1.2em;
+}
+.bz-wp-files-upload .k-upload-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 165px;
+    height: 98px;
+    margin-top: -49px;
+    margin-left: -165px;
+}
+#home-project-files-wrapper .k-dropzone {
+    padding: 0;
+    background-color: transparent;
+}
+#home-project-files-wrapper .k-file-success>.k-progress {
+    display: none;
+}
+#project-files-list {
+    list-style: none;
+    padding: 0;
+}
+.ui-bizagi-wp-project-files-iconwrapper {
+    overflow: hidden;
+    float: left;
+    width: 72px;
+    height: 72px;
+    border-radius: 4px;
+}
+.ui-bizagi-wp-project-files-iconwrapper .ui-bizagi-wp-project-files-thumbnail {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.ui-bizagi-wp-project-files-titlewrapper {
+    margin-left: 8em;
+}
+.ui-bizagi-wp-project-files-file {
+    display: inline-block;
+    margin-bottom: .2em;
+    cursor: pointer;
+    font-weight: normal;
+}
+.ui-bizagi-wp-project-filespreview-created {
+    font-size: 14px;
+    color: #374c58;
+    margin-bottom: 0;
+}
+.ui-bizagi-wp-project-files-user {
+    margin: 0;
+    color: #374c58;
+}
+.ui-bizagi-wp-project-files-iconwrapper .ui-bizagi-wp-project-files-icon {
+    overflow: hidden;
+    width: 64px;
+    height: 64px;
+    border-radius: 4px;
+}
+.ui-bizagi-wp-project-files-wrapitem {
+    position: relative;
+}
+.bz-wp-files-file {
+    padding: 1em;
+    border-radius: 4px;
+    background: #fff;
+}
+.ui-bizagi-wp-project-files-wrapitem .k-upload-action {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+}
+.k-upload-button span {
+    font-size: 1em;
+}
+#ui-bizagi-wp-project-activity-map-wrapper {
+    margin-bottom: 1.6em;
+}
+#ui-bizagi-wp-project-activity-map-wrapper .actual-state {
+    color: #5e7d8d;
+    font-size: 1em;
+}
+#project-popupform-wrapper-filepreview {
+    display: none;
+    padding: 0;
+    background: transparent;
+}
+#project-popupform-wrapper-filepreview form {
+    margin: 5px 10px 10px;
+}
+#project-popupform-wrapper-filepreview table td:first-child {
+    vertical-align: top;
+}
+#project-popupform-wrapper-filepreview #ui-bizagi-wp-project-filespreview-popup-description {
+    width: calc(90%);
+}
+#project-popupform-wrapper-filepreview .position-message-validate {
+    height: 14px;
+}
+#project-popupform-wrapper-filepreview button:nth-child(2) {
+    margin-right: 30px;
+    margin-top: 10px;
+}
+#ui-bizagi-wp-project-filespreview-description {
+    font-size: 14px;
+    max-height: 16em;
+    overflow: auto;
+    padding-top: 5px;
+    word-break: break-all;
+}
+.ui-bizagi-wp-project-filespreview-title {
+    position: relative;
+}
+.ui-bizagi-wp-project-filespreview-title h3 {
+    margin-right: 31px;
+    word-break: break-all;
+}
+.ui-bizagi-wp-project-filespreview-imgwrapper {
+    padding: 0;
+    margin: 1em 0 1.4em;
+}
+.ui-bizagi-wp-project-filespreview-imgwrapper .ui-bizagi-wp-project-filespreview-icon {
+    width: 128px;
+    height: 128px;
+}
+.ui-bizagi-wp-project-filespreview-edit>li {
+    width: 20px;
+    height: 20px;
+}
+.ui-bizagi-wp-project-filespreview-edit {
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.ui-bizagi-wp-project-filespreview-edit .k-item {
+    box-shadow: none;
+}
+.ui-bizagi-wp-project-filespreview-thumbnail {
+    max-width: 320px;
+}
+#ui-bizagi-wp-project-case-state-wrapper .sprite-favorite {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAwCAYAAAARtFotAAAHYklEQVRIS+1WbVBU1xk+955z7+7ilQ+RpIofWcVg3JRIsTJLXbLdsShgUKLo+DEDIS2TmYzYGDoN1NqbpKVJTbVROpOh4lApNbqDhggxDC6gEAi0TSHLipFMZIBqwEggC7vL3XPv6ZzLLrMLijX9m/Nn7917znOe93nfc96HAQ8eDACgGwCEAcBPPWg6nXy/wQIAFENc4va1j/WfkxUCHIMrnrV3tlYDANRv91o4FyD9RjQawfZpTZJFlgmIe6a1HnsnUgAA6reHAaQMyMa0rU+ODdo+aa9NZ+jyH6bVKAujLfF1dRev+UBnsaQ70cV00B2DdhXCF7197BdR+5/PNWDK6eTJa9zBPwz/afyb2y/NYEdxVNYzQ2b37t0vOJ13hFvDQ/r+3rbzvU2bowQdUjcad2NmlfnDO8tWGZ9d/MijN+fPjxqvrDwxHqgnYzQaN/f3D+5WvJ6ViuIKjwjjF8zTyWGRYSjkQO4akLZpMZFdsroxDIHkg7pbzNunroG7Y9g14YZjX49JIywbMgqgps9gWP1HleZbhWvAzh0rAC8REB6uAZp5HAAapACMGeKSGYadkoIogGFCIAEIEeDB7KTLC0bHJCAhAM5f6AM//123l4mJWfEKIl8WvncyOTR2baTkHfIgCBmgKArDMAygz4RMSUvfabbpO8uyhD5zj2rxTcco/0xOo4cTHs9XQ1m//mlTt73l3ap3khZvTl/m9X7l5hBiCAUghOJMSU2B1L8IARgThovUeRtsg1zm8x8NrzYk7e7ouNrAmM1m1NTUhLft2rXyvbNnz5cWx8f9LDdWxt94IWQZlVXgoGCKQgAM4+W/VtyAOQX/ur59++7Mqqoz1ymWf7Za+Xv27Ik4V1V77p1XV1hyc2IVPCZBDsEgRIxlAkN5pfLM58xPC3uv7tyZsauiomLYf3qmJ/uZrk+yWJaF2m3WyhQs3XFBnkNMoIaSFxM+ah7el1PP3fjqidR/tDV96F+r6uwPJysrC1qtVuV7i/SvHn4h5NALL66lWvLsVGLUEyHLhKXgKFIrlf3Fzh0umXjz9q0virKyslir1SoHAforff58wdZ6NvHHTxgWYuySkGaBVgZuBakb61gsjXggnMfJvT0j0LirvWV01JkcqHGQPllZeWH//LjyC0fdpgW6MA4DxDLvX+yDvz7SNUkIIK8VxGm3bdXLAMtk0imjNSkfjCYkbllptVpH/KB+QLXAN2zYtPGxBZ/WV1SlersbBrlDRzpBY4e31mQyv0Ijbr7a+MaGBJRR/Mt48FTKUm/Ojkuc/T8xmz/paK6beZbVLMfGrt27fvXw3578fhR5/VjPjZUxPzjc1fXxucCQ1iWadlzv7nj9V/mxsZ99dpdp7Xkk+0bPv0/PyjJdlJOToy0vL/8IAH4AAGkb/U8URVYURfWoBIoPAF8FgBSTl5dnLC0tdc0M+b7X9sN+mOvGflisqfP+rVbNseg7wP9f0e80nKWhemm0tLTUY4zdZrM5Yy4b8j8V9okTJ/RGo7GbEILb2toM+fn5g3Ol7oHuq7q6+jfLly8X6U3d19dXlJmZ+ftv677oTcOnpqb2sCyrp90PY/z5qVOnDKWlpd77sWTo9eRwOKaZGgwGQt9pjygvL8+Ij4+v9ng8ar/QarWws7MzLTs7+5K/B9ErzQ9Oe9J9QxZFUTCbzRdDQ0OfxhirgAgh6HQ6GxobG7eJokhN0uwsnj59OhEhlMDz/NLw8PCFhJBFGo0mSqfTLWJZdqmiKKqDoMNnQWhbHXC5XF+63e67CKHbTqdzyO12DzqdznrG4XBgjDGkk/39l/7KskqKggX1ZdWHAMBACKddBd1wygfBW0xlZeXGmJiYNyCECbIsuxiG4dV6op7Ld18GMvQx9TtXii9BCEMAAPaurq5cNZbi4uJIk8l0RhCEn3i9Xi/LsogQ1YyqDAOF8jOkxGVZxhzHcRMTE03Nzc07i4qK7tAsI1EUMf1NTk4+GRERkS1JkgwhnGZ4D+0pmKLRaGiS/m6z2Z4TRVGimQ/qy3RhTU3NW9HR0S9JkkRYlmXvxVBRFAUhxAwNDR1PS0tT/bavOwaVjQp+9OjRCIvFMjg5OaljWZa6zuk68+tH5UAISQ0NDUsKCgru+iJQW22gPqpmZWVlKevWratzu91q2L4sq0mg4FRDGq5Op4N2uz1t3759lwIvjJnuS75w4cJrer3+kCRJmCZHlmUKrJolmgQIIVQUBfM8j/r7+4szMjIO+U7NLPelMr9y5cplQRAsGONJhmG0Go0GeDyem7T8tFqtXpIkWq8ehJDG6XQ2mc1mS2DSgpIiimL4li1behVFiaSiE0ImhoeHj7W3tx9xuVzEZDK9HB0d/TIAQJCpYwdg5PLly6sKCwu/DjJLfsplZWXGhISEVoyxMj4+Xt3V1XX4wIED3YEMjh8/viYuLu63giBsRQixHR0dP8rLy2v1YwQxLCkpiUxOTm4ZGBgoSU9P/7OvHHhaYzOfa2trX1yyZMl+m82WdPDgQeoP1aT+F5SRmnLLuGttAAAAAElFTkSuQmCC') no-repeat top left;
+    display: block;
+    float: left;
+    height: 19px;
+    width: 20px;
+}
+.ui-bizagi-wp-project-case-state-number>i {
+    margin-right: .2em;
+}
+.bz-case-navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: .7em 1.5em;
+    width: 100%;
+}
+.bz-case-navigation .case-summary-next, .bz-case-navigation .case-summary-back {
+    border-radius: 5px;
+    font-size: 11px;
+    padding: .4em .5em;
+}
+.bz-case-navigation .case-summary-next i, .bz-case-navigation .case-summary-back i {
+    font-size: 7px;
+    margin-top: -2px;
+}
+.bz-case-navigation .case-summary-next {
+    float: right;
+    padding-left: 1em;
+}
+.bz-case-navigation .case-summary-back {
+    float: left;
+    padding-right: 1em;
+}
+.bz-state-number--active-case {
+    margin-top: 3em;
+}
+#ui-bizagi-wp-project-case-state-wrapper .case-summary-favorite, #ui-bizagi-wp-project-case-state-wrapper .case-summary-favorite:hover {
+    text-decoration: none;
+}
+#ui-bizagi-wp-project-case-state-wrapper .case-summary-favorite.on {
+    background-position: 0 0;
+}
+.ui-bizagi-wp-project-case-state-number {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: .6rem;
+    width: 100%;
+}
+.ui-bizagi-wp-project-case-state-number i {
+    cursor: pointer;
+}
+.ui-bizagi-wp-project-case-state-number span {
+    vertical-align: middle;
+}
+.ui-bizagi-wp-project-case-state-number .wrapper-menu-rubik {
+    float: right;
+}
+.ui-bizagi-wp-project-case-remaining-date {
+    margin-bottom: 1.6em;
+}
+.ui-bizagi-wp-project-case-remaining-date .interval-date {
+    color: #5e7d8d;
+    font-size: 1.2em;
+    margin-bottom: .4em;
+}
+.ui-bizagi-wp-project-case-remaining-date .remaining-days {
+    overflow: hidden;
+    width: 100%;
+}
+.ui-bizagi-wp-project-case-remaining-date .remaining-days .days {
+    color: #374c58;
+    display: inline;
+    float: left;
+    font-size: 2.9em;
+    font-weight: bold;
+}
+.ui-bizagi-wp-project-case-remaining-date .remaining-days .time-remaining {
+    padding-left: 0 !important;
+}
+.ui-bizagi-wp-project-case-remaining-date .remaining-days .descripcion-remaining {
+    color: #5e7d8d;
+    font-size: 1em;
+}
+.bz-icon-url-help.bz-icon-svg {
+    fill: #006c5f;
+}
+.bz-cancel-case {
+    font-size: 1.4rem;
+    color: #272727;
+}
+#ui-bizagi-cancel-case {
+    padding-bottom: 10px;
+}
+.bz-cancel-case__text {
+    text-align: center;
+    margin-bottom: .8rem;
+}
+.bz-cancel-case__text--semiBold {
+    font-weight: 600;
+    display: block;
+}
+.bz-cancel-case__label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: .4rem;
+}
+.bz-cancel-case__textarea {
+    padding: 8px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 140px;
+    min-height: 140px;
+    resize: none;
+}
+.bz-cancel-case__help-text {
+    font-size: 1rem;
+    color: #757575;
+}
+.bz-cancel-case__btn {
+    min-width: 70px;
+    height: 30px;
+    padding: 0!important;
+}
+.ui-dialog.bz-cancel-case-error-modal .ui-dialog-buttonpane button:last-child, .ui-dialog.bz-cancel-case-widget .ui-dialog-buttonpane button:last-child {
+    margin: 0;
+}
+.ui-dialog.bz-cancel-case-error-modal .ui-dialog-buttonpane .ui-dialog-buttonset, .ui-dialog.bz-cancel-case-widget .ui-dialog-buttonpane .ui-dialog-buttonset {
+    padding: 10px 0 0;
+}
+.ui-dialog.bz-cancel-case-widget .ui-dialog-content {
+    height: auto !important;
+}
+.cancel-case-wrapper-message {
+    align-items: stretch;
+    padding-right: 25px;
+    padding: 7px;
+    font-size: 12px;
+    color: #272727;
+    display: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background: #fff;
+    background-color: #fff;
+}
+.cancel-case-wrapper-message .bz-icon-svg {
+    margin-right: 5px;
+}
+.cancel-case-wrapper-message.error {
+    border-left: #da3b3b 5px solid;
+}
+.cancel-case-wrapper-message.error .bz-icon-svg {
+    fill: #da3b3b;
+}
+.cancel-case-wrapper-message.warning {
+    border-left: #f9a825 5px solid;
+}
+.cancel-case-wrapper-message.warning .bz-icon-svg {
+    fill: #f9a825;
+}
+.cancel-case-wrapper-message.info {
+    border-left: #1377d9 5px solid;
+}
+.cancel-case-wrapper-message.info .bz-icon-svg {
+    fill: #1377d9;
+}
+.ui-dialog.bz-cancel-case-widget .ui-bizagi-dialog-loading-overlay {
+    background-color: rgba(255,255,255,.75);
+    display: block;
+    height: calc(100%);
+    position: absolute;
+    right: 0;
+    top: 70px;
+    width: 100%;
+    transform: translateY(-70px);
+    z-index: 30;
+}
+.ui-bizagi-wp-project-activity-state-wrapper .activity-name {
+    margin-bottom: .6em;
+    color: #374c58;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.ui-bizagi-wp-project-activity-state-dates-wrapper .remaining-days {
+    overflow: hidden;
+    width: 100%;
+}
+.ui-bizagi-wp-project-activity-state-dates-wrapper .remaining-days .days {
+    display: inline;
+    color: #374c58;
+    float: left;
+    font-size: 2.9em;
+    font-weight: bold;
+}
+.ui-bizagi-wp-project-activity-state-dates-wrapper .remaining-days .time-remaining {
+    padding-left: 0 !important;
+}
+.bz-wp-reasign {
+    display: none;
+    font-size: 1em;
+    position: relative;
+    width: auto;
+    padding: 0;
+    background-color: transparent;
+    margin: 10px 0 10px 0;
+}
+.bz-wp-btn-reasign i.bz-icon.bz-icon-user-outline {
+    font-size: 12px;
+}
+#ui-bizagi-wp-project-users-wrapper .ui-bizagi-wp-project-users-creator-info {
+    padding-bottom: 15px;
+}
+button#ui-bizagi-wp-project-activity-button.ui-bizagi-wp-project-activity-shared {
+    background-color: #e0e0e0;
+    cursor: default;
+}
+#ui-bizagi-wp-project-activity-button {
+    float: right;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #006c5f;
+}
+#ui-bizagi-wp-project-activity-button:hover svg, #ui-bizagi-wp-project-activity-button svg:hover, #ui-bizagi-wp-project-activity-button svg {
+    margin: 0;
+    fill: white;
+}
+#ui-bizagi-wp-project-activity-button:disabled {
+    opacity: .5;
+    cursor: progress;
+}
+#ui-bizagi-wp-project-activity-button.ui-bizagi-wp-project-activity-shared:hover svg, #ui-bizagi-wp-project-activity-button.ui-bizagi-wp-project-activity-shared svg:hover, #ui-bizagi-wp-project-activity-button.ui-bizagi-wp-project-activity-shared svg {
+    fill: #006c5f;
+}
+.ui-bizagi-wp-group-users h4 {
+    margin: 1em 0;
+}
+.ui-bizagi-wp-tasklist {
+    margin: 0;
+}
+.ui-bizagi-wp-tasklist-item {
+    margin-bottom: 1em;
+    font-size: 10px;
+}
+.ui-bizagi-wp-tasklist-item-type {
+    float: left;
+    margin: 0 5px 0 0;
+    text-align: right;
+}
+.ui-bizagi-wp-tasklist-item-name {
+    margin: 0 0 0 48px;
+}
+.bizagi-custom-tooltip-subprocesses {
+    background: #fff;
+    border-color: #ddd;
+    color: #000;
+}
+.bizagi-custom-tooltip-subprocesses .scroll-custom-properties {
+    max-height: 155px;
+    overflow: auto;
+}
+.bizagi-custom-tooltip-subprocesses .namesubprocess {
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 0;
+    text-align: left;
+    width: 100%;
+}
+.bizagi-custom-tooltip-subprocesses table {
+    color: #808080;
+    font-size: 14px;
+    text-align: left;
+    width: 100%;
+}
+.bizagi-custom-tooltip-subprocesses table tr {
+    height: 26px;
+}
+.bizagi-custom-tooltip-subprocesses table tr .column2 {
+    width: 68%;
+}
+#ui-bizagi-wp-project-events-wrapper .list-events {
+    margin: 0;
+    padding: 0;
+}
+#ui-bizagi-wp-project-events-wrapper .list-events li {
+    list-style-type: none;
+}
+#ui-bizagi-wp-project-events-wrapper .list-events .event .name {
+    vertical-align: middle;
+}
+#ui-bizagi-wp-project-dashboard-sidebar-right .subtitle {
+    margin-bottom: .6em;
+    color: #374c58;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+#ui-bizagi-wp-project-plan-content-dashboard {
+    padding-bottom: 50px;
+}
+.sprite-discussion-sidebar {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAACeElEQVQ4T62VXW/SUBjHz5m4QiwhkJH0wml8iboLkY07vV3lLdQJNoXC+BTG72DipyAUbWqqKbIW2LV3zjLNjIkz0YyEZChZIIGi4ywHKamLJlB9rnpO+vye87yc/4EAAMDz/EWlrLzqdXsreG3XPB7PXjweT5RKpS8wn89f21LVZ+3DwyCAEAKE7HEhBAAh5PP5Ggxz9z4knM59YzC4DBcWABqN7EEnXibjHEm+hwAABCbRaJpO+f3+hmEYi/NEIAhi2G63A7VaTTazhgBCNE4fQpTf3FwuFArNeaDmv9ls9rxQKn0FCGEm+A2cyz5YKRalj9FolDAdSJJEkiQNU6lUwOEYQVF80WBZdrHX6+Fsx6aqqpHLsdeLwvMPM4OxE8uyQUmS3mIIy7KrkiTp1uC2weHwOl+tbgsYHA6vZ6vV7ZJtMD6FmSrDxCKKsqXidSKRiJXL5fE3Nhxg5hNjB47jbh0dfbtyZpH42Txo3tF39Ed4PxQKPaYo6vXxseHweNz7uOZ4f6YaY6goirp1OvCMYjs96xzHBUVRbMwEtjbLhP8NbDZzJjCGJZPJtU6nc5UgiB+tVuu2rusP8X4wGHyCS2EYxlmv1/tJluWdmUthNuRPzWMYJqooimareadHyTpuNE3z9Xr9qe1xs96qJJdck0X5zaREIZz+P4MtV3oVIQQxdO4rneX5C4IgHPwfEbLIZiQS2aAoarff788lmy6Xa9hqtQKapr2cyqbT5fo86PcvTYUey6gdQwiaDJIk92Amk7mhVTWx870TsMOb+vx6LIBvaWk3Ho1ujDU1nU4vVyqVSrfbvTl+TewYQsDtJt8xzL0Y7tMJOsD2keQ6QqYAAAAASUVORK5CYII=') no-repeat top left;
+}
+.sprite-discussion-sidebar.adddiscussion {
+    background-position: 0 0;
+    float: left;
+    height: 22px;
+    margin-top: -2px;
+    width: 22px;
+}
+.ui-bizagi-wp-project-discussions-sidebar-h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+.ui-bizagi-wp-project-discussions-sidebar-actions {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#ui-bizagi-wp-project-process-state-wrapper .sprite {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAmCAYAAAC29NkdAAAFWElEQVRYR+WYXWhcRRTH/zN3dxNsYz5s1zTNGmwhiq3b9d7dprHaSlpFtE9iBLEi4seDL1XxE19EoVgFC4IPfjxVKyKobypotUrLPuzee7fbxohiTVHb3cQ23dvt7mb37oyccCO3ae5+tFkNOBAIOzNnfvfMnDP/MwxLvLElzoe6gMPDwz2lUukxzvkWAJ2NfJAQwuac/9De3v7G4cOHzzUyx2tMTcBYLHazEOIzAFdf4iI/FwqFHePj479c4nxvDw4ODq7u6OhIA+gh41LKScbYH87/0vOLGVsG4HpXf7ZSqWxPp9PHLgXS04PRaHSvlPJJMiqEeKWzs/PVgwcP2g0swjRN+xbAbW5I27a3HTlyZKyB+RcM8QTUNG3c8URK13WVnNio8Ugk8qaiKE/NG5+RUo4YhkF2G26egKqqnmGMdTPGPkwmkw82bBFAJBLZoyjKcwvMOSWE2G6a5o+N2qsFOM0Y6wKwT9f1h8jgunXrlgcCgRHGmG/+ApzzUjKZ/IJ+rwFI3U15silATdM+ATC60NdLKU8ahrG6AUAKuJO2bd+STqd/q+fJpgBVVU0yxrTLBXTmHwsEAhvj8XixFmSzgAcYYyMeBk/rur6SgknTtBcB7K7nHSHEC6Zp7lk0wHA4fJ3f738YwEVnkBYJBAK74/H4mc2bN3cUCoVdnHM6w3ONMcbahBCb5nZBCPGlaZp3LRpgPY800j86OqocP378dwCrhBDfmKZ5+5ICJBhVVccYYzf8/wCj0Sgl32sA/JpMJveSN6LR6CMAbqq3vdVq9ZBpmh+31IOuNHNI1/VbabFaudENLYR4xzTNJwAwVVXTLdniaDSaEEJQHjxkGAbpw1lAKeW99TxYqVT2HT169FMAy8Ph8Mt+v3+wFWfQnTfnxENd0QtgEMAuAHdTiurv72fBYHCVlPI/jWIC7wZwB4BnAIQB+AHYPT091sDAAOnMxQXcsGHDfYyxlZzzU4ZhkNKmlHGnEGKte4ullNyyrN5MJrOlVCpFpJTLXf2tA2wkSIQQyOVymJqaQj6fJ2Ew/3ja3d3d+VAo1KUoygHTNLcvWqKuBUggMzMzyGazOHv2LGzbU3xLzrloa2tTFEWZyufzrwH4DsBPAC4SDk2JhVgstsa27XYpZSGVSk3Qlw8NDfVblhWcmJjYWi6XH6hWq5QTeb2odvVXKK8CeB/AR6QX3eq9KcAai24C8C5p2ibh3CbPOIDk0T//URhei6qqepGijsVisZmZmQ6fz5czDEOnueFweH02m902OTn5rJSyjxJxE96bP7RECh7A0wDOU2dTHvQ6g9VqdXR6eno2MAqFwmXwzU7NA6AS43Pa6kUBpDKAordYLCKTycCyLCpVPUEZYxQorFqtUogvxEBwjwP4qynAcDg84vP5KD2cTiQS3ztX3ZCUcrYWsW2bVSqVZZlMZjiXy1F+DAFQ5pFSmjnf29vbWSgUzBMnTnwFYBuA9QCucMaSXiRhfKAlZaejuOnOptqYbhK6UeYaJepzAwMD3Zzzr3VdJ0W9BgCpop0kZAHQe87zAN5rSeHukJDtfgD3OPfwtc7v9ooVKxAKhXyMsf2GYRAUNSoP7gfwEoCrnJrm9VY8fcw/e7TFNwKgQmqEc35lX19fIBgM0jndmUql9rsmBBwvUiH1FgBvwAUej6acx6OGn0DcpOVyuc2yrLVCiPauri4qsFIANuq6Tona3ejefhtAvOYW04xFeH67YGXXvZxWFGVHIpGgYFioDVHMAdDrJlV6wKxUKo9KKbc2+oDpsagUQmQVRfmyWCx+MDY2Vq6RMImL/kRdwBpG/pWuJQ/4N82h21ksU1NmAAAAAElFTkSuQmCC') no-repeat top left;
+    float: left;
+}
+#ui-bizagi-wp-project-process-state-wrapper .sprite.project-processState-parent-case {
+    background-position: 0 0;
+    width: 40px;
+    height: 38px;
+}
+#ui-bizagi-wp-project-process-state-wrapper {
+    margin-bottom: 1.6em;
+}
+#ui-bizagi-wp-project-process-state-wrapper .summaryLink span {
+    color: #0b8bcb;
+    font-weight: bold;
+}
+#ui-bizagi-wp-project-process-state-wrapper .summaryLink:hover span {
+    color: #234f6f;
+}
+.ui-bizagi-wp-project-subprocesses-root-wrapper {
+    width: 400px;
+}
+#ui-bizagi-wp-project-subprocesses-wrapper .list-subprocesses {
+    margin: 0;
+    padding: 0;
+}
+#ui-bizagi-wp-project-subprocesses-wrapper .list-subprocesses li {
+    list-style-type: none;
+}
+.ui-bizagi-title {
+    padding: .5em 0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    color: #374c58;
+}
+.ui-bizagi-txt {
+    color: #374c58;
+    line-height: 1.5;
+}
+#ui-bizagi-wp-project-plan-wrapper {
+    padding: 0 10px 0 15px;
+}
+#ui-bizagi-wp-project-plan-wrapper .containers-info-plan {
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+}
+#ui-bizagi-wp-project-plan-wrapper .actions {
+    text-align: right;
+    width: 100%;
+}
+#ui-bizagi-wp-project-plan-wrapper .containers-info-plan>div {
+    text-align: left;
+    width: 29%;
+}
+#ui-bizagi-wp-project-plan-wrapper .containers-info-plan>div.left {
+    float: left;
+    margin-left: 20px;
+}
+#ui-bizagi-wp-project-plan-wrapper .containers-info-plan>div.center {
+    display: inline-block;
+    margin: 0 auto;
+}
+#ui-bizagi-wp-project-plan-wrapper .containers-info-plan>div.right {
+    float: right;
+    margin-right: 20px;
+}
+#ui-bizagi-wp-project-plan-wrapper .containers-info-plan .description {
+    background-color: #d3d3d3;
+    min-height: 201px;
+    position: relative;
+    width: 100%;
+}
+#ui-bizagi-wp-project-plan-wrapper .containers-info-plan .description .content {
+    padding: 10px 10px;
+}
+#ui-bizagi-wp-project-plan-wrapper .containers-info-plan .description .content .bz-icon {
+    float: left;
+}
+#ui-bizagi-wp-project-plan-wrapper .containers-info-plan .description .content span {
+    padding-bottom: 46px;
+    display: block;
+}
+#ui-bizagi-wp-project-plan-wrapper .containers-info-plan .description .title {
+    color: #374c58;
+}
+#project-plan-popup-wrapper {
+    overflow: visible;
+}
+#project-plan-popup-wrapper .ui-select-dropdown {
+    max-height: 117px;
+}
+#project-plan-popup-wrapper table {
+    width: 100%;
+}
+#project-plan-popup-wrapper form table tr {
+    border: 10px solid transparent;
+}
+#project-plan-popup-wrapper form .first-column {
+    padding-right: 8px;
+    text-align: right;
+    width: 89px;
+}
+#project-plan-popup-wrapper form .field-description {
+    color: #999;
+    display: block;
+    font-size: 12px;
+}
+#project-plan-popup-wrapper form .container-autosuggest {
+    position: relative;
+    width: 100%;
+}
+#project-plan-popup-wrapper .position-message-validate {
+    position: relative;
+}
+#project-plan-popup-wrapper .k-widget.k-autocomplete.k-header.k-state-default {
+    width: 100%;
+}
+#project-plan-popup-wrapper .k-widget.k-tooltip-validation {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+}
+#templates-plan-list .k-item>span {
+    border-style: solid;
+    border-width: 0 0 1px 1px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display: inline-block;
+    min-height: 95px;
+    padding: .6em 0 0 .6em;
+    vertical-align: top;
+    width: 79%;
+}
+#templates-plan-list .k-item>span:first-child {
+    border-left-width: 0;
+    padding: 0 1em;
+    width: 100%;
+}
+#project-plan-popup-wrapper .ui-rubik-input:not([type='checkbox']) {
+    background: #fafafa !important;
+    border-color: #ddd !important;
+    border-radius: 4px !important;
+    box-sizing: border-box;
+    color: #374c58;
+    font-size: 12px;
+    min-height: 32px !important;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    padding: 4px;
+}
+html:not(.browser-chrome) #project-plan-popup-wrapper .ui-rubik-input[type='checkbox'] {
+    width: 1.4em;
+}
+.bz-calendar-container {
+    position: relative;
+}
+.bz-calendar-container .bz-icon-calendar-outline {
+    position: absolute;
+    top: 50%;
+    right: 6px;
+    margin-top: -8px;
+    pointer-events: none;
+}
+.browser-ie11 .ui-form-scroll .bz-calendar-container .bz-icon-calendar-outline, .browser-ie10 .ui-form-scroll .bz-calendar-container .bz-icon-calendar-outline {
+    margin-top: 0;
+}
+#project-plan-popup-wrapper textarea.ui-rubik-input {
+    resize: none;
+}
+#project-plan-popup-wrapper .ui-rubik-h4 {
+    font-size: 1.5em;
+    margin: 1em 1.5em .5em;
+    color: #374c58;
+}
+#project-plan-popup-wrapper .ui-rubik-button-accept:hover:disabled {
+    background: #76a4be;
+    cursor: wait;
+}
+.bz-wp-pp-content {
+    margin-bottom: 2em;
+}
+.bz-wp-pp-card {
+    text-align: center;
+}
+.bz-wp-pp-action {
+    text-align: center;
+}
+.bz-wp-pp-action>.bz-wp-btn {
+    min-width: 200px;
+}
+#ui-bizagi-wp-project-overview-not-found {
+    text-align: center;
+}
+#ui-bizagi-wp-project-overview-not-found i {
+    font-size: 256px;
+}
+#ui-bizagi-wp-project-overview-not-found p {
+    margin-top: .6em;
+    font-size: 1.5em;
+}
+.project-attachments .k-errormsg {
+    position: relative;
+    display: inline-block;
+    text-align: right;
+    font-size: .9em;
+    font-weight: bold;
+    padding-bottom: .167em;
+    vertical-align: middle;
+    top: -.2em;
+    max-width: 17em;
+    line-height: normal;
+}
+.project-attachments .k-filename {
+    max-width: 14em;
+}
+.project-attachments .k-file-success .k-icon {
+    background-image: url(../../../../common/base/css/desktop/kendo.ui/Black/sprite.png) !important;
+}
+.project-attachments-wrapper-window.k-widget.k-window {
+    border: 1px solid #ddd;
+    padding: 24px 0 0;
+}
+.project-attachments-wrapper-window .k-window-content {
+    padding: 0;
+}
+.project-attachments-wrapper-window .k-window-content ul {
+    margin: 0;
+}
+.project-plan-content-wrapper {
+    width: 100%;
+}
+#project-plan-activities-wrapper {
+    position: relative;
+}
+.ui-bizagi-wp-project-plan-activities-header {
+    padding: 0 0 20px;
+    position: relative;
+}
+.ui-bizagi-wp-project-plan-activities-header h3 {
+    padding: 0;
+    margin: 0 0 15px;
+}
+.ui-bizagi-wp-project-plan-activities-header .plan-activities-action-button {
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+.ui-bizagi-wp-project-plan-activities-header .plan-activities-action-button>a>span {
+    vertical-align: middle;
+}
+.plan-activities-action-button>a {
+    display: none;
+}
+.ui-bizagi-wp-project-plan-activities-headerbuttons {
+    float: right;
+}
+.project-plan-activity-list {
+    padding: 0;
+    margin: 1em 0;
+    list-style-position: inside;
+}
+.project-plan-activity-list li {
+    padding: 2em;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+.project-plan-activity-list li:not(.disabled) {
+    cursor: move;
+}
+.project-plan-activity-list li:only-child, .project-plan-activity-list li:last-child {
+    border-bottom: none;
+}
+.project-plan-activity-list .enabled {
+    cursor: pointer;
+}
+.project-plan-activity-list>li.selected {
+    background-color: #dfe3e5;
+}
+.project-plan-activity-list>li:hover {
+    background-color: #dfe3e5;
+    cursor: default;
+}
+.project-plan-activity-list .item-edit-button {
+    display: none;
+    position: absolute;
+    top: 12px;
+    right: -6px;
+    background-color: #dfe3e5;
+    padding: 5px 3px 0 3px;
+    border: 1px solid #c6cacc;
+}
+.project-plan-activity-list .item-workonit-button {
+    top: 39px;
+    background-color: #006c5f;
+    border: 1px solid #006c5f;
+    color: #fff;
+}
+.project-plan-activity-list .item-workonit-button:hover {
+    cursor: pointer;
+}
+.project-plan-activity-list .item-edit-button>i {
+    display: block;
+    margin-bottom: 5px;
+}
+.project-plan-activity-list .item-edit-button>i:hover {
+    cursor: pointer;
+    color: #0b8bcb;
+}
+.project-plan-activity-list .item-workonit-button>i:hover {
+    color: #eee;
+}
+.project-plan-activity-list>li.selected .item-edit-button {
+    display: inline-block;
+}
+.project-plan-activity-list>li:hover .item-edit-button {
+    display: inline-block;
+}
+.ui-bizagi-wp-project-plan-activity-infobox {
+    float: right;
+}
+.ui-bizagi-wp-project-plan-activity-infobox * {
+    vertical-align: middle !important;
+}
+.project-plan-activity-list li p {
+    margin: 0;
+    display: inline-block;
+}
+.project-plan-activity-list li p span {
+    vertical-align: middle;
+}
+.ui-bizagi-wp-project-plan-activity-infobox .icon-list {
+    vertical-align: baseline;
+    display: inline-block;
+}
+.ui-bizagi-wp-project-plan-activity-infobox img {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #acbc35;
+    border-radius: 100%;
+    margin-top: 0;
+    background: #acbc35;
+}
+.ui-bizagi-wp-project-plan-activity-infobox .bz-icon.bz-icon-clock.red {
+    color: #f00;
+}
+.ui-bizagi-wp-project-plan-activity-infobox .bz-icon.bz-icon-clock.yellow {
+    color: #ffa500;
+}
+.ui-bizagi-wp-project-plan-activity-infobox .bz-icon.bz-icon-clock.green {
+    color: #008000;
+}
+.ui-bizagi-wp-project-plan-activity-infobox span .bz-icon-clock {
+    font-weight: bold;
+    font-size: 12px;
+}
+.ui-bizagi-wp-project-plan-activity-infobox span.nodisplay-ico {
+    display: none;
+}
+.ui-bizagi-wp-nolist {
+    list-style-type: none;
+}
+.biz-wp-position-relative {
+    position: relative;
+}
+.bz-icon-position-absolute-left {
+    left: -23px;
+    position: absolute;
+}
+.ui-bizagi-wp-project-plan-activity-infobox .bz-wp-avatar {
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+}
+.ui-bizagi-wp-project-plan-activity-infobox .bz-icon.bz-icon-24.bz-icon-svg {
+    width: 16px;
+    height: 16px;
+}
+#project-plan-activities-wrapper .ui-bizagi-wrapper-parallel-icon {
+    float: left;
+    height: 22px;
+    left: -24px;
+    position: absolute;
+    top: 22px;
+    width: 25px;
+}
+.enabled-actions .wrapper-arrow-css {
+    border-radius: 50%;
+    cursor: pointer;
+    height: 22px;
+    position: absolute;
+    top: 0;
+    transition: background .5s ease;
+    width: 22px;
+    z-index: 2;
+}
+.enabled-actions .wrapper-arrow-css:hover {
+    background: rgba(0,0,0,.07);
+}
+.enabled-actions .wrapper-arrow-css i {
+    left: 3px;
+    position: relative;
+    top: 1px;
+}
+.ui-bizagi-wp-project-plan-users .ui-bizagi-wp-project-users-creator-info {
+    padding-bottom: 15px;
+}
+.ui-bizagi-workportal-opacity {
+    opacity: .5;
+}
+.ui-bizagi-workportal-textarea {
+    resize: none;
+}
+#project-plan-activity-form {
+    margin-bottom: 2em;
+}
+#project-plan-activity-form table td {
+    padding: 5px 0;
+}
+#project-plan-activity-form textarea {
+    width: 100%;
+}
+#project-plan-activity-form table .first-column {
+    width: 120px;
+}
+#project-plan-activity-form .ui-bizagi-wp-project-plan-activity-header {
+    overflow: hidden;
+    position: relative;
+}
+#project-plan-activity-form .ui-bizagi-wp-project-plan-activity-header h4 {
+    float: left;
+    margin-top: 0;
+}
+#project-plan-activity-form .ui-bizagi-wp-project-plan-activity-header .wrapper-menu-rubik {
+    float: right;
+}
+.ui-bizagi-wp-project-plan-activity-action-menu>li {
+    height: 1.5em;
+    width: 1.5em;
+}
+#ui-bizagi-wp-project-wrapper-form-with-items .ui-bizagi-wp-project-form-buttons-actions {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1em;
+    background-color: #ddd;
+    border-top: 1px solid #ddd;
+    text-align: right;
+}
+#ui-bizagi-wp-project-wrapper-form-with-items .container-items>span {
+    display: none;
+}
+#project-plan-activity-form-wrapper h4 {
+    font-size: 16px;
+}
+#project-plan-activity-form-wrapper .list-items {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 135px;
+    margin: 0;
+    padding: 0;
+}
+.browser-chrome #project-plan-activity-form-wrapper .item {
+    height: 28px;
+    align-items: center;
+    display: flex;
+}
+#project-plan-activity-form-wrapper .item:first-child {
+    margin-top: 1rem;
+}
+#project-plan-activity-form-wrapper .item .check {
+    margin-right: .2rem;
+    opacity: .5;
+    cursor: not-allowed;
+}
+html:not(.browser-chrome) #project-plan-activity-form-wrapper .item .check {
+    height: 28px;
+    vertical-align: middle;
+}
+#project-plan-activity-form-wrapper .item .inputtext {
+    display: none;
+    width: 224px;
+    vertical-align: middle;
+}
+#project-plan-activity-form-wrapper .item .showtext {
+    overflow: hidden;
+    width: 224px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+#project-plan-activity-form-wrapper .item-button {
+    cursor: pointer;
+    display: none;
+}
+#project-plan-activity-form-wrapper .item-button.delete:hover {
+    color: #0b8bcb;
+}
+#project-plan-activity-form-wrapper .container-items.is-editing.editing-mouse .item:hover .item-button {
+    display: inline-block;
+}
+#project-plan-activity-form-wrapper .container-items.is-editing.editing-mouse .item:hover .inputtext {
+    display: inline-block;
+}
+#project-plan-activity-form-wrapper .container-items.is-editing.editing-mouse .item:hover .showtext {
+    display: none;
+}
+#project-plan-activity-form-wrapper .item.edit .inputtext {
+    display: inline-block;
+}
+#project-plan-activity-form-wrapper .item.edit .showtext {
+    display: none;
+}
+.text-right {
+    text-align: right;
+}
+#project-plan-activity-form-wrapper .k-widget.k-tooltip-validation {
+    bottom: auto;
+    display: block;
+    padding: 4px;
+}
+#project-plan-activity-form-wrapper .ui-spinner a:hover {
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+}
+#project-plan-activity-form-wrapper .ui-spinner a.ui-spinner-button.ui-spinner-up {
+    border-radius: 0;
+    border-top-right-radius: 4px;
+}
+#project-plan-activity-form-wrapper .ui-spinner a.ui-spinner-button.ui-spinner-down {
+    border-radius: 0;
+    border-bottom-right-radius: 4px;
+}
+#project-plan-activity-form-wrapper .ui-rubik-input.hasDatepicker {
+    border: 0;
+}
+.bz-wp-pp-af-control .k-autocomplete {
+    background: #fafafa !important;
+    color: #374c58;
+}
+.bz-wp-pp-af-control>span {
+    width: 100%;
+}
+.bz-wp-pp-af-control input {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: .6em 1em !important;
+    min-height: 32px !important;
+    resize: none;
+    vertical-align: middle;
+}
+.bz-wp-pp-af-control input:focus {
+    border: none;
+}
+.bz-wp-pp-divisor-wrapper {
+    border-top: solid 2px #cacfd2;
+    margin: 1.8em 0;
+    text-align: center;
+}
+.bz-wp-pp-divisor {
+    position: relative;
+    top: -17px;
+    display: inline-block;
+    padding: 8px;
+    border-radius: 20px;
+    margin: 0;
+    background: #374c58;
+    color: #fafafa;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: none;
+}
+#project-plan-activity-form-save {
+    display: none;
+}
+.position-message-validate>span {
+    color: #f50e0e;
+    font-weight: bold;
+}
+input[type="number"].ui-rubik-input-number--hide-spin::-webkit-outer-spin-button, input[type="number"].ui-rubik-input-number--hide-spin::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"].ui-rubik-input-number--hide-spin {
+    -moz-appearance: textfield;
+}
+.ui-bizagi-wp-project-plan-header .bz-wp-section {
+    float: left;
+    word-break: break-all;
+    padding-right: 30px;
+}
+.ui-bizagi-wp-project-plan-header .bz-wp-cd-menu-admin {
+    margin-top: .4em;
+}
+.ui-bizagi-wp-project-plan-header {
+    position: relative;
+}
+.ui-bizagi-wp-project-plan-header span {
+    vertical-align: middle;
+}
+#project-plan-popup-edit-wrapper .k-widget.k-tooltip-validation {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+}
+.ui-bizagi-wp-project-plan-action .subtitle-name {
+    display: block;
+    float: left;
+    width: 211px;
+}
+.bz-wp-cd-menu-admin {
+    float: right;
+    width: 16px;
+    height: 16px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+.bz-wp-cd-menu-admin>i {
+    color: #999;
+    border: none;
+    box-shadow: none;
+    display: block;
+    position: absolute;
+}
+.bz-wp-cd-menu-admin:hover>i {
+    color: #0b8bcb;
+}
+.bz-wp-cd-menu-admin>li {
+    border: none !important;
+}
+.ui-bizagi-wp-project-plan-action-menu>li {
+    height: 1.5em;
+    width: 1.5em;
+}
+#to-execute-plan.disabled {
+    cursor: wait;
+}
+textarea.bz-wp-rub-textarea {
+    color: #374c58;
+}
+input.bz-wp-rub-input.required {
+    border-radius: 0 4px 4px 0 !important;
+    border-left: 4px solid #f00;
+}
+.padding-botoom-15 {
+    padding-bottom: 15px;
+}
+.ui-rubik-popup-wrapper .ui-rubik-input {
+    background: #fafafa !important;
+    border-color: #ddd !important;
+    border-radius: 4px !important;
+    box-sizing: border-box;
+    color: #374c58;
+    font-size: 12px;
+    min-height: 32px !important;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    padding: 4px;
+}
+.ui-rubik-popup-wrapper .ui-bizagi-input-required {
+    background-color: #f00;
+    line-height: normal;
+    -webkit-border-radius: 2px 0 0 2px;
+    border-radius: 2px 0 0 2px;
+    z-index: 1;
+    display: inline-block;
+    height: 28px;
+    vertical-align: top;
+    width: 3px;
+    position: relative;
+    left: 1px;
+    top: 31px;
+}
+.ui-rubik-popup-wrapper .ui-rubik-input:focus, .ui-rubik-popup-wrapper input:focus, .ui-rubik-popup-wrapper .k-picker-wrap:focus {
+    outline: 5px auto #6daffb;
+}
+.ui-rubik-popup-wrapper .field-description.required {
+    font-weight: bold;
+}
+.ui-rubik-popup-wrapper .ui-rubik-input[type='checkbox'] {
+    min-height: 16px !important;
+    width: 20%;
+    float: left;
+}
+.ui-rubik-popup-wrapper .ui-rubik-h4 {
+    font-size: 1.5em;
+    margin: 1em 1.5em .5em;
+    color: #374c58;
+}
+.ui-rubik-popup-wrapper .ui-rubik-button {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: .5em;
+    padding: .6em 1.2em;
+    text-shadow: none;
+}
+.ui-rubik-popup-wrapper .ui-rubik-button-cancel {
+    background: #f2f2f2;
+    border-color: #374c58;
+    color: #374c58;
+}
+.ui-rubik-popup-wrapper .ui-rubik-button-cancel:hover {
+    background: #fafafa;
+    border-color: #31444e;
+}
+.ui-rubik-popup-wrapper.ui-rubik-button-accept:hover {
+    background: #4f6c7d;
+    border-color: #4f6c7d;
+    color: #fafafa;
+}
+.ui-rubik-popup-wrapper .ui-rubik-button-accept:hover:disabled {
+    background: #76a4be;
+    cursor: wait;
+}
+.ui-rubik-popup-wrapper table {
+    width: 100%;
+}
+.ui-rubik-popup-wrapper form>table tr {
+    border: 10px solid transparent;
+}
+.ui-rubik-popup-wrapper form .first-column {
+    padding-right: 8px;
+    width: 89px;
+}
+.ui-rubik-popup-wrapper form .field-description {
+    color: #999;
+    display: block;
+    font-size: 12px;
+}
+.ui-rubik-popup-wrapper textarea {
+    overflow: auto;
+    width: 98%;
+    min-height: 48px;
+    border-radius: 4px;
+    border-color: #ddd;
+    resize: none;
+    padding: 4px;
+    background: #fafafa;
+    color: #374c58;
+    line-height: 1.4;
+}
+.state-pending-plan, .state-executing-plan, .state-closed-plan {
+    display: none;
+}
+.ui-bizagi-wp-project-plan-state .plan-state {
+    display: none;
+    overflow: hidden;
+}
+.ui-bizagi-wp-project-plan-progress .plan-progress .remaining-days {
+    overflow: hidden;
+    width: 100%;
+}
+.ui-bizagi-wp-project-plan-progress .plan-progress .remaining-days .days {
+    display: inline;
+    float: left;
+    font-size: 2.7em;
+    font-weight: bold;
+}
+.ui-bizagi-wp-project-plan-progress .plan-progress .remaining-days .time-remaining {
+    padding: 0 !important;
+}
+.ui-bizagi-wp-project-plan-progress .plan-progress .remaining-days .bar-fullTime {
+    border-radius: 4px;
+    background: rgba(55,76,88,.2);
+}
+.ui-bizagi-wp-project-plan-progress .plan-progress .remaining-days .bar-completed.Red {
+    background: #f5645a;
+}
+.ui-bizagi-wp-project-plan-progress .plan-progress .remaining-days .bar-completed.Yellow {
+    background: #f4aa34;
+}
+.ui-bizagi-wp-project-plan-progress .plan-progress .remaining-days .bar-completed.Green {
+    background: #37b464;
+}
+.ui-bizagi-wp-project-plan-parent .sprite {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAmCAYAAAC29NkdAAAFWElEQVRYR+WYXWhcRRTH/zN3dxNsYz5s1zTNGmwhiq3b9d7dprHaSlpFtE9iBLEi4seDL1XxE19EoVgFC4IPfjxVKyKobypotUrLPuzee7fbxohiTVHb3cQ23dvt7mb37oyccCO3ae5+tFkNOBAIOzNnfvfMnDP/MwxLvLElzoe6gMPDwz2lUukxzvkWAJ2NfJAQwuac/9De3v7G4cOHzzUyx2tMTcBYLHazEOIzAFdf4iI/FwqFHePj479c4nxvDw4ODq7u6OhIA+gh41LKScbYH87/0vOLGVsG4HpXf7ZSqWxPp9PHLgXS04PRaHSvlPJJMiqEeKWzs/PVgwcP2g0swjRN+xbAbW5I27a3HTlyZKyB+RcM8QTUNG3c8URK13WVnNio8Ugk8qaiKE/NG5+RUo4YhkF2G26egKqqnmGMdTPGPkwmkw82bBFAJBLZoyjKcwvMOSWE2G6a5o+N2qsFOM0Y6wKwT9f1h8jgunXrlgcCgRHGmG/+ApzzUjKZ/IJ+rwFI3U15silATdM+ATC60NdLKU8ahrG6AUAKuJO2bd+STqd/q+fJpgBVVU0yxrTLBXTmHwsEAhvj8XixFmSzgAcYYyMeBk/rur6SgknTtBcB7K7nHSHEC6Zp7lk0wHA4fJ3f738YwEVnkBYJBAK74/H4mc2bN3cUCoVdnHM6w3ONMcbahBCb5nZBCPGlaZp3LRpgPY800j86OqocP378dwCrhBDfmKZ5+5ICJBhVVccYYzf8/wCj0Sgl32sA/JpMJveSN6LR6CMAbqq3vdVq9ZBpmh+31IOuNHNI1/VbabFaudENLYR4xzTNJwAwVVXTLdniaDSaEEJQHjxkGAbpw1lAKeW99TxYqVT2HT169FMAy8Ph8Mt+v3+wFWfQnTfnxENd0QtgEMAuAHdTiurv72fBYHCVlPI/jWIC7wZwB4BnAIQB+AHYPT091sDAAOnMxQXcsGHDfYyxlZzzU4ZhkNKmlHGnEGKte4ullNyyrN5MJrOlVCpFpJTLXf2tA2wkSIQQyOVymJqaQj6fJ2Ew/3ja3d3d+VAo1KUoygHTNLcvWqKuBUggMzMzyGazOHv2LGzbU3xLzrloa2tTFEWZyufzrwH4DsBPAC4SDk2JhVgstsa27XYpZSGVSk3Qlw8NDfVblhWcmJjYWi6XH6hWq5QTeb2odvVXKK8CeB/AR6QX3eq9KcAai24C8C5p2ibh3CbPOIDk0T//URhei6qqepGijsVisZmZmQ6fz5czDEOnueFweH02m902OTn5rJSyjxJxE96bP7RECh7A0wDOU2dTHvQ6g9VqdXR6eno2MAqFwmXwzU7NA6AS43Pa6kUBpDKAordYLCKTycCyLCpVPUEZYxQorFqtUogvxEBwjwP4qynAcDg84vP5KD2cTiQS3ztX3ZCUcrYWsW2bVSqVZZlMZjiXy1F+DAFQ5pFSmjnf29vbWSgUzBMnTnwFYBuA9QCucMaSXiRhfKAlZaejuOnOptqYbhK6UeYaJepzAwMD3Zzzr3VdJ0W9BgCpop0kZAHQe87zAN5rSeHukJDtfgD3OPfwtc7v9ooVKxAKhXyMsf2GYRAUNSoP7gfwEoCrnJrm9VY8fcw/e7TFNwKgQmqEc35lX19fIBgM0jndmUql9rsmBBwvUiH1FgBvwAUej6acx6OGn0DcpOVyuc2yrLVCiPauri4qsFIANuq6Tona3ejefhtAvOYW04xFeH67YGXXvZxWFGVHIpGgYFioDVHMAdDrJlV6wKxUKo9KKbc2+oDpsagUQmQVRfmyWCx+MDY2Vq6RMImL/kRdwBpG/pWuJQ/4N82h21ksU1NmAAAAAElFTkSuQmCC') no-repeat top left;
+    float: left;
+}
+.ui-bizagi-wp-project-plan-parent .sprite.project-processState-parent-case {
+    background-position: 0 0;
+    width: 40px;
+    height: 38px;
+}
+.ui-bizagi-wp-project-plan-parent .summaryLink {
+    font-size: 15px;
+    height: 42px;
+    padding-top: 8px;
+    text-decoration: none;
+}
+.ui-bizagi-wp-project-plan-parent .summaryLink>div.parentCase {
+    display: table;
+    height: 100%;
+    padding-left: 9px;
+}
+.ui-bizagi-wp-project-plan-parent .summaryLink:hover span {
+    text-decoration: underline;
+}
+.ui-bizagi-wp-userlist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.ui-bizagi-wp-userlist li {
+    display: block;
+    float: left;
+    margin: 0 1em 0 0;
+    text-align: center;
+}
+.ui-bizagi-wp-usertooltip {
+    list-style-type: none;
+    margin: 8px;
+    padding: 0;
+}
+.ui-bizagi-wp-usertooltip li {
+    clear: both;
+}
+.bz-wp-tt-user {
+    text-align: left;
+}
+.bz-wp-tt-user-info {
+    margin-bottom: 1em;
+}
+.bz-wp-tt-user-info>.bz-wp-avatar {
+    float: left;
+}
+.bz-wp-tt-user-info-content {
+    margin-left: 4em;
+}
+.ui-bizagi-wp-usertooltip h4 {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.ui-bizagi-wp-multiuser-item {
+    text-align: center;
+    font-weight: bold;
+    height: 30px;
+    padding: 6px;
+    background: #fff;
+    border: solid 1px #dfe7ec;
+}
+.ui-bizagi-wp-project-plan-users li .bz-wp-avatar-label--small {
+    font-size: 14px;
+    top: 6px;
+}
+.ui-bizagi-wp-project-plan-time .plan-time .remaining-days {
+    overflow: hidden;
+    width: 100%;
+}
+.ui-bizagi-wp-project-plan-time .plan-time .remaining-days .days {
+    width: 45px;
+    float: left;
+    font-size: 2.7em;
+    font-weight: bold;
+}
+.ui-bizagi-wp-project-plan-time .plan-time .remaining-days .time-remaining {
+    padding-top: 6px;
+    width: 100%;
+    float: left;
+}
+.ui-bizagi-wp-project-plan-time .plan-time .remaining-days .bar-fullTime {
+    border-radius: 4px;
+    background: rgba(55,76,88,.2);
+}
+.ui-bizagi-wp-project-plan-time .plan-time .remaining-days .bar-completed {
+    background-color: #374c58;
+}
+.ui-bizagi-wp-project-plan-time .plan-time .remaining-days .bar-completed.Red {
+    background: #f5645a;
+}
+.ui-bizagi-wp-project-plan-time .plan-time .remaining-days .bar-completed.Yellow {
+    background: #f4aa34;
+}
+.ui-bizagi-wp-project-plan-time .plan-time .remaining-days .bar-completed.Green {
+    background: #37b464;
+}
+#project-plan-popup-wrapper .ui-rubik-input {
+    margin: 4px 0 4px 0;
+}
+#project-plan-popup-wrapper .ui-bizagi-input-required {
+    background-color: #f00;
+    line-height: normal;
+    -webkit-border-radius: 2px 0 0 2px;
+    border-radius: 2px 0 0 2px;
+    z-index: 1;
+    display: inline-block;
+    height: 28px;
+    vertical-align: top;
+    width: 3px;
+    position: relative;
+    left: 1px;
+    top: 34px;
+}
+#project-plan-popup-wrapper .field-template {
+    display: none;
+}
+#project-plan-popup-wrapper .position-message-validate {
+    position: absolute;
+}
+#project-plan-popup-wrapper table tr {
+    height: 55px;
+}
+#ui-bizagi-wp-project-plan-activity-action .wrapper-menu-rubik {
+    position: relative;
+    top: -6px;
+}
+#ui-bizagi-wp-project-plan-activity-action .case-summary-favorite {
+    margin-right: 4px;
+}
+#ui-bizagi-wp-project-plan-activity-action .menu {
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+}
+#ui-bizagi-wp-project-plan-activity-action .menu>li {
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    font-size: 17px;
+}
+#ui-bizagi-wp-project-plan-activity-action h3 {
+    margin-right: 2rem;
+}
+#project-popupform-edit-activity-wrapper .ui-bizagi-wp-project-popupform-form .first-column {
+    width: 135px;
+}
+#project-popupform-edit-activity-wrapper .user-assigned>span {
+    float: right;
+}
+#project-popupform-edit-activity-wrapper .ui-bizagi-wp-project-popupform-field-name.field-description {
+    padding-bottom: 0;
+}
+#project-popupform-edit-activity-wrapper .k-input {
+    border: 1px solid #c6cacc;
+}
+#right-sidebar-wrapper .k-link {
+    font-family: "Open Sans","Helvetica Neue",Arial,Helvetica,sans-serif;
+    font-size: 13px;
+}
+#right-sidebar-wrapper .k-animation-container .k-item:hover {
+    background: #e2e2e2;
+}
+#right-sidebar-wrapper .k-animation-container .k-item {
+    padding: 3px 10px 3px 5px;
+}
+#right-sidebar-wrapper .k-menu-group {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+#project-popupform-edit-activity-wrapper .ui-rubik-input {
+    background: #fafafa !important;
+    border-color: #ddd !important;
+    border-radius: 4px !important;
+    box-sizing: border-box;
+    color: #374c58;
+    font-size: 12px;
+    min-height: 32px !important;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    padding: 4px;
+}
+#project-popupform-edit-activity-wrapper .ui-rubik-input[type='checkbox'] {
+    width: 1.4em;
+}
+#project-popupform-edit-activity-wrapper .ui-rubik-input.hasDatepicker, #project-popupform-edit-activity-wrapper .ui-rubik-input.ui-spinner-input {
+    width: auto;
+    text-align: right;
+}
+#project-popupform-edit-activity-wrapper .ui-rubik-input.hasDatepicker {
+    padding: 0 30px 0 0;
+}
+#project-popupform-edit-activity-wrapper .ui-rubik-input.ui-spinner-input {
+    padding: 0 0 0 0;
+}
+#project-popupform-edit-activity-wrapper .ui-bizagi-input-required {
+    background-color: #f00;
+    line-height: normal;
+    -webkit-border-radius: 2px 0 0 2px;
+    border-radius: 2px 0 0 2px;
+    z-index: 1;
+    display: inline-block;
+    height: 28px;
+    vertical-align: top;
+    width: 3px;
+    position: relative;
+    left: 1px;
+    top: 31px;
+}
+#project-popupform-edit-activity-wrapper span.ui-spinner {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+}
+#project-popupform-edit-activity-wrapper .ui-spinner input {
+    border: 0;
+}
+#project-popupform-edit-activity-wrapper .ui-spinner a {
+    display: block;
+    font-size: .5em;
+    height: 50%;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    text-align: center;
+}
+#project-popupform-edit-activity-wrapper .ui-spinner a:hover {
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+}
+#project-popupform-edit-activity-wrapper .ui-spinner a.ui-spinner-button.ui-spinner-up {
+    border-radius: 0;
+    border-top-right-radius: 4px;
+}
+#project-popupform-edit-activity-wrapper .ui-spinner a.ui-spinner-button.ui-spinner-down {
+    border-radius: 0;
+    border-bottom-right-radius: 4px;
+}
+#project-popupform-edit-activity-wrapper .position-message-validate {
+    position: absolute;
+    right: 0;
+}
+#project-popupform-edit-activity-wrapper table tr {
+    height: 55px;
+}
+#project-popupform-edit-activity-wrapper .second-column-with-message {
+    position: relative;
+}
+#ui-bizagi-wp-project-plan-activity-sidebar .subtitle {
+    font-size: 18px;
+    font-weight: bold;
+}
+#ui-bizagi-wp-project-plan-activity-sidebar .subtitle {
+    padding-top: 13px;
+}
+.ui-bizagi-wp-project-plan-activity-time .plan-time .remaining-days {
+    overflow: hidden;
+    width: 100%;
+}
+.ui-bizagi-wp-project-plan-activity-time .plan-time .remaining-days .days {
+    display: inline;
+    color: #374c58;
+    float: left;
+    font-size: 2.9em;
+    font-weight: bold;
+}
+.ui-bizagi-wp-project-plan-activity-time .plan-time .remaining-days .time-remaining {
+    padding-left: 0 !important;
+}
+.ui-bizagi-wp-project-plan-activity-time .plan-time .remaining-days .bar-completed {
+    border-radius: 4px;
+    background: #374c58;
+}
+.ui-bizagi-wp-project-plan-activity-time .plan-time .remaining-days .bar-completed.Red {
+    background: #f5645a;
+}
+.ui-bizagi-wp-project-plan-activity-time .plan-time .remaining-days .bar-completed.Yellow {
+    background: #f4aa34;
+}
+.ui-bizagi-wp-project-plan-activity-time .plan-time .remaining-days .bar-completed.Green {
+    background: #37b464;
+}
+.ui-bizagi-wp-project-plan-activity-progress .action-open-popup-edit-progress {
+    cursor: pointer;
+    float: right;
+    height: 20px;
+    width: 20px;
+}
+.ui-bizagi-wp-project-plan-activity-progress .plan-progress .remaining-days {
+    overflow: hidden;
+    width: 100%;
+}
+.ui-bizagi-wp-project-plan-activity-progress .plan-progress .remaining-days .days {
+    display: inline;
+    float: left;
+    font-size: 2.7em;
+    font-weight: bold;
+}
+.ui-bizagi-wp-project-plan-activity-progress .plan-progress .remaining-days .time-remaining {
+    padding-left: 0 !important;
+}
+.ui-bizagi-wp-project-plan-activity-progress .plan-progress .remaining-days .bar-fullTime {
+    border-radius: 4px;
+    background: rgba(55,76,88,.2);
+}
+.ui-bizagi-wp-project-plan-activity-progress .plan-progress .remaining-days .bar-completed {
+    transition: Width .4s;
+    background: #374c58;
+}
+.ui-bizagi-wp-project-plan-activity-progress .plan-progress .remaining-days .bar-completed.Red {
+    background: #f5645a;
+}
+.ui-bizagi-wp-project-plan-activity-progress .plan-progress .remaining-days .bar-completed.Yellow {
+    background: #f4aa34;
+}
+.ui-bizagi-wp-project-plan-activity-progress .plan-progress .remaining-days .bar-completed.Green {
+    background: #37b464;
+}
+#project-plan-activity-edit-progress-template-wrapper .ui-rubik-input {
+    background: #fafafa !important;
+    border-color: #ddd !important;
+    border-radius: 4px !important;
+    box-sizing: border-box;
+    color: #374c58;
+    font-size: 12px;
+    min-height: 32px !important;
+    width: 100%;
+}
+#project-plan-activity-edit-progress-template-wrapper .ui-rubik-h4 {
+    font-size: 1.5em;
+    margin: 1em 1.5em .5em;
+    color: #374c58;
+}
+#project-plan-activity-edit-progress-template-wrapper .ui-rubik-button {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: .5em;
+    padding: .6em 1.2em;
+    text-shadow: none;
+}
+#project-plan-activity-edit-progress-template-wrapper .ui-rubik-button-cancel {
+    background: #f2f2f2;
+    border-color: #374c58;
+    color: #374c58;
+}
+#project-plan-activity-edit-progress-template-wrapper .ui-rubik-button-cancel:hover {
+    background: #fafafa;
+    border-color: #31444e;
+}
+#project-plan-activity-edit-progress-template-wrapper .ui-rubik-button-accept:hover {
+    background: #4f6c7d;
+    border-color: #4f6c7d;
+    color: #fafafa;
+}
+#project-plan-activity-edit-progress-template-wrapper .ui-rubik-button-accept:hover:disabled {
+    background: #76a4be;
+    cursor: wait;
+}
+#project-plan-activity-edit-progress-template-wrapper .ui-bizagi-wp-project-footer-buttons {
+    text-align: right;
+    margin: 23px 39px 13px 0;
+}
+#project-plan-activity-edit-progress-template-wrapper .ui-wrapper-inputs {
+    height: 70px;
+    width: 80%;
+    margin: 0 auto;
+}
+#project-plan-activity-edit-progress-template-wrapper .ui-wrapper-inputs .text-right .percent-symbol {
+    font-size: 18px;
+    display: inline-block;
+    vertical-align: middle;
+}
+#project-plan-activity-edit-progress-template-wrapper .ui-wrapper-inputs .text-right input {
+    text-align: center;
+}
+#project-plan-activity-edit-progress-template-wrapper li.k-tick {
+    background: #fff;
+}
+#sliderProgress {
+    float: left;
+    clear: left;
+    width: 300px;
+    margin: 15px;
+    height: 7px;
+}
+#project-plan-activity-edit-progress-template-wrapper .ui-slider-range {
+    background: #1984c8;
+}
+#project-plan-activity-edit-progress-template-wrapper .ui-slider-handle {
+    border-color: #1984c8;
+}
+#project-plan-activity-edit-progress-template-wrapper .ui-slider-horizontal .ui-slider-handle {
+    background: #808080;
+    border-radius: 9px;
+    height: 15px;
+    margin-left: -2px;
+    top: -4px;
+    width: 15px;
+}
+#project-plan-activity-edit-progress-template-wrapper .ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all {
+    border: 1px solid #aaa;
+    background: #fff;
+    color: #222;
+    top: -12px;
+}
+#project-plan-activity-edit-progress-template-wrapper .ui-spinner {
+    border: 1px solid #dedede;
+    border-radius: 5px;
+}
+#project-plan-activity-edit-progress-template-wrapper .ui-spinner .ui-spinner-button {
+    height: 50%;
+    margin: 0;
+    position: absolute;
+    padding: 0;
+}
+#project-plan-activity-edit-progress-template-wrapper .ui-spinner .ui-spinner-button.ui-spinner-down {
+    bottom: -2px;
+}
+#project-plan-activity-edit-progress-template-wrapper .ui-spinner .ui-spinner-input {
+    font-size: 18px;
+    width: 70px;
+}
+#project-plan-activity-edit-progress-template-wrapper .step {
+    position: absolute;
+    margin-left: -2px;
+    text-align: center;
+    margin-top: 20px;
+}
+.ui-bizagi-wp-project-plan-activity-parent .sprite {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAmCAYAAAC29NkdAAAFWElEQVRYR+WYXWhcRRTH/zN3dxNsYz5s1zTNGmwhiq3b9d7dprHaSlpFtE9iBLEi4seDL1XxE19EoVgFC4IPfjxVKyKobypotUrLPuzee7fbxohiTVHb3cQ23dvt7mb37oyccCO3ae5+tFkNOBAIOzNnfvfMnDP/MwxLvLElzoe6gMPDwz2lUukxzvkWAJ2NfJAQwuac/9De3v7G4cOHzzUyx2tMTcBYLHazEOIzAFdf4iI/FwqFHePj479c4nxvDw4ODq7u6OhIA+gh41LKScbYH87/0vOLGVsG4HpXf7ZSqWxPp9PHLgXS04PRaHSvlPJJMiqEeKWzs/PVgwcP2g0swjRN+xbAbW5I27a3HTlyZKyB+RcM8QTUNG3c8URK13WVnNio8Ugk8qaiKE/NG5+RUo4YhkF2G26egKqqnmGMdTPGPkwmkw82bBFAJBLZoyjKcwvMOSWE2G6a5o+N2qsFOM0Y6wKwT9f1h8jgunXrlgcCgRHGmG/+ApzzUjKZ/IJ+rwFI3U15silATdM+ATC60NdLKU8ahrG6AUAKuJO2bd+STqd/q+fJpgBVVU0yxrTLBXTmHwsEAhvj8XixFmSzgAcYYyMeBk/rur6SgknTtBcB7K7nHSHEC6Zp7lk0wHA4fJ3f738YwEVnkBYJBAK74/H4mc2bN3cUCoVdnHM6w3ONMcbahBCb5nZBCPGlaZp3LRpgPY800j86OqocP378dwCrhBDfmKZ5+5ICJBhVVccYYzf8/wCj0Sgl32sA/JpMJveSN6LR6CMAbqq3vdVq9ZBpmh+31IOuNHNI1/VbabFaudENLYR4xzTNJwAwVVXTLdniaDSaEEJQHjxkGAbpw1lAKeW99TxYqVT2HT169FMAy8Ph8Mt+v3+wFWfQnTfnxENd0QtgEMAuAHdTiurv72fBYHCVlPI/jWIC7wZwB4BnAIQB+AHYPT091sDAAOnMxQXcsGHDfYyxlZzzU4ZhkNKmlHGnEGKte4ullNyyrN5MJrOlVCpFpJTLXf2tA2wkSIQQyOVymJqaQj6fJ2Ew/3ja3d3d+VAo1KUoygHTNLcvWqKuBUggMzMzyGazOHv2LGzbU3xLzrloa2tTFEWZyufzrwH4DsBPAC4SDk2JhVgstsa27XYpZSGVSk3Qlw8NDfVblhWcmJjYWi6XH6hWq5QTeb2odvVXKK8CeB/AR6QX3eq9KcAai24C8C5p2ibh3CbPOIDk0T//URhei6qqepGijsVisZmZmQ6fz5czDEOnueFweH02m902OTn5rJSyjxJxE96bP7RECh7A0wDOU2dTHvQ6g9VqdXR6eno2MAqFwmXwzU7NA6AS43Pa6kUBpDKAordYLCKTycCyLCpVPUEZYxQorFqtUogvxEBwjwP4qynAcDg84vP5KD2cTiQS3ztX3ZCUcrYWsW2bVSqVZZlMZjiXy1F+DAFQ5pFSmjnf29vbWSgUzBMnTnwFYBuA9QCucMaSXiRhfKAlZaejuOnOptqYbhK6UeYaJepzAwMD3Zzzr3VdJ0W9BgCpop0kZAHQe87zAN5rSeHukJDtfgD3OPfwtc7v9ooVKxAKhXyMsf2GYRAUNSoP7gfwEoCrnJrm9VY8fcw/e7TFNwKgQmqEc35lX19fIBgM0jndmUql9rsmBBwvUiH1FgBvwAUej6acx6OGn0DcpOVyuc2yrLVCiPauri4qsFIANuq6Tona3ejefhtAvOYW04xFeH67YGXXvZxWFGVHIpGgYFioDVHMAdDrJlV6wKxUKo9KKbc2+oDpsagUQmQVRfmyWCx+MDY2Vq6RMImL/kRdwBpG/pWuJQ/4N82h21ksU1NmAAAAAElFTkSuQmCC') no-repeat top left;
+    float: left;
+}
+.ui-bizagi-wp-project-plan-activity-parent .sprite.project-processState-parent-case {
+    background-position: 0 0;
+    width: 40px;
+    height: 38px;
+}
+.ui-bizagi-wp-project-plan-activity-parent .summaryLink {
+    font-size: 15px;
+    height: 45px;
+    overflow: hidden;
+    padding-top: 8px;
+    text-decoration: none;
+}
+.ui-bizagi-wp-project-plan-activity-parent .summaryLink>div.parentCase {
+    display: table;
+    height: 100%;
+    padding-left: 9px;
+}
+.ui-bizagi-wp-project-plan-activity-parent .summaryLink span {
+    color: #000;
+    display: table-cell;
+    font-weight: bold;
+    vertical-align: middle;
+}
+.ui-bizagi-wp-project-plan-activity-parent .summaryLink:hover span {
+    text-decoration: underline;
+}
+#ui-bizagi-render-activity-log .ui-dialog-buttonset {
+    text-align: center;
+    margin: 5px 0;
+}
+#ui-bizagi-render-activity-log .case-detail .title {
+    color: #666;
+    display: block;
+    padding: 3px 0;
+}
+#ui-bizagi-render-activity-log .main-menu {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+#activity-log-data-wrapper {
+    padding: 0 30px;
+}
+#ui-bizagi-render-activity-log .main-menu li {
+    display: inline-block;
+    margin-bottom: -2px;
+}
+#ui-bizagi-render-activity-log a {
+    text-decoration: none;
+}
+#ui-bizagi-render-activity-log .main-menu li a {
+    display: inline-block;
+    padding: 1em;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+}
+#ui-bizagi-render-activity-log .main-menu li a span {
+    vertical-align: middle;
+}
+#ui-bizagi-render-activity-log .header {
+    background-color: #ccc;
+    background-position: initial initial;
+    background-repeat: repeat no-repeat;
+    border-color: #b3b3b3;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    color: #2f526c;
+    font-weight: bold;
+    padding: 6px;
+}
+#ui-bizagi-render-activity-log .activity-log-table .listHeaderLinks {
+    padding: 1em;
+    vertical-align: middle;
+}
+#ui-bizagi-render-activity-log .activity-log-table .listHeaderLinks a {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+}
+#ui-bizagi-render-activity-log .activity-log-table tr[style="height:8px;"], #ui-bizagi-render-activity-log .activity-log-table .tdshadow {
+    display: none;
+}
+#ui-bizagi-render-activity-log .activity-log-table tr[class^="gridline"]>td {
+    padding: 1em;
+    word-wrap: break-word;
+    max-width: 250px;
+}
+#ui-bizagi-render-activity-log .activity-log-table tr[class^="gridline"]>td span {
+    color: #666;
+    display: block;
+}
+#ui-bizagi-render-activity-log .activity-log-table .icon {
+    width: 16px;
+    height: 16px;
+}
+#ui-bizagi-render-activity-log .activity-log-table .icon.reassigned-icon {
+    background: url('images/Reasign.gif') no-repeat;
+}
+#ui-bizagi-render-activity-log .activity-log-table .icon.annulated-icon {
+    background: url('images/BombilloAnulado.gif') no-repeat;
+}
+#activity-log-data-detail-header-wrapper {
+    overflow: hidden;
+    margin: 10px 0;
+}
+#activity-log-data-detail-header-wrapper #case-detail-wrapper {
+    float: left;
+}
+#activity-log-data-detail-header-wrapper #log-filter-wrapper {
+    float: right;
+    min-width: 275px;
+    margin-bottom: 5px;
+}
+#activity-log-data-detail-header-wrapper .filter-field {
+    overflow: hidden;
+}
+#activity-log-data-detail-header-wrapper .filter-field>input[type="text"] {
+    float: right;
+    width: 40%;
+    height: 24px;
+}
+#activity-log-data-detail-header-wrapper .filter-field>label {
+    float: left;
+    color: #444;
+    font-weight: bold;
+    height: 24px;
+    line-height: 24px;
+    text-align: left;
+}
+#ui-bizagi-render-activity-log .activity-log-table .activity-log-attribute-value-container {
+    max-width: 350px;
+    word-wrap: break-word;
+}
+#ui-bizagi-render-activity-log .activity-log-table .activity-log-attribute-value-container a {
+    text-decoration: underline;
+    font-weight: bold;
+}
+.ui-bizagi-wp-project-processmap-wrapper {
+    height: 100%;
+}
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-header .ui-bizagi-wp-project-processmap-title {
+    float: left;
+}
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-header .ui-bizagi-wp-project-processmap-navigation-buttons ul {
+    padding: 0;
+    margin: 0 0 1em;
+}
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-header.row {
+    margin: 0;
+}
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-navigation-buttons ul {
+    border-bottom: 1px solid #dcdcdc;
+    list-style: none;
+}
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-navigation-buttons ul li {
+    float: left;
+    margin-bottom: -1px;
+}
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-navigation-buttons ul li a {
+    display: block;
+    padding: 1em;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    margin-right: .6em;
+    text-decoration: none;
+    outline: 0;
+}
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-navigation-buttons ul li a:hover, .ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-navigation-buttons ul li a.selected {
+    border-color: #dcdcdc;
+    border-bottom-color: transparent;
+    background: #f5f5f5;
+    color: #234f6f;
+}
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-activity-map-content {
+    position: relative;
+    padding: 0 .9em;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background: #fff;
+    height: 100%;
+}
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-activity-map-content #bz-activity-map {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-activity-map-content #bz-activity-map svg {
+    cursor: move;
+}
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-content {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+.ui-bizagi-wp-project-processmap-wrapper [role="widget.bizagi.processviewer"] {
+    border-color: #eee;
+    border-radius: 0 0 4px 4px;
+    margin: 0;
+}
+.tree * {
+    margin: 0;
+    padding: 0;
+}
+.tree ul {
+    padding-top: 20px;
+    position: relative;
+    width: 100%;
+}
+.tree li {
+    float: left;
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 5px 0 5px;
+}
+.tree li:only-child {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.tree li.center {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.tree li::before, .tree li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    border-top: 2px solid #7f7f7f;
+    width: 50%;
+    height: 20px;
+}
+.tree li::after {
+    right: auto;
+    left: 50%;
+    border-left: 1px solid #7f7f7f;
+}
+.tree li:only-child::after, .tree li:only-child::before {
+    display: none;
+}
+.tree li:only-child {
+    padding-top: 0;
+}
+.tree li:first-child::before, .tree li:last-child::after {
+    border: 0 none;
+}
+.tree li:last-child::before {
+    border-right: 1px solid #7f7f7f;
+    border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after {
+    border-radius: 5px 0 0 0;
+}
+.tree ul ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 1px solid #7f7f7f;
+    width: 0;
+    height: 20px;
+}
+.tree li {
+    font-size: 1.2em;
+}
+.tree li a {
+    border: 2px solid #03689a;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: #3f5766;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #f2f4ff;
+}
+.tree li a:hover {
+    box-shadow: 0 0 8px rgba(107,166,196,.5);
+    -moz-box-shadow: 0 0 8px rgba(107,166,196,.5);
+    -webkit-box-shadow: 0 0 8px rgba(107,166,196,.5);
+}
+.tree li .arrow {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #7f7f7f;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%,0);
+    display: block;
+}
+.ui-bizagi-wp-project-processmap-subprocess-content {
+    overflow: auto;
+    position: relative;
+    width: 102%;
+    padding: 1.4em;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background: #fff;
+    height: 100%;
+}
+.bz-subprocess-map {
+    -webkit-backface-visibility: hidden;
+}
+.activity-map-activity-name {
+    fill: #374c58;
+}
+.activity-map-connector {
+    stroke: #7cb5ec;
+    stroke-width: 1px;
+}
+.activity-map-legend-title {
+    padding: 0;
+    margin: 0 0 .2em;
+    font-weight: normal;
+    font-size: 14px;
+    font-weight: bold;
+}
+#legend-box {
+    padding: 0 0 1em;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 1em;
+    background: #fff;
+    color: #374c58;
+    font-size: 11px;
+    padding-top: 1.4em;
+}
+.activity-map-legend-row {
+    width: 200px;
+    padding: 2px 5px 1px 3px;
+    color: #3f5766;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    display: inline-block;
+}
+.activity-map-legend-row-process {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 8px;
+    border-radius: 3px;
+    border-width: 2px;
+    border-style: solid;
+}
+.activity-map-legend-row-label {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 4px;
+}
+.activity-map-legend-row:hover, .activity-map-highlight {
+    background-color: #e5e9eb;
+    border: 1px solid #bdced9;
+}
+.activity-map-activity-highlight {
+    stroke: #1179e0;
+    stroke-opacity: .9;
+    stroke-width: 3;
+}
+.activity-map-activity-default-status {
+    stroke-opacity: 1;
+    stroke-width: 2;
+    fill-opacity: .5;
+}
+.activity-map-activity-date {
+    fill: #374c58;
+    fill-opacity: .3;
+}
+.activity-map-activity-time {
+    fill: #374c58;
+    fill-opacity: .4;
+}
+.activity-map-background-line {
+    stroke-dasharray: 10,4;
+    stroke-width: .5px;
+}
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-activity-map-content .bz-zoom-container, .ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-content .bz-zoom-container {
+    left: calc(50% - 150px);
+    bottom: 15px;
+    box-shadow: none;
+    opacity: .7;
+}
+.ui-bizagi-wp-project-processmap-content * {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-content .ui-bizagi-wp-project-processmap-process-diagram-content {
+    height: 100%;
+}
+.ui-bizagi-wp-project-processmap-wrapper .bz-zoom-container .ui-slider-horizontal .ui-slider-handle, .ui-bizagi-wp-project-processmap-content .bz-zoom-container .ui-slider-horizontal .ui-slider-handle {
+    background-color: #374c58;
+}
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-activity-map-content .bz-zoom-container:hover, .ui-bizagi-wp-project-processmap-content .bz-zoom-container:hover {
+    opacity: 1;
+}
+.ui-bizagi-wp-project-processmap-wrapper .bz-zoom-container {
+    left: 50% !important;
+    transform: translate(-50%,0);
+}
+.bz-zoom-container .ui-slider-horizontal {
+    height: 20px;
+}
+.ui-bizagi-wp-project-processmap-tooltip-content .ui-bizagi-wp-project-processmap-list dt, .ui-bizagi-wp-project-processmap-tooltip-content .ui-bizagi-wp-project-processmap-list dd {
+    float: left;
+    width: 50%;
+    margin: 2px 0;
+    font-size: 11px;
+}
+.ui-bizagi-wp-project-processmap-tooltip-content .ui-bizagi-wp-project-processmap-list dt {
+    clear: both;
+    width: 50%;
+}
+.ui-bizagi-wp-project-processmap-tooltip-content .ui-bizagi-wp-project-processmap-list dt {
+    padding: 8px 0;
+    box-sizing: border-box;
+    width: 35%;
+}
+.ui-bizagi-wp-project-processmap-tooltip-content .ui-bizagi-wp-project-processmap-list dd {
+    background-color: #f5f7f7;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    min-height: 29px;
+    width: 65%;
+}
+.ui-bizagi-wp-project-processmap-tooltip-content .ui-bizagi-wp-project-processmap-list dd a {
+    color: #1f74b2;
+    text-decoration: none;
+}
+.ui-bizagi-wp-project-processmap-tooltip-content .ui-bizagi-wp-project-processmap-list dd a:hover {
+    text-decoration: none;
+}
+.ui-bizagi-wp-project-processmap-tooltip-content .ui-bizagi-wp-project-processmap-list .ui-bizagi-wp-project-processmap-tooltip-assignee-name {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 5px;
+    width: 100%;
+    word-wrap: break-word;
+}
+.ui-bizagi-wp-project-processmap-tooltip-content .ui-bizagi-wp-project-processmap-list .ui-bizagi-wp-project-processmap-tooltip-assignee {
+    display: block;
+}
+.ui-bizagi-wp-project-processmap-tooltip {
+    min-width: 302px;
+    max-width: 650px;
+}
+.ui-bizagi-wp-project-processmap-tooltip-title {
+    margin-top: 7px;
+    padding-top: 0;
+    font-weight: normal;
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+.ui-bizagi-wp-project-processmap-list {
+    display: inline-block;
+    margin-top: 5px;
+    width: 100%;
+    margin-bottom: 0;
+}
+.ui-bizagi-wp-project-processmap-tooltip {
+    margin: 5px 5px 0 5px;
+}
+.ui-bizagi-wp-project-processmap-tooltip-assignee span:first-child {
+    display: inline-block;
+    margin-right: 7px;
+}
+.ui-bizagi-wp-project-processmap-tooltip-assignee span img {
+    width: 16px;
+}
+.sprite-activity-plan-sidebar {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAACeElEQVQ4T62VXW/SUBjHz5m4QiwhkJH0wml8iboLkY07vV3lLdQJNoXC+BTG72DipyAUbWqqKbIW2LV3zjLNjIkz0YyEZChZIIGi4ywHKamLJlB9rnpO+vye87yc/4EAAMDz/EWlrLzqdXsreG3XPB7PXjweT5RKpS8wn89f21LVZ+3DwyCAEAKE7HEhBAAh5PP5Ggxz9z4knM59YzC4DBcWABqN7EEnXibjHEm+hwAABCbRaJpO+f3+hmEYi/NEIAhi2G63A7VaTTazhgBCNE4fQpTf3FwuFArNeaDmv9ls9rxQKn0FCGEm+A2cyz5YKRalj9FolDAdSJJEkiQNU6lUwOEYQVF80WBZdrHX6+Fsx6aqqpHLsdeLwvMPM4OxE8uyQUmS3mIIy7KrkiTp1uC2weHwOl+tbgsYHA6vZ6vV7ZJtMD6FmSrDxCKKsqXidSKRiJXL5fE3Nhxg5hNjB47jbh0dfbtyZpH42Txo3tF39Ed4PxQKPaYo6vXxseHweNz7uOZ4f6YaY6goirp1OvCMYjs96xzHBUVRbMwEtjbLhP8NbDZzJjCGJZPJtU6nc5UgiB+tVuu2rusP8X4wGHyCS2EYxlmv1/tJluWdmUthNuRPzWMYJqooimareadHyTpuNE3z9Xr9qe1xs96qJJdck0X5zaREIZz+P4MtV3oVIQQxdO4rneX5C4IgHPwfEbLIZiQS2aAoarff788lmy6Xa9hqtQKapr2cyqbT5fo86PcvTYUey6gdQwiaDJIk92Amk7mhVTWx870TsMOb+vx6LIBvaWk3Ho1ujDU1nU4vVyqVSrfbvTl+TewYQsDtJt8xzL0Y7tMJOsD2keQ6QqYAAAAASUVORK5CYII=') no-repeat top left;
+}
+.sprite-activity-plan-sidebar.create {
+    background-position: 0 0;
+    float: left;
+    height: 22px;
+    margin-top: -2px;
+    width: 22px;
+}
+.ui-bizagi-wp-project-activity-plan-sidebar-h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+.ui-bizagi-wp-project-activity-plan-sidebar-actions {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#ui-bizagi-wp-project-homeportal-main i.bz-icon-right-outline.ui-bizagi-wp-arrow-left {
+    display: none;
+}
+#project-collapse-leftpanel .ui-bizagi-wp-project-panel-collapseicon i.bz-icon-left-outline.ui-bizagi-wp-arrow-left, #ui-bizagi-wp-project-homeportal-main i.bz-icon-left-outline.ui-bizagi-wp-arrow-left {
+    display: none;
+}
+.ui-bizagi-wp-project-activity-plan-icon span {
+    vertical-align: middle;
+}

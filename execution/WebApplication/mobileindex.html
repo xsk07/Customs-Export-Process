@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Bizagi</title>
+    </head>
+    <body>
+		<div>Hello Ws-federated user</div>
+        <script type="text/javascript" language="javascript">
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "Rest/Users/CurrentUser", true);
+            xhr.responseType = "json";
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == xhr.DONE) {
+                    try {
+                        window.parent.postMessage(xhr.response, "*");
+                    }
+                    catch (e) {
+                        window.parent.postMessage(e, "*");
+                    }
+                }
+            }
+            xhr.send();
+        </script>
+    </body>
+</html>

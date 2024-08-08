@@ -1,0 +1,4 @@
+#ui-bizagi-wp-project-activity-task_description_container #ui-bizagi-wp-project-activity-description-text,
+.box-description > dd > div > #ui-bizagi-wp-project-activity-description-text {
+    word-wrap: break-word;
+}

@@ -1,0 +1,18 @@
+﻿body
+{
+}
+ 
+
+/*  $__thumbnails
+-------------------------------------------------------------------------------------------------------------------------------------------*/
+.bz-wp-queryentities-thumbnails-item-actions
+{
+	background-image:url('images/overlay.png') !important;
+	background-repeat:repeat-x !important;
+	font-weight:bold !important;
+}
+
+.bz-wp-queryentities-thumbnails-item
+{
+	vertical-align : top !important;
+}

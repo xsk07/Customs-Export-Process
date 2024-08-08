@@ -1,0 +1,13 @@
+﻿{
+	"name": "helloWorld",
+	"js": [ {"src": "bizagi.webparts.helloWorld.js"},
+			{"src": "bizagi.webparts.helloWorld.override.js"}
+	],
+	"css": [ 
+	{"src": "bizagi.webpart.helloWorld.css"},
+	{"src": "bizagi.webpart.helloWorld.override.css"}
+	],
+	"tmpl": [ 
+		{alias: "helloWorld",  "src": "helloWorld.tmpl.html#ui-bizagi-webpart-helloWorld"} 
+	]
+}

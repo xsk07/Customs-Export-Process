@@ -1,0 +1,1075 @@
+{
+  "preview": "",
+  "theme": "6b72f0d0-c6b8-4bc9-8506-b20982643a00",
+  "displayName": "Travel and Living",
+  "footer": {
+    "id": "l456c970-1bf9-4a34-8d4c-e3cte09c8176",
+    "name": "",
+    "parametersBinding": {},
+    "parameters": {
+      "copyright": "Copyright © Bizagi | 2017",
+      "nSections": 2
+    },
+    "styles": {
+      "backColor": "#282828",
+      "contentFontColor": "#c7c7c7",
+      "contentFontSize": 12,
+      "height": 100,
+      "sectionFontColor": "#e9e9e9",
+      "sectionFontSize": 14,
+      "showCopyright": true
+    },
+    "type": "footer"
+  },
+  "header": {
+    "id": "938ed95c-36c7-43d1-808e-fa8d370d3eb3",
+    "name": "",
+    "navigation": [],
+    "parametersBinding": {},
+    "parameters": {
+      "heroImage": "",
+      "logo": "{{bzImagesSource}}2001c2f1-0761-47cf-902f-5552ed16902c/01fa896b-e71e-4894-96d1-d658422526b8.png{{/bzImagesSource}}"
+    },
+    "styles": {
+      "showLogo": true
+    },
+    "type": "header"
+  },
+  "images": [
+    "{{bzImagesSource}}2001c2f1-0761-47cf-902f-5552ed16902c/9a8b4fbd-a0f6-4c3e-b52c-07bcf91cdb77.jpg{{/bzImagesSource}}",
+    "{{bzImagesSource}}2001c2f1-0761-47cf-902f-5552ed16902c/8f5834ce-ddd2-40a8-900b-2d87f8fabd05.jpg{{/bzImagesSource}}",
+    "{{bzImagesSource}}2001c2f1-0761-47cf-902f-5552ed16902c/482b8aee-c911-45e3-bafa-71c25315a5dc.jpg{{/bzImagesSource}}"
+  ],
+  "sections": {
+    "explore": {
+      "displayName": "Explore",
+      "layouts": [
+        {
+          "id": "802f6bd3-996c-44be-a57b-f9f317f0787c",
+          "controls": [
+            {
+              "location": {
+                "height": 103,
+                "width": 119,
+                "x": 0,
+                "y": 75
+              },
+              "name": "Image Gallery",
+              "parametersBinding": {},
+              "parameters": {
+                "data": {
+                  "fixed": [
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/f4c276c9-2095-4881-80a3-910cffb25b1f.jpg",
+                      "title": "Paris"
+                    },
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/b64aeb86-40c7-4215-99a9-fc9a25b6560d.jpg",
+                      "title": "New York"
+                    },
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/423d0be6-329c-4d62-a43b-1fa65023017c.jpg",
+                      "title": "Italy"
+                    },
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/2437aac1-6221-4d17-809d-23cca1b02fd6.jpg",
+                      "title": "New Zeland"
+                    },
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/582e1674-9277-44d0-ae71-ad607d4fc7bc.jpg",
+                      "title": "Germany"
+                    },
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/7e86eb26-e25e-4e7d-95af-e84007d43b4a.jpg",
+                      "title": "China"
+                    },
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/9a8b4fbd-a0f6-4c3e-b52c-07bcf91cdb77.jpg",
+                      "title": "Tokyo"
+                    },
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/8f5834ce-ddd2-40a8-900b-2d87f8fabd05.jpg",
+                      "title": "Rome"
+                    },
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/482b8aee-c911-45e3-bafa-71c25315a5dc.jpg",
+                      "title": "Spain"
+                    }
+                  ]
+                }
+              },
+              "styles": {
+                "titleFontSize": "20px",
+                "titleColor": "color-first",
+                "backgroundColor": "color-third",
+                "showPagination": true,
+                "paginationSize": 3,
+                "columns": 3,
+                "layout": "four"
+              },
+              "type": "galleryLink",
+              "id": "453df026-6b34-4a44-333-1642551dff01",
+              "visibleTo": [
+                "ALL"
+              ]
+            },
+            {
+              "id": "453df026-6b34-4a44-9442-1642551dff01",
+              "location": {
+                "height": 4,
+                "width": 30,
+                "x": 0,
+                "y": 68
+              },
+              "name": "Text",
+              "parametersBinding": {},
+              "parameters": {
+                "text": "EXPLORE THE WORLD"
+              },
+              "styles": {
+                "align": "left",
+                "backColor": "rgba(0,0,0,0)",
+                "bold": true,
+                "fontColor": "color-first",
+                "fontFamily": "opensans",
+                "fontSize": "21px",
+                "textType": "title"
+              },
+              "type": "text",
+              "visibleTo": [
+                "ALL"
+              ]
+            },
+            {
+              "id": "c364fc93-0501-41ec-bdc2-92da878033a7",
+              "location": {
+                "height": 60,
+                "width": 120,
+                "x": 0,
+                "y": 0
+              },
+              "name": "Image Carousel",
+              "parametersBinding": {},
+              "parameters": {
+                "data": {
+                  "fixed": [
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/9a8b4fbd-a0f6-4c3e-b52c-07bcf91cdb77.jpg",
+                      "title": "NEW YORK"
+                    },
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/8f5834ce-ddd2-40a8-900b-2d87f8fabd05.jpg",
+                      "title": "ROME"
+                    },
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/482b8aee-c911-45e3-bafa-71c25315a5dc.jpg",
+                      "title": "FRANCE"
+                    }
+                  ]
+                }
+              },
+               "fields": {
+                  "image": {
+                    "active": true,
+                    "styles": {
+                      
+                    }
+                  },
+                  "title": {
+                    "active": true,
+                    "styles": {
+                      "fieldLabel": {
+                        "isActive": false,
+                        "text": "Label"
+                      }
+                    }
+                  }
+                },
+              "styles": {
+                "titleFontSize": "28px",
+                "titleColor": "#FFF",
+                "textFontSize": "14px",
+                "textColor": "#FFF",
+                "selectedImageColor": "color-second",
+                "columns": 3,
+                "showPagination": true,
+                "paginationSize": 3
+              },
+              "type": "imageCarousel",
+              "visibleTo": [
+                "ALL"
+              ]
+            }
+          ],
+          "displayName": "Explore",
+          "hero": {
+            "id": "776687f5-179e-4ef7-84a1-38b935c20c99",
+            "name": "",
+            "parametersBinding": {},
+            "parameters": {
+              "heroImage": "{{bzImagesSource}}2001c2f1-0761-47cf-902f-5552ed16902c/34ee3e91-4768-4d89-a9c2-849e1558f998.jpg{{/bzImagesSource}}"
+            },
+            "styles": {
+              "heroImageHeight": 200,
+              "showHeroImage": true
+            },
+            "type": "hero"
+          },
+          "preview": "{{bzImagesSource}}2001c2f1-0761-47cf-902f-5552ed16902c/45ea49ff-8df7-41c4-abcc-ccf40571bbd2.jpg{{/bzImagesSource}}"
+        },
+        {
+          "controls": [
+            {
+              "id": "802f6bd3-996c-44be-a57b-f9f317f0787c",
+              "location": {
+                "height": 81,
+                "width": 120,
+                "x": 0,
+                "y": 14
+              },
+              "name": "Image Gallery",
+              "parametersBinding": {},
+              "parameters": {
+                "data": {
+                  "fixed": [
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/f4c276c9-2095-4881-80a3-910cffb25b1f.jpg",
+                      "title": "Paris"
+                    },
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/b64aeb86-40c7-4215-99a9-fc9a25b6560d.jpg",
+                      "title": "New York"
+                    },
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/423d0be6-329c-4d62-a43b-1fa65023017c.jpg",
+                      "title": "Italy"
+                    },
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/2437aac1-6221-4d17-809d-23cca1b02fd6.jpg",
+                      "title": "New Zeland"
+                    },
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/582e1674-9277-44d0-ae71-ad607d4fc7bc.jpg",
+                      "title": "Germany"
+                    },
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/7e86eb26-e25e-4e7d-95af-e84007d43b4a.jpg",
+                      "title": "China"
+                    }
+                  ]
+                }
+              },
+              "styles": {
+                "titleFontSize": "20px",
+                "titleColor": "color-first",
+                "backgroundColor": "color-third",
+                "showPagination": true,
+                "paginationSize": 3,
+                "columns": 3,
+                "layout": "three"
+              },
+              "type": "galleryLink",
+              "visibleTo": [
+                "ALL"
+              ]
+            },
+            {
+              "id": "453df026-6b34-4a44-9442-1642551dff01",
+              "location": {
+                "height": 8,
+                "width": 120,
+                "x": 0,
+                "y": 0
+              },
+              "name": "Text",
+              "parametersBinding": {},
+              "parameters": {
+                "text": "CITIES OF THE WORLD"
+              },
+              "styles": {
+                "align": "center",
+                "backColor": "rgba(0, 0, 0, 0)",
+                "bold": true,
+                "fontColor": "rgb(66, 89, 104)",
+                "fontFamily": "opensans",
+                "fontSize": "42px",
+                "letterSpacing": 15,
+                "lineHeight": 1,
+                "textType": "paragraph"
+              },
+              "type": "text",
+              "visibleTo": [
+                "ALL"
+              ]
+            }
+          ],
+          "displayName": "Explore",
+          "hero": {
+            "id": "776687f5-179e-4ef7-84a1-38b935c20c99",
+            "name": "",
+            "parametersBinding": {},
+            "parameters": {
+              "heroImage": ""
+            },
+            "styles": {
+              "heroImageHeight": 200,
+              "showHeroImage": false
+            },
+            "type": "hero"
+          },
+          "id": "762df7d3-ca1a-4bb5-8904-5cb3d9a60239",
+          "preview": "{{bzImagesSource}}2001c2f1-0761-47cf-902f-5552ed16902c/67ebbaa4-e2d8-4e46-962e-d061ff097a40.jpg{{/bzImagesSource}}"
+        }
+      ]
+    },
+    "home": {
+      "displayName": "Home",
+      "layouts": [
+        {
+          "id": "1e8eba79-6d5f-412a-a54b-c3604d6eea20",
+          "preview": "{{bzImagesSource}}2001c2f1-0761-47cf-902f-5552ed16902c/d21aae4d-a9d5-4fd7-bc43-bb7b350a6b62.jpg{{/bzImagesSource}}",
+          "controls": [
+            {
+              "id": "1ae6c970-1bf9-4a34-8d4c-e4cae09c8328",
+              "location": {
+                "height": 20,
+                "width": 100,
+                "x": 9,
+                "y": 14
+              },
+              "name": "Text",
+              "parametersBinding": {},
+              "parameters": {
+                "text": "Using Banner Stands To Increase Trade Show Traffic"
+              },
+              "styles": {
+                "align": "center",
+                "backColor": "rgba(255,255,255,0)",
+                "bold": true,
+                "fontColor": "#fff",
+                "fontFamily": "nautilus",
+                "fontSize": "42px",
+                "lineHeight": 1,
+                "textType": "paragraph"
+              },
+              "type": "text",
+              "visibleTo": [
+                "ALL"
+              ]
+            },
+            {
+              "id": "4503aab2-ea92-4d07-ae08-20c9bd34275a",
+              "location": {
+                "height": 7,
+                "width": 40,
+                "x": 40,
+                "y": 3
+              },
+              "name": "Text",
+              "parametersBinding": {},
+              "parameters": {
+                "text": "Title 1"
+              },
+              "styles": {
+                "align": "center",
+                "backColor": "rgba(223,151,151,0)",
+                "bold": true,
+                "fontColor": "#fff",
+                "fontFamily": "nautilus",
+                "fontSize": "42px",
+                "lineHeight": 1,
+                "textType": "title"
+              },
+              "type": "text",
+              "visibleTo": [
+                "ALL"
+              ]
+            },
+            {
+              "id": "a0263d61-84f1-43a2-978f-c338d750541d",
+              "location": {
+                "height": 6,
+                "width": 18,
+                "x": 50,
+                "y": 34
+              },
+              "name": "Button",
+              "link": {
+                "type": ""
+              },
+              "parametersBinding": {},
+              "parameters": {
+                "link": "#",
+                "text": "VIEW MORE"
+              },
+              "styles": {
+                "fontSize": "14px",
+                "fontColor": "color-sixth",
+                "backColor": "color-second",
+                "align": "center",
+                "border": "border-btn",
+                "borderRadius": 5
+              },
+              "type": "button",
+              "visibleTo": [
+                "ALL"
+              ]
+            },
+            {
+              "actions": {
+                "onSearch": {
+                  "type": "changeProperty"
+                }
+              },
+              "id": "be5175cc-bc55-4fa7-8ebe-b3a64fd9d2fc",
+              "location": {
+                "height": 16,
+                "width": 120,
+                "x": 0,
+                "y": 44
+              },
+              "name": "Search",
+              "parametersBinding": {},
+              "parameters": {
+                "searchButtonName": "Search",
+                "searchPlaceholder": "Type something"
+              },
+              "styles": {
+                "backColor": "color-sixth",
+                "buttonBackColor": "color-second",
+                "buttonFontColor": "color-sixth"
+              },
+              "type": "search",
+              "visibleTo": [
+                "ALL"
+              ]
+            },
+            {
+              "id": "6f8da879-60ec-43ff-8110-4c5960cd15e4",
+              "location": {
+                "height": 4,
+                "width": 16,
+                "x": 0,
+                "y": 118
+              },
+              "name": "Text",
+              "parametersBinding": {},
+              "parameters": {
+                "text": "ROOMS"
+              },
+              "styles": {
+                "align": "left",
+                "backColor": "rgba(0,0,0,0)",
+                "bold": true,
+                "fontColor": "color-first",
+                "fontFamily": "opensans",
+                "fontSize": "22px",
+                "lineHeight": 1,
+                "textType": "paragraph"
+              },
+              "type": "text",
+              "visibleTo": [
+                "ALL"
+              ]
+            },
+            {
+              "id": "b3657168-1a00-4d79-85ab-702b110cbd78",
+              "location": {
+                "height": 41,
+                "width": 120,
+                "x": 0,
+                "y": 72
+              },
+              "name": "Image Gallery",
+              "parametersBinding": {},
+              "parameters": {
+                "data": {
+                  "fixed": [
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/423d0be6-329c-4d62-a43b-1fa65023017c.jpg",
+                      "title": "ITALY"
+                    },
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/2437aac1-6221-4d17-809d-23cca1b02fd6.jpg",
+                      "title": "NEW ZELAND"
+                    },
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/b64aeb86-40c7-4215-99a9-fc9a25b6560d.jpg",
+                      "title": "NEW YORK"
+                    }
+                  ]
+                }
+              },
+              "styles": {
+                "titleFontSize": "20px",
+                "titleColor": "color-first",
+                "backgroundColor": "color-third",
+                "showPagination": true,
+                "paginationSize": 3,
+                "columns": 3,
+                "layout": "three"
+              },
+              "type": "galleryLink",
+              "visibleTo": [
+                "ALL"
+              ]
+            },
+            {
+              "id": "649e540c-bfca-4349-b8cc-6303d4f7383d",
+              "location": {
+                "height": 5,
+                "width": 31,
+                "x": 0,
+                "y": 68
+              },
+              "name": "Text",
+              "parametersBinding": {},
+              "parameters": {
+                "text": "EXPLORE THE WORLD"
+              },
+              "styles": {
+                "align": "left",
+                "backColor": "rgba(0,0,0,0)",
+                "bold": true,
+                "fontColor": "color-first",
+                "fontFamily": "opensans",
+                "fontSize": "22px",
+                "textType": "title"
+              },
+              "type": "text",
+              "visibleTo": [
+                "ALL"
+              ]
+            },
+            {
+              "id": "17fdce10-15aa-457c-be24-649cfa47bff0",
+              "location": {
+                "height": 65,
+                "width": 120,
+                "x": 0,
+                "y": 122
+              },
+              "name": "List View",
+              "inputs": [
+                "parameters.filter"
+              ],
+              "parametersBinding": {},
+              "parameters": {
+                "data": {
+                  "fixed": [
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/0e2ec103-8c0b-4574-a341-2d7cc554a333.jpg",
+                      "info": "US $200",
+                      "text": "49 Reviews",
+                      "title": "Private Room in Cumbria"
+                    },
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/522bda7d-9ff3-4917-af33-00c3c2bea4ee.jpg",
+                      "info": "US $60",
+                      "text": "142 Reviews",
+                      "title": "Entire home/apt in Lloseta"
+                    },
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/774d0a47-c338-4646-9c8a-761c9735d91d.jpg",
+                      "info": "US $53",
+                      "text": "296 Reviews",
+                      "title": "Private room in Barcelona"
+                    }
+                  ]
+                },
+                "filter": ""
+              },
+              "fields": {
+                "image": {
+                  "active": true,
+                  "styles": {
+                    "imagesSize": "scale",
+                    "opacity": 100,
+                    "background": "rgba(0, 0, 0, 0)",
+                    "border": "border-none"
+                  }
+                },
+                "title": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "28px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-first",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                },
+                "text": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "12px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-sixth",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                },
+                "caption": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "28px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-first",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                }
+              },
+              "styles": {
+                "titleFontSize": "22px",
+                "titleColor": "color-first",
+                "textFontSize": "14px",
+                "textColor": "color-sixth",
+                "infoFontSize": "36px",
+                "infoColor": "color-first",
+                "backgroundColor": "color-fifth",
+                "layout": "three"
+              },
+              "type": "listView",
+              "visibleTo": [
+                "ALL"
+              ],
+              "layout": "one"
+            }
+          ],
+          "displayName": "Home",
+          "hero": {
+            "id": "de1534e7-5033-425b-8db8-5493643caa0e",
+            "name": "",
+            "parametersBinding": {},
+            "parameters": {
+              "heroImage": "{{bzImagesSource}}2001c2f1-0761-47cf-902f-5552ed16902c/1db2afe2-c0c0-41d6-900a-bc0148758f96.jpg{{/bzImagesSource}}"
+            },
+            "styles": {
+              "heroImageHeight": 510,
+              "showHeroImage": true
+            },
+            "type": "hero"
+          }
+        }
+      ]
+    },
+    "rooms": {
+      "displayName": "Rooms",
+      "layouts": [
+        {
+          "controls": [
+            {
+              "id": "6e8699d3-becf-4813-a137-5fdfd07f810d",
+              "location": {
+                "height": 4,
+                "width": 19,
+                "x": 0,
+                "y": 30
+              },
+              "name": "Text",
+              "parametersBinding": {},
+              "parameters": {
+                "text": "OUR ROOMS"
+              },
+              "styles": {
+                "align": "left",
+                "backColor": "rgba(0,0,0,0)",
+                "bold": true,
+                "fontColor": "color-first",
+                "fontFamily": "opensans",
+                "fontSize": "22px",
+                "lineHeight": 1,
+                "textType": "paragraph"
+              },
+              "type": "text",
+              "visibleTo": [
+                "ALL"
+              ]
+            },
+            {
+              "id": "db40fb19-e105-4dda-94a0-28dc19af6fa6",
+              "location": {
+                "height": 17,
+                "width": 120,
+                "x": 0,
+                "y": 5
+              },
+              "name": "Card Link",
+              "parametersBinding": {},
+              "parameters": {
+                "data": {
+                  "fixed": [
+                    {
+                      "icon": "t/2001c2f1-0761-47cf-902f-5552ed16902c/06f7b056-7f77-4672-9c04-f2fcec896b05.jpg",
+                      "label": "樱河之景」是坐落在Takase河岸",
+                      "title": "Sakura River View "
+                    },
+                    {
+                      "icon": "t/2001c2f1-0761-47cf-902f-5552ed16902c/84c67e06-f397-45c1-afa2-706df9819e22.jpg",
+                      "label": "(easy to Tokyo/Kyoto)",
+                      "title": "Yui Valley-Traditional"
+                    },
+                    {
+                      "icon": "t/2001c2f1-0761-47cf-902f-5552ed16902c/3c406b41-39fd-4974-81a8-aca45ff6bda4.jpg",
+                      "label": "「異喰館」",
+                      "title": "The Enclave"
+                    }
+                  ]
+                }
+              },
+              "styles": {
+                "fontSize": "16px",
+                "titleColor": "color-first",
+                "labelColor": "color-sixth",
+                "columns": 3,
+                "showPagination": true,
+                "paginationSize": 3,
+                "layout": "three"
+              },
+              "type": "cardLink",
+              "visibleTo": [
+                "ALL"
+              ]
+            },
+            {
+              "id": "484e3ae3-f700-4bf8-903c-077fe34da1ce",
+              "location": {
+                "height": 4,
+                "width": 26,
+                "x": 0,
+                "y": 1
+              },
+              "name": "Text",
+              "parametersBinding": {},
+              "parameters": {
+                "text": "ROOMS IN JAPAN"
+              },
+              "styles": {
+                "align": "left",
+                "backColor": "rgba(0,0,0,0)",
+                "bold": true,
+                "fontColor": "color-first",
+                "fontFamily": "opensans",
+                "fontSize": "22px",
+                "lineHeight": 1,
+                "textType": "paragraph"
+              },
+              "type": "text",
+              "visibleTo": [
+                "ALL"
+              ]
+            },
+            {
+              "id": "1ca7d241-e135-4d12-91ad-ff8e66398129",
+              "location": {
+                "height": 99,
+                "width": 120,
+                "x": 0,
+                "y": 34
+              },
+              "name": "List View",
+              "inputs": [
+                "parameters.filter"
+              ],
+              "parametersBinding": {},
+              "parameters": {
+                "data": {
+                  "fixed": [
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/021aea8e-2e3b-4b27-aa98-d3c58b45f6d3.jpg",
+                      "info": "$250",
+                      "text": "Our Junior Suites offer breathtaking views of the city skyline.",
+                      "title": "Junior Suite"
+                    },
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/74cbd09f-ac10-4f78-8e64-105d950f464b.jpg",
+                      "info": "$150",
+                      "text": "Our Standard Rooms are the perfect combination of function and comfort.",
+                      "title": "Standard Room"
+                    },
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/b9a6df86-1c6c-45b0-aecd-4fc559f568d7.jpg",
+                      "info": "$350",
+                      "text": "Our Superior Rooms are comfortable, roomy and elegant.",
+                      "title": "Superior Room"
+                    }
+                  ]
+                },
+                "filter": ""
+              },
+              "fields": {
+                "image": {
+                  "active": true,
+                  "styles": {
+                    "imagesSize": "scale",
+                    "opacity": 100,
+                    "background": "rgba(0, 0, 0, 0)",
+                    "border": "border-none"
+                  }
+                },
+                "title": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "28px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-first",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                },
+                "text": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "12px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-sixth",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                },
+                "caption": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "28px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-first",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                }
+              },
+              "styles": {
+                "titleFontSize": "22px",
+                "titleColor": "color-first",
+                "textFontSize": "14px",
+                "textColor": "color-sixth",
+                "infoFontSize": "36px",
+                "infoColor": "color-first",
+                "backgroundColor": "color-fifth",
+                "layout": "one"
+              },
+              "type": "listView",
+              "visibleTo": [
+                "ALL"
+              ],
+              "layout": "one"
+            }
+          ],
+          "displayName": "Rooms",
+          "hero": {
+            "id": "776687f5-179e-4ef7-84a1-38b935c20c99",
+            "name": "",
+            "parametersBinding": {},
+            "parameters": {
+              "heroImage": ""
+            },
+            "styles": {
+              "heroImageHeight": 540,
+              "showHeroImage": false
+            },
+            "type": "hero"
+          },
+          "id": "5542e107-d9b9-4880-89d0-35eb1ae3e78b",
+          "preview": "{{bzImagesSource}}2001c2f1-0761-47cf-902f-5552ed16902c/a9f84d43-36b3-4663-857c-7369b668a99b.jpg{{/bzImagesSource}}"
+        },
+        {
+          "controls": [
+            {
+              "id": "6e8699d3-becf-4813-a137-5fdfd07f810d",
+              "location": {
+                "height": 4,
+                "width": 20,
+                "x": 0,
+                "y": 56
+              },
+              "name": "Text",
+              "parametersBinding": {},
+              "parameters": {
+                "text": "OUR ROOMS"
+              },
+              "styles": {
+                "align": "left",
+                "backColor": "rgba(0,0,0,0)",
+                "bold": true,
+                "fontColor": "color-first",
+                "fontFamily": "opensans",
+                "fontSize": "22px",
+                "lineHeight": 1,
+                "textType": "paragraph"
+              },
+              "type": "text",
+              "visibleTo": [
+                "ALL"
+              ]
+            },
+            {
+              "id": "484e3ae3-f700-4bf8-903c-077fe34da1ce",
+              "location": {
+                "height": 13,
+                "width": 120,
+                "x": 0,
+                "y": 1
+              },
+              "name": "Text",
+              "parametersBinding": {},
+              "parameters": {
+                "text": "ROOMS"
+              },
+              "styles": {
+                "align": "center",
+                "backColor": "rgba(0,0,0,0)",
+                "bold": true,
+                "fontColor": "color-first",
+                "fontFamily": "opensans",
+                "fontSize": "72px",
+                "letterSpacing": 38,
+                "lineHeight": 1,
+                "textType": "paragraph"
+              },
+              "type": "text",
+              "visibleTo": [
+                "ALL"
+              ]
+            },
+            {
+              "id": "1ca7d241-e135-4d12-91ad-ff8e66398129",
+              "location": {
+                "height": 99,
+                "width": 120,
+                "x": 0,
+                "y": 61
+              },
+              "name": "List View",
+              "inputs": [
+                "parameters.filter"
+              ],
+              "parametersBinding": {},
+              "parameters": {
+                "data": {
+                  "fixed": [
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/021aea8e-2e3b-4b27-aa98-d3c58b45f6d3.jpg",
+                      "info": "$250",
+                      "text": "Our Junior Suites offer breathtaking views of the city skyline.",
+                      "title": "Junior Suite"
+                    },
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/74cbd09f-ac10-4f78-8e64-105d950f464b.jpg",
+                      "info": "$150",
+                      "text": "Our Standard Rooms are the perfect combination of function and comfort.",
+                      "title": "Standard Room"
+                    },
+                    {
+                      "image": "t/2001c2f1-0761-47cf-902f-5552ed16902c/b9a6df86-1c6c-45b0-aecd-4fc559f568d7.jpg",
+                      "info": "$350",
+                      "text": "Our Superior Rooms are comfortable, roomy and elegant.",
+                      "title": "Superior Room"
+                    }
+                  ]
+                },
+                "filter": ""
+              },
+              "styles": {
+                "titleFontSize": "22px",
+                "titleColor": "color-first",
+                "textFontSize": "14px",
+                "textColor": "color-sixth",
+                "infoFontSize": "36px",
+                "infoColor": "color-first",
+                "backgroundColor": "color-fifth",
+                "layout": "one"
+              },
+              "type": "listView",
+              "visibleTo": [
+                "ALL"
+              ],
+              "layout": "one"
+            },
+            {
+              "actions": {
+                "onSearch": {
+                  "type": "changeProperty"
+                }
+              },
+              "id": "ab4a9306-6a5b-47ab-8e88-25fd448129c7",
+              "location": {
+                "height": 16,
+                "width": 120,
+                "x": 0,
+                "y": 32
+              },
+              "name": "Search",
+              "parametersBinding": {},
+              "parameters": {
+                "searchButtonName": "Search",
+                "searchPlaceholder": "Search Room"
+              },
+              "styles": {
+                "backColor": "color-sixth",
+                "buttonBackColor": "color-second",
+                "buttonFontColor": "color-sixth"
+              },
+              "type": "search",
+              "visibleTo": [
+                "ALL"
+              ]
+            }
+          ],
+          "displayName": "Rooms",
+          "hero": {
+            "id": "776687f5-179e-4ef7-84a1-38b935c20c99",
+            "name": "",
+            "parametersBinding": {},
+            "parameters": {
+              "heroImage": "{{bzImagesSource}}2001c2f1-0761-47cf-902f-5552ed16902c/8651a041-d4a3-4620-8753-b2393ed3ace0.jpg{{/bzImagesSource}}"
+            },
+            "styles": {
+              "heroImageHeight": 414,
+              "showHeroImage": true
+            }
+          },
+          "type": "hero",
+          "id": "47e22a27-dcb5-417f-929c-1a0c58c648c0",
+          "preview": "{{bzImagesSource}}2001c2f1-0761-47cf-902f-5552ed16902c/143a69e9-dd00-45c4-a909-48841642c8de.jpg{{/bzImagesSource}}"
+        }
+      ]
+    }
+  }
+},

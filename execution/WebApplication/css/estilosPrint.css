@@ -1,0 +1,665 @@
+BODY
+{
+    background-color: #FFFFFF;
+    scrollbar-face-color: #C8C4EE;
+    scrollbar-arrow-color: #000084;
+    scrollbar-track-color: #EFE7F7;
+}
+P
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: navy;
+}
+P.PageBreak
+{
+    page-break-before: always;
+}
+A
+{
+    font-family: Tahoma, Verdana, Arial;
+    font-size: 12px;
+    color: navy;
+}
+A:hover
+{
+    font-family: Tahoma, Verdana, Arial;
+    font-size: 12px;
+    color: #0066FF;
+}
+.nblnk
+{
+    font-size: 12px;
+    color: navy;
+    font-family: Tahoma, Verdana, Arial;
+    text-decoration: none;
+}
+Table.nbTable
+{
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    vertical-align: baseline;
+    padding-top: 0px;
+    background-color: #d3d3d3;
+    text-align: center;
+}
+SELECT
+{
+    border-left: NAVY 1px solid;
+    border-right: NAVY 1px solid;
+    border-top: NAVY 1px solid;
+    border-bottom: NAVY 1px solid;
+    font-size: 9pt;
+    background: White;
+    color: #000000;
+    font-family: tahoma,sans-serif;
+}
+INPUT
+{
+    border-left: NAVY 1px solid;
+    border-right: NAVY 1px solid;
+    border-top: NAVY 1px solid;
+    border-bottom: NAVY 1px solid;
+    font-size: 9pt;
+    background: #FFFFFF;
+    color: #000000;
+    font-family: tahoma,sans-serif;
+}
+INPUT.edita
+{
+    font-family: Tahoma;
+    font-size: 9pt;
+}
+.filter
+{
+    border-left: NAVY 0px solid;
+    border-right: NAVY 0px solid;
+    border-top: NAVY 0px solid;
+    border-bottom: NAVY 0px solid;
+    font-size: 9pt;
+    background: #FFFFFF;
+    color: #000000;
+    font-family: tahoma,sans-serif;
+    width: 70;
+    height: 18;
+}
+TEXTAREA
+{
+    border-left: Navy 1px solid;
+    border-right: Navy 1px solid;
+    border-top: Navy 1px solid;
+    border-bottom: Navy 1px solid;
+    font-size: 9pt;
+    background: #FFFFFF;
+    color: Navy;
+    font-family: tahoma,sans-serif;
+}
+TD
+{
+    font-family: Tahoma, Helvetica;
+    font-size: 9pt;
+    color: navy;
+}
+.nbTD
+{
+    padding-right: 5px;
+    padding-left: 5px;
+    font-family: Tahoma, Verdana, Arial;
+    background-color: #f5f5f5;
+}
+TH
+{
+    font-family: Tahoma, Helvetica;
+    font-size: 9pt;
+    background-color: Navy;
+    color: #FFFFFF;
+}
+.header
+{
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 7pt;
+    background-color: NAVY;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+}
+.header02
+{
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    background-color: #4B569C;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+}
+.subheader
+{
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    background-color: NAVY;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.gridheader
+{
+    font-weight: bold;
+    font-size: 9pt;
+    color: #ffffff;
+    font-family: Tahoma, Helvetica;
+    background-color: #6699cc;
+    text-align: center;
+}
+.gridfilter
+{
+    font-weight: bold;
+    font-size: 9pt;
+    color: #ffffff;
+    font-family: Tahoma, Helvetica;
+    background-color: #CCCCCC;
+    text-align: center;
+}
+.gridfooter
+{
+    font-weight: bold;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    background-color: #6699cc;
+}
+.gridfooter02
+{
+    font-weight: bold;
+    font-size: 9pt;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    background-color: #7C8FD3;
+}
+.gridcolumn
+{
+}
+
+.gridalternatecolumn
+{
+}
+
+.headerlinks
+{
+    font-family: Tahoma, Helvetica;
+    font-size: 12px;
+    background-color: NAVY;
+    color: #CCCCCC;
+    font-weight: bold;
+    text-align: center;
+}
+.headerlinks:hover
+{
+    font-family: Tahoma, Helvetica;
+    font-size: 12px;
+    background-color: NAVY;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+}
+.gridline1
+{
+    background-color: #FFFFFF;
+}
+.gridline2
+{
+    background-color: #CCCCCC;
+}
+.gridline3
+{
+    background-color: #B3BED9;
+}
+.conts
+{
+    visibility: hidden;
+}
+.Amarillo
+{
+    font-size: 10pt;
+    color: Navy;
+    font-weight: bold;
+}
+.AmarilloPeq
+{
+    font-size: 9pt;
+    color: #FFCC00;
+    font-weight: bold;
+}
+.AmarilloClaro
+{
+    font-size: 10pt;
+    color: Navy;
+    font-weight: bold;
+}
+.Blanco
+{
+    color: #F1E8D1;
+    font-size: 9pt;
+    font-weight: bold;
+}
+
+.Amarillogrande
+{
+    font-size: 12pt;
+    color: #FFCC00;
+    font-weight: bold;
+}
+.gris
+{
+    font-size: 10pt;
+    color: #CCCCCC;
+    font-weight: normal;
+}
+.BlancoNObold
+{
+    color: #F1E8D1;
+    font-size: 9pt;
+    font-weight: normal;
+}
+.RojoBl
+{
+    font-weight: bold;
+    font-size: 9pt;
+    color: #ffffcc;
+}
+.sbttn
+{
+    font-size: 11px;
+    background: navy;
+    cursor: hand;
+    color: white;
+    font-family: tahoma,sans-serif;
+    width: 110px;
+    text-decoration: none;
+}
+.sbttnpeq
+{
+    font-size: 11px;
+    background: Navy;
+    cursor: hand;
+    color: white;
+    font-family: tahoma,sans-serif;
+    width: 50px;
+    text-decoration: none;
+}
+.sbttncons
+{
+    border-left: Navy 1px solid;
+    border-right: Navy 1px solid;
+    border-top: Navy 1px solid;
+    border-bottom: Navy 1px solid;
+    font-size: 11px;
+    background: #FFFFFF;
+    cursor: hand;
+    color: Navy;
+    font-family: tahoma,sans-serif;
+    width: 150px;
+    height: 25px;
+    text-decoration: none;
+}
+.sradio
+{
+    font-family: Tahoma;
+    font-weight: 400;
+    font-size: 9pt;
+    border: none;
+    background: none;
+    color: navy;
+}
+.bodyprintversion
+{
+    font-family: Arial;
+    font-size: 12px;
+    background-color: #FFFFFF;
+}
+.tdprintversion
+{
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+}
+.titulosPeqlink
+{
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    color: #000084;
+}
+.titulosPeqlink:hover
+{
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    color: #000084;
+    text-decoration: underline;
+}
+.Fecha
+{
+    font-size: 8pt;
+    font-weight: bold;
+}
+.ItemSeparator
+{
+    background-color: navy;
+}
+.conts
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+}
+.tab
+{
+    border-top: solid thin #E0E0E0;
+    border-right: solid thin gray;
+    border-left: solid thin #E0E0E0;
+    font-family: Verdana;
+    font-size: 10pt;
+    text-align: center;
+    font-weight: bold;
+    cursor: hand;
+    text-decoration: none;
+}
+.selTab
+{
+    border-left: solid thin white;
+    border-top: solid thin white;
+    border-right: solid thin black;
+    font-family: Verdana;
+    font-size: 10pt;
+    text-align: center;
+    font-weight: bold;
+    cursor: hand;
+    text-decoration: underline;
+}
+.tabContents
+{
+    border-left: solid thin white;
+    border-bottom: solid thin gray;
+    border-right: solid thin gray;
+}
+.PropGroup
+{
+    font-size: 10pt;
+    color: navy;
+    text-decoration: underline overline;
+}
+.PropGroupMO
+{
+    background: #0066FF;
+    color: #FFFFFF;
+}
+.tabstrip
+{
+    background-image: url( "tab.gif" );
+    position: relative;
+    top: 0;
+    margin: 1px 1px 1px 0px;
+    padding: 2px 0px 0px 0px;
+    border: 0;
+    font: 11px Tahoma;
+    text-align: center;
+    width: 150px;
+    height: 18px;
+}
+.tabstrip:hover
+{
+    background-image: url( "tab.hover.gif" );
+    position: relative;
+    top: 0;
+    margin: 1px 1px 1px 0px;
+    padding: 2px 0px 0px 0px;
+    border: 0;
+    font: 11px Tahoma;
+    text-align: center;
+    width: 150px;
+    height: 18px;
+}
+.seltabstrip
+{
+    background-image: url( "tab.active.gif" );
+    position: relative;
+    top: 1px;
+    margin: 1px 1px 1px 0px;
+    padding: 2px 0px 0px 0px;
+    border: 0;
+    font: 11px Tahoma;
+    text-align: center;
+    width: 150px;
+    height: 18px;
+    text-decoration: none;
+    cursor: hand;
+}
+img
+{
+    border: 0;
+}
+
+
+
+/* 
+** New Styles by Camilo Arenas
+** Without Media print in order to make sure of the compatibility with IE
+*/
+
+
+@media print
+{
+    table
+    {
+        width: auto;
+        max-width: 1130px;
+        word-wrap: break-word !important;
+    }
+    table tbody tr td table tbody tr td table tbody tr td table tbody tr td table tbody tr td table tbody tr td table tbody tr td, table tbody tr td table tbody tr td table tbody tr td table tbody tr td table tbody tr td
+    {
+        width: auto;
+        word-wrap: break-word !important;
+    }
+    td .headerlinks
+    {
+        padding-right: 20px !important;
+    }
+    A
+    {
+        font-size: 12px;
+    }
+    A:hover
+    {
+        font-size: 10px;
+    }
+    .nblnk
+    {
+        font-size: 10px;
+    }
+    SELECT
+    {
+        font-size: 9pt;
+    }
+    INPUT
+    {
+        font-size: 9pt;
+    }
+    INPUT.edita
+    {
+        font-size: 9pt;
+    }
+    .filter
+    {
+        font-size: 9pt;
+    }
+    TEXTAREA
+    {
+        font-size: 9pt;
+    }
+    TD
+    {
+        font-size: 9pt;
+    }
+    .nbTD
+    {
+    }
+    TH
+    {
+        font-size: 9pt;
+    }
+    .header
+    {
+        font-size: 7pt;
+    }
+    .header02
+    {
+        font-size: 9pt;
+    }
+    .subheader
+    {
+        font-size: 8pt;
+    }
+    .gridheader
+    {
+        font-size: 9pt;
+    }
+    .gridfilter
+    {
+        font-size: 9pt;
+    }
+    .gridfooter
+    {
+        font-size: 10px;
+    }
+    .gridfooter02
+    {
+        font-size: 9pt;
+    }
+    .gridcolumn
+    {
+    }
+    .gridalternatecolumn
+    {
+    }
+    .headerlinks
+    {
+        font-size: 10px;
+    }
+    .headerlinks:hover
+    {
+        font-size: 10px;
+    }
+    .gridline1
+    {
+    }
+    .gridline2
+    {
+    }
+    .gridline3
+    {
+    }
+    .conts
+    {
+    }
+    .Amarillo
+    {
+        font-size: 10pt;
+    }
+    .AmarilloPeq
+    {
+        font-size: 9pt;
+    }
+    .AmarilloClaro
+    {
+        font-size: 10pt;
+    }
+    .Blanco
+    {
+        font-size: 9pt;
+    }
+    .Amarillogrande
+    {
+        font-size: 10pt;
+    }
+    .gris
+    {
+        font-size: 10pt;
+    }
+    .BlancoNObold
+    {
+        font-size: 9pt;
+    }
+    .RojoBl
+    {
+        font-size: 9pt;
+    }
+    .sbttn
+    {
+        font-size: 9px;
+    }
+    .sbttnpeq
+    {
+        font-size: 9px;
+    }
+    .sbttncons
+    {
+        font-size: 9px;
+    }
+    .sradio
+    {
+        font-size: 9pt;
+    }
+    .bodyprintversion
+    {
+        font-size: 10px;
+    }
+    .tdprintversion
+    {
+        font-size: 9px;
+    }
+    .titulosPeqlink
+    {
+        font-size: 8pt;
+    }
+    .titulosPeqlink:hover
+    {
+        font-size: 8pt;
+    }
+    .Fecha
+    {
+        font-size: 8pt;
+    }
+    .ItemSeparator
+    {
+    }
+    .conts
+    {
+    }
+    .tab
+    {
+        font-size: 10pt;
+    }
+    .selTab
+    {
+        font-size: 10pt;
+    }
+    .tabContents
+    {
+    }
+    .PropGroup
+    {
+        font-size: 10pt;
+    }
+    .PropGroupMO
+    {
+    }
+    .tabstrip
+    {
+        font: 9px Tahoma;
+    }
+    .tabstrip:hover
+    {
+        font: 9px Tahoma;
+    }
+    .seltabstrip
+    {
+        font: 9px Tahoma;
+    }
+}

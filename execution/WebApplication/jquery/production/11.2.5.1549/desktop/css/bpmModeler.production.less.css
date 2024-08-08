@@ -1,0 +1,1084 @@
+@charset "UTF-8";
+html bpm-modeler * {
+    box-sizing: content-box;
+}
+bpm-modeler #bpm-toolbar {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    z-index: 1;
+}
+bpm-modeler #bpm-drawing {
+    position: relative;
+    width: calc(10%);
+    width: calc(100% - 90px);
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    margin-left: 90px;
+}
+bpm-modeler move-helper>* {
+    position: absolute;
+    display: inline-block;
+}
+bpm-modeler move-helper .bpm-move:hover {
+    background: rgba(216,213,213,.25);
+    cursor: pointer;
+}
+bpm-modeler move-helper .bpm-move:after {
+    content: ' ';
+    width: 0;
+    height: 0;
+    border-left: 24px solid transparent;
+    border-right: 24px solid transparent;
+    border-top: 24px solid transparent;
+    border-bottom: 24px solid transparent;
+    position: absolute;
+    visibility: hidden;
+}
+bpm-modeler move-helper .bpm-move:hover:after {
+    visibility: visible;
+}
+bpm-modeler move-helper move-top {
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 32px;
+}
+bpm-modeler move-helper move-top.bpm-move:after {
+    border-top: none;
+    border-bottom: 24px solid rgba(38,93,149,.5);
+    left: calc(26%);
+    left: calc(50% - 24px);
+}
+bpm-modeler move-helper move-left {
+    top: 0;
+    bottom: 0;
+    width: 32px;
+}
+bpm-modeler move-helper move-left.bpm-move:after {
+    border-left: none;
+    border-right: 24px solid rgba(38,93,149,.5);
+    top: calc(26%);
+    top: calc(50% - 24px);
+}
+bpm-modeler move-helper move-right {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 32px;
+}
+bpm-modeler move-helper move-right.bpm-move:after {
+    border-right: none;
+    border-left: 24px solid rgba(38,93,149,.5);
+    top: calc(26%);
+    top: calc(50% - 24px);
+}
+bpm-modeler move-helper move-bottom {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 32px;
+}
+bpm-modeler move-helper move-bottom.bpm-move:after {
+    border-bottom: none;
+    border-top: 24px solid rgba(38,93,149,.5);
+    left: calc(26%);
+    left: calc(50% - 24px);
+}
+bpm-modeler .bpm-StartEvent {
+    color: #69af19;
+}
+bpm-modeler .bpm-IntermediateEvent.bpm-aura-intermediate-icon {
+    color: #9ca613;
+}
+bpm-modeler #bpm-toolbar .bpm-IntermediateEvent {
+    text-align: center;
+    width: 50px;
+    padding-top: 10px;
+    height: 39px;
+    padding-bottom: 10px;
+}
+bpm-modeler #bpm-toolbar .bpm-IntermediateEvent svg circle {
+    cursor: move;
+    cursor: -webkit-grab;
+}
+bpm-modeler drawing item.bpm-IntermediateEvent path {
+    stroke: initial;
+    stroke-width: initial;
+    display: initial;
+}
+.browser-ie11 bpm-modeler drawing item.bpm-IntermediateEvent path {
+    display: block;
+}
+bpm-modeler drawing item.bpm-IntermediateEvent.ui-draggable-dragging {
+    border: initial;
+    color: initial;
+    background-color: initial;
+}
+.browser-ie11 bpm-modeler drawing item.bpm-IntermediateEvent.ui-draggable-dragging {
+    border: transparent;
+    color: transparent;
+    background-color: transparent;
+}
+bpm-modeler drawing item.bpm-IntermediateEvent.ui-draggable-dragging svg {
+    width: 40px;
+    height: 40px;
+}
+bpm-modeler drawing item.bpm-IntermediateEvent.ui-draggable-dragging::before {
+    padding: 9px;
+}
+bpm-modeler drawing item.bpm-IntermediateEvent {
+    font-size: initial;
+}
+bpm-modeler .bpm-IntermediateEvent path {
+    stroke: initial;
+    stroke-width: initial;
+}
+.browser-ie11 bpm-modeler .bpm-IntermediateEvent path {
+    stroke: none;
+}
+bpm-modeler .bpm-IntermediateEvent svg {
+    width: 32px;
+}
+bpm-modeler drawing .bpm-IntermediateEvent svg {
+    width: 34px;
+}
+bpm-modeler .bpm-EndEvent, bpm-modeler .bpm-TerminateEvent {
+    color: #8d0204;
+}
+bpm-modeler .bpm-ExclusiveGateway, bpm-modeler .bpm-InclusiveGateway, bpm-modeler .bpm-ParallelGateway, bpm-modeler .bpm-ComplexGateway {
+    color: #9ca411;
+}
+bpm-modeler .bpm-InclusiveGateway, bpm-modeler .bpm-ComplexGateway {
+    display: none !important;
+}
+bpm-modeler .bpm-UserTask {
+    color: #265d95;
+}
+bpm-modeler toolbar {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,.3);
+    width: 48px;
+    display: inline-block;
+    padding: 10px 5px 10px 2px;
+}
+bpm-modeler toolbar item {
+    margin: 10px 0;
+    font-size: 36px;
+    display: inline-block;
+    border: solid 1px transparent;
+    cursor: move;
+    cursor: -webkit-grab;
+}
+bpm-modeler toolbar item:hover {
+    border: solid 1px #ccc;
+    border-radius: 2px;
+}
+bpm-modeler toolbar item bpm-EndEvent {
+    border: 1px solid #ab0b0b;
+    background-color: #fe9e9e;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.28);
+}
+bpm-modeler drawing {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-family: "Open Sans","Helvetica Neue",Arial,Helvetica,sans-serif;
+}
+bpm-modeler drawing item {
+    position: absolute;
+    font-size: 40px;
+    border: 1px dashed transparent;
+    width: 32px;
+    height: 32px;
+    cursor: move;
+}
+.browser-ie11 bpm-modeler drawing item.bpm-IntermediateEvent {
+    font-size: medium;
+}
+bpm-modeler drawing item :nth-child(4) {
+    display: none;
+}
+bpm-modeler drawing item:before {
+    border: 1px dashed transparent !important;
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 6px;
+    top: -6px;
+    left: -6px;
+    z-index: 1;
+}
+bpm-modeler drawing item.active:before {
+    border: 1px dashed #265d95 !important;
+}
+bpm-modeler drawing item:hover:before {
+    border: 1px dashed #ffbaba !important;
+}
+bpm-modeler drawing item.dragging-arrow:before {
+    border: 1px dashed #00568c !important;
+}
+bpm-modeler drawing item label {
+    color: #333;
+    position: relative;
+    display: block;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 5px;
+    cursor: move;
+}
+bpm-modeler drawing item.bpm-UserTask, bpm-modeler drawing item.bpm-EmailTask {
+    color: #265d95;
+    border: 1px solid #00568c;
+    border-radius: 5px;
+    width: 120px;
+    max-width: 200px;
+    height: 70px;
+    background-color: #f8f9ff;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.5);
+}
+bpm-modeler drawing item.bpm-UserTask.active:before {
+    border: 1px dashed transparent !important;
+    content: ' ';
+    position: absolute;
+    width: 89%;
+    height: 83%;
+    padding: 6px;
+    border-radius: 5px;
+    box-shadow: 0 0 4px 0 #3dadcf;
+    top: 0;
+    left: 0;
+}
+bpm-modeler drawing item.bpm-IntermediateEvent label {
+    position: absolute;
+    top: calc(29%);
+    top: calc(30% - 1px);
+    text-align: center;
+    width: 100px;
+    height: 20px;
+    margin: 31px -34px 0;
+    cursor: pointer;
+    line-height: 1.2;
+    word-wrap: break-word;
+    z-index: 1;
+    font-size: 12px;
+}
+bpm-modeler drawing item.bpm-UserTask label, bpm-modeler drawing item.bpm-EmailTask label {
+    position: absolute;
+    top: calc(22%);
+    top: calc(30% - 8px);
+    text-align: center;
+    width: calc(80%);
+    width: calc(100% - 20px);
+    height: 20px;
+    color: #4a4a4a;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 10px;
+    cursor: pointer;
+    line-height: 1.2;
+    word-wrap: break-word;
+}
+bpm-modeler drawing item.bpm-IntermediateEvent input, bpm-modeler drawing item.bpm-ExclusiveGateway input, bpm-modeler drawing item.bpm-ParallelGateway input {
+    position: absolute;
+    text-align: center;
+    width: 100px;
+    margin: 30px -32px;
+    font-size: 13.3333px;
+    line-height: normal;
+    min-height: 15px;
+    padding: 0;
+    z-index: 999;
+}
+bpm-modeler drawing item.bpm-UserTask duration {
+    color: #425ba0;
+    position: absolute;
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: move;
+    top: calc(72%);
+    top: calc(80% - 8px);
+    text-align: right;
+    width: calc(80%);
+    width: calc(100% - 20px);
+    margin: 0 10px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+}
+bpm-modeler drawing item.bpm-EmailTask i {
+    position: absolute;
+    display: block;
+    color: #265d95;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: move;
+    top: calc(72%);
+    top: calc(80% - 8px);
+    text-align: center;
+    width: calc(80%);
+    width: calc(100% - 20px);
+    margin: 0 10px;
+    font-weight: bold;
+    cursor: pointer;
+    right: 40%;
+    top: 1px;
+}
+bpm-modeler drawing item.bpm-UserTask input, bpm-modeler drawing item.bpm-EmailTask input {
+    position: absolute;
+    text-align: center;
+    width: calc(80%);
+    width: calc(100% - 20px);
+    margin: 0 10px;
+    font-size: 13.3333px;
+    line-height: normal;
+    min-height: 15px;
+    padding: 0;
+}
+bpm-modeler drawing item.bpm-UserTask input[type=text], bpm-modeler drawing item.bpm-EmailTask input[type=text] {
+    top: calc(22%);
+    top: calc(30% - 8px);
+}
+bpm-modeler .input__duration {
+    top: calc(72%) !important;
+    top: calc(80% - 8px) !important;
+}
+bpm-modeler drawing item.bpm-StartEvent, bpm-modeler drawing item.bpm-IntermediateEvent, bpm-modeler drawing item.bpm-EndEvent, bpm-modeler drawing item.bpm-TerminateEvent {
+    border-radius: 50px;
+}
+bpm-modeler drawing item.bpm-StartEvent {
+    border: 1px solid #63a915;
+    background-color: #fbffef;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.5);
+    border-radius: 50px;
+}
+bpm-modeler drawing item.bpm-EndEvent, bpm-modeler drawing item.bpm-TerminateEvent {
+    border: 3px solid #8d0204;
+    background-color: #f9eaea;
+}
+bpm-modeler drawing item.bpm-EndEvent {
+    border: 1px solid #ab0b0b;
+    background-color: #fe9e9e;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.28);
+}
+bpm-modeler drawing item.bpm-TerminateEvent:after {
+    content: ' ';
+    border-radius: 50px;
+    width: 24px;
+    height: 24px;
+    top: 4px;
+    left: 4px;
+    position: absolute;
+    background-color: #8d0204;
+}
+bpm-modeler drawing item.bpm-ExclusiveGateway, bpm-modeler drawing item.bpm-InclusiveGateway, bpm-modeler drawing item.bpm-ParallelGateway, bpm-modeler drawing item.bpm-ComplexGateway {
+    border-radius: 0;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    border: 2px solid transparent;
+}
+bpm-modeler drawing item gateway-helper {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    font-size: 58px;
+    transform: rotate(45deg) scale(.74);
+    background-color: #fdffe6 !important;
+    border: 2px solid #a2ac20 !important;
+    width: 32px;
+    height: 32px;
+    line-height: 29px;
+}
+bpm-modeler drawing item gateway-helper:after {
+    position: absolute;
+}
+bpm-modeler drawing item.bpm-ExclusiveGateway gateway-helper:after {
+    content: '';
+}
+bpm-modeler drawing item.bpm-ParallelGateway gateway-helper:after {
+    content: '+';
+    transform: rotate(-45deg) translateX(-1px);
+}
+bpm-modeler drawing item.bpm-InclusiveGateway gateway-helper:after {
+    content: ' ';
+    border-radius: 50px;
+    border: 2px solid #a2ac20;
+    width: 22px;
+    height: 22px;
+    top: 3px;
+    left: 3px;
+}
+bpm-modeler drawing item.bpm-ComplexGateway gateway-helper:after {
+    content: '*';
+    top: 10px;
+    font-family: monospace;
+    transform: rotate(-15deg);
+    left: 3px;
+}
+bpm-modeler path {
+    cursor: pointer;
+    z-index: 0;
+    stroke: #2c121c;
+    stroke-width: 1.5px;
+}
+bpm-modeler path:hover {
+    stroke-dasharray: 5;
+}
+bpm-modeler drawing connector.bpm-boolean svg path {
+    stroke-width: 2.5px;
+}
+bpm-modeler drawing connector.bpm-else svg path {
+    stroke-width: 2px;
+}
+bpm-modeler drawing connector.bpm-missing svg path {
+    stroke: #f44336;
+    stroke-width: 1px;
+}
+bpm-modeler drawing connector connector-label {
+    background-color: #fff;
+    font-family: monospace;
+    font-size: 12px;
+    color: #265d95;
+    border: 1px solid #808080;
+    padding: 1px 4px;
+    margin-left: -8px;
+    cursor: pointer;
+}
+bpm-modeler .bpm-modeler-readOnly drawing connector connector-label {
+    cursor: default;
+}
+.bpm-modeler-readOnly {
+    pointer-events: none;
+}
+bpm-modeler drawing connector:hover connector-label {
+    border-style: dashed;
+}
+bpm-modeler drawing aura {
+    position: absolute;
+    display: block;
+    max-width: 30px;
+    z-index: 1;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.3);
+}
+bpm-modeler drawing aura.bpm-aura-for-arrow special-options.bpm-show-rule-option {
+    width: 70px;
+    display: inline-block;
+    padding: 0;
+}
+bpm-modeler drawing aura.bpm-aura-for-arrow special-options.bpm-show-rule-option special-option {
+    border: none;
+    padding: 1px;
+    margin-left: 2px;
+}
+bpm-modeler drawing aura aura-option {
+    display: inline-block;
+    font-size: 20px;
+    padding: 0;
+    cursor: move;
+    cursor: -webkit-grab;
+    margin: 0 0 0 1px;
+    border-bottom: 1px solid #eee;
+}
+bpm-modeler drawing aura aura-option.bpm-option-arrow {
+    color: #444;
+    cursor: move;
+    cursor: -webkit-grab;
+    border: none;
+}
+bpm-modeler drawing aura aura-option.bpm-option-arrow.ui-draggable-dragging:before {
+    content: ' ';
+}
+bpm-modeler drawing aura aura-change-label {
+    color: #333;
+    font-size: 14px;
+    display: block;
+    text-align: left;
+    cursor: pointer;
+    margin-top: 10px;
+}
+bpm-modeler drawing aura aura-change {
+    display: none;
+}
+bpm-modeler drawing aura aura-change.visible {
+    display: block;
+    position: absolute !important;
+    z-index: 1;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px dotted #808080;
+    padding: 4px 8px 4px 8px;
+    width: 25px;
+}
+bpm-modeler drawing aura aura-change aura-change-to {
+    font-size: 24px;
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom: 4px;
+    margin-right: 4px;
+}
+bpm-modeler drawing aura aura-change aura-change-to:before {
+    margin: 0 !important;
+}
+bpm-modeler drawing aura special-options special-option {
+    margin: 0;
+    padding: 0 5px;
+    vertical-align: middle;
+    font-size: 100%;
+}
+bpm-modeler *+special-option {
+    border-left: 1px solid #ddd;
+    padding: 3px;
+}
+bpm-modeler drawing aura special-options special-option:before {
+    margin: 0 !important;
+}
+bpm-modeler drawing aura special-option.bpm-option-delete {
+    color: #808080;
+}
+bpm-modeler drawing aura special-option.bpm-option-delete:hover {
+    color: #000;
+}
+bpm-modeler drawing aura special-option.bpm-option-change {
+    font-size: 16px;
+    line-height: 20px;
+}
+bpm-modeler drawing aura special-option.bpm-option-rule {
+    color: #a2ac20;
+    margin-top: -4px;
+    margin-right: 6px;
+    cursor: pointer;
+}
+bpm-modeler dbpm-StartEvent {
+    border-left: none;
+    padding: 3px;
+}
+bpm-modeler drawing aura .bpm-option-else {
+    color: #808080;
+}
+bpm-modeler drawing aura .bpm-option-expression {
+    color: #265d95;
+}
+bpm-modeler drawing aura external-options {
+    margin: 0;
+    border-right: 1px solid #ddd;
+    padding: 0 0 4px;
+}
+bpm-modeler drawing aura external-options external-option {
+    margin: 0;
+    padding: 5px;
+    vertical-align: middle;
+}
+bpm-modeler drawing aura external-options external-option.bpm-form {
+    color: #3c9c16;
+}
+bpm-modeler drawing aura external-options external-option.bpm-assignee {
+    color: #9ca512;
+}
+bpm-modeler .label-ExclusiveGateway, bpm-modeler .label-ParallelGateway {
+    position: relative;
+    font-size: 12px;
+    width: 100px;
+    top: 33px;
+    right: 34px;
+    cursor: pointer;
+}
+bpm-modeler .connector-features {
+    position: relative;
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+    z-index: 9999;
+    right: 31px;
+    top: 40px;
+}
+bpm-modeler .label_connector_name, bpm-modeler .input--ConnectorName {
+    position: absolute;
+    font-size: 10px;
+    left: 50%;
+    top: -25px;
+    white-space: nowrap;
+}
+bpm-modeler .input--ConnectorName {
+    width: 100px;
+    height: 30px;
+}
+bpm-modeler .tooltip {
+    position: relative;
+}
+bpm-modeler .tooltip .tooltiptext {
+    visibility: hidden;
+    width: auto;
+    margin: 2px;
+    height: auto;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 2;
+    margin-left: -70px;
+    opacity: 0;
+    transition: opacity 1s;
+    border-radius: 3px;
+    background-color: #f6f3c8;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.22);
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 15px;
+    text-align: center;
+    color: #6f6a31;
+}
+bpm-modeler .tooltip .tooltiptext p {
+    white-space: nowrap;
+    margin: 3px;
+    color: #6f6a31;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 15px;
+    text-align: center;
+}
+bpm-modeler .tooltip-right {
+    top: -25px;
+    left: 100px;
+}
+bpm-modeler .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+bpm-modeler .wrapper-options {
+    position: absolute;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 1px 0 3px 0 rgba(0,0,0,.3);
+    padding-left: 7px;
+}
+bpm-modeler .popup__confirmationDelete {
+    position: absolute;
+    display: none;
+    height: auto;
+    width: 200px;
+    padding: 0 9px 5px;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.14),0 3px 4px 0 rgba(0,0,0,.12),0 1px 5px 0 rgba(0,0,0,.2);
+    z-index: 2;
+}
+bpm-modeler .popup__confirmationDelete p {
+    width: 100%;
+    color: #4a4a4a;
+    font-family: "Open Sans";
+    font-size: 10px;
+    line-height: 14px;
+    text-align: center;
+}
+bpm-modeler .popup__confirmationDelete p span {
+    color: #b11c1c;
+}
+bpm-modeler .popup__confirmationDelete .contentButtons {
+    width: 112px;
+    display: block;
+    margin: 0 auto;
+}
+bpm-modeler .popup__confirmationDelete .downArrow {
+    position: absolute;
+    bottom: -10px;
+    left: 96px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgba(175,175,175,.51);
+}
+bpm-modeler .btn {
+    display: inline-block;
+    margin: 5px;
+    width: 30px;
+    height: auto;
+    border-radius: 3px;
+    background-color: #fdfdfd;
+    font-size: 9px;
+    font-weight: 600;
+    line-height: 13px;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+bpm-modeler .btn__confirmation--yes {
+    color: #ab0b0b;
+    border: 1px solid #ab0b0b;
+    background-color: #ffd9d9;
+}
+bpm-modeler .btn__confirmation--no {
+    color: #4a4a4a;
+    border: 1px solid #dedede;
+    background-color: #fdfdfd;
+}
+bpm-modeler .ico_mail {
+    color: #265d95;
+}
+bpm-modeler .bpmn-icon-trash--arrow {
+    margin-left: -5px;
+}
+bpm-modeler .bpmn-icon-trash-StartEvent {
+    margin-left: -7px;
+}
+bpm-modeler .bpmn-icon-trash-ParallelGateway, bpm-modeler .bpmn-icon-trash-ExclusiveGateway, bpm-modeler .bpmn-icon-trash-EndEvent, bpm-modeler .bpmn-icon-trash-TerminateEvent {
+    border-left: 1px solid #ddd;
+    padding: 0 3px 1px;
+}
+bpm-modeler .rotateArrow {
+    bottom: 102px !important;
+    transform: rotate(180deg) scale(.938) skew(1deg) translate(0);
+    -webkit-transform: rotate(180deg) scale(.938) skew(1deg) translate(0);
+    -moz-transform: rotate(180deg) scale(.938) skew(1deg) translate(0);
+    -o-transform: rotate(180deg) scale(.938) skew(1deg) translate(0);
+    -ms-transform: rotate(180deg) scale(.938) skew(1deg) translate(0);
+}
+@font-face {
+    font-family: 'bpmn';
+    src: url('fonts/bpmn.eot?70672887');
+    src: url('fonts/bpmn.eot?70672887#iefix') format('embedded-opentype'),url('fonts/bpmn.woff?70672887') format('woff'),url('fonts/bpmn.ttf?70672887') format('truetype'),url('fonts/bpmn.svg?70672887#bpmn') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[class^="bpmn-icon-"]:before, [class*=" bpmn-icon-"]:before {
+    font-family: "bpmn";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.bpmn-icon-screw-wrench:before {
+    content: '';
+}
+.bpmn-icon-trash:before {
+    content: '';
+}
+.bpmn-icon-conditional-flow:before {
+    content: '';
+}
+.bpmn-icon-default-flow:before {
+    content: '';
+}
+.bpmn-icon-gateway-parallel:before {
+    content: '';
+}
+.bpmn-icon-intermediate-event-catch-cancel:before {
+    content: '';
+}
+.bpmn-icon-intermediate-event-catch-non-interrupting-message:before {
+    content: '';
+}
+.bpmn-icon-start-event-compensation:before {
+    content: '';
+}
+.bpmn-icon-start-event-non-interrupting-parallel-multiple:before {
+    content: '';
+}
+.bpmn-icon-loop-marker:before {
+    content: '';
+}
+.bpmn-icon-parallel-mi-marker:before {
+    content: '';
+}
+.bpmn-icon-start-event-non-interrupting-signal:before {
+    content: '';
+}
+.bpmn-icon-intermediate-event-catch-non-interrupting-timer:before {
+    content: '';
+}
+.bpmn-icon-intermediate-event-catch-parallel-multiple:before {
+    content: '';
+}
+.bpmn-icon-intermediate-event-catch-compensation:before {
+    content: '';
+}
+.bpmn-icon-gateway-xor:before {
+    content: '';
+}
+.bpmn-icon-connection:before {
+    content: '';
+}
+.bpmn-icon-end-event-cancel:before {
+    content: '';
+}
+.bpmn-icon-intermediate-event-catch-condition:before {
+    content: '';
+}
+.bpmn-icon-intermediate-event-catch-non-interrupting-parallel-multiple:before {
+    content: '';
+}
+.bpmn-icon-start-event-condition:before {
+    content: '';
+}
+.bpmn-icon-start-event-non-interrupting-timer:before {
+    content: '';
+}
+.bpmn-icon-sequential-mi-marker:before {
+    content: '';
+}
+.bpmn-icon-user-task:before {
+    content: '';
+}
+.bpmn-icon-business-rule:before {
+    content: '';
+}
+.bpmn-icon-sub-process-marker:before {
+    content: '';
+}
+.bpmn-icon-start-event-parallel-multiple:before {
+    content: '';
+}
+.bpmn-icon-start-event-error:before {
+    content: '';
+}
+.bpmn-icon-intermediate-event-catch-signal:before {
+    content: '';
+}
+.bpmn-icon-intermediate-event-catch-error:before {
+    content: '';
+}
+.bpmn-icon-end-event-compensation:before {
+    content: '';
+}
+.bpmn-icon-subprocess-collapsed:before {
+    content: '';
+}
+.bpmn-icon-subprocess-expanded:before {
+    content: '';
+}
+.bpmn-icon-task:before {
+    content: '';
+}
+.bpmn-icon-end-event-error:before {
+    content: '';
+}
+.bpmn-icon-intermediate-event-catch-escalation:before {
+    content: '';
+}
+.bpmn-icon-intermediate-event-catch-timer:before {
+    content: '';
+}
+.bpmn-icon-start-event-escalation:before {
+    content: '';
+}
+.bpmn-icon-start-event-signal:before {
+    content: '';
+}
+.bpmn-icon-business-rule-task:before {
+    content: '';
+}
+.bpmn-icon-manual:before {
+    content: '';
+}
+.bpmn-icon-receive:before {
+    content: '';
+}
+.bpmn-icon-call-activity:before {
+    content: '';
+}
+.bpmn-icon-start-event-timer:before {
+    content: '';
+}
+.bpmn-icon-start-event-message:before {
+    content: '';
+}
+.bpmn-icon-intermediate-event-none.bpm-aura-intermediate-icon:before {
+    content: '';
+}
+.bpmn-icon-intermediate-event-catch-link:before {
+    content: '';
+}
+.bpmn-icon-end-event-escalation:before {
+    content: '';
+}
+.bpmn-icon-text-annotation:before {
+    content: '';
+}
+.bpmn-icon-bpmn-io:before {
+    content: '';
+}
+.bpmn-icon-gateway-complex:before {
+    content: '';
+}
+.bpmn-icon-gateway-eventbased:before {
+    content: '';
+}
+.bpmn-icon-gateway-none:before {
+    content: '';
+}
+.bpmn-icon-gateway-or:before {
+    content: '';
+}
+.bpmn-icon-end-event-terminate:before {
+    content: '';
+}
+.bpmn-icon-end-event-signal:before {
+    content: '';
+}
+.bpmn-icon-end-event-none:before {
+    content: '';
+}
+.bpmn-icon-end-event-multiple:before {
+    content: '';
+}
+.bpmn-icon-end-event-message:before {
+    content: '';
+}
+.bpmn-icon-end-event-link:before {
+    content: '';
+}
+.bpmn-icon-intermediate-event-catch-message:before {
+    content: '';
+}
+.bpmn-icon-intermediate-event-throw-compensation:before {
+    content: '';
+}
+.bpmn-icon-start-event-multiple:before {
+    content: '';
+}
+.bpmn-icon-script:before {
+    content: '';
+}
+.bpmn-icon-manual-task:before {
+    content: '';
+}
+.bpmn-icon-send:before {
+    content: '';
+}
+.bpmn-icon-service:before {
+    content: '';
+}
+.bpmn-icon-receive-task:before {
+    content: '';
+}
+.bpmn-icon-user:before {
+    content: '';
+}
+.bpmn-icon-start-event-none:before {
+    content: '';
+}
+.bpmn-icon-intermediate-event-throw-escalation:before {
+    content: '';
+}
+.bpmn-icon-intermediate-event-catch-multiple:before {
+    content: '';
+}
+.bpmn-icon-intermediate-event-catch-non-interrupting-escalation:before {
+    content: '';
+}
+.bpmn-icon-intermediate-event-throw-link:before {
+    content: '';
+}
+.bpmn-icon-start-event-non-interrupting-condition:before {
+    content: '';
+}
+.bpmn-icon-data-object:before {
+    content: '';
+}
+.bpmn-icon-script-task:before {
+    content: '';
+}
+.bpmn-icon-send-task:before {
+    content: '';
+}
+.bpmn-icon-data-store:before {
+    content: '';
+}
+.bpmn-icon-start-event-non-interrupting-escalation:before {
+    content: '';
+}
+.bpmn-icon-intermediate-event-throw-message:before {
+    content: '';
+}
+.bpmn-icon-intermediate-event-catch-non-interrupting-multiple:before {
+    content: '';
+}
+.bpmn-icon-intermediate-event-catch-non-interrupting-signal:before {
+    content: '';
+}
+.bpmn-icon-intermediate-event-throw-multiple:before {
+    content: '';
+}
+.bpmn-icon-start-event-non-interrupting-message:before {
+    content: '';
+}
+.bpmn-icon-ad-hoc-marker:before {
+    content: '';
+}
+.bpmn-icon-service-task:before {
+    content: '';
+}
+.bpmn-icon-task-none:before {
+    content: '';
+}
+.bpmn-icon-compensation-marker:before {
+    content: '';
+}
+.bpmn-icon-start-event-non-interrupting-multiple:before {
+    content: '';
+}
+.bpmn-icon-intermediate-event-throw-signal:before {
+    content: '';
+}
+.bpmn-icon-intermediate-event-catch-non-interrupting-condition:before {
+    content: '';
+}
+.bpmn-icon-participant:before {
+    content: '';
+}
+.bpmn-icon-event-subprocess-expanded:before {
+    content: '';
+}
+.bpmn-icon-lane-insert-below:before {
+    content: '';
+}
+.bpmn-icon-space-tool:before {
+    content: '';
+}
+.bpmn-icon-connection-multi:before {
+    content: '';
+}
+.bpmn-icon-lane:before {
+    content: '';
+}
+.bpmn-icon-lasso-tool:before {
+    content: '';
+}
+.bpmn-icon-lane-insert-above:before {
+    content: '';
+}
+.bpmn-icon-lane-divide-three:before {
+    content: '';
+}
+.bpmn-icon-lane-divide-two:before {
+    content: '';
+}
+.bpmn-icon-data-input:before {
+    content: '';
+}
+.bpmn-icon-data-output:before {
+    content: '';
+}
+.bpmn-icon-hand-tool:before {
+    content: '';
+}
+.bpmn-icon-transaction:before {
+    content: '';
+}

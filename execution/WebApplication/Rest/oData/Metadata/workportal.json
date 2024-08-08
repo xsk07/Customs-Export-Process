@@ -1,0 +1,69 @@
+﻿{
+  "root": {
+    "inboxHeaders": {
+      "type": "collection",
+      "ref": "inboxHeaderItem"
+    },
+    "inboxData": {
+      "type": "collection",
+      "ref": "inboxDataItem"
+    },
+    "inboxHeadersDefault": {
+      "type": "collection",
+      "ref": "inboxHeaderItem"
+    },
+    "inboxDataDefault": {
+      "type": "collection",
+      "ref": "inboxDataItem"
+    },
+    "casesDefault": {
+      "type": "collection",
+      "ref": "inboxDataItem"
+    },
+	"cases": {
+		"type": "collection",
+		"ref": "inboxDataItem",
+	},
+		"casesbyProcesses": {
+			"type": "function",
+			"parameters": {},
+			"returnType": "collection",
+			"ref": "inboxDataItem",
+			"resultEntityPath": "cases"
+		},
+    "processes": {
+      "type": "collection",
+      "ref": "processItem"
+    }
+  },
+  "inboxHeaderItem": {
+    "id" : {	"type" : "property",	"ref" : "guid", "key": true},
+    "key" : {	"type" : "property",	"ref" : "string"	},
+    "category" : {	"type" : "property",	"ref" : "string"	},
+    "displayName" : {	"type" : "property",	"ref" : "string"	},
+    "type" : {	"type" : "property",	"ref" : "string"	}
+  },
+  "inboxDataItem": {
+    "id" : {	"type" : "property",	"ref" : "int", "key": true},    
+    "@opentype": true,
+    "@idCase" : {	"type" : "property",	"ref" : "int"	},
+    "@idWorkitem" : {	"type" : "property",	"ref" : "int"	}
+  },
+  "dataItem": {
+    "key":  {	"type" : "property",	"ref" : "string"},
+    "value":  {	"type" : "property",	"ref" : "string"},
+    "values":  {	"type" : "collection",	"ref" : "string"}
+  },
+  "processItem": {
+		"id" : {	"type" : "property",	"ref" : "guid", "key": true},
+		"name" : {	"type" : "property",	"ref" : "string"},
+		"displayName" : {	"type" : "property",	"ref" : "string"},
+		"context": { "type" :  "property", "ref" : "guid"},
+    "categoryName":  { "type" :  "property", "ref" : "string"},
+    "processId" : {	"type" : "property",	"ref" : "int"},
+    "inboxHeaders" : {	"type" : "collection",	"ref" : "inboxHeaderItem", "navigate": true},
+    "inboxData" : {	"type" : "collection",	"ref" : "inboxDataItem", "navigate": true},
+    "inboxDataDefault" : {	"type" : "collection",	"ref" : "inboxDataItem", "navigate": true},
+    "cases" : {	"type" : "collection",	"ref" : "inboxDataItem", "navigate": true}
+  }
+}

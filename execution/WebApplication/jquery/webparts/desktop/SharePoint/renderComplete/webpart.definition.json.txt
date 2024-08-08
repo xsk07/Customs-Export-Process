@@ -1,0 +1,38 @@
+﻿{
+	"name": "renderComplete",
+	"defaultDevice":"desktop",
+	"devices":{
+	    "desktop":{
+            "js": [ {"src": "bizagi.webparts.renderComplete.js"}],
+            "css": [ {"src": "bizagi.webpart.renderComplete.css"} ],
+			"theme": {"src": "bizagi.webpart.renderComplete.theme.less"},
+            "tmpl": [
+                {alias: "renderComplete",  "src": "renderComplete.tmpl.html#ui-bizagi-webpart-render-complete"}
+               ]
+	    },
+        "responsive":{
+            "js": [
+                {"src": "bizagi.webparts.renderComplete.js"},
+
+                {"src":"../../../../workportalflat/common/tablet/js/bizagi.workportal.webparts.tablet.facade.js" }
+                ],
+            "css": [ {"src": "bizagi.webpart.renderComplete.css"} ],
+            "tmpl": [
+                {alias: "renderComplete",  "src": "renderComplete.tmpl.html#ui-bizagi-webpart-render-complete"}
+               ]
+        },
+        "tablet_ios":{
+           "reuseResourceFrom":"responsive",
+        },
+        "tablet_android":{
+            "reuseResourceFrom":"responsive",
+        },
+        "smartphone_ios":{
+            "reuseResourceFrom":"responsive"
+        },
+        "smartphone_android":{
+            "reuseResourceFrom":"responsive"
+        }
+	},
+
+}

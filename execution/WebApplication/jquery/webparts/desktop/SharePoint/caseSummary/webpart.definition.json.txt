@@ -1,0 +1,22 @@
+﻿{
+	"name": "caseSummary",
+	"js": [
+		{"src": "bizagi.webparts.caseSummary.js"},
+		{"src": "../../../../overrides/js/desktop/sharePoint/caseSummary/bizagi.webparts.casesummary.override.js"},
+		{"src": "task.description/bizagi.workportal.desktop.widgets.task.description.js"}
+	],
+	"css": [ 
+		{"src": "bizagi.webpart.caseSummary.css"},
+		{"src": "task.description/task.description.css"}
+	 ],
+	"theme": {"src": "bizagi.webpart.caseSummary.theme.less"},
+	"tmpl": [ 
+		{alias: "caseSummary",  "src": "caseSummary.tmpl.html#ui-bizagi-webpart-case-summary"},
+		{alias: "subprocess",  "src": "caseSummary.tmpl.html#ui-bizagi-webpart-case-summary-subprocess"},
+		{alias: "assignees",  "src": "caseSummary.tmpl.html#ui-bizagi-webpart-case-summary-assignees"},
+		{alias: "events",  "src": "caseSummary.tmpl.html#ui-bizagi-webpart-case-summary-events"},
+		{alias: "summaryForm",  "src": "caseSummary.tmpl.html#ui-bizagi-webpart-case-summary-form"},
+		{alias: "activities",  "src": "caseSummary.tmpl.html#ui-bizagi-webpart-case-summary-activities"},
+		{alias: "task-description",  "src": "task.description/task.description.tmpl.html#task-description"}
+	]
+}

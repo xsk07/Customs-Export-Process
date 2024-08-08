@@ -1,0 +1,7 @@
+{
+  "bizagi-rateus-title": "Like using Bizagi?",
+  "bizagi-rateus-description": "Please take a minute to rate us!",
+  "bizagi-rateus-no": "NO THANKS",
+  "bizagi-rateus-yes": "YES",
+  "bizagi-rateus-later": "REMIND ME LATER"
+}

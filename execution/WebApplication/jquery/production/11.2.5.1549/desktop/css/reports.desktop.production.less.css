@@ -1,0 +1,73 @@
+@charset "UTF-8";
+.bz-wp-rp-tablet {
+    padding-top: 40px;
+}
+.ui-bizagi-wp-widget-reports-menu {
+    display: block;
+    padding: .5em 1.7em 0;
+    margin: 0;
+    background-color: #e6e6e6;
+    font-family: "Open Sans","Helvetica Neue",Arial,Helvetica,sans-serif;
+    list-style: none;
+}
+.ui-bizagi-wp-widget-reports-menu-disabled {
+    display: none;
+}
+.ui-bizagi-wp-widget-reports-menu li {
+    position: relative;
+    float: left;
+    display: inline-block;
+    padding: 1.4em 2.5em 1em;
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+.ui-bizagi-wp-widget-reports-menu li:hover, li.ui-bizagi-wp-widget-reports-menu-active {
+    background-color: #f2f2f2;
+    color: #444;
+}
+li.ui-bizagi-wp-widget-reports-menu-active::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 6px;
+}
+.ui-bizagi-wp-widget-reports-chart {
+    background-color: #f2f2f2;
+}
+#reports-canvas {
+    -webkit-overflow-scrolling: touch !important;
+    overflow-y: auto !important;
+}
+#bizagi-reporting-wrapper {
+    -webkit-overflow-scrolling: touch !important;
+    overflow-y: auto !important;
+    background-color: #f2f2f2;
+}
+.bz-rp-processviewer-canvas {
+    min-height: 400px;
+}
+.bz-rp-wrapper .ui-bizagi-loading-message {
+    position: static !important;
+}
+.bz-rp-wrapper .ui-bizagi-loading-message-center {
+    position: absolute;
+    top: 0 !important;
+    right: 0;
+    bottom: 0;
+    left: 0 !important;
+    display: block !important;
+    width: 32px;
+    height: 32px;
+    margin: auto;
+}
+.bz-rp-reports-menu .ui-bizagi-loading-message-center {
+    width: 18px;
+    height: 18px;
+}
+.bz-rp-reports-menu .ui-bizagi-loading-message {
+    min-height: 100px;
+}

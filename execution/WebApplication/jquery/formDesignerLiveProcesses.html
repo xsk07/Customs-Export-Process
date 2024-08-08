@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html class="html_formDesigner">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Forms Designer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="themes/bizagiDefault/devices/desktop/bizagi-font.css" />
+    <script src="bizagi.configuration.js"></script>
+    <script src="bizagi.loader.js"></script>
+    <script src="steal.js"></script>
+    <script src="editor/base/js/bizagi.form.modeler.js"></script>
+    <script>
+      var BIZAGI_PATH_TO_BASE = "../";
+      var BIZAGI_LOCAL_RESOURCES = true;
+      var BIZAGI_URL_REST_SERVICES = "";
+      var BIZAGI_ENVIRONMENT = 'release';
+      var BIZAGI_IDENTIFIER_MODEL = '';
+      var BIZAGI_USER = '';
+      var BIZAGI_ENABLE_LOG = false;
+      var BIZAGI_ACTION_VALIDATIONS_IMPR = false;
+      var loader = bizagi.loader;
+      loader.init(function() {
+      	loader.start("formDesignerLiveProcesses");
+      });
+    </script>
+  </head>
+  <body>
+    <div class="h-height-100percent biz-font biz-normal-font" id="wrapper-formdesigner"></div>
+  </body>
+</html>

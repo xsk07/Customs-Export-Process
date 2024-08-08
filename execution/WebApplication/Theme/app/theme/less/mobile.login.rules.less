@@ -1,0 +1,69 @@
+/***************************************************************
+**  Theme Mobile Devices Definitions
+**  CSS : LESS
+**  Common styles
+***************************************************************/
+
+
+.mixin-apply-color-lighten (@a,@b){
+    color:lighten(@a,@b);
+}
+.mixin-apply-color-darken (@a,@b){
+    color:darken(@a,@b);
+}
+
+
+body{
+    background: @mobile-login-background;    
+} 
+
+.bz-container-logo{
+    img{
+        background:@mobile-logo-bck!important;
+    }
+}
+
+.bz-form-login-button, 
+.bz-form-login-button-demo, 
+.bz-form-next-button{
+    background: @mobile-login-button;
+    color: @mobile-login-text;
+}
+
+label{
+    color: @mobile-login-text;
+}
+
+.bz-form-back-button,
+.bz-form-login-history-button{
+   color: @mobile-login-text;
+   border-color: @mobile-login-text;
+}
+
+.bz-form-login-inputs-container{
+    .bz-form-login{
+        background-color:@mobile-login-inputs;
+        color:@mobile-login-text;    
+    }
+
+    .bz-form-login::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+         color: fadeout(@mobile-login-text,60%);
+    }
+    .bz-form-login:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: fadeout(@mobile-login-text,60%);
+    }
+    .bz-form-login::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: fadeout(@mobile-login-text,60%);
+    }
+    .bz-form-login:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: fadeout(@mobile-login-text,60%);
+    }
+}
+
+
+.session,
+.form,
+.fields {
+    background-color:@mobile-login-error;
+    color:@mobile-login-error-label;
+ }

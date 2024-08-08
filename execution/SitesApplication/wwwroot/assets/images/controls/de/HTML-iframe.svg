@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="175px" height="35px" viewBox="0 0 175 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>website-iframe</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="250" height="569"></rect>
+        <filter x="-9.8%" y="-3.1%" width="119.6%" height="108.6%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.12 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter3"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter3" result="shadowBlurOuter3"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.14 0" type="matrix" in="shadowBlurOuter3" result="shadowMatrixOuter3"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter3"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Bizagi-Control-Embeds" transform="translate(-131.000000, -610.000000)">
+            <g id="Bizagi-controls-Experience-Elements" transform="translate(111.000000, 92.000000)">
+                <g id="Rectangle-38">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <g id="Group-16-Copy-2" transform="translate(17.000000, 488.000000)">
+                    <g id="Group" transform="translate(3.000000, 30.000000)">
+                        <rect id="Rectangle-3-[3-63-6]" stroke="#CFCFCF" fill="#F6F6F6" x="0.5" y="0.5" width="174" height="34" rx="4"></rect>
+                        <path d="M61,14 L64.4628906,14 L65.9658203,19.8798828 L67.8642578,14 L71.0898438,14 L73.0585938,19.8798828 L74.5615234,14 L77.9980469,14 L74.5615234,23.3339844 L71.3798828,23.3339844 L69.4902344,17.7177734 L67.6621094,23.3339844 L64.4628906,23.3339844 L61,14 Z M79.2892578,14 L82.7521484,14 L84.2550781,19.8798828 L86.1535156,14 L89.3791015,14 L91.3478515,19.8798828 L92.8507812,14 L96.2873046,14 L92.8507812,23.3339844 L89.6691406,23.3339844 L87.7794921,17.7177734 L85.9513671,23.3339844 L82.7521484,23.3339844 L79.2892578,14 Z M97.5785155,14 L101.041406,14 L102.544336,19.8798828 L104.442773,14 L107.668359,14 L109.637109,19.8798828 L111.140039,14 L114.576562,14 L111.140039,23.3339844 L107.958398,23.3339844 L106.06875,17.7177734 L104.240625,23.3339844 L101.041406,23.3339844 L97.5785155,14 Z" id="www" fill="#CFCFCF"></path>
+                    </g>
+                </g>
+                <g id="Group-16-Copy" transform="translate(16.000000, 407.000000)"></g>
+            </g>
+        </g>
+    </g>
+</svg>

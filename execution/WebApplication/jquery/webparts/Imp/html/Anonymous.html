@@ -1,0 +1,41 @@
+﻿
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script type='text/javascript' src='jQuery/steal.js'></script>
+    <script type='text/javascript' src='jQuery/bizagi.loader.js'></script>
+    <script type='text/javascript' src='jquery/webparts/desktop/portals/common/js/bizagi.loader.portal.js'></script>
+
+    <link href="jquery/workportal/css/desktop/bizagi.workportal.css" rel="stylesheet" type="text/css" />
+    <link href="jquery/workportal/css/desktop/bizagi.workportal.render.css" rel="stylesheet" type="text/css" />
+    <link href="jquery/themes/bizagiDefault/devices/desktop/default.less.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <script type="text/javascript" language="javascript">
+        var BIZAGI_USE_ABSOLUTE_PATH = false;
+        var BIZAGI_PATH_TO_BASE = "";
+        var BIZAGI_ENVIRONMENT = "release";
+        var BIZAGI_ENABLE_LOG = false;
+    </script>
+    
+    <div id="AnonymousCanvas"  class="ui-bizagi-container ui-bizagi-container-form ui-widget-content"  style="width: 92%;height: 750px;"></div>
+
+    <script type="text/javascript" language="javascript">
+        bizagi.initializeWorkportal({
+            whenInitialized: function (workportal) {
+                workportal.executeWebpart({
+                    webpart: "anonymous",
+                    canvas: $("#AnonymousCanvas"),
+                    idWfClass: 37 /*MP Short Booked process*/,
+
+                    buttonCaption: "New issue",
+                    createMessage: "Click on 'New issue' button to create an issue as a guest user...",
+                    finishMessage: "You have successfully created your issue. Click on 'New issue' button to create another one..."
+                });
+            }
+        });
+     </script>
+</body>
+</html>

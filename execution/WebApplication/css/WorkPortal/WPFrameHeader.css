@@ -1,0 +1,74 @@
+.WPFrameHeaderBody
+{
+    background-image: none;
+}
+
+.WPFrameHeaderBG
+{
+    height: 23px;
+    background-image: url(../../img/WorkPortal/FrameHeader/FrameHeaderBg.jpg);
+    background-position: top;
+    background-repeat: repeat-x;
+}
+
+.WPFrameHeaderLeftCorner
+{
+    float: left;
+    width: 15px;
+    height: 23px;
+    background-image: url(../../img/WorkPortal/FrameHeader/FrameHeaderLeft.jpg);
+    background-repeat: no-repeat;
+}
+
+.WPFrameHeaderRightCorner
+{
+    float: right;
+    width: 15px;
+    height: 23px;
+    background-image: url(../../img/WorkPortal/FrameHeader/FrameHeaderRight.jpg);
+    background-repeat: no-repeat;
+}
+
+.WPFrameHeaderButtons
+{
+    float: right;
+    height: 23px;
+}
+
+.WPFrameHeaderButton
+{
+    float: left;
+    margin-top: 5px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    text-decoration: none;
+}
+
+#WPHeaderRefresh:link, #WPHeaderRefresh:visited
+{
+    background-image: url(../../img/WorkPortal/FrameHeader/FrameHeaderRefresh.png);
+    background-repeat: no-repeat;
+}
+
+#WPHeaderRefresh:hover
+{
+    background-image: url(../../img/WorkPortal/FrameHeader/FrameHeaderRefreshHover.png);
+}
+
+#WPHeaderClose:link, #WPHeaderClose:visited
+{
+    background-image: url(../../img/WorkPortal/FrameHeader/FrameHeaderClose.jpg);
+    background-repeat: no-repeat;
+}
+
+#WPHeaderClose:hover
+{
+    background-image: url(../../img/WorkPortal/FrameHeader/FrameHeaderCloseHover.jpg);
+}
+
+.WPFrameObject
+{
+    display: block;
+    padding-top: 5px; /*margin-top: 5px;*/
+}

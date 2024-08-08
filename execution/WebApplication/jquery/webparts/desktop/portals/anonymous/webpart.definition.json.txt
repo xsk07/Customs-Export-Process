@@ -1,0 +1,11 @@
+﻿{
+	"name": "anonymous",
+	"js": [ {"src": "bizagi.workportal.webparts.anonymous.js"}
+	],
+	"css": [ 
+	{"src": "bizagi.webpart.anonymous.css"}
+	],
+	"tmpl": [ 
+		{alias: "anonymous",  "src": "anonymous.tmpl.html#ui-bizagi-webpart-anonymous"} 
+	]
+}

@@ -1,0 +1,78 @@
+<script id="ui-bizagi-webpart-render" type="text/x-jquery-tmpl">
+<div {{adjustable}}>
+    <div class="ui-bizagi-webpart-header-container"></div> 
+    <div id="ui-bizagi-webpart-render-container" {{adjustable}}></div>
+</div>
+</script>
+
+<script id="ui-bizagi-webpart-render-loading" type="text/x-jquery-tmpl">
+    <div class="ui-bizagi-webpart-render-loading-class">        
+        <div class="ui-bizagi-webpart-render-loading-image"></div>
+        %{webpart-render-loading}
+    </div> 
+</script>
+
+<script id="ui-bizagi-webpart-info-render" type="text/x-jquery-tmpl">
+    <div id="child_infoRenderForm" class="ui-bizagi-webpart-info-render-msg">        
+        <h2>{{html message}}</h2>
+    </div> 
+</script>
+
+<script id="ui-bizagi-webpart-title-render" type="text/x-jquery-tmpl">
+    <div  class="ui-bizagi-webpart-header-render-msg">                
+        <h2>{{html caseNumber}} {{html workItemState}}</h2>
+        <h3>{{html processPath}}</h3>
+    </div> 
+</script>
+
+
+<script id="ui-bizagi-webpart-workitems-render" type="text/x-jquery-tmpl">
+    <div class="ui-bizagi-webpart-workitems-container">
+        {{each(i, workitem) workitems}}
+           <div id="case-task-item" class="ui-bizagi-webpart-workitems-pivot ${workitem.colorState}" data-idworkitem="${workitem.idWorkItem}">
+               <i class="case-task-state-color"></i>
+               <div class="case-task-state" >
+                   <h2 class="case-task-title">${workitem.state}</h2>
+                   <p class="case-task-date">Solution date <span>${workitem.estimatedSolutionDate}</span></p>
+               </div>
+               <!--end .case-task-state-->
+               <div class="case-task-work">
+                   <button class="case-task-work-button" aria-label="%{workportal-widget-render-work-on-it}" type="button">%{workportal-widget-render-work-on-it}</button>
+               </div>
+               <!-- end .case-task-work-->
+           </div>
+            <!--end .case-task-item-->
+        {{/each}}
+    </div>
+</script>
+
+<script id="ui-bizagi-webpart-render-async" type="text/x-jquery-tmpl">
+	<div id="ui-bizagi-webpart-render-async-wrapper" {{adjustable}}>    
+		<div id="ui-bizagi-webpart-render-async-box" class="ui-widget-content ui-corner-all">
+		<div class="ui-bizagi-webpart-render-async-case-number">
+				${radNumber}
+			</div>
+			{{if errorMessage.length == 0 }}
+				<div>
+					<dl class="ui-bizagi-webpart-render-async-description">
+						<dt>%{workportal-async-processing-name}</dt> 
+						<dd>${taskName}</dd>
+					</dl>
+				</div>
+				
+				<div class="ui-bizagi-webpart-render-async-waiting">
+					<div class='ui-bizagi-sharepoint-loading-icon'></div>
+					<div class='ui-bizagi-webpart-render-async-waiting-message-text'>%{render-form-waiting-message}</div>
+				</div>
+			{{else}}
+				<div class="ui-bizagi-webpart-render-async-error ui-widget-content ui-state-error">
+					${errorMessage}
+				</div>
+			{{/if}}
+		</div>		
+	</div>
+</script>
+
+<script id="ui-bizagi-webpart-render-mobile" type="text/x-jquery-tmpl">
+    <iframe src="${url}" width="100%" height="${height}" frameborder="0"></iframe>
+</script>

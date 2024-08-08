@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=Edge,chrome=IE8">
+        <title>Bizagi Theme Creator</title>
+
+        <link type="image/x-icon" rel="icon" href="../favicon.ico" />
+
+        <link rel="stylesheet" href="libs/css/bootstrap/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="libs/css/bootstrap/bootstrap-theme.min.css" type="text/css" />
+
+        <link rel="stylesheet" href="libs/css/jquery/plugins/spectrum.css" type="text/css" />
+        <link rel="stylesheet" href="libs/css/jquery/plugins/prettify.css" type="text/css" />
+        <link rel="stylesheet" href="libs/css/jquery/jquery.ui.css" type="text/css" />
+        <link rel="stylesheet" href="libs/css/theme.css" type="text/css" />
+		
+
+
+        <script type="text/javascript">
+            less = {
+                env: "development", // or "production"
+                async: false, // load imports async
+                fileAsync: false, // load imports async when in a page under
+                // a file protocol
+                poll: 1000, // when in watch mode, time in ms between polls
+                functions: {}, // user functions, keyed by name
+                dumpLineNumbers: "comments", // or "mediaQuery" or "all"
+                relativeUrls: true
+            };
+
+            BIZAGI_LANGUAGE = 'en';
+
+            BIZAGI_THEME_WPORTAL = "../";
+            BIZAGI_THEME_WEBPARTS = "http://localhost/BizAgiR100x.SharePointDummies/ThemeBuilder.aspx";
+
+            BIZAGI_THEME_SERVICES = "";
+
+            BIZAGI_THEME_DEBUG = false;
+            BIZAGI_THEME_LANGUAGE_SERVICE_ACTIVATION = false;
+
+        </script>
+        <script type="text/javascript" src="libs/js/less/less.js"></script>
+    </head>
+    <body>
+        <div class="biz-theme-generator clearfix"></div>
+        <div class="biz-debug"></div>        
+        <script type="text/javascript" src="../js/DOMPurify/purify.min.js"></script>
+
+        <script type="text/javascript" src="libs/js/jquery/jquery.2.1.0.min.js"></script>
+        <script type="text/javascript" src="libs/js/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="libs/js/tmpl/jquery.tmpl.min.js"></script>
+        <script type="text/javascript" src="libs/js/jquery/jquery.class.js"></script>
+        <script type="text/javascript" src="libs/js/jquery/jquery.rest.js"></script>
+
+        <script type="text/javascript" src="libs/js/jquery/plugins/spectrum.js"></script>
+        <script type="text/javascript" src="libs/js/jquery/plugins/prettify.js"></script>
+        <script type="text/javascript" src="libs/js/jquery/plugins/browser.detect.js"></script>
+
+
+        <!-- -->
+        <script type='text/javascript' src='../jquery/bizagi.preloader.js'></script>
+        <script type="text/javascript" src="libs/js/bizagi/bizagi.loader.js"></script>
+        <script type="text/javascript" src="libs/js/bizagi/bizagi.util.js"></script>
+        <script type="text/javascript" src="libs/js/bizagi/bizagi.services.service.js"></script>
+        <script type="text/javascript" src="libs/js/bizagi/bizagi.l10n.js"></script>
+
+        <script type="text/javascript" src="libs/js/services/bizagi.themebuilder.services.endPoints.js"></script>
+        <script type="text/javascript" src="libs/js/services/bizagi.themebuilder.services.context.js"></script>
+        <script type="text/javascript" src="libs/js/services/bizagi.themebuilder.services.service.js"></script>
+        <!-- -->
+
+        <script type="text/javascript" src="libs/js/bizagi/bizagi.theme.widget.js"></script>
+        <script type="text/javascript" src="libs/js/theme.js"></script>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+﻿{
+	"name": "workitemSummary",
+	"js": [
+		{"src": "bizagi.webparts.workitemSummary.js"},
+		{"src": "task.options/bizagi.workportal.desktop.widgets.task.options.js"},
+		{"src": "../../../../overrides/js/desktop/sharePoint/workitemSummary/bizagi.webparts.workitemSummary.override.js"}
+	],
+	"css": [ {"src": "bizagi.webpart.workitemSummary.css"} ],
+	"theme":  {"src": "bizagi.webpart.workitemSummary.theme.less"},
+	"tmpl": [ 
+		{alias: "workitemSummary",  "src": "workitemSummary.tmpl.html#ui-bizagi-webpart-workitem-summary"},
+		{alias: "wisubprocess",  "src": "workitemSummary.tmpl.html#ui-bizagi-webpart-workitem-summary-subprocess"},
+		{alias: "wiassignees",  "src": "workitemSummary.tmpl.html#ui-bizagi-webpart-workitem-summary-assignees"},
+		{alias: "wievents",  "src": "workitemSummary.tmpl.html#ui-bizagi-webpart-workitem-summary-events"},
+		{alias: "release",  "src": "workitemSummary.tmpl.html#ui-bizagi-webpart-case-summary-release"},
+		{alias: "wiactivities",  "src": "workitemSummary.tmpl.html#ui-bizagi-webpart-workitem-summary-activities"} 
+	]
+}

@@ -1,0 +1,656 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="bz-html-webpart" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>BizagiWebPart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    <style type="text/css">
+        body {
+            margin: 0px;
+        }
+    </style>
+</head>
+
+<body id="bz-webpart">
+    <div id="contracapprovalform">
+        <div id="render" class="bz-webpart ui-bizagi-sharepoint-webpart-parentdiv">
+            <script src='../../../../bizagi.configuration.js' type='text/javascript'></script>
+            <script src="../../../../bizagi.loader.js" type="text/javascript"></script>
+            <script src="../../../../steal.js" type="text/javascript"></script>
+            <script src="../../../../bizagi.preloader.js" type="text/javascript"></script>
+            <script src="../common/js/bizagi.loader.portal.js" type="text/javascript"></script>
+            <script src="../common/js/bizagi.postmessage.js" type="text/javascript"></script>
+            <script src="../common/js/less.min.js"></script>
+            <script src="../common/js/purify.min.js"></script>
+
+            <script type="text/javascript">
+                var session = window.sessionStorage.getItem("bizagiAuthentication") || "{}";
+                session = JSON.parse(session);
+
+                var BIZAGI_DEFAULT_DEVICE = "desktop";
+                var BIZAGI_ENVIRONMENT = "release";
+                var BIZAGI_ORIENTATION = "";
+                var BIZAGI_PATH_TO_BASE = "../../../../../";
+                var webpartObject;
+                var isWebpart = true;
+
+                function nativeAjax(method, url, params, callbackFunction, errorCallBackFunction) {
+                    var xhr;
+                    params = params || "";
+                    if (window.XMLHttpRequest) {
+                        xhr = new XMLHttpRequest();
+                    } else if (window.ActiveXObject) {
+                        xhr = new ActiveXObject("Microsoft.XMLHTTP");
+                    }
+                    var timestamp = new Date().getTime();
+                    xhr.open(method, url + '?ts=' + timestamp, false); //sync
+                    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+
+                    // Add OAuth token if found in session storage
+                    if (sessionStorage.getItem('_AT_')) {
+                        
+                        var access_token = JSON.parse(decodeURIComponent(escape(window.atob(JSON.parse(sessionStorage.getItem('_AT_'))))));
+                        if (access_token) {
+                            xhr.setRequestHeader('Authorization', 'Bearer ' + access_token.accessToken);
+                        }
+                    }
+
+                    var configAuthorization = location.search.match(/sitesEl=([^&]*)/) ? "Bearer " + ((location.search.match(/sitesEl=([^&]*)/))[0].split("="))[1] : '';
+                    if (configAuthorization) {
+                        
+                        xhr.setRequestHeader('Authorization', configAuthorization);
+                    }
+
+                    // Assign a handler for the response
+                    xhr.onreadystatechange = function () {
+                       if (xhr.readyState == 4) {
+                           if (xhr.status == 200 && xhr.getResponseHeader("Content-Type").indexOf("application/json") != -1) {
+                                var response = JSON.parse(xhr.response);
+                                if (!!window.sessionStorage && response.XSRFToken) {
+                                    window.sessionStorage.setItem('XSRFToken', response.XSRFToken || "");
+                                }
+                                return (callbackFunction) ? callbackFunction(xhr) : xhr.response;
+                            } else {
+                                if (xhr.getResponseHeader("Content-Type").indexOf("application/json") != -1){
+                                    var response = JSON.parse(xhr.response);
+                                    if (!!window.sessionStorage && response.XSRFToken) {
+                                        window.sessionStorage.setItem('XSRFToken', response.XSRFToken || "");
+                                    }
+                                }
+                                return (errorCallBackFunction) ? errorCallBackFunction(xhr) : xhr.response;
+                            }
+                        }
+                    };
+                    // Actually send the request to the server
+                    xhr.send(params);
+                }
+
+                // This function was copied from bizagi utils because at this point bizagi.utils is not loaded
+                // The function is just used in setUpIFrameCommunication to validate a queryString parameter
+                function getQueryString(url) {
+                    var params = {};
+                    url = url || window.location.href;
+                    var query = url.indexOf("?") > 0 ? url.substring(url.indexOf("?") + 1) : "";
+                    var pairs = query.split("&");
+                    for (var i = pairs.length - 1; i >= 0; i--) {
+                        var pos = pairs[i].indexOf('=');
+                        if (pos == -1)
+                            continue;
+                        var argname = pairs[i].substring(0, pos);
+                        var value = pairs[i].substring(pos + 1);
+                        params[argname] = unescape(value);
+                    }
+                    return params;
+                };
+
+                function setUpIFrameCommunication() {
+                    var remoteServer = getQueryString(window.location.href)["remoteServer"];
+                    if (remoteServer) {
+                        bizagi.iframeCommunicator = new bizagi.postmessage({
+                            remoteServer: remoteServer,
+                            destination: window.parent,
+                            origin: window
+                        });
+                    } else {
+                        bizagi.iframeCommunicator = new bizagi.postmessage({
+                            remoteServer: document.location.origin,
+                            destination: window.parent,
+                            origin: window
+                        });
+                    }
+                }
+
+                nativeAjax('GET', BIZAGI_PATH_TO_BASE + 'Rest/Users/CurrentUserGuid', "");
+
+                nativeAjax('GET', BIZAGI_PATH_TO_BASE + 'Api/Authentication/ReadUserCookies', "");
+
+                nativeAjax('GET', BIZAGI_PATH_TO_BASE + 'Api/Authentication/BizagiConfig', "", function (data) {
+                    data = JSON.parse(data.response);
+                    bizagiConfig.orientation = (data.isRightToLeftTextOrientation) ? "rtl" : "ltr";
+                    bizagiConfig.sessionTimeout = data.sessionTimeout;
+                    var objAuthentication = JSON.parse(sessionStorage.getItem("bizagiAuthentication"));
+                    if (!objAuthentication) {
+                        objAuthentication = { language: data.defaultLanguage };
+                    } else {
+                        objAuthentication.language = data.defaultLanguage;
+                    }
+                    if (objAuthentication && objAuthentication.language) {
+                        sessionStorage.setItem("bizagiAuthentication", JSON.stringify(objAuthentication));
+                        BIZAGI_LANGUAGE = objAuthentication.language;
+                    }
+                });
+
+                setUpIFrameCommunication();
+
+                loadBizagi();
+
+                function loadBizagi(){
+                    bizagi.addLoadHandlers(function () {
+                        bizagi.initializeWorkportal({
+                            proxyPrefix: bizagiConfig.proxyPrefix || "",
+                            sharepointProxyPrefix: bizagiConfig.sharepointProxyPrefix || "",
+                            project: "bizagiTest",
+                            whenInitialized: function (workportal) {
+                                var qs = bizagi.util.getQueryString();
+                                var typeContract = qs["type"] || "";
+                                var applicationParent = qs["application"] ? qs["application"].toUpperCase() : "";
+                                typeContract = typeContract.replace("#", "");
+
+                                var guid = qs["guid"];
+                                var idCase = qs["idCase"];
+                                var idWorkitem = qs["idWorkitem"];
+                                var idWfClass = qs["idWfClass"] || "";
+                                var buttonName = qs["buttonName"] || "";
+
+                                var view = qs["DefaultView"] || "details";
+                                var showViewToggler = (typeof qs["showViewToggler"] != "undefined") ? qs["showViewToggler"] : true;
+                                var pageSize = qs["pageSize"] || qs["CasesByPage"] || 10;
+
+
+                                var renderBehavior = qs["renderBehavior"] || 'PopUp';
+                                var renderPageUrl = qs["renderPageUrl"] || '';
+                                var summaryBehavior = qs["summaryBehavior"] || 'PopUp';
+                                var summaryPageUrl = qs["summaryPageUrl"] || '';
+                                var graphicQueryBehavior = qs["graphicQueryBehavior"] || "PopUp"; //"OtherPage";
+                                var idWorkflow = qs["idWorkflow"] || null;
+                                var radNumber = qs["radNumber"] || null;
+                                var caseNumber = qs["caseNumber"] || null;
+                                var cookieName = qs["cookieName"] || 'webpart' + typeContract;
+
+                                var remoteServer = qs["remoteServer"];
+                                var iframename = qs["iframename"];
+                                var adjustButtonsToContent = qs["adjustButtonsToContent"];
+                                var onlySummaryForm = qs["onlySummaryForm"] || false;
+
+                                var idUser = qs["idUser"];
+                                var queryType = qs["queryType"];
+                                var guidForm = qs["guidForm"];
+                                var guidEntity = qs["guidEntity"]; 
+                                var idQueryForm = qs["idQueryForm"];
+                                var queryFormType = qs["queryFormType"];
+                                var includeAllUsers = qs["includeAllUsers"] === "true"? true: false;
+
+                                window.BIZAGI_IFRAME_IDENTIFIER = iframename;
+                                window.BIZAGI_SHAREPOINT_CONTEXT = typeof(qs["context"]) !== "undefined" && qs["context"] === "sharepoint";
+                                if (typeof typeContract == "string") {
+                                    typeContract = typeContract.toLowerCase();
+                                }
+
+                                var afterWebpartLoaded = function (result) {
+                                    webpartObject = result.webpart;
+                                    bizagi.iframeCommunicator.trigger("load-complete");
+                                }
+
+                                switch (typeContract) {
+                                    case 'casesummary':
+                                        $("#render").addClass("ui-bizagi-sharepoint-caseSummary");
+                                        // Todo: check if idWfClass is used in any part of casesummary
+                                        if (idWfClass) {
+                                            workportal.executeWebpart({
+                                                webpart: "caseSummary",
+                                                canvas: $("#render"),
+                                                renderBehavior: renderBehavior,
+                                                renderPageUrl: renderPageUrl,
+                                                idWfClass: idWfClass,
+                                                remoteServer: remoteServer,
+                                                graphicQueryBehavior: graphicQueryBehavior
+                                            }).done(function (result) {
+                                                afterWebpartLoaded(result);
+                                            });
+                                        } else if (idCase && idWorkitem) {
+                                            workportal.executeWebpart({
+                                                webpart: "caseSummary",
+                                                canvas: $("#render"),
+                                                renderBehavior: renderBehavior,
+                                                renderPageUrl: renderPageUrl,
+                                                idCase: idCase,
+                                                idWorkitem: idWorkitem,
+                                                remoteServer: remoteServer,
+                                                graphicQueryBehavior: graphicQueryBehavior
+                                            }).done(function (result) {
+                                                afterWebpartLoaded(result);
+                                            });
+                                        }
+                                        else if (guid && idWorkitem) {
+                                            workportal.executeWebpart({
+                                                webpart: "caseSummary",
+                                                canvas: $("#render"),
+                                                renderBehavior: renderBehavior,
+                                                renderPageUrl: renderPageUrl,
+                                                guid: guid,
+                                                idWorkitem: idWorkitem,
+                                                remoteServer: remoteServer
+
+                                            }).done(function (result) {
+                                                afterWebpartLoaded(result);
+                                            });
+                                        }
+                                        else if (guid) {
+                                            workportal.executeWebpart({
+                                                webpart: "caseSummary",
+                                                canvas: $("#render"),
+                                                renderBehavior: renderBehavior,
+                                                renderPageUrl: renderPageUrl,
+                                                guid: guid,
+                                                remoteServer: remoteServer
+                                            }).done(function (result) {
+                                                afterWebpartLoaded(result);
+                                            });
+                                        }
+                                        else if (idCase) {
+                                            workportal.executeWebpart({
+                                                webpart: "caseSummary",
+                                                canvas: $("#render"),
+                                                renderBehavior: renderBehavior,
+                                                renderPageUrl: renderPageUrl,
+                                                idCase: idCase,
+                                                onlySummaryForm: onlySummaryForm,
+                                                remoteServer: remoteServer,
+                                                graphicQueryBehavior: graphicQueryBehavior,
+                                            }).done(function (result) {
+                                                afterWebpartLoaded(result);
+                                            });
+                                        }
+                                        else {
+                                            workportal.executeWebpart({
+                                                webpart: "caseSummary",
+                                                canvas: $("#render"),
+                                                renderBehavior: renderBehavior,
+                                                renderPageUrl: renderPageUrl,
+                                                remoteServer: remoteServer,
+                                                graphicQueryBehavior: graphicQueryBehavior,
+                                            }).done(function (result) {
+                                                afterWebpartLoaded(result);
+                                            });
+                                        }
+
+                                        break;
+                                    case 'graphicquery':
+                                        $("#render").addClass("ui-bizagi-sharepoint-graphicquery");
+
+                                        workportal.executeWebpart({
+                                            webpart: "graphicquery",
+                                            canvas: $("#render"),
+                                            idWorkflow: idWorkflow,
+                                            idCase: idCase,
+                                            guid: guid,
+                                            caseNumber: caseNumber
+                                        }).done(function (result) {
+                                            afterWebpartLoaded(result);
+                                        });
+
+                                        break;
+                                    case 'processmap':
+                                        $("#render").addClass("ui-bizagi-sharepoint-processmap");
+                                        workportal.executeWebpart({
+                                            webpart: "processmap",
+                                            canvas: $("#render"),
+                                            radNumber: radNumber,
+                                            idWorkflow: idWorkflow,
+                                            idCase: idCase,
+                                            showProcessDiagram: false,
+                                            showActivityMap: false,
+                                            showProcessMap: true,
+                                            showTooltip:false
+                                        }).done(function (result) {
+                                            afterWebpartLoaded(result);
+                                        });
+                                        break;
+                                    case 'activitymap':
+                                        typeContract='processmap';
+                                        $("#render").addClass("ui-bizagi-sharepoint-processmap");
+                                        workportal.executeWebpart({
+                                            webpart: "processmap",
+                                            canvas: $("#render"),
+                                            radNumber: radNumber,
+                                            idWorkflow: idWorkflow,
+                                            idCase: idCase,
+                                            showProcessDiagram: false,
+                                            showActivityMap: true,
+                                            showProcessMap: false,
+                                            showTooltip:false
+                                        }).done(function (result) {
+                                            afterWebpartLoaded(result);
+                                        });
+                                        break;
+                                    case 'casesummaryandrendercomplete':
+                                        $("#render").addClass("ui-bizagi-sharepoint-caseSummary ui-bizagi-sharepoint-render");
+                                        if (idWfClass) {
+                                            workportal.executeWebpart({
+                                                webpart: "caseSummaryAndRenderComplete",
+                                                canvas: $("#render"),
+                                                idWfClass: idWfClass,
+                                                remoteServer: remoteServer
+                                            }).done(function (result) {
+                                                afterWebpartLoaded(result);
+                                            });
+                                        } else if (guid && idWorkitem) {
+                                            workportal.executeWebpart({
+                                                webpart: "caseSummaryAndRenderComplete",
+                                                canvas: $("#render"),
+                                                guid: guid,
+                                                idWorkitem: idWorkitem,
+                                                remoteServer: remoteServer
+
+                                            }).done(function (result) {
+                                                afterWebpartLoaded(result);
+                                            });
+                                        } else if (idCase && idWorkitem) {
+                                            workportal.executeWebpart({
+                                                webpart: "caseSummaryAndRenderComplete",
+                                                canvas: $("#render"),
+                                                idCase: idCase,
+                                                idWorkitem: idWorkitem,
+                                                remoteServer: remoteServer
+
+                                            }).done(function (result) {
+                                                afterWebpartLoaded(result);
+                                            });
+                                        }
+                                        else if (guid) {
+                                            workportal.executeWebpart({
+                                                webpart: "caseSummaryAndRenderComplete",
+                                                canvas: $("#render"),
+                                                guid: guid,
+                                                remoteServer: remoteServer
+                                            }).done(function (result) {
+                                                afterWebpartLoaded(result);
+                                            });
+                                        }
+                                        else if (idCase) {
+                                            workportal.executeWebpart({
+                                                webpart: "caseSummaryAndRenderComplete",
+                                                canvas: $("#render"),
+                                                idCase: idCase,
+                                                remoteServer: remoteServer
+                                            }).done(function (result) {
+                                                afterWebpartLoaded(result);
+                                            });
+                                        }
+                                        else {
+                                            workportal.executeWebpart({
+                                                webpart: "caseSummaryAndRenderComplete",
+                                                canvas: $("#render"),
+                                                remoteServer: remoteServer
+                                            }).done(function (result) {
+                                                afterWebpartLoaded(result);
+                                            });
+                                        }
+
+                                        break;
+
+                                    case 'newcasebutton':
+                                        $("#render").addClass("ui-bizagi-sharepoint-createNewCaseButton");
+                                        workportal.executeWebpart({
+                                            webpart: "newCaseButton",
+                                            canvas: $("#render"),
+                                            idWfClass: idWfClass,
+                                            buttonName: buttonName,
+                                            renderPageUrl: renderPageUrl,
+                                            renderBehavior: renderBehavior
+                                        }).done(function (result) {
+                                            afterWebpartLoaded(result);
+                                        });
+
+                                        break;
+
+                                    case 'newcaselist':
+                                        $("#render").addClass("ui-bizagi-sharepoint-newCase");
+                                        workportal.executeWebpart({
+                                            webpart: "newcaselist",
+                                            canvas: $("#render"),
+                                            renderBehavior: renderBehavior,
+                                            buttonName: buttonName,
+                                            remoteServer: remoteServer,
+                                            renderPageUrl: renderPageUrl
+                                        }).done(function (result) {
+                                            afterWebpartLoaded(result);
+                                        });
+                                        break;
+
+                                    case 'workportal':
+                                        $("#render").addClass("ui-bizagi-sharepoint-workportal");
+                                        workportal.executeWebpart({
+                                            webpart: "workportalComplete",
+                                            canvas: $("#render"),
+                                            view: view,
+                                            cookieName: cookieName,
+                                            showViewToggler: showViewToggler,
+                                            pageSize: pageSize,
+                                            remoteServer: remoteServer,
+                                            graphicQueryBehavior: graphicQueryBehavior
+                                        }).done(function (result) {
+                                            afterWebpartLoaded(result);
+                                        });
+                                        break;
+                                    case 'processes':
+                                        $("#render").addClass("ui-bizagi-sharepoint-processes");
+                                        workportal.executeWebpart({
+                                            webpart: "processes",
+                                            canvas: $("#render"),
+                                            remoteServer: remoteServer
+                                        }).done(function (result) {
+                                            afterWebpartLoaded(result);
+                                        });
+                                        break;
+
+                                    case 'cases':
+                                        $("#render").addClass("ui-bizagi-sharepoint-cases");
+                                        workportal.executeWebpart({
+                                            webpart: "cases",
+                                            canvas: $("#render"),
+                                            renderBehavior: renderBehavior,
+                                            renderPageUrl: renderPageUrl,
+                                            summaryBehavior: summaryBehavior,
+                                            summaryPageUrl: summaryPageUrl,
+                                            graphicQueryBehavior: graphicQueryBehavior,
+                                            idWorkflow: "",
+                                            view: view,
+                                            showViewToggler: showViewToggler,
+                                            cookieName: cookieName,
+                                            pageSize: pageSize,
+                                            remoteServer: remoteServer
+                                        }).done(function (result) {
+                                            afterWebpartLoaded(result);
+                                        });
+
+                                        break;
+                                    case 'globalform':
+                                        $("#render").addClass("ui-bizagi-sharepoint-global-form");
+                                        workportal.executeWebpart({
+                                            webpart: "globalForm",
+                                            canvas: $("#render"),
+                                            idWfClass: idWfClass,
+                                            guid: guid,
+                                            idCase: idCase,
+                                            idWorkitem: idWorkitem,
+                                            remoteServer: remoteServer
+                                        }).done(function (result) {
+                                            afterWebpartLoaded(result);
+                                        });
+
+                                        break;
+
+                                    case 'newcase': //render
+                                        $("#render").addClass("ui-bizagi-sharepoint-render");
+                                        if (qs["idWfClass"]) {
+                                            workportal.executeWebpart({
+                                                webpart: "renderComplete",
+                                                canvas: $("#render"),
+                                                idWfClass: idWfClass,
+                                                idOrganization: qs["idOrganization"],
+                                                guidAction: qs["guidAction"],
+                                                accumulatedContext: qs["accumulatedContext"] ? JSON.parse(qs["accumulatedContext"]) : [],
+                                                applicationParent: applicationParent,
+                                                remoteServer: remoteServer
+
+                                            }).done(function (result) {
+                                                afterWebpartLoaded(result);
+                                            });
+                                        }
+                                        break;
+                                    case 'startform': //render
+                                        $("#render").addClass("ui-bizagi-sharepoint-render");
+                                        if (qs["idWfClass"]) {
+                                            workportal.executeWebpart({
+                                                webpart: "renderComplete",
+                                                canvas: $("#render"),
+                                                idWfClass: idWfClass,
+                                                guidAction: qs["guidAction"],
+                                                accumulatedContext: qs["accumulatedContext"] ? JSON.parse(qs["accumulatedContext"]) : [],
+                                                remoteServer: remoteServer,
+                                                newWorkportalStartForm: true
+
+                                            }).done(function (result) {
+                                                afterWebpartLoaded(result);
+                                            });
+                                        }
+                                        break;
+                                    case 'userpreferencesform':
+                                        workportal.executeWebpart({
+                                            webpart: "renderComplete",
+                                            canvas: $("#render"),
+                                            adjustButtonsToContent: adjustButtonsToContent,
+                                            remoteServer: remoteServer,
+                                            applicationParent: applicationParent,
+                                            loadPreferences: true,
+                                            idUser: idUser
+                                            
+                                        }).done(function (result) {
+                                            afterWebpartLoaded(result);
+                                        });
+                                        break;
+                                    case 'queryform':
+                                    workportal.executeWebpart({
+                                        webpart: "queryform",
+                                        canvas: $("#render"),
+                                        adjustButtonsToContent: adjustButtonsToContent,
+                                        remoteServer: remoteServer,
+                                        applicationParent: applicationParent,
+                                        loadExternalWebpart: true,
+                                        queryType: queryType,
+                                        guidForm: guidForm,
+                                        guidEntity: guidEntity,
+                                        queryFormType: queryFormType,
+                                        idQueryForm: idQueryForm,
+                                        includeAllUsers: includeAllUsers
+                                        
+                                    }).done(function (result) {
+                                        afterWebpartLoaded(result);
+                                    });
+                                    break; 
+                                    case 'activityform':
+                                    case 'render':
+                                    case 'rendercomplete': //render
+                                        $("#render").addClass("ui-bizagi-sharepoint-render");
+                                        if (qs["idWfClass"]) {
+                                            workportal.executeWebpart({
+                                                webpart: "renderComplete",
+                                                canvas: $("#render"),
+                                                idWfClass: idWfClass,
+                                                adjustButtonsToContent: adjustButtonsToContent,
+                                                remoteServer: remoteServer,
+                                                applicationParent: applicationParent
+                                            }).done(function (result) {
+                                                afterWebpartLoaded(result);
+                                            });
+                                        } else if (qs["idCase"] && qs["idWorkitem"]) {
+                                            workportal.executeWebpart({
+                                                webpart: "renderComplete",
+                                                canvas: $("#render"),
+                                                idCase: idCase,
+                                                idWorkitem: idWorkitem,
+                                                adjustButtonsToContent: adjustButtonsToContent,
+                                                remoteServer: remoteServer,
+                                                applicationParent: applicationParent
+                                            }).done(function (result) {
+                                                afterWebpartLoaded(result);
+                                            });
+                                        }
+                                        else if (qs["idCase"]) {
+                                            workportal.executeWebpart({
+                                                webpart: "renderComplete",
+                                                canvas: $("#render"),
+                                                idCase: idCase,
+                                                adjustButtonsToContent: adjustButtonsToContent,
+                                                remoteServer: remoteServer,
+                                                applicationParent: applicationParent
+                                            }).done(function (result) {
+                                                afterWebpartLoaded(result);
+                                            });
+                                        }
+                                        else if (qs["guid"] && qs["idWorkitem"]) {
+                                            workportal.executeWebpart({
+                                                webpart: "renderComplete",
+                                                canvas: $("#render"),
+                                                guid: guid,
+                                                idWorkitem: idWorkitem,
+                                                adjustButtonsToContent: adjustButtonsToContent,
+                                                remoteServer: remoteServer,
+                                                applicationParent: applicationParent
+                                            }).done(function (result) {
+                                                afterWebpartLoaded(result);
+                                            });
+                                        }
+                                        else if (qs["guid"]) {
+                                            workportal.executeWebpart({
+                                                webpart: "renderComplete",
+                                                canvas: $("#render"),
+                                                guid: guid,
+                                                adjustButtonsToContent: adjustButtonsToContent,
+                                                remoteServer: remoteServer,
+                                                applicationParent: applicationParent
+                                            }).done(function (result) {
+                                                afterWebpartLoaded(result);
+                                            });
+                                        }
+                                        else {
+                                            workportal.createWebpart({
+                                                webpart: "renderComplete",
+                                                canvas: $("#render"),
+                                                adjustButtonsToContent: adjustButtonsToContent,
+                                                remoteServer: remoteServer,
+                                                applicationParent: applicationParent
+                                            }).done(function (result) {
+                                                afterWebpartLoaded(result);
+                                                result.webpart.endWaiting();
+                                            });
+                                            $("#render").html("<div>Please review the input params</div><div>*  guid or idCase is required </div><div>* idWorkItem is optional</div>")
+                                        }
+                                        break;
+                                    default:
+                                        $("#render").html("<div>invalid contract</div>");
+                                        break;
+                                }
+                            }
+                        });
+                    });
+                }
+
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

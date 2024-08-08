@@ -1,0 +1,12 @@
+﻿{
+	"name": "globalForm",
+	"js": [ {"src": "bizagi.webparts.globalForm.js"},	{"src": "../../../../overrides/js/desktop/sharePoint/globalForm/bizagi.webparts.globalForm.override.js"}],
+	"css": [ {"src": "bizagi.webpart.globalForm.css"} ],
+	"theme": {"src": "bizagi.webpart.globalForm.theme.less"},
+	"tmpl": [ 
+			{alias: "globalForm",  "src": "globalForm.tmpl.html#ui-bizagi-webpart-global-form"},
+			{alias: "loading-render",  "src": "globalForm.tmpl.html#ui-bizagi-webpart-render-loading"},
+			{alias: "title-render",  "src": "globalForm.tmpl.html#ui-bizagi-webpart-title-render"},
+			{alias: "info-render",  "src": "globalForm.tmpl.html#ui-bizagi-webpart-info-render"},
+	]
+}

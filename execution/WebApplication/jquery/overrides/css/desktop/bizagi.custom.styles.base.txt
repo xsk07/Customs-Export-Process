@@ -1,0 +1,2075 @@
+/* Hello and welcome to the official Bizagi themed styles! Here you'll find a delightful collection of beautiful themes that are guaranteed to suit your daily mood. 
+Copy the one you prefer and paste it in bizagi.custom.styles.css */
+
+
+
+/*=== Theme:iWork ===*/
+
+/* Header bars */
+
+#ui-bizagi-wp-menu
+{
+	background: #354B6E;
+	background: -moz-linear-gradient(top, #354B6E 0%, #293A59 100%);
+	background: -webkit-gradient(linear, left top, left bottom, from(#354B6E), to(#293A59));
+	background: -o-linear-gradient(top, #354B6E 20%,#293A59 100%);
+	background: -ms-linear-gradient(top, #354B6E 20%,#293A59 100%);
+	filter: none !important;
+}
+
+#contentInbox
+{
+	background: #4D5A68;
+	background: -moz-linear-gradient(top, #4D5A68 0%, #2B3641 100%);
+	background: -webkit-linear-gradient(top, #4D5A68 0%,#2B3641 100%);
+	background: -o-linear-gradient(top, #4D5A68 0%,#2B3641 100%);
+	background: -ms-linear-gradient(top, #4D5A68 0%,#2B3641 100%);
+	filter: none !important;
+}
+
+#innerContentInbox
+{
+	border-top:1px solid #4D5A68;
+	border-bottom:1px solid #293138;
+}
+
+/* Columns */
+
+
+body
+{
+	background: #E9EBED;
+}
+
+#contentProc
+{
+	background: #ABB1BA;
+}
+
+#contentCases
+{
+	background: #C6CAD0;
+}
+
+#ui-bizagi-wp-app-render-form, #contentCases.casesGrid, .ui-bizagi-wp-app-inbox-grid-cases-container table,
+.personalizedColumnsContainer table {
+    background: #E9EBED;
+}
+
+#ui-bizagi-wp-app-render-desc-panel
+{
+	background:#ABB1BA;
+}
+
+/* Containers */
+
+#ui-bizagi-wp-app-inbox-processes-container .selected, #ui-bizagi-wp-app-inbox-cases-container .selected
+{
+	background:#92A7B8 !important;
+}
+
+#ui-bizagi-wp-app-inbox-processes-container li.selected:hover, #ui-bizagi-wp-app-inbox-cases-container li.selected:hover
+{
+	background:#8AA0B3 !important;	
+}
+
+#ui-bizagi-wp-app-inbox-processes-container li:hover, #ui-bizagi-wp-app-inbox-cases-container li:hover
+{
+	background:#B7C5D0 !important;
+}
+
+/* Buttons */
+.ui-button, .ui-button.ui-state-default
+{
+	
+}
+
+.ui-bizagi-wp-app-inbox-activity-description:hover.workonitRow.ui-button:hover,.ui-bizagi-wp-app-inbox-activity-description:hover .workonitRow.ui-button, .ui-bizagi-wp-app-inbox-activity-description:hover .workonitRow.ui-button:hover, 
+.ui-bizagi-wp-app-inbox-grid-cases-container table tr:hover .workonitRow.ui-button:hover, 
+.ui-bizagi-wp-app-routing-container table tr:hover .workonitRow.ui-button:hover
+{
+	background: #66aee2;
+	background: -moz-linear-gradient(top, #66aee2 0%, #0e3858 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#66aee2), color-stop(100%,#0e3858));
+	background: -webkit-linear-gradient(top, #66aee2 0%,#0e3858 100%);
+	background: -o-linear-gradient(top, #66aee2 0%,#0e3858 100%);
+	background: -ms-linear-gradient(top, #66aee2 0%,#0e3858 100%);
+	border:1px solid #60656A;
+	filter: none !important;
+}
+
+.ui-button:hover, .ui-button.ui-state-default:hover, .ui-bizagi-button-container .ui-bizagi-button:hover, .ui-dialog .ui-button:hover, .ui-bizagi-wp-app-routing-container table .ui-button:hover
+{
+	background: #4D5A68;
+	background: -moz-linear-gradient(top, #4D5A68 0%, #2B3641 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4D5A68), color-stop(100%,#2B3641));
+	background: -webkit-linear-gradient(top, #4D5A68 0%,#2B3641 100%);
+	background: -o-linear-gradient(top, #4D5A68 0%,#2B3641 100%);
+	background: -ms-linear-gradient(top, #4D5A68 0%,#2B3641 100%);
+	filter: none !important;
+	border:1px solid #293138;
+}
+
+.ui-tabs .ui-tabs-nav li
+{
+	background:#B7C5D0;
+	padding-bottom:0;
+}
+
+/* Sharepoint */
+.ui-bizagi-sharepoint-processes
+{
+	background:#FFF !important;
+}
+
+.ui-bizagi-sharepoint-webpart-parentdiv
+{
+	background:#E9EBED;
+}
+
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-title
+{
+	background:#92A7B8;
+	color:#273238;
+	border:1px solid #587389;
+	font-weight:normal;
+}
+
+.ui-bizagi-wp-app-inbox-processes-title .arrow.Right
+{
+	border-top:4px solid white;
+}
+
+#ui-bizagi-webpart-processes-container li.active, #ui-bizagi-webpart-processes-container li:hover
+{
+	background:#B7C5D0;
+	border:1px solid #666666;
+	border-left:1px solid #666666 !important;
+}
+
+.ui-wp-cases-grid th
+{
+	background:#92A7B8;
+	color:#273238;
+	font-weight: normal;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-case-list:hover
+{
+	background:#B7C5D0;
+}
+
+#ui-bizagi-webpart-cases-container ul:nth-child(2n) li{
+	background:#E2EAF0;	
+}
+
+
+#casesPaginationInbox .bz-wp-cases-pager ul li{
+	background-color: #fff;
+	color:#92A7B8;
+}
+
+#casesPaginationInbox .bz-wp-cases-pager ul li:hover,
+#casesPaginationInbox .bz-wp-cases-pager ul li.active{
+	background-color:#92A7B8!important;
+	border:1px solid #92A7B8!important;
+	color: #Fff;
+}
+
+.ui-bizagi-webpart-case-summary-title,
+.bz-wp-cases-view-principal li{
+	background-color: #92A7B8!important;
+	color:#fff!important;
+}
+
+#ui-bizagi-webpart-cases-container li:hover dl,
+#ui-bizagi-webpart-cases-container li.selected dl,
+#ui-bizagi-webpart-cases-container li dl{
+	color:#444;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-case-list:hover dd,
+#ui-bizagi-webpart-cases-container ul dd{
+	background-color: #fff;
+}
+
+
+.ui-bizagi-webpart-header-render-msg{
+	background: none #92A7B8!important;
+	color: #fff!important;
+}
+
+.ui-bizagi-webpart-header-render-msg h2{
+	color: #fff!important;
+}
+
+#ui-bizagi-webpart-render-container .ui-bizagi-button-container:hover,
+#ui-bizagi-webpart-render-container .ui-bizagi-button-container{
+	background-color: #fff!important;
+}
+
+.ui-bizagi-webpart-case-summary-title{
+	border-top: solid 1px #CCCCCC !important;
+}
+
+
+/* Buttons */
+
+.bz-ui-button, .ui-bizagi-webpart-newcase-menu li{
+	background-color: #FFF !important;
+	border-color: #B5B5B5 !important;
+	color: #444!important;
+}
+
+#ui-bizagi-webpart-newcase-container #modalMenuBtHeader{
+	background-color: #92A7B8!important;
+	border-color: 1px solid #8A0003 !important;
+	color: #FFF!important;
+}
+
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-title:hover{
+	background-color: #6F8699;
+	border:1px solid #768896!important;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-app-inbox-processes-title{
+	background-color: #92A7B8!important;
+	color: #FFF!important;
+}
+
+.ui-bizagi-sharepoint-newCase.ui-bizagi-sharepoint-webpart-parentdiv{
+	background-color: #92A7B8!important;
+	border-bottom:1px solid #92A7B8 !important;
+}
+
+.ui-bizagi-webpart-newcase-menu li:after{
+	border-left-color: #C7C7C7 !important;
+}
+
+.ui-bizagi-webpart-newcase-menu li a .text{
+	color: #444!important;
+}
+
+
+#ui-bizagi-webpart-newcase-container.modalMenuBt{
+	border-color: #09355C!important
+}
+
+.ui-wp-cases-grid{
+	background-color: #F7F7F7;
+	border: solid 1px  #92A7B8!important;
+}
+
+.ui-wp-cases-grid .bz-wp-cases-pager{
+	background-color: transparent;
+}
+
+.ui-wp-cases-grid tbody .ui-bizagi-wp-case-tr:nth-child(2n){
+	background: #DBDFE2;
+}
+
+.ui-wp-cases-grid .selected td, .ui-wp-cases-grid tbody tr:hover td .bz-wp-cases-pager,
+.ui-wp-cases-grid .selected td, .ui-wp-cases-grid tbody tr:hover td{
+	background: #D4DBE0;
+}
+
+.ui-bizagi-webpart-workitem-summary-description,
+.ui-bizagi-webpart-case-summary-description{
+	background-color: #E2EAF0!important;
+}
+
+.ui-bizagi-webpart-newcase-menu li .ui-bizagi-wp-mini-arrow{
+	border-color: #ccc transparent transparent transparent;
+}
+.ui-bizagi-wp-app-inbox-processes-title .arrow{
+	border-color: #FFF transparent transparent transparent;
+}
+
+.ui-bizagi-wp-app-inbox-processes-title .arrow.Right{
+	border-color: transparent transparent transparent #FFF ;
+}
+
+.ui-bizagi-webpart-workitem-summary-description dd,
+.ui-bizagi-webpart-case-summary-details-tabs dd,
+.ui-bizagi-webpart-case-summary-description .box-description dd{
+	background: #fff!important;
+}
+
+
+.ui-bizagi-webpart-workportal-column{
+	background-color: #fff;
+}
+
+
+/*=== Theme:Droidportal ===*/
+
+/* Header bars */
+
+#ui-bizagi-wp-menu
+{
+	background: #185891;
+}
+
+#contentInbox
+{
+	background: #0E385E;
+}
+
+#innerContentInbox
+{
+	border-top:1px solid #071F34;
+	border-bottom:1px solid #071F34;
+}
+
+/* Columns */
+
+#contentProc
+{
+	background: #E8E8E8;
+}
+
+#contentCases
+{
+	background: #EEEEEE;
+}
+
+#ui-bizagi-wp-app-render-form, #contentCases.casesGrid, .ui-bizagi-wp-app-inbox-grid-cases-container table,
+.personalizedColumnsContainer table {
+    background: #F2F2F2;
+}
+
+#ui-bizagi-wp-app-render-desc-panel
+{
+	background:#E8E8E8;
+}
+
+/* Containers */
+
+#ui-bizagi-wp-app-inbox-processes-container .selected, #ui-bizagi-wp-app-inbox-cases-container .selected
+{
+	background:#92A7B8 !important;
+}
+
+#ui-bizagi-wp-app-inbox-processes-container li.selected:hover, #ui-bizagi-wp-app-inbox-cases-container li.selected:hover
+{
+	background:#889FB3 !important;	
+}
+
+#ui-bizagi-wp-app-inbox-processes-container li:hover, #ui-bizagi-wp-app-inbox-cases-container li:hover
+{
+	background:#B7C5D0 !important;
+}
+
+
+
+/* Buttons */
+.ui-button, .ui-button.ui-state-default
+{
+	
+}
+
+.ui-bizagi-wp-app-inbox-activity-description:hover.workonitRow.ui-button:hover,.ui-bizagi-wp-app-inbox-activity-description:hover .workonitRow.ui-button, .ui-bizagi-wp-app-inbox-activity-description:hover .workonitRow.ui-button:hover, 
+.ui-bizagi-wp-app-inbox-grid-cases-container table tr:hover .workonitRow.ui-button:hover, 
+.ui-bizagi-wp-app-routing-container table tr:hover .workonitRow.ui-button:hover
+{
+
+	background: #0E385E;
+	border:1px solid #071F34;
+}
+
+.ui-button:hover, .ui-button.ui-state-default:hover, .ui-bizagi-button-container .ui-bizagi-button:hover, .ui-dialog .ui-button:hover, .ui-bizagi-wp-app-routing-container table .ui-button:hover
+{
+	background: none #185891!important;
+	filter: none;
+	border:1px solid #09355C!important;
+}
+
+.ui-tabs .ui-tabs-nav li
+{
+	background:#B7C5D0;
+	padding-bottom:0;
+}
+
+/* Sharepoint */
+.ui-bizagi-sharepoint-processes
+{
+	background:none #FFF !important;
+}
+
+.ui-bizagi-sharepoint-webpart-parentdiv
+{
+	background:#F7F7F7;
+}
+
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-title
+{
+	background:#185891;
+	color:white;
+	border:1px solid #0E385E;
+	font-weight:normal;
+}
+
+.ui-bizagi-wp-app-inbox-processes-title .arrow.Right
+{
+	border-top:4px solid white;
+}
+
+#ui-bizagi-webpart-processes-container li.active, #ui-bizagi-webpart-processes-container li:hover
+{
+	background:#B7C5D0;
+	border:1px solid #666666;
+	border-left:1px solid #666666 !important;
+}
+
+.ui-wp-cases-grid th
+{
+	background:#0E385E;
+	color:white;
+	font-weight: normal;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-case-list:hover
+{
+	background:#B7C5D0;
+}
+
+#ui-bizagi-webpart-cases-container ul:nth-child(2n) li{
+	background:#E2EAF0;	
+}
+
+
+#casesPaginationInbox .bz-wp-cases-pager ul li{
+	background-color: #fff;
+	color:#185891;
+}
+
+#casesPaginationInbox .bz-wp-cases-pager ul li:hover,
+#casesPaginationInbox .bz-wp-cases-pager ul li.active{
+	background-color:#185891!important;
+	border:1px solid #185891!important;
+	color: #Fff;
+}
+
+.ui-bizagi-webpart-case-summary-title,
+.bz-wp-cases-view-principal li{
+	background-color: #185891!important;
+	color:#fff!important;
+}
+
+#ui-bizagi-webpart-cases-container li:hover dl,
+#ui-bizagi-webpart-cases-container li.selected dl,
+#ui-bizagi-webpart-cases-container li dl{
+	color:#444;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-case-list:hover dd,
+#ui-bizagi-webpart-cases-container ul dd{
+	background-color: #fff;
+}
+
+
+.ui-bizagi-webpart-header-render-msg{
+	background: none #185891!important;
+	color: #fff!important;
+}
+
+.ui-bizagi-webpart-header-render-msg h2{
+	color: #fff!important;
+}
+
+#ui-bizagi-webpart-render-container .ui-bizagi-button-container:hover,
+#ui-bizagi-webpart-render-container .ui-bizagi-button-container{
+	background-color: #fff!important;
+}
+
+.ui-bizagi-webpart-case-summary-title{
+	border-top: solid 1px #CCCCCC !important;
+}
+
+
+/* Buttons */
+
+.bz-ui-button, .ui-bizagi-webpart-newcase-menu li{
+	background-color: #FFF !important;
+	border-color: #B5B5B5 !important;
+	color: #444!important;
+}
+
+#ui-bizagi-webpart-newcase-container #modalMenuBtHeader{
+	background-color: #185891!important;
+	border-color: 1px solid #8A0003 !important;
+	color: #FFF!important;
+}
+
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-title:hover{
+	background-color: #114472;
+	border:1px solid #114472!important;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-app-inbox-processes-title{
+	background-color: #185891!important;
+	color: #FFF!important;
+}
+
+.ui-bizagi-sharepoint-newCase.ui-bizagi-sharepoint-webpart-parentdiv{
+	background-color: #185891!important;
+	border-bottom:1px solid #185891 !important;
+}
+
+.ui-bizagi-webpart-newcase-menu li:after{
+	border-left-color: #C7C7C7 !important;
+}
+
+.ui-bizagi-webpart-newcase-menu li a .text{
+	color: #444!important;
+}
+
+
+#ui-bizagi-webpart-newcase-container.modalMenuBt{
+	border-color: #09355C!important
+}
+
+.ui-wp-cases-grid{
+	background-color: #F7F7F7;
+	border: solid 1px  #185891!important;
+}
+
+.ui-wp-cases-grid .bz-wp-cases-pager{
+	background-color: transparent;
+}
+
+.ui-wp-cases-grid tbody .ui-bizagi-wp-case-tr:nth-child(2n){
+	background: #DBDFE2;
+}
+
+.ui-wp-cases-grid .selected td, .ui-wp-cases-grid tbody tr:hover td .bz-wp-cases-pager,
+.ui-wp-cases-grid .selected td, .ui-wp-cases-grid tbody tr:hover td{
+	background: #D4DBE0;
+}
+
+.ui-bizagi-webpart-workitem-summary-description,
+.ui-bizagi-webpart-case-summary-description{
+	background-color: #E2EAF0!important;
+}
+
+.ui-bizagi-webpart-newcase-menu li .ui-bizagi-wp-mini-arrow{
+	border-color: #ccc transparent transparent transparent;
+}
+.ui-bizagi-wp-app-inbox-processes-title .arrow{
+	border-color: #FFF transparent transparent transparent;
+}
+
+.ui-bizagi-wp-app-inbox-processes-title .arrow.Right{
+	border-color: transparent transparent transparent #FFF ;
+}
+
+.ui-bizagi-webpart-workitem-summary-description dd,
+.ui-bizagi-webpart-case-summary-details-tabs dd,
+.ui-bizagi-webpart-case-summary-description .box-description dd{
+	background: #fff!important;
+}
+
+
+.ui-bizagi-webpart-workportal-column{
+	background-color: #fff;
+}
+
+/*=== Theme:Fires of Mount Doom ===*/
+
+/* Header bars */
+
+#ui-bizagi-wp-menu
+{
+	background: #6B0103;
+	background: -moz-linear-gradient(top, #6B0103 0%, #1C0113 100%);
+	background: -webkit-gradient(linear, left top, left bottom, from(#6B0103), to(#1C0113));
+	background: -o-linear-gradient(top, #6B0103 20%,#1C0113 100%);
+	background: -ms-linear-gradient(top, #6B0103 20%,#1C0113 100%);
+	filter: none !important;
+}
+
+#contentInbox
+{
+	background: #F03C02;
+	background: -moz-linear-gradient(top, #F03C02 0%, #A30006 100%);
+	background: -webkit-linear-gradient(top, #F03C02 0%,#A30006 100%);
+	background: -o-linear-gradient(top, #F03C02 0%,#A30006 100%);
+	background: -ms-linear-gradient(top, #F03C02 0%,#A30006 100%);
+	filter: none !important;
+}
+
+#innerContentInbox
+{
+	border-top:1px solid #F03C02;
+	border-bottom:1px solid #6B0103;
+}
+
+/* Columns */
+
+
+#contentProc
+{
+	background: #FFE9E1;
+}
+
+#contentCases
+{
+	background: #FFF7F2;
+}
+
+#ui-bizagi-wp-app-render-form, #contentCases.casesGrid, .ui-bizagi-wp-app-inbox-grid-cases-container table,
+.personalizedColumnsContainer table {
+    background: #FFFBF9;
+}
+
+#ui-bizagi-wp-app-render-desc-panel
+{
+	background:#FFF7F2;
+}
+
+/* Containers */
+
+#ui-bizagi-wp-app-inbox-processes-container .selected, #ui-bizagi-wp-app-inbox-cases-container .selected
+{
+	background:#A30006 !important;
+}
+
+#ui-bizagi-wp-app-inbox-processes-container .selected .ui-bizagi-wp-app-inbox-processes-name
+{
+    color:#F2F2F2 !important;
+    text-shadow:none !important;
+}
+
+#ui-bizagi-wp-app-inbox-cases-container .selected #caseId h3, #ui-bizagi-wp-app-inbox-cases-container .selected #caseActivity span, #ui-bizagi-wp-app-inbox-cases-container .selected dl
+{
+    color:#F2F2F2 !important;
+    text-shadow:none !important;
+}
+
+#ui-bizagi-wp-app-inbox-processes-container li.selected:hover, #ui-bizagi-wp-app-inbox-cases-container li.selected:hover
+{
+	background:#930003 !important;	
+}
+
+#ui-bizagi-wp-app-inbox-processes-container li:hover, #ui-bizagi-wp-app-inbox-cases-container li:hover
+{
+	background:#E0C8BA !important;
+}
+
+/* Buttons */
+.ui-button, .ui-button.ui-state-default
+{
+	
+}
+
+.ui-bizagi-wp-app-inbox-activity-description:hover.workonitRow.ui-button:hover,.ui-bizagi-wp-app-inbox-activity-description:hover .workonitRow.ui-button, .ui-bizagi-wp-app-inbox-activity-description:hover .workonitRow.ui-button:hover, 
+.ui-bizagi-wp-app-inbox-grid-cases-container table tr:hover .workonitRow.ui-button:hover, 
+.ui-bizagi-wp-app-routing-container table tr:hover .workonitRow.ui-button:hover
+{
+	background: #F03C02;
+	background: -moz-linear-gradient(top, #F03C02 0%, #A30006 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F03C02), color-stop(100%,#A30006));
+	background: -webkit-linear-gradient(top, #F03C02 0%,#A30006 100%);
+	background: -o-linear-gradient(top, #F03C02 0%,#A30006 100%);
+	background: -ms-linear-gradient(top, #F03C02 0%,#A30006 100%);
+	filter: none !important;
+	border:1px solid #6B0103;
+}
+
+
+
+.ui-button:hover, .ui-button.ui-state-default:hover, .ui-bizagi-button-container .ui-bizagi-button:hover, .ui-dialog .ui-button:hover, .ui-bizagi-wp-app-routing-container table .ui-button:hover
+{
+	background: none #930003!important;
+	filter: none !important;
+	border:1px solid #6D0203;
+}
+
+.ui-tabs .ui-tabs-nav li
+{
+	background:#E0C8BA;
+	padding-bottom:0;
+}
+
+/* Sharepoint */
+
+.ui-bizagi-sharepoint-webpart-parentdiv
+{
+	background-color:#fff !important;
+}
+
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-title
+{
+	background:#A30006;
+	color:white;
+	border:1px solid #6A0103;
+	font-weight:normal;
+}
+
+.ui-bizagi-wp-app-inbox-processes-title .arrow.Right
+{
+	border-top:4px solid white;
+}
+
+#ui-bizagi-webpart-processes-container li{
+	background-color: #F1EAEA;
+}
+#ui-bizagi-webpart-processes-container li:nth-child(2n){
+	background-color: #FFF;
+}
+
+#ui-bizagi-webpart-processes-container li.active, #ui-bizagi-webpart-processes-container li:hover
+{
+	background:#F0DDDD;
+	border:1px solid #ECCECF;
+}
+
+.ui-wp-cases-grid th
+{
+	background:#A30006;
+	color:white;
+	font-weight: normal;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-case-list
+{
+	background:#FAF5F5;
+}
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-case-list:hover
+{
+	background:#F0DDDD;
+}
+
+#ui-bizagi-webpart-cases-container ul:nth-child(2n) li{
+	background:#F1EAEA;	
+}
+
+
+#casesPaginationInbox .bz-wp-cases-pager ul li{
+	background-color: #fff;
+	color:#930003;
+}
+
+#casesPaginationInbox .bz-wp-cases-pager ul li:hover,
+#casesPaginationInbox .bz-wp-cases-pager ul li.active{
+	background-color:#8A0003!important;
+	border:1px solid #8A0003;
+	color: #Fff;
+}
+
+.ui-bizagi-webpart-case-summary-title,
+.bz-wp-cases-view-principal li{
+	background-color: #930003!important;
+	color:#fff!important;
+}
+
+#ui-bizagi-webpart-cases-container li:hover dl,
+#ui-bizagi-webpart-cases-container li.selected dl,
+#ui-bizagi-webpart-cases-container li dl{
+	color:#444;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-case-list:hover dd,
+#ui-bizagi-webpart-cases-container ul dd{
+	background-color: #fff;
+}
+
+
+.ui-bizagi-webpart-header-render-msg{
+	background: none #930003!important;
+	color: #fff!important;
+}
+
+.ui-bizagi-webpart-header-render-msg h2{
+	color: #fff!important;
+}
+
+#ui-bizagi-webpart-render-container .ui-bizagi-button-container:hover,
+#ui-bizagi-webpart-render-container .ui-bizagi-button-container{
+	background-color: #fff;
+}
+
+.ui-bizagi-webpart-case-summary-title{
+	border-top: solid 1px #CCCCCC !important;
+}
+
+
+/* Buttons */
+
+.bz-ui-button, .ui-bizagi-webpart-newcase-menu li{
+	background-color: #FFF !important;
+	border-color: #B5B5B5 !important;
+	color: #444!important;
+}
+
+#ui-bizagi-webpart-newcase-container #modalMenuBtHeader{
+	background-color: #930003!important;
+	border-color: 1px solid #8A0003 !important;
+	color: #FFF!important;
+}
+
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-title:hover{
+	background-color: #8A0003;
+	border:1px solid #8A0003 !important;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-app-inbox-processes-title{
+	background-color: #930003!important;
+	color: #FFF!important;
+}
+
+.ui-bizagi-sharepoint-newCase.ui-bizagi-sharepoint-webpart-parentdiv{
+	background-color: #930003!important;
+	border-bottom:1px solid #8A0003 !important;
+}
+
+.ui-bizagi-webpart-newcase-menu li:after{
+	border-left-color: #C7C7C7 !important;
+}
+
+.ui-bizagi-webpart-newcase-menu li a .text{
+	color: #444!important;
+}
+
+
+#ui-bizagi-webpart-newcase-container.modalMenuBt{
+	border-color: #700507 !important;
+}
+
+.ui-wp-cases-grid{
+	background-color: #ECECEC;
+	border: solid 1px  #8A0003;
+}
+
+.ui-wp-cases-grid .bz-wp-cases-pager{
+	background-color: transparent;
+}
+
+.ui-wp-cases-grid tbody .ui-bizagi-wp-case-tr:nth-child(2n){
+	background: #EBEBE7;
+}
+
+.ui-wp-cases-grid .selected td, .ui-wp-cases-grid tbody tr:hover td .bz-wp-cases-pager,
+.ui-wp-cases-grid .selected td, .ui-wp-cases-grid tbody tr:hover td{
+	background: #DFDFD9;
+}
+
+.ui-bizagi-webpart-workitem-summary-description,
+.ui-bizagi-webpart-case-summary-description{
+	background-color: #FAF5F5!important;
+}
+
+.ui-bizagi-webpart-newcase-menu li .ui-bizagi-wp-mini-arrow{
+	border-color: #ccc transparent transparent transparent;
+}
+.ui-bizagi-wp-app-inbox-processes-title .arrow{
+	border-color: #FFF transparent transparent transparent;
+}
+
+.ui-bizagi-wp-app-inbox-processes-title .arrow.Right{
+	border-color: transparent transparent transparent #FFF ;
+}
+
+
+.ui-bizagi-webpart-workportal-column{
+	background-color: #fff;
+}
+
+/*=== Theme:Lost Woods ===*/
+
+/* Header bars */
+
+#ui-bizagi-wp-menu
+{
+	background: #92ad22;
+	background: -moz-linear-gradient(top, #92ad22 0%, #496120 100%);
+	background: -webkit-linear-gradient(top, #92ad22 0%,#496120 100%);
+	background: -o-linear-gradient(top, #92ad22 0%,#496120 100%);
+	background: -ms-linear-gradient(top, #92ad22 0%,#496120 100%);
+	background: linear-gradient(to bottom, #92ad22 0%,#496120 100%);
+	filter: none !important;
+}
+
+#contentInbox
+{
+	background: #052B31;
+	background: -moz-linear-gradient(top, #052B31 0%, #1D6473 100%);
+	background: -webkit-linear-gradient(top, #052B31 0%,#1D6473 100%);
+	background: -o-linear-gradient(top, #052B31 0%,#1D6473 100%);
+	background: -ms-linear-gradient(top, #052B31 0%,#1D6473 100%);
+	background: linear-gradient(to bottom, #052b31 0%,#1d6473 100%);
+	filter: none !important;
+}
+
+#innerContentInbox
+{
+	border-top:1px solid #92AD22;
+	border-bottom:1px solid #052B31;
+}
+
+#main_menu li a .text,
+#main_menu li.active .text{ color: #f7f7f7 !important; }
+
+/* Columns */
+
+#contentProc
+{
+	background: #D7D7CB;
+}
+
+#contentCases
+{
+	background: #E6E6DD;
+}
+
+#ui-bizagi-wp-app-render-form, #contentCases.casesGrid, .ui-bizagi-wp-app-inbox-grid-cases-container table,
+.personalizedColumnsContainer table {
+    background: #F4F4F0;
+}
+
+#ui-bizagi-wp-app-render-desc-panel
+{
+	background:#D7D7CB;
+}
+
+/* Containers */
+
+#ui-bizagi-wp-app-inbox-processes-container .selected, #ui-bizagi-wp-app-inbox-cases-container .selected
+{
+	background:#92AD22 !important;
+}
+
+#ui-bizagi-wp-app-inbox-processes-container li.selected:hover, #ui-bizagi-wp-app-inbox-cases-container li.selected:hover
+{
+	background:#7A9421 !important;	
+}
+#ui-bizagi-wp-app-inbox-processes-container li:hover, #ui-bizagi-wp-app-inbox-cases-container li:hover
+{
+	background:#F2F8DC !important;
+}
+
+/* Buttons */
+.ui-button, .ui-button.ui-state-default
+{
+	
+}
+
+.ui-bizagi-wp-app-inbox-activity-description:hover.workonitRow.ui-button:hover,
+.ui-bizagi-wp-app-inbox-activity-description:hover .workonitRow.ui-button,
+.ui-bizagi-wp-app-inbox-activity-description:hover .workonitRow.ui-button:hover, 
+.ui-bizagi-wp-app-inbox-grid-cases-container table tr:hover .workonitRow.ui-button:hover, 
+.ui-bizagi-wp-app-routing-container table tr:hover .workonitRow.ui-button:hover {
+	background: #92ad22;
+	background: -moz-linear-gradient(top,  #92ad22 0%, #496120 100%);
+	background: -webkit-linear-gradient(top,  #92ad22 0%,#496120 100%);
+	background: -o-linear-gradient(top,  #92ad22 0%,#496120 100%);
+	background: -ms-linear-gradient(top,  #92ad22 0%,#496120 100%);
+	background: linear-gradient(to bottom,  #92ad22 0%,#496120 100%);
+	filter: none !important;
+	border:1px solid #496120;
+}
+
+.ui-button:hover, 
+.ui-button.ui-state-default:hover, 
+.ui-bizagi-button-container .ui-bizagi-button:hover, 
+.ui-dialog .ui-button:hover, 
+.ui-bizagi-wp-app-routing-container table .ui-button:hover {
+	background: #1d6473;
+	background: -moz-linear-gradient(top,  #1d6473 0%, #052b31 100%);
+	background: -webkit-linear-gradient(top,  #1d6473 0%,#052b31 100%);
+	background: -o-linear-gradient(top,  #1d6473 0%,#052b31 100%);
+	background: -ms-linear-gradient(top,  #1d6473 0%,#052b31 100%);
+	background: linear-gradient(to bottom,  #1d6473 0%,#052b31 100%);
+	filter: none !important;
+	border:1px solid #052B31;
+}
+
+.ui-tabs .ui-tabs-nav li
+{
+	background:#F2F8DC;
+	padding-bottom:0;
+}
+
+/* Sharepoint */
+.ui-bizagi-webpart-workportal-column.process-column,
+.ui-bizagi-sharepoint-processes
+{
+	background:#D7D7CB !important;
+}
+
+.ui-bizagi-sharepoint-webpart-parentdiv
+{
+	background:#E6E6DD;
+}
+
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-title
+{
+	background:#92AD22;
+	color:white;
+	border:1px solid #92AD22;
+	font-weight:normal;
+}
+
+
+#ui-bizagi-webpart-processes-container li.active, #ui-bizagi-webpart-processes-container li:hover
+{
+	background:#F2F8DC;
+	border:1px solid #92AD22;
+	border-left:1px solid #92AD22 !important;
+}
+
+.ui-wp-cases-grid th
+{
+	background:#92AD22;
+	color:white;
+	font-weight: normal;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-case-list
+{
+	background:#D7D7CB;
+}
+
+#ui-bizagi-webpart-cases-container ul:nth-child(2n) li{
+	background:#E3E3DB;	
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-case-list:hover{
+	background:#92AD22;
+}
+
+#casesPaginationInbox .bz-wp-cases-pager ul li{
+	background-color: #D7D7CB;
+	color:#fff;
+}
+
+#casesPaginationInbox .bz-wp-cases-pager ul li:hover,
+#casesPaginationInbox .bz-wp-cases-pager ul li.active{
+	background-color:#7B9219!important;
+	border:1px solid #7B9219;
+	color: #Fff;
+}
+
+.ui-bizagi-webpart-case-summary-title,
+.bz-wp-cases-view-principal li{
+	background-color: #92AD22!important;
+	color:#fff!important;
+}
+
+#ui-bizagi-webpart-cases-container li:hover dl,
+#ui-bizagi-webpart-cases-container li.selected dl,
+#ui-bizagi-webpart-cases-container li dl{
+	color:#444;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-case-list:hover dd,
+#ui-bizagi-webpart-cases-container ul dd{
+	background-color: #f2f2f2;
+}
+
+
+.ui-bizagi-webpart-header-render-msg{
+	background: none #92AD22!important;
+	color: #fff!important;
+}
+
+.ui-bizagi-webpart-header-render-msg h2{
+	color: #fff!important;
+}
+
+#ui-bizagi-webpart-render-container .ui-bizagi-button-container:hover,
+#ui-bizagi-webpart-render-container .ui-bizagi-button-container{
+	background-color: #F8F5EF;
+}
+
+.ui-bizagi-webpart-case-summary-title{
+	border-top: solid 1px #CCCCCC !important;
+}
+
+
+/* Buttons */
+
+.bz-ui-button, .ui-bizagi-webpart-newcase-menu li{
+	background-color: #FFF !important;
+	border-color: #B5B5B5 !important;
+	color: #444!important;
+}
+
+#ui-bizagi-webpart-newcase-container #modalMenuBtHeader{
+	background-color: #92AD22!important;
+	border-color: 1px solid #7B9219 !important;
+	color: #FFF!important;
+}
+
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-title:hover{
+	background-color: #7B9219;
+	border:1px solid #7B9219 !important;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-app-inbox-processes-title{
+	background-color: #92AD22!important;
+	color: #FFF!important;
+}
+
+.ui-bizagi-sharepoint-newCase.ui-bizagi-sharepoint-webpart-parentdiv{
+	background-color: #92AD22!important;
+	border-bottom:1px solid #7B9219 !important;
+}
+
+.ui-bizagi-webpart-newcase-menu li:after{
+	border-left-color: #C7C7C7 !important;
+}
+
+.ui-bizagi-webpart-newcase-menu li a .text{
+	color: #444!important;
+}
+
+
+#ui-bizagi-webpart-newcase-container.modalMenuBt{
+	border-color: #7B9219 !important;
+}
+
+.ui-wp-cases-grid{
+	background-color: #ECECEC;
+	border: solid 1px  #7B9219;
+}
+
+.ui-wp-cases-grid .bz-wp-cases-pager{
+	background-color: transparent;
+}
+
+.ui-wp-cases-grid tbody .ui-bizagi-wp-case-tr:nth-child(2n){
+	background: #EBEBE7;
+}
+
+.ui-wp-cases-grid .selected td, .ui-wp-cases-grid tbody tr:hover td .bz-wp-cases-pager,
+.ui-wp-cases-grid .selected td, .ui-wp-cases-grid tbody tr:hover td{
+	background: #DFDFD9;
+}
+
+.ui-bizagi-webpart-case-summary-description{
+	background: #E3E3DB;
+}
+
+.ui-bizagi-webpart-newcase-menu li .ui-bizagi-wp-mini-arrow{
+	border-color: #ccc transparent transparent transparent;
+}
+.ui-bizagi-wp-app-inbox-processes-title .arrow{
+	border-color: #FFF transparent transparent transparent;
+}
+
+.ui-bizagi-wp-app-inbox-processes-title .arrow.Right{
+	border-color: transparent transparent transparent #FFF ;
+}
+
+
+
+/*=== Theme:Brightest Day ===*/
+
+/* Header bars */
+
+#ui-bizagi-wp-menu
+{
+	background: #FFFFFF;
+	background: -moz-linear-gradient(top, #FFFFFF 0%, #DDDDDD 100%);
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#DDDDDD));
+	background: -o-linear-gradient(top, #FFFFFF 20%,#DDDDDD 100%);
+	background: -ms-linear-gradient(top, #FFFFFF 20%,#DDDDDD 100%);
+	filter: none !important;
+}
+
+#ui-bizagi-wp-app-menu-container
+{
+    background-image:none;
+}
+
+#contentInbox
+{
+	background: #BBBBBB;
+	background: -moz-linear-gradient(top, #BBBBBB 0%, #DDDDDD 100%);
+	background: -webkit-linear-gradient(top, #BBBBBB 0%,#DDDDDD 100%);
+	background: -o-linear-gradient(top, #BBBBBB 0%,#DDDDDD 100%);
+	background: -ms-linear-gradient(top, #BBBBBB 0%,#DDDDDD 100%);
+	filter: none !important;
+}
+
+#innerContentInbox
+{
+	border-top:1px solid #EEEEEE;
+	border-bottom:1px solid #999999;
+}
+
+/* Columns */
+
+#contentProc
+{
+	background: #E9E9E9;
+}
+
+#contentCases
+{
+	background: #EEEEEE;
+}
+
+#ui-bizagi-wp-app-render-form, #contentCases.casesGrid, .ui-bizagi-wp-app-inbox-grid-cases-container table,
+.personalizedColumnsContainer table {
+    background: #F7F7F7;
+}
+
+#ui-bizagi-wp-app-render-desc-panel
+{
+	background:#E9E9E9;
+}
+
+/* Containers */
+
+#ui-bizagi-wp-app-inbox-processes-container .selected, #ui-bizagi-wp-app-inbox-cases-container .selected
+{
+	background:#AAAAAA !important;
+}
+
+#ui-bizagi-wp-app-inbox-processes-container li.selected:hover, #ui-bizagi-wp-app-inbox-cases-container li.selected:hover
+{
+	background:#8A8A8A !important;	
+}
+#ui-bizagi-wp-app-inbox-processes-container li:hover, #ui-bizagi-wp-app-inbox-cases-container li:hover
+{
+	background:#DDDDDD !important;
+}
+
+/* Buttons */
+.ui-button, .ui-button.ui-state-default
+{
+	
+}
+
+.ui-bizagi-wp-app-inbox-activity-description:hover.workonitRow.ui-button:hover,.ui-bizagi-wp-app-inbox-activity-description:hover .workonitRow.ui-button, .ui-bizagi-wp-app-inbox-activity-description:hover .workonitRow.ui-button:hover, 
+.ui-bizagi-wp-app-inbox-grid-cases-container table tr:hover .workonitRow.ui-button:hover, 
+.ui-bizagi-wp-app-routing-container table tr:hover .workonitRow.ui-button:hover
+{
+	background: #DDDDDD;
+	background: -moz-linear-gradient(top, #DDDDDD 0%, #AAAAAA 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#DDDDDD), color-stop(100%,#AAAAAA));
+	background: -webkit-linear-gradient(top, #DDDDDD 0%,#AAAAAA 100%);
+	background: -o-linear-gradient(top, #DDDDDD 0%,#AAAAAA 100%);
+	background: -ms-linear-gradient(top, #DDDDDD 0%,#AAAAAA 100%);
+	filter: none !important;
+	border:1px solid #60656A;
+}
+
+.ui-button:hover, .ui-button.ui-state-default:hover, .ui-bizagi-button-container .ui-bizagi-button:hover, .ui-dialog .ui-button:hover, .ui-bizagi-wp-app-routing-container table .ui-button:hover
+
+{
+	background: #AAAAAA;
+	background: -moz-linear-gradient(top, #AAAAAA 0%, #8A8A8A 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#AAAAAA), color-stop(100%,#8A8A8A));
+	background: -webkit-linear-gradient(top, #AAAAAA 0%,#8A8A8A 100%);
+	background: -o-linear-gradient(top, #AAAAAA 0%,#8A8A8A 100%);
+	background: -ms-linear-gradient(top, #AAAAAA 0%,#8A8A8A 100%);
+	filter: none !important;
+	border:1px solid #60656A;
+}
+
+.ui-tabs .ui-tabs-nav li
+{
+	background:#DDDDDD;
+	padding-bottom:0;
+}
+
+/* Sharepoint */
+.ui-bizagi-sharepoint-processes
+{
+	background:#EEEEEE !important;
+}
+
+.ui-bizagi-sharepoint-webpart-parentdiv
+{
+	background-color:#FFF!important;
+}
+
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-title
+{
+	background:gray;
+	color:white;
+	border:1px solid #5F5F5F;
+	font-weight:normal;
+}
+
+.ui-bizagi-wp-app-inbox-processes-title .arrow.Right
+{
+	border-top:4px solid white;
+}
+
+#ui-bizagi-webpart-processes-container li.active, #ui-bizagi-webpart-processes-container li:hover
+{
+	background:#DDDDDD;
+	border:1px solid #98A1A8;
+	border-left:1px solid #98A1A8 !important;
+}
+
+.ui-wp-cases-grid th
+{
+	background:#AAAAAA;
+	color:white;
+	font-weight: normal;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-case-list
+{
+	background:#e6e6e6;
+}
+#ui-bizagi-webpart-cases-container ul:nth-child(2n) li{
+	background:#DADADA;	
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-case-list:hover{
+	background:#CCCCCC;
+}
+
+#casesPaginationInbox .bz-wp-cases-pager ul li{
+	color:#71502E;
+}
+
+#casesPaginationInbox .bz-wp-cases-pager ul li:hover,
+#casesPaginationInbox .bz-wp-cases-pager ul li.active{
+	background-color:#71502E!important;
+	border:1px solid #4A3520;
+	color: #F4E4CA;
+}
+.ui-bizagi-webpart-case-summary-title,
+#ui-bizagi-webpart-cases-container li{
+	background-color: #fff;
+}
+
+#ui-bizagi-webpart-cases-container li:hover dl,
+#ui-bizagi-webpart-cases-container li.selected dl,
+#ui-bizagi-webpart-cases-container li dl{
+	color:#444;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-case-list:hover dd,
+#ui-bizagi-webpart-cases-container ul dd{
+	background-color: #f2f2f2;
+}
+
+
+.ui-bizagi-webpart-header-render-msg{
+	background: none #CCCCCC !important;
+	color: #444!important;
+}
+
+.ui-bizagi-webpart-header-render-msg h2{
+	color: #444!important;
+}
+
+#ui-bizagi-webpart-render-container .ui-bizagi-button-container:hover,
+#ui-bizagi-webpart-render-container .ui-bizagi-button-container{
+	background-color: #F8F5EF;
+}
+
+.ui-bizagi-webpart-case-summary-title{
+	border-top: solid 1px #CCCCCC !important;
+}
+
+
+/* Buttons */
+#ui-bizagi-webpart-newcase-container #modalMenuBtHeader,
+.bz-ui-button, .ui-bizagi-webpart-newcase-menu li{
+	background-color: gray !important;
+	border-color: #5F5F5F !important;
+	color: #FFF!important;
+}
+
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-title:hover{
+	background-color: #6A6A6A;
+}
+
+.ui-bizagi-webpart-newcase-menu li:after{
+	border-left-color: #5F5F5F !important;
+}
+
+.ui-bizagi-webpart-newcase-menu li a .text{
+	color: #FFF!important;
+}
+
+
+#ui-bizagi-webpart-newcase-container.modalMenuBt{
+	border-color: #3D2711 !important;
+}
+
+.ui-wp-cases-grid{
+	background-color: #F6EFE4;
+	border: solid 1px  #694A2C;
+}
+
+.ui-wp-cases-grid .bz-wp-cases-pager{
+	background-color: transparent;
+}
+
+.ui-wp-cases-grid tbody .ui-bizagi-wp-case-tr:nth-child(2n){
+	background: #F6EDDF;
+}
+
+.ui-wp-cases-grid .selected td, .ui-wp-cases-grid tbody tr:hover td .bz-wp-cases-pager,
+.ui-wp-cases-grid .selected td, .ui-wp-cases-grid tbody tr:hover td{
+	background: #F7E6CF;
+}
+
+.ui-bizagi-webpart-case-summary-description{
+	background: #e6e6e6;
+}
+
+.ui-bizagi-webpart-newcase-menu li .ui-bizagi-wp-mini-arrow,
+.ui-bizagi-wp-app-inbox-processes-title .arrow{
+	border-color: #fff transparent transparent transparent;
+}
+
+.icon.back{
+	background-position: -32px 0;
+}
+
+
+
+/*=== Theme:Blackest Night ===*/
+
+/* Header bars */
+
+#ui-bizagi-wp-menu
+{
+	background: #444444;
+	background: -moz-linear-gradient(top, #444444 0%, #000000 100%);
+	background: -webkit-gradient(linear, left top, left bottom, from(#444444), to(#000000));
+	background: -o-linear-gradient(top, #444444 20%,#000000 100%);
+	background: -ms-linear-gradient(top, #444444 20%,#000000 100%);
+	filter: none !important;
+}
+
+#contentInbox
+{
+	background: #333333;
+	background: -moz-linear-gradient(top, #333333 0%, #666666 100%);
+	background: -webkit-linear-gradient(top, #333333 0%,#666666 100%);
+	background: -o-linear-gradient(top, #333333 0%,#666666 100%);
+	background: -ms-linear-gradient(top, #333333 0%,#666666 100%);
+	filter: none !important;
+}
+
+#innerContentInbox
+{
+	border-top:1px solid #666666;
+	border-bottom:1px solid #222222;
+}
+
+/* Columns */
+
+#contentProc
+{
+	background: #777777;
+}
+
+#contentCases
+{
+	background: #AAAAAA;
+}
+
+#ui-bizagi-wp-app-render-form, #contentCases.casesGrid, .ui-bizagi-wp-app-inbox-grid-cases-container table,
+.personalizedColumnsContainer table {
+    background: #CCCCCC;
+}
+
+#ui-bizagi-wp-app-render-desc-panel
+{
+	background:#AAAAAA;
+}
+
+/* Containers */
+
+#ui-bizagi-wp-app-inbox-processes-container .selected, #ui-bizagi-wp-app-inbox-cases-container .selected
+{
+	background:#242415 !important;
+}
+
+#ui-bizagi-wp-app-inbox-processes-container .selected .ui-bizagi-wp-app-inbox-processes-name
+{
+    color:#92A5AF !important;
+    text-shadow:none !important;
+}
+
+#ui-bizagi-wp-app-inbox-cases-container .selected #caseId h3, #ui-bizagi-wp-app-inbox-cases-container .selected #caseActivity span, #ui-bizagi-wp-app-inbox-cases-container .selected dl
+{
+    color:#92A5AF !important;
+    text-shadow:none !important;
+}
+
+#ui-bizagi-wp-app-inbox-processes-container li.selected:hover, #ui-bizagi-wp-app-inbox-cases-container li.selected:hover
+{
+	background:#666666 !important;	
+}
+#ui-bizagi-wp-app-inbox-processes-container li:hover, #ui-bizagi-wp-app-inbox-cases-container li:hover
+{
+	background:#DDDDDD !important;
+}
+
+/* Buttons */
+.ui-button, .ui-button.ui-state-default
+{
+	
+}
+
+.ui-bizagi-wp-app-inbox-activity-description:hover.workonitRow.ui-button:hover,.ui-bizagi-wp-app-inbox-activity-description:hover .workonitRow.ui-button, .ui-bizagi-wp-app-inbox-activity-description:hover .workonitRow.ui-button:hover, 
+.ui-bizagi-wp-app-inbox-grid-cases-container table tr:hover .workonitRow.ui-button:hover, 
+.ui-bizagi-wp-app-routing-container table tr:hover .workonitRow.ui-button:hover
+{
+	background: #666666;
+	background: -moz-linear-gradient(top, #666666 0%, #333333 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#666666), color-stop(100%,#333333));
+	background: -webkit-linear-gradient(top, #666666 0%,#333333 100%);
+	background: -o-linear-gradient(top, #666666 0%,#333333 100%);
+	background: -ms-linear-gradient(top, #666666 0%,#333333 100%);
+	filter: none !important;
+	border:1px solid #000000;
+}
+
+.ui-button:hover, .ui-button.ui-state-default:hover, .ui-bizagi-button-container .ui-bizagi-button:hover, .ui-dialog .ui-button:hover, .ui-bizagi-wp-app-routing-container table .ui-button:hover
+
+{
+	background: #444444;
+	background: -moz-linear-gradient(top, #444444 0%, #000000 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#444444), color-stop(100%,#000000));
+	background: -webkit-linear-gradient(top, #444444 0%,#000000 100%);
+	background: -o-linear-gradient(top, #444444 0%,#000000 100%);
+	background: -ms-linear-gradient(top, #444444 0%,#000000 100%);
+	filter: none !important;
+	border:1px solid #000000;
+}
+
+.ui-tabs .ui-tabs-nav li
+{
+	background:#DDDDDD;
+	padding-bottom:0;
+}
+
+/* Sharepoint */
+.ui-bizagi-sharepoint-processes
+{
+	background:#AAAAAA !important;
+}
+
+.ui-bizagi-sharepoint-webpart-parentdiv
+{
+	background:#CCCCCC;
+}
+
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-title
+{
+	background:#242415;
+	color:white;
+	border:1px solid black;
+	font-weight:normal;
+}
+
+.ui-bizagi-wp-app-inbox-processes-title .arrow.Right
+{
+	border-top:4px solid white;
+}
+
+#ui-bizagi-webpart-processes-container li.active, #ui-bizagi-webpart-processes-container li:hover
+{
+	background:#DDDDDD;
+	border:1px solid #666666;
+	border-left:1px solid #666666 !important;
+}
+
+.ui-wp-cases-grid th
+{
+	background:#242415;
+	color:white;
+	font-weight: normal;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-case-list:hover
+{
+	background:#DDDDDD;
+	border:1px solid #858585; 
+}
+
+
+.ui-bizagi-webpart-case-summary-title,
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-app-inbox-processes-title,
+.ui-bizagi-sharepoint-newCase.ui-bizagi-sharepoint-webpart-parentdiv,
+#ui-bizagi-webpart-cases-container .bz-wp-cases-view-principal li
+{
+	background: none #242415 !important;
+	color: #FFF!important;
+	border: none!important;
+	border-bottom: none!important;
+	font-weight: normal;
+	border-top: solid 1px #573A1E !important;
+}
+
+.ui-dialog .ui-widget-header,
+.bz-wp-cases-header-views{
+	background: none #242415 !important;
+	border: solid 1px  #242415;
+}
+.ui-dialog .ui-dialog-title{
+	color: #AAAAAA!important;
+}
+
+.bz-wp-cases-header-views span{
+	background-color: transparent;
+}
+
+.ui-bizagi-webpart-case-summary-title{
+	color: #AAAAAA;
+}
+
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-title:hover{
+	background:none #414141 !important
+}
+
+
+.ui-bizagi-webpart-workportal-column,
+.ui-bizagi-sharepoint-render.ui-bizagi-sharepoint-webpart-parentdiv,
+.ui-bizagi-sharepoint-webpart-parentdiv{
+	background-color: #AAAAAA !important;
+}
+
+#panelArrowContainer{
+	background-color: #242415 !important;
+	border:1px solid black;
+}
+
+
+#ui-bizagi-webpart-processes-container li:nth-child(2n){
+	background-color: #BBBBBB;
+}
+
+
+.ui-bizagi-webpart-workitem-summary-description,
+.ui-bizagi-webpart-case-summary-description,
+#ui-bizagi-webpart-cases-container li{
+	background-color: #BBBBBB!important;
+}
+
+#ui-bizagi-webpart-cases-container ul:nth-child(2n) li{
+	background-color: #CAC9C9!important;
+}
+
+.ui-bizagi-webpart-newcase-menu li .ui-bizagi-wp-mini-arrow,
+.ui-bizagi-wp-app-inbox-processes-title .arrow{
+	border-color: #FFF transparent transparent transparent;
+}
+
+
+.ui-bizagi-webpart-workitem-summary-description dd,
+.ui-bizagi-webpart-case-summary-details-tabs dd,
+.ui-bizagi-webpart-case-summary-description .box-description dd,
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-case-list dd,
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-case-list:hover dd{
+	background-color: #E9E9E9;
+}
+
+.bz-wp-cases-pager{
+	background:#DDDDDD;
+}
+
+#casesPaginationInbox .bz-wp-cases-pager ul li{
+	color:black;
+}
+
+#casesPaginationInbox .bz-wp-cases-pager ul li:hover,
+#casesPaginationInbox .bz-wp-cases-pager ul li.active{
+	background-color:black!important;
+	border:1px solid black!important;
+	color: #fff;
+}
+
+#ui-bizagi-webpart-cases-container li:hover dl,
+#ui-bizagi-webpart-cases-container li.selected dl,
+#ui-bizagi-webpart-cases-container li dl{
+	color:#444;
+}
+
+
+.ui-bizagi-webpart-header-render-msg{
+	background: none #242415 !important;
+	color: #FFF!important;
+}
+
+.ui-bizagi-webpart-header-render-msg h2{
+	color: #FFF!important;
+}
+
+#ui-bizagi-webpart-render-container .ui-bizagi-button-container:hover,
+#ui-bizagi-webpart-render-container .ui-bizagi-button-container{
+	background-color: #E6E6E6;
+}
+
+.ui-bizagi-webpart-case-summary-title{
+	border-top: solid 1px black !important;
+}
+
+
+/* Buttons */
+#ui-bizagi-webpart-newcase-container #modalMenuBtHeader,
+.bz-ui-button, .ui-bizagi-webpart-newcase-menu li{
+	background-color: #777777 !important;
+	border-color: #777777 !important;
+	color: #fff!important;
+}
+
+.ui-bizagi-webpart-newcase-menu li:after{
+	border-left-color: #FFF !important;
+}
+
+.ui-bizagi-webpart-newcase-menu li a .text{
+	color: #FFF!important;
+}
+
+
+#ui-bizagi-webpart-newcase-container.modalMenuBt{
+	border-color: black !important;
+}
+
+.ui-wp-cases-grid{
+	background-color: #BBBBBB;
+	border: solid 1px  #242415;
+}
+
+.ui-wp-cases-grid .bz-wp-cases-pager{
+	background-color: transparent;
+}
+
+.ui-wp-cases-grid tbody .ui-bizagi-wp-case-tr:nth-child(2n){
+	background: #CFCFCF;
+}
+
+.ui-wp-cases-grid .selected td, .ui-wp-cases-grid tbody tr:hover td .bz-wp-cases-pager,
+.ui-wp-cases-grid .selected td, .ui-wp-cases-grid tbody tr:hover td{
+	background: #BBBBBB;
+}
+
+.icon.back{
+	background-position: -32px 0;
+}
+
+
+/*=== Theme:Beezagi ===*/
+
+/* Header bars */
+
+#ui-bizagi-wp-menu
+{
+	background: #72512E;
+	background: -moz-linear-gradient(top, #72512E 0%, #412D15 100%);
+	background: -webkit-gradient(linear, left top, left bottom, from(#72512E), to(#412D15));
+	background: -o-linear-gradient(top, #72512E 20%,#412D15 100%);
+	background: -ms-linear-gradient(top, #72512E 20%,#412D15 100%);
+	filter: none !important;
+}
+
+#contentInbox
+{
+	background: #D57900;
+	background: -moz-linear-gradient(top, #D57900 0%, #F1D14A 100%);
+	background: -webkit-linear-gradient(top, #D57900 0%,#F1D14A 100%);
+	background: -o-linear-gradient(top, #D57900 0%,#F1D14A 100%);
+	background: -ms-linear-gradient(top, #D57900 0%,#F1D14A 100%);
+	filter: none !important;
+}
+
+#innerContentInbox
+{
+	border-top:1px solid #F1D14A;
+	border-bottom:1px solid #D57900;
+}
+
+/* Columns */
+
+#contentProc
+{
+	background: #F4E4CA;
+}
+
+#contentCases
+{
+	background: #FAF1E2;
+}
+
+#ui-bizagi-wp-app-render-form, #contentCases.casesGrid, .ui-bizagi-wp-app-inbox-grid-cases-container table,
+.personalizedColumnsContainer table {
+    background: #F7FBEC;
+}
+
+#ui-bizagi-wp-app-render-desc-panel
+{
+	background:#FAF1E2;
+}
+
+/* Containers */
+
+#ui-bizagi-wp-app-inbox-processes-container .selected, #ui-bizagi-wp-app-inbox-cases-container .selected
+{
+	background:#71502E !important;
+}
+
+#ui-bizagi-wp-app-inbox-processes-container .selected .ui-bizagi-wp-app-inbox-processes-name, #ui-bizagi-wp-app-inbox-cases-container .selected #caseId h3, #ui-bizagi-wp-app-inbox-cases-container .selected #caseActivity span, #ui-bizagi-wp-app-inbox-cases-container .selected dl
+{
+    color:#F4E4CA !important;
+    text-shadow:none !important;
+}
+
+#ui-bizagi-wp-app-inbox-processes-container li.selected:hover, #ui-bizagi-wp-app-inbox-cases-container li.selected:hover
+{
+	background:#694A2C !important;	
+}
+#ui-bizagi-wp-app-inbox-processes-container li:hover, #ui-bizagi-wp-app-inbox-cases-container li:hover
+{
+	background:#FFDEB3 !important;
+}
+
+/* Buttons */
+.ui-button, .ui-button.ui-state-default
+{
+	
+}
+
+.ui-bizagi-wp-app-inbox-activity-description:hover.workonitRow.ui-button:hover,.ui-bizagi-wp-app-inbox-activity-description:hover .workonitRow.ui-button, .ui-bizagi-wp-app-inbox-activity-description:hover .workonitRow.ui-button:hover, 
+.ui-bizagi-wp-app-inbox-grid-cases-container table tr:hover .workonitRow.ui-button:hover, 
+.ui-bizagi-wp-app-routing-container table tr:hover .workonitRow.ui-button:hover
+{
+	background: #F1D14A;
+	background: -moz-linear-gradient(top, #F1D14A 0%, #D57900 100%);
+	background: -webkit-linear-gradient(top, #F1D14A 0%,#D57900 100%);
+	background: -o-linear-gradient(top, #F1D14A 0%,#D57900 100%);
+	background: -ms-linear-gradient(top, #F1D14A 0%,#D57900 100%);
+	filter: none !important;
+	border:1px solid #D57900;
+}
+
+.ui-button:hover, .ui-button.ui-state-default:hover, .ui-bizagi-button-container .ui-bizagi-button:hover, .ui-dialog .ui-button:hover, .ui-bizagi-wp-app-routing-container table .ui-button:hover
+
+{
+	background: #72512E;
+	background: -moz-linear-gradient(top, #72512E 0%, #412D15 100%);
+	background: -webkit-linear-gradient(top, #72512E 0%,#412D15 100%);
+	background: -o-linear-gradient(top, #72512E 0%,#412D15 100%);
+	background: -ms-linear-gradient(top, #72512E 0%,#412D15 100%);
+	filter: none !important;
+	border:1px solid #412D15;
+}
+
+.ui-tabs .ui-tabs-nav li
+{
+	background:#FFDEB3;
+	padding-bottom:0;
+}
+
+/* Sharepoint */
+
+.ui-bizagi-sharepoint-webpart-parentdiv
+{
+	background:#F7FBEC;
+}
+
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-title
+{
+	background:#71502E;
+	color:#F4E4CA;
+	border:1px solid #4A3520;
+	font-weight:normal;
+}
+
+.ui-bizagi-wp-app-inbox-processes-title .arrow.Right
+{
+	border-top:4px solid white;
+}
+
+#ui-bizagi-webpart-processes-container li.active, #ui-bizagi-webpart-processes-container li:hover
+{
+	background:#FFDEB3;
+	border:1px solid #666666;
+	border-left:1px solid #666666 !important;
+}
+
+
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div ul li{
+	background-color: #F6EFE4;
+}
+
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div ul:nth-child(2n) li{
+	background:#F8E5CC;
+}
+
+.ui-wp-cases-grid th
+{
+	background:#71502E;
+	color:#F4E4CA;
+	font-weight: normal;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-case-list:hover
+{
+	background:#FFDEB3;
+	border:1px solid #AA9067;
+}
+
+.ui-bizagi-webpart-case-summary-title,
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-app-inbox-processes-title,
+.ui-bizagi-sharepoint-newCase.ui-bizagi-sharepoint-webpart-parentdiv,
+#ui-bizagi-webpart-cases-container .bz-wp-cases-view-principal li
+{
+	background: none #694A2C !important;
+	color: #F4E4CA!important;
+	border: none!important;
+	border-bottom: none!important;
+	font-weight: normal;
+	border-top: solid 1px #573A1E !important;
+}
+
+.ui-dialog .ui-widget-header,
+.bz-wp-cases-header-views{
+	background: none #694A2C !important;
+	border: solid 1px  #694A2C;
+}
+.ui-dialog .ui-dialog-title{
+	color: #F4E4CA!important;
+}
+
+.bz-wp-cases-header-views span{
+	background-color: transparent;
+}
+
+.ui-bizagi-webpart-case-summary-title{
+	color: #F4E4CA;
+}
+
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-title:hover{
+	background: none #5E3D1B !important;
+}
+
+#ui-bizagi-webpart-processes-container li.active, #ui-bizagi-webpart-processes-container li:hover{
+	border:1px solid #AA9067;
+}
+
+.ui-bizagi-webpart-workportal-column,
+.ui-bizagi-sharepoint-render.ui-bizagi-sharepoint-webpart-parentdiv,
+.ui-bizagi-sharepoint-webpart-parentdiv{
+	background-color: #F4E4CA !important;
+}
+
+#panelArrowContainer{
+	background-color: #694A2C !important;
+	border:1px solid #503419;
+}
+
+
+#ui-bizagi-webpart-processes-container li:nth-child(2n){
+	background-color: #F6EFE4;
+}
+
+
+.ui-bizagi-webpart-workitem-summary-description,
+.ui-bizagi-webpart-case-summary-description,
+#ui-bizagi-webpart-cases-container li{
+	background-color: #F6EFE4!important;
+}
+
+#ui-bizagi-webpart-cases-container ul:nth-child(2n) li{
+	background-color: #F8F5EF;
+}
+
+.ui-bizagi-webpart-newcase-menu li .ui-bizagi-wp-mini-arrow,
+.ui-bizagi-wp-app-inbox-processes-title .arrow{
+	border-color: #F4E4CA transparent transparent transparent;
+}
+
+
+.ui-bizagi-webpart-workitem-summary-description dd,
+.ui-bizagi-webpart-case-summary-details-tabs dd,
+.ui-bizagi-webpart-case-summary-description .box-description dd,
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-case-list dd,
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-case-list:hover dd{
+	background-color: #F7EAD7;
+}
+
+.bz-wp-cases-pager{
+	background:#F8F5EF;
+}
+
+#casesPaginationInbox .bz-wp-cases-pager ul li{
+	color:#71502E;
+}
+
+#casesPaginationInbox .bz-wp-cases-pager ul li:hover,
+#casesPaginationInbox .bz-wp-cases-pager ul li.active{
+	background-color:#71502E!important;
+	border:1px solid #4A3520;
+	color: #F4E4CA;
+}
+
+#ui-bizagi-webpart-cases-container li:hover dl,
+#ui-bizagi-webpart-cases-container li.selected dl,
+#ui-bizagi-webpart-cases-container li dl{
+	color:#71502E;
+}
+
+
+.ui-bizagi-webpart-header-render-msg{
+	background: none #694A2C !important;
+	color: #F4E4CA!important;
+}
+
+.ui-bizagi-webpart-header-render-msg h2{
+	color: #F4E4CA!important;
+}
+
+#ui-bizagi-webpart-render-container .ui-bizagi-button-container:hover,
+#ui-bizagi-webpart-render-container .ui-bizagi-button-container{
+	background-color: #F8F5EF;
+}
+
+.ui-bizagi-webpart-case-summary-title{
+	border-top: solid 1px #573A1E !important;
+}
+
+
+/* Buttons */
+#ui-bizagi-webpart-newcase-container #modalMenuBtHeader,
+.bz-ui-button, .ui-bizagi-webpart-newcase-menu li{
+	background-color: #3F270F !important;
+	border-color: #301B07 !important;
+	color: #F4E4CA!important;
+}
+
+.ui-bizagi-webpart-newcase-menu li:after{
+	border-left-color: #301B07 !important;
+}
+
+.ui-bizagi-webpart-newcase-menu li a .text{
+	color: #F4E4CA!important;
+}
+
+
+#ui-bizagi-webpart-newcase-container.modalMenuBt{
+	border-color: #3D2711 !important;
+}
+
+.ui-wp-cases-grid{
+	background-color: #F6EFE4;
+	border: solid 1px  #694A2C;
+}
+
+.ui-wp-cases-grid .bz-wp-cases-pager{
+	background-color: transparent;
+}
+
+.ui-wp-cases-grid tbody .ui-bizagi-wp-case-tr:nth-child(2n){
+	background: #F6EDDF;
+}
+
+.ui-wp-cases-grid .selected td, .ui-wp-cases-grid tbody tr:hover td .bz-wp-cases-pager,
+.ui-wp-cases-grid .selected td, .ui-wp-cases-grid tbody tr:hover td{
+	background: #F7E6CF;
+}

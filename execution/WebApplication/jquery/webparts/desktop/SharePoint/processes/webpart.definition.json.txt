@@ -1,0 +1,34 @@
+﻿﻿{
+	"name": "processes",
+	"defaultDevice":"desktop",
+	"devices":{
+		"desktop":{
+			"js": [ {"src": "desktop/bizagi.webparts.processes.js"},	{"src": "../../../../overrides/js/desktop/sharePoint/processes/bizagi.webparts.processes.override.js"}],
+			"css": [ {"src": "desktop/bizagi.webpart.processes.css"}],
+			"theme":{"src": "bizagi.webpart.processes.theme.less"},
+				"tmpl": [ 
+				{alias: "processes",  "src": "desktop/processes.tmpl.html#ui-bizagi-webpart-processes"},
+				{alias: "processesSummary",  "src": "desktop/processes.tmpl.html#ui-bizagi-webpart-processes-tab"}
+			]
+		},
+		"responsive":{
+			"js":[{"src": "desktop/bizagi.webparts.processes.js"},{"src": "responsive/bizagi.webparts.processes.js"},	{"src": "../../../../overrides/js/desktop/sharePoint/processes/bizagi.webparts.processes.override.js"}],
+			"css":[{"src": "responsive/bizagi.webpart.processes.css"}],
+			"theme":{"src": "bizagi.webpart.processes.theme.less"},
+			"tmpl":[{alias: "processes",  "src": "responsive/processes.tmpl.html#ui-bizagi-webpart-processes"},
+				{alias: "processesSummary",  "src": "responsive/processes.tmpl.html#ui-bizagi-webpart-processes-tab"}]
+		},
+		"tablet_ios":{
+	       "reuseResourceFrom":"responsive",
+	    },
+	    "tablet_android":{
+	    	"reuseResourceFrom":"responsive",
+	    },
+	    "smartphone_ios":{
+	    	"reuseResourceFrom":"responsive"
+	    },
+	    "smartphone_android":{
+	    	"reuseResourceFrom":"responsive"
+	    }
+	}
+}

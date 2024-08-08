@@ -1,0 +1,18 @@
+/* CSS Document */
+body
+{
+    background-image: none;
+}
+
+.StatusBarBg
+{
+    height: 18px;
+    padding-top: 4px;
+    padding-left: 5px;
+    background-image: url(../../img/WorkPortal/StatusBar/StatusBarBg.jpg);
+    background-position: top;
+    background-repeat: repeat-x;
+}
+
+
+

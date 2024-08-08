@@ -1,0 +1,111 @@
+body
+{
+    margin: 0;
+}
+
+#WPMenuContainer
+{
+    width: 100%;
+    height: 50px;
+    background-image: url(../../img/WorkPortal/Menu/WPMenuBg.jpg);
+}
+
+#WPMainMenu
+{
+    display: block;
+    float: left;
+    height: 50px;
+}
+
+#WPMainMenu a:link, #WPMainMenu a:visited
+{
+    display: block;
+    float: left;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 30px;
+    font-size: 10px;
+    font-family: NeoSansStdRegular, Verdana, Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    white-space: nowrap;
+    -moz-user-select: none;
+}
+
+#WPMainMenu a:hover
+{
+    color: #888888;
+}
+
+.BAMark
+{
+    display: block;
+    float: left;
+    width: 286px;
+    height: 50px;
+    background: url(../../img/WorkPortal/Menu/header_Left.jpg);
+}
+
+.WPBizagiLogo
+{
+    float: right;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.WPMenuBar
+{
+    display: block;
+    float: none;
+    margin-left: 297px;
+    margin-right: 58px;
+    height: 50px;
+    background-image: url(../../img/WorkPortal/Menu/WPMenuBarBg.jpg);
+    background-position: left top;
+    background-repeat: no-repeat;
+}
+
+.BASearchBar
+{
+    float: right;
+    display: block;
+    width: 150px;
+    margin-top: 14px;
+}
+
+#BASearchBg
+{
+    background-image: url(../../img/WorkPortal/Menu/SearchBg.jpg);
+    background-repeat: repeat-x;
+}
+
+#BASearchRight
+{
+    background-image: url(../../img/WorkPortal/Menu/right_search.jpg);
+    background-repeat: repeat-x;
+}
+
+.BASearchField
+{
+    background-color: #FFFFFF;
+    border: 0px solid #ffffff;
+    width: 100px;
+    color: #CC0000;
+    font-size: 9px;
+    font-family: NeoSansStdRegular, Verdana, Arial, Helvetica, sans-serif;
+    margin-left: 5px;
+}
+
+/*FOR IE ONLY*/
+* html .WPMenuBar
+{
+    margin-left: 0px;
+    margin-right: 0px;
+    float: left;
+}
+
+* html #WPMainMenu a:link, * html #WPMainMenu a:visited
+{
+    margin-bottom: 10px;
+}

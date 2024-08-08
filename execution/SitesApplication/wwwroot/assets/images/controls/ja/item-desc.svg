@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="167px" height="51px" viewBox="0 0 167 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M2,2 L51,2 L51,20 L2,20 L2,2 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="49" height="18" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M2,2 L51,2 L51,20 L2,20 L2,2 Z" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="49" height="18" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <path d="M2,2 L51,2 L51,20 L2,20 L2,2 Z" id="path-5"></path>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="49" height="18" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+    </defs>
+    <g id="Item-description-control-prototype" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-1">
+            <g id="Group-12">
+                <rect id="Rectangle-2" fill="#F8F8F8" x="0" y="0" width="53" height="51"></rect>
+                <polygon id="Fill-7" fill="#CFCFCF" points="2 26 25 26 25 23 2 23"></polygon>
+                <polygon id="Fill-9" fill="#CFCFCF" points="2 29 51 29 51 28 2 28"></polygon>
+                <polygon id="Fill-10-Copy" fill="#CFCFCF" points="2 43 51 43 51 38 2 38"></polygon>
+                <polygon id="Fill-10-Copy-2" fill="#CFCFCF" points="2 36 51 36 51 31 2 31"></polygon>
+                <polygon id="Fill-11" fill="#CFCFCF" points="43 49 51 49 51 45 43 45"></polygon>
+                <polygon id="Fill-11-Copy" fill="#CFCFCF" points="2 49 26 49 26 45 2 45"></polygon>
+                <use id="Rectangle" stroke="#CFCFCF" mask="url(#mask-2)" stroke-dasharray="2,2" xlink:href="#path-1"></use>
+                <g id="image.svg" transform="translate(21.000000, 5.000000)" fill="#CFCFCF" fill-rule="nonzero">
+                    <path d="M0,0 L0,12 L0.941142857,12 L12,12 L12,7.71428571 L12,0 L0,0 Z M11.1428571,11.1428571 L2.48742857,11.1428571 L6.07628571,5.40085714 L9.21342857,8.57142857 L11.1428571,8.57142857 L11.1428571,11.1428571 Z M9.57171429,7.71428571 L5.92371429,4.02771429 L1.47685714,11.1428571 L0.857142857,11.1428571 L0.857142857,0.857142857 L11.1428571,0.857142857 L11.1428571,7.71428571 L9.57171429,7.71428571 Z" id="Shape"></path>
+                    <path d="M3.00428571,1.26685714 C2.05628571,1.26685714 1.28571429,2.03142857 1.28571429,2.97171429 C1.28571429,3.91285714 2.05628571,4.67742857 3.00428571,4.67742857 C3.95314286,4.67742857 4.69714286,3.92828571 4.69714286,2.97171429 C4.69628571,2.016 3.95314286,1.26685714 3.00428571,1.26685714 Z M3.00428571,3.82028571 C2.52942857,3.82028571 2.14285714,3.43971429 2.14285714,2.97171429 C2.14285714,2.50371429 2.52942857,2.124 3.00428571,2.124 C3.47314286,2.124 3.84,2.49685714 3.84,2.97171429 C3.83914286,3.44742857 3.47314286,3.82028571 3.00428571,3.82028571 Z" id="Shape"></path>
+                </g>
+            </g>
+            <g id="Group-12-Copy" transform="translate(57.000000, 0.000000)">
+                <rect id="Rectangle-2" fill="#F8F8F8" x="0" y="0" width="53" height="51"></rect>
+                <polygon id="Fill-7" fill="#CFCFCF" points="2 26 25 26 25 23 2 23"></polygon>
+                <polygon id="Fill-9" fill="#CFCFCF" points="2 29 51 29 51 28 2 28"></polygon>
+                <polygon id="Fill-10-Copy" fill="#CFCFCF" points="2 43 51 43 51 38 2 38"></polygon>
+                <polygon id="Fill-10-Copy-2" fill="#CFCFCF" points="2 36 51 36 51 31 2 31"></polygon>
+                <polygon id="Fill-11" fill="#CFCFCF" points="43 49 51 49 51 45 43 45"></polygon>
+                <polygon id="Fill-11-Copy" fill="#CFCFCF" points="2 49 26 49 26 45 2 45"></polygon>
+                <use id="Rectangle" stroke="#CFCFCF" mask="url(#mask-4)" stroke-dasharray="2,2" xlink:href="#path-3"></use>
+                <g id="image.svg" transform="translate(21.000000, 5.000000)" fill="#CFCFCF" fill-rule="nonzero">
+                    <path d="M0,0 L0,12 L0.941142857,12 L12,12 L12,7.71428571 L12,0 L0,0 Z M11.1428571,11.1428571 L2.48742857,11.1428571 L6.07628571,5.40085714 L9.21342857,8.57142857 L11.1428571,8.57142857 L11.1428571,11.1428571 Z M9.57171429,7.71428571 L5.92371429,4.02771429 L1.47685714,11.1428571 L0.857142857,11.1428571 L0.857142857,0.857142857 L11.1428571,0.857142857 L11.1428571,7.71428571 L9.57171429,7.71428571 Z" id="Shape"></path>
+                    <path d="M3.00428571,1.26685714 C2.05628571,1.26685714 1.28571429,2.03142857 1.28571429,2.97171429 C1.28571429,3.91285714 2.05628571,4.67742857 3.00428571,4.67742857 C3.95314286,4.67742857 4.69714286,3.92828571 4.69714286,2.97171429 C4.69628571,2.016 3.95314286,1.26685714 3.00428571,1.26685714 Z M3.00428571,3.82028571 C2.52942857,3.82028571 2.14285714,3.43971429 2.14285714,2.97171429 C2.14285714,2.50371429 2.52942857,2.124 3.00428571,2.124 C3.47314286,2.124 3.84,2.49685714 3.84,2.97171429 C3.83914286,3.44742857 3.47314286,3.82028571 3.00428571,3.82028571 Z" id="Shape"></path>
+                </g>
+            </g>
+            <g id="Group-12-Copy-2" transform="translate(114.000000, 0.000000)">
+                <rect id="Rectangle-2" fill="#F8F8F8" x="0" y="0" width="53" height="51"></rect>
+                <polygon id="Fill-7" fill="#CFCFCF" points="2 26 25 26 25 23 2 23"></polygon>
+                <polygon id="Fill-9" fill="#CFCFCF" points="2 29 51 29 51 28 2 28"></polygon>
+                <polygon id="Fill-10-Copy" fill="#CFCFCF" points="2 43 51 43 51 38 2 38"></polygon>
+                <polygon id="Fill-10-Copy-2" fill="#CFCFCF" points="2 36 51 36 51 31 2 31"></polygon>
+                <polygon id="Fill-11" fill="#CFCFCF" points="43 49 51 49 51 45 43 45"></polygon>
+                <polygon id="Fill-11-Copy" fill="#CFCFCF" points="2 49 26 49 26 45 2 45"></polygon>
+                <use id="Rectangle" stroke="#CFCFCF" mask="url(#mask-6)" stroke-dasharray="2,2" xlink:href="#path-5"></use>
+                <g id="image.svg" transform="translate(21.000000, 5.000000)" fill="#CFCFCF" fill-rule="nonzero">
+                    <path d="M0,0 L0,12 L0.941142857,12 L12,12 L12,7.71428571 L12,0 L0,0 Z M11.1428571,11.1428571 L2.48742857,11.1428571 L6.07628571,5.40085714 L9.21342857,8.57142857 L11.1428571,8.57142857 L11.1428571,11.1428571 Z M9.57171429,7.71428571 L5.92371429,4.02771429 L1.47685714,11.1428571 L0.857142857,11.1428571 L0.857142857,0.857142857 L11.1428571,0.857142857 L11.1428571,7.71428571 L9.57171429,7.71428571 Z" id="Shape"></path>
+                    <path d="M3.00428571,1.26685714 C2.05628571,1.26685714 1.28571429,2.03142857 1.28571429,2.97171429 C1.28571429,3.91285714 2.05628571,4.67742857 3.00428571,4.67742857 C3.95314286,4.67742857 4.69714286,3.92828571 4.69714286,2.97171429 C4.69628571,2.016 3.95314286,1.26685714 3.00428571,1.26685714 Z M3.00428571,3.82028571 C2.52942857,3.82028571 2.14285714,3.43971429 2.14285714,2.97171429 C2.14285714,2.50371429 2.52942857,2.124 3.00428571,2.124 C3.47314286,2.124 3.84,2.49685714 3.84,2.97171429 C3.83914286,3.44742857 3.47314286,3.82028571 3.00428571,3.82028571 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

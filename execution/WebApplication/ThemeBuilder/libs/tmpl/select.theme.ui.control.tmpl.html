@@ -1,0 +1,8 @@
+<div class="biz-theme-select">
+	<input type="hidden" value="${value}" data-key="${key}"/>
+	<ul class="select isClose">
+		{{each options}}
+			<li style="font-family:${$value.value}" data-value="${$value.value}" {{if $value.selected}} selected="selected" {{/if}}>${$value.label}</li>
+		{{/each}}
+	</ul>
+</div>

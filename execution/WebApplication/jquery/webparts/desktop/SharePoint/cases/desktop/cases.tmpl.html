@@ -1,0 +1,247 @@
+<script id="ui-bizagi-webpart-cases" type="text/x-jquery-tmpl">
+<div id="ui-bizagi-webpart-cases-container" class="ui-bizagi-wp-app-inbox-cases-container">
+        {{if processName}}
+            <div class="ui-bizagi-wp-app-inbox-processes-title">
+                <label class="bz-wp-search-allcases">${processName}</label>
+                {{if loadMore}}
+                <span id="caseLoadMore" class="loadMore"><span>%{workportal-widget-inbox-load-more}</span></span>
+                {{/if}}
+                <div id="ui-bizagi-wp-app-search" class="ui-bizagi-wp-app-menu-search-off">
+                    <div id="ui-bizagi-wp-app-bt-search"></div>
+                    <input id="bz-wp-search-cases" />
+                </div>  
+            </div>
+            {{/if}}
+            {{if showViewToggler }}
+                <div class="bz-wp-cases-view-principal">
+                    <ul id="bz-wp-cases-view-options">
+                        <li>
+                            <span id="bz-wp-cases-view-bt-eye" class="bz-wp-cases-view-bt-eye"></span>
+                            <span id="bz-wp-cases-view-bg-eye" class="bz-wp-cases-view-bg-eye eye-focus-off"></span>
+                         </li>
+                    </ul>
+                </div>
+                <div class="bz-wp-cases-header-viewselector viewselector-off" >
+                    <span class="bz-wp-cases-header-views">                       
+                        <span class="bz-wp-cases-header-view-grid {{if view == "grid"}}bz-state-selected{{/if}}" data-view="grid" title="%{webpart-cases-viewselector-grid-tooltip}"></span>
+                        <span class="bz-wp-cases-header-view-thumbnails  {{if view == "details"}}bz-state-selected{{/if}}" class=""  data-view="details" title="%{webpart-cases-viewselector-list-tooltip}"></span>
+                    </span>
+                </div>
+            {{/if}}
+        <div class="ui-bizagi-webpart-cases-view-container">     
+            {{if view=="details"}}
+                {{tmpl "#ui-bizagi-webpart-cases-list"}}
+            {{else}}
+                {{tmpl "#ui-bizagi-webpart-cases-grid"}}
+            {{/if}}
+          </div>
+    </div> 
+</script>
+<script id="ui-bizagi-webpart-cases-list" type="text/x-jquery-tmpl">
+<div class="ui-wp-cases-list">
+    {{each cases.rows}}
+    <ul>
+        <li class="ui-bizagi-wp-case-list" data-case-id="${id}" data-workflow-id="${idWorkFlow}">
+            <div id="caseId">
+
+                {{if isFavorite == "true"}}
+                <span id="ui-bizagi-wp-wg-bt-start-on" class="ui-bizagi-wp-app-inbox-cases-start on"></span>
+                {{else}}
+                <span id="ui-bizagi-wp-wg-bt-start-off" class="ui-bizagi-wp-app-inbox-cases-start off"></span>                
+                {{/if}}
+                {{if enableFolders}}
+                <span class="ui-bizagi-inbox-folder inboxdetails" data-idcase="${id}"></span>
+                {{/if}}
+               
+                {{if caseNumber}}
+                    <h3 class="ui-bizagi-wp-app-inbox-cases-case">${caseNumber}</h3>
+                {{else}}
+                    <h3 class="ui-bizagi-wp-app-inbox-cases-case">${id}</h3>
+                {{/if}}
+            </div>
+
+            {{if fields}}
+            <dl>
+                {{each(e, fi) fields }}     
+                    {{if fi != ""}}
+                        {{if typeof fi != 'object'}}
+                            {{if workitems}}
+                 
+                            {{else}}
+                                {{if typeof fi == "string" && fi.length > 30}}
+                                    <dt>${cases.columnTitle[e].displayName}</dt>
+                                    <dd  class="longContent"><div>{{html fi}}</div></dd>
+                                {{else}}
+                                    <dt>${cases.columnTitle[e].displayName}</dt>
+                                    <dd>
+                                        {{if cases.columnTitle[e].type == "DateTime"}}
+                                            <span id="ui-bizagi-wp-app-inbox-cases-date" class="formatDate">${fi}</span>
+                                        {{else}}
+                                            <div class="longContentdiv">{{html fi}}</div>
+                                        {{/if}}
+                                    </dd>
+                                {{/if}}
+                             {{/if}}
+                        {{/if}}
+                    {{/if}}
+                {{/each}}
+            </dl>
+            {{/if}}
+
+                {{each(e, fi) fields }}     
+                    {{if fi != ""}}
+                        {{if workitems}}
+                                {{each(wi, workitem) workitems }}                                 
+                                    <hr />
+                                    <div id="caseActivity">
+                                    <span class="ui-bizagi-wp-case-workitem-list" data-workitem-id="{{if workitem.idWorkItem}}${workitem.idWorkItem}{{/if}}" >
+                                        {{if isOpen == "true"}}<i id="ui-bizagi-wp-app-inbox-cases-ico-state-${workitem.State}" {{if workitem.State}} class="bz-icon bz-icon-8 bz-icon-point" {{/if}}></i>{{/if}}
+                                        <span id="ui-bizagi-wp-app-inbox-activity-name">${workitem.TaskName}</span>
+                                    </span>
+                                    <dl>
+                                    {{each(l, fiParent) fields }}
+                                        {{if fiParent.displayName != "workitems"}}
+                                            {{if typeof fiParent == 'object' && fiParent != null}}
+                                                <dt>{{html fiParent.displayName}}</dt>
+                                                <dd>
+                                                    {{if fiParent.type == "DateTime"}}                                                       
+                                                        <span id="ui-bizagi-wp-app-inbox-cases-date" class="formatDate">${fiParent[displayName][wi]}</span>
+                                                    {{else}}
+                                                        <div class="longContentdiv">{{html fiParent[displayName][wi]}}</div>
+                                                    {{/if}}
+                                                </dd>
+                                            {{/if}}
+                                        {{/if}}
+                                    {{/each}} 
+                                    </dl>
+                                </div>
+                                {{/each}}
+                            
+                         {{/if}}
+                      {{/if}}
+                  {{/each}}
+
+        </li>          
+    </ul>
+    {{/each}}
+</div>
+ {{if cases.totalPages > 1}}
+        <div id="casesPaginationInbox"></div>
+{{/if}}
+</script>
+<script id="ui-bizagi-webpart-cases-grid" type="text/x-jquery-tmpl">    
+<table  cellspacing="0" border="0" cellpading="0" class="ui-wp-cases-grid">
+<thead>
+       <th> </th>
+       {{each cases.columnTitle}}
+            <th class="sortColumnsData" data-fieldName="${fieldName}" data-order="${order}" data-orderfieldname="${orderFieldName}" data-order-type="${orderType}">               
+                <span>${displayName}</span> 
+                {{if isOrdered=="true"}}
+                    {{if orderType==0}}
+                        <span class="sortColumnsDataDownIcon"><span class="arrowUpIcon"></span><span class="arrowDownIcon"></span></span>
+                    {{else}}
+                        <span class="sortColumnsDataUpIcon"><span class="arrowUpIcon"></span><span class="arrowDownIcon"></span></span>
+                    {{/if}}
+                {{else}}
+                    <span class="sortColumnsDataIcon"><span class="arrowUpIcon"></span><span class="arrowDownIcon"></span></span>
+                {{/if}}
+                <input type="hidden" id="isOrdered" value="${isOrdered}" />
+                <input type="hidden" id="orderFieldName" value="${orderFieldName}" />
+                <input type="hidden" id="orderType" value="${orderType}" />
+                <input type="hidden" id="order" value="${order}" />
+            </th>
+        {{/each}}
+        <th>
+        </th>
+</thead>
+<tbody>
+{{each cases.rows}}
+    <tr class="ui-bizagi-wp-case-tr">
+            <td class="ui-bizagi-wp-case-grid" data-case-id="${id}" data-workflow-id="${idWorkFlow}">
+                <div class="ui-bizagi-wp-app-inbox-cases-graphical-view">                            
+                    <span></span>
+                </div>
+            </td>
+   {{each(e, fi) fields }}                   
+        {{if typeof fi == "string" && fi.length > 30}}
+             <td  class="longContent ui-bizagi-wp-case-grid"><div class="longContentdiv">{{html fi}} </div></td>
+        {{else}}
+                <td  class="ui-bizagi-wp-case-grid" data-case-id="${id}" data-workflow-id="${idWorkFlow}" >
+                    {{if workitems }}
+                        <div id="caseId" style="visibility:hidden;display:inline;">
+                        <input type="hidden" id="isFavorite" value="${isFavorite}" />
+                        <input type="hidden" id="guidFavorite" value="${guidFavorite}" />
+                        <input type="hidden" id="idCase" value="${radnumber}" />
+                        </div>
+                        <div id="caseActivity">
+                            {{each workitems}}
+                                <span class="ui-bizagi-wp-case-workitem-grid" data-workitem-id="{{if idWorkItem != 0}}${idWorkItem}{{/if}}" >
+                                    {{if isOpen == "true"}}<i id="ui-bizagi-wp-app-inbox-cases-ico-state-${State}" {{if State}} class="bz-icon bz-icon-8 bz-icon-point" {{/if}}></i>{{/if}}
+                                    <span id="ui-bizagi-wp-app-inbox-activity-name" class="ui-bizagi-wp-case-workitem-grid-link">${TaskName}</span>
+                                </span>
+                                <br />
+                            {{/each}}
+                        </div>
+                     {{else}}
+                        {{if typeof fi != 'object'}}
+                            {{if cases.columnTitle[e].type == "DateTime"}}
+                                <span id="ui-bizagi-wp-app-inbox-cases-date" class="formatDate">${fi}</span>
+                            {{else}}
+                               {{html fi}}
+                            {{/if}}
+                        {{else}}
+                            <div id="caseActivity">
+                            {{if typeof fi == "object" && fi != null}}
+                                {{each(fiIndex, fifield) fi[displayName] }}
+                                        {{if fi.type == "DateTime"}}                                                       
+                                            <span class="formatDate custom-column">${fifield}</span>
+                                        {{else}}
+                                            <span class="custom-column">${fifield}</span>
+                                        {{/if}}
+                                    <br />
+                                {{/each}}
+                             {{/if}}
+                             </div>
+                        {{/if}}
+                     {{/if}}
+                </td>
+      
+        {{/if}}
+    {{/each}}
+     <td  class="ui-bizagi-wp-case-grid" data-case-id="${id}" >
+            <span class="inbox-grid-tooltip-button" title="%{workportal-widget-inboxgrid-show-summary}">
+                <button type="button" class="cases-grid-button" >
+                    <span class="ui-button-text">%{workportal-widget-inboxgrid-show-summary} </span>
+                </button>
+            </span>
+     </td>
+</tr>
+{{/each}}
+</tbody>
+
+ {{if cases.totalPages > 1}}
+<tr>
+    <td colspan="${columnsGridLength}">
+        <div id="casesPaginationInbox"></div>
+    </td>
+</tr>
+  {{/if}}
+</table>
+</script>
+<script id="ui-bizagi-webpart-cases-pagination-inbox" type="text/x-jquery-tmpl">
+        <div id="casesPagination" class='bz-wp-cases-pager'>
+            {{tmpl "#ui-bizagi-webpart-cases-pagination"}}   
+        </div>
+</script>
+<script id="ui-bizagi-webpart-cases-pagination" type="text/x-jquery-tmpl">            
+        {{if cases.totalPages > 1 }}
+        <ul>
+            {{each pages}}             
+            <li {{if active}} class="bz-page active" {{else}} class="bz-page" {{/if}} data-page="${number}">
+                <span class="number">${number}</span>
+            </li>               
+            {{/each}}            
+        </ul>
+        <span id="tooltipPagination" class="tooltip" >Pag: ${cases.page} / ${cases.totalPages}</span>
+        {{/if}}
+</script>

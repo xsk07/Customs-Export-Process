@@ -1,0 +1,118 @@
+<script id="ui-bizagi-webpart-queryentities" type="text/x-jquery-tmpl">
+   <div class="bz-wp-queryentities">
+        <div class="bz-wp-queryentities-header" >
+            <span class="bz-wp-queryentities-header-arrow"></span>
+            <label> ${title} </label>
+            {{if showViewToggler }}
+                <span class="bz-wp-queryentities-header-views">
+                    <label> View: </label>
+                    <span class="bz-wp-queryentities-header-view-grid {{if view == "grid"}}bz-state-selected{{/if}}" data-view="grid"></span>
+                    <span class="bz-wp-queryentities-header-view-thumbnails  {{if view == "thumbnails"}}bz-state-selected{{/if}}" class=""  data-view="thumbnails"></span>
+                </span>
+            {{/if}}
+        </div>
+        <div class="bz-wp-queryentities-content" >
+        </div>
+   </div>
+</script>
+
+<script id="ui-bizagi-webpart-queryentities-grid" type="text/x-jquery-tmpl">
+    <table class="bz-wp-queryentities-grid" cellspacing="0" border="0" cellpading="0">
+        <thead>
+            <tr>
+                {{each(i, column) columns}}                    
+                    {{if visible && columns[i].name != "CAFRequest.AssetInfo.AssetImageSAN"   }}
+                        <td data-column-name="${name}" {{if name == orderBy }} data-order-type="${orderType}" {{/if}}>
+                            <label>${displayName}</label>
+                            <span class="bz-wp-column-order">
+                                <span class="bz-wp-column-order-up {{if name == orderBy && orderType == 'asc'}} bz-state-selected {{/if}}" ></span>
+                                <span class="bz-wp-column-order-down {{if name == orderBy && orderType == 'desc'}} bz-state-selected {{/if}}" ></span>
+                            </span>                            
+                        </td>
+                    {{/if}}
+                {{/each}}
+                <td>&nbsp;</td>
+            </tr>
+        </thead>
+        <tbody>
+            {{each rows}}
+                <tr>
+			        {{each(k, field) $value}}
+                        {{if columns[k].visible && isGridColumnVisible(columns[k].name) }}
+                            <td>${field}</td>
+                        {{/if}}
+                    {{/each}}
+                    <td class="bz-wp-gridcases-actions-cell">
+                        {{each(k, action) actions}}                        
+                            <button type="button" data-entity-id="${getEntityId($value)}" data-action="${action.name}">${action.displayName}</button>
+                        {{/each}}
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    {{if totalPages > 1}}
+        {{tmpl "#ui-bizagi-webpart-queryentities-cases-pager"}}
+    {{/if}}
+</script>
+
+<script id="ui-bizagi-webpart-queryentities-thumbnail" type="text/x-jquery-tmpl">
+    <div class="bz-wp-queryentities-thumbnails"> 
+        {{each rows}}
+            <div class="bz-wp-queryentities-thumbnails-item">       
+                {{each(k, field) $value}}                               
+                    {{if isImage(field, columns[k].name) }}
+                        <div class="bz-wrapper">
+                            <img src="${getImage(field)}" />
+                        </div>
+                    {{/if}}
+                {{/each}}                
+                {{each(i, field) $value}}
+                     {{if isImageLabel(field, columns[i].name) }}
+                        <label>${field}</label>
+                    {{/if}}
+                {{/each}}                
+                {{each(k, field) $value}}              
+                    {{if isFieldVisible(field, columns[k].name, columns[k].dataType, columns[k].visible )}}
+                        <span>${field}</span>
+                    {{/if}}
+                {{/each}}                
+                <div class="bz-wp-queryentities-thumbnails-item-actions">
+                    <div class="bz-wrapper">
+                        {{each(i, action) actions}}                        
+                            <button type="button" data-entity-id="${getEntityId($value)}" data-action="${action.name}">${action.displayName}</button>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+    {{if totalPages > 1}}
+        {{tmpl "#ui-bizagi-webpart-queryentities-cases-pager"}}
+    {{/if}}
+</script>
+
+<script id="ui-bizagi-webpart-queryentities-cases-pager" type="text/x-jquery-tmpl">
+    <div class="bz-wp-queryentities-pager"> 
+        <ul>
+            {{if totalPages > 14}}
+                    <li class="pageArrow first">&lt;&lt;</li> <li class="pageArrow prev">&lt;</li> <!--<li class="pageArrow first">&lt;&lt;</li> <li class="pageArrow prev">&lt;</li>  -->
+            {{/if}}
+
+            {{each pages}}  
+            <li {{if active}} class="bz-state-selected" {{/if}} data-page="${number}" 
+                
+                {{if number > 14}}
+                class="hidden"
+                {{/if}}
+                
+                >${number}</li>
+            {{/each}}            
+
+            {{if totalPages > 14}}
+                      <li class="pageArrow next">&gt;</li> <li class="pageArrow last">&gt;&gt;</li> <!--<li class="pageArrow next">&gt;</li> <li class="pageArrow last">&gt;&gt;</li>-->
+            {{/if}}
+
+        </ul>
+    </div>
+</script>

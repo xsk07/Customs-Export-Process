@@ -1,0 +1,739 @@
+/*============================================================
+    STYLE DEFINITION // SHAREPOINT WEBPARTS
+===============================================================*/
+.ui-button, .ui-bizagi-button-container .ui-bizagi-button ui-button, .ui-dialog .ui-dialog-title, .ui-dialog .ui-dialog-buttonset button, .containerPopUp *, .ui-bizagi-sharepoint-webpart-parentdiv *
+{
+	font-family: 'Segoe UI' , Arial, sans-serif !important;
+	font-size: 11px;
+}
+.ui-bizagi-sharepoint-webpart-parentdiv
+{
+	min-height: 400px;
+	min-width: 264px;
+	position: relative;
+	background: #F2F2F2 url("images/desktop-dots-columns.png") repeat scroll 0 0!important;
+}
+.ui-bizagi-sharepoint-webpart-parentdiv > div{
+	width: 100%;
+}
+.ui-bizagi-sharepoint-render.ui-bizagi-sharepoint-webpart-parentdiv{
+	background:  #F2F2F2 none!important;
+}
+
+.ui-bizagi-sharepoint-graphicquery {
+	height: 980px;
+}
+
+.ui-bizagi-sharepoint-processmap {
+	height: 100vh;
+}
+
+.ui-tabs-panel .ui-bizagi-container-form{
+	margin: 0!important;
+}
+.activitiFormContainer #ui-bizagi-webpart-render-container .ui-bizagi-container-form
+{
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1%;
+}
+
+.bz-webpart,
+#activitySelector-canvas{
+	width: 100%;
+}
+#newCase{
+	border-bottom:  1px solid #d9d9d9;
+}
+/*==============================================================
+		LOADER DEFINITION
+================================================================*/
+
+.ui-bizagi-sharepoint-loading-icon
+{
+	background-repeat: no-repeat;
+	background-position: center center;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+}
+.ui-bizagi-sharepoint-loading-container
+{
+	position: absolute;
+	z-index: 900;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(237,237,237,0.8);
+	border: 1px solid #D9D9D9;
+}
+.ui-bizagi-sharepoint-loading-container-hidden
+{
+	display: none;
+}
+
+.ui-bizagi-sharepoint-hidden
+{
+	display: none;
+}
+
+.ui-bizagi-sharepoint-show
+{
+	display: block;
+}
+
+
+/*==============================================================
+		CASES DEFINITIONS
+================================================================*/
+
+
+.ui-bizagi-sharepoint-processes
+{
+	min-height: 400px;
+	position: relative;
+}
+.ui-bizagi-sharepoint-processes-webpart
+{
+	width: 260px;
+}
+
+#ctl00_MSO_ContentDiv > table > tbody > tr:first-child
+{
+}
+
+.ui-bizagi-error .ui-bizagi-error-message-text, .ui-bizagi-error-message-short-text, .ui-bizagi-error-message-title
+{
+	word-wrap: break-word;
+	padding-left: 10px;
+}
+
+#ui-bizagi-webpart-render-container .ui-state-active.ui-bizagi-container-group-header:hover a, #ui-bizagi-webpart-processes-container li.active, #ui-bizagi-webpart-processes-container li:hover, .ui-bizagi-wp-app-inbox-processes-ul .active li:hover, #ui-bizagi-webpart-newcase-container #modalMenuBtList > div li:hover
+{
+	cursor: pointer;
+	border-color: #E4E4E4;
+	border-bottom-color: #D7DADD;
+	border-top-color: #DADADA;
+	background-color: #FFF;
+	color: rgb(29, 74, 99);
+	text-shadow: 1px 1px 0 rgba(255,255,255,0.8);
+}
+#ui-bizagi-webpart-render-container .ui-bizagi-button.ui-button, #ui-bizagi-webpart-render-container .ui-button, #ui-bizagi-webpart-render-container .ui-bizagi-button-container .ui-bizagi-button, #ui-bizagi-webpart-render-container .ui-button.ui-state-default
+{
+	background-color: #fff;
+	transition: none;
+}
+
+#ui-bizagi-webpart-render-container .ui-bizagi-webpart-info-render-msg h2
+{
+	border: solid 1px #91cdf2;
+	background-color: rgb(247, 252, 255);
+	color: rgb(29, 74, 99);
+	text-shadow: 1px 1px 0 rgba(255,255,255,0.8);
+}
+
+#ui-bizagi-webpart-render-container .ui-bizagi-button.ui-button:hover, #ui-bizagi-webpart-render-container .ui-button:hover, #ui-bizagi-webpart-render-container .ui-bizagi-button-container .ui-bizagi-button:hover, #ui-bizagi-webpart-render-container .ui-button.ui-state-default:hover
+{
+	text-shadow: none;
+}
+
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-ncase
+{
+	border: solid 1px #BDBDBD;
+	background-color: #FFF;
+}
+
+#ui-bizagi-wp-app-inbox-tab-container li:hover, #ui-bizagi-wp-app-inbox-tab-container li.active
+{
+	-webkit-box-shadow: inset 0px 1px 3px 1px rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0px 1px 3px 1px rgba(0, 0, 0, 0.1);
+	border-color: #C0C0C0;
+	border-bottom-color: #A4A6AA;
+	border-top-color: #BDBDBD;
+	background-color: #fff;
+	color: #003759;
+}
+
+#ui-bizagi-wp-app-inbox-tab-container li.active
+{
+	background-color: #D1D1D1;
+}
+
+#ui-bizagi-wp-app-inbox-tab-container .toolTip
+{
+	border: solid 1px #BDBDBD;
+}
+
+
+#ui-bizagi-webpart-newcase-container .loadMoreElements span.loading_icon, #ui-bizagi-webpart-newcase-container #modalMenuBtList > div li .processIco.wait, #ui-bizagi-webpart-newcase-container #modalMenuBtList > div li .categoryIco, #ui-bizagi-webpart-newcase-container #modalMenuBtList > div li:hover .processIco, #ui-bizagi-webpart-newcase-container #modalMenuBtList > div li .processIco
+{
+	width: 24px !important;
+	height: 24px !important;
+}
+
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-start-wait
+{
+	background-image: url(images/loading_cube_mini.png);
+}
+
+
+/* PRELODER DEFINITION / ANIMATED GIF */
+.ui-bizagi-sharepoint-loading-icon
+{
+	background: url("images/loader.gif" ) no-repeat center;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-app-inbox-cases-start-wait
+{
+	background-image: url(images/loading_cube_mini.png);
+	background-position: center center;
+}
+
+
+.ui-bizagi-webpart-render-loading-image
+{
+    background-image: url('images/loader.gif');
+    background-repeat: no-repeat;
+    width: 25px;
+	height: 25px;
+	padding-bottom: 10px;
+}
+.ui-bizagi-webpart-render-loading-class{
+	width: 100%;
+	height: 100%;
+	vertical-align:middle;
+}
+
+/* container popUp*/
+/* ***********************************************************************   */
+.containerPopUp
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 999;
+	background: rgba(0,0,0,0.8);
+	zoom: 1;
+}
+
+.containerPopUp:nth-child(n)
+{
+	filter: none;
+}
+
+
+.activitiFormContainer
+{
+	position: fixed;
+	box-shadow: 1px 0 7px 2px rgba(0, 0, 0, 0.89);
+	height: 70%;
+	width: 70%;
+	top: 15%;
+	left: 15%;
+	background-color: #FBFBFB;
+	z-index: 1000;	
+	border: 8px solid #464444;
+	border-radius: 9px;	
+}
+
+.activitiFormContainer .closeCanvas
+{
+	z-index: 9000009;
+	position: absolute;
+	box-shadow: 1px 0 7px 2px rgba(0, 0, 0, 0.89);
+	width: 16px;
+	height: 16px;
+	background-color: black;
+	cursor: pointer;
+	right: 0;
+	top: 0;
+
+}
+
+.activitiFormContainer .summaryDiv
+{
+	width: 25%;
+	margin-left: 2em;
+}
+
+.activitiFormContainer .summaryDiv + div
+{
+	width: 70%;
+}
+/*
+.activitiFormContainer > div
+{
+	display: inline-block;
+	float: left;
+}
+*/
+@media all and (max-width: 1500px)
+{
+	.activitiFormContainer .summaryDiv
+	{
+		display: none;
+	}
+	.activitiFormContainer .summaryDiv + div
+	{
+		width: 100%;
+	}
+}
+
+.renderDiv
+{
+	width:100%;
+}
+
+
+/*===============================================================================
+	RESET SHADOW DEFINITIONS  
+=================================================================================*/
+.ui-curved-vt-2, .ui-curved-hz-1, .ui-curved, .ui-lifted
+{
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+/*===============================================================================
+	ICONS DEFINITIONS
+=================================================================================*/
+
+#ui-bizagi-wp-app-bt-search, #ui-bizagi-wp-app-inbox-bt-eye:hover, #ui-bizagi-wp-app-inbox-bt-eye:active, #ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#all .text, #ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#favourites .text, #ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#red .text, #ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#green .text, #ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#yellow .text, .ui-bizagi-wp-app-inbox-cases-start, .ui-bizagi-wp-app-inbox-cases-ico-state, .ui-bizagi-wp-app-inbox-cases-start.off, #ui-bizagi-webpart-cases-container #ui-bizagi-wp-app-inbox-cases-ico-view span, #ui-bizagi-webpart-cases-container #ui-bizagi-wp-app-inbox-cases-ico-close span, #ui-bizagi-webpart-cases-container li #ui-bizagi-wp-app-inbox-cases-ico-state-Red, #ui-bizagi-webpart-cases-container li #ui-bizagi-wp-app-inbox-cases-ico-state-Green, #ui-bizagi-webpart-cases-container li #ui-bizagi-wp-app-inbox-cases-ico-state-Yellow
+{
+	background-image: url(images/sprite.png);
+}
+
+.ui-bizagi-wp-app-inbox-cases-start
+{
+	background-position: -212px -146px;
+	width: 16px;
+	height: 16px;
+}
+
+
+.ui-bizagi-wp-app-inbox-processes-start.off
+{
+	background-position: -214px -148px;
+}
+
+.ui-bizagi-wp-app-inbox-processes-start.on
+{
+	background-position: -214px -121px;
+}
+
+#ui-bizagi-wp-app-inbox-bt-eye:hover, #ui-bizagi-wp-app-inbox-bt-eye:active
+{
+	background-position: -140px -53px;
+}
+
+#ui-bizagi-webpart-cases-container li #ui-bizagi-wp-app-inbox-cases-ico-state-Green
+{
+	background-position: -236px -148px;
+}
+#ui-bizagi-webpart-cases-container li #ui-bizagi-wp-app-inbox-cases-ico-state-Red
+{
+	background-position: -236px -116px;
+}
+#ui-bizagi-webpart-cases-container li #ui-bizagi-wp-app-inbox-cases-ico-state-Yellow
+{
+	background-position: -236px -132px;
+}
+
+#ui-bizagi-webpart-cases-container #ui-bizagi-wp-app-inbox-cases-ico-view span
+{
+	background-position: 0px -90px;
+	background-repeat: no-repeat;
+}
+
+.ui-bizagi-wp-app-inbox-cases-graphical-view{
+    float:left;
+    height:22px;
+    width:22px;
+    position:relative;
+    cursor: pointer;
+    padding:1px;
+}
+
+.ui-bizagi-wp-app-inbox-cases-graphical-view span{
+    background: url(images/sprite.png) 0 -90px no-repeat;
+    display: block;
+    height: 22px;
+    width: 22px;
+    cursor: pointer;
+}
+.ui-bizagi-wp-app-inbox-cases-graphical-view:hover span{
+    background-position:-22px -90px;
+}
+
+
+#ui-bizagi-webpart-cases-container #ui-bizagi-wp-app-inbox-cases-ico-close span
+{
+	background-position: -278px -116px;
+	background-repeat: no-repeat;
+}
+
+
+button{
+	border-radius: 4px;
+	padding: 4px 10px;
+	border: solid 1px #D9D9D9;
+	border-top: 1px solid #D9D9D9;
+	border-bottom: 1px solid #B5B5B5;
+	cursor:pointer;
+}
+
+button:hover{
+	background-color: #fff;
+}
+
+
+ul #casesList span,
+ul #frecuentCases span,
+#categories .categoryIco,
+#categories .processIco,
+.bz-wp-cases-view-bt-eye,
+.bz-wp-cases-header-view-grid,
+.ui-bizagi-webpart-newcase-menu li a:hover .new,
+.ui-bizagi-webpart-newcase-menu li a .new,
+#ui-bizagi-webpart-processes-container #ui-bizagi-wp-app-inbox-processes-ico-paper,
+.ui-bizagi-container-group-header.ui-state-active .ui-icon,
+.bz-wp-cases-header-view-thumbnails,
+.activitiFormContainer .closeCanvas,
+.ui-bizagi-wp-app-ico-new-case,
+#ui-bizagi-webpart-cases-container li .ui-bizagi-wp-app-inbox-cases-ico-state,
+.ui-bizagi-webpart-case-summary-ico-view
+{
+	background-image: url(images/sprite_sharepoint.png);
+}
+
+#ui-bizagi-wp-app-bt-search{
+	width: 16px;
+	height: 16px;
+	background-position: -7px -148px ;
+	position: absolute;
+	left: 10px;
+	top: 3px;
+}
+
+#bz-wp-search-cases
+{
+	}
+.bz-wp-search-cases-noresults
+{
+	color:Red !important;
+	font-weight:bold;
+}
+	
+	
+.icon.back,
+.ui-bizagi-webpart-newcase-menu li a .new,
+.ui-bizagi-webpart-newcase-menu li a:hover .new{
+	background-image: url(images/sprite_sharepoint_16x16.png);
+	width: 16px;
+	height: 16px;
+}
+.ui-bizagi-webpart-case-summary-ico-view{
+	width: 32px;
+	height: 32px;
+	background-position: -224px -64px;
+	float: left;
+	margin-right: 5px;
+}
+.icon.back{
+	background-position: -16px 0;
+}
+
+
+.bz-wp-cases-view-bt-eye
+{
+	background-position: -124px -4px;
+}
+
+.ui-bizagi-wp-app-ico-new-case
+{
+	width: 24px;
+	height: 24px;
+	background-position: -100px -69px;
+	display: inline-block;
+}
+
+
+
+.ui-bizagi-webpart-newcase-menu li a span
+{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.ui-bizagi-webpart-newcase-menu li a .text
+{
+	color: #676767;
+	text-shadow: none;
+	line-height: 16px;
+
+}
+
+
+ul #frecuentCases.frecuentNewCases span
+{
+	background-position: -36px -34px;
+}
+
+ul #frecuentCases.frecuentNewCases.frecuentCasesOn span
+{
+	background-position: -99px -34px;
+}
+
+ul #casesList.newCasesList span
+{
+	background-position: -6px -34px;
+}
+
+ul #casesList.newCasesList.casesListOn span
+{
+	background-position: -72px -34px;
+}
+
+.processIco
+{
+	background-position: -37px -68px;
+}
+
+.categoryIco
+{
+	background-position: -6px -68px;
+}
+
+#ui-bizagi-webpart-processes-container #ui-bizagi-wp-app-inbox-processes-ico-paper
+{
+	background-position: -70px -66px;
+	width: 24px;
+	height: 26px;
+}
+
+
+.ui-bizagi-container-group-header.ui-state-active .ui-icon
+{
+	background-position: -167px -72px;
+}
+
+.ui-bizagi-container-group-header.ui-state-active .ui-icon.ui-icon-triangle-1-s
+{
+	background-position: -136px -72px;
+}
+
+.activitiFormContainer .closeCanvas
+{
+	background-position: -201px -72px;
+}
+
+
+.bz-wp-cases-header-view-grid
+{
+	background-position: -130px -30px;
+}
+.bz-wp-cases-header-view-thumbnails
+{
+	background-position: -160px -30px;
+}
+
+.bz-wp-cases-header-view-grid:hover
+{
+	background-position: -194px -30px;
+}
+
+.bz-wp-cases-header-view-grid.bz-state-selected
+{
+	background-position: -194px 3px;
+}
+
+.bz-wp-cases-header-view-thumbnails.bz-state-selected
+{
+	background-position: -224px 3px;
+}
+.bz-wp-cases-header-view-thumbnails:hover
+{
+	background-position: -224px -30px;
+}
+
+
+#ui-bizagi-webpart-cases-container #ui-bizagi-wp-app-inbox-cases-ico-event span
+{
+	background: url(images/isevent.png);
+	background-repeat: no-repeat;
+}
+
+.ui-bizagi-webpart-workportal-table
+{
+	
+	display: table;
+	vertical-align:top;
+	background-color:#F2F2F2;
+	border: 1px solid #D9D9D9;
+}
+
+.ui-bizagi-webpart-workportal-row
+{
+	
+}
+
+.ui-bizagi-webpart-workportal-column
+{
+	
+	display: table-cell;
+	vertical-align:top;
+}
+
+/*==============================================================
+		CASE SUMMARY DEFINITIONS
+================================================================*/
+
+.ico-event span
+{
+	background: url(images/isevent.png);
+	background-repeat: no-repeat;
+}
+
+
+/*============================================================
+		JEQUERY OVERRIDES
+==============================================================*/
+.ui-dialog .ui-dialog-titlebar
+{
+	filter: none;
+}
+
+[class*="bizagi-webpart"] .ui-tabs-nav {
+	margin: 0;
+	border-width: 0px;
+	background-color: transparent;
+	background-image: none;
+	padding: 0px 15px;
+}
+
+[class*="bizagi-webpart"] .ui-tabs-nav li {
+	list-style: none;
+	float: left;
+	position: relative;
+	top: 1px;
+	margin: 0px 0px 0px 0px;
+	border-bottom: 0 !important;
+	padding: 0;
+	white-space: nowrap;
+	background: none;
+	border: 1px solid #CECECE;
+	filter: none;
+
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+[class*="bizagi-webpart"] .ui-tabs-nav li a {
+	float: left;
+	padding: .5em 1em;
+	text-decoration: none;
+	font-size: 115%;
+	font-weight: normal;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+	color: #9B9B9B;
+}
+
+
+[class*="bizagi-webpart"] .ui-tabs-panel {
+	display: block;
+	border: none;
+	padding: 2em 1.4em 1.4em;
+	background: none;
+	border: 1px solid #CECECE;
+	background-color: #e6e6e6;
+	border-radius: 3px;
+}
+
+
+/*============================================================
+		WorkPortal Complete
+==============================================================*/
+
+
+.cases-column-details
+{
+	width:260px;
+}
+
+.cases-column-grid
+{
+	width:100%;
+}
+.cases-column-grid-hide
+{
+	width:0%;
+}
+
+.process-column
+{
+	
+}
+.render-column
+{
+	width:100%;
+}
+
+.ui-bizagi-webpart-workportal-table
+{
+	width:100%;
+}
+
+.ui-bizagi-webpart-workportal-row
+{
+	width:100%;
+}
+
+.ui-bizagi-sharepoint-createNewCaseButton{
+                min-height:0px;
+                min-width:0px;
+                overflow:hidden;             
+}
+
+
+.activitiFormContainer #ui-bizagi-webpart-render-container .ui-bizagi-container-form
+{
+	width:auto;
+}
+.visible-inline-block{
+    display:inline-block!important;
+}
+.ui-bizagi-control-wrapper > .ui-bizagi-render-control{
+	padding: 0;
+}
+
+
+.ico-state
+{
+	 background: url("images/lines.png") 0 0 repeat;
+}
+.ico-state-Red
+{
+	 background-image: url("images/lines.png");
+}
+.ico-state-Green
+{
+	 background-image: url("images/lines.png");
+}
+
+/*override jquery style */
+.ui-widget-overlay
+{
+	height:1600px;
+}
+
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset
+{
+	padding-right:10px;
+	padding-left:10px;
+}
+
+

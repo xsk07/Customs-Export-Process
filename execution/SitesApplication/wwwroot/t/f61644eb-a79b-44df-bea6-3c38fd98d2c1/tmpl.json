@@ -1,0 +1,1508 @@
+{
+  "preview": "",
+  "theme": "bfef2652-eac3-4bf6-b30d-7094de2cad00",
+  "displayName": "Trade Central",
+  "footer": {
+    "id": "l456c970-1bf9-4a34-8d4c-e3cte09c8176",
+    "name": "",
+    "parametersBinding": {},
+    "parameters": {
+      "copyright": "Copyright © Bizagi | 2017",
+      "nSections": 2
+    },
+    "styles": {
+      "backColor": "#282828",
+      "contentFontColor": "#c7c7c7",
+      "contentFontSize": 12,
+      "height": 100,
+      "sectionFontColor": "#e9e9e9",
+      "sectionFontSize": 14,
+      "showCopyright": true
+    },
+    "type": "footer"
+  },
+  "header": {
+    "id": "938ed95c-36c7-43d1-808e-fa8d370d3eb3",
+    "name": "",
+    "navigation": [],
+    "parametersBinding": {},
+    "parameters": {
+      "heroImage": "",
+      "siteLogo": "{{bzImagesSource}}f61644eb-a79b-44df-bea6-3c38fd98d2c1/305908cf-c4fc-4398-a2a5-e5cb0ea63a6a.png{{/bzImagesSource}}"
+    },
+    "styles": {
+      "fontSize": "14px",
+      "showLogo": true,
+      "backColor": "#fff",
+      "fontColor": "#157193",
+      "loginColor": "#157193",
+      "subNavFontColor": "#272727",
+      "height": "65",
+      "logoSize": "160"
+    },
+    "type": "header"
+  },
+  "images": [
+    "{{bzImagesSource}}f61644eb-a79b-44df-bea6-3c38fd98d2c1/9e55c326-ec62-47d4-b2ea-00afbb9c6cef.jpg{{/bzImagesSource}}",
+    "{{bzImagesSource}}f61644eb-a79b-44df-bea6-3c38fd98d2c1/9a8b4fbd-a0f6-4c3e-b52c-07bcf91cdb77.jpg{{/bzImagesSource}}",
+    "{{bzImagesSource}}f61644eb-a79b-44df-bea6-3c38fd98d2c1/866596b8-d3b4-457d-a7c2-e81cca965478.jpg{{/bzImagesSource}}"
+  ],
+  "sections": {
+    "bank": {
+      "displayName": "Bank",
+      "layouts": [
+        {
+          "id": "82f89b6e-b9a2-4b8f-9639-a2fb5224f747",
+          "grid": {
+            "size": 1920,
+            "boundaries": {
+              "left": 360,
+              "right": 1560,
+              "width": 360
+            },
+            "layoutSize": 1200
+          },
+          "controls": [
+            {
+              "id": "05c8d12c-31c5-43b0-806e-7fd02a5fbce5",
+              "name": "Image",
+              "location": {
+                "x": 4409,
+                "y": 90,
+                "height": 357,
+                "width": 538
+              },
+              "type": "image",
+              "styles": {
+                "opacity": 100,
+                "background": "transparent",
+                "border": null
+              },
+              "parameters": {
+                "image": "t/f61644eb-a79b-44df-bea6-3c38fd98d2c1/8abaafc7-4274-4c42-8ab6-e7637ac515e1.jpg"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "link": {
+                "type": ""
+              },
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "37deca63-830b-4a3a-9247-98efc89ba2a3",
+              "name": "Image",
+              "location": {
+                "x": 4412,
+                "y": 571,
+                "height": 402,
+                "width": 1076
+              },
+              "type": "image",
+              "styles": {
+                "opacity": 100,
+                "background": "transparent",
+                "border": "border-none"
+              },
+              "parameters": {
+                "image": "t/f61644eb-a79b-44df-bea6-3c38fd98d2c1/9a8b4fbd-a0f6-4c3e-b52c-07bcf91cdb77.jpg"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "link": {
+                "type": ""
+              },
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "f28c80a0-dc95-4ace-8a71-cfdc39740ff8",
+              "name": "Text",
+              "location": {
+                "x": 41038,
+                "y": 89,
+                "height": 85,
+                "width": 341
+              },
+              "type": "text",
+              "styles": {
+                "fontFamily": "opensans",
+                "fontSize": "28px",
+                "letterSpacing": 0,
+                "align": "left",
+                "fontColor": "#0074a6",
+                "backColor": "rgba(0, 0, 0, 0)",
+                "bold": true
+              },
+              "parameters": {
+                "text": "Need a flexible and rewarding current account?"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "c4db7408-92e5-44fd-b089-73c89f5908ec",
+              "name": "Text",
+              "location": {
+                "x": 4411,
+                "y": 499,
+                "height": 54,
+                "width": 391
+              },
+              "type": "text",
+              "styles": {
+                "fontFamily": "opensans",
+                "fontSize": "24px",
+                "letterSpacing": 0,
+                "align": "left",
+                "fontColor": "#575757",
+                "backColor": "rgba(0, 0, 0, 0)",
+                "bold": true
+              },
+              "parameters": {
+                "text": "More than an everyday bank account"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "92eec133-40d0-4dcd-97bb-395f268081d2",
+              "name": "Text",
+              "location": {
+                "x": 41038,
+                "y": 199,
+                "height": 52,
+                "width": 418
+              },
+              "type": "text",
+              "styles": {
+                "fontFamily": "opensans",
+                "fontSize": "20px",
+                "letterSpacing": 0,
+                "align": "left",
+                "fontColor": "#757575",
+                "backColor": "rgba(0, 0, 0, 0)"
+              },
+              "parameters": {
+                "text": "Create your own debit card that’s a little more you"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "dd24e9b2-5782-4a77-b97a-8e0006fc4ae2",
+              "name": "Button",
+              "location": {
+                "x": 41342,
+                "y": 1086,
+                "height": 58,
+                "width": 154
+              },
+              "type": "button",
+              "styles": {
+                "fontSize": "14px",
+                "fontColor": "color-sixth",
+                "backColor": "color-second",
+                "align": "center",
+                "border": "border-btn",
+                "borderRadius": 5
+              },
+              "parameters": {
+                "text": "Join Now"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "link": {
+                "type": ""
+              },
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "f27bb5d5-0959-49c9-8c97-4734f7dbb90e",
+              "name": "Text",
+              "location": {
+                "x": 41041,
+                "y": 262,
+                "height": 68,
+                "width": 423
+              },
+              "type": "text",
+              "styles": {
+                "fontFamily": "opensans",
+                "fontSize": "20px",
+                "letterSpacing": 0,
+                "align": "left",
+                "fontColor": "#757575",
+                "backColor": "rgba(0, 0, 0, 0)"
+              },
+              "parameters": {
+                "text": "Earn rewards when you bank, shop and travel with Blue Reward"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "42fe164b-0666-4651-8578-51ff6f5acd6e",
+              "name": "Text",
+              "location": {
+                "x": 4409,
+                "y": 12,
+                "height": 36,
+                "width": 160
+              },
+              "type": "text",
+              "styles": {
+                "fontFamily": "opensans",
+                "fontSize": "24px",
+                "letterSpacing": 0,
+                "align": "left",
+                "fontColor": "#575757",
+                "backColor": "rgba(0, 0, 0, 0)",
+                "bold": true
+              },
+              "parameters": {
+                "text": " Bank Account"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "1d599e44-663a-4562-8657-3dabc462506f",
+              "name": "Text",
+              "location": {
+                "x": 4416,
+                "y": 992,
+                "height": 91,
+                "width": 974
+              },
+              "type": "text",
+              "styles": {
+                "fontFamily": "opensans",
+                "fontSize": "20px",
+                "letterSpacing": 0,
+                "align": "left",
+                "fontColor": "#575757",
+                "backColor": "rgba(0, 0, 0, 0)"
+              },
+              "parameters": {
+                "text": "Already got an account with us? Call us on 0800 XXX XXXX to upgrade.5 Lines open Monday to Sunday 8am to 10pm. To maintain a quality service, we may monitor or record phone calls. Call charges"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "69b93c99-01a7-4706-9045-8bffbe8aa1ab",
+              "name": "Button",
+              "location": {
+                "x": 41254,
+                "y": 374,
+                "height": 57,
+                "width": 221
+              },
+              "type": "button",
+              "styles": {
+                "fontSize": "14px",
+                "fontColor": "color-sixth",
+                "backColor": "color-second",
+                "align": "center",
+                "border": "border-btn",
+                "borderRadius": 5
+              },
+              "parameters": {
+                "text": "Apply for sole account"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "link": {
+                "type": ""
+              },
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            }
+          ],
+          "displayName": "Bank",
+          "name": "bank",
+          "hero": {
+            "id": "3b0614c0-8cf2-40f3-b1b0-f16e27241635",
+            "name": "",
+            "location": {
+              "x": 40,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "type": "hero",
+            "styles": {
+              "showHeroImage": false,
+              "heroImageHeight": 100,
+              "heroImage": "{{bzImagesSource}}f61644eb-a79b-44df-bea6-3c38fd98d2c1/8d44ad51-2e9f-4f12-b41d-0c20a206e50c.jpg{{/bzImagesSource}}",
+              "heroSpace": "fluid",
+              "scale": "tofill",
+              "scaleProportionally": 50,
+              "imgOpacity": 100,
+              "imgColorOpacity": 0,
+              "imgColorBackgroundOpacity": "transparent",
+              "backgroundPosition": "center"
+            },
+            "parametersBinding": {}
+          },
+          "stakeholders": {},
+          "visibleTo": [],
+          "preview": "{{bzImagesSource}}f61644eb-a79b-44df-bea6-3c38fd98d2c1/45ea49ff-8df7-41c4-abcc-ccf40571bbd2.jpg{{/bzImagesSource}}"
+        }
+      ]
+    },
+    "home": {
+      "displayName": "Home",
+      "layouts": [
+        {
+          "controls": [
+            {
+              "id": "4c3eb966-3788-496d-9ac0-45b6a2c36984",
+              "name": "Card Link",
+              "location": {
+                "x": 4420,
+                "y": 1158,
+                "height": 248,
+                "width": 1081
+              },
+              "type": "cardLink",
+              "styles": {
+                "fontSize": "16px",
+                "titleColor": "color-first",
+                "labelColor": "color-sixth",
+                "columns": 3,
+                "showPagination": true,
+                "paginationSize": 3,
+                "layout": "three"
+              },
+              "parameters": {
+                "data": {
+                  "dataSource": 0,
+                  "fixed": [
+                    {
+                      "image": "t/f61644eb-a79b-44df-bea6-3c38fd98d2c1/8d44ad51-2e9f-4f12-b41d-0c20a206e50c.jpg",
+                      "title": "Loan: 473235446453646",
+                      "label": "Assumed borrowing of £1,200 for 1 year, at a Purchase Rate of 18.9% (variable)"
+                    },
+                    {
+                      "image": "t/f61644eb-a79b-44df-bea6-3c38fd98d2c1/866596b8-d3b4-457d-a7c2-e81cca965478.jpg",
+                      "title": "Loan: 7897687565",
+                      "label": "ssumed borrowing of £1,200 for 1 year, at a Purchase Rate of 18.9%"
+                    },
+                    {
+                      "image": "t/f61644eb-a79b-44df-bea6-3c38fd98d2c1/88b64f53-a2dd-4f2a-b37e-8e0e2bdf2ce4.jpg",
+                      "title": "Loan: 34567891231231",
+                      "label": " You'll pay a 1.5% fee to transfer a balance to this card in the first 3 months. "
+                    }
+                  ]
+                }
+              },
+              "fields": {
+                "image": {
+                  "active": true,
+                  "styles": {
+                    "imagesSize": "scale",
+                    "opacity": 100,
+                    "background": "rgba(0, 0, 0, 0)",
+                    "border": "border-none"
+                  }
+                },
+                "title": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label:"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "16px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-first",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                },
+                "text": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label:"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "12px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-sixth",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                }
+              },
+              "parametersBinding": {},
+              "inputs": [
+                "parameters.filter"
+              ],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "4a4f96e3-c9e1-4a7c-ba0b-ef4459318a18",
+              "name": "Text",
+              "location": {
+                "x": 4419,
+                "y": 223,
+                "height": 51,
+                "width": 308
+              },
+              "type": "text",
+              "styles": {
+                "fontFamily": "opensans",
+                "fontSize": "24px",
+                "letterSpacing": 1,
+                "align": "left",
+                "fontColor": "#fff",
+                "backColor": "rgba(0, 0, 0, 0)",
+                "bold": false
+              },
+              "parameters": {
+                "text": "Know our mortgage loans"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "ecf188f2-168e-4401-9b69-a37ed13e2b79",
+              "name": "Text",
+              "location": {
+                "x": 4415,
+                "y": 44,
+                "height": 230,
+                "width": 414
+              },
+              "type": "text",
+              "styles": {
+                "fontFamily": "opensans",
+                "fontSize": "42px",
+                "letterSpacing": 0,
+                "align": "left",
+                "fontColor": "#fff",
+                "backColor": "rgba(0, 0, 0, 0)",
+                "bold": true
+              },
+              "parameters": {
+                "text": "Save, always bring good things"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "1931ec7f-0189-4002-a0d3-8bf04a94e88d",
+              "name": "Image",
+              "location": {
+                "x": 41260,
+                "y": 1478,
+                "height": 164,
+                "width": 247
+              },
+              "type": "image",
+              "styles": {
+                "opacity": 100,
+                "background": "transparent",
+                "border": null
+              },
+              "parameters": {
+                "image": "t/f61644eb-a79b-44df-bea6-3c38fd98d2c1/ded69c23-3bb6-412a-bdb4-707f8dbb5e8d.jpg"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "link": {
+                "type": ""
+              },
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "c76291ef-400e-4ff6-af28-c6ddce85a5a4",
+              "name": "Image",
+              "location": {
+                "x": 4452,
+                "y": 1479,
+                "height": 164,
+                "width": 244
+              },
+              "type": "image",
+              "styles": {
+                "opacity": 100,
+                "background": "transparent",
+                "border": null
+              },
+              "parameters": {
+                "image": "t/f61644eb-a79b-44df-bea6-3c38fd98d2c1/8d44ad51-2e9f-4f12-b41d-0c20a206e50c.jpg"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "link": {
+                "type": ""
+              },
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "adcadb74-fd46-4626-80c9-cb62f4e162b0",
+              "name": "Image",
+              "location": {
+                "x": 4721,
+                "y": 1478,
+                "height": 163,
+                "width": 245
+              },
+              "type": "image",
+              "styles": {
+                "opacity": 100,
+                "background": "transparent",
+                "border": null
+              },
+              "parameters": {
+                "image": "t/f61644eb-a79b-44df-bea6-3c38fd98d2c1/88b64f53-a2dd-4f2a-b37e-8e0e2bdf2ce4.jpg"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "link": {
+                "type": ""
+              },
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "c32f517a-5e32-490a-9c3b-29d15a6e9158",
+              "name": "Image",
+              "location": {
+                "x": 4984,
+                "y": 1478,
+                "height": 162,
+                "width": 256
+              },
+              "type": "image",
+              "styles": {
+                "opacity": 100,
+                "background": "transparent",
+                "border": null
+              },
+              "parameters": {
+                "image": "t/f61644eb-a79b-44df-bea6-3c38fd98d2c1/08644ac1-8573-4cdc-b0a0-40196415be03.jpg"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "link": {
+                "type": ""
+              },
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "7ff98c02-8e11-4997-b91b-8e178c581021",
+              "name": "Text",
+              "location": {
+                "x": 41262,
+                "y": 1412,
+                "height": 43,
+                "width": 204
+              },
+              "type": "text",
+              "styles": {
+                "fontFamily": "opensans",
+                "fontSize": "24px",
+                "letterSpacing": 0,
+                "align": "left",
+                "fontColor": "#0074a6",
+                "backColor": "rgba(0, 0, 0, 0)",
+                "bold": true
+              },
+              "parameters": {
+                "text": "Help and support"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "fec5d41a-ad57-4a48-9bc7-0ca8f1a7d3e0",
+              "name": "Text",
+              "location": {
+                "x": 41258,
+                "y": 1665,
+                "height": 114,
+                "width": 246
+              },
+              "type": "text",
+              "styles": {
+                "fontFamily": "opensans",
+                "fontSize": "18px",
+                "letterSpacing": 0,
+                "align": "left",
+                "fontColor": "#5f5e5e",
+                "backColor": "rgba(0, 0, 0, 0)",
+                "bold": false
+              },
+              "parameters": {
+                "text": "Ask us about what you need to know, check the FAQs and let us know your opinion"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "a1371e90-bb64-429d-8413-ce5caddc9a97",
+              "name": "Text",
+              "location": {
+                "x": 4720,
+                "y": 1409,
+                "height": 59,
+                "width": 166
+              },
+              "type": "text",
+              "styles": {
+                "fontFamily": "opensans",
+                "fontSize": "24px",
+                "letterSpacing": 0,
+                "align": "left",
+                "fontColor": "#0074a6",
+                "backColor": "rgba(0, 0, 0, 0)",
+                "bold": true
+              },
+              "parameters": {
+                "text": "Bank Online"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "5da13050-f3c2-4e46-b6ba-126cb945ac46",
+              "name": "Text",
+              "location": {
+                "x": 4981,
+                "y": 1409,
+                "height": 46,
+                "width": 162
+              },
+              "type": "text",
+              "styles": {
+                "fontFamily": "opensans",
+                "fontSize": "24px",
+                "letterSpacing": 0,
+                "align": "left",
+                "fontColor": "#0074a6",
+                "backColor": "rgba(0, 0, 0, 0)",
+                "bold": true
+              },
+              "parameters": {
+                "text": "Want to save?"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "95ad96a6-678f-43ca-81ad-bac19485abb2",
+              "name": "Text",
+              "location": {
+                "x": 4454,
+                "y": 1663,
+                "height": 105,
+                "width": 234
+              },
+              "type": "text",
+              "styles": {
+                "fontFamily": "opensans",
+                "fontSize": "18px",
+                "letterSpacing": 0,
+                "align": "left",
+                "fontColor": "#5f5e5e",
+                "backColor": "rgba(0, 0, 0, 0)",
+                "bold": false
+              },
+              "parameters": {
+                "text": "Manage your money on your smartphone with our Barclays Mobile Banking app."
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "6b9db35a-216a-49c9-9b28-7436099a5ff0",
+              "name": "Text",
+              "location": {
+                "x": 4717,
+                "y": 1667,
+                "height": 108,
+                "width": 244
+              },
+              "type": "text",
+              "styles": {
+                "fontFamily": "opensans",
+                "fontSize": "18px",
+                "letterSpacing": 0,
+                "align": "left",
+                "fontColor": "#5f5e5e",
+                "backColor": "rgba(0, 0, 0, 0)",
+                "bold": false
+              },
+              "parameters": {
+                "text": "Online Banking gives you quick, secure and convenient access to your accounts."
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "44fe5b03-c375-4c27-b071-1a893c603f13",
+              "name": "Text",
+              "location": {
+                "x": 4985,
+                "y": 1664,
+                "height": 140,
+                "width": 257
+              },
+              "type": "text",
+              "styles": {
+                "fontFamily": "opensans",
+                "fontSize": "18px",
+                "letterSpacing": 0,
+                "align": "left",
+                "fontColor": "#5f5e5e",
+                "backColor": "rgba(0, 0, 0, 0)",
+                "bold": false
+              },
+              "parameters": {
+                "text": "If you’re saving for something special, setting a goal can help keep you on track."
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "27dd5c81-89e8-43e0-b43d-587ccb6720f3",
+              "name": "Button",
+              "location": {
+                "x": 4624,
+                "y": 333,
+                "height": 58,
+                "width": 199
+              },
+              "type": "button",
+              "styles": {
+                "fontSize": "14px",
+                "fontColor": "rgba(255,255,255,1)",
+                "backColor": "rgba(71,77,81,1)",
+                "align": "center",
+                "border": "0px solid rgb(148,194,204)",
+                "borderRadius": 5
+              },
+              "parameters": {
+                "text": "KNOW THE OFFERS"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "link": {
+                "type": ""
+              },
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "b1f62eb4-0f82-4c66-a7f9-1520fd7fac4b",
+              "name": "Text",
+              "location": {
+                "x": 4452,
+                "y": 1408,
+                "height": 49,
+                "width": 178
+              },
+              "type": "text",
+              "styles": {
+                "fontFamily": "opensans",
+                "fontSize": "24px",
+                "letterSpacing": 0,
+                "align": "left",
+                "fontColor": "#0074a6",
+                "backColor": "rgba(0, 0, 0, 0)",
+                "bold": true
+              },
+              "parameters": {
+                "text": "On your Phone"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "121ef8d1-0da2-43e5-8f29-8eb0d71f2aa2",
+              "name": "List View",
+              "location": {
+                "x": 4412,
+                "y": 530,
+                "height": 550,
+                "width": 1078
+              },
+              "type": "listView",
+              "styles": {
+                "titleFontSize": "22px",
+                "titleColor": "color-first",
+                "textFontSize": "14px",
+                "textColor": "color-sixth",
+                "infoFontSize": "36px",
+                "infoColor": "color-first",
+                "backgroundColor": "color-fifth",
+                "layout": "three"
+              },
+              "parameters": {
+                "data": {
+                  "dataSource": 0,
+                  "fixed": [
+                    {
+                      "image": "t/f61644eb-a79b-44df-bea6-3c38fd98d2c1/20e0ca83-f6d1-41a2-96e2-b0c1186b759d.jpg",
+                      "title": "SANTANDER",
+                      "text": "Santander All in One Credit Card",
+                      "caption": "USD $3.000"
+                    },
+                    {
+                      "image": "t/f61644eb-a79b-44df-bea6-3c38fd98d2c1/9933c280-6b31-4b3f-a289-111efee3615b.jpg",
+                      "title": "TESCO BANK",
+                      "text": "Tesco Bank Clubcard 32 Month Balance Transfer Credit Card",
+                      "caption": "USD $2.400"
+                    },
+                    {
+                      "image": "t/f61644eb-a79b-44df-bea6-3c38fd98d2c1/efccfda5-be07-4415-9209-76d6ba077ab7.png",
+                      "title": "LLOYDS BANK",
+                      "text": "Lloyds Bank Platinum 40 Month Balance Transfer Credit Card",
+                      "caption": "USD $1.800"
+                    }
+                  ]
+                },
+                "filter": ""
+              },
+              "fields": {
+                "image": {
+                  "active": true,
+                  "styles": {
+                    "imagesSize": "scale",
+                    "opacity": 100,
+                    "background": "rgba(0, 0, 0, 0)",
+                    "border": "border-none"
+                  }
+                },
+                "title": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "28px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-first",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                },
+                "text": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "12px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-sixth",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                },
+                "caption": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "28px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-first",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                }
+              },
+              "parametersBinding": {},
+              "inputs": [
+                "parameters.filter"
+              ],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null,
+              "layout": "one"
+            },
+            {
+              "id": "8c3a320c-ab07-4321-9eea-f348bf18be5b",
+              "name": "Text",
+              "location": {
+                "x": 4417,
+                "y": 456,
+                "height": 48,
+                "width": 199
+              },
+              "type": "text",
+              "styles": {
+                "fontFamily": "opensans",
+                "fontSize": "24px",
+                "letterSpacing": 0,
+                "align": "left",
+                "fontColor": "#0074a6",
+                "backColor": "rgba(0, 0, 0, 0)",
+                "bold": true
+              },
+              "parameters": {
+                "text": "My Credit Cards"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "4de0dcc4-b1b1-4cba-a9d1-f06b532d3a65",
+              "name": "Text",
+              "location": {
+                "x": 4418,
+                "y": 1093,
+                "height": 43,
+                "width": 129
+              },
+              "type": "text",
+              "styles": {
+                "fontFamily": "opensans",
+                "fontSize": "24px",
+                "letterSpacing": 0,
+                "align": "left",
+                "fontColor": "#0074a6",
+                "backColor": "rgba(0, 0, 0, 0)",
+                "bold": true
+              },
+              "parameters": {
+                "text": "My Loans"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "db3b4420-ee0d-40bd-918a-f2bda703dc2b",
+              "name": "Button",
+              "location": {
+                "x": 4481,
+                "y": 1803,
+                "height": 59,
+                "width": 146
+              },
+              "type": "button",
+              "styles": {
+                "fontSize": "14px",
+                "fontColor": "rgba(255,255,255,1)",
+                "backColor": "rgba(71,77,81,1)",
+                "align": "center",
+                "border": "0px solid rgb(148,194,204)",
+                "borderRadius": 5
+              },
+              "parameters": {
+                "text": "VIEW MORE"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "link": {
+                "type": ""
+              },
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "7a164362-5da7-47a5-8b64-b6034e376ac9",
+              "name": "Button",
+              "location": {
+                "x": 4772,
+                "y": 1806,
+                "height": 59,
+                "width": 146
+              },
+              "type": "button",
+              "styles": {
+                "fontSize": "14px",
+                "fontColor": "rgba(255,255,255,1)",
+                "backColor": "rgba(71,77,81,1)",
+                "align": "center",
+                "border": "0px solid rgb(148,194,204)",
+                "borderRadius": 5
+              },
+              "parameters": {
+                "text": "VIEW MORE"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "link": {
+                "type": ""
+              },
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "506b094d-0135-4029-b1ab-4272a4c1f294",
+              "name": "Button",
+              "location": {
+                "x": 41038,
+                "y": 1805,
+                "height": 59,
+                "width": 146
+              },
+              "type": "button",
+              "styles": {
+                "fontSize": "14px",
+                "fontColor": "rgba(255,255,255,1)",
+                "backColor": "rgba(71,77,81,1)",
+                "align": "center",
+                "border": "0px solid rgb(148,194,204)",
+                "borderRadius": 5
+              },
+              "parameters": {
+                "text": "VIEW MORE"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "link": {
+                "type": ""
+              },
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "42c8f1ea-2757-421e-81d7-cc2ed26162b0",
+              "name": "Button",
+              "location": {
+                "x": 41332,
+                "y": 1799,
+                "height": 59,
+                "width": 146
+              },
+              "type": "button",
+              "styles": {
+                "fontSize": "14px",
+                "fontColor": "rgba(255,255,255,1)",
+                "backColor": "rgba(71,77,81,1)",
+                "align": "center",
+                "border": "0px solid rgb(148,194,204)",
+                "borderRadius": 5
+              },
+              "parameters": {
+                "text": "VIEW MORE"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "link": {
+                "type": ""
+              },
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            }
+          ],
+          "displayName": "Home",
+          "hero": {
+            "id": "de1534e7-5033-425b-8db8-5493643caa0e",
+            "name": "",
+            "parametersBinding": {},
+            "styles": {
+              "heroImageHeight": 510,
+              "showHeroImage": true,
+              "heroImage": "{{bzImagesSource}}f61644eb-a79b-44df-bea6-3c38fd98d2c1/1db2afe2-c0c0-41d6-900a-bc0148758f96.jpg{{/bzImagesSource}}",
+              "heroSpace": "fluid",
+              "scale": "tofill",
+              "scaleProportionally": 50,
+              "imgOpacity": 100,
+              "imgColorOpacity": 0,
+              "imgColorBackgroundOpacity": "transparent",
+              "backgroundPosition": "center"
+            }
+          },
+          "type": "hero",
+          "id": "aa83b37a-2bd2-4386-aca2-f5f076e964c4",
+          "grid": {
+            "size": 1920,
+            "boundaries": {
+              "left": 360,
+              "right": 1560,
+              "width": 360
+            },
+            "layoutSize": 1200
+          },
+          "preview": "{{bzImagesSource}}f61644eb-a79b-44df-bea6-3c38fd98d2c1/d21aae4d-a9d5-4fd7-bc43-bb7b350a6b62.jpg{{/bzImagesSource}}"
+        }
+      ]
+    },
+    "credit_cards": {
+      "displayName": "Credit Cards",
+      "layouts": [
+        {
+          "controls": [
+            {
+              "id": "b92d4eed-5a34-4aae-a41b-77a997b3c223",
+              "name": "List View",
+              "location": {
+                "x": 4463,
+                "y": 438,
+                "height": 852,
+                "width": 994
+              },
+              "type": "listView",
+              "styles": {
+                "titleFontSize": "22px",
+                "titleColor": "color-first",
+                "textFontSize": "14px",
+                "textColor": "color-sixth",
+                "infoFontSize": "36px",
+                "infoColor": "color-first",
+                "backgroundColor": "color-fifth",
+                "layout": "one"
+              },
+              "parameters": {
+                "data": {
+                  "dataSource": 0,
+                  "fixed": [
+                    {
+                      "image": "t/f61644eb-a79b-44df-bea6-3c38fd98d2c1/20e0ca83-f6d1-41a2-96e2-b0c1186b759d.jpg",
+                      "title": "SANTANDER",
+                      "text": "Santander All in One Credit Card",
+                      "caption": ""
+                    },
+                    {
+                      "image": "t/f61644eb-a79b-44df-bea6-3c38fd98d2c1/9933c280-6b31-4b3f-a289-111efee3615b.jpg",
+                      "title": "TESCO BANK",
+                      "text": "Tesco Bank Clubcard Credit Card for Balance Transfers and Money Transfers",
+                      "caption": ""
+                    },
+                    {
+                      "image": "t/f61644eb-a79b-44df-bea6-3c38fd98d2c1/efccfda5-be07-4415-9209-76d6ba077ab7.png",
+                      "title": "LLOYDS BANK",
+                      "text": "Lloyds Bank Platinum 40 Month Balance Transfer Credit Card",
+                      "caption": ""
+                    }
+                  ]
+                },
+                "filter": ""
+              },
+              "fields": {
+                "image": {
+                  "active": true,
+                  "styles": {
+                    "imagesSize": "scale",
+                    "opacity": 100,
+                    "background": "rgba(0, 0, 0, 0)",
+                    "border": "border-none"
+                  }
+                },
+                "title": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "28px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-first",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                },
+                "text": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "12px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-sixth",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                },
+                "caption": {
+                  "active": true,
+                  "styles": {
+                    "fieldLabel": {
+                      "isActive": false,
+                      "text": "Label"
+                    },
+                    "fontFamily": "Open Sans",
+                    "fontSize": "28px",
+                    "letterSpacing": 0,
+                    "align": "left",
+                    "fontColor": "color-first",
+                    "backColor": "rgba(0, 0, 0, 0)",
+                    "fontWeight": "normal"
+                  }
+                }
+              },
+              "parametersBinding": {},
+              "inputs": [
+                "parameters.filter"
+              ],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null,
+              "layout": "one"
+            },
+            {
+              "id": "8f982762-5ce2-499c-a36c-05ebfc22f773",
+              "name": "Text",
+              "location": {
+                "x": 4369,
+                "y": 1,
+                "height": 148,
+                "width": 540
+              },
+              "type": "text",
+              "styles": {
+                "fontFamily": "opensans",
+                "fontSize": "42px",
+                "letterSpacing": 0,
+                "align": "left",
+                "fontColor": "#fff",
+                "backColor": "rgba(0, 0, 0, 0)",
+                "bold": true
+              },
+              "parameters": {
+                "text": "Apply to the credit card of your choice"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            },
+            {
+              "id": "0ecab728-a57e-4a46-bece-97b31e6d6c96",
+              "name": "Text",
+              "location": {
+                "x": 4458,
+                "y": 338,
+                "height": 52,
+                "width": 263
+              },
+              "type": "text",
+              "styles": {
+                "fontFamily": "opensans",
+                "fontSize": "26px",
+                "letterSpacing": 0,
+                "align": "left",
+                "fontColor": "#0074a6",
+                "backColor": "rgba(0, 0, 0, 0)",
+                "bold": true
+              },
+              "parameters": {
+                "text": "Credit cards available"
+              },
+              "parametersBinding": {},
+              "inputs": [],
+              "stakeholders": {},
+              "visibleTo": [
+                "ALL"
+              ],
+              "actions": null
+            }
+          ],
+          "displayName": "Credit Cards",
+          "name": "credit-cards",
+          "hero": {
+            "id": "fbd9e2e9-06e3-4a77-9841-2dbb77f13aba",
+            "name": "",
+            "location": {
+              "x": 40,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "type": "hero",
+            "styles": {
+              "showHeroImage": true,
+              "heroImageHeight": 400,
+              "heroImage": "{{bzImagesSource}}f61644eb-a79b-44df-bea6-3c38fd98d2c1/56507613-b62f-4b26-83d9-3b042ada5d72.jpg{{/bzImagesSource}}",
+              "heroSpace": "fluid",
+              "scale": "tofill",
+              "scaleProportionally": 50,
+              "imgOpacity": 100,
+              "imgColorOpacity": 0,
+              "imgColorBackgroundOpacity": "transparent",
+              "backgroundPosition": "center"
+            },
+            "parametersBinding": {},
+            "stakeholders": {},
+            "visibleTo": []
+          },
+          "id": "a2217ce2-95b9-4f41-843b-72cf36c9eacd",
+          "grid": {
+            "size": 1920,
+            "boundaries": {
+              "left": 360,
+              "right": 1560,
+              "width": 360
+            },
+            "layoutSize": 1200
+          },
+          "preview": "{{bzImagesSource}}f61644eb-a79b-44df-bea6-3c38fd98d2c1/a9f84d43-36b3-4663-857c-7369b668a99b.jpg{{/bzImagesSource}}"
+        }
+      ]
+    }
+  }
+}

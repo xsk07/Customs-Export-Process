@@ -1,0 +1,320 @@
+﻿/********************************************************************************************************************************************
+    
+    * Filename: bizagi.webpart.querycases.css
+    * Create Date: 27/03/2012
+    * Template: querycases.tmpl.html
+    * Author: Diego Parra diego.parra@bizagi.com
+    * Description: Query Cases Webpart Style Sheet
+
+    == STRUCTURE ==========================================================================================================================
+    
+    $__header       Webpart header definition (title and views)
+    $__grid         Webpart grid view  (header, body)
+    $__thumbnails   Webpart thumbnails view  (items)
+    $__pager        Webpart common pager
+
+********************************************************************************************************************************************/
+
+/*  $__header
+-------------------------------------------------------------------------------------------------------------------------------------------*/
+.bz-wp-querycases {
+    border-top: 2px whiteSmoke solid;
+    border-left: 2px whiteSmoke solid;
+    border-bottom: 2px #CCC solid;
+    border-right: 2px #CCC solid;
+    background-color: #f2f2f2;
+    padding: 10px;
+    padding-top: 0;
+    margin-top: 10px !important;
+    margin-left: 10px !important;
+}
+.bz-wp-querycases-header {
+    height: 32px;
+    padding: 2px 0px;
+    border-bottom: 1px #CCC solid;
+    position: relative;
+}
+.bz-wp-querycases-header-arrow {
+    height: 0;
+    width: 0;
+    top: 12px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.bz-wp-querycases-header-arrow.bz-state-collapsed{
+    background-image:url("images/arrow_collapsed.png") !important;
+   width:10px;
+   height:10px;
+   background-repeat:no-repeat; 
+   border:0 !important;
+}
+.bz-wp-querycases-header-arrow.bz-state-expanded{
+    background-image:url("images/arrow_expand.png") !important;
+   width:10px;
+   height:10px;
+   background-repeat:no-repeat; 
+   border:0 !important;
+}
+.bz-wp-querycases-header > label {
+    padding-left: 20px;
+    line-height: 30px;
+    font-weight: bold;
+    font-size: larger;
+}
+.bz-wp-querycases-header-views {
+    position: absolute;
+    right: 0px;
+    width: 86px;
+    height: 32px;
+}
+.bz-wp-querycases-header-views label
+{
+    color: #666;
+    left: 0px;
+    position: absolute;
+    line-height: 32px;
+}
+.bz-wp-querycases-header-views span{
+    width: 28px;
+    height: 28px;
+    background-color: #BBB;
+    position: absolute;
+    top: 2px;
+    background-image: url(images/sprite.png);
+    background-repeat    : no-repeat;
+    background-color: olive;
+    cursor: pointer;
+}
+.bz-wp-querycases-header-views span.bz-state-selected {
+    background-color: #888;
+}
+.bz-wp-querycases-header-views .bz-wp-querycases-header-view-grid {
+    left: 32px;
+    background-position  : -0px -0px; 
+}
+.bz-wp-querycases-header-views .bz-wp-querycases-header-view-thumbnails {
+    left: 60px;
+    background-position  : -28px -0px;
+}
+
+/*  $__grid
+-------------------------------------------------------------------------------------------------------------------------------------------*/
+.bz-wp-querycases-grid {
+    background-color: white;
+    border: none;
+    width: 100%;
+}
+.bz-wp-querycases-grid thead tr {
+    height: 64px;    
+    background-color: #444;
+}
+
+.bz-wp-querycases-grid thead td {
+    border-right: #888 1px solid;
+    position: relative;
+    cursor: pointer;
+}
+.bz-wp-querycases-grid thead td label{
+    
+    text-align: center;
+    display: block;
+    position: relative;
+    top: -5px;
+    color: white;
+    font-weight: bold;
+    left: 0px;
+    right: 24px;
+    font-size: 12px;
+    width:80px;
+    font:arial;
+}
+
+
+
+.bz-wp-querycases-grid thead td .bz-wp-column-order{
+    position: absolute;
+    right: 0px;
+    width: 16px;
+    height: 32px;
+    top: 20px;
+}
+.bz-wp-querycases-grid thead td .bz-wp-column-order-up {
+   background-image:url("images/arrowless_up.png") !important;
+   width:10px;
+   height:8px;
+   background-repeat:no-repeat; 
+   position: absolute;
+    top: -18px;
+}
+.bz-wp-querycases-grid thead td .bz-wp-column-order-down {
+   background-image:url("images/arrowmore_up.png") !important;
+   width:10px;
+   height:8px;
+   background-repeat:no-repeat; 
+    position: absolute;
+    top: -9px;
+    cursor: pointer;
+}
+.bz-wp-querycases-grid thead td .bz-wp-column-order .bz-wp-column-order-up.bz-state-selected {
+       background-image:url("images/arrowless_selected.png") !important;
+   width:10px;
+   height:8px;
+   background-repeat:no-repeat; 
+}
+.bz-wp-querycases-grid thead td .bz-wp-column-order .bz-wp-column-order-down.bz-state-selected {
+    background-image:url("images/arrowmore_selected.png") !important;
+   width:10px;
+   height:8px;
+   background-repeat:no-repeat; 
+}
+.bz-wp-querycases-grid tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+.bz-wp-querycases-grid tbody td {
+    text-align: left;
+    padding:3px;
+    font-size: 12px;
+    border-right: 1px #BBB solid;
+    font-weight:bold;
+}
+.bz-wp-querycases-grid tbody td.bz-wp-gridcases-actions-cell{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align:left;
+    width:92px !important;
+}
+.bz-wp-querycases-grid tbody td.bz-wp-gridcases-actions-cell button{
+    border: 0px transparent none;
+    background-color: transparent;
+    font-weight: bold;
+    color: olive;
+    font-size: 12px;
+    cursor: pointer;
+}  
+
+/*  $__thumbnails 
+-------------------------------------------------------------------------------------------------------------------------------------------*/
+.bz-wp-querycases-thumbnails {
+    padding: 20px 10px;
+    position: relative;
+}
+.bz-wp-querycases-thumbnails-item {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+}
+.bz-wp-querycases-thumbnails-item > .bz-wrapper {
+    background-color: transparent !important;
+}
+.bz-wp-querycases-thumbnails-item img {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    Filter: alpha(opacity=100);
+    opacity: 1.0;
+}
+.bz-wp-querycases-thumbnails-item:hover img {
+    Filter: alpha(opacity=40);
+    opacity: 0.4;
+}
+.bz-wp-querycases-thumbnails-item label {
+    position: relative;
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: larger;
+    margin-top: 8px;
+}
+.bz-wp-querycases-thumbnails-item span{
+    position: relative;
+    display: block;
+    margin-top: 1px;
+}
+.bz-wp-querycases-thumbnails-item .bz-wp-querycases-thumbnails-item-actions{
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    top: 0;
+    width: 120px;
+    height: 120px;
+}
+.bz-wp-querycases-thumbnails-item .bz-wp-querycases-thumbnails-item-actions .bz-wrapper{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+.bz-wp-querycases-thumbnails-item .bz-wp-querycases-thumbnails-item-actions button{
+    display: block;
+    border: 0px transparent none;
+    background-color: transparent;
+    font-weight: normal;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    left: 0px;
+    text-align: center;
+    text-shadow:#CCC 1px 1px 2px;
+    font-family: "Segoe UI","Lucida Grande",Calibri,Helvetica,Arial,sans-serif;
+}
+
+/*  $__pager
+-------------------------------------------------------------------------------------------------------------------------------------------*/
+.bz-wp-querycases-pager {
+    height: 48px;
+    background-color: #444;
+    text-align: center;
+    position: relative;
+}
+.bz-wp-querycases-pager ul {
+    list-style: none;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 18px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+	height: 16px;
+}
+.bz-wp-querycases-pager ul li {
+    display: inline-block;
+    font-weight: bold;
+    color: olive;
+    font-size: 14px;
+    margin-left: 10px;
+    cursor: pointer;
+
+}
+.bz-wp-querycases-pager ul li.bz-state-selected {
+    color: white;   
+}
+.bz-wp-querycases-pager ul li.hidden {
+    display:none;   
+}
+
+
+
+.bz-wp-querycases-pager select,
+.bz-wp-querycases-pager>.ui-bizagi-control 
+{
+	position:absolute;
+	top:15px;
+	left:295px;	
+	z-index:9;
+}
+
+.ui-bizagi-render-control .ui-selectmenu 
+{
+	min-width:40px
+}
+
+.bz-wp-querycases-pager>ul 
+{
+	margin-left:75px
+}

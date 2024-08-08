@@ -1,0 +1,331 @@
+@charset "UTF-8";
+html, body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    font-family: 'Open Sans',Geneva,Arial,sans-serif;
+    background: #fff;
+    overflow: hidden;
+}
+input.bz-md-textfield__input {
+    font-family: 'Open Sans',Geneva,Arial,sans-serif;
+}
+button.bz-md-button {
+    font-family: 'Open Sans',Geneva,Arial,sans-serif;
+    font-size: 11px;
+}
+button:focus {
+    outline: 0;
+}
+.reviewMode {
+    cursor: not-allowed;
+}
+.disabledEvents {
+    pointer-events: none;
+}
+.ui-autocomplete {
+    z-index: 9999999999999999999999999;
+}
+.h-truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+.h-height-100percent {
+    height: 100%;
+}
+.h-height-100percent--cal {
+    overflow: scroll;
+    height: calc(50%);
+}
+.h-height-block {
+    display: block;
+}
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+.h-scroll:hover {
+    overflow: auto;
+}
+.bz-adhoc-color-state-process-draft {
+    color: #3dadcf;
+}
+.bz-adhoc-color-state-process-pilot {
+    color: #f5a623;
+}
+.bz-adhoc-color-state-process-published {
+    color: #61a417;
+}
+.bz-adhoc-background-state-process-draft {
+    background-color: #3dadcf;
+}
+.bz-adhoc-background-state-process-pilot {
+    background-color: #f5a623;
+}
+.bz-adhoc-background-state-process-published {
+    background-color: #61a417;
+}
+.bz-adhoc-background-state-process-versioned {
+    background-color: #61a417;
+}
+.bz-adhoc-background-state-process-disabled {
+    background-color: #bcc3c9;
+}
+.bz-md-button {
+    background-color: #006c5f;
+    padding: 8px 15px 8px 15px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.14);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.14);
+    border-radius: 3px;
+}
+.bz-md-button:hover, .bz-md-button:focus {
+    background: #0d8c7d;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.bz-md-button--low-action {
+    background: #fff;
+    color: #808080;
+}
+.bz-md-button--low-action:hover {
+    background: #ccc;
+    color: #fff;
+}
+.bz-md-button--cancel {
+    background: #ccc;
+    color: #555;
+}
+.bz-md-button--cancel:hover, .bz-md-button--cancel:focus {
+    background: #ddd;
+    color: #777;
+}
+.bz-md-button[disabled] {
+    cursor: not-allowed;
+    color: #d2d2d2;
+    background: #fff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.bz-mdl-button--fab {
+    width: 50px;
+    height: 50px;
+    background: #006c5f;
+    border: 0 solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    font-size: 22px;
+}
+.bz-mdl-button--fab--mini {
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+}
+.bz-md-textfield__input {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 7px;
+    margin: 0;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    background-color: rgba(0,69,57,.05);
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    width: 100%;
+    color: #0f3d5c;
+}
+.bz-md-wrapper-message {
+    height: 25px;
+}
+.bz-md-message {
+    font-size: 11px;
+    font-weight: bold;
+}
+.bz-md-message--danger {
+    color: #f00;
+}
+.bz-md-dialog-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.bz-md-dialog {
+    width: 450px;
+    position: absolute;
+    border-radius: 5px;
+    overflow: hidden;
+    position: fixed;
+    left: calc(-175%);
+    top: 100px;
+    background: #808080;
+    -webkit-box-shadow: 0 -2px 25px 0 rgba(0,0,0,.15),0 13px 25px 0 rgba(0,0,0,.3);
+    box-shadow: 0 -2px 25px 0 rgba(0,0,0,.15),0 13px 25px 0 rgba(0,0,0,.3);
+    background-color: #fff;
+    padding-top: 21px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 12px;
+}
+.bz-md-dialog header {
+    font-family: 'Roboto',sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: rgba(0,0,0,.8);
+    line-height: 24px;
+    text-align: left;
+    letter-spacing: .03px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.bz-md-dialog__content {
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(0,0,0,.5);
+    line-height: 24px;
+    text-align: left;
+    letter-spacing: .03px;
+    padding: 0;
+}
+.bz-md-dialog__field-name {
+    font-size: 12px;
+    line-height: 17px;
+    color: #687785;
+}
+.bz-md-dialog__field-name .required {
+    color: #f00;
+}
+.bz-md-dialog footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+ui-tooltip-window {
+    position: absolute;
+    background-color: #fff;
+    -webkit-box-shadow: 0 2px 8px 0 rgba(0,0,0,.14),0 4px 4px 0 rgba(0,0,0,.12),0 8px 8px 0 rgba(0,0,0,.07);
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,.14),0 4px 4px 0 rgba(0,0,0,.12),0 8px 8px 0 rgba(0,0,0,.07);
+    padding: 7px 14px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: calc(50%);
+}
+ui-tooltip-window .tooltip-inner {
+    color: #4a4a4a;
+    font-size: 10px;
+    line-height: 14px;
+    word-break: break-all;
+}
+ui-tooltip-window.tooltip-top {
+    -webkit-transform: translateY(-12px);
+    -ms-transform: translateY(-12px);
+    transform: translateY(-12px);
+}
+ui-tooltip-window.tooltip-top::before {
+    top: 100%;
+    left: calc(44%);
+    border-color: #fff transparent transparent transparent;
+    margin-left: -12px;
+    border-width: 12px;
+}
+ui-tooltip-window::before {
+    content: " ";
+    position: absolute;
+    border-style: solid;
+}
+div.bizagi_editor_component_properties.ui-tabs {
+    position: absolute;
+}
+.ui-dialog div.ui-dialog-titlebar {
+    position: relative;
+    background: transparent;
+}
+.ui-dialog a.ui-dialog-titlebar-close {
+    top: 4px;
+}
+.bizagi_editor_xpathnavigator_overlay .bizagi_editor_component_xpathnavigator>div.xpathnavigator-node-container {
+    margin-top: 15px;
+}
+div.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front {
+    padding: 20px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+div.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front div.ui-dialog-titlebar.ui-widget-header span.ui-dialog-title {
+    font-size: 22px;
+}
+div.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front div.ui-dialog-titlebar.ui-widget-header a.ui-dialog-titlebar-close.ui-corner-all {
+    line-height: 32px;
+    top: 0;
+    text-decoration: none;
+}
+div.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front div#adhocdatasource-predefined-values-popup-wrapper {
+    padding-top: 10px;
+}
+div.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front div#adhocdatasource-predefined-values-popup-wrapper div.container-items {
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+div.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front div#adhocdatasource-predefined-values-popup-wrapper div.container-items ul.list-items li.item {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+div.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front div#adhocdatasource-predefined-values-popup-wrapper div.container-items ul.list-items li.item input {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    border-radius: 0;
+    height: 100%;
+}
+#canvas.disableEvents #bpm-toolbar {
+    display: none;
+}
+#canvas.disableEvents #bpm-drawing {
+    pointer-events: none;
+}
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+html.html_formDesigner {
+    font-size: 10px;
+}
+.html_formDesigner #bz-fm-buttoneditor-editor .ui-bizagi-button-container {
+    width: initial;
+}

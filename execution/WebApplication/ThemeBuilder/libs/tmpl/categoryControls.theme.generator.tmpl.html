@@ -1,0 +1,55 @@
+<!-- category -->
+{{if info}}
+    <div class="biz-info-theme biz-ui-hide">
+        <h2>${info.theme}</h2>
+        <p>${info.description}</p>
+        <cite>${info.version}</cite>
+    </div>
+{{/if}}
+
+{{each controls}}
+        <div class="biz-theme-category">
+            <h2 {{if !$value.category.subcategory && !$value.category.items }} class="biz-ui-up-category" {{/if}}>${$value.category.name}</h2>
+            {{if $value.category.subcategory}}
+                {{each $value.category.subcategory}}
+                    <h3 {{if $value.related}} data-related="${$value.related}"{{/if}}>
+                        <label>${$value.name}</label>
+                        <span class="biz-theme-arrow-button">
+                        <div class="biz-theme-arrow"></div>
+                        </span>
+                        <span class="biz-theme-options-shortcut">
+                            {{each $value.items}}
+                                <span data-key="${$value.key}">${$value.value}</span>
+                            {{/each}}
+                        </span>
+                    </h3>
+                    <div class="biz-theme-controls">
+                        {{each $value.items}}
+                            <div class="biz-theme-control">
+                                <label>${$value.label}</label>
+                                <input type="text" value="${$value.value}" data-key="${$value.key}" class="${$value.css}"/>
+                            </div>
+                        {{/each}}
+                    </div>
+                {{/each}}
+            {{/if}}
+            {{if $value.category.items}}
+                <div class="biz-theme-controls-items">
+                    {{each $value.category.items}}
+                        <div class="biz-theme-controls-item">
+                            <h3>
+                                <label>${$value.label}</label>
+                                <span class="biz-theme-options-shortcut">
+                                        <span data-key="${$value.key}">${$value.value}</span>
+                                </span>
+                            </h3>
+                            <div class="biz-theme-controls">
+                                <input type="text" value="${$value.value}" data-key="${$value.key}" class="${$value.css}"/>
+                            </div>
+                        </div>
+
+                    {{/each}}
+                </div>
+            {{/if}}
+        </div>
+{{/each}}

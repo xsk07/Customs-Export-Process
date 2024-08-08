@@ -1,0 +1,192 @@
+.gridheader .gridheadercells {
+	BORDER-RIGHT: #aabdd0 1px solid;
+	BORDER-LEFT: #ffffff 1px solid;
+	BORDER-BOTTOM: #abbed1 3px solid;
+	BORDER-TOP: white 0px solid; 
+	PADDING-RIGHT: 2px;
+	PADDING-LEFT: 2px; 
+	FONT-WEIGHT: bold;
+	VERTICAL-ALIGN: top;
+	COLOR: #336699;
+	font:10px Verdana, Arial, Helvetica, sans-serif;
+	HEIGHT: 15px;
+	BACKGROUND-COLOR: #cccccc;
+	background-image: none;
+}
+
+.gridrow0 {
+	BORDER-RIGHT: gray 0px solid;
+	PADDING: 10px; 
+	BORDER-TOP: white 0px solid; 
+	font:10px Verdana, Arial, Helvetica, sans-serif;
+	/*FONT-WEIGHT: bold; */
+	VERTICAL-ALIGN: middle;
+	BORDER-LEFT: white 0px solid;
+	COLOR: #666666;
+	BORDER-BOTTOM: #cccccc 0px solid;
+	WHITE-SPACE: nowrap; 
+	BACKGROUND-COLOR: #eeeeee;
+	background-image:url(../../img/graphicanalysis/fondarrow.jpg);
+	background-position: right;
+	background-repeat: repeat-y;
+}
+
+.gridrow0selected {
+	BORDER-RIGHT: #eeeeee 0px solid;
+	BORDER-TOP: white 0px solid;
+	BORDER-LEFT: #eeeeee 0px solid;
+	BORDER-BOTTOM: gray 0px solid;
+	PADDING: 10px;
+	FONT-WEIGHT: bold;
+	VERTICAL-ALIGN: middle;
+	COLOR: #666666;
+	font:10px Verdana, Arial, Helvetica, sans-serif;
+	WHITE-SPACE: nowrap;
+	BACKGROUND-COLOR: #cccccc;
+}
+
+.gridrow1 {
+	PADDING: 10px;
+	FONT-WEIGHT: bold;
+	font:10px Verdana, Arial, Helvetica, sans-serif;
+	VERTICAL-ALIGN: middle;
+	COLOR: #666666;
+	WHITE-SPACE: nowrap;
+	background-color:#ffffff;
+}
+
+.gridrow1selected {
+	BORDER-RIGHT: gray 0px solid;
+	BORDER-TOP: gray 0px solid;
+	BORDER-LEFT: gray 0px solid;
+	BORDER-BOTTOM: gray 0px solid;
+	PADDING: 10px;
+	FONT-WEIGHT: bold;
+	font:10px Verdana, Arial, Helvetica, sans-serif;
+	VERTICAL-ALIGN: middle;
+	COLOR: #666666;
+	WHITE-SPACE: nowrap;
+	BACKGROUND-COLOR: #999999;
+}
+
+.gridrow1selected {
+	BACKGROUND-COLOR: #cccccc;
+}
+
+.gridcell {
+	PADDING: 2px;
+	MARGIN: 0px;
+	BORDER: #666666 1px solid;
+}
+
+.gridcellselected {
+	PADDING: 2px;
+	MARGIN: 0px;
+}
+
+.gridcellselected {
+	BORDER: #666666 1px solid;
+}
+
+.gridtablebottom {
+	font:10px Verdana, Arial, Helvetica, sans-serif;
+	HEIGHT: 15px;
+	BACKGROUND-COLOR: #999999;
+	TEXT-ALIGN: center;
+	white-space:nowrap;
+}
+
+.tableWidget TD {
+	PADDING: 5px;
+	MARGIN: 0px;
+	white-space:nowrap;
+	BORDER: #666666 1px solid;
+}
+
+.tableWidget TBODY {
+	white-space:nowrap;
+}
+
+.tableWidget {
+	FONT: 12px Arial, Helvetica, sans-serif;
+	white-space:nowrap;
+	BORDER: #666666 1px solid;
+}
+
+DIV.widget_tableDiv {
+	BORDER: #cccccc 1px solid;
+	OVERFLOW-Y: auto;
+	WIDTH: 400px;
+	HEIGHT: 200px;
+}
+
+UNKNOWN {
+	OVERFLOW: hidden; WIDTH: 400px;
+}
+
+.tableWidget THEAD {
+	POSITION: relative;
+}
+
+.tableWidget THEAD TR {
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+	PADDING: 2px;
+	LEFT: auto;
+	VERTICAL-ALIGN: top;
+	COLOR: #336699;
+	TOP: 0px;
+	BACKGROUND-COLOR: #cecece;
+	background-image: url(../../img/graphicanalysis/HeaderTabla.jpg);
+	background-position: top;
+	background-repeat:repeat-x;
+	font-weight: bold;
+	border: 1px solid #000000;
+}
+
+.tableWidget TFOOT TR {
+	PADDING-RIGHT: 2px;
+	PADDING-LEFT: 2px;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 10px;
+	LEFT: auto;
+	VERTICAL-ALIGN: top;
+	COLOR: #336699;
+	FONT-FAMILY: Verdana;
+	HEIGHT: 15px;
+	BACKGROUND-COLOR: #fff;
+}
+
+.tableWidget TFOOT TD {
+	border-top: 2px solid #999999;
+	BORDER-RIGHT: #cccccc 1px dashed;
+	BORDER-BOTTOM: #cccccc 3px solid;
+}
+
+.tableWidget .scrollingContent {
+	WIDTH: 100%;
+}
+
+.gridtable {
+	BORDER-RIGHT: #afafaf 1px solid;
+	PADDING-RIGHT: 0px;
+	BORDER-TOP: #afafaf 1px solid;
+	OVERFLOW-Y: auto;
+	PADDING-LEFT: 0px;
+	FONT-WEIGHT: bold;
+	PADDING-BOTTOM: 0px;
+	BORDER-LEFT: #afafaf 1px solid;
+	WIDTH: 50px;
+	PADDING-TOP: 0px;
+	BORDER-BOTTOM: #afafaf 1px solid;
+	HEIGHT: 200px;
+}
+
+.groupedCell {
+	BORDER-RIGHT: #cccccc 1px solid;
+	BORDER-TOP: #ffffff 1px solid;
+	BORDER-LEFT: #ffffff 1px solid;
+	BORDER-BOTTOM: #cccccc 1px solid;
+	BACKGROUND-COLOR: #dddddd;
+	background-image: none;
+	FONT-WEIGHT: bold;
+}

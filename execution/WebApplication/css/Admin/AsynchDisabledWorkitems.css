@@ -1,0 +1,142 @@
+﻿
+.attention
+{
+	font: 12px Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	height: 24px;
+}
+.container
+{
+	top: 3%;
+	left: 3%;
+	bottom: 3%;
+	right: 3%;
+	position: relative;
+}
+.tGrouped
+{
+	width: 100%;
+}
+.tGrpHeader
+{
+	background-color: #dddddd;
+	text-align: center;
+	white-space: nowrap;
+	height: 32px;
+	vertical-align: middle;
+	background-repeat: no-repeat;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+.tGrpHeader td, .tGrpWFClass td
+{
+    border-bottom-color: #CCC;
+    border-left-color: #CCC;
+    border-right-color: #CCC;
+    border-top-color: #CCC;
+    border-color: #CCC;
+}
+.tGrpWFClass
+{
+	text-align: center;
+	white-space: nowrap;
+}
+.tGrpTask
+{
+	font-family: NeoSansStdRegular, sans-serif;
+	background-color: transparent;
+	text-align: center;
+	white-space: nowrap;
+	height: 20px;
+	display: none;
+}
+.iu-biz-asynch-retry-image:hover 
+{
+    background-image:url(../../img/Admin/notanothergearicon-blue.png);
+}
+.iu-biz-asynch-retry-image
+{   
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image:url(../../img/Admin/notanothergearicon-gray.png);
+}
+.ui-bizagi-async-retry-button, .ui-bizagi-async-log-button {
+    opacity: 0;
+    filter: alpha(opacity=0); /* For IE8 and earlier */
+}
+.iu-biz-asynch-log-image {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image:url(../../img/Admin/paperglass-gray.png);
+}
+.iu-biz-asynch-log-image:hover {
+    background-image:url(../../img/Admin/paperglass-blue.png);
+}
+#TabHTML {
+    font-size: small;
+}
+#lblHeader {
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.wpbuttoni {
+    font-weight: normal;
+    text-shadow: none;
+}
+.wpbuttoni:focus {
+    font-weight: normal;
+    text-shadow: none;
+}
+.ui-bizagi-asynch-grouped {
+    background-image: url(../../img/Admin/cross-gray.png);
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.ui-bizagi-asynch-grouped:hover 
+{
+    background-image: url(../../img/Admin/cross-blue.png);
+}
+#ui-bizagi-asynch-refresh-label {
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 7px;
+    height: 20px;
+    cursor: pointer;
+}
+#ui-bizagi-asynch-refresh-label:hover
+{
+    cursor: pointer;
+}
+.ui-bizagi-asynch-refresh {
+    display: inline-block;
+    vertical-align: middle;
+    height: 16px;
+    width: 16px;
+    background-image: url(../../img/Admin/refresh.png);
+    cursor: pointer;
+}
+.ui-bizagi-asynch-refresh:hover {
+    background-image: url(../../img/Admin/refresh_hover.png);
+}
+#tabs {
+    width: 100%;
+}
+.table-scroll{
+    overflow-x: auto;
+    margin-bottom: 8px;
+}
+.tGrpTask td, #tblGrouped{
+    border-bottom-color: #CCC;
+    border-left-color: #CCC;
+    border-right-color: #CCC;
+    border-top-color: #CCC;
+    border-color: #CCC;
+    border-style: solid;
+    border-collapse: collapse;
+}

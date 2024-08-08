@@ -1,0 +1,71 @@
+﻿<script id="ui-bizagi-webpart-searchfields" type="text/x-jquery-tmpl">
+   <div class="ui-bizagi-searchfields-style">
+    <table>
+            <tr>
+                <td>
+                Last Name:
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="textbox" class="filters" data-xpath="CAFRequest.AssetInfo.LastName" id="tbLastName" value="${lastName}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                First Name:
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="textbox" class="filters" data-xpath="CAFRequest.AssetInfo.FirstName" id="tbFirstName" value="${firstName}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                Abbreviation / NickName
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="textbox" class="filters" data-xpath="CAFRequest.AssetInfo.NickName" id="tbNickName" value="${nickName}">
+                </td>
+            </tr>            
+            <tr>
+                <td>
+                Asset Type:
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select class="filters" data-xpath="CAFRequest.AssetInfo.AssetType.AssetTypeCode" id="cbAssetType" value="${assetType}" data-operation="EQUALS">
+                        <option value="">-----------</option>
+                        <option value="2239">Athlete</option>
+                        <option value="56517">Team</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                Sports Category:
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select class="filters" data-xpath="CAFRequest.AssetInfo.SportsCategory.SportsCategoryID" id="cbSportsCategory" value="${sportsCategory}" data-operation="EQUALS">
+                        <option value="">-----------</option>
+                        <option value="2199">Football/Soccer</option>
+                        <option value="2180">American Football</option>
+                    </select>
+                </td>
+            </tr>
+            <tr><td>&nbsp;</td></tr>
+            <tr>
+                <td><input type="button" id="ApplyFiltersButton" Value="Search" data-outputxpath="${outputxpath}" data-filter="${filter}" class="ui-bizagi-button ui-button-text ui-button ui-widget ui-state-default ui-corner-all"></td>
+                </tr>
+            <tr>
+                <td><input type="button" id="ClearFiltersButton" Value="Clear Search Filters" data-outputxpath="${outputxpath}" data-filter="${filter}" class="ui-bizagi-button ui-button-text ui-button ui-widget ui-state-default ui-corner-all"></td>
+            </tr>
+        </table>
+   </div>
+</script>

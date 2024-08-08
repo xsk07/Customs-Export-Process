@@ -1,0 +1,8 @@
+﻿{
+	"name": "searchfields",
+	"js": [ {"src": "bizagi.webparts.searchfields.js"}],
+	"css": [ {"src": "bizagi.webpart.searchfields.css"}],
+	"tmpl": [ 
+		{alias: "searchfields",  "src": "searchfields.tmpl.html#ui-bizagi-webpart-searchfields"} 
+	]
+}

@@ -1,0 +1,9 @@
+{
+	"name": "activitySelector",
+	"js": [ {"src": "bizagi.webparts.activitySelector.js"}],
+	"css": [ {"src": "bizagi.webpart.activitySelector.css"} ],
+	"tmpl": [
+		{alias: "activitySelector",  "src": "activitySelector.tmpl.html#ui-bizagi-webpart-activity-selector"},
+		{alias: "title-activity-selector",  "src": "activitySelector.tmpl.html#ui-bizagi-webpart-title-activity-selector"} 
+	]
+}

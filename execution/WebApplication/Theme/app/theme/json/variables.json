@@ -1,0 +1,127 @@
+{
+    "info": {
+        "title": "Theme Common Variables",
+        "version": "1.0",
+        "author": "UX TEAM at Bizagi",
+        "description": "This theme is an example of what you can customize with the Theme Builder"
+    },
+    "less": [
+        {
+            "name": ""
+        },
+        {
+            "name": "ADVANCED THEMES",
+            "id": "onecolor",
+            "items": [
+                {
+                    "name": "Base Color",
+                    "key": "@one-color-palette",
+                    "value": "#546A75"
+                }
+            ]
+        },
+        {
+            "name": "COMMON ELEMENTS",
+            "id":  "commonElements",
+            "items": [
+                {
+                    "name": "Header",
+                    "key": "@header",
+                    "lessFunction": "@one-color-palette",
+                    "lessFunctionParam": {
+                        "type": "equals"
+                    },
+                    "value": "#FFF"
+                },
+                {
+                    "name": "Background",
+                    "key": "@background",
+                    "lessFunction": "screen",
+                    "lessFunctionParam": {
+                        "type": "mix",
+                        "value": {
+                            "r": 230,
+                            "g": 230,
+                            "b": 230
+                        }
+                    },
+                    "value": "#f1fafa"
+                },
+                {
+                    "name": "Tabs",
+                    "key": "@tabs",
+                    "lessFunction": "lighten",
+                    "lessFunctionParam": {
+                        "type": "int",
+                        "value": 15
+                    },
+                    "value": "#f1fafa"
+                },
+                {
+                    "name": "Text",
+                    "key": "@text",
+                    "lessFunction": "contrast",
+                    "lessFunctionParam": {
+                        "type": "contrast",
+                        "element": "@background",
+                        "param1": {
+                            "lessFunc": "darken",
+                            "value" : 50
+                        },
+                        "param2": {
+                            "lessFunc": "darken",
+                            "value" : 30
+                        }
+                    },
+                    "value": "#010c0b"
+                },
+                {
+                    "name": "Title",
+                    "key": "@title",
+                    "lessFunction": "contrast",
+                    "lessFunctionParam": {
+                        "type": "contrast",
+                        "element": "@header",
+                        "param1": {
+                            "lessFunc": "darken",
+                            "value" : 50
+                        },
+                        "param2": {
+                            "lessFunc": "lighten",
+                            "value" : 70
+                        }
+                    },
+                    "value": "#031514"
+                },
+                {
+                    "name": "Cases Buttons",
+                    "key": "@cases-buttons",
+                    "lessFunction": "lighten",
+                    "lessFunctionParam": {
+                        "type": "int",
+                        "value": 10
+                    },
+                    "value": "#FFF"
+                },
+                {
+                    "name": "Cases Buttons Text",
+                    "key": "@cases-buttons-text",
+                    "lessFunction": "contrast",
+                    "lessFunctionParam": {
+                        "type": "contrast",
+                        "element": "@cases-buttons",
+                        "param1": {
+                            "lessFunc": "darken",
+                            "value" : 50
+                        },
+                        "param2": {
+                            "lessFunc": "lighten",
+                            "value" : 50
+                        }
+                    },
+                    "value": "#FFF"
+                }
+            ]
+        }
+    ]
+  }

@@ -1,0 +1,128 @@
+UNKNOWN
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    FONT-FAMILY: arial
+}
+.text
+{
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT: 2px;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    PADDING-BOTTOM: 2px;
+    PADDING-TOP: 2px;
+    FONT-FAMILY: arial
+}
+#popupcalendar
+{
+    LEFT: 0px;
+    VISIBILITY: hidden;
+    WIDTH: 185px;
+    POSITION: absolute;
+    TOP: 0px;
+    HEIGHT: 130px;
+    BACKGROUND-COLOR: white
+}
+A.cal-DayLink
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8pt;
+    COLOR: black;
+    FONT-FAMILY: Verdana,  Arial, sans-serif;
+    BACKGROUND-COLOR: transparent;
+    TEXT-DECORATION: none
+}
+A.cal-DayLink:hover
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 8pt;
+    COLOR: blue;
+    FONT-FAMILY: Verdana, Arial, sans-serif;
+    BACKGROUND-COLOR: transparent;
+    TEXT-DECORATION: none
+}
+A.cal-DayLink:active
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8pt;
+    COLOR: #0066ff;
+    FONT-FAMILY: Verdana,  Arial, sans-serif;
+    BACKGROUND-COLOR: transparent;
+    TEXT-DECORATION: none
+}
+.cal-TextBox
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8pt;
+    COLOR: black;
+    FONT-FAMILY: Verdana,  Arial, sans-serif;
+    BACKGROUND-COLOR: white;
+}
+A.cal-TodayLink
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 8pt;
+    COLOR: red;
+    FONT-FAMILY: Verdana, Arial, sans-serif;
+    BACKGROUND-COLOR: transparent;
+    TEXT-DECORATION: none
+}
+A.cal-TodayLink:hover
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 8pt;
+    COLOR: blue;
+    FONT-FAMILY: Verdana, Arial, sans-serif;
+    BACKGROUND-COLOR: transparent;
+    TEXT-DECORATION: none
+}
+A.cal-TodayLink:active
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 8pt;
+    COLOR: #0066ff;
+    FONT-FAMILY: Verdana,  Arial, sans-serif;
+    BACKGROUND-COLOR: transparent;
+    TEXT-DECORATION: none
+}
+.cal-GreyDate
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8pt;
+    COLOR: lightgoldenrodyellow;
+    FONT-FAMILY: Verdana,  Arial, sans-serif;
+    BACKGROUND-COLOR: #860A1B; 
+    TEXT-DECORATION: none
+}
+.cal-GreyInvalidDate
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8pt;
+    COLOR: red;
+    FONT-FAMILY: Verdana, Arial, sans-serif;
+    BACKGROUND-COLOR: #860A1B; 
+    TEXT-DECORATION: line-through
+}
+.cal-DayCell
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8pt;
+    FONT-FAMILY: Verdana, Arial, sans-serif;
+    BACKGROUND-COLOR: white
+}
+.cal-HeadCell
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 8pt;
+    FONT-FAMILY: Verdana, Arial, sans-serif;
+    BACKGROUND-COLOR: #FFCC00; 
+}
+.cal-Table
+{
+    BORDER-LEFT-COLOR: #860A1B; 
+    BORDER-BOTTOM-COLOR: #860A1B;
+    BORDER-TOP-COLOR: #860A1B;
+    BACKGROUND-COLOR: black;
+    BORDER-RIGHT-COLOR: #860A1B;
+}

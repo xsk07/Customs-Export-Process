@@ -1,0 +1,1083 @@
+/* CSS Document */
+/*///////////////////////RESET STYLES///////////////////////////*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    padding: 0;
+    border: 0;
+    color:#666666;
+    outline: 0;
+    /*vertical-align: baseline;*/
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+body {
+    overflow-y: scroll;
+    margin: 0;
+    background-color: #EAEFF5;
+    height: 100%;
+}
+
+
+#loginForm {
+    width: 100%;
+    height: 100%;
+}
+
+#loginForm * {
+    color:#f2f2f2;
+    font-size: 9pt;
+    font-family: "OriyaSangamMN","Thonburi","Roboto" "Droid Sans", Geneva, Arial,sans-serif;
+    outline: 0;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+    text-decoration:none;
+}
+
+/*//////////////////////////END RESET STYLES/////////////////////////*/
+
+
+/*----------------------Overall Styles---------------------------*/
+
+h1{color:#1A2A44;font-size:26px;}
+h2{color:#295A85;font-size:21px;}
+h3{color:#3A3A3A;font-size:16px;}
+h4{color:#1A2A44;font-size:12pt;}
+h5{font-size:12pt;}
+
+#header, #footer{width:540px;margin:0 auto;}
+#header{margin-bottom:0;}
+#footer{margin:0 auto; text-align:left}
+
+#logo{background: url(../img/login/logobizagi-1-5x.png) 0 0 no-repeat;
+width: 375px;
+height: 150px;
+margin: -20px 0 -41px 89px;}
+#loginForm
+{background:url('../img/login/dots_header.png'), -webkit-radial-gradient(center, ellipse cover, #384d63 0%,#1b2937 99%);
+background:url('../img/login/dots_header.png'), -moz-radial-gradient(center, ellipse cover, #384d63 0%, #1b2937 100%);
+background:url('../img/login/dots_header.png'), -ms-radial-gradient(center, ellipse cover, #384d63 0%,#1b2937 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#384d63', endColorstr='#1b2937',GradientType=1 );}
+
+#contentWrap {
+    width:100%;
+    margin:0 auto;
+    padding-top: 150px;
+}
+
+#loginBox {
+    width:540px;
+    margin:0 auto;
+    position:relative;
+}
+
+#loginBox .icon {
+position:absolute;
+left:46px;
+top:68px;
+/*border-right:1px solid #ccc;*/
+padding:0 22px 63px 0;
+}
+#loginBox .top{
+	height:10px;
+}
+#loginBox .content{
+	width:400px;
+	padding:10px 20px 10px 160px;
+	position:relative;
+	margin-left:46px;
+}
+.formItem input[type=text],.formItem input[type=password],.formItem textarea{
+	width:180px;
+}
+.formItem select{
+    background: #2A343F;
+    border:1px solid #232b35;
+    border-radius: 6px;
+    border-bottom: 1px solid #3C546C !important;
+    box-shadow:inset 0px 0px 10px 5px #232B35;
+    color: #7B8693;    
+    padding: 5px 0 5px 10px;
+    /*text-shadow: 0 2px #29333F;*/
+    width:223px !important;
+}
+.info2 .formItem input[type=text], .info2 .formItem input[type=password]{
+	width:170px;
+}
+.info2 .formItem select{
+	width:190px !important;
+}
+.wide .formItem input[type=text], .wide .formItem input[type=password]{
+	width:160px;
+}
+.wide .formItem select{
+	width:166px;
+}
+#loginBox .content fieldset{
+	display:block;
+	border-left:1px solid #ccc;
+	margin:-5px 0 0 -34px;
+	padding-left:32px;
+}
+#loginBox .content fieldset.info{
+	width:305px;
+    border-left: 1px solid #ccc;
+    margin: 5px 5px 5px -34px;
+    padding-left: 32px;
+}
+#loginBox .content fieldset.info2{
+	width:305px;
+	margin-left:0px;
+	border-left: 1px solid #ccc;
+    margin: 5px 5px 5px -34px;
+    padding-left: 32px;
+}
+#loginBox .content fieldset.info2 label{
+	width:185px;
+}
+#loginBox .content fieldset.wide label{
+	width:90px;
+}
+.info .fieldsetboxtop{height:6px}
+.info .fieldsetboxcontent{padding:15px 15px 5px 0;}
+.info .fieldsetboxbottom{height:6px;}
+
+.info2 .fieldsetboxtop{height:6px}
+.info2 .fieldsetboxcontent{padding:15px 15px 5px 15px;}
+.info2 .fieldsetboxbottom{height:6px;}
+
+
+#loginBox .content .formItem label{
+	margin-right:10px;
+	width:70px;
+	display:inline-block;
+	text-align:right;
+	vertical-align:top;
+	margin-left:-20px;
+}
+
+#loginBox .content .info2 .formItem label{
+	width:205px;
+	display:inline-block;
+	text-align:right;
+	vertical-align:top;
+}
+
+#loginBox .content .formItem{
+	margin-bottom:5px;
+}
+
+#loginBox .content .info2 .formItem{
+	margin-bottom: 5px;
+    margin-left: 52px;
+    padding: 2px 0px 0px 0;
+}
+
+#loginBox .content .button{
+	margin:-12px 0px 0px 133px;
+	overflow:hidden;
+	padding-top:10px;
+	min-height:40px;
+}
+#loginBox .info2 .button{
+	overflow:hidden;
+}
+#loginBox .content .button .login{
+	float:left;	
+	margin-top:5px;
+}
+#loginBox .content .button span, #loginBox .content .button a{
+	display:inline-block;
+}
+#loginBox .content .button a{
+	/*background:url(../img/login/loginBtnLeft.png) 0 0 no-repeat;*/
+	padding:0px 0px 0px 0px;
+	height:35px;
+}
+#loginBox .content .button a:hover{
+	background-position:0 -30px;
+}
+#loginBox .content .button a:hover input{
+	background-position:100% -30px;
+	color:#f5f5f5;
+}
+#loginBox .content .button .login input{
+	background:-webkit-gradient(linear, left top, left bottom, from(#155376), to(#103D56));
+	background:-moz-linear-gradient(top, #155376 0%, #103d56 100%);
+	background:-ms-linear-gradient(top, #155376 0%,#103d56 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#155376', endColorstr='#103d56',GradientType=0 );
+	border: 1px solid #2b323b;
+	padding:0px 12px 3px 12px;
+	padding-bottom:0px;
+	height:35px;
+	line-height:25px;
+	color:#f5f5f5;
+	cursor:pointer;
+	font-family:NeoSansStdRegular,"Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    margin: 0;
+    box-shadow:inset 0 1px 0 0 #2b6181;
+    text-shadow:0 2px #0B293B;
+    width:152px;
+    border-radius:6px;
+}
+#loginBox .content .button .login input[name="btnChangePassword"]
+{
+    margin-top:5px;
+}
+
+#loginBox .content .button .locks{
+	float:right;
+	margin:12px 5px 0 0;
+		
+}
+
+#loginBox .content .button .locks input
+{
+    /*background:-webkit-linear-gradient(top, #29313b 0%,#171e24 100%);*/
+    padding:7px 6px 6px 6px;
+    border-radius:6px;
+    height:20px;
+    width:20px;
+    background:transparent;
+    /*box-shadow:0 2px 0 0 #374c65, inset 1px 2px -1px 1px #353F4B;*/
+}
+
+#loginBox .content .radiologin{display:block;}
+
+#loginBox .content .radiologin input
+{
+    background:none;
+}
+
+#loginBox .bottom{
+	
+	height:10px;
+}
+
+
+.adminLogin{background:none; padding-right:6px; display:inline-block; height:20px;line-height:20px; cursor:pointer;margin-left:210px;margin-top:-15px;}
+.adminLogin:hover{background-position:100% -25px;}
+.adminLogin:hover a{background:rgba(36,45,55,0.3);color:#9fa4a8;}
+.adminLogin a{background:rgba(36,45,55,0.2); padding:5px 10px 5px 10px; display:inline-block; height:20px;line-height:20px;color:#6a6f75;border-radius:6px;}
+
+.backbutton{
+	position:absolute;
+	top:27px;
+	right:30px;
+}
+
+.divline{
+	background:url(../img/login/divline.png) no-repeat;
+	height:2px;
+	width:100%;
+	margin: 20px 0px 10px;
+}
+.errorMessage{
+	width:305px;
+}
+.errorMessage span{
+	padding:5px 10px 5px 30px;
+    /* background:url(../img/login/close.png) 8px 6px no-repeat; */
+	background-color:#420C0E;
+	display:block;
+	margin:10px 0px;
+	border-radius:6px;
+}
+
+
+a{text-decoration:none;outline:none;color:#0060AF}
+a:hover{text-decoration:none;outline:none;color:#B80028}
+
+.loading{Z-INDEX: 99; WIDTH: 100%; HEIGHT: 100%; position:relative;}
+.loading table{sbackground-color:#EAEFF5;}
+
+.login-title {visibility:hidden;color:#1A2A44;font-size:26px;margin:15px 0px;display:block;}
+
+#lblUsername1, #lblPassword1, #lblDomain1
+    {
+        color: #FFF;
+        font-size:14px;
+        text-shadow:0 2px black;
+    }
+
+/*----------------------WP Styles---------------------------*/
+
+/* GENERAL LAYOUTS MEDIA-QUERY
+=========================================================*/
+@media only screen and (min-width: 10280px)
+{
+    #logo{
+        background: url(../img/login/logobizagi.png) 14px 7px no-repeat, hsl(0,0%,100%);
+        height: 56px;
+        -webkit-border-radius: 8px;
+        -webkit-box-shadow: 1px 1px 30px #CCC;
+    }
+    
+    #loginForm { background: none; }
+	
+	/* App wrapper */
+    #contentWrap
+    {
+        margin: 0 auto;
+        width: 1024px;
+        height: 728px;
+        border: 80px solid hsl(0,0%,5%);
+        border-radius: 40px;
+        -webkit-box-shadow: 0 0 60px #000;
+        
+        /* Override defaults */
+        background: -webkit-gradient(
+        linear,
+        left top,
+        right bottom,
+        color-stop(0.1, #0F3855),
+        color-stop(0.2, #114773),
+        color-stop(0.3, #0F406B),
+        color-stop(0.4, #0F3855),
+        color-stop(0.6, #2C5673),
+        color-stop(0.8, #2A5C8D),
+        color-stop(1, #0F3855));
+    }
+
+    #loginBox
+    {
+        
+    }
+    
+    #loginBox .content
+    {
+        background: none;
+        padding: 0;
+    }
+    
+    fieldset.info .fieldsetboxtop, fieldset.info .fieldsetboxbottom, #footer{ display: none; }
+
+    fieldset.info .fieldsetboxcontent
+    {
+        background: none;
+        background: hsla(0,0%,50%,.2);
+        padding: 40px;
+        -webkit-border-radius: 8px;
+    }
+    
+    #lblUsername1, #lblPassword1, #lblDomain1
+    {
+        color: #FFF;
+        font-size:14px;
+        text-shadow:0 2px black;
+    }
+        
+    #loginBox .content fieldset.info
+    {
+        width: 600px;
+    }
+
+    #loginBox .icon{ left: 440px; top: 45px;}
+
+    #loginBox .content .button{border-top: none;}
+
+    #loginBox .content .button .WPButton, #loginBox .content .button .login input{ background: none; }
+
+    #loginBox .content .button .login input
+    {
+        -webkit-appearance: none;
+        -webkit-border-radius: 4px;
+        padding: 0px 50px 0px 50px;
+        font-size: 16px;
+        font-weight: bold;
+        background: -webkit-gradient(linear, left top, left bottom, from(hsl(200, 50%, 50%)), to(hsl(200, 50%, 20%)));
+        color: #FFF;
+    }
+
+  
+    #loginBox .top, #loginBox .bottom, span.radiologin, #lnkChangePassword, #lnkForgotPassword, #lnkLockedAccount, #lblTitle, #lblMessages { display: none !important; background: none; }
+}
+
+#loginForm #lblMessages
+{
+    border-left: 1px solid #ccc;
+    margin: 5px 5px -5px -34px;
+    padding-left: 32px;
+}
+
+#loginForm #lblMessage
+{
+    color:#FFF;
+    text-shadow:0 2px #1f262e;
+    font-size:14px;   
+}
+
+#loginForm #lblMessages b
+{
+    color:#FFF;
+    text-shadow:0 2px #1f262e;
+}
+
+/* iPAD LANDSCAPE MEDIA-QUERY
+=========================================================*/
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)
+{
+    .iPad #logo{
+        background: url(../img/login/logobizagi.png) 14px 7px no-repeat, hsl(0,0%,100%);
+        height: 56px;
+        -webkit-border-radius: 8px;
+        -webkit-box-shadow: 1px 1px 30px #CCC;
+    }
+    
+    .iPad #loginForm { background: none; }
+	
+	/* App wrapper */
+    .iPad #contentWrap
+    {
+        margin: 0 auto;
+        width: 1024px;
+        height: 718px;
+        
+        /* Override defaults */
+        background: -webkit-radial-gradient(center, ellipse cover, #374c63 0%,#1b2937 100%);
+    }
+
+    .iPad #loginBox
+    {
+        
+    }
+    
+    .iPad #loginBox .content
+    {
+        background: none;
+        padding: 0;
+    }
+    
+    .iPad fieldset.info .fieldsetboxtop, .iPad fieldset.info .fieldsetboxbottom, .iPad #footer{ display: none; }
+
+    .iPad fieldset.info .fieldsetboxcontent
+    {
+        background: none;
+        /*background: hsla(0,0%,50%,.2);*/
+        padding: 40px;
+        -webkit-border-radius: 8px;
+    }
+    
+    .iPad #lblUsername1, .iPad #lblPassword1, .iPad #lblDomain1
+    {
+        color: #FFF;
+        text-shadow: 0 1px black;
+        font-size:13px;
+    }
+        
+    .iPad #loginBox .content fieldset.info
+    {
+        width: 600px;
+    }
+
+    .iPad #loginBox .icon{ left: 440px; top: 45px; visibility:hidden;}
+
+    .iPad #loginBox .content .button{border-top: none;}
+
+    .iPad #loginBox .content .button .WPButton, .iPad #loginBox .content .button .login input{ background: none; }
+
+    .iPad #loginBox .content .button .login input
+    {
+        -webkit-appearance: none;
+        -webkit-border-radius: 4px;
+        padding: 0px 50px 0px 50px;
+        font-size: 16px;
+        font-weight: bold;
+        background: -webkit-gradient(linear, left top, left bottom, from(hsl(200, 50%, 50%)), to(hsl(200, 50%, 20%)));
+        color: #FFF;
+    }
+
+    .iPad #loginBox .top, .iPad #loginBox .bottom, .iPad span.radiologin, .iPad #lnkChangePassword, .iPad #lnkForgotPassword, .iPad #lnkLockedAccount, .iPad #lblTitle, .iPad #lblMessages { display: none !important; background: none; }
+}
+
+
+/* iPad PORTRAIT MEDIA-QUERY
+=========================================================*/
+@media only screen and (min-device-width: 481px) and (max-device-width: 768px) and (orientation:portrait)
+{
+	#logo{
+        background: url(../img/login/logobizagi.png) 14px 7px no-repeat, hsl(0,0%,100%);
+        height: 56px;
+        -webkit-border-radius: 8px;
+        -webkit-box-shadow: 1px 1px 30px #CCC;
+    }
+    
+    #loginForm { background: none; }
+	
+	/* App wrapper */
+    #contentWrap
+    {
+        margin: 0 auto;
+        width: 768px;
+        height: 1024px;
+        
+        /* Override defaults */
+        background: -webkit-radial-gradient(center, ellipse cover, #374c63 0%,#1b2937 100%);
+    }
+
+    #loginBox
+    {
+        
+    }
+    
+    #loginBox .content
+    {
+        background: none;
+        padding: 0;
+    }
+    
+    fieldset.info .fieldsetboxtop, fieldset.info .fieldsetboxbottom, #footer{ display: none; }
+
+    fieldset.info .fieldsetboxcontent
+    {
+        background: none;
+        background: hsla(0,0%,50%,.2);
+        padding: 40px;
+        -webkit-border-radius: 8px;
+    }
+    
+    #lblUsername1, #lblPassword1, #lblDomain1
+    {
+        color: #FFF;
+    }
+        
+    #loginBox .content fieldset.info
+    {
+        width: 600px;
+    }
+
+    #loginBox .icon{ left: 440px; top: 45px;}
+
+    #loginBox .content .button{border-top: none;}
+
+    #loginBox .content .button .WPButton, #loginBox .content .button .login input{ background: none; }
+
+    #loginBox .content .button .login input
+    {
+        -webkit-appearance: none;
+        -webkit-border-radius: 4px;
+        padding: 0px 50px 0px 50px;
+        font-size: 16px;
+        font-weight: bold;
+        background: -webkit-gradient(linear, left top, left bottom, from(hsl(200, 50%, 50%)), to(hsl(200, 50%, 20%)));
+        color: #FFF;
+    }
+
+    #loginBox .top, #loginBox .bottom, span.radiologin, #lnkChangePassword, #lnkForgotPassword, #lnkLockedAccount, #lblTitle, #lblMessages { display: none !important; background: none; }
+}
+
+.formItem input[type=text], .formItem input[type=password], .formItem textarea {
+    width: 70%;
+    background: #2a343f;
+    border-bottom: 1px solid #3c546c;
+    border-radius: 6px;
+    border-top: 1px solid #232B25;
+    border-right: none;
+    border-left: none;
+    padding: 10px 10px 10px 10px;
+    box-shadow: inset 0px 0px 10px 5px #232B35;
+    color:#f2f2f2;
+}
+
+
+/* Smartphones LANDSCAPE MEDIA-QUERY
+=========================================================*/
+@media only screen and (max-device-width: 481px) and (orientation:landscape)
+{
+    
+        html,body
+    {
+        -webkit-text-size-adjust: none;
+        font-family: "OriyaSangamMN","Thonburi","Roboto" "Droid Sans", Geneva, Arial,sans-serif;
+        font-size: 100%;
+        margin: 0px;
+        line-height: 100%;
+    }
+    
+    
+   #contentWrap
+    {    
+        /* Override defaults */
+        background: url(../img/login/loginnoise.png),-webkit-linear-gradient(left, #293A59 0%,#354B6E 50%,#293A59 100%);
+        position: absolute;
+		width: 100%;
+		height: 100%;
+		padding-top: 10px;
+    }
+
+     #loginForm { background: none; }
+
+     span.radiologin,
+     #footer,
+     .locks,
+     #loginBox .top,
+     #loginBox .bottom,
+     #lblTitle,
+     .info .fieldsetboxtop,
+     .info .fieldsetboxbottom,
+     .content > .icon
+     { display: none !important; }
+      
+    #lblUsername1, 
+    #lblPassword1, 
+    #lblDomain1,
+    #lblMessage,
+    #lblMessage b
+    {
+        color: #979EA8;
+        text-shadow:#1A2026 0 1px 0;
+    }
+    
+    #loginBox {
+		width: 100%;
+		margin: 0 auto;
+		position: relative;
+	}
+	
+	#loginBox .content 
+	{
+
+    background: none;
+    position: absolute;
+    border: none;
+    left: 50%;
+    width: 300px;
+    margin-top: 0px;
+    margin-left: -160px;
+    padding: 0px 5px 5px 5px;
+	}
+	
+#loginBox .content .button a 
+	{
+	 min-width: 150px;   
+	-webkit-appearance: none;
+    font-size: 100%;
+    border-radius: 6px;
+    background-image: url('../jquery/common/base/css/smartphone/images/noise.png'), -webkit-gradient(linear, left top, left bottom, from(#2B5C7A), to(#1F445A));
+    box-shadow: inset 0px 1px 1px #46708C, 0px 1px 1px #37424D;
+    margin: -1px 17px 13px 0px;
+    border: 1px solid #252A31;
+    padding: 0 10px 30px 6px;
+    color: white;
+    width: 100%;
+    left: 80px;
+    position: relative;
+    height:50%;
+	}
+	
+	#loginBox .content .button .login input 
+	{
+	-webkit-appearance: none;
+    font-size: 100%;
+    color: white;
+    width: 100%;
+    background:transparent;
+    padding: 2px 10px 3px 10px;
+	}
+	
+	#header, #footer {
+	width: 150px;
+	margin: 0 auto;
+	position: relative;
+	}
+	
+	#logo
+	{
+		height: 60px;
+		background: url(../jquery/common/base/css/smartphone/images/bizagi-mobile-sprite-s.png) 14px 10px no-repeat;
+		background-position:-287px 8px;
+		box-shadow:none;
+	}
+	
+	#lblMessages{
+	left: 15px;
+	position: relative;
+	width: 90%;
+	}
+	
+	fieldset.info .fieldsetboxcontent {
+	background: rgba(128, 128, 128, .0);
+	padding: 10px 0 0 0;
+	}
+	
+	#loginBox .content fieldset.info {
+	padding: 1px;
+	margin: 1px;
+	width: 100%;	
+	}
+	
+	#loginBox .content .button
+	{
+	 border:none;
+	}
+	
+	
+
+	
+	#loginBox .content .button {
+	margin: 7px 0px 0px 0px;
+	overflow: hidden;
+	padding: 0px 0 10px 0;
+	}
+	
+    .formItem input[type="text"]
+	{
+	width: 180px;
+    background-color: #2B3541;
+    border-radius: 6px;
+    padding: 10px 10px 10px 10px;
+    border:none;
+    border-bottom:1px solid #3f5671;
+    border-top:1px solid #1a2026;
+	}
+	
+	.formItem input[type="text"], .formItem input[type="password"], .formItem textarea 
+	{
+    width: 180px;
+    background-color: #2B3541;
+    border-radius: 6px;
+    padding: 10px 10px 10px 10px;
+    border:none;
+    border-bottom:1px solid #3f5671;
+    border-top:1px solid #1a2026;
+    color:White;
+    }
+
+	
+}
+
+
+
+
+
+
+	/* Smartphones PORTRAIT MEDIA-QUERY
+=========================================================*/
+@media only screen and (max-device-width: 481px) and (orientation:portrait)
+{
+    
+    html,body
+    {
+        -webkit-text-size-adjust: none;
+        font-family: "OriyaSangamMN","Thonburi","Roboto" "Droid Sans", Geneva, Arial,sans-serif;
+        font-size: 100%;
+        margin: 0px;
+        line-height: 100%;
+    }
+    
+	   #contentWrap
+    {
+
+        
+        background: url(../img/login/loginnoise.png),-webkit-linear-gradient(left, #192937 0%,#394e65 50%,#192937 100%);
+        position: absolute;
+		width: 100%;
+		height: 100%;
+		padding-top: 10px;
+    }
+    
+     #loginForm { background: none; }
+
+     span.radiologin,
+     #footer,
+     .locks,
+     #loginBox .top,
+     #loginBox .bottom,
+     #lblTitle,
+     .info .fieldsetboxtop,
+     .info .fieldsetboxbottom,
+     .content > .icon
+     { display: none !important; }
+      
+    #lblUsername1, 
+    #lblPassword1, 
+    #lblDomain1,
+    #lblMessage,
+    #lblMessage b
+    {
+        color: #979EA8;
+        text-shadow:#1a2026 0 1px 0;
+        
+        
+    }
+    
+    #lblUsername1, 
+    #lblPassword1
+    {
+       position:relative;
+       top:10px;
+    }
+    
+    #loginBox {
+		width: 100%;
+		margin: 0 auto;
+		position: relative;
+	}
+	
+	#loginBox .content 
+	{
+	
+    background: none;
+    position: relative;
+    width: 99%;
+    padding: 5px 0 0 0;
+	}
+	
+	
+
+	
+	#loginBox .content .button
+	{
+	 border:none;
+	}
+	
+	
+	#loginBox .content .button a 
+	{
+	-webkit-appearance: none;
+    font-size: 100%;
+    border-radius: 6px;
+    background-image: url('../jquery/common/base/css/smartphone/images/noise.png'), -webkit-gradient(linear, left top, left bottom, from(#2B5C7A), to(#1F445A));
+    box-shadow: inset 0px 1px 1px #46708C, 0px 1px 1px #37424D;
+    margin: -1px 17px 13px 0px;
+    border: 1px solid #252A31;
+    padding: 0 10px 30px 6px;
+    color: white;
+    width: 100%;
+    left: 40px;
+    position: relative;
+    height: 50%;
+    min-width: 150px;
+	}
+	
+	#loginBox .content .button .login {
+        float: left;
+        margin-top: 6px;
+        left: 40px;
+        position: relative;
+        margin: 0 auto;
+    }
+	
+	#loginBox .content .button .login input 
+	{
+	-webkit-appearance: none;
+    font-size: 100%;
+    color: white;
+    width: 100%;
+    background:transparent;
+	}
+	
+
+	
+	#header, #footer {
+	width: 150px;
+	margin: 0 auto;
+	position: relative;
+	}
+	
+	#logo
+	{
+		height: 60px;
+		background: url(../jquery/common/base/css/smartphone/images/bizagi-mobile-sprite-s.png) 14px 10px no-repeat;
+		background-position:-287px 8px;
+		box-shadow:none;
+	}
+	
+	
+	#lblMessages{
+	left: 15px;
+	position: relative;
+	width: 90%;
+	}	
+	
+	fieldset.info .fieldsetboxcontent {
+	background: rgba(128, 128, 128, .0);
+	padding: 10px 0 0 0;
+	}
+	
+	#loginBox .content fieldset.info {
+	padding: 1px;
+	margin: 1px;
+	width: 100%;	
+	}
+	
+	
+	
+	#loginBox .content .button {
+	margin: 15px 0px 0px 0px;
+	overflow: hidden;
+	padding: 3px 0 10px 0;
+	}
+	
+      .formItem input[type="text"]
+	{
+	width: 180px;
+    background-color: #2B3541;
+    border-radius: 6px;
+    padding: 10px 10px 10px 10px;
+    border:none;
+    border-bottom:1px solid #3f5671;
+    border-top:1px solid #1a2026;
+	}
+	
+	.formItem input[type="text"], .formItem input[type="password"], .formItem textarea 
+	{
+    width: 180px;
+    background-color: #2B3541;
+    border-radius: 6px;
+    padding: 10px 10px 10px 10px;
+    border:none;
+    border-bottom:1px solid #3f5671;
+    border-top:1px solid #1a2026;
+    color:White;
+    }
+
+}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), 
+only screen and (min-device-pixel-ratio: 2) {
+       #logo
+	    {
+		    background: url(../jquery/common/base/css/smartphone/images/bizagi-mobile-sprite.png) 14px 10px no-repeat;
+		    background-size: 450px 300px !important;
+		    background-position:-287px 8px;
+	    }
+	}
+	
+@media only screen and (-webkit-min-device-pixel-ratio: 2), 
+only screen and (min-device-pixel-ratio: 2) {
+       #contentWrap
+	    {
+		    background:url(../img/login/loginnoise2x.png),-webkit-linear-gradient(left, #192937 0%,#394e65 50%,#192937 100%);
+	    }
+	}
+	
+
+#loginForm .formItem table 
+{
+    width:95%;
+}
+
+#loginForm #trSecretQuestionField input
+{
+    margin-left:65px;
+    margin-top:-11px;
+    width:73%;
+}
+
+#loginForm #trSecretAnswerField input
+{
+    margin-left:65px;
+    margin-top:-11px;
+    width:73%;
+}
+
+/* MobileUpdates */
+
+#lblMobileUpdates
+{
+    font-weight: 900;
+    margin: 0;
+}
+
+#lblSystem, #lblVersion, #lblFile
+{
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#lblSystem
+{
+    margin-top: 20px;
+}
+
+#ddlDevice, #txtVersion, #btnUpload
+{
+    display: inline-block;
+    margin-top: 10px;
+    width: 230px;
+}
+
+#btnUpload
+{
+    padding: 5px 12px;
+}
+
+#txtVersion
+{
+    width: 205px;
+}
+
+#updateBox .content.mobileupdatesadmin
+{
+    margin-left: auto;
+}
+
+#fileUpdates
+{
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#updateBox
+{
+    width: 540px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#updateBox .top
+{
+    height: 10px;
+}
+#updateBox .content
+{
+    width: 400px;
+    padding: 10px 20px 10px 160px;
+    position: relative;
+    margin-left: 46px;
+}

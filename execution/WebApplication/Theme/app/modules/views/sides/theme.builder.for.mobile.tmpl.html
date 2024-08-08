@@ -1,0 +1,25 @@
+
+<div class="iframesContainer" style="width: 100%;  height: 90%;">
+
+    <!--<div class="iframe-button-container">
+        <button  ng-click="changeIframeView('#mobileLogin','.themeIframe')" type="button" class="btn btn-device btn-md"> Login</button>
+        <button  ng-click="changeIframeView('.themeIframe','#mobileLogin')" type="button" class="btn btn-device btn-md"> Workportal</button>
+    </div>-->
+
+    <!--<div ng-if="showDevice=='Smartphone'" class="iframe-smartphone-container">
+        <div class="iframe-container-speaker"></div>
+    </div>
+    <div ng-if="showDevice=='Tablet'" class="iframe-tablet-container">
+        <div class="iframe-container-speaker"></div>
+    </div>-->
+
+    <div class="iframes-mobile-container" ng-class="{'iframes-mobile-container-smartphone':showDevice=='Smartphone', 'iframes-mobile-container-tablet':showDevice=='Tablet'}">
+        <iframe id="mobileLogin" class="animateShowIframe" ng-class="{'themeIframeiframe-smartphone iframe-smartphone-portrait':showDevice=='Smartphone', 'iframe-tablet iframe-tablet-portrait':showDevice=='Tablet'}" ng-src="app/modules/mobileLogin/html/index.html"> </iframe>
+        <iframe ng-if="!isIframeLoaded" ng-init="workportalLoaded()" class="themeIframe animateShowIframe" ng-class="{'themeIframeiframe-smartphone iframe-smartphone-portrait':showDevice=='Smartphone', 'iframe-tablet iframe-tablet-portrait':showDevice=='Tablet'}" ng-src="{{pathDevice}}"> </iframe>
+    </div>
+</div>
+
+<div ng-controller="SplashScreensController">
+    <div splash-screens></div>
+</div>
+

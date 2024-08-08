@@ -1,0 +1,907 @@
+/*============================================================
+    STYLE DEFINITION // SHAREPOINT CASES
+===============================================================*/
+#ui-bizagi-webpart-cases-container, #ui-bizagi-webpart-render-container {
+    min-width: 800px;
+}
+
+#ui-bizagi-webpart-cases-container > table{
+	width:90%;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-case-list{
+	list-style: none;
+	border:1px solid #d9d9d9;
+}
+
+#ui-bizagi-webpart-cases-container ul{
+	width: 17%;
+	float: left;
+}
+
+#ui-bizagi-webpart-cases-container ul:nth-child(2n) li
+{
+	background-color: #F9F9F9;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-case-list:hover{
+	background-color: #FDFDFD;
+	border-color:#ACACAC;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-case-list:hover dd{
+	background-color: #f7f7f7;
+}
+#ui-bizagi-webpart-cases-container li
+{
+	background-color: #FCFCFC;
+    background-repeat:repeat-x;
+    background-position:left top;
+	background-color: #F2F2F2;
+	vertical-align: middle;	
+	position: relative;
+	margin-bottom: 2px;
+	padding: 6px;
+}
+
+.bz-wp-cases-view-principal li {
+	border-top: none;
+	width: 100%;
+	height: 28px;
+}
+
+.bz-wp-cases-view-principal{
+	height: 53px;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-webpart-cases-view-container{
+	padding-top: 6px;
+	text-align: center;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-webpart-cases-view-container ul{
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+#ui-bizagi-webpart-cases-container li.ui-bizagi-wp-case-list{
+	min-height: 165px;
+	padding-top: 5px;
+	border-radius: 3px;
+	text-align: left;
+}
+
+.ui-bizagi-wp-case-grid div{
+    word-wrap: break-word;
+}
+.longContentdiv {
+	word-wrap: break-word;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-case-workitem
+{
+	width: 100%;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-case
+{
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 5px;
+	padding-top: 10px;
+	min-height: 200px;
+
+	list-style: none;
+	margin-bottom: 8px;
+	border-radius: 0px;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-case:hover
+{
+    background-repeat:repeat-x;
+    background-position:left top;
+}
+
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-case dl dt
+{
+	width: 40%;
+	clear: both;
+	font-size: 1.1em;
+}
+
+#ui-bizagi-webpart-cases-container #caseId
+{
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 5px;
+	border-bottom: 1px dotted #ddd;
+	padding-bottom: 6px;
+}
+#ui-bizagi-webpart-cases-container #caseId h3
+{
+	font-weight: bold;
+	margin: 0px;
+	font-size: 115%;
+	float: left;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+	color: #283238;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-app-inbox-cases-start
+{
+	position: relative;
+	display: block;
+	width: 16px;
+	height: 16px;
+	float: left;
+	margin-right: 5px;
+	cursor:default;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-app-inbox-cases-start-wait
+{
+	
+	height: 16px;
+	width: 16px;
+	background-repeat: no-repeat;
+	position: relative;
+	display: block;
+	float: left;
+	margin-right: 5px;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-inbox-folder.inboxGridFolder
+{
+	background-position: -147px -421px;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin-left: 5px;
+	position: relative;
+	top: 3px;
+}
+#ui-bizagi-webpart-cases-container .ui-bizagi-inbox-folder.inboxGridFolder:hover
+{
+	background-position: -76px -421px;
+	cursor: pointer;
+}
+
+#ui-bizagi-webpart-cases-container #caseActivity
+{
+	/*   font-size:115%;*/
+	font-weight: normal;
+	overflow: hidden;	
+	text-align:left;
+}
+.custom-column
+{
+	padding: 1.5px;	
+	color:#000000 !important;
+	word-wrap: break-word;
+}
+
+#ui-bizagi-webpart-cases-container .selected #caseActivity
+{
+	border-color: #878889;
+}
+
+#ui-bizagi-webpart-cases-container #caseActivity span
+{
+	color: #1F74B2;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#ui-bizagi-webpart-cases-container #caseActivity #ui-bizagi-wp-app-inbox-activity-name
+{
+	cursor: pointer;
+	font-size: 1.1em;
+	color:#0072bc;
+	text-align:left;
+}
+#ui-bizagi-webpart-cases-container #caseActivity #ui-bizagi-wp-app-inbox-activity-name:hover
+{
+	text-decoration: underline;
+	color: #44aff6;
+}
+
+#ui-bizagi-webpart-cases-container #caseActivity .ui-bizagi-wp-app-inbox-cases-ico-state
+{
+	clear: left;
+}
+
+#ui-bizagi-webpart-cases-container #ui-bizagi-wp-app-inbox-cases-ico-view
+{
+	float: left;
+	height: 22px;
+	width: 22px;
+	position: relative;
+	cursor: pointer;
+	padding: 1px;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-app-inbox-processes-title
+{
+	font-size: 1.25em;
+	color: #444;
+	line-height: 25px;
+	font-weight: normal;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+	vertical-align: top;
+	overflow: hidden;
+    padding: 8px 10px;
+	border-bottom: 1px solid #d9d9d9;
+}
+
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-app-inbox-processes-title #ui-bizagi-wp-app-inbox-cases-ico-view
+{
+	position: relative;
+	margin-right: 10px;
+	top: -5px;
+}
+
+    #ui-bizagi-webpart-cases-container .ui-bizagi-wp-app-inbox-processes-title .bz-wp-search-allcases {
+        font-weight: bold;
+        cursor:pointer;
+    }
+    
+    #ui-bizagi-webpart-cases-container #ui-bizagi-wp-app-inbox-cases-ico-view span
+{
+	display: block;
+	height: 22px;
+	width: 22px;
+	cursor: pointer;
+}
+#ui-bizagi-webpart-cases-container #ui-bizagi-wp-app-inbox-cases-ico-view:hover span
+{
+	background-position: -22px -90px;
+}
+
+#ui-bizagi-webpart-cases-container #ui-bizagi-wp-app-inbox-cases-ico-close
+{
+	display: block;
+	float: left;
+	position: relative;
+	margin-right: 6px;
+}
+#ui-bizagi-webpart-cases-container #ui-bizagi-wp-app-inbox-cases-ico-close span
+{
+	display: block;
+	height: 16px;
+	width: 16px;
+	position: relative;
+}
+
+#ui-bizagi-webpart-cases-container #ui-bizagi-wp-app-inbox-cases-ico-event
+{
+	display: block;
+	float: left;
+	position: relative;
+}
+#ui-bizagi-webpart-cases-container #ui-bizagi-wp-app-inbox-cases-ico-event span
+{
+	display: block;
+	height: 16px;
+	width: 16px;
+	margin-right: 6px;
+	position: relative;
+}
+
+#ui-bizagi-webpart-cases-container li .ui-bizagi-wp-app-inbox-cases-ico-state
+{
+	width: 16px;
+	height: 16px;
+	display: block;
+	float: left;
+	margin: 0px 5px 0px 0px;
+}
+
+
+#ui-bizagi-webpart-cases-container li dl
+{
+	overflow: hidden;
+	padding: 0px 5px;
+	color: #666;
+	font-size: 100%;
+}
+#ui-bizagi-webpart-cases-container li:hover dl, #ui-bizagi-webpart-cases-container li.selected dl
+{
+	color: #444;
+}
+
+#ui-bizagi-webpart-cases-container ul dt{
+	width: 54%;
+	float: left;
+}
+#ui-bizagi-webpart-cases-container ul dd{
+	clear: right;
+	width: 45%;
+	padding: 4px;
+	margin: 2px 0px;
+	background: #E9E9E9;
+	border-radius: 3px;
+	float: left;
+
+}
+
+#ui-bizagi-webpart-cases-container li dl dt
+{
+	font-weight: bold;
+}
+
+#ui-bizagi-webpart-cases-container li dl dd.longContent
+{
+	width: 100%;
+	margin-left: 0px;
+}
+#ui-bizagi-webpart-cases-container .ui-wp-cases-list{
+	margin-bottom: 10px;
+}
+
+/*===============================================================
+    PAGER
+===============================================================*/
+#casesPagination{
+	border: none;
+	border-top: 1px dotted #ACACAC;
+	margin-top: 10px;
+}
+
+#casesPaginationInbox ul{
+	background-color: transparent;
+	height: auto;
+}
+
+#casesPaginationInbox ul li{
+	min-height: auto;
+}
+
+.bz-wp-cases-pager
+{
+	height: 48px;
+	border: solid 1px #D9D9D9;
+    background-repeat:repeat-x;
+    background-position:left top;
+	background-color: transparent;
+	vertical-align: middle;
+	border-top: 1px solid #D9D9D9;
+	border-bottom: 1px solid #B5B5B5;
+	color: #121212;
+	text-align: center;
+	position: relative;
+	display: block;
+	width: 99%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.bz-wp-cases-pager ul
+{
+	list-style: none;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 6px;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	height: 16px;
+	width: 100% !important;
+	background-color: transparent;
+}
+
+
+#ui-bizagi-webpart-cases-container #casesPagination > ul{
+	margin: 0px;
+}
+
+#casesPaginationInbox .bz-wp-cases-pager ul li
+{
+	display: inline-block;
+	font-weight: bold;
+	color: olive;
+	font-size: 10px;
+	margin:0;
+	cursor: pointer;
+	border:none;
+	background-color: transparent;
+	background-image: none;
+	color:#003759;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border: 1px solid transparent;
+}
+
+#casesPaginationInbox .bz-wp-cases-pager ul li span{
+	padding: 2px;
+}
+
+#casesPaginationInbox .bz-wp-cases-pager ul li.page span{
+	padding: 4px;
+}
+#casesPaginationInbox  .bz-wp-cases-pager ul li:hover,
+#casesPaginationInbox  .bz-wp-cases-pager ul li.active
+{
+	color: #44aff6;
+	border: 1px solid #91cdf2;
+    border-bottom-color: #addbf7;
+    background-color: #ccebff;
+    color: #003759;
+
+    border-radius: 3px;
+}
+.bz-wp-cases-pager ul li.hidden
+{
+	display: none;
+}
+.bz-wp-cases-pager .tooltip
+{
+	z-index: 100;
+	position: relative;
+	top: 28px;
+	color:rgb(9, 86, 134);
+}
+
+
+
+/*  $__header
+-------------------------------------------------------------------------------------------------------------------------------------------*/
+.bz-wp-cases {
+    border-top: 2px whiteSmoke solid;
+    border-left: 2px whiteSmoke solid;
+    border-bottom: 2px #CCC solid;
+    border-right: 2px #CCC solid;
+    background-color: #f2f2f2;
+    padding: 10px;
+    padding-top: 0;
+    margin-top: 10px !important;
+    margin-left: 10px !important;
+}
+.bz-wp-cases-header {
+    height: 32px;
+    padding: 2px 0px;
+    border-bottom: 1px #CCC solid;
+    position: relative;
+}
+
+.bz-wp-cases-header-viewselector
+{
+	display:block;
+	top:150px;
+	color:#fff;
+	
+	padding: 20px;
+	max-width: 200px;
+	
+	-webkit-border-radious: 12px;
+	-moz-border-radius: 12px;
+	border-radius:12px;
+
+	position: absolute;
+	z-index: 900;
+
+	right: 18px;
+	top: 9px;
+	
+	
+}
+.viewselector-on
+{
+	visibility:visible;
+}
+.viewselector-off
+{
+	visibility:hidden;
+}
+
+.bz-wp-cases-header-arrow {
+    height: 0;
+    width: 0;
+    top: 12px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.bz-wp-cases-header-arrow.bz-state-collapsed{
+    background-image:url("../common/images/arrow_collapsed.png") !important;
+   width:10px;
+   height:10px;
+   background-repeat:no-repeat; 
+   border:0 !important;
+}
+.bz-wp-cases-header-arrow.bz-state-expanded{
+    background-image:url("../common/images/arrow_expand.png") !important;
+   width:10px;
+   height:10px;
+   background-repeat:no-repeat; 
+   border:0 !important;
+}
+.bz-wp-cases-header > label {
+    padding-left: 20px;
+    line-height: 30px;
+    font-weight: bold;
+    font-size: larger;
+}
+.bz-wp-cases-header-views {
+	position: absolute;
+	right: -1px;
+	width: 54px;
+	top: 32px;
+	height: 40px;
+	border: solid 1px #CECECE;
+	background: #F1F1F1;
+	border-top: none;
+	overflow: hidden;
+}
+.bz-wp-cases-header-views label
+{
+    color: #666;
+    left: 0px;
+    position: absolute;
+    line-height: 32px;
+}
+.bz-wp-cases-header-views span{
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 2px;
+    background-color: #F1F1F1;
+    border-color:#CECECE;
+    cursor: pointer;
+}
+.bz-wp-cases-header-views .bz-wp-cases-header-view-grid {
+    left: 26px; 
+}
+.bz-wp-cases-header-views .bz-wp-cases-header-view-thumbnails {
+    left: -2px;   
+}
+
+
+
+/*  $__grid
+-------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.ui-wp-cases-grid {
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    border: 1px solid #CECECE;
+    padding: 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 0;
+    display: inline-table;
+    margin-bottom: 20px;
+    margin-top: 6px;
+}
+
+.ui-wp-cases-grid  #casesPagination{
+	border:none;
+}
+.ui-wp-cases-grid td{
+	padding: 5px;
+	border-bottom: solid 1px #E8E8E8;
+}
+.ui-wp-cases-grid th {
+    padding: 8px 20px 8px 8px;
+    color:#676767;
+    text-shadow: none;
+    font-size: 115%;
+    /*font-family: 'NeoSansStdRegular';*/
+    background: #E9E9E9; /* Old browsers */
+    border-bottom: 1px solid #CECECE;
+    border-top: none;
+    position: relative;
+}
+
+.ui-wp-cases-grid th > div {
+    position: relative;
+}
+
+.ui-wp-cases-grid th.sortColumnsData {
+    cursor: pointer;
+}
+
+.ui-wp-cases-grid  tr th:first-child {
+    border-radius: 0px 0px 0px 0px;
+}
+
+.ui-wp-cases-grid  tr th:last-child {
+    border-radius: 0px 0px 0px 0px;
+}
+
+.ui-wp-cases-grid tbody .event {
+    background-color: #DADADA;
+}
+
+.ui-wp-cases-grid .selected td, .ui-wp-cases-grid tbody tr:hover td {
+    background: #E9E9E9; 
+}
+
+.ui-wp-cases-grid  td .ui-bizagi-wp-app-inbox-cases-start {
+    margin-top: 5px;
+}
+
+
+.sortColumnsDataDownIcon, .sortColumnsDataUpIcon, .sortColumnsDataIcon {
+    position: absolute;
+    height: 12px;
+    width: 8px;
+    cursor: pointer;
+    margin-top: -6px;
+    top: 50%;
+    right: 0px;
+}
+
+.arrowDownIcon {
+    border-top: 5px solid rgb(131,139,144);
+    border-top: 5px solid rgba(255,255,255,.2);
+    border-left: 0px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+}
+
+.arrowUpIcon {
+    border-top: 0px solid transparent;
+    border-left: 0px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 5px solid rgb(125,133,141);
+    border-bottom: 5px solid rgba(255,255,255,.2);
+}
+
+.arrowDownIcon, .arrowUpIcon {
+    float: none;
+    margin: 0px;
+    position: absolute;
+}
+
+.arrowDownIcon {
+    bottom: 0px;
+    left: 0px;
+}
+
+.arrowUpIcon {
+    top: 0px;
+    left: 0px;
+}
+
+.sortColumnsDataDownIcon .arrowDownIcon {
+    border-top-color: #f5f5f5;
+}
+
+.sortColumnsDataUpIcon .arrowUpIcon {
+    border-bottom-color: #f5f5f5;
+}
+
+.ui-bizagi-wp-app-inbox-cases-start {
+    position: relative;
+    display: block;
+    float: left;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+    .ui-bizagi-wp-app-inbox-cases-start.on {
+        background-position: -212px -122px;
+    }
+
+/*  $__grid _ workitem
+-------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+.ui-bizagi-wp-case-workitem-grid .ui-bizagi-wp-app-inbox-cases-ico-state
+{
+	clear: left;
+}
+
+.ui-bizagi-wp-case-workitem-grid .ui-bizagi-wp-app-inbox-cases-ico-state
+{
+	width: 16px;
+	height: 16px;
+	display: block;
+	float: left;
+	margin: 0px 5px 0px 0px;
+	font-family: "bizagi-font";
+}
+
+.ui-bizagi-wp-case-workitem-grid #ui-bizagi-wp-app-inbox-cases-ico-state-Green
+{
+	color: #44ab52;
+}
+.ui-bizagi-wp-case-workitem-grid #ui-bizagi-wp-app-inbox-cases-ico-state-Red
+{
+	color: #e32a2a;
+}
+.ui-bizagi-wp-case-workitem-grid #ui-bizagi-wp-app-inbox-cases-ico-state-Yellow
+{
+	color: #e3d006;
+}
+.ui-bizagi-wp-case-workitem-grid #ui-bizagi-wp-app-inbox-cases-ico-state-lock
+{
+	color: grey;
+}
+
+/*/////////////////////view subheader options///////////////////////////////*/
+
+.bz-wp-cases-view-principal #bz-wp-cases-view-options{
+	float: none;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 28px;
+	/*position: absolute;
+	right: -1px;
+	top: -1px;
+	z-index: 900;*/
+}
+
+.bz-wp-cases-view-principal{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.bz-wp-cases-view-principal ul
+{
+    min-height: 10px !important; 
+}
+.bz-wp-cases-view-principal #bz-wp-cases-view-options li{
+    display:inline-block;
+    cursor: pointer;
+    position:relative;
+   
+}
+.bz-wp-cases-view-principal #bz-wp-cases-view-options li span{
+
+    top:0;
+    left:0;
+    width: 42px;
+    height: 21px;
+    background-color: transparent;
+}
+.bz-wp-cases-view-principal #bz-wp-cases-view-options li span:first-child{
+    display:block;
+    position:relative;
+    z-index:100;
+    margin-top: 4px;
+    margin-right: 4px;
+}
+
+.bz-wp-cases-view-principal #bz-wp-cases-view-bt-eye{
+    background-color:#FCFCFC;
+    /*box shadow*/
+    box-shadow:none;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius:  0;
+}
+.bz-wp-cases-view-principal #bz-wp-cases-view-bt-eye:before{
+    content:"";
+    color:white;
+    box-shadow:none;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius:  0px;
+}
+
+.eye-focus-on{
+    visibility: visible;
+}
+.eye-focus-off{
+    visibility: hidden;
+}
+
+.ui-bizagi-webpart-cases-view-container ul{
+		min-width: 230px;
+		margin-right: 1.5%;
+		margin-left: 1.5%;
+		padding-left: 0;
+}
+/*==============================================================
+	MEDIA QUERIES LIST
+===============================================================*/
+
+@media screen and (min-width: 1601px) {
+    #ui-bizagi-webpart-cases-container .ui-bizagi-webpart-cases-view-container ul:nth-child(5n+1) {
+        clear:both;
+    }
+}
+@media screen and (max-width: 1600px) {
+    #ui-bizagi-webpart-cases-container ul{
+		width: 30%;
+		float: left;
+	}
+    #ui-bizagi-webpart-cases-container .ui-bizagi-webpart-cases-view-container ul:nth-child(3n+1) {
+        clear:both;
+    }
+}
+@media screen and (max-width: 1200px) {
+    #ui-bizagi-webpart-cases-container ul{
+		width: 30%;
+		float: left;
+	}
+    
+    #ui-bizagi-webpart-cases-container .ui-bizagi-webpart-cases-view-container ul:nth-child(3n+1) {
+        clear:both;
+    }
+}
+@media screen and (max-width: 815px) {
+    #ui-bizagi-webpart-cases-container ul{
+		width: 47%;
+		float: left;
+	}
+    
+    #ui-bizagi-webpart-cases-container .ui-bizagi-webpart-cases-view-container ul:nth-child(3n+1) {
+        clear:none;
+    }
+    
+    #ui-bizagi-webpart-cases-container .ui-bizagi-webpart-cases-view-container ul:nth-child(2n+1) {
+        clear:both;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    #ui-bizagi-webpart-cases-container ul{
+		width: 97%;
+		float: left;
+	}
+}
+
+@media screen and (max-width: 991px) {
+    #ui-bizagi-webpart-cases-container, #ui-bizagi-webpart-render-container {
+		min-width: auto!important;
+	}
+}
+
+/*locate pager */
+.ui-wp-cases-list:after {
+clear: both;
+content: '';
+display: block;
+}
+.cases-grid-button{
+	background-color: #fff;
+}
+.cases-grid-button:hover{
+	border-color: #EFEFEF;
+	border-bottom-color: #E9E9E9;
+	background-color: #fff;
+}
+td.ui-bizagi-wp-case-grid:last-child{
+	min-width: 100px;
+}
+
+
+/* Styles to make responsive table */
+.stacktable { width: 100%; }
+.st-head-row { padding-top: 1em; }
+.st-head-row.st-head-row-main { font-size: 1.5em; padding-top: 0; }
+.st-key { width: 49%; text-align: right; padding-right: 1%; }
+.st-val { width: 49%; padding-left: 1%; }
+
+.stacktable.large-only { display: table; }
+.stacktable.small-only { display: none; }
+
+@media (max-width: 800px) {
+	.stacktable.large-only { display: none; }
+	.stacktable.small-only { display: table; }
+	.cases-grid-button{
+		float: right;
+	}
+	#ui-bizagi-webpart-cases-container #caseActivity{
+		text-align: center;
+	}
+}
+#webpartCanvasPopUp .ui-bizagi-notifications-container {
+	position: absolute;
+}

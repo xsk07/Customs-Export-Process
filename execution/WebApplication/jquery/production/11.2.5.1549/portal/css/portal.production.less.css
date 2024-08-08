@@ -1,0 +1,3237 @@
+@charset "UTF-8";
+html {
+    font-family: 'Segoe UI',Arial,sans-serif !important;
+    font-size: 11px;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.ui-bizagi-sharepoint-workportal {
+    min-width: 1024px;
+}
+.bz-sharepoint-webpart .ui-bizagi-sharepoint-webpart-parentdiv, .bz-sharepoint-webpart .ui-bizagi-webpart-cases-view-container {
+    background: #f2f2f2 url("images/dots_columns.png") repeat scroll 0 0 !important;
+}
+.ui-bizagi-sharepoint-webpart-parentdiv, .ui-bizagi-webpart-cases-view-container {
+    min-height: 400px;
+    min-width: 255px;
+    position: relative;
+}
+.ui-bizagi-sharepoint-webpart-parentdiv>div {
+    width: 100%;
+}
+.ui-bizagi-sharepoint-render.ui-bizagi-sharepoint-webpart-parentdiv {
+    background: transparent none!important;
+}
+.ui-bizagi-sharepoint-processmap {
+    height: 100vh;
+}
+.ui-tabs-panel .ui-bizagi-container-form {
+    margin: 0!important;
+}
+.activitiFormContainer #ui-bizagi-webpart-render-container .ui-bizagi-container-form {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+}
+.bz-webpart, #activitySelector-canvas {
+    width: 100%;
+}
+#newCase {
+    border-bottom: 1px solid #d9d9d9;
+}
+.ui-bizagi-sharepoint-loading-icon {
+    background-repeat: no-repeat;
+    background-position: center center;
+    top: 10%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+.ui-bizagi-sharepoint-loading-container {
+    position: absolute;
+    z-index: 900;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(237,237,237,.8);
+    border: 1px solid #d9d9d9;
+}
+.ui-bizagi-sharepoint-loading-container-hidden {
+    display: none;
+}
+.ui-bizagi-sharepoint-hidden {
+    display: none;
+}
+.ui-bizagi-sharepoint-show {
+    display: block;
+}
+.ui-bizagi-sharepoint-processes {
+    min-height: 400px;
+    position: relative;
+}
+.ui-bizagi-sharepoint-processes-webpart {
+    width: 260px;
+}
+.ui-bizagi-error .ui-bizagi-error-message-text, .ui-bizagi-error-message-short-text, .ui-bizagi-error-message-title {
+    word-wrap: break-word;
+    padding-left: 10px;
+}
+#ui-bizagi-webpart-render-container .ui-state-active.ui-bizagi-container-group-header:hover a, #ui-bizagi-webpart-processes-container li.active, #ui-bizagi-webpart-processes-container li:hover, .ui-bizagi-wp-app-inbox-processes-ul .active li:hover, #ui-bizagi-webpart-newcase-container #modalMenuBtList>div li:hover {
+    cursor: pointer;
+    border-color: #e4e4e4;
+    border-bottom-color: #d7dadd;
+    border-top-color: #dadada;
+    background-color: #fff;
+    color: #1d4a63;
+    text-shadow: 1px 1px 0 rgba(255,255,255,.8);
+}
+#ui-bizagi-webpart-render-container .ui-bizagi-button.ui-button, #ui-bizagi-webpart-render-container .ui-button, #ui-bizagi-webpart-render-container .ui-bizagi-button-container .ui-bizagi-button, #ui-bizagi-webpart-render-container .ui-button.ui-state-default {
+    background-color: #fff;
+    transition: none;
+    font-family: 'Segoe UI',Arial,sans-serif !important;
+}
+.ui-tabs .ui-tabs-nav li a, .ui-button, .ui-bizagi-button-container .ui-bizagi-button, .ui-dialog .ui-button, .ui-bizagi-wp-app-routing-container table .ui-button {
+    font-family: 'Segoe UI',Arial,sans-serif !important;
+}
+#ui-bizagi-webpart-render-container .ui-bizagi-webpart-info-render-msg h2 {
+    border: solid 1px #91cdf2;
+    background-color: #f7fcff;
+    color: #1d4a63;
+    text-shadow: 1px 1px 0 rgba(255,255,255,.8);
+}
+#ui-bizagi-webpart-render-container .ui-bizagi-button.ui-button:hover, #ui-bizagi-webpart-render-container .ui-button:hover, #ui-bizagi-webpart-render-container .ui-bizagi-button-container .ui-bizagi-button:hover, #ui-bizagi-webpart-render-container .ui-button.ui-state-default:hover {
+    text-shadow: none;
+}
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-ncase {
+    border: solid 1px #bdbdbd;
+    background-color: #fff;
+}
+#ui-bizagi-wp-app-inbox-tab-container li:hover, #ui-bizagi-wp-app-inbox-tab-container li.active {
+    -webkit-box-shadow: inset 0 1px 3px 1px rgba(0,0,0,.1);
+    box-shadow: inset 0 1px 3px 1px rgba(0,0,0,.1);
+    border-color: #c0c0c0;
+    border-bottom-color: #a4a6aa;
+    border-top-color: #bdbdbd;
+    background-color: #fff;
+    color: #003759;
+}
+#ui-bizagi-wp-app-inbox-tab-container li.active {
+    background-color: #d1d1d1;
+}
+#ui-bizagi-wp-app-inbox-tab-container .toolTip {
+    border: solid 1px #bdbdbd;
+}
+#ui-bizagi-webpart-newcase-container .loadMoreElements span.loading_icon, #ui-bizagi-webpart-newcase-container #modalMenuBtList>div li .processIco.wait, #ui-bizagi-webpart-newcase-container #modalMenuBtList>div li .categoryIco, #ui-bizagi-webpart-newcase-container #modalMenuBtList>div li:hover .processIco, #ui-bizagi-webpart-newcase-container #modalMenuBtList>div li .processIco {
+    width: 24px !important;
+    height: 24px !important;
+}
+#ui-bizagi-webpart-processes-container .ui-bizagi-wp-app-inbox-processes-start-wait {
+    background-image: url(images/loading_cube_mini.png);
+}
+.ui-bizagi-sharepoint-loading-icon {
+    background: url("images/loader.gif") no-repeat top;
+}
+#ui-bizagi-webpart-cases-container .ui-bizagi-wp-app-inbox-cases-start-wait {
+    background-image: url(images/loading_cube_mini.png);
+    background-position: center center;
+}
+.ui-bizagi-webpart-render-loading-image {
+    background-image: url('images/loader.gif');
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    padding-bottom: 10px;
+}
+.ui-bizagi-webpart-render-loading-class {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+.containerPopUp {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background: rgba(0,0,0,.8);
+    zoom: 1;
+}
+.containerPopUp:nth-child(n) {
+    filter: none;
+}
+.activitiFormContainer {
+    position: fixed;
+    box-shadow: 1px 0 7px 2px rgba(0,0,0,.89);
+    height: 90%;
+    width: 90%;
+    top: 5%;
+    left: 5%;
+    background-color: #fbfbfb;
+    z-index: 1000;
+    border: 8px solid #464444;
+    border-radius: 9px;
+    overflow: auto;
+}
+.activitiFormContainer .closeCanvas {
+    z-index: 9000009;
+    position: absolute;
+    box-shadow: 1px 0 7px 2px #464444;
+    width: 16px;
+    height: 16px;
+    background-color: #464444;
+    cursor: pointer;
+    right: 18px;
+    top: 8px;
+}
+.activitiFormContainer .summaryDiv {
+    width: 25%;
+    margin-left: 2em;
+}
+.activitiFormContainer .summaryDiv+div {
+    width: 70%;
+}
+@media all and (max-width: 1500px) {
+    .activitiFormContainer .summaryDiv {
+        display: none;
+    }
+    .activitiFormContainer .summaryDiv+div {
+        width: 100%;
+    }
+}
+@media all and (max-width: 800px) {
+    .activitiFormContainer {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        border: 0;
+        border-radius: 0;
+    }
+    .ui-dialog {
+        padding: 0 !important;
+        top: 0;
+        min-width: 370px !important;
+        border-radius: 0 !important;
+    }
+    .ui-dialog .ui-dialog-titlebar {
+        padding: 0 !important;
+        border: 0 !important;
+    }
+}
+.renderDiv {
+    width: 100%;
+}
+.ui-curved-vt-2, .ui-curved-hz-1, .ui-curved, .ui-lifted {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+#ui-bizagi-wp-app-bt-search, #ui-bizagi-wp-app-inbox-bt-eye:hover, #ui-bizagi-wp-app-inbox-bt-eye:active, #ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#all .text, #ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#favourites .text, #ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#red .text, #ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#green .text, #ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab#yellow .text, .ui-bizagi-wp-app-inbox-cases-start, .ui-bizagi-wp-app-inbox-cases-ico-state, .ui-bizagi-wp-app-inbox-cases-start.off, #ui-bizagi-webpart-cases-container #ui-bizagi-wp-app-inbox-cases-ico-view span, #ui-bizagi-webpart-cases-container #ui-bizagi-wp-app-inbox-cases-ico-close span, #ui-bizagi-webpart-cases-container li #ui-bizagi-wp-app-inbox-cases-ico-state-Red, #ui-bizagi-webpart-cases-container li #ui-bizagi-wp-app-inbox-cases-ico-state-Green, #ui-bizagi-webpart-cases-container li #ui-bizagi-wp-app-inbox-cases-ico-state-Yellow {
+    background-image: url(images/sprite.png);
+}
+.ui-bizagi-wp-app-inbox-cases-start {
+    background-position: -212px -146px;
+    width: 16px;
+    height: 16px;
+}
+.ui-bizagi-wp-app-inbox-processes-start.off {
+    background-position: -214px -148px;
+}
+.ui-bizagi-wp-app-inbox-processes-start.on {
+    background-position: -214px -121px;
+}
+#ui-bizagi-wp-app-inbox-bt-eye:hover, #ui-bizagi-wp-app-inbox-bt-eye:active {
+    background-position: -140px -53px;
+}
+#ui-bizagi-webpart-cases-container li #ui-bizagi-wp-app-inbox-cases-ico-state-Green {
+    color: #44ab52;
+}
+#ui-bizagi-webpart-cases-container li #ui-bizagi-wp-app-inbox-cases-ico-state-Red {
+    color: #e32a2a;
+}
+#ui-bizagi-webpart-cases-container li #ui-bizagi-wp-app-inbox-cases-ico-state-Yellow {
+    color: #e3d006;
+}
+#ui-bizagi-webpart-cases-container li #ui-bizagi-wp-app-inbox-cases-ico-state-lock {
+    color: #808080;
+}
+#ui-bizagi-webpart-cases-container #ui-bizagi-wp-app-inbox-cases-ico-view span {
+    background-position: 0 -90px;
+    background-repeat: no-repeat;
+}
+#ui-bizagi-webpart-cases-container #ui-bizagi-wp-app-inbox-cases-ico-close span {
+    background-position: -278px -116px;
+    background-repeat: no-repeat;
+}
+.ui-bizagi-webpart-case-summary-title .ui-bizagi-wp-app-inbox-cases-graphical-view {
+    top: 6px;
+    margin-right: 5px;
+}
+.ui-bizagi-wp-app-inbox-cases-graphical-view {
+    float: left;
+    height: 22px;
+    width: 22px;
+    position: relative;
+    cursor: pointer;
+    padding: 1px;
+}
+.ui-bizagi-wp-app-inbox-cases-graphical-view span {
+    background: url(images/sprite.png) 0 -90px no-repeat;
+    display: block;
+    height: 22px;
+    width: 22px;
+    cursor: pointer;
+}
+.bt-case-action {
+    display: inline-block;
+    text-indent: -999em;
+    vertical-align: middle;
+    background: url("images/biz-wp-icons-sprite.png") 0 0 no-repeat;
+    margin: 3px;
+}
+.bt-case-action.release {
+    background-position: -48px -480px;
+}
+.ui-bizagi-wp-app-render-actions li:hover .bt-case-action.release {
+    background-position: -72px -480px;
+}
+.ui-bizagi-wp-app-render-actions ul {
+    margin: 0;
+    padding: 0;
+}
+.ui-bizagi-wp-app-render-actions li {
+    display: inline-block;
+    margin-right: 2px;
+    width: auto;
+    height: 35px;
+    cursor: pointer;
+    position: relative;
+    vertical-align: top;
+}
+.ui-bizagi-wp-app-render-actions .tooltip {
+    visibility: hidden;
+}
+.ui-bizagi-wp-app-render-actions li:hover .tooltip {
+    visibility: visible;
+}
+.ui-bizagi-wp-app-render-actions .tooltip {
+    line-height: 11pt;
+    padding: 2px 5px;
+    background: #29343b;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #51616a;
+    -moz-transition: visibility 0s linear .2s,opacity .2s linear;
+    -o-transition: visibility 0s linear .2s,opacity .2s linear;
+    -webkit-transition: visibility 0s linear .2s,opacity .2s linear;
+    transition: visibility 0s linear .2s,opacity .2s linear;
+    opacity: 1;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+    color: #fff;
+    position: absolute;
+    top: 39px;
+}
+.ui-bizagi-wp-app-render-actions .tooltip:before {
+    content: "";
+    display: block;
+    background: url(images/menuArrow.png) 0 0 no-repeat;
+    width: 11px;
+    height: 6px;
+    position: absolute;
+    left: 17px;
+    margin-left: -5px;
+    top: -6px;
+}
+.bz-icon-24 {
+    width: 24px;
+    height: 24px;
+}
+.ui-bizagi-wp-app-render-actions li {
+    display: inline-block;
+    margin-right: 2px;
+    width: auto;
+    height: 35px;
+    cursor: pointer;
+    position: relative;
+    vertical-align: top;
+}
+.ui-bizagi-wp-app-render-actions ul {
+    margin: 0;
+    padding: 0;
+}
+.ui-bizagi-wp-app-inbox-cases-graphical-view:hover span {
+    background-position: -22px -90px;
+}
+button {
+    border-radius: 4px;
+    padding: 4px 10px;
+    border: solid 1px #d9d9d9;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #b5b5b5;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #fff;
+}
+ul #casesList span, ul #frecuentCases span, #categories .categoryIco, #categories .processIco, .bz-wp-cases-view-bt-eye, .bz-wp-cases-header-view-grid, .ui-bizagi-webpart-newcase-menu li a:hover .new, .ui-bizagi-webpart-newcase-menu li a .new, #ui-bizagi-webpart-processes-container #ui-bizagi-wp-app-inbox-processes-ico-paper, .ui-bizagi-container-group-header.ui-state-active .ui-icon, .bz-wp-cases-header-view-thumbnails, .activitiFormContainer .closeCanvas, .ui-bizagi-wp-app-ico-new-case, #ui-bizagi-webpart-cases-container li .ui-bizagi-wp-app-inbox-cases-ico-state, .ui-bizagi-webpart-case-summary-ico-view {
+    background-image: url(images/sprite_sharepoint.png);
+}
+#ui-bizagi-wp-app-bt-search {
+    width: 16px;
+    height: 16px;
+    background-position: -7px -148px;
+    position: absolute;
+    left: 10px;
+    top: 3px;
+}
+.bz-wp-search-cases-noresults {
+    color: #f00 !important;
+    font-weight: bold;
+}
+.icon.back, .ui-bizagi-webpart-newcase-menu li a .new, .ui-bizagi-webpart-newcase-menu li a:hover .new {
+    background-image: url(images/sprite_sharepoint_16x16.png);
+    width: 16px;
+    height: 16px;
+}
+.ui-bizagi-webpart-case-summary-ico-view {
+    width: 32px;
+    height: 32px;
+    background-position: -224px -64px;
+    float: left;
+    margin-right: 5px;
+}
+.icon.back {
+    background-position: -16px 0;
+}
+.bz-wp-cases-view-bt-eye {
+    background-position: -124px -4px;
+}
+.ui-bizagi-wp-app-ico-new-case {
+    width: 24px;
+    height: 24px;
+    background-position: -100px -69px;
+    display: inline-block;
+}
+.ui-bizagi-webpart-newcase-menu li a span {
+    display: inline-block;
+    vertical-align: top;
+}
+.ui-bizagi-webpart-newcase-menu li a .text {
+    color: #676767;
+    text-shadow: none;
+    line-height: 16px;
+}
+ul #frecuentCases.frecuentNewCases span {
+    background-position: -36px -34px;
+}
+ul #frecuentCases.frecuentNewCases.frecuentCasesOn span {
+    background-position: -99px -34px;
+}
+ul #casesList.newCasesList span {
+    background-position: -6px -34px;
+}
+ul #casesList.newCasesList.casesListOn span {
+    background-position: -72px -34px;
+}
+.processIco {
+    background-position: -37px -68px;
+}
+.categoryIco {
+    background-position: -6px -68px;
+}
+#ui-bizagi-webpart-processes-container #ui-bizagi-wp-app-inbox-processes-ico-paper {
+    background-position: -70px -66px;
+    width: 24px;
+    height: 26px;
+}
+.ui-bizagi-container-group-header.ui-state-active .ui-icon {
+    background-position: -167px -72px;
+}
+.ui-bizagi-container-group-header.ui-state-active .ui-icon.ui-icon-triangle-1-s {
+    background-position: -136px -72px;
+}
+.activitiFormContainer .closeCanvas {
+    background-position: -201px -72px;
+}
+.bz-wp-cases-header-view-grid {
+    background-position: -130px -30px;
+}
+.bz-wp-cases-header-view-thumbnails {
+    background-position: -160px -30px;
+}
+.bz-wp-cases-header-view-grid:hover {
+    background-position: -194px -30px;
+}
+.bz-wp-cases-header-view-grid.bz-state-selected {
+    background-position: -194px 3px;
+}
+.bz-wp-cases-header-view-thumbnails.bz-state-selected {
+    background-position: -224px 3px;
+}
+.bz-wp-cases-header-view-thumbnails:hover {
+    background-position: -224px -30px;
+}
+#ui-bizagi-webpart-cases-container #ui-bizagi-wp-app-inbox-cases-ico-event span {
+    background: url(images/isevent.png);
+    background-repeat: no-repeat;
+}
+.ui-bizagi-webpart-workportal-table {
+    display: table;
+    vertical-align: top;
+    background-color: #f2f2f2;
+    border: 1px solid #d9d9d9;
+}
+.ui-bizagi-webpart-workportal-column {
+    display: table-cell;
+    vertical-align: top;
+}
+.ico-event span {
+    background: url(images/isevent.png);
+    background-repeat: no-repeat;
+}
+.ui-dialog .ui-dialog-titlebar {
+    filter: none;
+}
+[class*="bizagi-webpart"] .ui-tabs-nav {
+    margin: 0;
+    border-width: 0;
+    background-color: transparent;
+    background-image: none;
+    padding: 0 15px;
+}
+[class*="bizagi-webpart"] .ui-tabs-nav li {
+    list-style: none;
+    float: left;
+    position: relative;
+    top: 1px;
+    margin: 0 0 0 0;
+    border-bottom: 0 !important;
+    padding: 0;
+    white-space: nowrap;
+    background: none;
+    border: 1px solid #cecece;
+    filter: none;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+[class*="bizagi-webpart"] .ui-tabs-nav li a {
+    float: left;
+    padding: .5em 1em;
+    text-decoration: none;
+    font-size: 115%;
+    font-weight: normal;
+    text-shadow: 0 1px 0 rgba(255,255,255,.4);
+    color: #9b9b9b;
+}
+[class*="bizagi-webpart"] .ui-tabs-panel {
+    display: block;
+    border: none;
+    padding: 2em 1.4em 1.4em;
+    background: none;
+    border: 1px solid #cecece;
+    background-color: #e6e6e6;
+    border-radius: 3px;
+}
+.cases-column-details {
+    width: 260px;
+}
+.cases-column-grid {
+    width: 100%;
+}
+.cases-column-grid-hide {
+    width: 0%;
+}
+.render-column {
+    width: 100%;
+    border-left: 1px solid #cecece;
+}
+.ui-bizagi-webpart-workportal-table {
+    width: 100%;
+}
+.ui-bizagi-webpart-workportal-row {
+    width: 100%;
+}
+.ui-bizagi-sharepoint-createNewCaseButton {
+    min-height: 0;
+    min-width: 0;
+    overflow: hidden;
+}
+.activitiFormContainer #ui-bizagi-webpart-render-container .ui-bizagi-container-form {
+    width: auto;
+}
+.visible-inline-block {
+    display: inline-block !important;
+}
+.ico-state {
+    background: url("images/lines.png") 0 0 repeat;
+}
+.ico-state-Red {
+    background-image: url("images/lines.png");
+}
+.ico-state-Green {
+    background-image: url("images/lines.png");
+}
+.csswebpartIframePopUp {
+    width: 100%;
+    border: none;
+    overflow: hidden;
+}
+.ui-widget-overlay {
+    height: 100%;
+    position: fixed;
+}
+.ui-bizagi-wp-app-menu-search-off {
+    position: relative;
+}
+#ui-bizagi-wp-app-search input {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #676767;
+    padding: 5px 4px;
+    padding-left: 22px;
+    border-radius: 4px;
+    border: solid 1px #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    border-top: 1px solid #b5b5b5;
+}
+.ui-bizagi-wp-app-inbox-processes-title #ui-bizagi-wp-app-search #ui-bizagi-wp-app-bt-search {
+    top: 6px;
+    left: 6px;
+}
+.ui-bizagi-sharepoint-cases {
+    min-width: 255px;
+}
+.ui-button, .ui-button.ui-state-default, .ui-bizagi-button-container .ui-bizagi-button, .ui-dialog .ui-button, .ui-bizagi-wp-app-routing-container table .ui-button {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+.ui-button:hover, .ui-button.ui-state-default:hover, .ui-bizagi-button-container .ui-bizagi-button:hover, .ui-dialog .ui-button:hover, .ui-bizagi-wp-app-routing-container table .ui-button:hover {
+    background: #5d6268;
+    text-shadow: none;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr td {
+    vertical-align: middle;
+}
+.ui-bizagi-render-documentgenerator {
+    position: relative;
+    top: 7px;
+}
+a {
+    text-decoration: none;
+}
+.ui-dialog {
+    min-height: 145px;
+    max-height: 100vh;
+    padding: 2em;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+.ui-dialog.ui-dialog-minimized {
+    box-sizing: border-box;
+}
+.ui-dialog .ui-bizagi-container-form {
+    padding: 0;
+    border: 0;
+    margin-bottom: 2rem;
+    background: none;
+}
+.ui-dialog .ui-dialog-titlebar {
+    position: relative;
+    padding-bottom: 1em;
+    border-radius: 0;
+    margin-bottom: 1em;
+    background: transparent;
+    text-overflow: ellipsis;
+}
+.ui-dialog .ui-dialog-title {
+    margin: 0;
+    background: none;
+    font-size: 24px;
+    font-weight: normal;
+    text-shadow: none;
+}
+.ui-dialog .ui-dialog-titlebar-close, .ui-dialog .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar-close:focus, .ui-dialog .ui-dialog-titlebar-close.ui-state-hover {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    background: none;
+    text-align: center;
+}
+.ui-dialog .ui-dialog-content {
+    position: static !important;
+}
+.ui-dialog .ui-dialog-titlebar-maximize, .ui-dialog .ui-dialog-titlebar-maximize:hover, .ui-dialog .ui-dialog-titlebar-maximize:focus, .ui-dialog .ui-dialog-titlebar-maximize.ui-state-hover {
+    position: absolute;
+    top: 4px;
+    right: 36px;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    background: none;
+    text-align: center;
+}
+#ui-bizagi-webpart-render-container .ui-bizagi-container-panel .ui-bizagi-control-wrapper>.ui-bizagi-render-control {
+    padding-top: 4px;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+    padding-bottom: 0;
+}
+.resize-triggers {
+    visibility: hidden;
+}
+.resize-triggers, .resize-triggers>div, .contract-trigger:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.resize-triggers>div {
+    overflow: auto;
+}
+.contract-trigger:before {
+    width: 200%;
+    height: 200%;
+}
+#triangle-highlight, #triangle-normal {
+    margin-left: -5px;
+}
+.processviewer-container polyline, .processviewer-container line {
+    stroke: black;
+    stroke-width: 3;
+}
+.processviewer-container svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.highlight path {
+    stroke: rgba(255,235,0,.9);
+    fill: rgba(255,235,0,.9);
+}
+.processviewer-highlight {
+    stroke: rgba(255,235,0,.8);
+    stroke-width: 6;
+}
+.processviewer-error-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+}
+.processviewer-message {
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+.processviewer-absolute-center {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.noneend, .messageend, .terminateend, .signalend, .cancelend, .errorend {
+    border-radius: 100%;
+    border: solid .25em #900;
+    background: #fbecec;
+    background: -moz-linear-gradient(-45deg,#fbecec 0%,#f1c0c0 100%);
+    background: -webkit-gradient(linear,left top,right bottom,color-stop(0%,#fbecec),color-stop(100%,#f1c0c0));
+    background: -webkit-linear-gradient(-45deg,#fbecec 0%,#f1c0c0 100%);
+    background: -o-linear-gradient(-45deg,#fbecec 0%,#f1c0c0 100%);
+    background: -ms-linear-gradient(-45deg,#fbecec 0%,#f1c0c0 100%);
+    background: linear-gradient(135deg,#fbecec 0%,#f1c0c0 100%);
+}
+.noneend:hover, .messageend:hover, .terminateend:hover, .signalend:hover, .cancelend:hover, .errorend:hover {
+    border: solid .25em #f90000;
+}
+.usertask, .servicetask, .bottask, .receivetask, .sendtask, .scripttask, .manualtask, .subprocess, .callactivity, .singletontask, .conditionaltask, .nonetask, .abstracttask {
+    border-radius: .5em;
+    border: .2em solid #03689a;
+    padding: 0;
+    background: #f2f4ff;
+}
+.subprocess>.processviewer-hotspot-icon, .callactivity>.processviewer-hotspot-icon {
+    margin: 0;
+}
+.usertask:hover, .servicetask:hover, .bottask:hover, .receivetask:hover, .sendtask:hover, .scripttask:hover, .manualtask:hover, .subprocess:hover, .singletontask:hover, .callactivity:hover, .conditionaltask:hover, .nonetask:hover, .abstracttask:hover {
+    border-radius: .5em;
+    border: .2em solid #0494d9;
+    box-shadow: 0 0 8px rgba(107,166,196,.5);
+    -moz-box-shadow: 0 0 8px rgba(107,166,196,.5);
+    -webkit-box-shadow: 0 0 8px rgba(107,166,196,.5);
+}
+.signalstart, .messagestart, .timerstart, .nonestart {
+    border-radius: 100%;
+    border: solid .25em #62a716;
+    background: #faffec;
+    background: -moz-linear-gradient(-45deg,#faffec 0%,#ecffb4 100%);
+    background: -webkit-gradient(linear,left top,right bottom,color-stop(0%,#faffec),color-stop(100%,#ecffb4));
+    background: -webkit-linear-gradient(-45deg,#faffec 0%,#ecffb4 100%);
+    background: -o-linear-gradient(-45deg,#faffec 0%,#ecffb4 100%);
+    background: -ms-linear-gradient(-45deg,#faffec 0%,#ecffb4 100%);
+    background: linear-gradient(135deg,#faffec 0%,#ecffb4 100%);
+}
+.signalstart:hover, .messagestart:hover, .timerstart:hover, .nonestart:hover {
+    border-color: #8be32b;
+}
+.conditionalintevent, .errorintermediate, .signalintermediate, .linkintermediate, .messageintermediate, .noneintermediate, .timerintermediate {
+    border-radius: 100%;
+    border: solid .2em #969149;
+    background-color: #fefcf4;
+}
+.errorintermediate:hover, .signalintermediate:hover, .linkintermediate:hover, .messageintermediate:hover, .noneintermediate:hover, .timerintermediate:hover, .conditionalintevent:hover, .errorintermediate:hover::before, .signalintermediate:hover::before, .linkintermediate:hover::before, .messageintermediate:hover::before, .noneintermediate:hover::before, .conditionalevent:hover::before, .conditionalintevent:hover::before, .timerintermediate:hover::before {
+    border-color: #d8d825;
+}
+.errorintermediate::before, .signalintermediate::before, .linkintermediate::before, .messageintermediate::before, .noneintermediate::before, .conditionalevent::before, .conditionalintevent::before, .timerintermediate::before {
+    content: '';
+    border-radius: 100%;
+    border: solid .2em #969149;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+}
+.parallelgateway::before, .complexgateway::before, .inclusivegateway::before, .eventbasedgateway::before, .exclusivegateway::before {
+    content: '';
+    border: solid 2px #a6a61d;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background: #fffff0;
+    background: -moz-linear-gradient(left,#fffff0 0%,#ffffdc 100%);
+    background: -webkit-gradient(linear,left top,right top,color-stop(0%,#fffff0),color-stop(100%,#ffffdc));
+    background: -webkit-linear-gradient(left,#fffff0 0%,#ffffdc 100%);
+    background: -o-linear-gradient(left,#fffff0 0%,#ffffdc 100%);
+    background: -ms-linear-gradient(left,#fffff0 0%,#ffffdc 100%);
+    background: linear-gradient(to right,#fffff0 0%,#ffffdc 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffff0',endColorstr='#ffffdc',GradientType=1);
+}
+.parallelgateway:hover::before, .complexgateway:hover::before, .inclusivegateway:hover::before, .eventbasedgateway:hover::before, .exclusivegateway:hover::before {
+    border: solid 2px #d8d825;
+    box-shadow: 0 0 8px rgba(216,216,37,.5);
+    -moz-box-shadow: 0 0 8px rgba(216,216,37,.5);
+    -webkit-box-shadow: 0 0 8px rgba(216,216,37,.5);
+}
+.textannotation {
+    background: #fefefe;
+    padding: 0;
+    background: -moz-linear-gradient(-45deg,#fefefe 1%,#d9d9d9 100%);
+    background: -webkit-gradient(linear,left top,right bottom,color-stop(1%,#fefefe),color-stop(100%,#d9d9d9));
+    background: -webkit-linear-gradient(-45deg,#fefefe 1%,#d9d9d9 100%);
+    background: -o-linear-gradient(-45deg,#fefefe 1%,#d9d9d9 100%);
+    background: -ms-linear-gradient(-45deg,#fefefe 1%,#d9d9d9 100%);
+    background: linear-gradient(135deg,#fefefe 1%,#d9d9d9 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefefe',endColorstr='#d9d9d9',GradientType=1);
+}
+.textannotation:hover::after {
+    border-color: #9d9daa;
+}
+.textannotation:hover::before {
+    border-color: #000;
+}
+.textannotation::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30%;
+    bottom: 0;
+    border-width: 1px 0 1px 1px;
+    border-style: solid;
+    border-color: #949494;
+}
+.textannotation::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70%;
+    bottom: 0;
+    border-width: 1px 1px 1px 0;
+    border-style: solid;
+    border-color: #d5d5d5;
+}
+.dataobject {
+    border: solid 1px #666;
+    background: #fdfdfd;
+    background: -moz-linear-gradient(-45deg,#fdfdfd 0%,#f1f1f1 100%);
+    background: -webkit-gradient(linear,left top,right bottom,color-stop(0%,#fdfdfd),color-stop(100%,#f1f1f1));
+    background: -webkit-linear-gradient(-45deg,#fdfdfd 0%,#f1f1f1 100%);
+    background: -o-linear-gradient(-45deg,#fdfdfd 0%,#f1f1f1 100%);
+    background: -ms-linear-gradient(-45deg,#fdfdfd 0%,#f1f1f1 100%);
+    background: linear-gradient(135deg,#fdfdfd 0%,#f1f1f1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdfdfd',endColorstr='#f1f1f1',GradientType=1);
+    border-radius: 0 5px 0 0;
+}
+.dataobject:hover {
+    border-color: #000;
+}
+.dataobject:hover::before {
+    border-bottom-color: #000;
+}
+.dataobject::before {
+    content: '';
+    height: 0;
+    width: 0;
+    display: block;
+    border: 10px transparent solid;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-bottom-color: #333;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    background: #fff;
+}
+.dataobject::after {
+    content: '';
+    height: 0;
+    width: 0;
+    display: block;
+    border: 7px transparent solid;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-bottom-color: #fff;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+}
+.usertask .processviewer-hotspot-label, .servicetask .processviewer-hotspot-label, .bottask .processviewer-hotspot-label, .sendtask .processviewer-hotspot-label, .scripttask .processviewer-hotspot-label, .manualtask .processviewer-hotspot-label, .nonetask .processviewer-hotspot-label, .receivetask .processviewer-hotspot-label, .textannotation .processviewer-hotspot-label, .isforcompensation .processviewer-hotspot-label, .singletontask .processviewer-hotspot-label, .abstracttask .processviewer-hotspot-label, .conditionaltask .processviewer-hotspot-label {
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-height: 50%;
+}
+.start .processviewer-hotspot-label, .end .processviewer-hotspot-label, [class*="intermediate"] .processviewer-hotspot-label {
+    transform: translateX(-25%);
+    width: 200%;
+}
+.textannotation .processviewer-hotspot-label, .nonetask:not(.isforcompensation) .processviewer-hotspot-label {
+    -webkit-line-clamp: 3;
+    max-height: 82%;
+}
+.processviewer-ie8 .usertask, .processviewer-ie8 .servicetask, .processviewer-ie8 .bottask, .processviewer-ie8 .sendtask, .processviewer-ie8 .scripttask, .processviewer-ie8 .manualtask, .processviewer-ie8 .receivetask, .processviewer-ie8 .textannotation, .processviewer-ie8 .isforcompensation, .processviewer-ie8 .singletontask, .processviewer-ie8 .abstracttask, .processviewer-ie8 .conditionaltask, .processviewer-ie8 .nonetask {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.processviewer-ie8 .usertask .processviewer-hotspot-label, .processviewer-ie8 .servicetask .processviewer-hotspot-label, .processviewer-ie8 .bottask .processviewer-hotspot-label, .processviewer-ie8 .sendtask .processviewer-hotspot-label, .processviewer-ie8 .scripttask .processviewer-hotspot-label, .processviewer-ie8 .manualtask .processviewer-hotspot-label, .processviewer-ie8 .receivetask .processviewer-hotspot-label, .processviewer-ie8 .textannotation .processviewer-hotspot-label, .processviewer-ie8 .isforcompensation .processviewer-hotspot-label, .processviewer-ie8 .singletontask .processviewer-hotspot-label, .processviewer-ie8 .abstracttask .processviewer-hotspot-label, .processviewer-ie8 .conditionaltask .processviewer-hotspot-label, .processviewer-ie8 .nonetask .processviewer-hotspot-label {
+    top: 0 !important;
+    font-size: .7em;
+}
+.processviewer-hotspot-label {
+    font-size: .75em;
+    display: block;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+.dotted-line {
+    stroke-dasharray: 2,5;
+}
+.processviewer-rect.processPool {
+    stroke: #e6e6e6 !important;
+    fill: white;
+}
+.processviewer-drag {
+    position: relative;
+    min-height: 400px;
+}
+.processviewer-drag .processviewer-zvg-nested {
+    cursor: move;
+}
+.svg-lane-line, .processviewer-rect.lanes {
+    stroke: #e6e6e6;
+    fill: none !important;
+}
+.processviewer-rect.milestones {
+    stroke: #e6e6e6;
+    fill: none !important;
+}
+.processviewer-hotspot-icon rect, .processviewer-hotspot-icon path {
+    fill: #03689a;
+    stroke: #03689a;
+}
+.signalstart .processviewer-hotspot-label, .messagestart .processviewer-hotspot-label, .timerstart .processviewer-hotspot-label, .nonestart .processviewer-hotspot-label, .timerintermediate .processviewer-hotspot-label, .terminateend .processviewer-hotspot-label, .signalend .processviewer-hotspot-label, .cancelend .processviewer-hotspot-label, .errorend .processviewer-hotspot-label, .messageend .processviewer-hotspot-label, .signalintermediate .processviewer-hotspot-label, .linkintermediate .processviewer-hotspot-label, .intermediate .processviewer-hotspot-label, .noneintermediate .processviewer-hotspot-label, .messageintermediate .processviewer-hotspot-label, .noneend .processviewer-hotspot-label, .exclusivegateway .processviewer-hotspot-label, .eventbasedgateway .processviewer-hotspot-label, .inclusivegateway .processviewer-hotspot-label, .complexgateway .processviewer-hotspot-label, .parallelgateway .processviewer-hotspot-label {
+    padding-top: 100% !important;
+    transform: translateX(-25%);
+    width: 200%;
+}
+.subprocess .processviewer-hotspot-label {
+    position: absolute;
+}
+.processviewer-hotspot-icon {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    margin: .2em;
+    background-size: 1em auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+[class*="gateway"] .processviewer-hotspot-icon {
+    margin: 2px;
+}
+.boundary .processviewer-hotspot-icon, .intermediatethrow .processviewer-hotspot-icon, .conditionalintevent .processviewer-hotspot-icon, .intermediatecatch .processviewer-hotspot-icon, .end .processviewer-hotspot-icon, .start .processviewer-hotspot-icon {
+    margin: 0;
+}
+.isforcompensation .processviewer-hotspot-icon, .callactivity .processviewer-hotspot-icon, .subprocess .processviewer-hotspot-icon {
+    width: 100%;
+}
+.dataobject .processviewer-hotspot-icon, .abstracttask .processviewer-hotspot-icon {
+    display: none;
+}
+.isforcompensation .processviewer-hotspot-icon {
+    display: block;
+}
+[class*="gateway"] .processviewer-hotspot-icon, .start .processviewer-hotspot-icon, .end .processviewer-hotspot-icon {
+    width: 100%;
+    height: 100%;
+}
+[class*="intermediate"] .processviewer-hotspot-icon {
+    width: 100%;
+    height: 100%;
+}
+.terminateend .processviewer-hotspot-icon {
+    background-color: #900;
+    border-radius: 100%;
+    width: 80%;
+    height: 80%;
+    margin: 10%;
+}
+.isforcompensation .processviewer-hotspot-icon, .callactivity .processviewer-hotspot-icon, .subprocess .processviewer-hotspot-icon {
+    bottom: -.1em;
+}
+[class*="gateway"].processviewer-highlighted::before {
+    border-color: #ff7f00;
+}
+.processviewer-highlighted {
+    stroke: #ff7f00;
+    border-color: #ff7f00;
+}
+.processviewer-shape-selected path, .processviewer-shape-selected {
+    stroke: lime;
+}
+.processviewer-shape-selected-standby path, .processviewer-shape-selected-standby {
+    stroke: #8c8c8c;
+}
+.processviewer-container .highlighted path, .processviewer-container .highlighted {
+    fill: #ff7f00;
+    stroke: #ff7f00;
+}
+.processviewer-container .normal path, .processviewer-container .normal {
+    fill: black;
+    stroke: black;
+}
+.processviewer-container .selected path, .processviewer-container .selected {
+    fill: lime;
+    stroke: lime;
+}
+.boundary .processviewer-hotspot-icon, .intermediatethrow .processviewer-hotspot-icon, .intermediatecatch .processviewer-hotspot-icon {
+    background-size: 1.2em auto;
+}
+[class*="gateway"] .processviewer-hotspot-icon {
+    background-size: 2em auto;
+}
+.usertask .processviewer-hotspot-icon {
+    background-image: url(images/user_task.png);
+}
+.servicetask .processviewer-hotspot-icon {
+    background-image: url(images/service_task.png);
+}
+.bottask .processviewer-hotspot-icon {
+    background-image: url(images/bot_task.png);
+}
+.sendtask .processviewer-hotspot-icon {
+    background-image: url(images/send_task.png);
+}
+.scripttask .processviewer-hotspot-icon {
+    background-image: url(images/script_task.png);
+}
+.manualtask .processviewer-hotspot-icon {
+    background-image: url(images/manual_task.png);
+}
+.nonetask .processviewer-hotspot-icon {
+    background-image: none;
+}
+.receivetask .processviewer-hotspot-icon {
+    background-image: url(images/receive_task.png);
+}
+.conditionaltask .processviewer-hotspot-icon {
+    background-image: url(images/conditional_task.png);
+}
+.singletontask .processviewer-hotspot-icon {
+    -moz-transform: rotate(42.5deg);
+    -o-transform: rotate(42.5deg);
+    -webkit-transform: rotate(42.5deg);
+    -ms-transform: rotate(42.5deg);
+    transform: rotate(42.5deg);
+    zoom: 1;
+    background-color: #03689a;
+    width: .14em;
+    height: 1.9em;
+    left: .3em;
+    top: -.5em;
+}
+.callactivity .processviewer-hotspot-icon, .subprocess .processviewer-hotspot-icon {
+    background-image: url(images/subprocess.png);
+    background-position: bottom center;
+    bottom: -2px;
+    margin-bottom: 0;
+}
+.subprocess.isparallel .processviewer-hotspot-icon {
+    background-size: auto 1em;
+    background-image: url(images/subprocess_parallel.png);
+}
+.subprocess.issequential .processviewer-hotspot-icon {
+    background-size: auto 1em;
+    background-image: url(images/subprocess_sequential.png);
+}
+.noneend .processviewer-hotspot-icon, .nonestart .processviewer-hotspot-icon {
+    background-image: none;
+    display: none;
+}
+.timerstart .processviewer-hotspot-icon {
+    background-image: url(images/timer_start_event.png);
+}
+.messagestart .processviewer-hotspot-icon {
+    background-image: url(images/message_start_event.png);
+}
+.signalstart .processviewer-hotspot-icon {
+    background-image: url(images/signal_start_event.png);
+}
+.isforcompensation .processviewer-hotspot-icon {
+    background-image: url(images/compensation_task.png);
+    margin-left: 0;
+    margin-right: 0;
+}
+.messageend .processviewer-hotspot-icon {
+    background-image: url(images/message_end_event.png);
+}
+.errorend .processviewer-hotspot-icon {
+    background-image: url(images/error_end.png);
+}
+.cancelend .processviewer-hotspot-icon {
+    background-image: url(images/cancel_end.png);
+}
+.signalend .processviewer-hotspot-icon {
+    background-image: url(images/signal_end.png);
+}
+.timerintermediate .processviewer-hotspot-icon {
+    background-image: url(images/timer_intermediate_event.png);
+}
+.messageintermediate .processviewer-hotspot-icon {
+    background-image: url(images/message_intermediate_event.png);
+}
+.linkintermediate .processviewer-hotspot-icon {
+    background-image: url(images/link_intermediate_event.png);
+}
+.linkintermediate.intermediatethrow .processviewer-hotspot-icon {
+    background-image: url(images/link_intermediate_throw_event.png);
+}
+.signalintermediate .processviewer-hotspot-icon {
+    background-image: url(images/signal_intermediate_event.png);
+}
+.signalintermediate.intermediatethrow .processviewer-hotspot-icon {
+    background-image: url(images/signal_intermediate_throw_event.png);
+}
+.messageintermediate.intermediatethrow .processviewer-hotspot-icon {
+    background-image: url(images/message_intermediate_throw_event.png);
+}
+.errorintermediate .processviewer-hotspot-icon {
+    background-image: url(images/error_intermediate_throw_event.png);
+}
+.eventbasedgateway .processviewer-hotspot-icon {
+    background-image: url(images/based-gateway.png);
+}
+.inclusivegateway .processviewer-hotspot-icon {
+    background-image: url(images/inclusive-gateway.png);
+}
+.complexgateway .processviewer-hotspot-icon {
+    background-image: url(images/complex_gateway.png);
+}
+.parallelgateway .processviewer-hotspot-icon {
+    background-image: url(images/parallel_gateway.png);
+}
+.conditionalintevent .processviewer-hotspot-icon {
+    background-image: url(images/conditional_int_event.png);
+    background-size: 1em auto;
+    background-position: center;
+}
+.processviewer-shape-selected.processviewer-hotspot-div:after, .processviewer-shape-selected-standby.processviewer-hotspot-div:after {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -10%;
+    border-radius: .5em;
+    z-index: -1;
+    background-color: rgba(0,255,0,.6);
+}
+.processviewer-shape-selected-standby.processviewer-hotspot-div:after {
+    background-color: rgba(140,140,140,.6);
+}
+.svg-dashed-line {
+    stroke-dasharray: 5,5;
+    stroke: #ccc;
+}
+.svg-arrow-line {
+    fill: white;
+    stroke: #ccc;
+}
+.processviewer-process-text, .processviewer-milestone-text, .processviewer-lane-text {
+    font-weight: bold!important;
+}
+.sequenceflow {
+    margin: -.5em 0 0 -.6em;
+}
+.cancellation .processviewer-hotspot-icon {
+    background-image: url(images/parallel_gateway.png);
+}
+.processviewer-hotspot-div.processviewer-highlighted {
+    box-shadow: 0 0 4px 4px #ff7f00;
+}
+.processviewer-hotspot-div.subprocess.isparallel::before, .processviewer-hotspot-div.subprocess.issequential::before, .processviewer-hotspot-div.callactivity::before {
+    position: absolute;
+    content: "";
+    width: .8em;
+    height: .8em;
+    top: .2em;
+    right: .2em;
+    background-size: cover;
+}
+.subprocessxaemb::before {
+    position: absolute;
+    content: "";
+    top: -.4em;
+    right: -.4em;
+    bottom: -.4em;
+    left: -.4em;
+    border: 1px solid #00578c;
+    border-radius: .4em;
+}
+.sequenceflow.subprocessexception .processviewer-hotspot-icon, .sequenceflow.cancellation .processviewer-hotspot-icon, .sequenceflow.timerevent .processviewer-hotspot-icon, .sequenceflow.messageevent .processviewer-hotspot-icon, .sequenceflow.compensation .processviewer-hotspot-icon, .sequenceflow.signalevent .processviewer-hotspot-icon {
+    width: 1.5em;
+    height: 1.5em;
+    z-index: 2;
+}
+.processviewer-hotspots-container .groupartifact {
+    border: #7c7c7e dashed 2.9px;
+    border-radius: 12px;
+    font-size: 1em;
+    z-index: -1;
+}
+.sequenceflow.subprocessexception .processviewer-hotspot-icon {
+    background-image: url(images/subprocess-exception.png);
+    background-size: cover;
+}
+.sequenceflow.cancellation .processviewer-hotspot-icon {
+    background-image: url(images/cancellation.png);
+    background-size: cover;
+}
+.sequenceflow.messageevent .processviewer-hotspot-icon {
+    background-image: url(images/message-event.png);
+    background-size: cover;
+}
+.sequenceflow.timerevent .processviewer-hotspot-icon {
+    background-image: url(images/timer-intermediate.png);
+    background-size: cover;
+}
+.sequenceflow.compensation .processviewer-hotspot-icon {
+    background-image: url(images/compensation.png);
+    background-size: cover;
+}
+.sequenceflow.signalevent .processviewer-hotspot-icon {
+    background-image: url(images/signal-event.png);
+    background-size: cover;
+}
+.processviewer-ie8 .processviewer-hotspot-div.processviewer-highlighted {
+    outline: 2px solid #ff7f00;
+}
+.processviewer-ie8 .parallelgateway .processviewer-hotspot-icon, .processviewer-ie8 .terminateend .processviewer-hotspot-icon, .processviewer-ie8 .timerintermediate .processviewer-hotspot-icon, .processviewer-ie8 .timerintermediate .servicetask .processviewer-hotspot-icon, .processviewer-ie8 .timerintermediate .bottask .processviewer-hotspot-icon, .processviewer-ie8 .subprocess.isparallel .processviewer-hotspot-icon, .processviewer-ie8 .subprocess.issequential .processviewer-hotspot-icon, .processviewer-ie8 .intermediatethrow.signalintermediate .processviewer-hotspot-icon, .processviewer-ie8 .intermediatecatch.signalintermediate .processviewer-hotspot-icon, .processviewer-ie8 .complexgateway .processviewer-hotspot-icon, .processviewer-ie8 .receivetask .processviewer-hotspot-icon, .processviewer-ie8 .servicetask .processviewer-hotspot-icon, .processviewer-ie8 .bottask .processviewer-hotspot-icon, .processviewer-ie8 .messagestart .processviewer-hotspot-icon, .processviewer-ie8 .timerstart .processviewer-hotspot-icon, .processviewer-ie8 .signalstart .processviewer-hotspot-icon, .processviewer-ie8 .linkintermediate .processviewer-hotspot-icon, .processviewer-ie8 .messageintermediate .processviewer-hotspot-icon, .processviewer-ie8 .messageend .processviewer-hotspot-icon, .processviewer-ie8 .errorend .processviewer-hotspot-icon, .processviewer-ie8 .signalend .processviewer-hotspot-icon, .processviewer-ie8 .cancelend .processviewer-hotspot-icon, .processviewer-ie8 .noneend .processviewer-hotspot-icon, .processviewer-ie8 .singletontask .processviewer-hotspot-icon, .processviewer-ie8 .isforcompensation .processviewer-hotspot-icon, .processviewer-ie8 .textannotation .processviewer-hotspot-icon, .processviewer-ie8 .sendtask .processviewer-hotspot-icon {
+    background: none;
+}
+.processviewer-ie8 .processviewer-hotspot-div.processviewer-shape-selected {
+    outline: 6px solid #0f0;
+}
+.processviewer-ie8 .processviewer-hotspot-div.processviewer-shape-selected-standby {
+    outline: 6px solid #8c8c8c;
+}
+.processviewer-ie8 .sequenceflow.subprocessexception .processviewer-hotspot-icon {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/subprocess-exception.png', sizingMethod='scale')";
+    background: none;
+}
+.processviewer-ie8 .sequenceflow.timerevent .processviewer-hotspot-icon {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/timer-intermediate.png', sizingMethod='scale')";
+    background: none;
+}
+.processviewer-ie8 .sequenceflow.cancellation .processviewer-hotspot-icon {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/cancellation.png', sizingMethod='scale')";
+    background: none;
+}
+.processviewer-ie8 .sequenceflow.messageevent .processviewer-hotspot-icon {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/message-event.png', sizingMethod='scale')";
+    background: none;
+}
+.processviewer-ie8 .sequenceflow.compensation .processviewer-hotspot-icon {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/compensation.png', sizingMethod='scale')";
+    background: none;
+}
+.processviewer-ie8 .sequenceflow.signalevent .processviewer-hotspot-icon {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/signal-event.png', sizingMethod='scale')";
+    background: none;
+}
+.processviewer-ie8 .timerintermediate.intermediatecatch {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/timer-intermediate.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .messageintermediate.intermediatecatch {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/message-event.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .messageintermediate.intermediatethrow {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-message_intermediate_throw_event.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .nonestart {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-start.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .messagestart {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-message-start.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .timerstart {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-time-start.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .signalstart {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-signal-start.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .messageend {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-message_end_event.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .noneend {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-end.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .errorend {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-error_end.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .cancelend {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-cancel_end.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .signalend {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-signal_end.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .singletontask {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-singleton_task.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .manualtask {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-manual-task.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .nonetask {
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .manualtask.isforcompensation {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-compensation_task.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .scripttask {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-script-task.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .subprocess {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-subprocess.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .subprocess.isparallel {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-subprocess-parallel.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .subprocess.issequential {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-subprocess-sequential.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .subprocess.subprocessxaemb {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-subprocess-transactional.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .subprocess.subprocessemb {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-subprocess-has-sub.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .parallelgateway {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-parallel-gateway.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .inclusivegateway {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-inclusive-gateway.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .exclusivegateway {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-exclusive-gateway.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .callactivity {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-subprocess.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .eventbasedgateway {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-event-based-gateway.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .terminateend.end {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-terminate-end.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .noneintermediate.intermediatethrow {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-intermediate-throw.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .servicetask {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-service-task.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .bottask {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-service-task.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .signalintermediate.intermediatethrow {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-signal-intermediate.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .signalintermediate.intermediatecatch {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/signal-event.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .complexgateway .processviewer-hotspot-icon {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-complex-gateway.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .receivetask {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-receive-task.png', sizingMethod='scale')";
+    border: none;
+}
+.processviewer-ie8 .sendtask {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-send-task.png', sizingMethod='scale')";
+    border: none;
+}
+.processviewer-ie8 .linkintermediate.intermediatecatch {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-link_intermediate_event.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .linkintermediate.intermediatethrow {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-link_intermediate_throw_event.png', sizingMethod='scale')";
+    border: none;
+    background: none;
+}
+.processviewer-ie8 .dataobject {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-data-object.png', sizingMethod='scale')";
+    background: none;
+    border: none;
+}
+.processviewer-ie8 .textannotation {
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='jquery/common/bizagi.processviewer/css/images/ie8-text-annotation.png', sizingMethod='scale')";
+    background: none;
+    border: none;
+}
+.processviewer-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.processviewer-application-container {
+    overflow: hidden;
+    position: relative;
+}
+.processviewer-control {
+    position: absolute;
+    left: 50%;
+    bottom: .5em;
+    z-index: 20;
+    width: 300px;
+    padding: 0;
+    border-radius: 6px;
+    margin-left: -150px;
+}
+.processviewer-center-message {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    width: 50%;
+    height: 20px;
+    text-align: center;
+    background-color: rgba(0,0,0,.1);
+    border-radius: 5px;
+    line-height: 20px;
+}
+.processviewer-hotspots-container {
+    z-index: 1;
+}
+#processviewer-content-kinetic {
+    position: relative;
+}
+.processviewer-pane-cursor {
+    cursor: move;
+}
+.processviewer-inline {
+    display: inline-block;
+    vertical-align: middle;
+}
+button.processviewer-resetZoom-button.ui-button>svg {
+    fill: white;
+}
+button.processviewer-resetZoom-button.ui-button {
+    position: absolute;
+    padding: 1px;
+    left: -10%;
+    display: flex;
+}
+.processviewer-slider {
+    display: inline-block;
+    width: 75%;
+    border-radius: 6px;
+}
+.kineticjs-content {
+    background-color: #fff;
+}
+.processviewer-pane-preview {
+    border: 1px solid #ccc;
+    position: absolute;
+    right: 34px;
+    top: 10px;
+    z-index: 10;
+    overflow: hidden;
+    max-width: 150px;
+}
+.processviewer-pane-preview .processviewer-pane-square {
+    position: absolute;
+    background: rgba(0,0,0,.1);
+    top: 0;
+    left: 0;
+    border: solid 1px #e75200;
+}
+.processviewer-hotspot {
+    position: absolute;
+    box-sizing: border-box;
+}
+.processviewer-svg {
+    display: block;
+}
+.processviewer-hotspot-div.circle {
+    border-radius: 100%;
+}
+.processviewer-hotspot-image img {
+    width: 100%;
+    height: 100%;
+}
+.processviewer-container-hover {
+    display: none;
+    position: absolute;
+    right: -30px;
+    padding-left: 10px;
+    top: 0;
+}
+.processviewer-hotspot:hover .processviewer-container-hover {
+    display: block;
+}
+.processviewer-hover {
+    display: block;
+    font-size: 100%;
+    margin-bottom: 4px;
+}
+.processviewer-options {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    width: 60px;
+}
+.processviewer-value-tooltip {
+    border-radius: 6px;
+    opacity: 0;
+    position: absolute;
+    right: -10px;
+    top: -19px;
+    bottom: -17px;
+    min-width: 40px;
+    background-color: rgba(248,248,248,.9);
+    border: 1px solid rgba(231,82,0,.5);
+    font-size: .75em;
+    padding: 3px 0;
+    text-align: center;
+    -webkit-transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -o-transition: opacity .25s ease-in-out;
+    transition: opacity .25s ease-in-out;
+}
+.ui-slider-handle:hover .processviewer-value-tooltip {
+    opacity: 1;
+}
+.ui-for-desktop {
+    margin-bottom: 12px;
+}
+.processviewer-control .ui-slider-horizontal {
+    height: 20px;
+    border-color: rgba(41,63,85,.9);
+    padding: 1px 2px;
+    border-radius: 14px 0 0 14px;
+    background: none #e6e6e6;
+    box-shadow: inset 0 1px 0 0 #ccc,inset 0 -1px 0 0 #ddd;
+}
+.processviewer-slider-percent {
+    font-size: .75em;
+    margin-left: 15px;
+    display: none;
+}
+.processviewer-container .btn {
+    width: 60px;
+    min-height: 44px;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    border-right: 1px solid #d8d8d8;
+    background-image: none;
+    background: transparent;
+    box-shadow: none;
+    line-height: 32px;
+}
+.processviewer-container .btn-default {
+    border: none;
+}
+.processviewer-wrapper {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.processviewer-container {
+    background: #fff;
+}
+.processviewer-slider-container .ui-slider-handle {
+    border-radius: 1em;
+}
+.ui-slider-horizontal .ui-slider-handle {
+    margin-top: -4px;
+    background: #293f55;
+    border-color: #293f55;
+    border-width: 2px;
+    transition: border .2s ease,width .2s ease,height .2s ease,top .2s ease,margin-left .2s ease;
+    width: 4em;
+    height: 18px;
+    top: .5em;
+}
+.ui-draggable-dragging {
+    list-style: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+}
+[role="widget.bizagi.processviewer"] {
+    overflow: hidden;
+    padding: 1em;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    margin: 1.5em 0;
+    background: #fff;
+}
+.ui-scroll-touch {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.processviewer-slider-output {
+    opacity: 0;
+    display: block;
+    width: 40px;
+    height: 0;
+    border-radius: 3px;
+    margin: 1em auto 0;
+    background-color: rgba(41,63,85,.95);
+    color: #fff;
+    font-size: 10px;
+    line-height: 24px;
+    text-align: center;
+    transition: opacity .5s ease;
+}
+.processviewer-slider-output.is-visible-output {
+    opacity: 1;
+}
+input[type="range"] {
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: rgba(255,255,255,0);
+    width: 100%;
+    height: 20px;
+    margin: .25em 0 .5em;
+    border: none;
+    padding: 1px 2px;
+    border-radius: 14px;
+    background: #e6e6e6;
+    box-shadow: inset 0 1px 0 0 #ccc,inset 0 -1px 0 0 #ddd;
+    outline: none;
+}
+input[type="range"]::-moz-range-track {
+    border: inherit;
+    background: transparent;
+}
+input[type="range"]::-ms-track {
+    border: inherit;
+    color: transparent;
+    background: transparent;
+}
+input[type="range"]::-ms-fill-lower, input[type="range"]::-ms-fill-upper {
+    background: transparent;
+}
+input[type="range"]::-ms-tooltip {
+    display: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 40px;
+    height: 18px;
+    border: none;
+    border-radius: 12px;
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#293f55),color-stop(100%,#445f79));
+    background-image: -webkit-linear-gradient(top,#293f55 0,#445f79 100%);
+    background-image: linear-gradient(to bottom,#293f55 0,#445f79 100%);
+}
+input[type="range"]::-moz-range-thumb {
+    width: 40px;
+    height: 18px;
+    border: none;
+    border-radius: 12px;
+    background-image: linear-gradient(to bottom,#293f55 0,#445f79 100%);
+}
+input[type="range"]::-ms-thumb {
+    width: 40px;
+    height: 18px;
+    border-radius: 12px;
+    border: 0;
+    background-image: linear-gradient(to bottom,#293f55 0,#445f79 100%);
+}
+.sliderTooltip {
+    display: none;
+    text-align: center;
+    position: absolute;
+    top: -26px;
+    left: 40%;
+    width: 40px;
+    height: 24px;
+    border-radius: 3px;
+    background-color: #293f55;
+    color: #fff;
+    font-size: 10px;
+    line-height: 24px;
+    transition: opacity .5s ease;
+}
+.processviewer-control:hover .sliderTooltip {
+    display: block;
+}
+.processviewer-control:active .sliderTooltip {
+    display: block;
+}
+.sliderBarRightSide {
+    display: inline-block;
+    background: none #e6e6e6;
+    padding: 1px 2px;
+    vertical-align: top;
+    height: 20px;
+    margin-left: -13px;
+    width: 5.3em;
+    box-shadow: inset 0 1px 0 0 #ccc,inset 0 -1px 0 0 #ddd;
+    border-radius: 14px;
+}
+.wdg-processviewer {
+    position: relative;
+}
+@font-face {
+    font-family: "bizagi-font";
+    src: url("fonts/bizagi-font/bizagi-font.woff") format("woff"),url("fonts/bizagi-font/bizagi-font.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+.bz-icon {
+    font-family: "bizagi-font";
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    font-weight: normal;
+    font-style: normal;
+    speak: none;
+    text-decoration: inherit;
+    text-transform: none;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.bz-icon-1-point:before {
+    content: "";
+}
+.bz-icon-2-point:before {
+    content: "";
+}
+.bz-icon-3-point:before {
+    content: "";
+}
+.bz-icon-abort-outline:before {
+    content: "";
+}
+.bz-icon-accessibility-outline:before {
+    content: "";
+}
+.bz-icon-accessibility:before {
+    content: "󡀔";
+}
+.bz-icon-activity-outline:before {
+    content: "";
+}
+.bz-icon-activity:before {
+    content: "󡀕";
+}
+.bz-icon-activityfeed-overdue:before {
+    content: "󱄋";
+}
+.bz-icon-activityfeed-upcoming:before {
+    content: "󱄜";
+}
+.bz-icon-add-attribute:before {
+    content: "󡁱";
+}
+.bz-icon-add-options:before {
+    content: "";
+}
+.bz-icon-add-register:before {
+    content: "";
+}
+.bz-icon-add-sentence:before {
+    content: "󡁲";
+}
+.bz-icon-admin-template-outline:before {
+    content: "";
+}
+.bz-icon-alarm-outline:before {
+    content: "";
+}
+.bz-icon-alarm:before {
+    content: "󡀖";
+}
+.bz-icon-alert:before {
+    content: "";
+}
+.bz-icon-applications-outline:before {
+    content: "";
+}
+.bz-icon-arrow-down-outline:before {
+    content: "";
+}
+.bz-icon-arrow-left-outline:before {
+    content: "";
+}
+.bz-icon-arrow-new-process:before {
+    content: "";
+}
+.bz-icon-arrow-right-outline:before {
+    content: "";
+}
+.bz-icon-arrow-up-outline:before {
+    content: "";
+}
+.bz-icon-assign-outline:before {
+    content: "";
+}
+.bz-icon-association:before {
+    content: "";
+}
+.bz-icon-asynchronous-outline:before {
+    content: "";
+}
+.bz-icon-asynchronous:before {
+    content: "󡀗";
+}
+.bz-icon-attributes:before {
+    content: "󡁙";
+}
+.bz-icon-authentication-outline:before {
+    content: "";
+}
+.bz-icon-authentication:before {
+    content: "󡀘";
+}
+.bz-icon-bell:before {
+    content: "";
+}
+.bz-icon-bizagi-font-category:before {
+    content: "";
+}
+.bz-icon-bookmark:before {
+    content: "󡁰";
+}
+.bz-icon-boolean:before {
+    content: "";
+}
+.bz-icon-bottom-to-top:before {
+    content: "";
+}
+.bz-icon-bz-above:before {
+    content: "";
+}
+.bz-icon-bz-actions:before {
+    content: "";
+}
+.bz-icon-bz-add-massive-vocabulary:before {
+    content: "";
+}
+.bz-icon-bz-add-new-actions:before {
+    content: "";
+}
+.bz-icon-bz-add-sugested:before {
+    content: "";
+}
+.bz-icon-bz-add-window:before {
+    content: "";
+}
+.bz-icon-bz-admin-user:before {
+    content: "";
+}
+.bz-icon-bz-alarm-jobs:before {
+    content: "";
+}
+.bz-icon-bz-all:before {
+    content: "";
+}
+.bz-icon-bz-alow:before {
+    content: "";
+}
+.bz-icon-bz-arrow-process:before {
+    content: "";
+}
+.bz-icon-bz-attributes:before {
+    content: "";
+}
+.bz-icon-bz-cascading-combo:before {
+    content: "";
+}
+.bz-icon-bz-change-process:before {
+    content: "";
+}
+.bz-icon-bz-checked:before {
+    content: "";
+}
+.bz-icon-bz-collapsed-process:before {
+    content: "";
+}
+.bz-icon-bz-date:before {
+    content: "";
+}
+.bz-icon-bz-diagram:before {
+    content: "";
+}
+.bz-icon-bz-diagrams:before {
+    content: "";
+}
+.bz-icon-bz-direct-collections:before {
+    content: "";
+}
+.bz-icon-bz-discussion:before {
+    content: "";
+}
+.bz-icon-bz-discussions:before {
+    content: "";
+}
+.bz-icon-bz-document:before {
+    content: "";
+}
+.bz-icon-bz-duplicate:before {
+    content: "";
+}
+.bz-icon-bz-edit-entity:before {
+    content: "";
+}
+.bz-icon-bz-edit-outline:before {
+    content: "";
+}
+.bz-icon-bz-edit-process:before {
+    content: "";
+}
+.bz-icon-bz-edit-proess:before {
+    content: "";
+}
+.bz-icon-bz-edit:before {
+    content: "";
+}
+.bz-icon-bz-editable:before {
+    content: "";
+}
+.bz-icon-bz-element-receive:before {
+    content: "";
+}
+.bz-icon-bz-embedded-process:before {
+    content: "";
+}
+.bz-icon-bz-entity-properties:before {
+    content: "";
+}
+.bz-icon-bz-environment:before {
+    content: "";
+}
+.bz-icon-bz-expand:before {
+    content: "";
+}
+.bz-icon-bz-flash:before {
+    content: "";
+}
+.bz-icon-bz-folder:before {
+    content: "";
+}
+.bz-icon-bz-free-support:before {
+    content: "";
+}
+.bz-icon-bz-general-options:before {
+    content: "";
+}
+.bz-icon-bz-group-process:before {
+    content: "";
+}
+.bz-icon-bz-hexagon-double:before {
+    content: "";
+}
+.bz-icon-bz-hold-move:before {
+    content: "";
+}
+.bz-icon-bz-home:before {
+    content: "";
+}
+.bz-icon-bz-indirect-collections:before {
+    content: "";
+}
+.bz-icon-bz-jobs-outline:before {
+    content: "";
+}
+.bz-icon-bz-jobs:before {
+    content: "";
+}
+.bz-icon-bz-layout:before {
+    content: "";
+}
+.bz-icon-bz-light-box:before {
+    content: "";
+}
+.bz-icon-bz-link-suggested:before {
+    content: "";
+}
+.bz-icon-bz-localization-external:before {
+    content: "";
+}
+.bz-icon-bz-m-custom-artifact:before {
+    content: "";
+}
+.bz-icon-bz-manufacturing:before {
+    content: "";
+}
+.bz-icon-bz-moon:before {
+    content: "";
+}
+.bz-icon-bz-new-diagrams:before {
+    content: "";
+}
+.bz-icon-bz-new-entity:before {
+    content: "";
+}
+.bz-icon-bz-new-quick-process:before {
+    content: "";
+}
+.bz-icon-bz-new-searches:before {
+    content: "";
+}
+.bz-icon-bz-number-range:before {
+    content: "";
+}
+.bz-icon-bz-number:before {
+    content: "";
+}
+.bz-icon-bz-off:before {
+    content: "";
+}
+.bz-icon-bz-pendings:before {
+    content: "";
+}
+.bz-icon-bz-pilots:before {
+    content: "";
+}
+.bz-icon-bz-plans-closed:before {
+    content: "";
+}
+.bz-icon-bz-plans-in-action:before {
+    content: "";
+}
+.bz-icon-bz-plans-pending:before {
+    content: "";
+}
+.bz-icon-bz-process:before {
+    content: "";
+}
+.bz-icon-bz-publish:before {
+    content: "";
+}
+.bz-icon-bz-published:before {
+    content: "";
+}
+.bz-icon-bz-radio:before {
+    content: "";
+}
+.bz-icon-bz-refresh:before {
+    content: "";
+}
+.bz-icon-bz-related-entity:before {
+    content: "";
+}
+.bz-icon-bz-reports:before {
+    content: "";
+}
+.bz-icon-bz-reusable-process:before {
+    content: "";
+}
+.bz-icon-bz-save:before {
+    content: "";
+}
+.bz-icon-bz-scheduler:before {
+    content: "";
+}
+.bz-icon-bz-speedometer:before {
+    content: "";
+}
+.bz-icon-bz-steps:before {
+    content: "";
+}
+.bz-icon-bz-suggested:before {
+    content: "";
+}
+.bz-icon-bz-sun:before {
+    content: "";
+}
+.bz-icon-bz-system-jobs:before {
+    content: "";
+}
+.bz-icon-bz-text-note:before {
+    content: "";
+}
+.bz-icon-bz-theme:before {
+    content: "";
+}
+.bz-icon-bz-tracing-error:before {
+    content: "";
+}
+.bz-icon-bz-up-down:before {
+    content: "";
+}
+.bz-icon-bz-user-group:before {
+    content: "";
+}
+.bz-icon-bz-user-jobs:before {
+    content: "";
+}
+.bz-icon-bz-view-dependencies:before {
+    content: "";
+}
+.bz-icon-bz-view-only-context-entity-model:before {
+    content: "";
+}
+.bz-icon-bz-views:before {
+    content: "";
+}
+.bz-icon-bz-wait-jobs:before {
+    content: "";
+}
+.bz-icon-bz-work-items:before {
+    content: "";
+}
+.bz-icon-bz-world:before {
+    content: "";
+}
+.bz-icon-calendar-outline:before {
+    content: "";
+}
+.bz-icon-camera:before {
+    content: "";
+}
+.bz-icon-case-add-outline:before {
+    content: "";
+}
+.bz-icon-case-fav-outline:before {
+    content: "";
+}
+.bz-icon-case-outline:before {
+    content: "";
+}
+.bz-icon-case-pending-outline:before {
+    content: "";
+}
+.bz-icon-case-recent:before {
+    content: "󡀚";
+}
+.bz-icon-case-time-outline:before {
+    content: "";
+}
+.bz-icon-case:before {
+    content: "󡀙";
+}
+.bz-icon-change-shape:before {
+    content: "";
+}
+.bz-icon-check-in:before {
+    content: "";
+}
+.bz-icon-check-out:before {
+    content: "";
+}
+.bz-icon-check-outline:before {
+    content: "󡂒";
+}
+.bz-icon-check:before {
+    content: "";
+}
+.bz-icon-checkbox-checked:before {
+    content: "";
+}
+.bz-icon-checkbox-unchecked:before {
+    content: "";
+}
+.bz-icon-checklist-outline:before {
+    content: "";
+}
+.bz-icon-checklist:before {
+    content: "󡀛";
+}
+.bz-icon-childrens:before {
+    content: "";
+}
+.bz-icon-clip-add-outline:before {
+    content: "󡂈";
+}
+.bz-icon-clip-outline:before {
+    content: "";
+}
+.bz-icon-clip:before {
+    content: "󡀜";
+}
+.bz-icon-close-outline:before {
+    content: "";
+}
+.bz-icon-close:before {
+    content: "󡁗";
+}
+.bz-icon-closed-outline:before {
+    content: "󡂉";
+}
+.bz-icon-cloud:before {
+    content: "󡂃";
+}
+.bz-icon-code-conditional-active:before {
+    content: "󡁴";
+}
+.bz-icon-code-conditional:before {
+    content: "󡁯";
+}
+.bz-icon-code-rule:before {
+    content: "󡁮";
+}
+.bz-icon-cog-outline:before {
+    content: "";
+}
+.bz-icon-cog:before {
+    content: "󡀝";
+}
+.bz-icon-cogs:before {
+    content: "󡀞";
+}
+.bz-icon-coin:before {
+    content: "󡁘";
+}
+.bz-icon-collections:before {
+    content: "";
+}
+.bz-icon-columns-outline:before {
+    content: "";
+}
+.bz-icon-comment-add-outline:before {
+    content: "";
+}
+.bz-icon-comment-outline:before {
+    content: "";
+}
+.bz-icon-comment:before {
+    content: "󡀟";
+}
+.bz-icon-comments:before {
+    content: "";
+}
+.bz-icon-connector-outline:before {
+    content: "";
+}
+.bz-icon-connector:before {
+    content: "󡀆";
+}
+.bz-icon-cross-deployment:before {
+    content: "";
+}
+.bz-icon-currency-outline:before {
+    content: "󡂖";
+}
+.bz-icon-currency:before {
+    content: "󡀈";
+}
+.bz-icon-database-outline:before {
+    content: "";
+}
+.bz-icon-database:before {
+    content: "󡀠";
+}
+.bz-icon-date:before {
+    content: "";
+}
+.bz-icon-desktop:before {
+    content: "";
+}
+.bz-icon-development-outline:before {
+    content: "󡂔";
+}
+.bz-icon-development:before {
+    content: "󡀉";
+}
+.bz-icon-diagram-outline:before {
+    content: "";
+}
+.bz-icon-diagram:before {
+    content: "󡀡";
+}
+.bz-icon-dimension-outline:before {
+    content: "";
+}
+.bz-icon-dimension:before {
+    content: "󡀢";
+}
+.bz-icon-disk:before {
+    content: "󡀊";
+}
+.bz-icon-document-templates:before {
+    content: "";
+}
+.bz-icon-down-outline:before {
+    content: "";
+}
+.bz-icon-down:before {
+    content: "󡀣";
+}
+.bz-icon-download:before {
+    content: "";
+}
+.bz-icon-drag-and-drop:before {
+    content: "";
+}
+.bz-icon-drag-outline:before {
+    content: "󡂕";
+}
+.bz-icon-drag:before {
+    content: "󡀀";
+}
+.bz-icon-edit-core-process:before {
+    content: "";
+}
+.bz-icon-edit-management-process:before {
+    content: "";
+}
+.bz-icon-edit-support-process:before {
+    content: "";
+}
+.bz-icon-edit:before {
+    content: "󡀤";
+}
+.bz-icon-entity-outline:before {
+    content: "󡂗";
+}
+.bz-icon-entity:before {
+    content: "󡀋";
+}
+.bz-icon-envelope-outline:before {
+    content: "";
+}
+.bz-icon-environment-custom:before {
+    content: "󡂂";
+}
+.bz-icon-environment-default:before {
+    content: "󡂁";
+}
+.bz-icon-environment-shared:before {
+    content: "󡁺";
+}
+.bz-icon-environment:before {
+    content: "󡁹";
+}
+.bz-icon-error:before {
+    content: "󡁫";
+}
+.bz-icon-event-outline:before {
+    content: "";
+}
+.bz-icon-execute:before {
+    content: "󡁖";
+}
+.bz-icon-executing-outline:before {
+    content: "󡂊";
+}
+.bz-icon-extended-text:before {
+    content: "";
+}
+.bz-icon-extended-text:before {
+    content: "󡀌";
+}
+.bz-icon-eye:before {
+    content: "󡀥";
+}
+.bz-icon-file-text-o-o:before {
+    content: "󡀅";
+}
+.bz-icon-file:before {
+    content: "";
+}
+.bz-icon-filter-native:before {
+    content: "";
+}
+.bz-icon-filter-outline:before {
+    content: "";
+}
+.bz-icon-filter:before {
+    content: "󡀦";
+}
+.bz-icon-folder-add-outline:before {
+    content: "";
+}
+.bz-icon-folder-move-outline:before {
+    content: "";
+}
+.bz-icon-folder-outline:before {
+    content: "";
+}
+.bz-icon-folder:before {
+    content: "󡀧";
+}
+.bz-icon-form-outline:before {
+    content: "";
+}
+.bz-icon-form:before {
+    content: "󡀨";
+}
+.bz-icon-gift-outline:before {
+    content: "";
+}
+.bz-icon-grid-outline:before {
+    content: "";
+}
+.bz-icon-grid:before {
+    content: "󡁚";
+}
+.bz-icon-group:before {
+    content: "";
+}
+.bz-icon-help-outline:before {
+    content: "󡂝";
+}
+.bz-icon-help:before {
+    content: "";
+}
+.bz-icon-hexagon-all:before {
+    content: "󡂀";
+}
+.bz-icon-hexagon-development:before {
+    content: "󡁼";
+}
+.bz-icon-hexagon-download:before {
+    content: "󡁟";
+}
+.bz-icon-hexagon-empty:before {
+    content: "";
+}
+.bz-icon-hexagon-execute:before {
+    content: "󡁶";
+}
+.bz-icon-hexagon-external:before {
+    content: "󡁷";
+}
+.bz-icon-hexagon-info:before {
+    content: "󡁠";
+}
+.bz-icon-hexagon-isolated:before {
+    content: "󡁻";
+}
+.bz-icon-hexagon-new:before {
+    content: "󡁡";
+}
+.bz-icon-hexagon-person:before {
+    content: "󡁸";
+}
+.bz-icon-hexagon-production:before {
+    content: "󡁿";
+}
+.bz-icon-hexagon-staging:before {
+    content: "󡁽";
+}
+.bz-icon-hexagon-support:before {
+    content: "󡁢";
+}
+.bz-icon-hexagon-testing:before {
+    content: "󡁾";
+}
+.bz-icon-hexagon-upload:before {
+    content: "󡁣";
+}
+.bz-icon-hide:before {
+    content: "󡀩";
+}
+.bz-icon-holidays-outline:before {
+    content: "";
+}
+.bz-icon-holidays:before {
+    content: "";
+}
+.bz-icon-home-outline:before {
+    content: "";
+}
+.bz-icon-home:before {
+    content: "󡀪";
+}
+.bz-icon-icons:before {
+    content: "";
+}
+.bz-icon-if-active:before {
+    content: "󡂇";
+}
+.bz-icon-if:before {
+    content: "󡁵";
+}
+.bz-icon-image:before {
+    content: "";
+}
+.bz-icon-inbox-outline:before {
+    content: "";
+}
+.bz-icon-inbox:before {
+    content: "󡀫";
+}
+.bz-icon-indirect-collections:before {
+    content: "";
+}
+.bz-icon-info-outline:before {
+    content: "";
+}
+.bz-icon-info:before {
+    content: "󡀬";
+}
+.bz-icon-integer-unique:before {
+    content: "";
+}
+.bz-icon-integer:before {
+    content: "󡀍";
+}
+.bz-icon-interface-o:before {
+    content: "󡀄";
+}
+.bz-icon-interface:before {
+    content: "󡀁";
+}
+.bz-icon-key-outline:before {
+    content: "󡂙";
+}
+.bz-icon-leave-outline:before {
+    content: "";
+}
+.bz-icon-leave:before {
+    content: "󡀭";
+}
+.bz-icon-left-outline:before {
+    content: "";
+}
+.bz-icon-left-to-right:before {
+    content: "";
+}
+.bz-icon-license-outline:before {
+    content: "";
+}
+.bz-icon-license:before {
+    content: "󡀮";
+}
+.bz-icon-list-outline:before {
+    content: "";
+}
+.bz-icon-list:before {
+    content: "󡁛";
+}
+.bz-icon-localization:before {
+    content: "󡀇";
+}
+.bz-icon-lock-outline:before {
+    content: "";
+}
+.bz-icon-lock-user-outline:before {
+    content: "";
+}
+.bz-icon-lock:before {
+    content: "󡀯";
+}
+.bz-icon-log-out:before {
+    content: "󡁜";
+}
+.bz-icon-log-outline:before {
+    content: "";
+}
+.bz-icon-log:before {
+    content: "󡀰";
+}
+.bz-icon-login-outline:before {
+    content: "";
+}
+.bz-icon-login-qr:before {
+    content: "";
+}
+.bz-icon-login-server:before {
+    content: "";
+}
+.bz-icon-login-user:before {
+    content: "";
+}
+.bz-icon-logout-outline:before {
+    content: "";
+}
+.bz-icon-management-process:before {
+    content: "";
+}
+.bz-icon-master:before {
+    content: "󡀎";
+}
+.bz-icon-maximize-outline:before {
+    content: "";
+}
+.bz-icon-menu-h-items-outline:before {
+    content: "";
+}
+.bz-icon-menu-items:before {
+    content: "󡂄";
+}
+.bz-icon-menu-outline:before {
+    content: "";
+}
+.bz-icon-menu:before {
+    content: "󡀱";
+}
+.bz-icon-minimize-close-outline:before {
+    content: "";
+}
+.bz-icon-minimize-outline:before {
+    content: "";
+}
+.bz-icon-minus-outline:before {
+    content: "";
+}
+.bz-icon-minus:before {
+    content: "󡁝";
+}
+.bz-icon-mobile-horizontal:before {
+    content: "";
+}
+.bz-icon-mobile:before {
+    content: "";
+}
+.bz-icon-modeler-download-outline:before {
+    content: "";
+}
+.bz-icon-modeler-help-outline:before {
+    content: "";
+}
+.bz-icon-modeler-upload-outline:before {
+    content: "";
+}
+.bz-icon-money:before {
+    content: "";
+}
+.bz-icon-move-folder:before {
+    content: "";
+}
+.bz-icon-new-diagram:before {
+    content: "";
+}
+.bz-icon-new-close-outline:before {
+    content: "";
+}
+.bz-icon-new-diagram:before {
+    content: "";
+}
+.bz-icon-new-down-outline:before {
+    content: "";
+}
+.bz-icon-new-entity-outline:before {
+    content: "";
+}
+.bz-icon-new-entity:before {
+    content: "";
+}
+.bz-icon-new-outline:before {
+    content: "";
+}
+.bz-icon-new-shortcut-outline:before {
+    content: "";
+}
+.bz-icon-new-up-outline:before {
+    content: "";
+}
+.bz-icon-new-value-chain-diagram:before {
+    content: "";
+}
+.bz-icon-new:before {
+    content: "󡀲";
+}
+.bz-icon-next:before {
+    content: "󡀳";
+}
+.bz-icon-none:before {
+    content: "";
+}
+.bz-icon-not-found:before {
+    content: "";
+}
+.bz-icon-number-outline:before {
+    content: "";
+}
+.bz-icon-ontime:before {
+    content: "";
+}
+.bz-icon-open-outline:before {
+    content: "";
+}
+.bz-icon-open:before {
+    content: "󡀴";
+}
+.bz-icon-order-ascendant-outline:before {
+    content: "";
+}
+.bz-icon-order-ascendant:before {
+    content: "󡀶";
+}
+.bz-icon-order-descendant-outline:before {
+    content: "";
+}
+.bz-icon-order-descendant:before {
+    content: "󡀷";
+}
+.bz-icon-order:before {
+    content: "󡀵";
+}
+.bz-icon-overdue-normal:before {
+    content: "";
+}
+.bz-icon-overview-outline:before {
+    content: "";
+}
+.bz-icon-overview:before {
+    content: "󡀸";
+}
+.bz-icon-paint-outline:before {
+    content: "";
+}
+.bz-icon-paint:before {
+    content: "󡀹";
+}
+.bz-icon-panel-outline:before {
+    content: "󡂘";
+}
+.bz-icon-parameter-outline:before {
+    content: "";
+}
+.bz-icon-parameter:before {
+    content: "󡀏";
+}
+.bz-icon-path:before {
+    content: "󡀺";
+}
+.bz-icon-pencil-outline:before {
+    content: "󡂓";
+}
+.bz-icon-pencil:before {
+    content: "";
+}
+.bz-icon-pending-outline:before {
+    content: "󡂋";
+}
+.bz-icon-personas:before {
+    content: "󡂆";
+}
+.bz-icon-picture-outline:before {
+    content: "";
+}
+.bz-icon-picture:before {
+    content: "󡁬";
+}
+.bz-icon-place-holder:before {
+    content: "";
+}
+.bz-icon-plan-activities-outline:before {
+    content: "";
+}
+.bz-icon-plan-activities:before {
+    content: "󡀼";
+}
+.bz-icon-plan-add-outline:before {
+    content: "";
+}
+.bz-icon-plan-closed-outline:before {
+    content: "";
+}
+.bz-icon-plan-closed:before {
+    content: "󡀽";
+}
+.bz-icon-plan-enable:before {
+    content: "󡀾";
+}
+.bz-icon-plan-executing-outline:before {
+    content: "";
+}
+.bz-icon-plan-executing:before {
+    content: "";
+}
+.bz-icon-plan-outline:before {
+    content: "";
+}
+.bz-icon-plan-pending-outline:before {
+    content: "";
+}
+.bz-icon-plan:before {
+    content: "󡀻";
+}
+.bz-icon-play-outline:before {
+    content: "";
+}
+.bz-icon-play:before {
+    content: "󡀿";
+}
+.bz-icon-plus-outline:before {
+    content: "";
+}
+.bz-icon-plus:before {
+    content: "󡁤";
+}
+.bz-icon-point:before {
+    content: "󡁀";
+}
+.bz-icon-policy-outline:before {
+    content: "";
+}
+.bz-icon-policy-st-outline:before {
+    content: "";
+}
+.bz-icon-policy:before {
+    content: "󡀂";
+}
+.bz-icon-polymorphic-launcher:before {
+    content: "";
+}
+.bz-icon-prev:before {
+    content: "󡁁";
+}
+.bz-icon-preview-diagram:before {
+    content: "";
+}
+.bz-icon-print:before {
+    content: "";
+}
+.bz-icon-process-native:before {
+    content: "";
+}
+.bz-icon-process:before {
+    content: "󡁭";
+}
+.bz-icon-production:before {
+    content: "󡀐";
+}
+.bz-icon-project-name-outline:before {
+    content: "";
+}
+.bz-icon-radio-checked-full:before {
+    content: "";
+}
+.bz-icon-radio-checked:before {
+    content: "";
+}
+.bz-icon-radio-unchecked:before {
+    content: "";
+}
+.bz-icon-relevant-add:before {
+    content: "";
+}
+.bz-icon-relevant-fill:before {
+    content: "";
+}
+.bz-icon-relevant:before {
+    content: "";
+}
+.bz-icon-reload:before {
+    content: "󡁃";
+}
+.bz-icon-reply:before {
+    content: "󡁥";
+}
+.bz-icon-reports-outline:before {
+    content: "";
+}
+.bz-icon-reports:before {
+    content: "󡁄";
+}
+.bz-icon-reset:before {
+    content: "󡁦";
+}
+.bz-icon-restore-outline:before {
+    content: "";
+}
+.bz-icon-reverse:before {
+    content: "";
+}
+.bz-icon-right-outline:before {
+    content: "";
+}
+.bz-icon-right-to-left:before {
+    content: "";
+}
+.bz-icon-right:before {
+    content: "󡁧";
+}
+.bz-icon-rules:before {
+    content: "󡁅";
+}
+.bz-icon-sap:before {
+    content: "󡀃";
+}
+.bz-icon-save-outline:before {
+    content: "";
+}
+.bz-icon-save:before {
+    content: "";
+}
+.bz-icon-search-down-arrow:before {
+    content: "";
+}
+.bz-icon-search-list:before {
+    content: "";
+}
+.bz-icon-search-outline:before {
+    content: "";
+}
+.bz-icon-search-register:before {
+    content: "";
+}
+.bz-icon-search:before {
+    content: "󡁆";
+}
+.bz-icon-select-register:before {
+    content: "";
+}
+.bz-icon-sentence-form-outline:before {
+    content: "";
+}
+.bz-icon-sentence-rule-outline:before {
+    content: "";
+}
+.bz-icon-share-outline:before {
+    content: "󡂚";
+}
+.bz-icon-share:before {
+    content: "󡁨";
+}
+.bz-icon-sheet-pencil:before {
+    content: "󡁈";
+}
+.bz-icon-sheet:before {
+    content: "󡁇";
+}
+.bz-icon-show-actions:before {
+    content: "";
+}
+.bz-icon-sign-out-outline:before {
+    content: "";
+}
+.bz-icon-sign-out:before {
+    content: "󡁉";
+}
+.bz-icon-stakeholder-outline:before {
+    content: "";
+}
+.bz-icon-stakeholder:before {
+    content: "󡀑";
+}
+.bz-icon-stakeholders-outline:before {
+    content: "";
+}
+.bz-icon-stakeholders:before {
+    content: "󡂅";
+}
+.bz-icon-star-outline:before {
+    content: "";
+}
+.bz-icon-star:before {
+    content: "";
+}
+.bz-icon-string-outline:before {
+    content: "";
+}
+.bz-icon-string-pencil-outline:before {
+    content: "";
+}
+.bz-icon-string-underline:before {
+    content: "";
+}
+.bz-icon-string:before {
+    content: "󡀒";
+}
+.bz-icon-stuff:before {
+    content: "󡁞";
+}
+.bz-icon-suggested-outline:before {
+    content: "";
+}
+.bz-icon-support-outline:before {
+    content: "";
+}
+.bz-icon-support-process:before {
+    content: "";
+}
+.bz-icon-tablet-horizontal:before {
+    content: "";
+}
+.bz-icon-tablet:before {
+    content: "";
+}
+.bz-icon-tag:before {
+    content: "󡁊";
+}
+.bz-icon-team:before {
+    content: "󡁩";
+}
+.bz-icon-template-outline:before {
+    content: "";
+}
+.bz-icon-template:before {
+    content: "󡁂";
+}
+.bz-icon-test:before {
+    content: "󡀓";
+}
+.bz-icon-text-area:before {
+    content: "";
+}
+.bz-icon-text-note:before {
+    content: "";
+}
+.bz-icon-three-points:before {
+    content: "";
+}
+.bz-icon-timeline-outline:before {
+    content: "";
+}
+.bz-icon-top-to-bottom:before {
+    content: "";
+}
+.bz-icon-trash-outline:before {
+    content: "";
+}
+.bz-icon-trash:before {
+    content: "󡁋";
+}
+.bz-icon-turn-outline:before {
+    content: "";
+}
+.bz-icon-type-new-case:before {
+    content: "";
+}
+.bz-icon-unlinked:before {
+    content: "";
+}
+.bz-icon-unlock-outline:before {
+    content: "";
+}
+.bz-icon-unlock:before {
+    content: "󡁌";
+}
+.bz-icon-up-outline:before {
+    content: "";
+}
+.bz-icon-up:before {
+    content: "󡁳";
+}
+.bz-icon-upcoming-normal:before {
+    content: "";
+}
+.bz-icon-update:before {
+    content: "󡂎";
+}
+.bz-icon-upgrade-outline:before {
+    content: "";
+}
+.bz-icon-upgrade:before {
+    content: "󡁪";
+}
+.bz-icon-user-data:before {
+    content: "󡁎";
+}
+.bz-icon-user-manage-outline:before {
+    content: "";
+}
+.bz-icon-user-manage:before {
+    content: "󡁏";
+}
+.bz-icon-user-outline:before {
+    content: "";
+}
+.bz-icon-user:before {
+    content: "󡁍";
+}
+.bz-icon-users-outline:before {
+    content: "";
+}
+.bz-icon-users:before {
+    content: "󡁐";
+}
+.bz-icon-value-chain-diagram-horizontal:before {
+    content: "";
+}
+.bz-icon-value-chain-diagram:before {
+    content: "";
+}
+.bz-icon-warning-outline:before {
+    content: "";
+}
+.bz-icon-watch-close:before {
+    content: "󡁒";
+}
+.bz-icon-watch-pending-outline:before {
+    content: "󡂏";
+}
+.bz-icon-watch-progress-outline:before {
+    content: "";
+}
+.bz-icon-watch-progress:before {
+    content: "󡁓";
+}
+.bz-icon-watch:before {
+    content: "󡁑";
+}
+.bz-icon-window-create-outline:before {
+    content: "󡂛";
+}
+.bz-icon-window-export-outline:before {
+    content: "󡂜";
+}
+.bz-icon-wizard-outline:before {
+    content: "";
+}
+.bz-icon-work-items:before {
+    content: "";
+}
+.bz-icon-world-outline:before {
+    content: "";
+}
+.bz-icon-world:before {
+    content: "󡁔";
+}
+.bz-icon-zoom-in-outline:before {
+    content: "";
+}
+.bz-icon-zoom-out-outline:before {
+    content: "";
+}
+.bz-icon-zoom-reset-outline:before {
+    content: "";
+}
+.bz-icon-zoom:before {
+    content: "󡁕";
+}

@@ -1,0 +1,82 @@
+@background: "";
+@text: "";
+@title: "";
+@navigation-border: "";
+@navigation:"";
+@navigation-link:"" ;
+@content-border: "";
+@pane: "";
+@content: "";
+@content-link: "";
+@menu-start: "";
+@menu-end: "";
+@inbox-start: "";
+@inbox-end: "";
+@footer-start: "";
+@footer-end: "";
+@font-family:"";
+
+.border-radius(@radius: 0) when (@active-border-radius = false) {
+    -webkit-border-radius: 0;
+    -moz-border-radius:    0;
+    border-radius:         0;
+}
+
+.border-radius(@radius: 6px) when (@active-border-radius = true) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius:    @radius;
+    border-radius:         @radius;
+}
+.ui-bizagi-webpart-case-summary-container,
+.activitiFormContainer{
+    background-color: @pane;
+    color:@text!important;
+}
+
+.ui-bizagi-webpart-case-summary-details-tabs #details,
+.ui-bizagi-webpart-case-summary-details-tabs #assignees,
+.ui-bizagi-webpart-case-summary-details-tabs #subprocess,
+.ui-bizagi-webpart-case-summary-details-tabs #details,
+.ui-bizagi-webpart-case-summary-details-tabs #events,
+.ui-bizagi-webpart-case-summary-description{
+    .border-radius();
+    border-color: @content-border;
+    color: @text;
+    background: @content;
+}
+
+.ui-bizagi-webpart-case-summary-details-tabs dd,
+.ui-bizagi-webpart-case-summary-description .box-description dd{    
+    background: darken(@content, 10%); 
+}
+
+.ui-bizagi-webpart-case-summary-details-tabs h3,
+.ui-bizagi-webpart-case-summary-title{
+    color: @title;
+}
+
+.ui-bizagi-webpart-case-summary-description h2{
+    color: @title;
+    border-bottom: 1px solid @content-border;
+}
+
+.ui-bizagi-webpart-case-summary-details-tabs dt,
+.ui-bizagi-webpart-case-summary-description .box-description dt{
+    color: @text;
+}
+
+.ui-bizagi-webpart-case-summary-description .workonitRow {
+    border-color: lighten(@button, 25%);
+    background-color: @button !important;
+    background-image: none;
+    color: @button-text;
+}
+
+.ui-bizagi-webpart-case-summary-description .workonitRow:hover{
+    border-color: lighten(@button, 25%) !important;
+    background: darken(@button, 5%) !important;
+}
+
+.ui-bizagi-sharepoint-caseSummary{
+    background: @background!important;
+}

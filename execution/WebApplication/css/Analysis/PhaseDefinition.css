@@ -1,0 +1,111 @@
+
+td#columnLeftPanel
+{
+    width: 200px;
+    vertical-align: top;
+}
+
+td#columnRightPanel
+{
+    vertical-align: top;
+}
+
+#lblPhaseListTitle
+{
+    font-weight: bold;
+    height: 20px;
+    font-size: 11;
+}
+
+table#tablePhaseDetail
+{
+    width: 100%;
+    background: #CCD9E5;
+}
+
+.phaseProcessCell
+{
+    width: 200px;
+    height: 16px;
+    background-image: url('../../img/WorkPortal/Menu/GR_BAM_proc_lit.png');
+    background-repeat: no-repeat;
+    text-indent: 17px;
+    font-weight: bold;
+}
+
+.phaseCell
+{
+    cursor: pointer;
+    width: 200px;
+    height: 16px;
+    text-indent: 10px;
+    list-style-image: url('../../img/analysis/RedLittleArrow.gif');
+}
+
+.phaseCell_hover
+{
+    cursor: pointer;
+    background-image: url(../../img/WorkPortal/Tree/overTree.gif);
+    background-repeat: repeat-x, repeat-y;
+    height: 16px;
+    text-indent: 10px;
+}
+
+.phaseCell:hover
+{
+    cursor: pointer;
+    background-image: url(../../img/WorkPortal/Tree/overTree.gif);
+    background-repeat: repeat-x, repeat-y;
+    height: 16px;
+}
+.phaseCellSelected
+{
+    cursor: pointer;
+    background-image: url(../../img/WorkPortal/Tree/overTree.gif);
+    background-repeat: repeat-x, repeat-y;
+    height: 16px;
+    text-indent: 10px;
+}
+
+.labelChangeTask:hover
+{
+    cursor: pointer;
+    color: #224466;
+}
+
+.TableReadOnly_Header
+{
+    border-right: #d8d2bd 1px solid;
+    border-left: #d8d2bd 1px solid;
+    border-bottom: #d8d2bd 1px solid;
+    border-top: #d8d2bd 1px solid;
+    background-color: #e6e6e6;
+}
+
+.TableReadOnly_Body
+{
+    border-right: #d8d2bd 1px solid;
+    border-left: #d8d2bd 1px solid;
+    border-bottom: #d8d2bd 1px solid;
+    border-top: #d8d2bd 1px solid;
+    background-color: #f1f1f1;
+}
+
+.TableEdit
+{
+    border-right: #d8d2bd 1px solid;
+    border-left: #d8d2bd 1px solid;
+    border-bottom: #d8d2bd 1px solid;
+    border-top: #d8d2bd 1px solid;
+    background-color: White;
+}
+
+.tableTransparent
+{
+    border-right: #d8d2bd 1px solid;
+    border-left: #d8d2bd 1px solid;
+    border-bottom: #d8d2bd 1px solid;
+    border-top: #d8d2bd 1px solid;
+    background-color: Transparent;
+}
+

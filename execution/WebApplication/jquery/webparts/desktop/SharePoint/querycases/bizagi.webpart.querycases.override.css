@@ -1,0 +1,330 @@
+﻿body
+{
+}
+ 
+
+/*  $__thumbnails
+-------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.bz-wp-querycases-thumbnails-item-actions
+{
+	background-image:url('images/overlay.png') !important;
+	background-repeat:repeat-x !important;
+	font-weight:bold !important;
+}
+.bz-wp-querycases-thumbnails-item
+{
+	vertical-align : top !important;
+}
+
+/*  $__grid
+-------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.bz-wp-querycases-grid tbody td.bz-wp-gridcases-actions-cell-comments button{
+    border: 0px transparent none;
+    background-color: transparent;
+    font-weight: bold;
+    color: olive;
+    font-size: 11px;
+    cursor: pointer;
+} 
+
+
+.bz-wp-querycases-grid thead td label{
+    
+    text-align: center;
+    display: block;
+    position: relative !important;
+    top: -5px !important;
+    color: white;    
+    left: 0px;
+    right: 24px;
+    font-weight: normal !important;
+    font-size: 12px !important;
+    width:auto !important;
+    font:arial !important;
+}
+
+.bz-wp-querycases-grid thead td label:hover
+{
+ /* not sure if this can be comments, but commenting
+text-align: center;
+    display: block;
+    position: relative !important;
+    top: -5px !important; 
+    left: 0px;
+    right: 24px;
+    font-size: 12px !important;
+    width:auto !important;
+    font:arial !important; */
+    
+    /* applying color on hover  -Sandeep */
+    color: #AFBD21 !important; 
+}
+.bz-wp-querycases-grid thead td[data-column-name='CAFRequest.AssetInfo.LastName'] label{
+    
+    text-align: center;
+    display: block;
+    position: relative;
+    top: -5px;
+    color: white;    
+    left: 0px;
+    right: 24px;
+    font-size: 12px;
+    
+    font:arial;
+}
+
+.bz-wp-querycases-grid thead td[data-column-name='CAFRequest.AssetInfo.FirstName'] label{
+    
+    text-align: center;
+    display: block;
+    position: relative;
+    top: -5px;
+    color: white;    
+    left: 0px;
+    right: 24px;
+    font-size: 12px;
+    
+    font:arial;
+}
+
+.bz-wp-querycases-grid thead td[data-column-name='CAFRequest.AssetInfo.NickName'] label{
+    
+    text-align: center;
+    display: block;
+    position: relative;
+    top: -5px;
+    color: white;    
+    left: 0px;
+    right: 24px;
+    font-size: 12px;
+   
+    font:arial;
+}
+
+.bz-wp-querycases-grid thead td[data-column-name='CAFRequest.AssetInfo.SportsCategory.Description'] label{
+    
+    text-align: center;
+    display: block;
+    position: relative;
+    top: -5px;
+    color: white;    
+    left: 0px;
+    right: 24px;
+    font-size: 12px;
+   
+    font:arial;
+}
+
+.bz-wp-querycases-grid thead td[data-column-name='CAFRequest.AssetInfo.Discipline.Description'] label{
+    
+    text-align: center;
+    display: block;
+    position: relative;
+    top: -5px;
+    color: white;
+    
+    left: 0px;
+    right: 24px;
+    font-size: 12px;
+   
+    font:arial;
+}
+
+.bz-wp-querycases-grid thead td[data-column-name='CAFRequest.AssetInfo.AssetType.Description'] label{
+    
+    text-align: center;
+    display: block;
+    position: relative;
+    top: -5px;
+    color: white;
+    
+    left: 0px;
+    right: 24px;
+    font-size: 12px;
+    
+    font:arial;
+}
+
+.bz-wp-querycases-grid thead td[data-column-name='CAFRequest.SubmissionDate'] label{
+    
+    text-align: center;
+    display: block;
+    position: relative;
+    top: -5px;
+    color: white;
+    
+    left: 0px;
+    right: 24px;
+    font-size: 12px;
+   
+    font:arial;
+}
+
+.bz-wp-querycases-grid thead td[data-column-name='CAFRequest.FinalApprovalDate'] label{
+    
+    text-align: center;
+    display: block;
+    position: relative;
+    top: -5px;
+    color: white;
+    
+    left: 0px;
+    right: 24px;
+    font-size: 12px;
+    
+    font:arial;
+}
+
+.bz-wp-querycases-grid thead td[data-column-name='CAFRequest.FinancialInfo.TotalConValueEUR'] label{
+    
+    text-align: center;
+    display: block;
+    position: relative;
+    top: -5px;
+    color: white;
+    
+    left: 0px;
+    right: 24px;
+    font-size: 12px;
+    
+    font:arial;
+}
+
+.bz-wp-querycases-grid thead td[data-column-name='CAFRequest.FinancialInfo.ContractDuration'] label{
+    
+    text-align: center;
+    display: block;
+    position: relative;
+    top: -5px;
+    color: white;
+    
+    left: 0px;
+    right: 24px;
+    font-size: 12px;
+    
+    font:arial;
+}
+
+.bz-wp-querycases-grid thead td[data-column-name='CAFRequest.ApproverName'] label{
+    
+    text-align: center;
+    display: block;
+    position: relative;
+    top: -5px;
+    color: white;
+    
+    left: 0px;
+    right: 24px;
+    font-size: 12px;
+    
+    font:arial;
+}
+.bz-wp-querycases-grid tbody td {
+    text-align: left !important;
+    padding:3px;
+    font-size: 12px !important;
+    border-right: 1px #BBB solid;
+    font-weight:bold !important;
+}
+
+/*advait modifications*/
+.bz-wp-querycases-grid thead tr
+{
+	height:40px !important;
+}
+
+.bz-wp-querycases-grid thead tr td label
+{
+	margin-right: 12px !important;
+}
+.bz-wp-querycases-grid thead td .bz-wp-column-order-up
+{
+	top: -12px !important;
+}
+.bz-wp-querycases-grid thead tr {
+    height: 64px;    
+    background-color: #444;
+    background: url('images/black2grey_gradient_querycases_header.png') !important;
+    background-repeat:repeat-x !important;
+}
+
+.bz-wp-querycases-grid thead td .bz-wp-column-order-down
+{
+	top: -3px !important;
+}
+
+/*  $__pager
+-------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.bz-wp-querycases-pager
+{
+	height:30px !important;
+	margin-bottom : 10px !important;
+}
+.bz-wp-querycases-pager select, .bz-wp-querycases-pager > .ui-bizagi-control
+{
+	top: 1px !important;
+	left : 35% !important;
+}
+.bz-wp-querycases-pager > ul
+{
+	margin-left : none;
+}
+.bz-wp-querycases-pager ul
+{
+	top : 8px !important;
+}
+
+.bz-wp-querycases-pager
+{
+          
+    background-color: #444;
+    background: url('images/black2grey_gradient_querycases_header.png') !important;
+    background-repeat:repeat-x !important;
+}
+
+/*  $__header
+-------------------------------------------------------------------------------------------------------------------------------------------*/
+.bz-wp-querycases
+{
+	padding-bottom : 0px !important;
+	
+}
+.bz-wp-querycases-header
+{
+	border-bottom: none !important;
+	cursor:pointer !important;
+}
+
+/*  $__Other Styles
+-------------------------------------------------------------------------------------------------------------------------------------------*/
+.bz-wp-querycases-dummyHeader
+{
+    padding-bottom : 0px !important;
+    border-top: 2px whiteSmoke solid !important;
+    border-left: 2px whiteSmoke solid !important;
+    border-bottom: 2px #CCC solid !important;
+    border-right: 2px #CCC solid !important;
+    background-color: #f2f2f2 !important;
+    padding: 10px !important;
+    padding-top: 0 !important;
+    margin-top: 10px !important;
+    margin-left: 10px !important;
+    height:32px !important;
+    
+}
+
+.bz-wp-querycases-content
+{
+	padding-bottom: 5px !important;
+}
+bz-wp-gridcases-workflowProgress-header
+{
+    display:none;
+}
+.bz-wp-gridcases-workflowProgress
+{
+    display:none;
+}

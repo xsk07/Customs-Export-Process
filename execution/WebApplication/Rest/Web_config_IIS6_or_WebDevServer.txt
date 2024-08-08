@@ -1,0 +1,72 @@
+﻿<?xml version="1.0"?>
+<configuration>
+
+  <!-- Configuration for IIS 6, IIS 5 or Asp.net Development Server: -->
+  <system.web>
+    <httpHandlers>
+      <add verb="*" path="*" type="BizAgiBPM.Rest.RestServicesHttpHandler"/>
+    </httpHandlers>
+  </system.web>
+
+  <!--
+  Important. For IIS 6 there are two options to enable extensionless URLS for Rest services:
+
+  OPTION 1 (Recommended and used by default in ASP.NET 4 over IIS 6 and Bizagi Installer).
+
+    - Windows registry DWORD key HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ASP.NET\4.0.30319.0\EnableExtensionlessUrls
+	  is not defined or has a value of 1.
+	  Note that for Wow64 (i.e., 32-bit worker process running on 64-bit OS), this registry key must be set at 
+	  HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\ASP.NET\4.0.30319.0\EnableExtensionlessUrls
+    - v4.0 aspnet_filter.dll is registered as an ISAPI Filter in IIS 6.
+    - v4.0 aspnet_isapi.dll is script mapped to ".axd" at the web site level (e.g. "/LM/W3SVC/N/ROOT", where N is the siteID).
+    - v4.0 aspnet_isapi.dll is marked as "Allowed" in the ISAPI Restriction list.
+    - The web site has read and script permission enabled.
+
+    In this case, ASP.NET 4 appends "/eurl.axd/GUID" to any extensionless URL, then, because of script mapping "*.axd", the request is 
+	handled by ISAPI aspnet_isapi.dll, then ASP.NET 4 remove "/eurl.axd/GUID" from the URL, that is, it restore the original URL.
+	Note that in this case aspnet_isapi.dll is only used for extensionless URLs wich is desirable in terms of performance.
+
+
+  OPTION 2 (Not recommended and must be configured manually).
+
+    In case that previous option cannot be used in your web server (for example if it generates any conflict with another web application),
+    follow these steps in IIS 6:
+  
+    Create an ISAPI Wildcard mapping pointing to the ASP.NET ISAPI filter.
+    - Open the IIS Manager and expand the treeview to find your website (not the Web Sites folder).
+    - Right-click your site and choose Properties.
+    - Select the Home Directory tab.
+    - Click the Configuration button.
+    - The Application Mappings tab should be visible.
+    - Click the Insert button.
+    - In the Executable text box, enter the full pathname to the ASP.NET ISAPI filter DLL. 
+      For ASP.NET 4 this is usually: "C:\Windows\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll"
+    - ** Important **: Uncheck the Verify option.
+    - Click Ok on both dialogs to return to IIS Manager. The changes are complete.
+    - Run iisreset
+	     
+    Note that in this case aspnet_isapi.dll will be used for all URLs wich has a performance cost.
+  -->
+
+
+  <!--
+  Important. For IIS 5 follow these steps:
+  
+  Create an ISAPI Wildcard mapping pointing to the ASP.NET ISAPI filter.
+  - Open the IIS Manager and expand the treeview to find your website (not the Web Sites folder).
+  - Right-click your virtual directory application and choose Properties.
+  - Select the Virtual Directory tab.
+  - Click the Configuration button.
+  - The Application Mappings tab should be visible.
+  - Click the Insert button.
+  - In the Executable text box, enter the full pathname to the ASP.NET ISAPI filter DLL. 
+    For ASP.NET 4 this is usually: "C:\Windows\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll"
+  - In the Extension text box, enter .* 
+  - ** Important **: Uncheck the Verify option.
+  - Click Ok on both dialogs to return to IIS Manager. The changes are complete.
+  - Run iisreset
+
+  Note that aspnet_isapi.dll will be used for all URLs wich has a performance cost, to avoid it we recommend upgrade to IIS 6 or upper.
+  -->
+
+</configuration>

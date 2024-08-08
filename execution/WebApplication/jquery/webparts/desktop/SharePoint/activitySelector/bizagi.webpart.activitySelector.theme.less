@@ -1,0 +1,51 @@
+
+
+.ui-bizagi-wp-app-inbox-activity-description, 
+.ui-bizagi-wp-app-routing-container table tr{
+      background-color: @content; 
+}
+
+.ui-bizagi-wp-app-inbox-activity-description:hover, 
+.ui-bizagi-wp-app-routing-container table tr:hover{
+      background-color: @content; 
+}
+
+/* Grid background and border */
+.ui-bizagi-wp-app-routing-container table,
+.ui-bizagi-wp-app-inbox-grid-cases-container table,
+.personalizedColumnsContainer table {
+    background: @content!important;
+    border: 1px solid @content-border;
+    border-radius: 0;  
+    color:@text;
+}
+
+#ui-bizagi-wp-app-routing-activity-container tbody tr{
+      background: darken(@content, 10%)!important;
+      color:@text!important;
+}
+
+#ui-bizagi-wp-app-routing-activity-container  tbody tr.event{
+    background: darken(@content, 5%)!important;
+    color:@text!important;
+}
+
+
+#ui-bizagi-wp-app-inbox-activities-routing td{
+      color:@text!important;
+}
+
+#ui-bizagi-wp-app-routing-activity-container thead td,
+.ui-bizagi-wp-app-routing-table thead td{
+      background: darken(@content, 4%)!important;
+      color:@title!important;
+}
+
+#ui-bizagi-wp-app-inbox-activities-routing .text-description-title{
+      background-color: @content!important;
+      color:@text!important;
+}
+#ui-bizagi-wp-app-inbox-activities-routing td button, .wp-routing-container-fother button{
+ border:1px solid transparent!important;
+ color:@button-text;
+}

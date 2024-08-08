@@ -1,0 +1,76 @@
+{
+  "root": {
+    "libraryRules": {
+      "type": "collection",
+      "ref": "libraryRule"
+    }
+  },
+  "libraryRule": {
+    "id": {
+      "type": "property",
+      "ref": "guid",
+      "key": true
+    },
+    "name": {
+      "type": "property",
+      "ref": "string"
+    },
+    "displayName": {
+      "type": "property",
+      "ref": "string"
+    },
+    "description": {
+      "type": "property",
+      "ref": "string"
+    },
+    "parameters": {
+      "type": "collection",
+      "ref": "ruleParameter"
+    },
+    "returnType": {
+      "type": "property",
+      "ref": "string"
+    },
+    "execute": {
+      "type": "function",
+      "parameters": {
+        "parameters": {
+          "type": "collection",
+          "ref": "ruleParameter"
+        }
+      },
+      "returnType": "simple",
+      "ref": "ruleExecutionOutput"
+    }
+  },
+  "ruleParameter": {
+    "name": {
+      "type": "property",
+      "ref": "string"
+    },
+    "description": {
+      "type": "property",
+      "ref": "string"
+    },
+    "type": {
+      "type": "property",
+      "ref": "string"
+    },
+    "value": {
+      "type": "property",
+      "ref": "string"
+    }
+  },
+  "ruleExecutionOutput": {
+    "success": {
+      "type": "property",
+      "ref": "boolean",
+      "key": true
+    },
+    "errorMessage": {
+      "type": "property",
+      "ref": "string"
+    },
+    "@opentype": true
+  }
+}

@@ -1,0 +1,323 @@
+{
+  "info":{
+    "title": "Theme Bizagi Work Portal",
+    "version": "1.0",
+     "author": "UX TEAM at Bizagi",
+     "description": "This theme is an example of what you can customize with the Theme Builder"
+  },
+  "less": [
+        {
+          "category": {
+            "name": "widget-theme-builder-theme-category-side-image",
+            "items": [
+              {
+                "label": "widget-theme-builder-theme-item-label-side-image",
+                "key": "@sidebar-image-theme",
+                "value": "url('../jquery/workportal/css/desktop/images/bg-landscape.png')"
+              }
+            ],
+            "related":"#contentProc"
+          }
+        },
+      {
+        "category": {
+          "name": "widget-theme-builder-theme-category-general",
+          "subcategory": [
+            {
+              "name": "widget-theme-builder-theme-category-common",
+              "items": [
+                {
+                  "label": "widget-theme-builder-theme-item-label-background",
+                  "lessFunction": "mix(@one-color-palette,lighten(@one-color-palette, 100%),4%)",
+                  "key": "@background",
+                  "value": "#f1fafa"
+                },
+                {
+                  "label": "widget-theme-builder-theme-item-label-text",
+                  "lessFunction": "darken(@one-color-palette, 20%)",
+                  "key": "@text",
+                  "value": "#010c0b"
+                },
+                {
+                  "label": "widget-theme-builder-theme-item-label-title",
+                  "lessFunction": "darken(@one-color-palette, 18%)",
+                  "key": "@title",
+                  "value": "#031514"
+                },
+                {
+                  "label": "widget-theme-builder-theme-item-logo-background",
+                  "lessFunction": "mix(@one-color-palette, lighten(@one-color-palette, 100%), 22%)",
+                  "key": "@logo-background",
+                  "value": "#e7e7e7"
+                 }
+              ],
+              "related": "#ui-bizagi-wp-application"
+            },
+            {
+              "name": "widget-theme-builder-theme-category-navigation",
+              "items": [
+                {
+                  "label": "widget-theme-builder-theme-item-label-border",
+                  "lessFunction": "mix(@one-color-palette,lighten(@one-color-palette, 100%),15%)",
+                  "key": "@navigation-border",
+                  "value": "#dbe8e8"
+                },
+                {
+                  "label": "widget-theme-builder-theme-item-label-background",
+                  "lessFunction": "@one-color-palette",
+                  "key": "@navigation",
+                  "value": "#0d6664"
+                },
+                {
+                  "label": "widget-theme-builder-theme-item-label-link",
+                  "lessFunction": "mix(@one-color-palette,lighten(@one-color-palette, 100%),10%)",
+                  "key": "@navigation-link",
+                  "value": "#f4fefd"
+                },
+                {
+                    "label": "widget-theme-builder-theme-item-label-submenu-background",
+                    "lessFunction": "mix(@one-color-palette,lighten(@one-color-palette, 100%),4%)",
+                    "key": "@navigation-submenu-background",
+                    "value": "#FFFFFF"
+                },
+                {
+                    "label": "widget-theme-builder-theme-item-label-submenu-text",
+                    "lessFunction": "darken(@one-color-palette, 20%)",
+                    "key": "@navigation-submenu-text",
+                    "value": "#687785"
+                }
+              ],
+              "related": "#ui-bizagi-wp-menu,#innerContentInbox,#footer"
+            },
+            {
+              "name": "widget-theme-builder-theme-category-content",
+              "items": [
+                {
+                  "label": "widget-theme-builder-theme-item-label-border",
+                  "lessFunction": "mix(@one-color-palette, lighten(@one-color-palette, 100%), 40%)",
+                  "key": "@content-border",
+                  "value": "#9ec2c1"
+                },
+                {
+                  "label": "widget-theme-builder-theme-item-label-panel-bg",
+                  "lessFunction": "mix(@one-color-palette, lighten(@one-color-palette, 100%), 3%)",
+                  "key": "@pane",
+                  "value": "#f8fafa"
+                },
+                {
+                  "label": "widget-theme-builder-theme-item-label-module-bg",
+                  "lessFunction": "mix(@one-color-palette, lighten(@one-color-palette, 100%), 12%)",
+                  "key": "@content",
+                  "value": "#e2edec"
+                },
+                {
+                  "label": "widget-theme-builder-theme-item-label-link",
+                  "lessFunction": "darken(@one-color-palette,20%)",
+                  "key": "@content-link",
+                  "value": "#010c0b"
+                }
+              ],
+              "related": "ul.ui-bizagi-component-adjustable.ui-bizagi-adjustable"
+            },
+            {
+              "name": "widget-theme-builder-theme-category-widgets",
+              "items": [
+                {
+                  "label": "widget-theme-builder-theme-item-label-modal-bg",
+                  "lessFunction": "mix(@one-color-palette, lighten(@one-color-palette, 100%), 3%)",
+                  "key": "@modal",
+                  "value": "#f8fafa"
+                },
+                {
+                  "label": "widget-theme-builder-theme-item-label-modal-border",
+                  "lessFunction": "@one-color-palette",
+                  "key": "@modal-border",
+                  "value": "#0d6664"
+                },
+                {
+                  "label": "widget-theme-builder-theme-item-label-tooltip-bg",
+                  "lessFunction": "lighten(@one-color-palette, 80%)",
+                  "key": "@tooltip",
+                  "value": "#ffffff"
+                }
+              ],
+              "related": null
+            },
+            {
+              "name": "widget-theme-builder-theme-category-buttons",
+              "items": [
+                {
+                  "label": "widget-theme-builder-theme-item-label-background",
+                  "lessFunction": "@one-color-palette",
+                  "key": "@button",
+                  "value": "#0d6664"
+                },
+                {
+                  "label": "widget-theme-builder-theme-item-label-text",
+                  "lessFunction": "lighten(@one-color-palette, 100%)",
+                  "key": "@button-text",
+                  "value": "#ffffff"
+                }
+              ],
+              "related": null
+            }
+          ]
+        }
+      },
+      {
+        "category": {
+          "name": "widget-theme-builder-theme-category-forms",
+          "subcategory": [
+            {
+              "name": "widget-theme-builder-theme-category-common",
+              "items": [
+                {
+                  "label": "widget-theme-builder-theme-item-label-container-bg",
+                  "lessFunction": "mix(@one-color-palette, lighten(@one-color-palette, 100%), 3%)",
+                  "key": "@form-container",
+                  "value": "#f8fafa"
+                },
+                {
+                  "label": "widget-theme-builder-theme-item-label-text",
+                  "lessFunction": "darken(@one-color-palette, 20%)",
+                  "key": "@form-text",
+                  "value": "#010c0b"
+                }
+              ],
+              "related": null
+            },
+            {
+              "name": "widget-theme-builder-theme-category-groups",
+              "items": [
+                {
+                  "label": "widget-theme-builder-theme-item-label-border",
+                  "lessFunction": "@one-color-palette",
+                  "key": "@form-group-border",
+                  "value": "#0d6664"
+                },
+                {
+                  "label": "widget-theme-builder-theme-item-label-background",
+                  "lessFunction": "mix(@one-color-palette, lighten(@one-color-palette, 100%), 12%)",
+                  "key": "@form-group",
+                  "value": "#e2edec"
+                }
+              ],
+              "related": ".ui-bizagi-container.ui-bizagi-container-group"
+            },
+            {
+              "name": "widget-theme-builder-theme-category-tabs",
+              "items": [
+                {
+                  "label": "widget-theme-builder-theme-item-label-border",
+                  "lessFunction": "mix(@one-color-palette, lighten(@one-color-palette, 100%), 40%)",
+                  "key": "@form-tab-border",
+                  "value": "#9ec2c1"
+                },
+                {
+                  "label": "widget-theme-builder-theme-item-label-background",
+                  "lessFunction": "mix(@one-color-palette, lighten(@one-color-palette, 100%), 12%)",
+                  "key": "@form-tab",
+                  "value": "#e2edec"
+                }
+              ],
+              "related": null
+            },
+            {
+              "name": "widget-theme-builder-theme-category-grids",
+              "items": [
+                {
+                  "label": "widget-theme-builder-theme-item-label-border",
+                  "lessFunction": "mix(@one-color-palette, lighten(@one-color-palette, 100%), 20%)",
+                  "key": "@form-grid-border",
+                  "value": "#cfe0e0"
+                },
+                {
+                  "label": "widget-theme-builder-theme-item-label-background",
+                  "lessFunction": "mix(@one-color-palette, lighten(@one-color-palette, 100%), 25%)",
+                  "key": "@form-grid",
+                  "value": "#c3d9d8"
+                }
+              ],
+              "related": null
+            },
+            {
+              "name": "widget-theme-builder-theme-category-inputs",
+              "items": [
+                {
+                  "label": "widget-theme-builder-theme-item-label-border",
+                  "lessFunction": "mix(@one-color-palette, lighten(@one-color-palette, 100%), 30%)",
+                  "key": "@form-input-border",
+                  "value": "#b6d1d0"
+                },
+                {
+                  "label": "widget-theme-builder-theme-item-label-background",
+                  "lessFunction": "lighten(@one-color-palette, 100%)",
+                  "key": "@form-input",
+                  "value": "#ffffff"
+                }
+              ],
+              "related": null
+            }
+          ]
+        }
+      },
+      {
+        "category": {
+          "name": "widget-theme-builder-theme-category-fonts",
+          "items": [
+            {
+              "label": "widget-theme-builder-theme-item-label-font-family",
+              "key": "@font-family",
+              "value": "'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif"
+            }
+          ]
+        }
+      },
+      {
+        "category": {
+          "name": "widget-theme-builder-theme-category-special-fx",
+          "items": [
+            {
+                "label": "widget-theme-builder-theme-item-label-smart-contrast",
+                "key": "@active-smart-contrast",
+                "value": "false"
+            },
+            {
+              "label": "widget-theme-builder-theme-item-label-text-shadow",
+              "key": "@active-text-shadow",
+              "value": "false"
+            },
+            {
+              "label": "widget-theme-builder-theme-item-label-box-shadow",
+              "key": "@active-box-shadow",
+              "value": "true"
+            },
+            {
+              "label": "widget-theme-builder-theme-item-label-border-radius",
+              "key": "@active-border-radius",
+              "value": "true"
+            }
+
+          ]
+        }
+      },
+
+      {
+        "category": {
+          "name": "widget-theme-builder-theme-category-vertical-space",
+          "items": [
+            {
+              "label": "widget-theme-builder-theme-item-label-normal-line-height",
+              "key": "@normal-line-height",
+              "value": "active"
+            },
+            {
+              "label": "widget-theme-builder-theme-item-label-minimum-line-height",
+              "key": "@minimum-line-height",
+              "value": "inactive"
+            }
+          ]
+        }
+      }
+    ]
+}

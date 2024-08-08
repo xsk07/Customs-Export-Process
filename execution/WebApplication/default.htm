@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bizagi</title>
+    
+    
+    <!-- iPad Stuff -->
+    <!--
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="apple-touch-icon-precomposed" href="jquery/css/bizagi/tablet/images/BizAgi_logo.png" />
+    <link rel="apple-touch-startup-image" href="jquery/css/bizagi/tablet/images/splash-screen-landscape.png" media="(orientation:landscape)" />
+    <link rel="apple-touch-startup-image" href="jquery/css/bizagi/tablet/images/splash-screen-portrait.png" media="(orientation:portrait)" />
+    -->
+    
+    <script type="text/javascript">
+        // Redirect as soon this page is requested to avoid being wrapped by the iFrame and screw! the iPad        
+        // Check if queryString has params 
+        /*
+        if(location.search.split('&').length){ 
+            // Redirect as soon this page is requested to avoid being wrapped by the iFrame and screw! the iPad  
+            window.location = 'Default.aspx' + location.search;
+        } 
+        else { 
+            window.location = 'Default.aspx'; 
+        }*/
+        window.location = "default.aspx" + window.location.search + window.location.hash; 
+    </script>
+
+    <style type="text/css">
+	    body{
+            background:#dedede url('img/WorkPortal/dots_columns.png') 0 0 repeat;
+            background-color: #F0EFED;
+            background-position: top;
+            background-repeat: repeat-x;
+            COLOR: #666666; 
+            SCROLLBAR-3DLIGHT-COLOR: gray; 
+            SCROLLBAR-ARROW-COLOR: gray;
+            SCROLLBAR-TRACK-COLOR: WHITE; 
+            font-size:10px;
+            font-family:  Arial;
+            SCROLLBAR-DARKSHADOW-COLOR: white;
+            SCROLLBAR-BASE-COLOR: white; 
+        }
+        #waitImage{
+            background-image: url(jquery/css/bizagi/tablet/images/loader2.gif);
+            width: 18px;
+            height: 18px;
+            top: 49%;
+            left: 49%;
+            position: absolute;
+        }   	
+        @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)
+        {
+	        html, body
+	        {
+	            top:0px;
+	            left:0px;
+		        width: 1024px;
+		        height: 748px;
+		        padding: 0px;
+		        margin: 0px;
+	        }     
+        }
+        @media only screen and (min-device-width: 481px) and (max-device-width: 768px) and (orientation:portrait)
+        {
+            html, body
+	        {
+	            top:0px;
+	            left:0px;
+		        width: 768px;
+		        height: 1004px;		
+		        padding: 0px;
+		        margin: 0px;
+	        }     
+        }
+        @media only screen and (min-device-width: 1024px){
+            html{ height:100%; }
+            body{ overflow:hidden; height:100%; margin:0px; }
+        }
+    </style>
+    <!--[if gte IE 7]> 
+    <style> 
+        html, body { 
+            height:100%; 
+            width: 100%;
+            padding: 0px;
+		    margin: 0px;
+		    overflow:hidden;
+        }
+    </style> 
+    <![endif]-->
+
+</head>
+<body>
+    <div id="waitImage"></div>
+    <iframe onload="window.setTimeout('BAHideWaitFrame();',1000)"  id="BADefaultFrame" src="about:blank" width="100%" height="100%" marginheight="0" marginwidth="0" frameborder="0" scrolling="no"></iframe>
+    <script type="text/javascript">	    
+
+        function BAHideWaitFrame(){
+            document.getElementById('waitImage').style.display = "none";
+        }
+
+        // Set iframe source
+        // document.getElementById("BADefaultFrame").src = "default.aspx" + window.location.search + window.location.hash;
+    </script>
+</body>
+</html>

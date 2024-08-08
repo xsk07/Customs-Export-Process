@@ -1,0 +1,6 @@
+@charset "UTF-8";
+#canvas {
+    border: 1px solid #d3d3d3;
+    height: 600px;
+    position: relative;
+}

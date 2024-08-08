@@ -1,0 +1,101 @@
+/* CSS Document */
+html{
+		height:100%;
+	}
+.textoNormal{
+	color:#666666;
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+	body{	
+		height:100%;
+		margin:0px;
+		padding:0px;
+	}
+	.ad{
+		margin-top:120px;
+	}
+	/* Entire pane */
+	
+	#dhtmlgoodies_xpPane{
+		background-image:url(../../img/graphicanalysis/fondwidgets.jpg);
+		background-position: 0,0;
+		background-repeat: repeat-x;
+		background-color:#E8EFF6;
+		float:left;
+		height:100%;		
+		width:200px;
+		/*width:100%;
+			height:50px;
+*/
+	}
+	#dhtmlgoodies_xpPane .dhtmlgoodies_panel{
+		margin-left:10px;
+		margin-top:10px;	
+		/* border:1px solid red;
+		width:200px;
+		float:left;*/
+	}
+	#dhtmlgoodies_xpPane .panelContent{
+		background-image:url(../../img/graphicanalysis/contWidget.jpg);
+		background-position: right;
+		background-repeat:repeat-y;
+		background-color:#F5F9FC;
+		margin-left: 10px;
+		border-left:1px solid #DBE6F0;
+		border-bottom:1px solid #DBE6F0;	
+		padding-left:5px;
+		padding-right:5px;
+		padding-bottom: 2px;
+		overflow:hidden;
+		position:relative;
+		clear:both;
+		/*border:1px solid red;*/
+		/*width:180px;*/
+	}
+	#dhtmlgoodies_xpPane .panelContent div{
+		position:relative;
+	}
+	#dhtmlgoodies_xpPane .dhtmlgoodies_panel .topBar{
+		background-image:url(../../img/graphicanalysis/widgets.gif);
+		background-repeat:no-repeat;
+		background-position:top right;
+		height:25px;
+		padding-right:5px;
+		cursor:pointer;
+		overflow:hidden;		
+	}
+	#dhtmlgoodies_xpPane .dhtmlgoodies_panel .topBar span{
+		line-height:25px;
+		vertical-align:middle;
+		font:1.1em Verdana, Arial, Helvetica, sans-serif;
+		color:#336699;
+		font-weight:bold;
+		float:left;
+		padding-left:10px;
+		padding-top: 5px;
+	}
+	#dhtmlgoodies_xpPane .dhtmlgoodies_panel .topBar img{
+		float:right;
+		cursor:pointer;
+	}
+	#otherContent{	/* Normal text content */
+		float:left;	/* Firefox - to avoid blank white space above panel */
+		/*padding-left:10px;*/  /* A little space at the left */
+		/*position:absolute; */
+	}
+	
+	.paneselect { WIDTH: 149px; font: 10px Verdana, Arial, Helvetica, sans-serif; }
+	.paneselectreduced { WIDTH: 64px }
+	.btnMeasures { WIDTH: 65px }
+	.measuresContents {display:block; overflow:visible; position:relative; width:169px;}
+	.selectmeasures {width:60px; font: 10px Verdana, Arial, Helvetica, sans-serif;}
+	
+.tabContent
+{
+	BORDER:dotted 2px #336699;
+	HEIGHT: 470px;
+	WIDTH:670px;
+	background-color:#FFFFFF;
+	/*background-color:#F5F9FC;*/
+}

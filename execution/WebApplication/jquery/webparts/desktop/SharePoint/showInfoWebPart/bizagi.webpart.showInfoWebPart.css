@@ -1,0 +1,12 @@
+﻿.ui-bizagi-showInfo-style{
+	margin: 10px;
+	font-size: large;
+	color: red;
+	background-color: lightgray;
+	-webkit-border-radius: 8px;
+	padding: 0px 5px;
+	text-align: center;
+}
+.ui-bizagi-showInfo-style .ui-button{
+	color: Yellow;
+}

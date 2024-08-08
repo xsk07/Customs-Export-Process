@@ -1,0 +1,31 @@
+﻿{
+	"root" : {
+    "processes" : {	"type" : "collection",	"ref" : "processItem"	}
+  },
+  "processItem": {
+		"id" : {	"type" : "property",	"ref" : "guid", "key": true},
+		"name" : {	"type" : "property",	"ref" : "string"},
+		"displayName" : {	"type" : "property",	"ref" : "string"},
+		"creationDate" : {	"type" : "property",	"ref" : "string"},
+    "description" : {	"type" : "property",	"ref" : "string"},
+    "enabledAlarms" : {	"type" : "property",	"ref" : "boolean"},    
+    "cases": { "type" :  "collection", "ref" :  "caseItem"},    
+    "state" : {	"type" : "property",	"ref" : "string"},
+    "start": {
+      "type": "function",
+      "parameters": {},
+      "returnType":  "simple",
+      "ref":  "string"
+    }
+  },
+  "caseItem": {
+		"idCase" : {	"type" : "property",	"ref" : "int", "key": true},
+    "caseNumber" : {	"type" : "property",	"ref" : "string"},
+    "solutionDate" : {	"type" : "property",	"ref" : "string"},
+    "data" : {	"type" : "collection",	"ref" : "parameter"	}
+  },
+  "parameter": {
+		"xpath" : {	"type" : "property",	"ref" : "string"},
+    "value" : {	"type" : "property",	"ref" : "string" }
+	}
+ }

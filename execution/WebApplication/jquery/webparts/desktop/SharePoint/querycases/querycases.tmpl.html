@@ -1,0 +1,156 @@
+<script id="ui-bizagi-webpart-querycases" type="text/x-jquery-tmpl">
+   <div class="bz-wp-querycases">
+        <div class="bz-wp-querycases-header" >
+            <span class="bz-wp-querycases-header-arrow bz-state-expanded"></span>
+            <label> ${title} </label>
+            {{if showViewToggler }}
+                <span class="bz-wp-querycases-header-views">
+                    <label> View: </label>
+                    <span class="bz-wp-querycases-header-view-grid {{if view == "grid"}}bz-state-selected{{/if}}" data-view="grid" title="Click here for Grid View"></span>
+                    <span class="bz-wp-querycases-header-view-thumbnails  {{if view == "thumbnails"}}bz-state-selected{{/if}}" class=""  data-view="thumbnails" title="Click here for Thumbnail View"></span>
+                </span>
+            {{/if}}
+        </div> 
+        <div class="bz-wp-querycases-content">
+        </div>
+   </div>
+</script>
+
+<script id="ui-bizagi-webpart-querycases-grid" type="text/x-jquery-tmpl">
+{{if showGrid(rows)}}
+    <table class="bz-wp-querycases-grid" cellspacing="0" border="0" cellpading="0">
+        <thead>
+            <tr>
+                {{each(i, column) columns}}
+                    {{if visible}}
+                        <td data-column-name="${name}" {{if name == orderBy }} data-order-type="${orderType}" {{/if}}>
+                            <label>${splitHeaderName(displayName)}</label>
+                            <span class="bz-wp-column-order">
+                                <span class="bz-wp-column-order-up {{if name == orderBy && orderType == 'asc'}} bz-state-selected {{/if}}" ></span>
+                                <span class="bz-wp-column-order-down {{if name == orderBy && orderType == 'desc'}} bz-state-selected {{/if}}" ></span>
+                            </span>                            
+                        </td>
+                    {{/if}} 
+                {{/each}}
+                {{if showComments(filters)}}
+                <td>Comments</td>
+                {{/if}}
+                <td></td>
+                <td class="bz-wp-gridcases-workflowProgress-header"></td>
+            </tr>
+        </thead>
+        <tbody>
+            {{each rows}}
+                
+
+                    <tr title="${getToolTipValue($value)}">
+			            {{each(j, field) $value}}
+                            {{if columns[j].visible}}
+                                <td>${field}</td>
+                            {{/if}}
+                        {{/each}}
+
+                        {{if showComments(filters)}}
+                            <td class="bz-wp-gridcases-actions-cell-comments">
+                                <button type="button" data-case-id="${getCaseId($value)}" data-action="comment">Comments</button>
+                            </td>
+                        {{/if}}
+                     
+                        <td class="bz-wp-gridcases-actions-cell">
+                            {{each(i, action) actions}}
+                                {{if showButtonA($value,action.name)}}
+							    <button type="button" data-case-id="${getCaseId($value)}" title="${getToolTipValue($value)}" data-workitem-id="${getWorkitem($value,action.name)}" data-action="${action.name}">${action.displayName}</button>
+                                {{/if}}
+                            {{/each}}
+                            
+                        </td>
+                        <td class="bz-wp-gridcases-workflowProgress">
+                            <a class="workflowProgress" target="_blank" href="${getWFProgressURL($value)}"><img src='/_layouts/proxy/jquery/webparts/desktop/sharepoint/querycases/images/wf_logo.png' alt='Workflow'/></a>
+                        </td>
+                    </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    {{if totalPages > 0}}
+        {{tmpl "#ui-bizagi-webpart-querycases-cases-pager"}}
+    {{/if}}
+
+{{else}}
+    
+    <span style="font-weight:bold">No CAFs Found</span>
+
+{{/if}}
+
+
+
+</script>
+
+<script id="ui-bizagi-webpart-querycases-thumbnail" type="text/x-jquery-tmpl">
+    <div class="bz-wp-querycases-thumbnails"> 
+        {{each rows}}
+            <div class="bz-wp-querycases-thumbnails-item">       
+                {{each(k, field) $value}}               
+                    {{if isImage(field, columns[k].name) }}
+                        <div class="bz-wrapper">
+                            <img src=${getImage(field)} />
+                        </div>
+                    {{/if}}
+                {{/each}}                
+                {{each(i, field) $value}}
+                    {{if isImageLabel(field, columns[i].name) }}
+                        <label>${field}</label>
+                    {{/if}}
+                {{/each}}                
+                {{each(k, field) $value}}
+                     {{if isFieldVisible(field, columns[k].name, columns[k].dataType, columns[k].visible )}}
+                        <span>${field}</span>
+                    {{/if}}
+                {{/each}}                
+                <div class="bz-wp-querycases-thumbnails-item-actions">
+                    <div class="bz-wrapper">
+                        {{each(i, action) actions}}
+                        {{if showButtonA($value,action.name,action.TaskID)}}
+                            <button type="button" data-case-id="${getCaseId($value)}" data-workitem-id="${getWorkitem($value,action.name)}" data-action="${action.name}">${action.displayName}</button>
+                        {{/if}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+    {{if totalPages > 0}}
+        {{tmpl "#ui-bizagi-webpart-querycases-cases-pager"}}
+    {{/if}}
+</script>
+
+<script id="ui-bizagi-webpart-querycases-cases-pager" type="text/x-jquery-tmpl">
+    <div class="bz-wp-querycases-pager"> 
+        <select>
+                {{each pageList}}
+                    <option value="${$value}" {{if $value == pageSize }}
+                     selected
+                    {{/if}}>${$value}</option>
+                {{/each}}
+		</select>
+        <ul>
+            {{if totalPages > 14}}
+                    <li class="pageArrow first">&lt;&lt;</li> <li class="pageArrow prev">&lt;</li> <!--<li class="pageArrow first">&lt;&lt;</li> <li class="pageArrow prev">&lt;</li>  -->
+            {{/if}}
+
+            {{each pages}}  
+                <li {{if active}} class="bz-state-selected" {{/if}} data-page="${number}" 
+                
+                {{if number > 14}}
+                class="hidden"
+                {{/if}}
+                
+                >${number}</li>           
+            {{/each}}            
+
+            {{if totalPages > 14}}
+                      <li class="pageArrow next">&gt;</li> <li class="pageArrow last">&gt;&gt;</li> <!--<li class="pageArrow next">&gt;</li> <li class="pageArrow last">&gt;&gt;</li>-->
+            {{/if}}
+
+        </ul>
+    </div>
+</script>

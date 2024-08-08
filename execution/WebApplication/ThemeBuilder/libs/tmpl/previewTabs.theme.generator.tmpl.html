@@ -1,0 +1,20 @@
+<div class="biz-layout-tabs">
+    <ul{{if panels.lenght = 1}} class="biz-ui-hide"{{/if}}>
+      
+        {{each panels}}
+        <li><a href="#${$value.id}">${$value.name}</a></li>
+        {{/each}}
+      </ul>
+    
+    {{each panels}}
+      <div id="${$value.id}">
+        <div class='biz-layout-panel-container clearfix'>
+            <div class="biz-layout-panel-preview clearfix">
+              <div class="biz-ui-theme-preview">
+                <iframe src="${$value.url}" class="biz-ui-theme-panel-device ${$value.css}"></iframe>
+              </div>
+            </div>
+        </div>
+      </div>
+    {{/each}}
+</div>

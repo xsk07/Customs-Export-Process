@@ -1,0 +1,7 @@
+{
+  "bizagi-rateus-title": "Le gusta la aplicación Bizagi?",
+  "bizagi-rateus-description": "Por favor califíquenos!",
+  "bizagi-rateus-no": "NO, GRACIAS",
+  "bizagi-rateus-yes": "SÍ, CALIFICAR!",
+  "bizagi-rateus-later": "DESPUÉS"
+}

@@ -1,0 +1,129 @@
+UNKNOWN
+{
+    color: #002d64;
+    font-size: 10px;
+    font-family: NeoSansStdRegular, Verdana, Arial, Helvetica, sans-serif;
+}
+
+.text
+{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 2px;
+    padding-left: 2px;
+    font-weight: normal;
+    font-size: 10px;
+    font-family: NeoSansStdRegular, Verdana, Arial, Helvetica, sans-serif;
+    color: #002d64;
+}
+
+#popupcalendar
+{
+    visibility: hidden;
+    left: 0px;
+    width: 185px;
+    position: absolute;
+    top: 0px;
+    background-color: white;
+    height: 170px;
+    overflow-y: hidden;
+    border: 1px solid #E8EFF6;
+}
+
+A.cal-DayLink
+{
+    font-weight: bold;
+    font-size: 10px;
+    font-family: NeoSansStdRegular, Verdana, Arial, Helvetica, sans-serif;
+    color: #003366;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+A.cal-DayLink:hover
+{
+    font-weight: bold;
+    color: #667cb2;
+    text-decoration: none;
+}
+
+A.cal-DayLink:active
+{
+    font-weight: bold;
+    font-size: 10px;
+    font-family: NeoSansStdRegular, Verdana, Arial, Helvetica, sans-serif;
+    color: #336699;
+    text-decoration: none;
+}
+.cal-TextBox
+{
+    font-size: 10px;
+    font-family: NeoSansStdRegular, Verdana, Arial, Helvetica, sans-serif;
+    color: #003366;
+}
+A.cal-TodayLink
+{
+    font-weight: bold;
+    color: #6699cc;
+    font-size: 10px;
+    font-family:  NeoSansStdRegular, Verdana, Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    background-color: transparent;
+}
+A.cal-TodayLink:hover
+{
+    font-weight: bold;
+    color: #cc0000;
+}
+A.cal-TodayLink:active
+{
+    color: #990000;
+    text-decoration: none;
+}
+.cal-GreyDate
+{
+    font-weight: bold;
+    font-size: 10px;
+    font-family: NeoSansStdRegular, Verdana, Arial, Helvetica, sans-serif;
+    color: #fafafa;
+    background-color: #bbbbbb;
+    text-decoration: none;
+}
+
+.cal-GreyDate input {
+    width: 31px;
+}
+
+.cal-HeadCell select {
+    width: 50px;
+    padding: 0;
+}
+
+.cal-GreyInvalidDate
+{
+    font-weight: normal;
+    font-size: 10px;
+    font-family: NeoSansStdRegular, Verdana, Arial, Helvetica, sans-serif;
+    color: #cc0000;
+    background-color: #999999;
+    text-decoration: line-through;
+}
+.cal-DayCell
+{
+    font-weight: normal;
+    font-size: 10px;
+    font-family: NeoSansStdRegular, Verdana, Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+.cal-HeadCell
+{
+    color: #003366;
+    background-color: #E8EFF6;
+    text-decoration: none;
+    padding: 2px;
+    border-bottom: 1px solid #003366;
+}
+.cal-Table
+{
+    color: white;
+}

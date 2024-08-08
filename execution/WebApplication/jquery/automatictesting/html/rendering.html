@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="../../../jquery/workportal/css/desktop/bizagi.workportal.css" rel="stylesheet"
+        type="text/css" />
+    <link href="../../../jquery/workportal/css/desktop/bizagi.workportal.render.css"
+        rel="stylesheet" type="text/css" />
+    <link href="../../../jquery/themes/bizagiDefault/devices/desktop/default.less.css"
+        rel="stylesheet" type="text/css" />
+    <title></title>
+</head>
+<body style="overflow-y: auto">
+    <div id="canvas">
+    </div>
+    <script type='text/javascript' src='../../../jquery/steal.js'></script>
+    <script type='text/javascript' src='../../../jquery/bizagi.loader.js'></script>
+    <script type="text/javascript" language="javascript">
+        // Redefine path to base
+        var BIZAGI_PATH_TO_BASE = "../../../";
+        var rendering;
+        var formObject;
+        // Gets the loader instance, and load the module
+        var loader = bizagi.loader;
+        loader.init(function () {
+            loader.start("rendering")
+                .then(function () {
+                    rendering = new bizagi.rendering.facade();
+                    document.title = "Render";
+                });
+            });
+
+            function renderForm(formData) {
+                document.title = "Rendering";
+                var params = { };
+                params.data = formData;
+                params.canvas = $("#canvas");
+                rendering.execute(params);
+                $.when(rendering.ready())
+                    .done(function(form) {
+                        formObject = form;
+                        document.title = "Rendered";
+                    });
+                }
+
+                function checkProperty(xpath, property) {
+                    if (formObject) {
+                        var render = formObject.getRender(xpath);
+                        if (render) {
+                            return render.properties[property];
+                        }
+                        return " No render Object";
+                    }
+                    return " No form Object";
+                }
+
+    </script>
+</body>
+</html>

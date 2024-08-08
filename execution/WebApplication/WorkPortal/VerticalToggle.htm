@@ -1,0 +1,45 @@
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+	<meta http-equiv="imagetoolbar" content="no">
+	<meta http-equiv="MSThemeCompatible" content="No">	
+	<link href="../css/WorkPortal/WPPanel.css" type="text/css" rel="stylesheet">
+	<script language="JavaScript" src="../js/WorkPortal/WPFrames.js"></script>
+	<script language="JavaScript">
+	function BAMiddleToggle(){	
+	   if (parent.document.getElementById('ToggleSidePane').cols == "200,10,*"){
+	       BAHideLeftPanel (true);
+	   }
+	   else{
+	       BAHideLeftPanel (false);
+	   }
+	}
+	function BAVerifyImage(){
+	   var imgRight = document.getElementById("imgToggleRight");
+	   var imgLeft = document.getElementById("imgToggleLeft");
+	   var oImgCurrent = document.getElementById("imgToggleCurrent");
+		if (parent.ToggleSidePane.cols == "200,10,*"){
+	       oImgCurrent.src = imgLeft.src;
+	    }
+	    else{
+    		oImgCurrent.src = imgRight.src;	       
+	    }	    
+	}
+	</script>
+</head>
+
+<body class="VerticalToggleBody">
+<table width="10" height="100%" border="0" cellpadding="0" cellspacing="0" ID="Table1">
+  <tr>
+    <td height="30" align="left" valign="top"><img src="../img/WorkPortal/fond_closer_a.gif" alt=" " width="10" height="41"></td>
+  </tr>
+  <tr>
+    <td align="left" valign="middle"><a href="javascript:BAMiddleToggle();"><img id="imgToggleCurrent" src="../img/WorkPortal/middle_toggle_left.gif" alt="Click for close" width="10" height="54" border="0"></a></td>
+  </tr>
+</table>
+<img src="../img/WorkPortal/middle_toggle_left.gif" id=imgToggleLeft name=imgToggleLeft style="display:none"/>
+<img src="../img/WorkPortal/middle_toggle_right.gif" id=imgToggleRight name=imgToggleRight style="display:none"/>
+
+
+</body>
+</html>

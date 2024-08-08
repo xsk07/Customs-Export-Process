@@ -1,0 +1,81 @@
+.ui-bizagi-wp-project-processmap-wrapper .bz-zoom-container{
+    position: absolute;
+    bottom: 34px;
+    left: 48%;
+    width: 300px;
+    height: 21px;
+    background: #e6e6e6;
+    box-shadow: inset 0 1px 0 0 #ccc, inset 0 -1px 0 0 #ddd;
+    height: 20px;
+}
+
+.ui-bizagi-wp-project-processmap-wrapper .ui-slider-horizontal {
+    background: transparent;
+}
+
+.ui-bizagi-wp-project-processmap-wrapper .ui-slider-horizontal::before {
+    content: "";
+    width: 2em;
+    height: 20px;
+    background: #e6e6e6;
+    position: absolute;
+    right: -2em;
+    top: 0;
+    border-radius: 0 14px 14px 0;
+}
+
+.ui-bizagi-wp-project-processmap-wrapper .ui-slider-horizontal::after {
+    content: "";
+    width: 2em;
+    height: 20px;
+    background: #e6e6e6;
+    position: absolute;
+    left: -2em;
+    top: 0;
+    border-radius: 14px 0 0 14px;
+}
+
+
+.ui-bizagi-wp-project-processmap-wrapper .ui-slider-handle:hover .processviewer-value-tooltip {
+    opacity: 1;
+}
+
+.ui-bizagi-wp-project-processmap-wrapper .ui-slider-horizontal .ui-slider-handle {
+    border-radius: 14px;
+    margin-top: -4px;
+    background: rgb(41, 63, 85);
+    border-color: rgb(41, 63, 85);
+    border-width: 2px;
+    transition: border 0.2s ease,
+        width 0.2s ease,
+        height 0.2s ease,
+        top 0.2s ease,
+        margin-left 0.2s ease;
+    width: 4em;
+    height: 18px;
+    top: 0.5em;
+    margin-left: -2em;
+}
+
+.ui-bizagi-wp-project-processmap-wrapper .zoom-tooltip {
+    opacity: 0;
+    display: block;
+    width: 40px;
+    height: 24px;
+    border-radius: 3px;
+    margin: -4em auto 0;
+    background-color: rgba(41, 63, 85, .95);
+    color: #fff;
+    font-size: 10px;
+    line-height: 24px;
+    text-align: center;
+    transition: opacity .5s ease;
+}
+
+.ui-bizagi-wp-project-processmap-wrapper .zoom-tooltip label{
+    color: #fff;
+}
+
+.ui-bizagi-wp-project-processmap-wrapper .zoom-tooltip.is-visible-output {
+    opacity: 1;
+}

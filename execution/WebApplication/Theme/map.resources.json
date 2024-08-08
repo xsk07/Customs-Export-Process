@@ -1,0 +1,61 @@
+{
+  "css": {
+    "debug": [
+      "app/ui/bootstrap/bootstrap.css",
+      "app/ui/bootstrap/bootstrap-theme.css",
+      "app/ui/font-awesome.css",
+      "app/ui/colorpicker.css",
+      "app/ui/app.css"
+    ]
+  },
+  "js": {
+    "config":[
+      "app/libs/app.config.js"
+    ],
+    "libraries": [
+      "app/libs/jquery/jquery.js",
+      "app/libs/less/less.js",
+      "app/libs/underscore/underscore.js",
+      "app/libs/bootstrap/bootstrap.js",
+      "app/libs/colorpicker/colorpicker.js",
+      "app/libs/jszip/jszip.min.js",
+      "app/libs/jszip/FileSaver.js"
+    ],
+    "angular": [
+      "app/libs/angular/angular.js"
+    ],
+    "ngAngular": [
+      "app/libs/angular/angular-animate.js",
+      "app/libs/angular/angular-base64.js",
+      "app/libs/angular/angular-cookies.js",
+      "app/libs/angular/angular-moment.js",
+      "app/libs/angular/angular-resource.js",
+      "app/libs/angular/angular-route.js",
+      "app/libs/angular/angular-sanitize.js",
+      "app/libs/angular/angular-ui-router.js",
+      "app/libs/angular/colorpicker/angular.colorpicker.js",
+      "app/libs/angular/colorpicker/angular.colorpicker.controller.js",
+          
+      "app/libs/angular/splashScreens/angular.splash.screens.controller.js",
+
+
+      
+      "app/libs/angular/uiBootstrap/ui-bootstrap.js",
+      "app/libs/angular/uiBootstrap/ui-bootstrap-tpls.js"
+    ],
+    "_ThemeBuilderModule": [
+      "app/modules/_themeBuilder/theme.builder.module.js",
+      "app/modules/_themeBuilder/theme.builder.module.constants.js",
+      "app/modules/_themeBuilder/theme.builder.module.controller.js",
+      "app/modules/_themeBuilder/theme.builder.module.desktop.controller.js",
+      "app/modules/_themeBuilder/theme.builder.module.mobile.controller.js",
+      "app/modules/_themeBuilder/theme.builder.module.services.js",
+      "app/modules/_themeBuilder/theme.builder.module.image.color.js",
+      "app/modules/_themeBuilder/theme.builder.module.routing.js"
+    ],
+    "selectorModule": [
+      "app/modules/selector/selector.module.js",
+      "app/modules/selector/selector.module.controller.js"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+body
+{
+	background: #EDEDED;
+}
+
+.ui-bizagi-webpart-anonymous{
+}
+
+.ui-bizagi-webpart-anonymous-finishmessage
+{
+}
+
+.ui-bizagi-webpart-anonymous-failmessage
+{
+}
+
+.ui-bizagi-webpart-anonymous-createmessage
+{
+}
+
+.ui-bizagi-webpart-anonymous-createbutton
+{
+}
+
+.ui-bizagi-webpart-anonymous-render {
+    overflow: auto;
+}

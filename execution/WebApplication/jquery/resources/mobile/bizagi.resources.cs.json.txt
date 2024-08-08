@@ -1,0 +1,7 @@
+{
+    "bizagi-rateus-title": "Líbí se vám pomocí Bizagi?",
+    "bizagi-rateus-description": "Věnujte prosím chvíli, aby nám hodnotit!",
+    "bizagi-rateus-no": "NE, DÍKY",
+    "bizagi-rateus-yes": "ANO",
+    "bizagi-rateus-later": "Připomeňte mi o tom později"
+}

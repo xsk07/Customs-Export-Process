@@ -1,0 +1,101 @@
+﻿<script id="ui-bizagi-webparts-newcase" type="text/x-jquery-tmpl" >
+    <ul class="ui-bizagi-webpart-newcase-menu">       
+        <li id="menuListNew" class="active">
+            <a href="javascript:void(0);">
+                <span class="icon new"></span>
+                <span class="text">${buttonName}</span> 
+            </a>
+            <span class="ui-bizagi-wp-mini-arrow"></span>
+        </li>
+    </ul>
+
+    <div id="ui-bizagi-webpart-newcase-container" class="modalMenuBt viewNewCaseContainer-off" >
+        <div id="modalNewCaseOverlay" class="ui-widget-overlay modalNewCaseOverlay"></div>
+        <div id="modalNewCaseMessage" class="ui-widget-content ui-corner-all">
+            <div id="loading" {{loading}}></div>
+            <div id="case">                
+            </div>            
+        </div>
+        <div id="selectArrow"></div>   
+        <div id="modalMenuBtHeader" class="clearfix">
+            <div id="ui-bizagi-wp-app-search" class="searchNewCase" >
+            	<div id="ui-bizagi-wp-app-bt-search"></div>
+                <input id="searchNewCase" class="clearfix" onfocus="if(this.value=='%{workportal-menu-search}') this.value='';" onblur="if(this.value=='') this.value='%{workportal-menu-search}';" value="%{workportal-menu-search}">            
+            </div>
+           
+            <div id="bt-back" class="nodisplay">
+                <span></span>
+            </div>
+            <div id="modalTitle">%{workportal-widget-newcase-create}</div>                        
+            <ul id="newcase-view-options">
+                <li id="frecuentCases" class="frecuentNewCases"><span></span></li>
+                <li id="casesList" class="newCasesList casesListOn"><span></span></li>
+            </ul> 
+            
+        </div>         
+        <div id="modalMenuBtList" class="clearfix">
+            
+                <ul id="categoryTree" class="categoryTree">
+                    <li>%{workportal-widget-newcase-title}<input type="hidden" id="idParentCategory" value=""/></li>
+                </ul>
+            
+            <div id="categories" {{loading}}>                
+        </div>
+    </div>    
+</div>  
+</script>
+<script id="ui-bizagi-webparts-newcase-categories" type="text/x-jquery-tmpl" >
+	{{each category}}
+        <ul data-appid="${appId}">
+        {{if isProcess}}
+            {{if isProcess=="true"}}
+                <li class="process" data-idWFClass="${idCategory}" data-isProcess="${isProcess}" data-categoryName="${categoryName}">
+                    <div class="processIco"></div>
+                    <h3 data-idWFClass="${idCategory}" >${categoryName}</h3>
+                    <p class="newCaseDescription">${description}</p>
+                </li>
+            {{else}}
+                <li class="category" data-idCategory="${idCategory}" data-isProcess="${isProcess}" data-categoryName="${categoryName}">
+                    <div class="categoryIco"></div>
+                    <h3 data-idCategory="${idCategory}">${categoryName}</h3>
+                    <span id="arrow">&GT;</span>
+                </li>
+            {{/if}}
+        {{else}}
+            <li class="category" data-idCategory="${idCategory}" data-isProcess="${isProcess}" data-categoryName="${categoryName}">
+                <div class="categoryIco"></div>
+                <h3 data-idCategory="${idCategory}">${categoryName}</h3>
+                <span id="arrow">&GT;</span>
+            </li>
+        {{/if}}
+        <input type="hidden" id="idCategory" value="${idCategory}" />
+        <input type="hidden" id="isProcess" value="${isProcess}" />
+        <input type="hidden" id="categoryName" value="${categoryName}" />
+        </ul>
+	{{/each}}
+
+{{if truncate}}
+ <div class="loadMoreElements"><span id="loadMoreElementsIcon" class="plus_load_icon"></span><span>%{workportal-widget-newcase-loadmore}</span></div>
+{{/if}}
+</script>
+
+
+<script id="ui-bizagi-webparts-newcase-categories-tree" type="text/x-jquery-tmpl" >
+    <li  data-appid="${appId}">
+        &GT; ${categoryName}
+        <input type="hidden" id="idParentCategory" value="${idParentCategory}" />        
+    </li>
+</script>
+
+<script id="ui-bizagi-webparts-newcase-recent-process" type="text/x-jquery-tmpl" >
+    {{each processes}}
+    <ul>
+        <li class="process">
+            <div class="processIco"></div>
+            <h3>${displayName}</h3>                
+        </li>           
+        <input type="hidden" id="idWFClass" value="${idWFClass}" />                
+    </li>
+</ul>
+{{/each}}
+</script>

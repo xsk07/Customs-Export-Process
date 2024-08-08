@@ -1,0 +1,104 @@
+
+body{
+    background-color: #ccc;
+}
+
+.tmpl-container{
+    background-color: white;
+    border: 1px dashed gray;
+    width: 100%;
+    font-family: sans-serif;
+
+}
+
+.code-lines{
+    color: gray;
+}
+.code-lines h2 {
+    font-size: 20px;
+    font-family: sans-serif;
+    padding: 0 10px;
+}
+
+.code-lines, .settings, .entities{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.settings > div{
+    flex-grow: 1;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.code-lines > div{
+    flex-grow: 1;
+    min-width: 200px;
+    resize: horizontal;
+    overflow: hidden;
+    border: solid 1px gray;
+}
+
+.master .button {
+    text-align: center;
+    background: #3cb0fd;
+    box-shadow: 0 3px 0 #ccc;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 5px 15px;
+    margin: 10px;
+}
+
+.master .button:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+.master .button:active {
+    background: #2d7db3;
+}
+.settings .entities select {
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    background: #f8f8f8;
+    color:#888;
+    border:none;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+    font-size: 16px;
+    padding: 5px 30px 5px 10px;
+    margin: 11px 21px 11px 21px;
+}
+
+.settings .entities label {position:relative}
+.settings .entities label:after {
+    height: 14px;
+    width: 28px;
+    content: '<>';
+    font: 11px "Consolas", monospace;
+    color: #aaa;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    right: 20px;
+    font-size: 16px;
+    top: -3px;
+    padding: 0 0 8px 0;
+    border-bottom: 1px solid #ddd;
+    position: absolute;
+    pointer-events: none;
+    text-align: center;
+}

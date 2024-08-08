@@ -1,0 +1,41 @@
+html,body{
+    background-color:@background;
+    color:@text;
+}
+
+
+#ui-bizagi-webpart-newcase-container{
+    background-color: @modal;
+}
+
+
+#ui-bizagi-webpart-newcase-container #modalMenuBtHeader{    
+    background-color: @modal; 
+    color:@text;
+}
+
+#ui-bizagi-webpart-newcase-container .categoryTree {
+    border-bottom: 1px solid @content-border;;
+    background-color: @modal; 
+    color:@text;
+}
+
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div ul li{
+    border-color: transparent;
+    border-bottom-color: @content-border;
+}
+
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li:hover{
+    background-color: darken(@content, 10%);
+}
+
+#ui-bizagi-webpart-newcase-container #modalMenuBtList > div li h3{    
+    color:@text;    
+}
+
+#ui-bizagi-webpart-newcase-container .frecuentCasesOn, 
+#ui-bizagi-webpart-newcase-container #casesList.casesListOn, 
+#ui-bizagi-webpart-newcase-container #frecuentCases:hover, 
+#ui-bizagi-webpart-newcase-container #casesList:hover{
+    background-color: darken(@modal, 10%);
+}

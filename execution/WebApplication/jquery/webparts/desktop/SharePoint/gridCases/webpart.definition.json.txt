@@ -1,0 +1,8 @@
+﻿{
+	"name": "gridcases",
+	"js": [ {"src": "bizagi.webparts.gridcases.js"},	{"src": "../../../../overrides/js/desktop/sharePoint/gridcases/bizagi.webparts.gridcases.override.js"}],
+	"css": [ {"src": "bizagi.webpart.gridcases.css"} ],
+	"tmpl": [ 
+		{alias: "gridcases",  "src": "gridcases.tmpl.html#ui-bizagi-webpart-gridcases"} 
+	]
+}

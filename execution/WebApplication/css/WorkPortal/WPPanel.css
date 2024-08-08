@@ -1,0 +1,231 @@
+body
+{
+    margin: 0px;
+    font-size: 10px;
+    font-family: NeoSansStdRegular, Arial;
+}
+
+.VerticalToggleBody
+{
+    background-image: url(../../img/WorkPortal/fond_closer_b.gif);
+    background-position: left;
+    background-repeat: repeat-y;
+}
+
+.generalTab
+{
+    display: block;
+    width: 200px;
+    height: 16px;
+    background-image: url(../../img/WorkPortal/Frames/LeftTabBg.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.bpGeneralTab
+{
+    display: block;
+    width: 100%;
+    height: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background: #FFF;
+    border: 1px solid #EDEDED;
+    border-radius:3px;
+}
+
+.bpContentsTab
+{
+    height: 100%;
+    width: 100%;
+    display: none;
+    overflow: auto;
+}
+
+.TabDisplayName
+{
+    display: block;
+    float: left;
+    margin-left: 5px;
+}
+
+.itemContainerDisplayName
+{
+    display: block;
+    float: left;
+    margin-left: 5px;
+    color: #2D2D2E;
+    font-size:11px;
+}
+
+
+#ContentTree
+{
+    display: block;
+}
+
+/* Nodos de casos */
+
+.BANode
+{
+    display: block;
+    float: left;
+    width: 8px;
+    height: 8px;
+    padding-right: 10px;
+}
+* html .BANode
+{
+    padding-right: 0px;
+}
+
+.WPSmartFolderNodeL1
+{
+    display: block;
+    height: 16px;
+    margin-left: 16px;
+    padding: 2px;
+    text-decoration: none;
+}
+
+#ContentTree .WPSmartFolderNodeL1:link, #ContentTree .WPSmartFolderNodeL1:visited
+{
+    color: #003366;
+}
+#ContentTree .WPSmartFolderNodeL1:hover
+{
+    color: #cc0000;
+    background-image: url(../../img/WorkPortal/Tree/overTree.gif);
+    background-repeat: repeat-x;
+}
+
+.WPAnalysisQueryNode
+{
+    display: block;
+    margin-left: 16px;
+    padding: 2px;
+    text-decoration: none;
+}
+
+#ContentTree .WPAnalysisQueryNode:link, #ContentTree .WPAnalysisQueryNode:visited
+{
+    color: #003366;
+}
+#ContentTree .WPAnalysisQueryNode:hover
+{
+    color: #cc0000;
+    background-image: url(../../img/WorkPortal/Tree/overTree.gif);
+    background-repeat: repeat-x;
+}
+
+.WPAnalysisQueryNodeDescription
+{
+    color: #BC6E20;
+}
+
+.WPFolderNodeL1
+{
+    display: block;
+    height: 16px;
+    margin-left: 16px;
+    padding: 2px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+#ContentTree .WPFolderNodeL1:link, #ContentTree .WPFolderNodeL1:visited
+{
+    color: #003366;
+}
+#ContentTree .WPFolderNodeL1:hover
+{
+    color: #cc0000;
+    background-image: url(../../img/WorkPortal/Tree/overTree.gif);
+    background-repeat: repeat-x;
+}
+
+.WPFolderNodeLN
+{
+    display: block;
+    text-decoration: none;
+    padding: .5em;
+}
+
+#ContentTree .WPFolderNodeLN:link, #ContentTree .WPFolderNodeLN:visited
+{
+    color: #003366;
+}
+
+#ContentTree .WPFolderNodeLN:hover
+{
+    background-color: #E9E9E9;
+}
+
+.WPFolderNodeLeaf
+{
+    height: 16px;
+    margin-left: 48px;
+    padding: 2px;
+    text-decoration: none;
+}
+
+#ContentTree .WPFolderNodeLeaf:link, #ContentTree .WPFolderNodeLeaf:visited
+{
+    display: block;
+    color: #003366;
+}
+
+#ContentTree .WPFolderNodeLeaf:hover
+{
+    color: #cc0000;
+    background-image: url(../../img/WorkPortal/Tree/overSubPro.jpg);
+    background-repeat: no-repeat;
+}
+
+.WPSelectedNode
+{
+    display: block;
+    padding: .5em;
+    background-color: #FFFFFF;
+}
+
+.WPTreeTitle
+{
+    font-weight: 400;
+    height: 34px;
+    display: block;
+    font-size: 18px;
+    color: #555555;
+}
+
+.BANodeDisplayName
+{
+    display: inline;
+    float: left;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.TabRefresh:link, .TabRefresh:visited
+{
+    position: relative;
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    float: right;
+    text-decoration: none;
+    background-image: url(../../img/WorkPortal/Frames/TabRefresh.gif);
+}
+
+.TabRefresh:hover
+{
+    background-image: url(../../img/WorkPortal/Frames/overTabRefresh.gif);
+    text-decoration: none;
+}
+#StatusBarContainer
+{
+    background-image: url(../../img/WorkPortal/Menu/PrinMenuBg.jpg);
+}

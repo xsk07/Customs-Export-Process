@@ -1,0 +1,36 @@
+@charset "UTF-8";
+.smartphone .bz-tabs {
+    overflow-x: hidden;
+}
+.smartphone .bz-form-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.smartphone .bz-form-item.bz-form-item--display-reversed {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+}
+.smartphone .bz-form-item__control, .smartphone .bz-form-label {
+    width: 100%;
+}
+.smartphone .bz-form-item.ui-state-active, .smartphone .bz-container.ui-bizagi-container-selected {
+    background-color: #fafafa;
+    background-image: initial !important;
+    border: 1px solid transparent !important;
+    outline-offset: -1px;
+    outline: 1px solid #91ad1f !important;
+}
+.smartphone .bz-form-item--display-normal[dir=rtl] .bz-form-label, .smartphone .bz-form-item--display-reversed[dir=rtl] .bz-form-label {
+    padding: 0;
+}
+.smartphone [dir=rtl] .bz-form-item--display-normal .bz-form-label, .smartphone [dir=rtl] .bz-form-item--display-reversed .bz-form-label {
+    padding: 0;
+}
+.bz-form.smartphone label.bz-input.bz-input--readonly:empty:before {
+    content: " ";
+    white-space: pre;
+}

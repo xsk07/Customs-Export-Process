@@ -1,0 +1,390 @@
+/*!
+ * Bootstrap v3.2.0 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+hr {
+  border-top-color: #efefe7;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+body {
+  color: #444;
+}
+.jumbotron h1,
+.jumbotron h2,
+.jumbotron h3,
+.jumbotron h4,
+.jumbotron h5,
+.jumbotron h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #444;
+}
+.btn-cancel {
+  color: #e7841a;
+  text-decoration: underline;
+  background-color: #fff;
+  border-color: #fff;
+}
+.btn-cancel:hover,
+.btn-cancel:focus,
+.btn-cancel:active,
+.btn-cancel.active,
+.open > .dropdown-toggle.btn-cancel {
+  color: #e7841a;
+  background-color: #f2f2f2;
+  border-color: #f0f0f0;
+}
+.btn-cancel:active,
+.btn-cancel.active,
+.open > .dropdown-toggle.btn-cancel {
+  background-image: none;
+}
+.btn-cancel.disabled,
+.btn-cancel[disabled],
+fieldset[disabled] .btn-cancel,
+.btn-cancel.disabled:hover,
+.btn-cancel[disabled]:hover,
+fieldset[disabled] .btn-cancel:hover,
+.btn-cancel.disabled:focus,
+.btn-cancel[disabled]:focus,
+fieldset[disabled] .btn-cancel:focus,
+.btn-cancel.disabled:active,
+.btn-cancel[disabled]:active,
+fieldset[disabled] .btn-cancel:active,
+.btn-cancel.disabled.active,
+.btn-cancel[disabled].active,
+fieldset[disabled] .btn-cancel.active {
+  background-color: #fff;
+  border-color: #fff;
+}
+.btn-cancel .badge {
+  color: #fff;
+  background-color: #e7841a;
+}
+.btn-cancel:hover,
+.btn-cancel:focus,
+.btn-cancel:active,
+.btn-cancel.active {
+  text-decoration: underline;
+}
+.btn {
+  border-radius: 3px;
+}
+.btn-primary {
+  text-shadow: 0 1px rgba(0, 0, 0, .1);
+  background-image: -webkit-linear-gradient(top, #e7841a 0%, #e07d1a 100%);
+  background-image:      -o-linear-gradient(top, #e7841a 0%, #e07d1a 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e7841a), to(#e07d1a));
+  background-image:         linear-gradient(to bottom, #e7841a 0%, #e07d1a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe7841a', endColorstr='#ffe07d1a', GradientType=0);
+  background-repeat: repeat-x;
+  border: 1px solid #d17219;
+}
+.btn-primary:hover {
+  background-image: -webkit-linear-gradient(top, #f48c1d 0%, #e07d1a 100%);
+  background-image:      -o-linear-gradient(top, #f48c1d 0%, #e07d1a 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f48c1d), to(#e07d1a));
+  background-image:         linear-gradient(to bottom, #f48c1d 0%, #e07d1a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff48c1d', endColorstr='#ffe07d1a', GradientType=0);
+  background-repeat: repeat-x;
+}
+.form-control {
+  border-radius: 3px;
+}
+.form-control:focus {
+  border-color: #e7841a;
+  outline: 0;
+}
+.form-control::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  color: #999;
+}
+.form-control::-webkit-input-placeholder {
+  color: #999;
+}
+.table.table-bordered > caption + thead > tr:first-child > th,
+.table.table-bordered > colgroup + thead > tr:first-child > th,
+.table.table-bordered > thead:first-child > tr:first-child > th,
+.table.table-bordered th {
+  color: #ba6a14;
+  background-color: #fdf4ea;
+}
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td {
+  border-bottom: solid 1px #d27716;
+}
+.panel {
+  position: relative;
+  border-radius: 5px;
+}
+.modal-content::before {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  content: "";
+  border-bottom: solid 1px #ebebeb;
+}
+.btn-left {
+  float: left;
+}
+.btn-right {
+  float: right;
+}
+/*
+  JUST FOR DOCUMENTATION
+*/
+.page-header {
+  margin-top: 0;
+}
+.bs-docs-sidebar .nav > .active > a,
+.bs-docs-sidebar .nav > .active:hover > a,
+.bs-docs-sidebar .nav > .active:focus > a {
+  padding-left: 18px;
+  font-weight: 700;
+  color: #563d7c;
+  background-color: transparent;
+  border-left: 2px solid #563d7c;
+}
+.bs-docs-sidebar .nav > li > a {
+  display: block;
+  padding: 4px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #999;
+}
+form .alert {
+  padding: 2px 12px;
+}
+.highlight {
+  margin-top: 20px;
+}
+.ex-modal.modal {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  z-index: 1;
+  display: block;
+}
+.icon-inline span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.contrast-white .panel-1 {
+  color: #b3b3b3;
+  background-color: #444;
+}
+.panel-border .panel-0,
+.panel-border .panel-1 {
+  border: solid 1px #ddd;
+}
+.panel-0,
+.panel-1 {
+  padding: 1em;
+}
+.min-height {
+  min-height: 300px;
+}
+/***************************/
+.bz-cd-brand {
+  width: 191px;
+  height: 84px;
+  background-image: url(../img/brand-logo.png);
+  background-repeat: no-repeat;
+}
+.bz-brand-color {
+  background-color: #e7841a;
+}
+.bz-cd-brand-white {
+  width: 126px;
+  height: 60px;
+  background-image: url(../img/brand-logo-white.png);
+  background-repeat: no-repeat;
+}
+.bz-cd-brand-img {
+  text-align: center;
+}
+.bz-cd-nolabel label {
+  display: none;
+}
+.bz-cd-panel-default {
+  position: relative;
+}
+.bz-cd-panel-default .panel-footer {
+  padding: 6px 12px;
+  background-color: #fff;
+}
+.bz-cd-panel-close {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  z-index: 10;
+  line-height: 0;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 24px;
+}
+.bz-cd-modal p {
+  font-size: 1.2em;
+}
+.bz-cd-hidden {
+  display: none;
+  visibility: hidden;
+}
+.modal-dialog .bz-cd-icon-close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  z-index: 200;
+  background-color: #fff;
+  opacity: .8;
+}
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus {
+  outline: 5px auto #e7841a;
+}
+.navbar.navbar-default,
+.navbar.navbar-inverse {
+  border-radius: 0;
+}
+.navbar-inverse .navbar-toggle {
+  border: none;
+}
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+  background: #ba6a14;
+}
+.bz-cd-nav .divider {
+  height: 64px;
+  margin: 0 1em;
+  border-right: 1px solid #e88b28;
+  border-left: 1px solid #db7c17;
+}
+.bz-cd-wrapper {
+  background: #f0f0f0;
+}
+.divider {
+  height: 1em;
+  margin: 0 .25em;
+  border-left: solid 1px #444;
+}
+.bz-cd-username {
+  margin-right: 1em;
+}
+.bz-cd-inline > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+.bz-cd-panel.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 300;
+  height: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  overflow: hidden;
+}
+.bz-cd-push-panel.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 300;
+  height: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  overflow: hidden;
+}
+.bz-cd-panel-animation.width {
+  -webkit-transition: width 1s ease-in-out;
+       -o-transition: width 1s ease-in-out;
+          transition: width 1s ease-in-out;
+}
+.bz-cd-panel-animation.margin {
+  -webkit-transition: margin 1s ease-in-out;
+       -o-transition: margin 1s ease-in-out;
+          transition: margin 1s ease-in-out;
+}
+.bz-cd-push-panel {
+  position: absolute;
+}
+.bz-cd-push-panel.right .bz-cd-pr-content,
+.bz-cd-panel.right .bz-cd-pr-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid #e2dcca;
+  border-right: none;
+}
+.bz-cd-push-panel.inside .bz-cd-pr-content {
+  background-color: #fff;
+  border: 1px solid #e2dcca;
+  border-right: none;
+}
+.bz-cd-push-panel.inside {
+  position: absolute;
+  right: 0;
+  overflow: hidden;
+}
+.invisible {
+  height: 0;
+  visibility: hidden;
+}
+[data-sl-content] {
+  padding: 1em;
+  margin: 0;
+}
+[data-sl-tmp] {
+  margin: 0;
+}
+.bz-cd-panel.fixed {
+  position: fixed;
+}
+.row-panel-inside {
+  position: relative;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+/**************************
+  plugin slide left panel
+**************************/
+.sl-init .bz-cd-pr-content > div {
+  visibility: hidden;
+}
+.sl-open .bz-cd-pr-content > div {
+  visibility: visible;
+}
+.sl-close {
+  width: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+/*******************/
+/*# sourceMappingURL=bootstrap-theme.css.map */

@@ -1,0 +1,581 @@
+//**//
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+.gradient(@startColor, @endColor) {
+  background-color: @startColor;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, @startColor), color-stop(100%, @endColor));
+  background: -webkit-linear-gradient(top, @startColor 20%, @endColor 100%);
+  background: -moz-linear-gradient(top, @startColor 20%, @endColor 100%);
+  background: -ms-linear-gradient(top, @startColor 20%, @endColor 100%);
+  background: -o-linear-gradient(top, @startColor 20%, @endColor 100%);
+}
+
+.drop-shadow(@x: 0, @y: 0, @blur: 0, @spread: 0, @color: rgba(0, 0, 0, 0)) when (@active-box-shadow = false) {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.drop-shadow(@x: 0, @y: 1px, @blur: 5px, @spread: 0, @color: fade(darken(@one-color-palette, 10%), 20%)) when (@active-box-shadow = true) {
+  -webkit-box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  box-shadow: @arguments;
+}
+
+.inner-shadow(@x: 0, @y: 0, @blur: 0, @spread: 0, @color: rgba(0, 0, 0, 0)) when (@active-box-shadow = false) {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.inner-shadow(@x: 0, @y: 0, @blur: 5px, @spread: 0, @color: fade(darken(@one-color-palette, 15%), 15%)) when (@active-box-shadow = true) {
+  -webkit-box-shadow: inset @arguments;
+  -moz-box-shadow: inset @arguments;
+  box-shadow: inset @arguments;
+}
+
+.sprite() {}
+
+.sprite-ie() {}
+/*.sprite() when (@skeuomorphic = active) { background-image: url('jquery/workportal/css/desktop/images/biz-wp-icons-sprite.png'); }
+
+.sprite() when (@flat = active) { background-image: url('jquery/workportal/css/desktop/images/biz-wp-icons-sprite-flat.png'); }
+
+.sprite() when (@lineal = active) { background-image: url('jquery/workportal/css/desktop/images/biz-wp-icons-sprite-lineal.png'); }
+
+.sprite-ie() when (@skeuomorphic = active) { background-image: url('../jquery/workportal/css/desktop/images/biz-wp-icons-sprite.png'); }
+
+.sprite-ie() when (@flat = active) { background-image: url('../jquery/workportal/css/desktop/images/biz-wp-icons-sprite-flat.png'); }
+
+.sprite-ie() when (@lineal = active) { background-image: url('../jquery/workportal/css/desktop/images/biz-wp-icons-sprite-lineal.png'); }*/
+
+
+
+
+
+.side-bar-image(@sidebar-image-theme)when (@sidebar-image-theme-available = true){
+  background-image: @sidebar-image-theme;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+
+}
+
+.side-bar-image(@sidebar-image-theme) when (@sidebar-image-theme-available = false){
+  background-image: none;
+}
+
+
+.text-shadow(@x: 0, @y: 0, @blur: 0, @color: rgba(0, 0, 0, 0)) when (@active-text-shadow = false) {
+  text-shadow: none;
+}
+
+.text-shadow(@x: 0, @y: 1px, @blur: 0, @color: rgba(250, 250, 250, 1)) when (@active-text-shadow = true) {
+  text-shadow: @arguments;
+}
+
+.border-radius(@radius: 0) when (@active-border-radius = false) {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.border-radius(@radius: @border-radius-default) when (@active-border-radius = true) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.border-radiuses(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) when (@active-border-radius = false) {
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+
+
+//MIXIN CONTRAST TEXT COLOR VS BACKGROUND COLOR
+//lightness less % more darkness
+.contrastColor (@textColor;@bgColor) {color:@textColor;} // Init color: Same as textColor
+
+.contrastColor (@textColor;@bgColor)
+              when ( lightness(@textColor) < 20%)
+              and ( lightness(@bgColor) < 20% )
+              and (@active-smart-contrast = true)
+              {color:lighten(@textColor,70%)}
+
+
+.contrastColor (@textColor;@bgColor)
+              when ( lightness(@textColor) > 60%)
+              and ( lightness(@bgColor) > 60% )
+              and (@active-smart-contrast = true) {color:darken(@textColor,70%)}
+
+
+.contrastColor (@bgColor) {background-color:@bgColor;} // Init color: Same as bgColor
+
+.contrastBgColor (@bgColor) {background-color:@bgColor}
+.contrastBgColor (@bgColor)
+            when ( lightness(@bgColor) < 99.3%)
+            and (@active-smart-contrast = true) {background-color:mix(@bgColor,lighten(@bgColor, 100%),80%)}
+
+.contrastBgColor (@bgColor)
+            when ( lightness(@bgColor) < 85%)
+            and (@active-smart-contrast = true) {background-color:mix(@bgColor,lighten(@bgColor, 100%),40%)}
+
+.contrastBgColor (@bgColor)
+            when ( lightness(@bgColor) < 80%)
+            and (@active-smart-contrast = true) {background-color:mix(@bgColor,lighten(@bgColor, 100%),10%)}
+
+.contrastBgColor (@bgColor)
+            when ( lightness(@bgColor) < 75%)
+            and (@active-smart-contrast = true) {background-color:mix(@bgColor,lighten(@bgColor, 100%),4%)}
+
+//CALCULATE PERCENT COLOR
+.mixBgColor(@baseColor,@percent){
+  background-color: mix(@baseColor,lighten(@baseColor, 100%),@percent);
+}
+
+
+/*Contrast Functions*/
+.percentColor(@baseColor,@percent){
+  @result: mix(@baseColor,lighten(@baseColor, 100%),@percent);
+}
+
+//Contrast width lightness and darkness background
+.contrast(@frontColor;@backColor;@percent) {@contrast:@frontColor;} // Init color: Same as textColor
+
+.contrast(@frontColor;@backColor;@percent)
+    when ( lightness(@frontColor) < 40%)
+    and ( lightness(@backColor) < 40% )
+    and (@active-smart-contrast = true){
+      @contrast:lighten(@frontColor,@percent)
+    }
+
+.contrast(@frontColor;@backColor;@percent)
+    when ( lightness(@frontColor) > 60%)
+    and ( lightness(@backColor) > 60% )
+    and (@active-smart-contrast = true){
+      @contrast:darken(@frontColor,@percent)
+    }
+
+.contrastFixIconJquery(@frontColor;@backColor;@percent) {@contrastFixIconJquery:@backColor;} // Init color: Same as textColor
+.contrastFixIconJquery(@frontColor;@backColor;@percent)
+when ( lightness(@backColor)  < 50% ) {
+  @contrast:darken(@backColor,@percent)
+}
+
+
+//Contrast Only lightness Background
+.contrastLight(@frontColor;@backColor) {@contrastLight:@frontColor;} // Init color: Same as textColor
+.contrastLight(@frontColor;@backColor)
+    when ( lightness(@frontColor) > 40%)
+    and ( lightness(@backColor) > 40% )
+    and (@active-smart-contrast = true) {
+    @contrastLight:darken(@frontColor,70%)
+}
+
+//contrast one Color
+.contrastOneDarken(@color;@percent) {@contrastOneDarken:darken(@color,@percent);} // Init color
+.contrastOneDarken(@color;@percent)
+  when (lightness(@color) < 20% )
+  and (@active-smart-contrast = true)
+  {@contrastOneDarken:lighten(@color,@percent);} // When is Darkness
+
+.mixBorderColor(@baseColor;@percent){
+  border-color: mix(@baseColor,lighten(@baseColor, 100%),@percent);
+}
+
+.border-radiuses(@topright: 6px, @bottomright: 6px, @bottomleft: 6px, @topleft: 6px) when (@active-border-radius = true) {
+  -webkit-border-top-right-radius: @topright;
+  -webkit-border-bottom-right-radius: @bottomright;
+  -webkit-border-bottom-left-radius: @bottomleft;
+  -webkit-border-top-left-radius: @topleft;
+  -moz-border-radius-topright: @topright;
+  -moz-border-radius-bottomright: @bottomright;
+  -moz-border-radius-bottomleft: @bottomleft;
+  -moz-border-radius-topleft: @topleft;
+  border-top-right-radius: @topright;
+  border-bottom-right-radius: @bottomright;
+  border-bottom-left-radius: @bottomleft;
+  border-top-left-radius: @topleft;
+}
+
+.line-height() when (@minimum-line-height = active) {
+    /* Render common
+     ========================================================================== */
+    .ui-bizagi-render-button {
+        min-height: 20px;
+    }
+
+    .ui-bizagi-render {
+        margin: 0;
+        margin-bottom: 1px;
+    }
+
+    .ui-bizagi-render .ui-bizagi-control {
+        height: 26px;
+    }
+
+    .ui-bizagi-render-display-vertical > .ui-bizagi-control {
+        height: auto;
+    }
+
+    .ui-bizagi-control-wrapper {
+        margin: 2px 0;
+    }
+
+    .ui-bizagi-render .ui-bizagi-render-control-required {
+        top: 50%;
+        transform: translateY(-50%);
+        height: calc(~"100% - 0px");
+    }
+
+    .ui-bizagi-render .ui-bizagi-render-display-cell > .ui-bizagi-render-control {
+    }
+
+    .ui-bizagi-render-date-input {
+        min-height: 20px !important;
+    }
+    /* Render main container
+     ========================================================================== */
+    .ui-bizagi-container-form {
+        padding: 8px 15px;
+        margin: 8px 16px;
+    }
+    /* Render group
+     ========================================================================== */
+    .ui-bizagi-container-group {
+        margin: 2px 0;
+    }
+
+    .ui-bizagi-container-group-wrapper {
+        padding: 4px 10px;
+        background-image: none;
+    }
+    /* Render tab
+     ========================================================================== */
+    #ui-bizagi-wp-workarea .ui-tabs {
+        margin: 2px 0;
+    }
+
+    #ui-bizagi-wp-app-render-form-content .ui-tabs .ui-tabs-panel {
+        padding: 4px 10px;
+        background-image: none;
+    }
+
+    #ui-bizagi-wp-app-render-form-content .ui-bizagi-tab-item-header {
+        margin: -4px -11px 4px;
+    }
+    /* Render grid
+     ========================================================================== */
+    .bz-rn-grid-header-title {
+        padding: 0 1em 0.2em;
+    }
+
+    .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-header tr {
+        height: 20px;
+    }
+
+    #admin-entity-main-wrapper .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-header tr th .sortColumnsDataDownIcon {
+        top: 4px;
+    }
+
+    .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr {
+        min-height: 0;
+    }
+
+    .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-header .ui-bizagi-grid-column label {
+        min-width: 100px;
+        padding: 6px;
+        text-align: center;
+    }
+
+    .bz-rn-grid-container-foother {
+        height: auto;
+    }
+
+    .ui-bizagi-grid .ui-bizagi-render .ui-bizagi-render-control-required {
+        top: 50%;
+        transform: translateY(-50%);
+        height: calc(~"100% - 3px");
+    }
+    /* Render input, textarea, select, grid and label
+     ========================================================================== */
+    input[type="text"],
+    input[type="password"],
+    input[type="number"],
+    textarea,
+    .ui-bizagi-control-wrapper,
+    .ui-bizagi-control .ui-bizagi-render-control,
+    .ui-bizagi-control .ui-bizagi-render-control .readonly-control,
+    .ui-bizagi-render .ui-bizagi-control,
+    .ui-bizagi-render > span > label,
+    .ui-bizagi-render .ui-bizagi-label,
+    .ui-selectmenu .ui-selectmenu-value,
+    .ui-bizagi-grid-cell input[type="text"],
+    .ui-bizagi-grid-cell input[type="password"],
+    .ui-bizagi-grid-cell input[type="number"],
+    .ui-bizagi-grid-cell .ui-selectmenu,
+    .ui-selectmenu,
+    .bz-input-icon,
+    .desktop .bz-form-old-item .ui-bizagi-render-control > label {
+        min-height: 0;
+    }
+
+    .browser-ie10 .ui-bizagi-render-control-mainIncluded-left, .ui-bizagi-render-control-mainIncluded-right {
+        margin-top: 4px;
+    }
+
+    .ui-bizagi-render-control-mainIncluded-left, .ui-bizagi-render-control-mainIncluded-right {
+        margin-top: 7px;
+    }
+
+    input[type="text"], input[type="password"], input[type="number"], .ui-selectmenu,
+    .biz-wp-combo-data-container,
+    .ui-bizagi-render-boolean-yesno > .ui-bizagi-render-boolean-yesno,
+    .bz-input-icon {
+        min-height: 20px;
+    }
+
+    textarea {
+        height: 70px;
+    }
+
+    .bz-render-comboSelected-listBoxSelects {
+        height: 80px;
+    }
+
+    .ui-bizagi-render-comboselected .ui-bizagi-render-text {
+        min-height: 30px;
+    }
+    /*********************Workportal Select Control*********************/
+    .biz-wp-combo-data-container .biz-wp-combo-btn {
+        height: 14px;
+    }
+    /******************** Radio button ***********************/
+    .ui-bizagi-render .ui-bizagi-control .ui-bizagi-render-control.ui-bizagi-render-boolean-yesno {
+        min-height: 20px;
+        height: 20px;
+    }
+
+    .ui-bizagi-render-boolean-yesno .ui-checkbox,
+    .ui-bizagi-render-boolean-yesno .checkbox-ie {
+        vertical-align: middle;
+    }
+
+    .ui-bizagi-rtl .ui-bizagi-render-boolean-yesno .checkbox-ie {
+        padding-right: 5px;
+    }
+    /*---------------- jquery.ui.uption.css ----------------*/
+    /*.ui-radio label {
+        line-height: 22px;
+        background-position: -10px -17px !important;
+        margin-top: -1px;
+    }
+
+    .ui-radio label {
+        background-position: -10px -17px !important;
+    }
+
+    .ui-radio label.ui-radio-state-hover {
+        background-position: -10px -117px !important;
+    }
+
+    .ui-radio label.ui-radio-state-highlight {
+        background-position: -10px -117px !important;
+    }
+
+    .ui-radio label.ui-radio-state-checked {
+        background-position: -10px -217px !important;
+    }*/
+    /*-------RTL--------*/
+    /*.ui-radio.ui-bizagi-rtl label {
+        background-position: -10px -17px;
+    }
+
+    .ui-radio.ui-bizagi-rtl label.ui-radio-state-hover {
+        background-position: -10px -117px !important;
+    }
+
+    .ui-radio.ui-bizagi-rtl label.ui-radio-state-highlight {
+        background-position: -10px -117px !important;
+    }
+
+    .ui-radio.ui-bizagi-rtl label.ui-radio-state-checked {
+        background-position: -10px -217px !important;
+    }*/
+    /*---------------- END jquery.ui.uption ----------------*/
+    .ui-bizagi-render .ui-bizagi-control .ui-bizagi-render-control {
+        min-height: 20px !important;
+    }
+
+    .ui-bizagi-render-control .ui-bizagi-render-numeric,
+    .ui-bizagi-render-control .ui-bizagi-render-date-only,
+    .ui-bizagi-render-control .ui-bizagi-render-text-extended,
+    .ui-bizagi-render-control .ui-bizagi-render-text,
+    .ui-bizagi-grid-cell .ui-selectmenu,
+    .ui-bizagi-render-control .ui-selectmenu, 
+    .bz-input-icon {
+        width: 99.9%;
+    }
+
+    .ui-bizagi-grid-cell input[type="text"],
+    .ui-bizagi-grid-cell input[type="password"],
+    .ui-bizagi-grid-cell input[type="number"],
+    .ui-bizagi-grid-cell .ui-selectmenu {
+        min-width: 100px;
+    }
+
+    .ui-bizagi-render > .ui-bizagi-label > label,
+    .ui-bizagi-label label {
+        padding: 0px 4px;
+        min-height: 18px;
+    }
+
+    .ui-bizagi-render-display-label > .ui-bizagi-label {
+        margin: 3.5px auto;
+    }
+
+    .ui-bizagi-render-display-normal > .ui-bizagi-label label {
+        margin: 0;
+    }
+
+    .ui-bizagi-advanced-search .ui-bizagi-render-search-button,
+    .ui-bizagi-grid-cell input[type="text"],
+    .ui-bizagi-grid-cell input[type="password"],
+    .ui-bizagi-grid-cell input[type="number"],
+    .ui-bizagi-grid-cell .ui-selectmenu,
+    input[type="text"],
+    input[type="password"],
+    input[type="number"],
+    .ui-selectmenu,
+    .bz-input-icon {
+        min-height: 24px;
+    }
+    /* Render button
+     ========================================================================== */
+    .ui-dialog .ui-dialog-buttonpane button,
+    .ui-bizagi-button-container .ui-bizagi-button,
+    .ui-dialog .ui-bizagi-button {
+        height: 22px;
+        min-height: 20px;
+        padding: 0px 5px;
+    }
+
+    .ui-bizagi-button-container .ui-bizagi-button {
+        height: initial;
+        max-height: 28px;
+        line-height: 1em;
+    }
+
+    input.ui-button {
+        padding: 0.2em 0.5em;
+    }
+
+    .ui-button span {
+        padding: 0 12px;
+    }
+    /* Render footer button
+     ========================================================================== */
+    .ui-bizagi-button-container {
+        padding-top: 0;
+        padding-bottom: 4px;
+    }
+
+    .ui-bizagi-button-container {
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+    /* Clean some shadow effects to prevent the overlap over controls when
+      the vertical space  is changed
+     ========================================================================== */
+    .ui-curved,
+    .ui-lifted {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+    /* Column fix
+     ========================================================================== */
+    .selectColumn > ui-bizagi-grid-column {
+        width: 80px;
+    }
+
+    .clientName > ui-bizagi-grid-column {
+        width: 140px;
+    }
+    /* Icons fix
+     ========================================================================== */
+    .ui-bizagi-control .timeEntry_control {
+        margin-top: 0px !important;
+        background-position-y: 0 !important;
+    }
+
+    .ui-bizagi-advanced-search .ui-bizagi-render-search-button {
+        min-height: 20px !important;
+    }
+
+    .desktop .bz-multiselect__search .bz-multiselect__search_icon {
+        height: 22px;
+        padding: 2px 8px;
+    }
+
+    .ui-bizagi-grid-table span.ui-bizagi-render-date-input {
+        width: 100% !important;
+    }
+
+    #btn-get-user, #btn-clear-user {
+        padding: 0;
+    }
+
+     .desktop .bz-input-icon { /* TODO: Remover cuando llegue genome*/
+        margin-bottom: 2px; 
+        margin-top: 2px;        
+    }
+
+    .desktop .bz-input-icon > .bz-icn {  /* TODO: Remover cuando llegue genome*/
+        width: 19px;
+        height: 19px;
+        padding: 0.3rem;
+    }
+
+    .desktop .bz-input[readonly]{  /* TODO: Remover cuando llegue genome*/
+        margin: 0px;
+    }
+
+    
+    .desktop .ui-bizagi-grid-table .bz-form-old-item .ui-bizagi-render-control .bz-input-icon { /* TODO: Remover cuando llegue genome*/
+        height: 26px;
+    }
+
+    .desktop .bz-form-old-item .ui-bizagi-render-control > label.bz-input.bz-input--readonly,
+    .desktop .bz-form-old-item .ui-bizagi-render-control .readonly-control {
+        line-height: 24px;
+    }
+}
+
+.line-height() when (@normal-line-height = active) {
+  body {
+    display: block;
+  }
+      
+  .ui-radio label{
+    line-height: 27px;
+    background-position: -10px -15px !important;
+    margin-top:1px;
+  }
+}
+
+.test(@baseColor,@percent){
+  @result: mix(@baseColor,lighten(@baseColor, 100%),@percent);
+}
+

@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Bizagi GO</title>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <link type="image/x-icon" rel="icon" href="favicon.ico"></link>
+        <link rel="apple-touch-icon-precomposed" href="workportal/css/tablet/images/BizAgi_logo.png"> 
+    </head>
+    <body>
+        <script type='text/javascript' src='bizagi.configuration.js'></script>
+        <script type='text/javascript' src='steal.js'></script>
+        <script type='text/javascript' src='bizagi.loader.js'></script>
+        <script type="text/javascript" language="javascript">
+            // Redefine path to base
+            var session = window.sessionStorage.getItem("bizagiAuthentication") || "{}";
+            session = JSON.parse(session);
+
+            var BIZAGI_PATH_TO_BASE = bizagiConfig.pathToRoot || "../";
+            var BIZAGI_LANGUAGE = session.language || bizagiConfig.defaultLanguage || 'en';
+            var BIZAGI_ENVIRONMENT = bizagiConfig.environment || "release";
+            var BIZAGI_ENABLE_LOG = bizagiConfig.log || false;
+            var BIZAGI_DEFAULT_CURRENCY_INFO = {
+                "symbol": session.symbol || "$",
+                "decimalSeparator": session.decimalSeparator || ",",
+                "groupSeparator": session.groupSeparator || ".",
+                "decimalDigits": session.decimalDigits || "2"
+            };
+            var BIZAGI_DEFAULT_DATETIME_INFO = {
+                "shortDateFormat": session.shortDateFormat || "dd/MM/yyyy",
+                "timeFormat": session.timeFormat || "H:mm",
+                "longDateFormat": session.longDateFormat || "dddd, dd' de 'MMMM' de 'yyyy"
+            };
+            var BIZAGI_SETTINGS = {
+                "UploadMaxFileSize":  bizagiConfig.uploadMaxFileSize || "1048576"
+            };
+            var BIZAGI_USER_PREFERENCES_PAGE = '';
+            //  var BIZAGI_SESSION_NAME = "ASP.NET_SessionId";
+
+            //activation service
+            var BIZAGI_SERVICE_ACTIVATION = true ;
+
+            // Gets the loader instance, and load the module
+            var loader = bizagi.loader;
+            loader.init(function() {
+                if (session.isAuthenticate == "true") {
+                    loader.start("workportal").then(function() {
+                        var workportal = new bizagi.workportal.facade({
+                            proxyPrefix: bizagiConfig.proxyPrefix || ""
+                        });
+                        workportal.execute();
+                    });
+                } else {
+                    // Initialize login module
+                    loader.start("login").then(function() {
+                        var login = new bizagi.login.facade({
+                            proxyPrefix: bizagiConfig.proxyPrefix || ""
+                        });
+                        login.execute();
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+#Software: Bizagi Scheduler
+#Version: 1.0.0.0
+#Platform: CLR 4.0.30319.42000
+#OSVersion: Microsoft Windows NT 6.2.9200.0
+#Machine: MORTYSMITH
+#ProcessorCount: 8
+#User Name: SYSTEM
+#Domain: WORKGROUP
+
+#Fields: date time session level module submodule message

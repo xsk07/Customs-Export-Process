@@ -1,0 +1,2255 @@
+@focus:                                 lighten(@one-color-palette, 20%);
+@white:                                 #FFF;
+@border-radius-default:                 6px;
+
+/* ==========================================================================
+   Common
+   ========================================================================== */
+
+
+
+:focus { outline-color: @focus; }
+
+#ui-bizagi-wp-application * { filter: none !important; }
+
+/* Elements */
+/*html,
+body {
+  background-color: @background;
+  color: @text;
+  font-family: @font-family;
+  font-size: 10.5px;
+}
+
+a {
+  color: @content-link;
+  text-decoration: none;
+}*/
+
+a:hover { text-decoration: underline; }
+
+.highlight { position: relative; }
+
+.highlight::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9000;
+  background: fade(darken(@one-color-palette, 25%), 60%);
+}
+
+.highlight::after {
+  .drop-shadow();
+  .border-radius();
+  content: attr(data-selection);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 9001;
+  width: 200px;
+  height: 22px;
+  border: 1px solid @navigation-border;
+  margin-top: -11px;
+  margin-left: -100px;
+  background: @tooltip;
+  color: @content-link;
+  text-align: center;
+  line-height: 22px;
+}
+
+.ui-curved-vt-2, .ui-curved-hz-1{
+  .drop-shadow(0, 6px, 6px, -6px, darken(@content, 20%));
+}
+
+.ui-lifted{
+  .drop-shadow(0, 6px, 6px, -6px, darken(@content, 20%));
+}
+
+/* ==========================================================================
+   Components
+   ========================================================================== */
+
+/* Menu
+   ========================================================================== */
+
+/* Menu background */
+#ui-bizagi-wp-app-menu-container { background: none; }
+
+#ui-bizagi-wp-menu {
+  background: darken(@one-color-palette,10%);//@navigation;
+  border-top: 0;
+}
+
+/* Menu logo */
+#ui-bizagi-wp-app-menu-logo-client {
+  position: relative;
+}
+
+#ui-bizagi-wp-app-menu-selector.vertical_division {
+  .drop-shadow(1px, 0, 0, 0, @navigation-border);
+  background: darken(@navigation-border, 10%);
+}
+
+/* Sprite search */
+#ui-bizagi-wp-app-bt-search { .sprite(); }
+
+.biz-theme-ie #ui-bizagi-wp-app-bt-search { .sprite-ie(); }
+
+/* Menu search */
+#ui-bizagi-wp-app-search input {
+  .inner-shadow();
+  .border-radius(8px);
+  background: @navigation;
+  font-family: @font-family;
+  color: @navigation-link;
+}
+
+#ui-bizagi-wp-app-search:hover input,
+#ui-bizagi-wp-app-search input:focus,
+#ui-bizagi-wp-app-search input:hover {
+  background: lighten(@navigation, 5%);
+  color: lighten(@navigation-link, 10%);
+}
+
+#ui-bizagi-wp-app-search.searchNewCase {
+  padding: 3px 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Menu text */
+#main_menu li a .text {
+  .text-shadow() !important;
+  .border-radius();
+  background-color: transparent;
+  color: @navigation-link;
+  font-family: @font-family;
+}
+
+#main_menu li a:hover .text,
+#main_menu li.active .text,
+#logout .ui-button-text,
+#about .ui-button-text {
+  .text-shadow();
+  background-color: transparent;
+  color: darken(@navigation-link, 15%);
+}
+
+/* Menu font size */
+.ui-bizagi-wp-bt-font {
+  .text-shadow();
+  position: static;
+  margin: 0;
+  height: 59px;
+  color: @navigation-link;
+  line-height: 59px;
+}
+
+.ui-bizagi-wp-bt-font:hover {
+  .text-shadow();
+  color: darken(@navigation-link, 15%);
+}
+
+.ui-bizagi-wp-bt-font.active {
+  .text-shadow();
+  color: darken(@navigation-link, 15%);
+}
+
+.ui-bizagi-wp-font-content .font-switcher {
+  .drop-shadow(0, 1px, 0, 0, @content-border);
+  .border-radius();
+  .text-shadow();
+  border-color: @content-border;
+  color: @content-link;
+}
+
+.ui-bizagi-wp-font-content .font-switcher.active,
+.ui-bizagi-wp-font-content .font-switcher:hover {
+  .inner-shadow(0, 1px, 5px, 0, fadeout(@content-link, 15%));
+  border-color: lighten(@content-link, 10%);
+  color: @content-link;
+}
+
+/* Menu username logout and about */
+#ui-bizagi-wp-menu-username {
+  .sprite();
+  background-color: transparent;
+  color: @text;
+  font-family: @font-family;
+}
+
+.biz-theme-ie #ui-bizagi-wp-menu-username { .sprite-ie(); }
+
+#ui-bizagi-wp-menu-username .text {
+  .text-shadow();
+  background-color: transparent;
+  color: @navigation-link;
+  filter: none !important;
+}
+
+#userprofile > button .ui-icon-logout,
+#userprofile > button .ui-icon-about {
+  .sprite();
+}
+
+.biz-theme-ie #userprofile > button .ui-icon-logout,
+.biz-theme-ie #userprofile > button .ui-icon-about { .sprite-ie(); }
+
+#ui-bizagi-wp-menu-username .text,
+#userprofile > button .ui-button-text {
+  .text-shadow();
+  color: @navigation-link;
+  background-color: transparent;
+}
+
+#userprofile > button:hover .ui-button-text {
+  .text-shadow();
+  color: darken(@navigation-link, 15%);
+  background-color: transparent;
+}
+
+#main_menu li a .text,
+#ui-bizagi-wp-menu-username .text,
+#logout .ui-button-text,
+#about .ui-button-text {
+  -moz-transition: opacity .3s ease-in-out;
+  -webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+}
+
+#main_menu li a .text:before,
+#ui-bizagi-wp-menu-username .text:before,
+#logout .ui-button-text:before,
+#about .ui-button-text:before { background: none !important; }
+
+/* Menu build */
+#ui-bizagi-wp-app-menu-container #build {
+  .text-shadow();
+  right: 100px;
+  color: @text;
+}
+
+/* Menu build */
+#ui-bizagi-wp-app-menu-bt-container > ul li:hover,
+#ui-bizagi-wp-app-menu-bt-container .activeMenu {
+  background: darken(@navigation, 10%);
+  color:lighten(@navigation, 30%);
+}
+
+
+#searchNotFound {
+  .text-shadow();
+  margin-top: 3px;
+  color: @text;
+  text-align: center;
+}
+
+
+@media screen and (max-width: 1230px) {
+
+  #ui-bizagi-wp-menu-username .text,
+  #userprofile > button:hover .ui-button-text {
+    .drop-shadow();
+    border-color: @navigation-border;
+    background: @tooltip;
+    color: @content-link;
+  }
+
+  #ui-bizagi-wp-menu-username .text,
+  #ui-bizagi-wp-menu-username:hover .text,
+  #logout:hover .ui-button-text,
+  #logout .ui-button-text {
+    .border-radius();
+  }
+
+}
+
+@media screen and (max-width: 1416px) {
+
+  #main_menu li a .text {
+    .drop-shadow();
+    border-color: @navigation-border;
+  }
+
+}
+
+/* Menu triangle */
+#main_menu li .ui-bizagi-wp-mini-arrow { border-top-color: @navigation-link; }
+
+#main_menu li:hover .ui-bizagi-wp-mini-arrow,
+#main_menu li.active .ui-bizagi-wp-mini-arrow { border-top-color: darken(@navigation-link, 15%); }
+
+/* Menu icons sprite */
+#main_menu li .icon { .sprite(); }
+
+.biz-theme-ie #main_menu li .icon { .sprite-ie(); }
+
+#main_menu li .widgets{ background-position: 0 0; }
+
+#main_menu li .new { background-position: -3px -3px; }
+
+#main_menu li .favorites { background-position: -141px -3px; }
+
+#main_menu li .inbox { background-position: -49px -3px; }
+
+#main_menu li .preferences { background-position: -95px -3px; }
+
+#main_menu li .queries { background-position: -187px -3px; }
+
+#main_menu li .admin { background-position: -233px -3px; }
+
+#main_menu li .reports { background-position: -279px -3px; }
+
+/* Inbox bar
+   ========================================================================== */
+
+/* Inbox bar background */
+
+#contentInbox {
+  .drop-shadow();
+  height: auto;
+}
+
+#innerContentInbox {
+  background: none;
+  border-top: 1px solid @navigation-border;
+}
+
+/* Inbox bar text */
+#contentInbox h2 {
+  .text-shadow();
+  color: @navigation-link;
+}
+
+#contentInbox h2:hover {
+  .text-shadow();
+  color: darken(@navigation-link, 15%);
+}
+
+#ui-bizagi-wp-app-inbox-bt-eye,
+#ui-bizagi-wp-app-inbox-bt-eye:hover,
+#ui-bizagi-wp-app-inbox-bt-eye:active { .sprite(); }
+
+.biz-theme-ie #ui-bizagi-wp-app-inbox-bt-eye,
+.biz-theme-ie #ui-bizagi-wp-app-inbox-bt-eye:hover,
+.biz-theme-ie #ui-bizagi-wp-app-inbox-bt-eye:active { .sprite-ie(); }
+
+.modalEyePopup li span {
+  .text-shadow();
+  color: @content-link;
+}
+
+.modalEyePopup li:hover span {
+  .text-shadow();
+  color: @content-link;
+  text-decoration: underline;
+}
+
+.modalEyePopup li:active {
+  .inner-shadow();
+  background: none;
+}
+
+/* Processes area
+   ========================================================================== */
+
+/* Processes background and borders */
+#contentProc {
+  .drop-shadow();
+  background: @pane;
+  border-right: 1px solid lighten(@content-border, 25%);
+}
+
+/* Processes titles */
+.biz-wp-window-title,
+#ui-bizagi-wp-app-inbox-activities-routing .text-description-title,
+.ui-bizagi-wp-app-inbox-processes-title {
+  .drop-shadow(0, 1px, 0, 0, rgba(255, 255, 255, .2));
+  .text-shadow();
+  border-color: @content-border;
+  color: @title;
+  font-size: 115%!important;
+  font-weight:normal;
+}
+
+.biz-wp-window-title{
+  font-size: 130%!important;
+  border-bottom: solid 1px @content-border;
+}
+
+
+/* Processes triangles */
+#contentProc .ui-bizagi-wp-app-inbox-processes-title .arrow.Right { border-left: 5px solid @content-border; }
+
+.ui-bizagi-wp-app-inbox-processes-title .arrow.Down { border-top: 4px solid @content-border; }
+
+.ui-bizagi-wp-app-inbox-processes-title .arrow.Left { border-right: 6px solid @content-border; }
+
+/* Processes container */
+#ui-bizagi-wp-app-inbox-processes-container ul {
+  .border-radius();
+  border: 1px solid @content-border;
+  background: @content;
+}
+
+#ui-bizagi-wp-app-inbox-processes-container ul li { border-top: 1px solid @content-border; }
+
+#ui-bizagi-wp-app-inbox-processes-container ul li:first-child{ .border-radiuses(4px, 0, 0, 4px); }
+
+#ui-bizagi-wp-app-inbox-processes-container ul li:last-child{ .border-radiuses(0, 4px, 4px, 0); }
+
+#ui-bizagi-wp-app-inbox-processes-container ul li:only-child { .border-radius(4px); }
+
+#ui-bizagi-wp-app-inbox-processes-container li:nth-child(2n) { background-color: darken(@content, 5%); }
+
+#ui-bizagi-wp-app-inbox-processes-container li:hover { background: darken(@content, 10%); }
+
+#ui-bizagi-wp-app-inbox-processes-container .selected,
+#ui-bizagi-wp-app-inbox-processes-container li.selected:hover,
+#ui-bizagi-wp-app-inbox-processes-container li:nth-child(2n).selected { background: darken(@content, 10%); }
+
+.ui-bizagi-wp-app-inbox-processes-name {
+  .text-shadow();
+  font-size: 115%;
+  color: @text;
+  font-weight: normal;
+}
+
+/* Processes number of cases */
+.ui-bizagi-wp-app-inbox-processes-ncase {
+  .inner-shadow();
+  .border-radius();
+  background: @content;
+  color: @text;
+}
+
+#ui-bizagi-wp-app-inbox-processes-container .selected .ui-bizagi-wp-app-inbox-processes-ncase,
+#ui-bizagi-wp-app-inbox-processes-container li:hover .ui-bizagi-wp-app-inbox-processes-ncase {
+  .inner-shadow();
+  background-color: darken(@content, 10%);
+}
+
+/* Cases area
+   ========================================================================== */
+
+/* -------------- Workportal Table -------------- */
+.biz-wp-table tr{
+  border: 1px solid @content-border;
+  border-radius: 0;
+}
+
+.biz-wp-table-body tr{
+  background: @content;
+}
+
+.biz-wp-table-head th{
+  .text-shadow();
+  background: darken(@content, 10%);
+  color: @title;
+  border-bottom: 1px solid darken(@content-border, 30%) !important;
+}
+
+.biz-wp-table-head th a{
+  .text-shadow();
+  color: @title;
+}
+
+/* -------------- Grid mode -------------- */
+
+/* Grid area background */
+#contentFramework #contentCases { .drop-shadow(); }
+
+#contentCases.casesGrid {
+  .drop-shadow();
+  background: lighten(@pane, 2%);
+}
+
+/* Grid background and border */
+.ui-bizagi-wp-app-routing-container table,
+.ui-bizagi-wp-app-inbox-grid-cases-container table,
+.personalizedColumnsContainer table {
+  background: @content;
+  border: 1px solid @content-border;
+  border-radius: 0;
+}
+
+/* Grid links color */
+.gridListWorkItems li .ui-bizagi-wp-app-inbox-activity-name,
+.ui-bizagi-wp-app-inbox-activity-name {
+  color: @content-link;
+  text-decoration: underline;
+}
+
+/* Grid top border cells */
+.ui-bizagi-wp-app-routing-container table td,
+.ui-bizagi-wp-app-inbox-grid-cases-container table td,
+.personalizedColumnsContainer table td {
+  border-top: 1px solid @content-border !important;
+}
+
+/* Grid header */
+.ui-bizagi-wp-app-routing-container thead td,
+.ui-bizagi-wp-app-inbox-grid-cases-container thead td,
+.personalizedColumnsContainer table thead td {
+  .text-shadow();
+  background: darken(@content, 10%);
+  color: @title;
+  font-size: 115%;
+  border-bottom: 1px solid darken(@content-border, 30%) !important;
+}
+
+/* Grid arrows */
+.arrowUpIcon { border-bottom-color: @title; }
+
+.arrowDownIcon { border-top-color: @title; }
+
+/* Grid even rows */
+.ui-bizagi-wp-app-routing-container tbody .event,
+#ui-bizagi-wp-app-inbox-grid-cases tbody .event,
+.biz-wp-table tbody .biz-wp-table-row-even,
+.personalizedColumnsContainer table tbody .event {
+  background-color: darken(@content, 5%);
+}
+
+/* Grid hover rows */
+#ui-bizagi-wp-app-inbox-grid-cases .selected td,
+.ui-bizagi-wp-app-routing-container .selected td,
+.ui-bizagi-wp-app-routing-container tbody tr:hover td,
+.ui-bizagi-wp-app-inbox-grid-cases-container tbody tr:hover td,
+.personalizedColumnsContainer table tbody tr:hover td {
+  background: darken(@content, 10%);
+}
+
+/* -------------- Details mode -------------- */
+
+/* Details area background */
+#contentCases {
+  .drop-shadow(2px, 0, 3px, 0, rgba(0, 0, 0, .2));
+  border-right: 1px solid lighten(@content-border, 25%);
+  background: lighten(@pane, 2%);
+}
+
+/* Details case background and border */
+.ui-bizagi-wp-app-inbox-cases-container ul {
+  border: 1px solid @content-border;
+  background: @content;
+}
+
+.ui-bizagi-wp-app-inbox-cases-container ul { .border-radius(); }
+
+#ui-bizagi-wp-app-inbox-cases-container li { .border-radius(4px); }
+
+#ui-bizagi-wp-app-inbox-cases-container li:hover,
+#ui-bizagi-wp-app-inbox-cases-container .selected,
+#ui-bizagi-wp-app-inbox-cases-container li.selected:hover {
+  background: darken(@content, 10%) !important;
+}
+
+/* Details activity title */
+#ui-bizagi-wp-app-inbox-cases-container #caseId h3 {
+  .text-shadow();
+  font-weight: normal;
+  font-family: @font-family;
+  font-size: 135%;
+  color: @title;
+}
+
+/* Details activity name color and borders */
+#ui-bizagi-wp-app-inbox-cases-container #caseActivity span { color: @text; }
+
+#ui-bizagi-wp-app-inbox-cases-container li #caseActivity { border-color: @content-border; }
+
+#ui-bizagi-wp-app-inbox-cases-container li:hover #caseActivity,
+#ui-bizagi-wp-app-inbox-cases-container .selected #caseActivity { border-color: @content-border; }
+
+/* Details activity content color */
+#ui-bizagi-wp-app-inbox-cases-container li dl,
+#ui-bizagi-wp-app-inbox-cases-container li:hover dl,
+#ui-bizagi-wp-app-inbox-cases-container li.selected dl { color: @text; }
+
+/* -------------- Summary -------------- */
+
+/* Summary area background */
+#contentDesc { background: lighten(@pane, 2%); }
+
+/* Summary activity border, background and text */
+.ui-bizagi-wp-app-inbox-activity-description {
+  .border-radius();
+  border-color: @content-border;
+  color: @text;
+}
+
+.ui-bizagi-wp-app-inbox-activity-description > div {
+  .border-radius();
+  background: @content;
+}
+
+.ui-bizagi-wp-app-inbox-activity-description .ui-bizagi-wp-app-inbox-cases-description-ico-state { .border-radiuses(0, 0, 4px, 4px); }
+
+/* Summary activity state */
+.ui-bizagi-wp-app-inbox-activity-description #ui-bizagi-wp-app-inbox-cases-ico-state-Red {
+  background: #ff5917 !important;
+}
+
+.ui-bizagi-wp-app-inbox-activity-description #ui-bizagi-wp-app-inbox-cases-ico-state-Green {
+  background: #379c44 !important;
+}
+
+.ui-bizagi-wp-app-inbox-activity-description #ui-bizagi-wp-app-inbox-cases-ico-state-Yellow {
+  background: #d4bd09 !important;
+}
+
+/* Summary activity title */
+.ui-bizagi-wp-app-inbox-activity-description h2 {
+  .text-shadow();
+  font-size: 175%;
+  font-weight: normal;
+  font-family: @font-family;
+  color: @title;
+  border-bottom: 1px solid @content-border;
+}
+
+/* Summary activity data */
+
+#ui-bizagi-details-tabs dd, .box-description dd { background: darken(@pane, 4%); }
+
+.ui-bizagi-container.ui-bizagi-container-collectionnavigator{
+  background: darken(@form-grid, 2%);
+  border-color: @content-border !important;
+}
+
+.ui-bizagi-container-collectionnavigator .forms-group,
+.ui-bizagi-container-collectionnavigator .bz-collectionnavigator-wrapper,
+.ui-bizagi-container-collectionnavigator .actions-group,
+.ui-bizagi-container-collectionnavigator .bz-collectionnavigator-controls .actions-group::before,
+.ui-bizagi-container-collectionnavigator .bz-collectionnavigator-controls .forms-group::after{
+  background: darken(@form-grid, 2%);
+}
+
+
+.ui-bizagi-container-collectionnavigator .bz-collectionnavigator-controls{
+  background: darken(@form-grid, 5%);
+  border-color: @content-border !important;
+}
+
+.ui-bizagi-container-collectionnavigator .bz-navigation-control-counter{
+  background: darken(@form-grid, 5%);
+}
+.ui-bizagi-container-collectionnavigator .ui-icon:hover{
+  background-color: lighten(darken(@content, 5%), 5%);
+}
+
+/* Summary tabs */
+
+//.ui-tabs .ui-tabs-nav li { border-color: transparent; }//
+
+#ui-bizagi-wp-application .ui-tabs .ui-tabs-nav li {
+  position: relative;
+  top: 1px;
+  border-bottom: 1px solid transparent !important;
+  max-height: 27px;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+  border-color: @form-tab-border;
+  border-bottom: none !important;
+  background: @form-tab;
+}
+
+.ui-tabs .ui-tabs-nav li a {
+  .text-shadow();
+  background: none;
+  color: lighten(@title, 10%);
+  font-family: @font-family;
+}
+
+.ui-tabs .ui-tabs-nav li:hover a,
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a {
+  outline: 0;
+  background: none;
+  color: @title;
+}
+
+.ui-corner-top { .border-radiuses(2px, 0, 0, 2px); }
+
+#ui-bizagi-details-tabs .ui-tabs-panel {
+  .border-radius();
+  border-color: @form-tab-border;
+  background: mix(@form-tab,@white,50%);
+}
+
+/* Footer
+   ========================================================================== */
+
+/* Footer background */
+#footer {
+  .drop-shadow(0, -2px);
+  background: @navigation;
+}
+
+/* Footer inbox borders */
+#ui-bizagi-wp-app-inbox-tab-container { border-right: 1px solid @navigation-border; }
+
+.ui-bizagi-wp-app-inbox-tab .text { .sprite(); }
+
+.biz-theme-ie .ui-bizagi-wp-app-inbox-tab .text { .sprite-ie(); }
+
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab {
+  border-left: 1px solid @navigation-border;
+  line-height: 2;
+}
+
+#ui-bizagi-wp-app-inbox-tab-container #favourites { border-right: none; }
+
+/* Footer buttons */
+#ui-bizagi-wp-app-inbox-tab-container .toolTip {
+  .inner-shadow();
+  .border-radius();
+  background: @navigation;
+  color: @navigation-link;
+  font-weight: bold;
+  text-align: center;
+}
+
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab.active .toolTip,
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab:hover .toolTip {
+  .inner-shadow();
+  background: @navigation;
+  color: @navigation-link;
+}
+
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab.active,
+#ui-bizagi-wp-app-inbox-tab-container ul li.ui-bizagi-wp-app-inbox-tab:hover {
+  .inner-shadow();
+  background: lighten(@navigation, 5%);
+}
+
+/* Footer pagination */
+.gridCasePagination #tooltipPagination { .border-radiuses(4px, 0, 0, 4px); }
+
+#casesPagination { border-right: 1px solid @navigation-border; }
+
+.biz-wp-table-summary-wrapper ul li{
+  .text-shadow();
+  color: @text;
+  text-align: center;
+}
+
+.biz-wp-table-summary-wrapper ul li{
+  .text-shadow();
+  text-align: center;
+}
+
+#casesPagination ul li:hover span { color: darken(@navigation-link, 15%); }
+
+#casesPagination ul li.active,
+#casesPagination ul li.active:hover,
+#biz-wp-userstable-pager ul li.active { .inner-shadow(); }
+
+#casesPagination ul li.active,
+.biz-wp-table-summary-wrapper ul li.active,
+#casesPagination ul li.active:hover,
+#casesPagination ul li.active:hover span {
+  .border-radius();
+  background-color: @navigation;
+  color: darken(@navigation-link, 15%);
+}
+
+#casesPagination ul li.active span,
+#biz-wp-userstable-pager ul li.active span { .text-shadow(0, -1px, 0, rgba(0, 0, 0, .25)); }
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+.ui-bizagi-container-form.ui-widget-content { background: @form-container; }
+
+.ui-bizagi-button-container {
+  .inner-shadow();
+  border-color: @content-border !important;
+  background: desaturate(@form-container, 15%);
+}
+
+.ui-bizagi-button-container:hover { background: desaturate(darken(@form-container, 15%), 25%); }
+
+#panelArrowContainer {
+  overflow: hidden;
+  border-left-color: @content-border;
+  border-right-color: @content-border;
+  background: lighten(@pane, 2%);
+}
+
+#panelArrow.panelArrowRight { border-left-color: @content-border; }
+
+#panelArrowContainer:hover #panelArrow.panelArrowRight { border-left-color: darken(@content-border, 10%); }
+
+#panelArrow.panelArrowLeft { border-right-color: @content-border; }
+
+#panelArrowContainer:hover #panelArrow.panelArrowLeft { border-right-color: darken(@content-border, 10%); }
+
+#panelArrowContainer:hover { background: @pane; }
+
+/* Description panel background */
+#ui-bizagi-wp-app-render-desc-panel { background: @pane; }
+
+/* -------------- Buttons -------------- */
+
+/* General */
+.ui-button,
+.ui-button.ui-state-default,
+.ui-bizagi-button-container .ui-bizagi-button,
+.ui-dialog .ui-button,
+.ui-bizagi-wp-app-routing-container table .ui-button  {
+  .drop-shadow(0, 1px, 2px, 0, fadeout(@text, 65%));
+  .border-radius();
+  border-color:darken(@button,3%);
+  background-image: none;
+  color: @button;
+  font-family: @font-family;
+  -moz-transition: none;
+  -webkit-transition: none;
+  -o-transition: color 0 ease-in;
+  transition: none;
+}
+
+.ui-button:hover,
+.ui-button.ui-state-default:hover,
+.ui-bizagi-button-container .ui-bizagi-button:hover,
+.ui-dialog .ui-button:hover,
+.ui-bizagi-wp-app-routing-container table .ui-button:hover {
+  .text-shadow();
+  background: darken(@button, 3%) !important;
+  border-color:darken(@button,12%);
+  color: @white !important;
+  -moz-transition: none;
+  -webkit-transition: none;
+  -o-transition: color 0 ease-in;
+  transition: none;
+}
+
+.ui-button span { .text-shadow(); }
+
+/* Grid text */
+.ui-button .ui-button-text {
+  .border-radius(0);
+  color: @button-text;
+}
+
+/* Grid */
+.ui-bizagi-wp-app-inbox-activity-description:hover .workonitRow.ui-button,
+.ui-bizagi-wp-app-inbox-grid-cases-container table tr:hover .workonitRow.ui-button,
+.ui-bizagi-wp-app-routing-container table tr:hover .workonitRow.ui-button {
+
+  background-image: none;
+}
+
+.ui-bizagi-wp-app-inbox-activity-description:hover .workonitRow.ui-button:hover,
+.ui-bizagi-wp-app-inbox-grid-cases-container table tr:hover .workonitRow.ui-button:hover,
+.ui-bizagi-wp-app-routing-container table tr:hover .workonitRow.ui-button:hover {
+  border-color: @form-input-border;
+}
+
+.ui-bizagi-wp-app-inbox-activity-description:hover .workonitRow.ui-button:hover span,
+.ui-bizagi-wp-app-inbox-grid-cases-container table tr:hover .workonitRow.ui-button span,
+.ui-bizagi-wp-app-routing-container table tr:hover .workonitRow.ui-button span {
+  .text-shadow();
+  color: darken(@button-text, 5%);
+}
+
+.ui-bizagi-wp-app-inbox-activity-description:hover .workonitRow.ui-button, .ui-bizagi-wp-app-routing-container table tr:hover .workonitRow.ui-button {
+  border-color: @button;
+}
+
+.ui-bizagi-wp-app-inbox-activity-description:hover .workonitRow.ui-button span {
+  .text-shadow();
+  color: @button-text;
+}
+
+.workonitRow.showDesc.ui-button.bizagi-ui-icon-show-summary-grid{
+  .border-radius(@border-radius-default/2);
+}
+
+/* Modal hover */
+.ui-button:hover span,
+.ui-dialog .ui-bizagi-button:hover,
+.ui-bizagi-button-container .ui-bizagi-button:hover {
+  .text-shadow();
+  color: darken(@button-text, 5%);
+}
+
+/* Form border */
+.ui-bizagi-container-form { border-color: @content-border !important; }
+
+/* Form background */
+#ui-bizagi-wp-app-render-form { background: darken(@pane, 2%); }
+
+/* Form render background */
+//.ui-bizagi-container-form  > .ui-bizagi-render { background-color: darken(@form-container, 5%) !important; }
+
+/* Form label */
+.ui-bizagi-render > .ui-bizagi-control > .ui-bizagi-control-wrapper,
+.ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-header .ui-bizagi-grid-column label { color: @form-text; }
+
+/* Form input */
+input[type="text"],
+input[type="password"],
+input[type="number"],
+textarea,
+.ui-selectmenu,
+.ui-bizagi-render-list,
+.ui-bizagi-render-search.ui-autocomplete-input,
+.biz-wp-input-combo,
+.bz-render-comboSelected-listBoxSelects,
+.biz-wp-combo-data-container
+{
+  .inner-shadow() !important;
+  .border-radius();
+  border-color: @form-input-border;
+  background: @form-input;
+  color: @form-text;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="number"]:hover,
+textarea:hover,
+.ui-selectmenu:hover,
+.bz-render-comboSelected-listBoxSelects:hover,
+.ui-bizagi-render-search.ui-autocomplete-input:hover { background: lighten(@form-input, 10%); }
+
+.ui-button { font-family: @font-family; }
+
+.ui-bizagi-render-search.ui-autocomplete-input { .border-radiuses(0, 0, 6px, 6px); }
+
+.ui-button.ui-widget.ui-bizagi-render-search-button {
+  .border-radiuses(6px, 6px, 0, 0);
+  box-shadow: none;
+}
+
+.ui-selectmenu input { box-shadow: none !important; }
+
+.ui-bizagi-container-group .ui-bizagi-container-group-header { border-radius: 0; }
+
+/* Groups */
+
+.ui-bizagi-container-group {
+  .border-radius();
+  border-color: @form-tab-border;
+  background: lighten(@form-tab,7%);
+}
+
+#ui-bizagi-wp-app-render-form h3,
+.ui-bizagi-container-group .ui-bizagi-container-group-header {
+  .border-radiuses(6px, 0, 0, 6px);
+  border-color: @form-group-border;
+  background: @form-tab;
+}
+
+.ui-bizagi-container-group-header a {
+  .text-shadow();
+  color: @form-text !important;
+}
+
+/* Tabs */
+
+#ui-bizagi-wp-app-render-form-content .ui-tabs .ui-tabs-panel {
+  .border-radiuses(6px, 6px, 6px, 0);
+  border-color: @form-tab-border;
+  background: @form-tab;
+}
+
+#ui-bizagi-wp-app-render-form-content .ui-bizagi-tab-item-header {
+  .border-radiuses(6px, 0, 0, 0);
+  border-bottom: none;
+  background: @form-tab;
+}
+
+#ui-bizagi-wp-app-render-form-content .ui-tabs .ui-tabs-nav li a {
+  outline: 0;
+  color: @form-text;
+}
+
+#ui-bizagi-wp-app-render-form-content .ui-tabs .ui-tabs-nav li.ui-tabs-active {
+  .border-radiuses(3px, 0, 0, 3px);
+  z-index: 10;
+  border-bottom: none !important;
+  border-color: @form-tab-border;
+  background: @form-tab;
+}
+
+.ui-tabs-panel a,
+.ui-tabs-panel a span {
+  color: @content-link;
+  text-decoration: underline;
+}
+
+/* Grid */
+
+.ui-bizagi-grid {
+  .border-radius();
+  border-color: @form-tab-border;
+  background: @form-tab;
+}
+
+.bz-rn-grid-cn-header {
+  .border-radiuses(6px, 0, 0, 6px);
+  border-color: @form-tab-border;
+  background: darken(@form-tab,10%);
+}
+
+.ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-header { border-bottom: 1px solid @form-grid-border; }
+
+.ui-bizagi-grid-header.ui-state-default,
+.ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-header tr th {
+  box-shadow: none;
+  background: lighten(@form-grid, 6%);
+}
+
+.bz-rn-grid-header-title {
+  .text-shadow();
+  color: @form-text !important;
+}
+
+.ui-bizagi-grid-body { background: darken(@form-grid, 10%); }
+
+.ui-bizagi-render-grid-container div[data-bizagi-component=emptyTable] {
+  border-left: none;
+  border-right: none;
+  background: @form-tab;
+}
+
+.ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr:hover, .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr:nth-child(even):hover {
+  background-color: lighten(@form-grid, 8%);
+  color: @form-text;
+  cursor: pointer;
+}
+
+.ui-bizagi-grid table tbody tr.ui-bizagi-state-selected,
+.ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr.ui-bizagi-state-selected:hover {
+  background: darken(@form-grid, 20%);
+  color: @form-text;
+}
+
+.ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr td { border-bottom-color: @form-grid-border; }
+
+.ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr:last-child td { border-bottom: none; }
+
+.bz-rn-grid-container-foother {
+  border-top: 1px solid @form-tab-border;
+  background: darken(@form-tab,10%);
+}
+
+/* ==========================================================================
+   Widgets
+   ========================================================================== */
+
+div[id^="ui-tooltip-"],
+.ui-tooltip.ui-widget-content {
+  .border-radius() !important;
+  .drop-shadow();
+  border: 1px solid fade(@content, 90%);
+  background: fade(@content, 90%);
+  background-clip: padding-box;
+  color: @text;
+  font-family: @font-family;
+}
+
+.ui-widget-content { color: @text; }
+
+/* -------------- Dialog -------------- */
+
+.ui-dialog {
+  .border-radius();
+  border-color: @modal-border;
+  background-color: @modal;
+}
+
+/* Dialog title */
+.ui-dialog .ui-dialog-titlebar {
+  background: @modal-border;
+  border-bottom: none;
+}
+
+.ui-dialog .ui-dialog-title {
+  .text-shadow();
+  padding-left: 1.5em;
+  margin: 0;
+  background: none;
+  color: @title;
+  font-family: @font-family;
+}
+
+/* Modal box */
+.modal {
+  .drop-shadow();
+  .border-radius();
+  overflow: hidden;
+  border: 7px solid @modal-border;
+}
+
+.modal .selectarrow { display: none; }
+
+/* Modal menu */
+.frecuentCasesOn,
+#casesList.casesListOn,
+#frecuentCases:hover,
+#casesList:hover {
+  .border-radiuses(6px, 0, 0, 6px);
+  background: @modal;
+  box-shadow: none;
+}
+
+#modalMenuBtHeader {
+  background: @modal-border;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.modal #modalTitle {
+  .text-shadow();
+  color: @title;
+  font-family: @font-family;
+}
+
+.modal .content {
+  background: @modal;
+  padding: 0;
+}
+
+#modalMenuBtList { background: @modal; }
+
+#modalMenuBtList > div ul {
+  border-color: @content-border;
+  background: @content;
+}
+
+.bz-wp-widget-reportsmenu-item {
+  border-color: @content-border;
+  background: @content;
+}
+
+#modalMenuBtList > div ul,
+#modalMenuBtList > div ul li { .border-radius(); }
+
+#modalMenuBtList > div li:hover { background: darken(@content, 10%); }
+
+#modalMenuBtList > div li h3 {
+  color: @text;
+  font-family: @font-family;
+}
+
+.categoryTree {
+  border-color: @content-border;
+  box-shadow: none;
+}
+
+.categoryTree li { color: @content-link; }
+
+.ui-bizagi-notifications-header { font-family: @font-family; }
+
+/* ==========================================================================
+   Module
+   ========================================================================== */
+
+/* Reports
+   ========================================================================== */
+
+/* General */
+
+.bz-rp-form-label,
+.biz-wp-combo-label { color: @text !important; }
+
+li.ui-bizagi-wp-widget-reports-menu-active::after { background-color: darken(@content, 35%) !important; }
+
+.ui-bizagi-wp-widget-reports-menu li { color: fade(@text, 50%) !important; }
+
+.ui-bizagi-wp-widget-reports-menu li:hover,
+li.ui-bizagi-wp-widget-reports-menu-active { color: @text !important; }
+
+.bz-rp-components,
+.ui-bizagi-wp-widget-sensors-menu { border-bottom-color: fade(@content-border, 15%) !important; }
+
+.ui-bizagi-wp-widget-sensors-menu li.ui-bizagi-wp-widget-reports-menu-active {
+  border-right-color: fade(@content-border, 15%) !important;
+  border-left-color: fade(@content-border, 15%) !important;
+}
+
+/* Report */
+
+.bz-rp-report { border-color: darken(@content, 35%) !important; }
+
+.bz-rp-info { background-color: darken(@content, 35%) !important; }
+
+/* Summary */
+
+.bz-rp-summary { border-color: darken(@content, 35%) !important; }
+
+.bz-rp-summary thead th { background-color: darken(@content, 35%) !important; }
+
+.bz-rp-summary th,
+.bz-rp-summary td { border-color: darken(@content, 35%) !important; }
+
+.bz-rp-reports .bz-rp-sensors-processlist-sublist-item:nth-child(odd) { background: lighten(@form-grid, 10%) !important; }
+
+.bz-rp-summary tbody tr:nth-child(even),
+.bz-rp-reports .bz-rp-sensors-processlist-row.bz-rp-sensors-sltitem,
+.bz-rp-reports .bz-rp-sensors-processlist-sublist-item.bz-rp-sensors-sltitem,
+.bz-rp-sensors-list-item:nth-child(odd) { background: lighten(@form-grid, 5%) !important; }
+
+.bz-rp-sensors-list-item.bz-rp-sensors-selected { background: @content !important; }
+
+.bz-rp-summary tbody th,
+.bz-rp-summary tbody td { color: @text !important; }
+
+/* Sensors */
+
+.bz-rp-reports-sensors-header { background: darken(@content, 35%) !important; }
+
+#bz-rp-sensors-processlist a { color: @text !important; }
+
+/* Controls */
+
+.ui-rangeSlider-bar { background: darken(@content, 35%) !important; }
+
+.processviewer-slider-output,
+.ui-slider-horizontal .ui-slider-handle { background-color: darken(@content, 35%) !important; }
+
+.ui-rangeSlider-label-value { color: @form-text !important; }
+
+.ui-rangeSlider-container, .ui-rangeSlider-arrow {
+  border-top-color: lighten(@form-input-border, 20%) !important;
+  border-bottom-color: lighten(@form-input-border, 20%) !important;
+}
+
+.ui-rangeSlider-leftArrow:hover,
+.ui-rangeSlider-rightArrow:hover { background: lighten(@form-input, 10%) !important; }
+
+.ui-rangeSlider-leftArrow { border-left-color: lighten(@form-input-border, 20%) !important; }
+
+.ui-rangeSlider-rightArrow { border-right-color: lighten(@form-input-border, 20%) !important; }
+
+.ui-rangeSlider-leftArrow .ui-rangeSlider-arrow-inner { border-right-color: darken(@content, 35%) !important; }
+
+.ui-rangeSlider-rightArrow .ui-rangeSlider-arrow-inner { border-left-color: darken(@content, 35%) !important; }
+
+ul.bz-rp-detaillist-pagination li.bz-rp-detaillist-pagination-active span {
+  background-color: darken(@content, 35%) !important;
+  color: lighten(@text, 80%) !important;
+}
+
+ul.bz-rp-detaillist-pagination li span { color: @text !important; }
+
+/* Forms */
+
+#bz-rp-reports-sensors-create ul.bz-rp-sensors-form { background: @content !important; }
+
+.bz-rp-form-control {
+  border-color: @form-input-border !important;
+  color: @form-text !important;
+}
+
+.ui-tabs .ui-tabs-panel {
+  border-color: @form-tab-border;
+  background: lighten(@form-tab,7%);
+}
+
+.biz-ui-controls-multiselect ul li.selected-item {
+  background: darken(@content, 35%) !important;
+}
+
+input.biz-wp-combo-input:focus,
+.bz-rp-reports-wrapper :focus {
+  outline-color: @form-input-border !important;
+}
+
+.bz-rp-sensors-form textarea:hover { background: lighten(@form-input, 10%) !important; }
+
+.bz-rp-sensors-form input,
+.bz-rp-sensors-form textarea {
+  .inner-shadow() !important;
+  .border-radius() !important;
+}
+
+.bz-rp-reports .biz-wp-combo-input {
+  box-shadow: 0 1px #ddd !important;
+  border-color: lighten(@form-input-border, 20%) !important;
+  background: #fff;
+}
+
+.biz-wp-combo-btn-caret { border-top-color: darken(@content, 35%) !important; }
+
+.ui-select-dropdown.open {
+  .drop-shadow();
+  .border-radius();
+  border-color: @form-input-border;
+  background: @form-input;
+  color: @form-text !important;
+}
+
+.bz-render-comboSelected-listBoxSelects
+{
+  border-color: @form-input-border;
+  .border-radius() !important;
+  background: @form-input;
+  color: @form-text !important;
+}
+
+.ui-select-dropdown li {
+  border-bottom-color: @form-input-border !important;
+  color: @form-text !important;
+}
+
+.ui-select-dropdown li:hover {
+  border-color: transparent !important;
+  background: lighten(@form-input, 10%);
+}
+
+.bz-rp-button,
+input.bz-rp-filters-time-input {
+  .border-radius() !important;
+  border-color: lighten(@form-input-border, 20%) !important;
+  color: @form-text !important;
+}
+
+.bz-rp-button:hover { background: lighten(@form-input, 10%); }
+
+.bz-rp-sensors-form .bz-rp-button-secondary { color: @form-text !important; }
+
+.bz-rp-filters-time-buttons-list-item {
+  border-color: lighten(@form-input-border, 20%) lighten(@form-input-border, 20%) lighten(@form-input-border, 20%) transparent !important;
+  color: @form-text !important;
+}
+
+.bz-rp-filters-time-buttons-list-item:hover { background-color: lighten(@form-input, 10%) !important; }
+
+.bz-rp-filters-time-buttons-list-item:first-child { border-left-color: lighten(@form-input-border, 20%) !important; }
+
+.bz-rp-frequentspaths-header input[type=text] { color: @text !important; }
+
+/* Thumb */
+
+input[type="range"]::-webkit-slider-thumb {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, darken(@content, 35%)), color-stop(100%, darken(@content, 15%))) !important;
+  background-image: -webkit-linear-gradient(top , darken(@content, 35%) 0, darken(@content, 15%) 100%) !important;
+  background-image: linear-gradient(to bottom, darken(@content, 35%) 0, darken(@content, 15%) 100%) !important;
+}
+
+input[type="range"]::-moz-range-thumb { background-image: linear-gradient(to bottom, darken(@content, 35%) 0, darken(@content, 15%) 100%) !important; }
+
+input[type="range"]::-ms-thumb { background-image: linear-gradient(to bottom, darken(@content, 35%) 0, darken(@content, 15%) 100%) !important; }
+
+
+
+/*************************************************************************************
+    RUBIK SUPPORT STYLES
+*************************************************************************************/
+
+/*******************************************************************
+NAVIGATION
+********************************************************************/
+
+.modal {
+  border: 1px solid @navigation-border;
+}
+
+#modalMenuBtHeader, #modalMenuBtList {
+  background: @white;
+}
+
+#modalMenuBtList > div ul, .bz-wp-widget-reportsmenu-item{
+  background: @navigation-submenu-background;
+  border-bottom: 1px solid @navigation-border;
+  border-radius:2px !important;
+}
+
+#modalMenuBtList > div ul li:hover {
+  background: darken(@navigation-submenu-background,3%);
+}
+
+#ui-bizagi-wp-app-search input,#ui-bizagi-wp-app-search:hover input{
+  background: darken(@navigation,10%);
+}
+
+#ui-bizagi-wp-app-search input:hover, #ui-bizagi-wp-app-search input:focus{
+  background: darken(@navigation,6%);
+}
+
+.categoryTree {
+  border-bottom: 1px solid @navigation-border;
+}
+
+.bz-wp-left-sidebar, #project-collapse-leftpanel .ui-bizagi-wp-project-panel-collapseicon {
+  background: lighten(@one-color-palette,20%);;//darken(@navigation,8%);
+}
+
+#contentLinks .biz-wp-icon, .wdg-db-header {
+  color:@title;
+}
+
+.ui-bizagi-wp-project-tab-links li a:hover, #project-collapse-leftpanel .ui-bizagi-wp-project-panel-collapseicon:hover  {
+  background: darken(@navigation,18%);
+  color: @navigation-link;
+}
+
+#ui-bizagi-wp-app-menu-bt-container > ul li:hover{
+  transition:background 0.6s ease-in-out;
+  background: darken(@navigation,14%);
+}
+
+#main_menu li:hover, #main_menu li.activeMenu, #main_menu li:hover, #main_menu li.activeMenu  {
+  background: darken(@navigation,14%);
+  color:@navigation-link;
+}
+
+#main_menu li:hover .ui-bizagi-wp-mini-arrow, #main_menu li.activeMenu .ui-bizagi-wp-mini-arrow, #main_menu li.active .ui-bizagi-wp-mini-arrow{
+  border-top-color: @navigation-link;
+}
+
+#main_menu li a span {
+  color:@navigation-link;
+}
+
+#contentLinks .biz-wp-icon {
+  color:@navigation-link;
+}
+
+.bz-wp-ls-list-item:hover, .sidebar-content .wdg-process-card:hover {
+  background: darken(@navigation,14%);
+  color:@navigation-link;
+}
+
+//Avatar Background
+#user .menu-user-photo, .bz-wp-avatar {
+  background-color: @navigation;
+  border-color:@navigation;
+}
+
+#modalMenuBtList > div ul, #modalMenuBtList > div ul li {
+  color:@navigation-submenu-text;
+}
+
+///MODAL
+.ui-bizagi-wp-project-popupform-h4,
+.ui-rubik-popup-wrapper .ui-rubik-h4 {
+  color:@title;
+}
+
+//end modal
+
+/**********************************************************************
+DASHBOARD
+***********************************************************************/
+
+#content-wrapper{
+  background: @one-color-palette;
+}
+
+.modal .content {
+  background: @background;
+}
+
+.frecuentCasesOn, #casesList.casesListOn, #frecuentCases:hover, #casesList{
+  color:darken(@navigation, 10%);
+}
+.frecuentCasesOn, #casesList.casesListOn, #frecuentCases:hover, #casesList:hover {
+  background: darken(@navigation, 10%);
+  color:lighten(@navigation, 30%);
+}
+
+.bz-wp-ls-list-category {
+  border-color:darken(@navigation,15%);
+}
+
+#home-navbar .nav-items-ctn > ul > li > span {
+  color: @text;
+}
+
+.wdg-db-card:hover, .stuff-content .wdg-stf-card:hover, .plans-content .wdg-plans-card:hover {
+  border-color:darken(@content-border,7%);
+}
+.wdg-db-title {
+  background: darken(@background,5%);
+}
+
+.bannerfootersidebar {
+  border-color: darken(@navigation,13%);
+  background-color: darken(@navigation,10%);
+}
+
+.bz-wp-main-wrapper,
+#project-collapse-rightpanel .ui-bizagi-wp-project-panel-collapseicon {
+  background: mix(@navigation,@white,22%);
+}
+
+#project-collapse-rightpanel .ui-bizagi-wp-project-panel-collapseicon:hover{
+  background: mix(@navigation,@white,40%);
+}
+
+/************************************************************************
+CONTENT
+************************************************************************/
+#contentProc {
+  background: @content;
+}
+
+.ui-dialog .ui-dialog-titlebar span {
+  color: @navigation-link;
+}
+
+.ui-widget-header .ui-state-default {
+  border-top:1px solid desaturate(@content-border, 100%) ;
+  border-right:1px solid desaturate(@content-border, 100%) ;
+}
+
+#casestemplate-dataviewer > ul > li:hover .casetemplate-box-element {
+  border-color:darken(@content-border,7%);
+}
+
+.casetemplate-box-footer, .template-box-footer {
+  background: darken(@pane, 2%);
+
+}
+
+.ui-bizagi-render-label,
+.bz-wp-section {
+  color:@title;
+}
+.bz-tpl-img-txt .bz-tpl-data li, .bz-tpl-header div{
+  color: @title;
+}
+
+.ui-bizagi-form-process-path {
+  color: mix(@text,@white,60%);
+}
+
+///BUTTONS
+
+.bz-wp-btn-primary,
+.ui-button .ui-button-text,
+.wgd-sortbar-container .wgd-sortbar-add-button{
+  background: @button;
+  border-color:@button;
+  color:@button-text;
+  .border-radius(0);
+}
+
+.bz-wp-btn-primary:hover,
+.ui-button .ui-button-text:hover,
+.wgd-sortbar-container .wgd-sortbar-add-button:hover{
+  background: darken(@button,8%);
+  border-color:darken(@button,8%);
+  .border-radius(0);
+}
+
+.bz-wp-my-search ul, .bz-wp-my-search ul .btn-primary,
+.wgd-sortbar-container .sortbar-left > ul, .wgd-sortbar-container .sortbar-right > ul,
+.wgd-sortbar-container .sortbar-right > ul .btn-primary,
+.wgd-sortbar-container .sortbar-left > ul .btn-primary {
+  color: @button;
+  background: transparent;
+}
+
+
+
+
+.ui-bizagi-wp-project-discussions-comment-buttons-share {
+  border-color:@button;
+  color:@button-text;
+}
+
+.ui-bizagi-wp-project-discussions-comment-buttons-share:hover {
+  background-color: darken(@button,5%);
+}
+
+.ui-bizagi-button{
+  background: @button;
+}
+
+.ui-bizagi-wp-project-discussions-comment-buttons-share:hover {
+  border-color:darken(@button,5%) !important;
+}
+
+.ui-bizagi-wp-project-discussions-comment-buttons-cancel {
+  border-color:darken(@button,5%) !important;
+  color:darken(@button,5%) !important;
+}
+
+.wdg-tple-button, .btn-primary {
+  background-color: @button;
+  border-color: @button;
+  color: @button-text;
+}
+
+.wdg-tple-button:hover, .btn-primary:hover{
+  background-color:lighten(@button,5%);
+  border-color:lighten(@button,5%);
+}
+
+.filter-icon i {
+  color: @button;
+}
+
+#casestemplate-dataviewer .casetoolbar ul li i:hover, #casestemplate-dataviewer .casetoolbar ul li i.on,
+#casestemplate-dataviewer .casetoolbar ul li i:hover, #casestemplate-dataviewer .casetoolbar ul li i.on{
+  color:@button;
+}
+
+.bz-wp-cd-option-link {
+  color:@navigation;
+}
+
+.bz-wp-cd-option-link:hover {
+  color:darken(@navigation,10%);
+}
+
+.ui-bizagi-wp-project-discussions-comment-buttons-share {
+  background-color: @button;
+}
+
+.ui-bizagi-wp-project-discussion-delete i:hover {
+  color: @navigation;
+}
+
+.ui-button:hover, .ui-button.ui-state-default:hover, .ui-bizagi-button-container .ui-bizagi-button:hover, .ui-dialog .ui-button:hover, .ui-bizagi-wp-app-routing-container table .ui-button:hover {
+  background-color: @button !important;
+  border-color:@button !important;
+}
+
+.bz-wp-btn-link {
+  color: @navigation;
+}
+.bz-wp-btn-link:hover {
+  color:darken(@navigation,13%);
+}
+
+.ui-bizagi-wp-project-popupform-button-action,
+#button-accept-edit-template {
+  background-color: @navigation;
+  color: @button-text;
+  border-color: @navigation;
+}
+.ui-bizagi-wp-project-popupform-button-action:hover,
+#button-accept-edit-template:hover{
+  background-color: lighten(@navigation,6%);
+  border-color: lighten(@navigation,6%);
+}
+
+.ui-bizagi-wp-project-popupform-button-cancel,
+.ui-rubik-popup-wrapper .ui-rubik-button-cancel {
+  border-color: @navigation;
+  color: @navigation;
+}
+
+.ui-bizagi-wp-project-popupform-button-cancel:hover,
+.ui-rubik-popup-wrapper .ui-rubik-button-cancel:hover {
+  border-color:darken(@navigation,8%);
+}
+
+.ui-bizagi-wp-project-discussions-add-attachments .k-upload-button:hover {
+  color:@navigation;
+}
+/// END BUTTONS
+
+.ui-bizagi-wp-project-case-remaining-date .remaining-days .bar-completed.Opened, .ui-bizagi-wp-project-activity-state-dates-wrapper .remaining-days .bar-completed.Opened {
+  background: darken(@pane, 2%);
+  border:1px solid @content-border;
+}
+
+#ui-bizagi-wp-project-dashboard-frame .subtitle, .ui-bizagi-wp-project-case-state-number,
+#ui-bizagi-wp-project-case-state-wrapper .case-summary-favorite,
+#ui-bizagi-wp-project-case-state-wrapper .case-summary-favorite:hover,
+.ui-bizagi-wp-project-files-file,
+#ui-bizagi-render-activity-log .activity-log-table .listHeaderLinks a,
+.ui-bizagi-wp-project-discussions-sidebar-h3{
+  color: @title;
+}
+
+.ui-bizagi-wp-project-case-remaining-date .interval-date,
+.ui-bizagi-wp-project-case-remaining-date .remaining-days .descripcion-remaining,
+.ui-bizagi-wp-project-activity-state-dates-wrapper .interval-date,
+.ui-bizagi-wp-project-activity-state-dates-wrapper .remaining-days .descripcion-remaining,
+.ui-bizagi-wp-project-files-user,
+#ui-bizagi-wp-app-menu-container #user-profile ul li, #ui-bizagi-wp-app-menu-container #user-profile ul li .icon{
+  color:@text;
+}
+
+#ui-bizagi-wp-app-menu-container #user-profile ul li:hover, #ui-bizagi-wp-app-menu-container #user-profile ul li:hover {
+  background: darken(@pane,3%);
+}
+
+#ui-bizagi-render-activity-log .activity-log-table .listHeaderLinks:hover {
+  background: @navigation;
+}
+#ui-bizagi-render-activity-log .activity-log-table .listHeaderLinks:hover a {
+  color:@navigation-link;
+  text-shadow: none;
+}
+#ui-bizagi-render-activity-log .activity-log-table .gridline2 {
+  background: darken(@pane, 4%);
+}
+#ui-bizagi-render-activity-log .activity-log-table .gridline2:hover {
+  background: @white;
+}
+
+#ui-bizagi-render-activity-log .main-menu li a.active {
+  background: darken(@pane,7%);
+}
+
+.ui-bizagi-wp-project-files-wrapitem {
+  border-color:lighten(@content-border,8%);
+}
+
+#ui-bizagi-wp-project-dashboard-main li.active a, #ui-bizagi-wp-project-dashboard-main li.active a:hover {
+  background: @white;
+}
+
+#ui-bizagi-wp-project-process-state-wrapper .summaryLink span {
+  color: @content-link;
+  text-decoration:underline;
+}
+
+#ui-bizagi-wp-project-process-state-wrapper .summaryLink span:hover{
+  color:lighten(@content-link,15);
+}
+
+.ui-bizagi-wp-project-case-remaining-date .remaining-days .bar-completed.Closed {
+  background: @navigation;
+}
+
+.wgd-sortbar-container .sortbar-box-menu li:hover {
+  background-color: mix(@navigation,@white,15%);
+}
+
+
+////////PANEL MINE
+.sidebar-content .wdg-stf-card:hover{
+  background: darken(@navigation, 14%);
+  color: @navigation-link;
+}
+
+.wdg-stf-panel {
+  border-color: darken(@navigation, 13%);
+}
+
+
+/*************************************************************************
+FORMS
+*************************************************************************/
+
+#contentCases.casesGrid {
+  background: @form-container;
+}
+
+
+
+#ui-bizagi-wp-app-inbox-processes-container .nodisplay {
+  border:0px;
+}
+
+#ui-bizagi-wp-app-inbox-processes-container .nodisplay li{
+  background: darken(@background,15%)
+}
+
+#ui-bizagi-wp-app-inbox-processes-container .selected,
+#ui-bizagi-wp-app-inbox-processes-container li.selected:hover,
+#ui-bizagi-wp-app-inbox-processes-container li:nth-child(2n).selected {
+  background: @white !important;
+}
+
+#ui-bizagi-wp-app-inbox-processes-container .nodisplay li {
+  border:0px;
+}
+
+#ui-bizagi-wp-app-inbox-grid-cases thead tr td {
+  background: darken(@form-grid,4%);
+}
+
+#ui-bizagi-wp-app-inbox-grid-cases tbody tr {
+  background:@white;
+  border:0px;
+}
+
+#ui-bizagi-wp-app-inbox-grid-cases tbody tr td, #ui-bizagi-wp-app-inbox-grid-cases thead tr td  {
+  border:0px !important;
+}
+
+.ui-bizagi-wp-app-inbox-activity-name, .gridListWorkItems li .ui-bizagi-wp-app-inbox-activity-name {
+  color:@content-link;
+}
+
+#ui-bizagi-wp-app-inbox-grid-cases tbody .event {
+  background: lighten(@form-grid,11%);
+}
+
+.ui-select-dropdown li:hover, .ui-select-dropdown li.ui-selected {
+  background: darken(@pane,5%);
+}
+
+.bz-action-launcher-container .ui-bizagi-render-vertical-items .ui-bizagi-render-actionLauncher-vertical-item {
+  background-color: darken(@pane,7%);
+}
+
+.ui-bizagi-container-form .ui-autocomplete {
+  background-color: @form-tab;
+}
+
+.ui-bizagi-container-form .ui-autocomplete li a label {
+  color: @text;
+}
+
+.ui-bizagi-container-form .ui-autocomplete .biz-ui-even {
+  background: darken(@form-tab, 3%);
+}
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+  border-color:@form-tab;
+  background: lighten(@form-tab,4%);
+}
+
+
+
+/*********************************************************************
+    Work On It
+**********************************************************************/
+
+.ui-bizagi-wp-project-tab-content, .ui-bizagi-wp-project-dashboard-breadcrumb-container {
+  background: @pane;
+}
+
+.ui-bizagi-render-upload-wrapper .resizable_img {
+  background-color: darken(@pane,7%);
+  border-color:lighten(@content-border,8);
+}
+
+.ui-bizagi-container-form.ui-widget-content {
+  background: @white;
+  border-color: darken(@pane, 10%) !important;
+}
+
+
+#ui-bizagi-wp-app-render-form h3,
+.ui-bizagi-container-group .ui-bizagi-container-group-header {
+  background: darken(@form-tab, 10%);
+  border-color: darken(@form-tab-border, 20%);
+}
+
+
+input[type="text"], input[type="password"],
+input[type="number"],
+textarea,
+.ui-selectmenu,
+.ui-bizagi-render-list,
+.ui-bizagi-render-search.ui-autocomplete-input,
+.biz-wp-input-combo,
+.bz-render-comboSelected-listBoxSelects,
+.biz-wp-combo-data-container,
+.bz-rp-form-control {
+  background: @white;
+  border-color: darken(@pane,20%);
+}
+input[type="text"]:hover, input[type="password"]:hover,
+input[type="number"]:hover, textarea:hover, .ui-selectmenu:hover, .bz-render-comboSelected-listBoxSelects:hover, .ui-bizagi-render-search.ui-autocomplete-input:hover {
+  background: @white;
+}
+
+/*******************************************************************************
+GRIDS
+********************************************************************************/
+
+.ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-header th {
+  border:1px solid darken(@form-grid-border,15%);
+}
+
+.ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr:nth-child(even){
+  background: mix(@form-grid,@white,15%);
+}
+
+.bizagi-entities-entity-selected, .bizagi-objects-object-selected {
+  background-color: darken(@form-grid,4%);
+}
+
+.bizagi-entities-entity-selected, .bizagi-objects-object-selected label {
+  color: darken(@form-grid,50%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: darken(@form-grid,40%);
+}
+
+.ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-navigation-buttons ul li a:hover, .ui-bizagi-wp-project-processmap-wrapper .ui-bizagi-wp-project-processmap-navigation-buttons ul li a.selected {
+  background-color: @form-tab;
+}
+
+.ui-bizagi-grid table tbody tr.ui-bizagi-state-selected, .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr.ui-bizagi-state-selected {
+  background: darken(@form-grid,2%);
+}
+
+///*********  COLLATERALS  ********///
+.ui-widget-header, .bz-render-association .ui-accordion-header {
+  background: @form-tab;
+  border-color: @form-tab-border;
+}
+
+.ui-accordion .ui-accordion-header.ui-state-active,.bz-render-association .ui-accordion .ui-accordion-header.ui-state-active {
+  background: darken(@form-tab,4%);
+}
+.bz-render-association .bz-render-association-left-container li, .bz-render-association .bz-render-association-right-container li {
+  background-color: lighten(@form-tab,2%);
+}
+.bz-render-association .bz-render-association-left-container li:nth-child(2n) {
+  background-color:darken(@form-tab,2%);
+}
+.bz-render-association .bz-render-association-left-container li:hover, .bz-render-association .bz-render-association-right-container li:hover {
+  background-color:darken(@form-tab,5%)
+}
+#admin-language-wrapper .ui-accordion-header {
+  background: darken(@form-tab,7%);
+}
+/// ******* END COLLATERALS ******///
+
+//****************************************************************************
+//INPUTS
+//******************************************************************************//
+
+.ui-bizagi-grid-cell input[type="text"], .ui-bizagi-grid-cell input[type="password"], .ui-bizagi-grid-cell input[type="number"], .ui-bizagi-grid-cell .ui-selectmenu {
+  background: @form-input;
+  border:1px solid @form-input-border;
+}
+
+input[type="text"], input[type="password"], input[type="number"], textarea, .ui-selectmenu, .ui-bizagi-render-list, .ui-bizagi-render-search.ui-autocomplete-input, .biz-wp-input-combo, .bz-render-comboSelected-listBoxSelects, .biz-wp-combo-data-container, .bz-rp-form-control {
+  background: @form-input;
+  border:1px solid @form-input-border;
+}
+
+//****************************************************************************
+//MY SEARCH
+//******************************************************************************//
+.sortbar-box-tooltip .multiplicity-separator {
+  border-color: @modal-border;
+  background-color: @content;
+  color: @title;
+}
+
+.sortbar-box-tooltip {
+  color: @text;
+}
+
+
+
+//** Un Error, se ven las sombras en las cajas de texto del menu
+// Buscar #main_menu li a .text <- Ahí estan haciendo un box shadwo
+//
+// **//
+#main_menu li a .text {
+  box-shadow: none;
+}
+//**//
+
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+.gradient(@startColor, @endColor) {
+  background-color: @startColor;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, @startColor), color-stop(100%, @endColor));
+  background: -webkit-linear-gradient(top, @startColor 20%, @endColor 100%);
+  background: -moz-linear-gradient(top, @startColor 20%, @endColor 100%);
+  background: -ms-linear-gradient(top, @startColor 20%, @endColor 100%);
+  background: -o-linear-gradient(top, @startColor 20%, @endColor 100%);
+}
+
+.drop-shadow(@x: 0, @y: 0, @blur: 0, @spread: 0, @color: rgba(0, 0, 0, 0)) when (@active-box-shadow = false) {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.drop-shadow(@x: 0, @y: 1px, @blur: 5px, @spread: 0, @color: fade(darken(@one-color-palette, 10%), 20%)) when (@active-box-shadow = true) {
+  -webkit-box-shadow: @arguments;
+  -moz-box-shadow:    @arguments;
+  box-shadow:         @arguments;
+}
+
+.inner-shadow(@x: 0, @y: 0, @blur: 0, @spread: 0, @color: rgba(0, 0, 0, 0)) when (@active-box-shadow = false) {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.inner-shadow(@x: 0, @y: 0, @blur: 5px, @spread: 0, @color: fade(darken(@one-color-palette, 15%), 15%)) when (@active-box-shadow = true) {
+  -webkit-box-shadow: inset @arguments;
+  -moz-box-shadow:    inset @arguments;
+  box-shadow:         inset @arguments;
+}
+
+.sprite(){
+
+}
+
+.sprite-ie(){
+
+}
+
+/*.sprite() when (@skeuomorphic = active) { background-image: url('jquery/workportal/css/desktop/images/biz-wp-icons-sprite.png'); }
+
+.sprite() when (@flat = active) { background-image: url('jquery/workportal/css/desktop/images/biz-wp-icons-sprite-flat.png'); }
+
+.sprite() when (@lineal = active) { background-image: url('jquery/workportal/css/desktop/images/biz-wp-icons-sprite-lineal.png'); }
+
+.sprite-ie() when (@skeuomorphic = active) { background-image: url('../jquery/workportal/css/desktop/images/biz-wp-icons-sprite.png'); }
+
+.sprite-ie() when (@flat = active) { background-image: url('../jquery/workportal/css/desktop/images/biz-wp-icons-sprite-flat.png'); }
+
+.sprite-ie() when (@lineal = active) { background-image: url('../jquery/workportal/css/desktop/images/biz-wp-icons-sprite-lineal.png'); }*/
+
+.text-shadow(@x: 0, @y: 0, @blur: 0, @color: rgba(0, 0, 0, 0)) when (@active-text-shadow = false) { text-shadow: none; }
+
+.text-shadow(@x: 0, @y: 1px, @blur: 0, @color: rgba(250, 250, 250, 1)) when (@active-text-shadow = true) { text-shadow: @arguments; }
+
+.border-radius(@radius: 0) when (@active-border-radius = false) {
+  -webkit-border-radius: 0;
+  -moz-border-radius:    0;
+  border-radius:         0;
+}
+
+.border-radius(@radius: @border-radius-default) when (@active-border-radius = true) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius:    @radius;
+  border-radius:         @radius;
+}
+
+.border-radiuses(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) when (@active-border-radius = false) {
+  -webkit-border-top-right-radius:    0;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius:  0;
+  -webkit-border-top-left-radius:     0;
+
+  -moz-border-radius-topright:        0;
+  -moz-border-radius-bottomright:     0;
+  -moz-border-radius-bottomleft:      0;
+  -moz-border-radius-topleft:         0;
+
+  border-top-right-radius:            0;
+  border-bottom-right-radius:         0;
+  border-bottom-left-radius:          0;
+  border-top-left-radius:             0;
+}
+
+.border-radiuses(@topright: 6px, @bottomright: 6px, @bottomleft: 6px, @topleft: 6px) when (@active-border-radius = true) {
+  -webkit-border-top-right-radius:    @topright;
+  -webkit-border-bottom-right-radius: @bottomright;
+  -webkit-border-bottom-left-radius:  @bottomleft;
+  -webkit-border-top-left-radius:     @topleft;
+
+  -moz-border-radius-topright:        @topright;
+  -moz-border-radius-bottomright:     @bottomright;
+  -moz-border-radius-bottomleft:      @bottomleft;
+  -moz-border-radius-topleft:         @topleft;
+
+  border-top-right-radius:            @topright;
+  border-bottom-right-radius:         @bottomright;
+  border-bottom-left-radius:          @bottomleft;
+  border-top-left-radius:             @topleft;
+}
+
+.line-height() when (@minimum-line-height = active) {
+  /* Render common
+    ========================================================================== */
+
+  .ui-bizagi-render {
+    margin: 2px 0;
+  }
+
+  .ui-bizagi-render-label {
+    line-height: 20px;
+  }
+
+  .ui-bizagi-control-wrapper {
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Render main container
+    ========================================================================== */
+
+  .ui-bizagi-container-form {
+    padding: 8px 15px;
+    margin: 8px 16px;
+  }
+
+  /* Render group
+    ========================================================================== */
+
+  .ui-bizagi-container.ui-bizagi-container-group {
+    margin-top: 2px;
+  }
+
+  .ui-bizagi-container-group-wrapper {
+    padding: 4px 10px;
+    background-image: none;
+  }
+
+  /* Render tab
+    ========================================================================== */
+
+  #ui-bizagi-wp-workarea .ui-tabs {
+    margin: 2px 0;
+  }
+
+  #ui-bizagi-wp-app-render-form-content .ui-tabs .ui-tabs-panel {
+    padding: 4px 10px;
+    background-image: none;
+  }
+
+  #ui-bizagi-wp-app-render-form-content .ui-bizagi-tab-item-header {
+    margin: -4px -11px 4px -11px;
+  }
+
+  /* Render grid
+    ========================================================================== */
+
+  .bz-rn-grid-header-title { padding: 0 1em .2em; }
+
+
+  .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-header tr { height: 20px; }
+
+  .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-body tr { min-height: 0; }
+
+  .ui-bizagi-grid .ui-bizagi-grid-table .ui-bizagi-grid-header .ui-bizagi-grid-column label {
+    min-width: 100px;
+    padding: 6px;
+    text-align: center;
+    line-height: 12px;
+  }
+
+  .bz-rn-grid-container-foother { height: auto; }
+
+  /* Render input, textarea, select, grid and label
+    ========================================================================== */
+
+  input[type="text"],
+  input[type="password"],
+  input[type="number"],
+  textarea,
+  .ui-bizagi-control-wrapper,
+  .ui-bizagi-control .ui-bizagi-render-control,
+  .ui-bizagi-control .ui-bizagi-render-control .readonly-control,
+  .ui-bizagi-render .ui-bizagi-control,
+  .ui-bizagi-render > span > label,
+  .ui-bizagi-render .ui-bizagi-label,
+  .ui-selectmenu .ui-selectmenu-value,
+  .ui-bizagi-grid-cell input[type="text"],
+  .ui-bizagi-grid-cell input[type="password"],
+  .ui-bizagi-grid-cell input[type="number"],
+  .ui-bizagi-grid-cell .ui-selectmenu,
+  .ui-selectmenu {
+    min-height: 0;
+    line-height: normal;
+  }
+
+  .ui-bizagi-render-control .ui-bizagi-render-numeric,
+  .ui-bizagi-render-control .ui-bizagi-render-date-only,
+  .ui-bizagi-render-control .ui-bizagi-render-text-extended,
+  .ui-bizagi-render-control .ui-bizagi-render-text,
+  .ui-bizagi-grid-cell .ui-selectmenu,
+  .ui-bizagi-render-control .ui-selectmenu {
+    width: 99.9%;
+  }
+
+  .ui-bizagi-grid-cell input[type="text"],
+  .ui-bizagi-grid-cell input[type="password"],
+  .ui-bizagi-grid-cell input[type="number"],
+  .ui-bizagi-grid-cell .ui-selectmenu {
+    min-width: 100px;
+  }
+
+  .ui-radio label {
+    padding: 6px 30px 2px 30px !important;
+    background-position: -10px -18px !important;
+  }
+
+  .ui-radio label.ui-radio-state-checked{
+    background-position: -10px -217px !important;
+  }
+
+  .ui-radio label.ui-radio-state-hover,
+  .ui-radio label.ui-radio-state-highlight {
+    background-position: -10px -118px !important;
+  }
+
+  .ui-bizagi-render-display-normal > .ui-bizagi-label label { margin: 0; }
+
+  .ui-bizagi-advanced-search .ui-bizagi-render-search-button,
+  .ui-bizagi-grid-cell input[type="text"],
+  .ui-bizagi-grid-cell input[type="password"],
+  .ui-bizagi-grid-cell input[type="number"],
+  .ui-bizagi-grid-cell .ui-selectmenu,
+  input[type="text"],
+  input[type="password"],
+  input[type="number"],
+  .ui-selectmenu {
+    height: 20px;
+    min-height: 20px;
+  }
+
+  /* Render button
+    ========================================================================== */
+
+  .ui-dialog .ui-dialog-buttonpane button,
+  .ui-bizagi-button-container .ui-bizagi-button, .ui-dialog .ui-bizagi-button {
+    height: 22px;
+    min-height: 20px;
+    padding: 3px 5px;
+  }
+
+  input.ui-button { padding: 0.2em .5em; }
+
+  .ui-button span { padding: 0 12px; }
+
+  /* Render footer button
+    ========================================================================== */
+
+  .ui-bizagi-button-container {
+    padding-top: 0;
+    padding-bottom: 4px;
+  }
+
+  .ui-bizagi-button-container {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+
+  /* Clean some shadow effects to prevent the overlap over controls when
+     the vertical space  is changed
+    ========================================================================== */
+
+  .ui-curved,
+  .ui-lifted {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+
+  /* Column fix
+    ========================================================================== */
+
+  .selectColumn > ui-bizagi-grid-column {
+    width: 80px;
+  }
+
+  .clientName > ui-bizagi-grid-column {
+    width: 140px;
+  }
+}
+
+.line-height() when (@normal-line-height = active) {
+  body {
+    display: block;
+  }
+}
+
+.line-height();

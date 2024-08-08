@@ -1,0 +1,350 @@
+/*=========================================================
+File		:	Bizagi tablet default.css
+Author		:	Andres Valencia
+Creation	:	Feb 28 2012
+Description	:	This file contains theme definitions
+				for the tablet devices consuming the
+				workportal app.
+=========================================================*/
+
+/*=========================================================
+Sections
+	- Global definitions
+	- App font size
+	- Theme font
+	- Menu colors
+	- Inbox columns colors
+	- Inbox grid colors
+	- Render widget colors
+	- Search widget colors
+	- New case widget colors
+=========================================================*/
+
+
+/* GLOBAL DEFINITIONS
+=========================================================*/
+body
+{
+	font-family: "OriyaSangamMN","Thonburi","Roboto", "Droid Sans", Geneva, Arial,sans-serif;
+	/*background:#abb1ba;*/
+	/* Moar properties will come */
+}
+
+/* APP FONT SIZE
+=========================================================*/
+.ui-bizagi-workportal-menu-content,
+#process-column,
+#case-column,
+#summary-column,
+#case-column-grid,
+.render-case-summary,
+.ui-bizagi-wp-app-search-results { font-size: 12.5px; }
+
+/* THEME FONT
+=========================================================*/
+@font-face 
+{
+	font-family: 'NeoSansStdRegular';
+	src: url('../../fonts/neosansstd-regular-webfont.eot');
+	src: url('../../fonts/neosansstd-regular-webfont.eot?iefix') format('eot'),
+		url('../../fonts/neosansstd-regular-webfont.ttf') format('truetype'),
+		url('../../fonts/neosansstd-regular-webfont.svg#webfontUDPuYi0Y') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'NeoSansStdMedium';
+	src: url('../../fonts/neosansstd-medium-webfont.eot');
+	src: url('../../fonts/neosansstd-medium-webfont.eot?iefix') format('eot'),
+		url('../../fonts/neosansstd-medium-webfont.ttf') format('truetype'),
+		url('../../fonts/neosansstd-medium-webfont.svg#webfontUR0uETTj') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* MENU COLORS
+=========================================================*/
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2 ), 
+only screen and (min-device-pixel-ratio: 2) {
+    .ui-bizagi-workportal-menu-content
+	{/*
+		background:
+		-webkit-gradient(linear, left top, left bottom,
+			from(hsl(202, 18%, 21%)),
+			to(hsl(203, 17%, 18%)),
+			color-stop(.3, hsl(202, 18%, 24%)));
+*/
+         
+	}
+	
+}
+
+#menu-visible-bar
+{
+border-top: 1px solid #4a699b;
+background: -webkit-gradient(linear, left top, left bottom, from(#354b6e), to(#293a59));
+}
+
+/*@media only screen and (-webkit-min-device-pixel-ratio: 2 ), 
+only screen and (min-device-pixel-ratio: 2) {
+    #menu-visible-bar
+	{
+		background-image:url('../../images/noise-2x.png'), -webkit-gradient(linear, left top, left bottom, from(#354b6e), to(#293a59));
+     
+	}
+	
+}*/
+
+.page-title {/* color: hsl(0, 0%, 90%); */}
+
+#menu-toggler
+{
+	border: 1px solid #4a699b;
+	border-top: transparent;
+	-webkit-box-shadow: 0 1px 2px #222;
+}
+
+
+
+/* INBOX COLUMNS COLORS
+=========================================================*/
+#process-column,
+#case-column,
+#summary-column
+{
+
+	
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2 ), 
+only screen and (min-device-pixel-ratio: 2) {
+    #process-column, #case-column, #summary-column
+	{
+		background-image:url('../../images/noise-2x.png') repeat;
+         background-size: 20px 20px;
+	}
+	
+}
+#process-column
+{  
+}
+
+.ui-bizagi-workportal-inbox-grid #process-column
+{   
+}
+
+
+#case-column
+{
+ 
+}
+
+#summary-column 
+{
+}
+
+.categories-group-container ul li
+{
+
+}
+
+.categories-group-container span {  }
+
+#case-column .cases-list > li
+{
+	
+}
+
+#case-column dl dd  
+{
+	background-color: hsla(0, 0%,40%, .1);
+    word-break: break-all;
+}
+
+#case-column dl dd > span
+{
+	word-break: normal;
+}
+
+
+#summary-column .activity-box
+{
+}
+
+#summary-column .activity-box .activity-name
+{
+	color: hsl(205, 40%, 34%);
+	text-shadow: 0 1px 0 hsla(0, 0%, 100%, .4);
+}
+
+#summary-column .activity-box > dl { color: hsl(0, 0%, 25%); }
+
+#summary-column .activity-box input[type="button"]
+{
+
+}
+
+#summary-column .box-description dt,
+#summary-column .box-description dd { color: hsl(0, 0%, 25%); }
+
+#summary-column .box-description dd { background-color: hsla(0, 0%,40%, .1); }
+
+.list-item-selected
+{
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2 ), 
+only screen and (min-device-pixel-ratio: 2) {
+    .list-item-selected
+	{
+		
+        
+	}
+	
+}
+
+.list-item-selected .workflow-name,
+.list-item-selected .rad-number
+{
+	color: hsl(0, 0%, 25%) !important;
+	font-weight: bold;
+}
+
+.ui-bizagi-workportal-inbox-column .column-footbar
+{
+	/*border-top: 1px solid #8C8C8C;
+	-webkit-box-shadow: 0 -1px 3px #BBB;
+	background: -webkit-gradient(linear, left top, left bottom, 
+				from(#F4F4F4),				
+				to(#CCCCCC),
+				color-stop(.4, #DCDCDC));
+				bottom: 0;*/
+}
+
+
+
+/* INBOX GRID COLORS
+=========================================================*/
+.ui-bizagi-wp-app-inbox-grid-cases-container table,
+.personalizedColumnsContainer table {
+	 background: #f2f2f2;
+	 width: 100%;
+}
+
+.ui-bizagi-wp-app-inbox-grid-cases-container thead td,
+.personalizedColumnsContainer table thead td
+{
+	color: #F5F5F5;
+	background: -webkit-gradient(linear, center top, center bottom, from(#7B8B9A), to(#4A4F56));
+	border-bottom:1px solid #3C4046;
+}
+
+#ui-bizagi-wp-app-inbox-grid-cases tbody tr:nth-child(2n),
+.personalizedColumnsContainer table tbody tr:nth-child(2n) { background-color: #e6e6e6;	}
+
+.gridListWorkItems li .ui-bizagi-wp-app-inbox-activity-name { color: #1F74B2; }
+
+#case-column-grid table { color: hsl(0,0%,30%); font-size:10px; }
+
+#case-column-grid table button
+{
+	
+}
+
+/* RENDER WIDGET COLORS
+=========================================================*/
+#contentFramework .activity-box
+{
+	/*border: 1px solid hsl(0, 0%, 70%);
+	-webkit-box-shadow: 0 0 8px hsl(0, 0%, 70%);
+	background-color: hsl(0, 0%, 90%);*/
+	
+}
+
+#contentFramework .activity-box .activity-name
+{
+	color: hsl(205, 40%, 34%);
+	text-shadow: 1px 1px 2px hsla(0, 0%, 100%, .7);
+}
+
+#contentFramework .activity-box > dl > dt,
+#contentFramework .activity-box > dl > dd { color: hsl(0, 0%, 30%); }
+
+#contentFramework .activity-box > dl dd { background-color: hsla(0,0%,30%, .1); }
+
+.render-case-summary .box-description dt,
+.render-case-summary .box-description dd { color: hsl(0, 0%, 25%); }
+
+.render-case-summary .box-description dd { background-color: hsl(0,0%,83%); }
+
+/* SEARCH WIDGET COLORS
+=========================================================*/
+.ui-bizagi-wp-app-search-results > table > thead
+{
+	color: #FFF;
+	background: -webkit-gradient(linear, left top, left bottom, from(#7B8b9A), to(#4A4f56));
+}
+
+.ui-bizagi-wp-app-search-results > table > tbody { color: hsl(0,0%,30%); }
+
+.ui-bizagi-wp-app-search-results > table > tbody > tr { background-color: #E6E6E6; }
+
+.ui-bizagi-wp-app-search-results > table > tbody > tr:nth-child(even) { background-color: #B8B8B8; }
+
+.ui-bizagi-wp-app-search-results > table input[type="button"]
+{
+	background: -webkit-gradient(linear, left top, left bottom, from(hsl(205, 90%, 60%)), to(hsl(205, 90%, 30%)));
+	color: #FFF;
+	text-shadow: 1px 1px 1px hsl(0,0%,20%);
+	border: 1px solid hsl(205, 90%, 35%);
+	-webkit-box-shadow: 0 0 10px hsl(0,0%,35%);
+}
+
+/* NEW CASE WIDGET COLORS
+=========================================================*/
+.modalMenuBtNewcase .categoryTree  li { color:#1F74B2; }
+
+#categories ul
+{
+	/*background: #E6E6E6;
+    border: 1px solid #98a1a8;*/
+}
+
+#categories ul li { color: #444; }
+
+#categories li p { color:#666; }
+
+.modalMenuBtNewcase .frecuentCasesOn, 
+.modalMenuBtNewcase #casesList.casesListOn, 
+.modalMenuBtNewcase #frecuentCases:hover, .modalMenuBtNewcase #casesList:hover
+{
+    background-color:rgba(0,0,0,0.1);
+    box-shadow:inset 0px 1px 8px 2px rgba(0,0,0,0.3);
+}
+
+#ui-bizagi-wp-app-search input
+{
+	background: #1F272C;
+    color: rgb(131,139,144);
+}
+
+#modalMenuBtNewcaseHeader #ui-bizagi-wp-app-search input
+{
+	background: #D6D6D6;
+    color: rgb(131,139,144);
+    border-bottom:1px solid white;
+}
+
+#modalNewCaseMessage.show 
+{
+	background-color: #FFFFFF;
+	box-shadow: 0 0 2px 3px rgba(0,0,0,0.3);
+}
+
+#modalNewCaseMessage #case { color: #2F526C; }
+
+.modalMenuBtNewcase .categoryTree li {
+color: #1D4154;
+}

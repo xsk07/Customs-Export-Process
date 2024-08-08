@@ -1,0 +1,91 @@
+/* Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+
+.clearfix:after {
+	clear: both;
+	content: ' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}
+/*------------------------------------------------------------*/
+/* GENERAL RULES */
+/*/////////////////////////////////////////////////////*/
+body{
+	font:12px/16px "Segoe UI",Calibri,Helvetica,Arial,sans-serif; 
+	color:#333
+}
+a{outline:none;}
+hr{border:0 #ccc solid;border-top-width:1px;clear:both;height:0}
+h1{font-size:31px; color:#356c96}
+h2{font-size:26px; color:#7bb2cf}
+h3{font-size:20px; color:#888}
+h4{font-size:18px}
+h5{font-size:16px; color:#356c96}
+h6{font-size:13px}
+ol{list-style:decimal}
+ul{list-style:disc;padding-left:15px;}
+
+.box_round {
+     -moz-border-radius: 6px; /* FF1+ */
+  -webkit-border-radius: 6px; /* Saf3-4 */
+          border-radius: 6px; /* Opera 10.5, IE 9, Saf5, Chrome */
+}
+.box_shadow {
+     -moz-box-shadow: 0px 0px 6px #999999; /* FF3.5+ */
+  -webkit-box-shadow: 0px 0px 6px #999999; /* Saf3.0+, Chrome */
+          box-shadow: 0px 0px 6px #999999; /* Opera 10.5, IE 9.0 */
+}
+.box_shadowForms {
+     -moz-box-shadow: 0px 0px 2px #999999; /* FF3.5+ */
+  -webkit-box-shadow: 0px 0px 2px #999999; /* Saf3.0+, Chrome */
+          box-shadow: 0px 0px 2px #999999; /* Opera 10.5, IE 9.0 */
+}
+.box_textshadowLight {
+     text-shadow: 0px 1px 0px rgba(255,255,255,0.6); /* FF3.5+, Opera 9+, Saf1+, Chrome */
+}
+
+input, select{font-size:12px; font-family:"Segoe UI",Calibri,Helvetica,Arial,sans-serif;
+padding:2px;
+}
+input, input[type=text], input[type=password], select, textarea, ul {
+background:url(images/bgInputs.gif) 0 0 repeat-x;
+border:1px solid #ccc;
+border-top:1px solid #999;
+}
+input:focus,input[type=text]:focus, input[type=password]:focus, select:focus, textarea:focus{border:1px solid #bedfed;
+border-top:1px solid #3e7aa5;
+background-position: 0 -500px;}
+
+
+body{margin:20px 0px; background:url(images/bgall.gif); color:#333}
+
+h1,h2,h3{margin-bottom:20px;}
+h4,h5{margin-bottom:10px}
+

@@ -1,0 +1,339 @@
+/*******************************************************************************
+    @title: Theme Bizagi Work Portal
+    @version: 1.0
+    @author: UX TEAM at Bizagi
+    @description: This theme is an example of what you can customize with
+    the Theme Builder
+********************************************************************************/
+
+/***************************
+-----Table of contents -----
+
+    - Common
+    - Components
+        - Menu
+        - Inbox bar
+        - Processes area
+        - Cases area
+            - Grid mode
+            - Details mode
+            - Summary
+        - Footer
+    - Forms
+    - Widgets
+    - Mixins
+
+----------------------------
+***************************/
+
+
+/** =========================================================================
+    widget-theme-builder-theme-category-general
+    ========================================================================= */
+
+    @one-color-palette:                     #EE5113;
+
+
+/** widget-theme-builder-theme-category-common
+    related:                                [#ui-bizagi-wp-application]
+    ========================================================================= */
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-background
+    oneColorPalette:                        @one-color-palette
+*/
+    @background:                            #F7B914;
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-text
+    oneColorPalette:                        darken(@one-color-palette, 20%)
+*/
+    @text:                                  #29223F;
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-title
+    oneColorPalette:                        darken(@one-color-palette, 25%)
+*/
+    @title:                                 #423B58;
+
+
+/** widget-theme-builder-theme-category-navigation
+    related:                                [#ui-bizagi-wp-menu,#innerContentInbox,#footer]
+    ========================================================================= */
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-border
+    oneColorPalette:                        lighten(@one-color-palette, 5%)
+*/
+    @navigation-border:                     #FFC621;
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-background
+    oneColorPalette:                        darken(@one-color-palette, 15%)
+*/
+    @navigation:                            #DE701F;
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-link
+    oneColorPalette:                        lighten(@one-color-palette, 55%)
+*/
+    @navigation-link:                       #EEE9C0;
+
+/** widget-theme-builder-theme-category-content
+    related:                                [ul.ui-bizagi-component-adjustable.ui-bizagi-adjustable]
+    ========================================================================= */
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-border
+    oneColorPalette:                        desaturate(lighten(@one-color-palette, 30%), 15%)
+*/
+    @content-border:                        #EEE9C0;
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-panel-bg
+    oneColorPalette:                        desaturate(lighten(@one-color-palette, 50%), 50%)
+*/
+    @pane:                                 #FFFFF8;
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-module-bg
+    oneColorPalette:                        desaturate(lighten(@one-color-palette, 45%), 30%)
+*/
+    @content:                               #FFFFF3;
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-link
+    oneColorPalette:                        darken(@one-color-palette, 10%)
+*/
+    @content-link:                          #68617E;
+
+/** widget-theme-builder-theme-category-menu
+    related:                                [#ui-bizagi-wp-menu]
+    ========================================================================= */
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-gradient-start
+    oneColorPalette:                        @one-color-palette
+*/
+    @menu-start:                            #F7B914;
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-gradient-end
+    oneColorPalette:                        darken(@one-color-palette, 5%)
+*/
+    @menu-end:                              #DEA000;
+
+/** widget-theme-builder-theme-category-inbox
+    related:                                [#innerContentInbox]
+    ========================================================================= */
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-gradient-start
+    oneColorPalette:                        darken(@one-color-palette, 15%)
+*/
+    @inbox-start:                           #DE701F;
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-gradient-end
+    oneColorPalette:                        darken(@one-color-palette, 10%)
+*/
+    @inbox-end:                             #F78938;
+
+/** widget-theme-builder-theme-category-footer
+    related:                                [#footer]
+    ========================================================================= */
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-gradient-start
+    oneColorPalette:                        darken(@one-color-palette, 5%)
+*/
+    @footer-start:                          #F7B914;
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-gradient-end
+    oneColorPalette:                        @one-color-palette
+*/
+    @footer-end:                            #DEA000;
+
+/** widget-theme-builder-theme-category-widgets
+    ========================================================================= */
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-modal-bg
+    oneColorPalette:                        desaturate(lighten(@one-color-palette, 50%), 60%)
+*/
+    @modal:                                 #F5F5EE;
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-modal-border
+    oneColorPalette:                        desaturate(lighten(@one-color-palette, 55%), 55%)
+*/
+    @modal-border:                          #FFFFFD;
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-tooltip-bg
+    oneColorPalette:                        lighten(@one-color-palette, 80%)
+*/
+    @tooltip:                               #FFF;
+
+/** widget-theme-builder-theme-category-buttons
+    ========================================================================= */
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-background
+    oneColorPalette:                        lighten(@one-color-palette, 60%)
+*/
+    @button:                                #F7F7F7;
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-text
+    oneColorPalette:                        darken(@one-color-palette, 10%)
+*/
+    @button-text:                           #68617E;
+
+/** =========================================================================
+    widget-theme-builder-theme-category-forms
+    ========================================================================= */
+
+/** widget-theme-builder-theme-category-common
+    ========================================================================= */
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-container-bg
+    oneColorPalette:                        desaturate(lighten(@one-color-palette, 45%), 30%)
+*/
+    @form-container:                          #FFFFF3;
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-text
+    oneColorPalette:                        darken(@one-color-palette, 20%)
+*/
+    @form-text:                             #29223F;
+
+/** widget-theme-builder-theme-category-groups
+    related:                                [.ui-bizagi-container.ui-bizagi-container-group]
+    ========================================================================= */
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-border
+    oneColorPalette:                        desaturate(lighten(@one-color-palette, 30%), 15%)
+*/
+
+    @form-group-border:                     #EEE9C0;
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-background
+    oneColorPalette:                        desaturate(lighten(@one-color-palette, 50%), 30%)
+*/
+    @form-group:                            #FFFFF8;
+
+/** widget-theme-builder-theme-category-tabs
+    ========================================================================= */
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-border
+    oneColorPalette:                        desaturate(lighten(@one-color-palette, 30%), 15%)
+*/
+    @form-tab-border:                       #EEE9C0;
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-background
+    oneColorPalette:                        desaturate(lighten(@one-color-palette, 50%), 30%)
+*/
+    @form-tab:                              #FFFFF8;
+
+/** widget-theme-builder-theme-category-grids
+    ========================================================================= */
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-border
+    oneColorPalette:                        desaturate(lighten(@one-color-palette, 30%), 15%)
+*/
+    @form-grid-border:                      #EEE9C0;
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-background
+    oneColorPalette:                        desaturate(lighten(@one-color-palette, 30%), 30%)
+*/
+    @form-grid:                             #D9D9CD;
+
+/** widget-theme-builder-theme-category-inputs
+    ========================================================================= */
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-border
+    oneColorPalette:                        desaturate(lighten(@one-color-palette, 30%), 15%)
+*/
+    @form-input-border:                     #EEE9C0;
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-background
+    oneColorPalette:                        desaturate(lighten(@one-color-palette, 35%), 30%)
+*/
+    @form-input:                            #E5E5D9;
+
+/** =========================================================================
+    widget-theme-builder-theme-category-fonts
+    ========================================================================= */
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-font-family
+*/
+    @font-family:                           "Open Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+
+/** =========================================================================
+    widget-theme-builder-theme-category-special-fx
+    ========================================================================= */
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-text-shadow
+*/
+    @active-text-shadow:                    false;
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-box-shadow
+*/
+    @active-box-shadow:                     true;
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-border-radius
+*/
+    @active-border-radius:                  true;
+
+/** =========================================================================
+    widget-theme-builder-theme-category-icon-style
+    ========================================================================= */
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-icon-skeuomorphic
+*/
+    @skeuomorphic:                          active;
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-icon-flat
+*/
+    @flat:                                  inactive;
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-icon-lineal
+*/
+    @lineal:                                inactive;
+
+/** =========================================================================
+    widget-theme-builder-theme-category-vertical-space
+    ========================================================================= */
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-normal-line-height
+*/
+    @normal-line-height:                    active;
+
+
+/**
+    label:                                  widget-theme-builder-theme-item-label-minimum-line-height
+*/
+    @minimum-line-height:                   inactive;
+
+
+
+@import "rules.theme.less";

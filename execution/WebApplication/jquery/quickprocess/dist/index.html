@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Proflyapp</title>
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../../../jquery/themes/bizagiDefault/devices/desktop/bizagi-font.css" />
+    <link rel="stylesheet" href="../../../jquery/themes/bizagiDefault/devices/desktop/opensans-font.css" />
+
+    <script src='../../../jquery/bizagi.configuration.js'></script>
+    <script src="../../../jquery/bizagi.loader.js"></script>
+    <script src="../../../jquery/steal.js"></script>
+
+    <script>
+        //change base href for index.html LP
+        var newBase = document.createElement("base");
+        var applicationUrl = window.parent.bizagiConfig.applicationUrl;
+        if (applicationUrl.slice(-1)=="/") {
+            applicationUrl = applicationUrl.slice(0, -1);
+        }
+        newBase.setAttribute("href", applicationUrl+"/jquery/quickprocess/dist/");
+        document.getElementsByTagName("head")[0].appendChild(newBase);
+        
+        var BIZAGI_PATH_TO_BASE = "../../../";
+        var BIZAGI_LOCAL_RESOURCES = true;
+        var BIZAGI_URL_REST_SERVICES = "";
+        var BIZAGI_ENVIRONMENT = 'release';
+        if (window.parent && window.parent.bizagiConfig) {
+            BIZAGI_ENVIRONMENT = window.parent.bizagiConfig.environment;
+        }
+        var BIZAGI_IDENTIFIER_MODEL = '';
+        var BIZAGI_USER = '';
+        var BIZAGI_ENABLE_LOG = false;
+        var BIZAGI_ACTION_VALIDATIONS_IMPR = false;
+        
+    </script>
+    <script>
+    //this code was added for the comunication in the iframe for the formDesigner
+    //and was added here for not create a simple file with only this lines
+    var iframeComunication = (function () {
+
+        var defLoaded = null;
+        var formVars={};
+
+        return {
+            init: function (params) {
+                formVars=params;
+                defLoaded = new $.Deferred();
+                return defLoaded.promise();
+            },
+            loaded: function (_editor,form) {
+                defLoaded.resolve(_editor,form);
+            },
+            getFormVars:function () {
+                return formVars;
+            }
+        };
+    })();
+    </script>
+    <style>
+        .browser-ie11 body > .ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all {
+            z-index: 1000 !important;
+        }
+        
+        body dp-date-picker [data-hidden="true"] {
+            display: none;
+        }
+        
+        .loader {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            display: flex;
+        }
+        
+        .spinner {
+            width: 40px;
+            height: 40px;
+            position: relative;
+            margin: auto;
+        }
+        
+        .double-bounce1,
+        .double-bounce2 {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #333;
+            opacity: 0.6;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+            animation: sk-bounce 2.0s infinite ease-in-out;
+        }
+        
+        .double-bounce2 {
+            -webkit-animation-delay: -1.0s;
+            animation-delay: -1.0s;
+        }
+        
+        @-webkit-keyframes sk-bounce {
+            0%,
+            100% {
+                -webkit-transform: scale(0.0)
+            }
+            50% {
+                -webkit-transform: scale(1.0)
+            }
+        }
+        
+        @keyframes sk-bounce {
+            0%,
+            100% {
+                transform: scale(0.0);
+                -webkit-transform: scale(0.0);
+            }
+            50% {
+                transform: scale(1.0);
+                -webkit-transform: scale(1.0);
+            }
+        }
+    </style>
+<link rel="stylesheet" href="styles.801b7e274482f3e6f9d6.css"></head>
+
+<body>
+    <app-root>
+        <div class="loader">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+    </app-root>
+<script src="runtime.96f7c8f8b53ed2a89900.js" defer></script><script src="polyfills-es5.a3e988c49ca0ec914813.js" nomodule defer></script><script src="polyfills.ff5db1afe73d6dbe2206.js" defer></script><script src="main.d1f4efe98fb91a36bd12.js" defer></script></body>
+
+</html>

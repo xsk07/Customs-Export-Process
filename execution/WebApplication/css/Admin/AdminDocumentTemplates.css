@@ -1,0 +1,115 @@
+﻿body {
+}
+
+#biz-documentTemplates-contentDiv 
+{
+    width: 100%;
+    text-align:left;
+    font-family: NeoSansStdRegular;
+}
+
+#biz-documentTemplates-centerPanel 
+{
+    margin: 0px auto;
+    width:600px;
+}
+
+.biz-documentTemplates-space {
+    height:20px;
+    width:400px;
+    float:left;
+}
+
+.biz-documentTemplates-message {
+    width:600px;
+    font-size: 13px;
+    color: Blue;
+    float: left;
+    text-align:center;
+}
+
+.biz-documentTemplates-table 
+{
+    border: 0px;
+    font-size:11px;
+}
+
+.biz-documentTemplates-innerTab
+{
+    float: left;
+    width:567px;
+    overflow-y: auto;
+    max-height: 250px;
+}
+
+.biz-documentTemplates-innerTable
+{
+    display:table;
+}
+
+.biz-documentTemplates-innerTable-row-override 
+{
+    font-weight:bold;
+    display:table-row;
+}
+
+.biz-documentTemplates-innerTable-row {
+    display:table-row;
+}
+
+.biz-documentTemplates-innerTable-column_name
+{
+    min-width: 200px;
+    max-width: 240px;
+    display: table-cell;
+}
+
+.biz-documentTemplates-innerTable-column_type
+{
+    min-width: 50px;
+    max-width: 70px;
+    display: table-cell;
+}
+
+.biz-documentTemplates-innerTable-column_conf
+{
+    min-width: 110px;
+    max-width: 130px;
+    display: table-cell;
+}
+
+.biz-documentTemplates-innerTable-column_date
+{
+    min-width: 160px;
+    max-width: 180px;
+    display: table-cell;
+}
+
+.biz-documentTemplates-innerTable-column_xpath
+{
+    min-width: 140px;
+    max-width: 160px;
+    display: table-cell;
+}
+
+.biz-documentTemplates-innerTable-column_option
+{
+    min-width: 120px;
+    max-width: 140px;
+    display: table-cell;
+}
+
+.biz-documentTemplates-accordionData {
+    height:80px;
+} 
+
+.biz-documentTemplates-button {
+    text-align:center;
+    width:10px;
+    margin: 0px auto;
+}
+
+.ui-accordion-content {
+    height: 100px;
+}
+

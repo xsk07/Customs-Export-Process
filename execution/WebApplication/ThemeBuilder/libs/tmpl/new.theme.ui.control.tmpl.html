@@ -1,0 +1,17 @@
+﻿{{each themes}}
+			<div class="biz-ui-theme-part {{if $value.published}} biz-ui-active{{/if}}" id="${$value.id}" {{if predefined}} title="${$value.image}" {{else}} data-save {{/if}}>
+				<h4 class="biz-theme-ellipsis">${$value.displayName}</h4>
+				<span class="biz-ui-thumbs-theme">
+					{{each thumbs}}<span style="background-color:${$value};"></span>{{/each}}
+				</span>
+				<input type="hidden" value="${$value.value}" data-version="${$value.version}">
+				<div class="biz-theme-button-side-bar">
+					<button class="biz-ui-button biz-theme-publish" title="%{widget-theme-builder-controls-label-publish-theme}"><i class="biz-ui-icon ui-icon ui-icon-check"></i><span>Publish</span></button>
+					{{if !predefined}}
+					<button class="biz-ui-button  biz-theme-delete" title="%{widget-theme-builder-controls-label-delete-theme}"><i class="biz-ui-icon ui-icon ui-icon-closethick"></i><span>%{widget-theme-builder-controls-label-close}</span></button>
+					{{else}}
+					<span class="biz-ui-button-spacer"></span>
+					{{/if}}
+				</div>
+			</div>
+{{/each}}

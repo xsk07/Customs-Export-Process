@@ -1,0 +1,428 @@
+
+#ui-bizagi-webpart-render-container {
+    width: 100%;
+    height: 100%;
+}
+
+#ui-bizagi-webpart-render-container a {
+    color: #444444;
+}
+
+#ui-bizagi-webpart-render-container .ui-bizagi-container-form {
+    border: none !important;
+    background-color: #FBFBFB;
+margin:0;
+padding:6px 15px 0;
+box-shadow: none;
+}
+
+#ui-bizagi-webpart-render-container .ui-bizagi-button-container {
+    border: none !important;
+    border-top: 1px solid #D9D9D9 !important;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+#ui-bizagi-webpart-render-container .ui-bizagi-webpart-render-loading-class {
+    margin-top: 20px;
+    margin-left: 48%;
+}
+
+
+
+#ui-bizagi-webpart-render-container .ui-bizagi-button-container:hover,#ui-bizagi-webpart-render-container .ui-bizagi-button-container {
+margin-bottom:0;
+    border-bottom: none;
+    padding-bottom:16px;
+background-color:#F2F2f2;
+}
+
+#ui-bizagi-webpart-render-container .ui-bizagi-render-control .ui-selectmenu {
+    width: 99%;
+}
+
+#ui-bizagi-webpart-render-container .ui-bizagi-render-control .ui-selectmenu .biz-btn-caret {
+    margin-top: 12px;
+}
+
+
+
+
+
+#ui-bizagi-webpart-render-container .ui-bizagi-container-group {
+    border: 1px solid #D9D9D9;
+}
+
+#ui-bizagi-webpart-render-container .ui-bizagi-container-group-header {
+    background: #E9E9E9;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.ui-dialog.ui-draggable-dragging{
+    padding: 45px 15px 55px;
+}
+
+.ui-dialog {
+    border: 5px solid #CECECE;
+    background-color: #EDEDED;
+    min-width: 300px!important;
+}
+
+.ui-dialog .ui-bizagi-container-form {
+    background-color: #F6F6F6;
+}
+
+.ui-dialog .ui-widget-header {
+    background: #E9E9E9;
+    color:#555;
+    border-bottom: 1px solid #CECECE;
+}
+.ui-dialog .ui-dialog-title {
+    background: none;
+    color:#555;
+    font-weight:700;
+    font-family: 'Segoe UI', Arial, sans-serif !important;
+    text-shadow: none;
+}
+
+#ui-bizagi-webpart-render-container .ui-bizagi-render-grid-container div[data-bizagi-component=emptyTable] {
+    background: #FBFBFB;
+    text-align: center;
+    border: none;
+    padding:15px;
+}
+#ui-bizagi-webpart-render-container .bz-rn-grid-container-foother,#ui-bizagi-webpart-render-container .bz-rn-grid-cn-header {
+    background: none #E9E9E9;
+}
+
+.ui-tabs .ui-tabs-nav li {
+    background:#F9F9F9;
+    border:1px solid #E7E7E6;
+    border-bottom: 1px solid transparent;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+    background:#F9F9F9 url(../common/css/images/tabs_bg.png) repeat-x;
+    border:1px solid #CECECE;
+    border-bottom: 1px solid transparent;
+}
+
+
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a {
+    background: none;
+    color:#444;
+}
+
+.ui-tabs .ui-tabs-panel {
+    background-color:#F9F9F9;
+    border: solid 1px #CECECE;
+}
+
+
+
+
+
+#case-task-item {
+display:0;
+}
+
+.case-task-state-color {
+    display: inline-block;
+    width: 20px;
+}
+
+#case-task-item.Green .case-task-state-color {
+background-color:#67b06f;
+}
+
+#case-task-item.Yellow .case-task-state-color {
+background-color:#bfbf3d;
+}
+
+#case-task-item.Red .case-task-state-color {
+background-color:#b34f4f;
+}
+
+#case-task-item.Green {
+border:1px solid #67b06f;
+}
+
+#case-task-item.Yellow {
+border:1px solid #bfbf3d;
+}
+
+#case-task-item.Red {
+border:1px solid #b34f4f;
+}
+
+
+
+.case-task-title {
+    margin: 0;
+}
+
+.case-task-date {
+    font-size: 9pt;
+margin:0;
+}
+
+.case-task-work {
+    padding-right: .5em;
+}
+
+.case-task-work-button {
+    font-family: 'Segoe UI Symbol', sans-serif;
+color:#134d74;
+    background: none;
+    min-width: 32px;
+    min-height: 32px;
+  
+    font-size: 11pt;
+font-weight:400;
+    line-height: 16px;
+    text-align: center;
+margin:0;
+padding:6px 0;
+}
+
+    .case-task-work-button:hover {
+        background-color: rgba(22, 91, 137, .2);
+color:#134d74;
+border-color:#134d74;
+    }
+
+.case-task-work-button:active,.case-task-work-button:hover:active {
+background-color:#134d74;
+color:#fff;
+border-color:#134d74;
+        }
+
+.case-task-work-button-text {
+    font-size: 11pt;
+margin:0 20px 0 4px;
+}
+
+* #ui-bizagi-webpart-render-async-wrapper{
+	background-color: #efefef;
+}
+#ui-bizagi-webpart-render-async-wrapper{
+	position: absolute;
+    height: 100%;
+	width: 100%;
+	top: 0;
+	background-color: rgba(235,235,235,0.5);
+}
+#ui-bizagi-webpart-render-async-box{
+	position: absolute;
+background-color:#FFF;
+    width: 400px;
+    height: 150px;
+    top: 50%;
+    left: 50%;
+    margin-top: -125px;
+    margin-left: -200px;
+border:1px solid #ccc;
+    padding: 20px;
+}
+.ui-bizagi-webpart-render-async-case-number{
+	font-size: 22.5px;
+font-weight:400;
+    color: #2f526c;
+margin:0 0 10px;
+}
+	
+.ui-bizagi-webpart-render-async-description dt {
+    float:left;
+    clear:left;
+    padding:5px;
+}
+.ui-bizagi-webpart-render-async-description dd {
+    margin-bottom:10px;
+    margin-left:140px;
+    background:#dadada;
+    padding:5px;
+}
+.ui-bizagi-webpart-render-async-waiting {
+width:100%;
+height:30px;
+position:relative;
+top:20px;
+}
+.ui-bizagi-webpart-render-async-waiting .ui-bizagi-sharepoint-loading-icon {
+    display: inline-block;
+	left: 125px;
+	position: absolute;
+	width: 24px;
+}
+.ui-bizagi-webpart-render-async-waiting-message-text {
+display:inline-block;
+left:160px;
+top:0;
+line-height:30px;
+position:absolute;
+}
+.ui-bizagi-webpart-render-async-error {
+    margin-bottom:10px;
+    background:#dadada;
+height:70px;
+    padding:5px;
+}
+
+
+.ui-bizagi-webpart-header-render-msg {
+	background: #F3F3F3;
+border-bottom:1px solid #d9d9d9;
+padding:.9em 1.75em;
+}
+
+.ui-bizagi-webpart-header-render-msg h2 {
+font-weight:700;
+	font-size: 1.5em;
+	color: #464747;
+	margin-bottom: 3px;
+}
+
+.ui-bizagi-webpart-header-render-msg h3{
+	font-size: 11px;
+	height: 13px;
+	margin-top: 3px;
+}
+
+
+
+.ui-bizagi-button-container-popup {
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+	padding-bottom: 10px;
+	position:absolute;
+	bottom:0;
+	width:100%;
+	z-index:20;
+}
+#ui-bizagi-webpart-render-container .ui-bizagi-container-group-wrapper,
+.ui-dialog .ui-bizagi-render input,.ui-dialog .ui-bizagi-render textarea,.ui-dialog .ui-bizagi-render 
+.ui-selectmenu,#ui-bizagi-webpart-render-container .ui-bizagi-render input,#ui-bizagi-webpart-render-container 
+.ui-bizagi-render textarea,#ui-bizagi-webpart-render-container .ui-bizagi-render .ui-selectmenu {
+background:none #fff;
+}
+
+#ui-bizagi-webpart-render-container input.ui-bizagi-render-date, .ui-bizagi-grid-cell input[type='text'].hasTimeEntry{
+    vertical-align: baseline;
+}
+
+.ui-bizagi-button-container 
+{
+	margin-bottom: 0px;
+	border: solid 0px #c3c3c3;
+    background-color: #F3F3F3;
+}
+
+.ui-bizagi-sharepoint-render .ui-bizagi-webpart-header-container{
+    margin-bottom: 15px;
+}
+
+.BorderCell #ui-icon-action-edit {
+    height:30px;
+    width:24px;
+}
+
+.BorderCell #ui-icon-action-edit {
+    background: rgba(0, 0, 0, 0) url(../common/css/images/sprite.png) repeat scroll -326px -455px / auto padding-box border-box;
+    border: 0;
+}
+
+.BorderCell #ui-icon-action-trash{
+ height:30px;
+ width:24px;
+}
+
+.BorderCell #ui-icon-action-trash {
+    background: rgba(0, 0, 0, 0) url(../common/css/images/sprite.png) repeat scroll -347px -455px / auto padding-box border-box;
+    border: 0;
+}
+
+.BorderCell #ui-icon-action-detail{
+ height:30px;
+ width:24px;
+}
+
+.BorderCell #ui-icon-action-detail {
+    background: rgba(0, 0, 0, 0) url(../common/css/images/sprite.png) repeat scroll -306px -455px / auto padding-box border-box;
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.ui-dialog {
+    min-height: 145px;
+    padding: 2em;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.ui-dialog.ui-dialog-minimized {
+    box-sizing: border-box;
+}
+
+.ui-dialog .ui-bizagi-container-form {
+    padding: 0;
+    border: 0;
+    margin-bottom: 2rem;
+    background: none;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+    position: relative;
+    padding-bottom: 1em;
+
+    border-radius: 0;
+    margin-bottom: 1em;
+    background: transparent;
+    text-overflow: ellipsis;
+}
+
+.ui-dialog .ui-dialog-title {
+    margin: 0;
+    background: none;
+    font-size: 24px;
+    font-weight: normal;
+    text-shadow: none;
+}
+
+.ui-dialog .ui-dialog-titlebar-close,
+.ui-dialog .ui-dialog-titlebar-close:hover,
+.ui-dialog .ui-dialog-titlebar-close:focus,
+.ui-dialog .ui-dialog-titlebar-close.ui-state-hover {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    background: none;
+    text-align: center;
+}
+
+.ui-dialog .ui-dialog-content {
+    position: static !important;
+}
+
+.ui-dialog .ui-dialog-titlebar-maximize,
+.ui-dialog .ui-dialog-titlebar-maximize:hover,
+.ui-dialog .ui-dialog-titlebar-maximize:focus,
+.ui-dialog .ui-dialog-titlebar-maximize.ui-state-hover {
+    position: absolute;
+    top: 4px;
+    right: 36px;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    background: none;
+    text-align: center;
+}

@@ -1,0 +1,142 @@
+<aside class="col-xs-12 col-sm-4 col-md-4 col-lg-3" >
+    
+    <div class="image-section" >
+
+        <ul class="nav nav-pills">
+            <li class="active"><a><div id="logoTabItem" data-toggle="pill" href="#logoTab">IMAGE-BASE PALETTE</div></a></li>
+            <li ng-if="device!='desktop'"><a><div id="splashTabItem" data-toggle="pill" href="#splashTab">SPLASH SCREEN</div></a></li>            
+        </ul>
+
+        <div class="tab-content" >
+            <div id="logoTab" class="tab-pane fade in active">
+                <div class="container" style="width:100%">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <span> Upload an Image to generate a Palette</span>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="file" name="clientIcon" value="" onchange="angular.element(this).scope().uploadImage(this)" style="display:none;" />
+                            <button id='button' ng-click="logoButtonClicked()" type="button" class="btn btn-upload btn-md">Select Image</button>
+                        </div>
+                    </div>
+                    <div class="row paletteContainer">
+                        <div class="col-md-6">
+                            <span>Image Preview</span>
+                            <div class=" image-wrap">
+                                <img id="clientIconImg" src="#" alt="your image" class="target-image" />
+                            </div>
+                            <div class="color-thief-output"></div>
+                        </div>
+
+                        <div class="col-md-6 resulting-palette-container">
+                            <div class="resulting-palette">
+                                <span class="function-title">Resulting Palette</span>
+                                <div class="function-output exposeArea">
+                                    <div class="swatches">
+                                        <div ng-repeat="paletteColor in clientImage.palette">
+                                            <div class="swatch" ng-mousedown="selectColorFromPalette(paletteColor)" style="background-color: rgb({{paletteColor[0]}}, {{paletteColor[1]}}, {{paletteColor[2]}})"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="resulting-palette-copy" style="display:none">
+                                <span class="function-title">Resulting Palette</span>
+                                <div class="function-output exposeArea">
+                                    <div class="swatches">
+                                        <div ng-repeat="paletteColor in clientImage.palette">
+                                            <div class="swatch" ng-mousedown="selectColorFromPalette(paletteColor)" style="background-color: rgb({{paletteColor[0]}}, {{paletteColor[1]}}, {{paletteColor[2]}})"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>                
+            </div>
+            
+            <div id="splashTab" class="tab-pane fade" ng-if="device!='desktop'">
+                
+                <div class="container" style="width:100%">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <span> Upload the Splash Screen Images</span>
+                        </div>
+                        <div class="col-md-6">                            
+                            <button id='button' ng-click="splashButtonClicked()" type="button" class="btn btn-upload btn-md">Select Images</button>
+                        </div>
+                    </div>                    
+                </div>
+                
+            </div>            
+        </div>
+
+
+    </div>
+    
+    <div class="panel-group" id="accordion" >
+
+        <div ng-repeat="category in selectors.less">
+            <div ng-show="$index < 2 || !firstLoad" ng-class="{'panel panel-default':category.items.length > 0}">
+                <!--<h3 ng-if="!category.items">
+                    {{category.name}}
+                </h3>-->
+                
+                <div ng-if="$index==1" class="one-color-section">                      
+                    <span>{{category.name}}</span>                                                                              
+                </div>
+
+                <div ng-if="category.items && $index!=1" class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse{{$index}}">
+                    <div ng-if="category.items" ng-class="{'accordion-head':category.id != 'onecolor'}">
+                        <h4 class="panel-title">
+                            <span>{{category.name}}</span>                            
+                        </h4>
+                    </div>
+                </div>
+
+                <div id="collapse{{$index}}" ng-if="category.items"  class="panel-collapse collapse" ng-class="{'in' : category.id=='onecolor'}">
+                    <div class="panel-body" ng-repeat="subcategory in category.items" ng-show="subcategory.key=='@one-color-palette' || !firstLoad">
+                        <div ng-if="!subcategory.items" class="form-group">
+                            <span>{{subcategory.name}}</span>
+                            <div ng-if="subcategory.type">Other Type</div>
+                            <div color-picker ng-model="subcategory.value" ng-if="!subcategory.type" class="pull-right selector" data-key="{{subcategory.key}}"></div>
+                            <!--<div class="pickColorIcon" ng-click="selectCopyColor(subcategory.key)"> <i class="fa fa-paint-brush fa-4x brush-icon"></i> </div>-->
+                        </div>
+                        <h5 ng-if="subcategory.items">{{subcategory.name}}</h5>
+                        <div ng-if="subcategory.items" ng-repeat="element in subcategory.items" class="form-group">
+                            <span>{{element.name}}</span>
+                            <div ng-if="element.type"><input class="form-control" ng-model="element.value"></div>
+                            <div color-picker ng-model="element.value" ng-if="!element.type" class="pull-right selector" data-key="{{element.key}}"></div>
+                            <!--<div class="pickColorIcon" ng-click="selectCopyColor(element.key)"> <i class="fa fa-paint-brush fa-4x brush-icon"></i> </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="action-button-container">
+        <span ng-click="resetTheme()" class="reset-button"> Reset </span>
+        <!--<span ng-click="saveTheme()" class="save-button"> Save </span>-->
+    </div>
+
+    <ui-view ="asideView"></ui-view>
+</aside>
+<article class="col-xs-12 col-sm-8 col-md-8 col-lg-9">
+
+    
+    <code class="css" style="display:none">
+        Theme Builer CSS Output
+        {{theme}}
+    </code>
+    
+    <div class="widget center-element sectionContainer">
+
+        <section ng-if="device=='desktop'" ng-include="template.desktopSide" class="sectionDesktop"></section>
+        <section ng-if="device=='mobile'" ng-include="template.mobileSide" class="sectionMobile"></section>
+        
+    </div>
+
+    <ui-view="sectionView"></ui-view>
+</article>
+

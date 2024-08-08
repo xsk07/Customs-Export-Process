@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="175px" height="33px" viewBox="0 0 175 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Boolean</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="18" height="18" rx="4"></rect>
+        <rect id="path-3" x="0" y="0" width="18" height="18" rx="4"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Bizagi-Control-Embeds" transform="translate(-127.000000, -628.000000)">
+            <g id="Bizagi-controls-Experience-Elements" transform="translate(111.000000, 92.000000)">
+                <g id="Group-16-Copy" transform="translate(16.000000, 505.000000)">
+                    <text id="Label" font-family="OpenSans-SemiBold, Open Sans" font-size="12" font-weight="500" fill="#747474">
+                        <tspan x="16" y="52">Label</tspan>
+                    </text>
+                    <text id="/" font-family="OpenSans-SemiBold, Open Sans" font-size="12" font-weight="500" fill="#B7B7B7">
+                        <tspan x="141" y="52">/ </tspan>
+                    </text>
+                    <g id="input/⚛-elements/checkbox/03-active" transform="translate(115.000000, 39.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="shape" fill="#DEDEDE" xlink:href="#path-1"></use>
+                        <g id="border" opacity="0.200000003" mask="url(#mask-2)" stroke="#555555">
+                            <rect x="0.5" y="0.5" width="17" height="17" rx="4"></rect>
+                        </g>
+                        <path d="M7.2919708,11.0292134 L13.504724,5.23909651 C13.8467891,4.92030116 14.4013861,4.92030116 14.7434512,5.23909651 C15.0855163,5.55789185 15.0855163,6.07476122 14.7434512,6.39355656 L7.91133441,12.7609035 C7.56926933,13.0796988 7.01467227,13.0796988 6.6726072,12.7609035 L3.2565488,9.57723003 C2.91448373,9.25843469 2.91448373,8.74156531 3.2565488,8.42276997 C3.59861388,8.10397463 4.15321094,8.10397463 4.49527601,8.42276997 L7.2919708,11.0292134 Z" id="Path" fill="#FFFFFF" mask="url(#mask-2)"></path>
+                    </g>
+                    <g id="input/⚛-elements/checkbox/03-active" transform="translate(154.000000, 39.000000)">
+                        <mask id="mask-4" fill="white">
+                            <use xlink:href="#path-3"></use>
+                        </mask>
+                        <use id="shape" fill="#DEDEDE" xlink:href="#path-3"></use>
+                        <g id="border" opacity="0.200000003" mask="url(#mask-4)" stroke="#555555">
+                            <rect x="0.5" y="0.5" width="17" height="17" rx="4"></rect>
+                        </g>
+                        <path d="M4.5,4.5 L13.0146932,13.0146932" id="Line" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" fill-rule="nonzero" mask="url(#mask-4)"></path>
+                        <path d="M4.5,4.5 L13.0146932,13.0146932" id="Line-Copy" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" fill-rule="nonzero" mask="url(#mask-4)" transform="translate(9.000000, 9.000000) scale(-1, 1) translate(-9.000000, -9.000000) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

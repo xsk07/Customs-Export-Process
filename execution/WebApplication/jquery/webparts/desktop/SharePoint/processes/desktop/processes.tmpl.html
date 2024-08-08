@@ -1,0 +1,59 @@
+<script id="ui-bizagi-webpart-processes" type="text/x-jquery-tmpl">
+        <div id="ui-bizagi-webpart-processes-container" class="ui-bizagi-wp-app-inbox-processes-container">         
+        {{if categories.length == 0}}
+        <div>%{workportal-widget-inboxcommon-no-results-found}</div>
+        {{/if}}
+        <div class="scrollProcess">
+            {{each categories}}
+            <div class="ui-bizagi-wp-app-inbox-processes-title" ><span class="arrow"></span>${name}</div>
+            <ul class="ui-bizagi-wp-app-inbox-processes-ul" >
+                {{each workflows}}
+                <li data-workflow-id="${idworkflow}" data-isFavorite="${isFavorite}" data-process-name="${name}">
+				    <span id="ui-bizagi-wp-app-inbox-processes-ico-paper" class="ui-bizagi-wp-app-inbox-processes-ico-paper"></span>
+                    {{if idworkflow != "" && idworkflow > 0 }}
+                    {{if isFavorite == "true"}}
+                    <span class="ui-bizagi-wp-app-inbox-processes-start on"></span>                      
+                    {{else}}
+                    <span class="ui-bizagi-wp-app-inbox-processes-start off"></span>                
+                    {{/if}}
+                    {{/if}}
+                    <span id="ui-bizagi-wp-app-inbox-processes-name" class="ui-bizagi-wp-app-inbox-processes-name">${$value["name"].substr(0,60)} {{if $value["name"].length>60}}...{{/if}}</span>
+                    {{if count > 0}}
+                    <span class="ui-bizagi-wp-app-inbox-processes-ncase">${$value["count"]}</span>
+                    {{/if}}
+                </li>           
+                {{/each}}
+            </ul>
+            {{/each}}  
+   
+        </div>
+        <div class="ui-bizagi-processes-tab">
+        </div>
+    </div>
+</script>
+<script id="ui-bizagi-webpart-processes-tab" type="text/x-jquery-tmpl" >  
+        <div id="ui-bizagi-wp-app-inbox-tab-container">
+            <ul>                
+                <li class="ui-bizagi-wp-app-inbox-tab active" id="all">
+                    <span class="text"></span>
+                    <span class="toolTip">${All}</span>
+                </li>
+                <li  class="ui-bizagi-wp-app-inbox-tab" id="red">
+                    <span class="text"></span>
+                    <span class="toolTip">${Red}</span>
+                </li>
+                <li class="ui-bizagi-wp-app-inbox-tab" id="yellow">
+                    <span class="text"></span>
+                    <span class="toolTip">${Yellow}</span>
+                </li>
+                <li class="ui-bizagi-wp-app-inbox-tab" id="green">
+                    <span class="text"></span>
+                    <span class="toolTip">${Green}</span>
+                </li>
+                <li class="ui-bizagi-wp-app-inbox-tab" id="favourites">
+                    <span class="text"></span>
+                </li>
+                <span id="ui-bizagi-wp-app-inbox-tap-selector" class="All" ></span>
+            </ul>
+        </div>
+</script>

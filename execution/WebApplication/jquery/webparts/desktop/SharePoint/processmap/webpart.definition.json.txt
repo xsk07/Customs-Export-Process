@@ -1,0 +1,12 @@
+﻿{
+	"name": "processmap",
+	"js": [ {"src": "bizagi.webparts.processmap.js"}],
+	"css": [ {"src": "bizagi.webpart.processmap.css"}, {"src": "bizagi.processmap.webpart.principal.css"} ],
+	"theme":  {"src": "bizagi.webpart.processmap.theme.less"},
+	"tmpl": [ 
+		{"alias": "project-processmap",			"src": "processmap.tmpl.html#project-processmap-wrapper"},
+		{"alias": "project-process-diagram",			"src": "processmap.tmpl.html#project-processmap-process-diagram"},
+		{"alias": "project-activity-map",			"src": "processmap.tmpl.html#project-processmap-activity-map"},
+		{"alias": "project-subprocess",			"src": "processmap.tmpl.html#project-processmap-subprocess"}
+	]
+}

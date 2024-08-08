@@ -1,0 +1,35 @@
+<div class="modal-script biz-ui-hide modal-change-logo" title="%{widget-theme-builder-modal-change-logo-title}">
+    <div class="biz-ui-theme-control">
+    <div id="alert-file-upload"></div>
+        <div class="iframe-placeholder">
+            <form id="upload-form" method="POST" action="../Rest/Theme/GetFileData/" enctype="multipart/form-data" accept-charset="UTF-8">
+                <div class="bizagi-ui-theme-logo-upload-container">
+                    <div class="bizagi-ui-theme-logo-upload-file">
+        <label>
+            %{widget-theme-builder-modal-field-change-logo}:
+        </label>
+                        <div class="bizagi-ui-theme-logo-upload-file-canvas">
+                            <img name="inbox" src=""/>
+                        </div>
+            <input id="fileUpload" name="postFile" class="biz-ui-theme-upload-logo" type="file" />
+                    </div>
+                    <div class="bizagi-ui-theme-logo-upload-file">
+                        <label>
+                            %{widget-theme-builder-modal-field-change-logo-login}:                            
+                        </label>
+                        <div class="bizagi-ui-theme-logo-upload-file-canvas">
+                            <img name="login" src="" />
+                        </div>
+                        <input id="fileUploadLogin" name="postFile" class="biz-ui-theme-upload-logo" type="file" />        
+                    </div>
+                </div>
+                <br />
+            </form>
+        </div>
+    </div>
+    <hr class="darkLine">
+    <div class="biz-ui-theme-button-bar">
+        <button type="submit" class="biz-ui-button biz-ui-theme-change-logo">
+            %{widget-theme-builder-modal-button-update}</button>
+    </div>
+</div>

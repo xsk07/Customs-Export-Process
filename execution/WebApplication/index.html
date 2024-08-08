@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" manifest="bizagi.cache.appcache">
+<head>
+    <title>Bizagi BPM</title>
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link type="image/x-icon" rel="icon" href="favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="workportal/css/tablet/images/BizAgi_logo.png">
+    <script type="text/javascript">
+        var timestamp = new Date().getTime();
+        document.write("<script type='text/javascript' src='jquery/bizagi.configuration.js?" + timestamp + "'></scr" + "ipt>");
+
+        function isIE() { return (navigator.appName.indexOf("Internet Explorer") > 0 || !!navigator.userAgent.match(/Trident/) || !!navigator.userAgent.match(/Trident.*rv\:11\./)) }
+
+        function getIEVersion() {
+            var sAgent = window.navigator.userAgent;
+            var indexMSIE = sAgent.indexOf("MSIE");
+            var version = 0;
+            if (indexMSIE > 0) {
+                version = parseInt(sAgent.substring(indexMSIE + 5, sAgent.indexOf(".", indexMSIE)));
+            } else
+                if (!!navigator.userAgent.match(/Trident/) || window.navigator.userAgent.indexOf("Edge") > -1) {
+                    version = 11;
+                }
+            return version;
+        }
+      (isIE() && getIEVersion() < 9)?window.location = "error.html?message=This version of Internet Explorer is not supported. Please use Internet Explorer 10 or highest.&type=Browser not supported" : "";
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+    if (typeof bizagiConfig == "undefined") {
+        window.location = "error.html?message=The configuration file can't be loaded, please verify that the server response all the static files&type=Bizagi Configuration is undefined"
+    }
+    var session = window.sessionStorage.getItem("bizagiAuthentication") || "{}";
+    try{
+        session = JSON.parse(session);
+    } catch (e) { console.log(e); }
+    
+    if (session === null || session === undefined) {
+        window.sessionStorage.setItem("bizagiAuthentication", "{}");
+        session = {};
+    }
+
+    var BIZAGI_DEFAULT_CURRENCY_INFO = {
+        "symbol": session.symbol || "$",
+        "decimalSeparator": session.decimalSeparator || ",",
+        "groupSeparator": session.groupSeparator || ".",
+        "decimalDigits": session.decimalDigits || "2"
+    };
+
+    if(bizagiConfig.environment === "release" && !isIE()) {
+        document.write("<script type='text/javascript' src='jquery/production/bizagi.production.js?"+ timestamp +"'></scr" + "ipt>");
+    } else {
+        document.write("<script type='text/javascript' src='jquery/steal.js'></scr" + "ipt>");
+        document.write("<script type='text/javascript' src='jquery/bizagi.preloader.js'></scr" + "ipt>");
+        document.write("<script type='text/javascript' src='jquery/bizagi.loader.js'></scr" + "ipt>");
+        document.write("<script type='text/javascript' src='jquery/bizagi.init.js'></scr" + "ipt>");
+    }
+    </script>
+    <div id='NotificationCenter'></div>
+    <div id='loadModuleStatus'></div>
+</body>
+</html>

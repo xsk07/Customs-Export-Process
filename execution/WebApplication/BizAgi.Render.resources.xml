@@ -1,0 +1,317 @@
+<root>
+  <data name="WPFolderRecycleBin">
+    <value>Mueva el proceso a la papelera para removerlo de la carpeta</value>
+  </data>
+  <data name="GA_WizardTitle">
+    <value>Asistente de Análisis Gráfico</value>
+  </data>
+  <data name="SelectCasesToManage">
+    <value>Seleccione los procesos que desea administrar</value>
+  </data>
+  <data name="NoMoreWorkItems">
+    <value>No tiene actividades pendientes de este proceso</value>
+  </data>
+  <data name="AlarmRecipientsTitle">
+    <value>Destinatarios de la Alarma</value>
+  </data>
+  <data name="WPLeftPanelSmartFoldersTab">
+    <value>Vistas</value>
+  </data>
+  <data name="CasesResultingAction">
+    <value>Los procesos {0} han sido {1}</value>
+  </data>
+  <data name="DWH_Dim_CaseState">
+    <value>Estado de Proceso</value>
+  </data>
+  <data name="WPSmartFoldersFilterConfigHeader">
+    <value>Configuración de Regla para la Vista</value>
+  </data>
+  <data name="Login_WelcomeMessage">
+    <value>Sistema de Gestión de Procesos</value>
+  </data>
+  <data name="WPCustomFoldersConfigurationHeader">
+    <value>Configuración básica de Carpetas Personalizadas</value>
+  </data>
+  <data name="WPSmartFoldersConfigurationRules">
+    <value>Reglas de configuración de la vista</value>
+  </data>
+  <data name="AsynchWorkitemLog_RadicationNumber">
+    <value>Identificador</value>
+  </data>
+  <data name="CaseList">
+    <value>Lista de Procesos</value>
+  </data>
+  <data name="DWH_Meas_CasDelayedCount">
+    <value>Procesos Retrasados</value>
+  </data>
+  <data name="WPSmartFoldersConfigurationIncludeProcess">
+    <value>Incluir los procesos de tipo</value>
+  </data>
+  <data name="WPLeftPanelCustomQueriesTab">
+    <value>Consultas</value>
+  </data>
+  <data name="SearchCasesToManage">
+    <value>Búsqueda de Procesos para Administrar</value>
+  </data>
+  <data name="SendAttachedDocs_Body">
+    <value>&lt;CustomTag#Body&gt;&lt;br&gt;&lt;hr&gt;&lt;br&gt;Este ha sido un mensaje enviado por el Sistema de Gestión de Procesos para los documentos asociados al proceso&lt;CustomTag#RadNumber&gt;.&lt;br&gt;</value>
+  </data>
+  <data name="CWPSmartFolder1">
+    <value>Mis Procesos</value>
+  </data>
+  <data name="NoAccess">
+    <value>No tiene acceso a este proceso</value>
+  </data>
+  <data name="WPDragAndDropRadNumber">
+    <value>Identificador</value>
+  </data>
+  <data name="CaseSummary">
+    <value>Resumen del Proceso</value>
+  </data>
+  <data name="DWH_Rep_ProcessCasesByResources">
+    <value>Procesos Cerrados por Recurso</value>
+  </data>
+  <data name="Administration">
+    <value>Administración</value>
+  </data>
+  <data name="Menu_NewCase">
+    <value>Nuevo Proceso</value>
+  </data>
+  <data name="WPSmartFoldersConfigurationProcessDataToInclude">
+    <value>Incluir los procesos que cumplan con las siguientes reglas</value>
+  </data>
+  <data name="RadicationNumber">
+    <value>Identificador</value>
+  </data>
+  <data name="BizagiCases">
+    <value>Procesos</value>
+  </data>
+  <data name="ReassignCases">
+    <value>Reasignación de los procesos {0}</value>
+  </data>
+  <data name="ColHeader_RADNUMBER">
+    <value>Identificador</value>
+  </data>
+  <data name="SubProcesses">
+    <value>Sub Procesos</value>
+  </data>
+  <data name="RealTimeCockpit">
+    <value>Tablero de Control en Tiempo Real</value>
+  </data>
+  <data name="ProcessAnalyzer">
+    <value>Analizador de Procesos</value>
+  </data>
+  <data name="DWH_Meas_CasFinalStatePercent">
+    <value>Porcentaje de Procesos</value>
+  </data>
+  <data name="TotalCaseState">
+    <value>Estado Total Proceso</value>
+  </data>
+  <data name="BizagiSearchCases">
+    <value>Búsqueda de Procesos</value>
+  </data>
+  <data name="WPNewSmartFolder">
+    <value>Nueva Vista</value>
+  </data>
+  <data name="ExtendedExpiredCases">
+    <value>Procesos Vencidos Extendidos</value>
+  </data>
+  <data name="WPSmartFoldersConfigurationBusinessDataToInclude">
+    <value>Incluir los procesos que cumplan con las siguientes reglas de negocio</value>
+  </data>
+  <data name="CaseResultingAction">
+    <value>El proceso {0} ha sido {1}</value>
+  </data>
+  <data name="SpecificData">
+    <value>Datos Especificos</value>
+  </data>
+  <data name="Confirmation">
+    <value>Confirmación</value>
+  </data>
+  <data name="CasesIHaveWorkedOn">
+    <value>Procesos en los que he trabajado</value>
+  </data>
+  <data name="ThisWeekExpirationCases">
+    <value>Procesos que se vencen en el futuro</value>
+  </data>
+  <data name="DWH_Meas_CasDelayedAmount">
+    <value>Monto Procesos Retrasados</value>
+  </data>
+  <data name="TitleWorkItemReassign">
+    <value>Reasignación de Actividades</value>
+  </data>
+  <data name="RadN">
+    <value>Identificador</value>
+  </data>
+  <data name="WPAddCaseErrorRepeated">
+    <value>La carpeta ya contiene el proceso</value>
+  </data>
+  <data name="ConfirmMessage">
+    <value>Recuerde que debe anexar toda la documentación necesaria para el proceso antes de tramitar la actividad.\nUna vez tramite la Actividad, no podrán modificarse los datos de ésta.\n¿Está seguro de que desea tramitar la Actividad?</value>
+  </data>
+  <data name="RadicatedCase">
+    <value>Proceso Creado</value>
+  </data>
+  <data name="WPNewCustomFolder">
+    <value>Nueva Carpeta</value>
+  </data>
+  <data name="WPSmartFoldersConfigurationWorkedCases">
+    <value>Los procesos en los que he trabajado (Ultimo Mes)</value>
+  </data>
+  <data name="AlarmsEditorTitle">
+    <value>Editor de Alarmas</value>
+  </data>
+  <data name="TotalUrgentCases">
+    <value>Total Procesos Urgentes</value>
+  </data>
+  <data name="ReadOnlyAccess">
+    <value>Acceso de Solo Lectura -</value>
+  </data>
+  <data name="WPSmartFoldersConfigurationDescription">
+    <value>A través de esta opción, usted puede definir los filtros que deben cumplir los procesos asociados a esta vista</value>
+  </data>
+  <data name="WPLeftPanelBizagiCasesTab">
+    <value>Portafirmas</value>
+  </data>
+  <data name="SuspendedCase">
+    <value>Proceso Suspendido</value>
+  </data>
+  <data name="TodayExpirationCases">
+    <value>Procesos que se vencen hoy</value>
+  </data>
+  <data name="ExpiredCases">
+    <value>Procesos Vencidos</value>
+  </data>
+  <data name="DWH_Meas_CasDelayedAmountPercent">
+    <value>Procentaje de Monto en Procesos Retrasados</value>
+  </data>
+  <data name="WPSmartFoldersNameWarning">
+    <value>Debe asociarle un nombre a la vista</value>
+  </data>
+  <data name="UpperEvents">
+    <value>Eventos</value>
+  </data>
+  <data name="WPSmartFoldersConfigurationFolderInfo">
+    <value>Información de la Vista</value>
+  </data>
+  <data name="WPSmartFoldersConfigurationBasicContentInclude">
+    <value>Desea que la vista incluya</value>
+  </data>
+  <data name="WPLeftPanelCustomFoldersTab">
+    <value>Carpetas</value>
+  </data>
+  <data name="AdminLogTitle">
+    <value>Administración de Procesos</value>
+  </data>
+  <data name="UpperCaseNotes">
+    <value>Notas</value>
+  </data>
+  <data name="WPSmartFoldersConfigurationFolderNameDesc">
+    <value>Seleccione un nombre para la vista</value>
+  </data>
+  <data name="WPSmartFoldersConfigurationHeader">
+    <value>Configuración básica para vistas</value>
+  </data>
+  <data name="BackToCase">
+    <value>Regresar al Proceso</value>
+  </data>
+  <data name="AsynchDisabledWorkitems_LastProcessDate">
+    <value>Fecha de último intento</value>
+  </data>
+  <data name="AlarmList">
+    <value>Lista de Alarmas</value>
+  </data>
+  <data name="TitleCaseReassign">
+    <value>Reasignación de Procesos</value>
+  </data>
+  <data name="DWH_Meas_WICasesByResourcesAvg">
+    <value>Promedio de Procesos por Recurso</value>
+  </data>
+  <data name="DWH_Meas_CasActivationCount">
+    <value>Procesos Activados</value>
+  </data>
+  <data name="Cases">
+    <value>Procesos</value>
+  </data>
+  <data name="WPMenuCases">
+    <value>Procesos</value>
+  </data>
+  <data name="AlarmManagement">
+    <value>Administración de Alarmas</value>
+  </data>
+  <data name="WPSmartFoldersConfigurationCurrentCases">
+    <value>Los procesos que tengo asignados actualmente (Recomendado)</value>
+  </data>
+  <data name="Login_btnLogin">
+    <value>Acceder</value>
+  </data>
+  <data name="TitleNoAdminOperation">
+    <value>No se especificó una operación de administración</value>
+  </data>
+  <data name="DWH_Meas_WIClosedCaseCount">
+    <value>Procesos Cerrados</value>
+  </data>
+  <data name="UpperActivities">
+    <value>Actividades</value>
+  </data>
+  <data name="CaseData">
+    <value>Datos del Proceso</value>
+  </data>
+  <data name="AbortCasesDescription">
+    <value>Para anular procesos, seleccionelos en la primera columna de la tabla, escriba un motivo (opcional) y presione el boton Anular</value>
+  </data>
+  <data name="CaseInformation">
+    <value>Información del Proceso</value>
+  </data>
+  <data name="CaseRadicatedSuccesfullyMessage2">
+    <value>El proceso fue creado con éxito. Si desea crear otro proceso, por favor haga clic en el botón &lt;b&gt;Crear&lt;/b&gt;</value>
+  </data>
+  <data name="WPSmartFoldersConfigHelpHeader">
+    <value>Configuración de la Vista</value>
+  </data>
+  <data name="CaseRadicatedSuccesfullyMessage1">
+    <value>Proceso creado con éxito</value>
+  </data>
+  <data name="WPSmartFolder">
+    <value>Vista</value>
+  </data>
+  <data name="WPSmartFoldersConfigurationIncludeApp">
+    <value>Incluir los procesos en la siguiente aplicación</value>
+  </data>
+  <data name="WPSmartFoldersConfigurationShowCasesCreatedIn">
+    <value>Mostrar los procesos creados en los últimos</value>
+  </data>
+  <data name="DisplayOnlyUserInfo">
+    <value>Mostrar únicamente mis procesos y los de las personas a mi cargo</value>
+  </data>
+  <data name="HeaderLogAdminDate">
+    <value>Administración del Proceso</value>
+  </data>
+  <data name="LogRadNumber">
+    <value>Identificador</value>
+  </data>
+  <data name="DWH_CMod_Cases">
+    <value>Procesos</value>
+  </data>
+  <data name="TitleCaseInvalidation">
+    <value>Anulación de Procesos</value>
+  </data>
+  <data name="HeaderAnalysis">
+    <value>Análisis</value>
+  </data>
+  <data name="CLogin_WelcomeLoginMessage">
+    <value>Rellene sus credenciales para acceder a la Aplicación</value>
+  </data>
+  <data name="LogLog_Back">
+    <value>Regresar al proceso</value>
+  </data>
+  <data name="Waiting_RadNumber">
+    <value>Identificador</value>
+  </data>
+  <data name="BizagiSearch">
+    <value>Búsqueda</value>
+  </data>
+  <data name="CaseSearch">
+    <value>Búsqueda de Procesos</value>
+  </data>
+</root>

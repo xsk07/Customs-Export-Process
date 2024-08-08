@@ -1,0 +1,14 @@
+﻿
+Esecuzione di un'installazione transazionale.
+
+Inizio della fase di installazione.
+Vedere il contenuto del file di log per informazioni sullo stato dell'assembly C:\Bizagi\Projects\DoganaProj\Scheduler\BizAgi.Scheduler.Services.exe.
+Il file si trova in C:\Bizagi\Projects\DoganaProj\Scheduler\BizAgi.Scheduler.Services.InstallLog.
+
+La fase di installazione è stata completata. Sta iniziando la fase di commit.
+Vedere il contenuto del file di log per informazioni sullo stato dell'assembly C:\Bizagi\Projects\DoganaProj\Scheduler\BizAgi.Scheduler.Services.exe.
+Il file si trova in C:\Bizagi\Projects\DoganaProj\Scheduler\BizAgi.Scheduler.Services.InstallLog.
+
+Fase di commit completata.
+
+Installazione transazionale completata.

@@ -1,0 +1,29 @@
+@charset "UTF-8";
+.project-attachments .k-errormsg {
+    position: relative;
+    display: inline-block;
+    text-align: right;
+    font-size: .9em;
+    font-weight: bold;
+    padding-bottom: .167em;
+    vertical-align: middle;
+    top: -.2em;
+    max-width: 17em;
+    line-height: normal;
+}
+.project-attachments .k-filename {
+    max-width: 14em;
+}
+.project-attachments .k-file-success .k-icon {
+    background-image: url(../../../../common/base/css/desktop/kendo.ui/Black/sprite.png) !important;
+}
+.project-attachments-wrapper-window.k-widget.k-window {
+    border: 1px solid #ddd;
+    padding: 24px 0 0;
+}
+.project-attachments-wrapper-window .k-window-content {
+    padding: 0;
+}
+.project-attachments-wrapper-window .k-window-content ul {
+    margin: 0;
+}
